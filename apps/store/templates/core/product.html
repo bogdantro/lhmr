@@ -1,0 +1,106 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/scss/store/product.css' %}" type="text/css">
+
+
+<div id="productapp">
+
+   <div class="main-image">
+      <img :src="mainImage">
+   </div>
+   <div id="productImages">
+      <h1>Se fler bilder av "{{product.name}}"</h1>
+      <div v-for="image in images" id="imgLoop">
+         <div id="imgDiv">
+            <img :src="image.image" @click="changeMainImage(image.image)">
+         </div>
+      </div>
+   </div>
+
+   
+   {% if product.in_cart %}
+      <p>Produktet har blitt lagt til handlekurv</p>
+   {% else %}  
+   <button @click="addToCart({{ product.id }})">legg til handlekurv</button>
+   {% endif %}   
+
+
+   <hr>
+
+   
+</div>
+
+
+{% endblock %}
+
+
+
+
+{% block scripts %}
+<script>
+
+   const productapp = new Vue({
+      el: '#productapp',
+      delimeters: ['[[', ']]'],
+      store: store,
+      data () {
+         return {
+            showMessage: false,
+            mainImage: '{{product.image.url}}',
+            images: [{{imagesstring|safe}}],
+         }
+      },
+      mounted() {
+         console.log('Mounted');
+      },
+      methods: {
+         changeMainImage(image) {
+               this.mainImage = image;
+         },
+         addToCart(product_id) {
+            console.log('Product_id', product_id);
+
+            const data = {
+               'product_id': product_id, 
+               'update': false,
+               'quantity': 1
+         };
+
+            fetch('/api/add_to_cart/', {
+               method: 'POST',
+               headers: {
+                  'Content-Type': 'application/json',
+                  'X-CSRFToken': '{{ csrf_token }}'
+               },
+               credentials: 'same-origin',
+               body: JSON.stringify(data)
+            }) 
+            .then((response) =>{
+               console.log(response)
+
+               this.showMessage = true
+
+               store.commit('increment', 1);
+
+               setTimeout(() =>{
+                  this.showMessage = false
+               }, 2000)
+
+
+            })
+            .catch(function (error) {
+               console.log('Error 2');
+               console.log(error);
+            })
+         }
+      }
+   });
+</script>
+{% endblock %}
+
+
