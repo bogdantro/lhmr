@@ -41,10 +41,6 @@ function addToCartHomePage(){
     document.getElementById('addToCartOverlay').classList.add('active')
 }
 
-function pricesHome(){
-    location.href = "#";
-    location.href = "#productHomePage";
-}
 
 
 window.onload = () =>{

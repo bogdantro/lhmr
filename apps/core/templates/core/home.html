@@ -41,27 +41,12 @@
       <i class="fas fa-coins"></i>      
       <h1>Fleksible priser som passer til alle</h1>
    </div>
+   <div class="border"></div>
 </div>
-<div class="productSection" id="productHomePage">
-   <br>
-   {% for product in products %}
-   <div class="card">
-      <div class="desc">
-          <h6 class="product-name">{{ product.name }}</h6>
-          <h6 class="product-description">{{product.description}}</h6>
-      </div>
-      <div class="buy">
-         <button @click="addToCart({{ product.id }})" onclick="addToCartHomePage()" class="btn-buy">Bestill</button>
-         <button class="btn-details">Se detaljer</button>
-      </div>
-      <div class="price">
-         <h6 class="product-price">{{ product.price|floatformat }} kr</h6>
-      </div>
-   </div>
-   {% endfor %}
-    <br>
+<div class="product-section">
+   <h1>Velg din plan</h1>
+   <a href="">Se alle priser</a>
 </div>
-
 {% endblock %}
 
 {% block scripts %}
