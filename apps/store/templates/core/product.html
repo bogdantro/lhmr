@@ -13,14 +13,6 @@
    <div class="main-image">
       <img :src="mainImage">
    </div>
-   <div id="productImages">
-      <h1>Se fler bilder av "{{product.name}}"</h1>
-      <div v-for="image in images" id="imgLoop">
-         <div id="imgDiv">
-            <img :src="image.image" @click="changeMainImage(image.image)">
-         </div>
-      </div>
-   </div>
 
    
    {% if product.in_cart %}

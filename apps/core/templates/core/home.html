@@ -43,9 +43,43 @@
    </div>
    <div class="border"></div>
 </div>
-<div class="product-section">
+<div class="product-section" id="productHomePage">
    <h1>Velg din plan</h1>
-   <a href="">Se alle priser</a>
+   {% for product in products %}
+   <div class="product-card">
+      <div class="text">
+         <h1 class="product-name">{{product.name}}</h1>
+         <h1 class="product-price">{{product.price|floatformat}} kr</h1>
+      </div>
+      <div class="border"></div>
+      <div class="buttons-product-section">
+         <a @click="addToCart({{ product.id }})" onclick="addToCartHomePage()" class="btn-buy">Bestill</a>
+         <a href="{% url  'product_detail' product.slug  %}">Se detaljer</a>
+      </div>
+   </div>
+   {% endfor %}
+   <div class="border"></div>
+</div>
+<div class="contact-us" id="contactUs">
+   <h1>Trenger du extra hjelp?</h1>
+   <p>Kontakter oss under</p>
+   <form method="post">
+      {% csrf_token %}
+      <label for="fra_epost">Din epost</label>
+      <br>
+      <input type="text" name="fra_epost">
+      <br>
+      <label for="navn">Din navn</label>
+      <br>
+      <input type="text" name="navn">
+      <br>
+      <label for="beskjed">Hva ønsker du fortelle oss?</label>
+      <br>
+      <textarea class="beskjed" type="text" name="beskjed" cols="30" rows="10"></textarea>
+      <div class="form-actions">
+         <button type="submit">Send</button>
+      </div>
+   </form>
 </div>
 {% endblock %}
 
@@ -77,10 +111,8 @@
             }) 
             .then((response) =>{
                console.log(response)
-
-               setTimeout(function(){
-                  store.commit('increment', 1);
-               }, 500)
+               
+               store.commit('increment', 1);
 
             })
             .catch(function (error) {

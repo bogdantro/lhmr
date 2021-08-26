@@ -26,7 +26,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to top, rgb(39, 67, 67), transparent 20%);
+  background: linear-gradient(to top, rgb(245, 245, 245), transparent 30%);
   .cover-content{
     text-align: center;
     margin: 10px;
@@ -71,7 +71,6 @@ html, body {
   }
 }
 .services{
-  // background: linear-gradient( to bottom, rgb(35, 67, 67), rgb(25, 48, 48), rgb(20, 37, 37));
   background: rgb(245, 245, 245);
   width: 100%;
   height: auto;
@@ -79,7 +78,7 @@ html, body {
   padding-top: 40px;
   text-align: center;
   .border{
-    background: rgb(130, 130, 130);
+    background: rgb(100, 100, 100);
     height: 2px;
     width: 65%;
     margin: 0 auto;
@@ -118,18 +117,117 @@ html, body {
     font-size: 28px;
     font-weight: bold;
     color: rgb(15, 15, 15);
-    margin-top: 20px;
     margin-bottom: 45px;
   }
-  a{
-    margin-bottom: 30px;
-    background: black;
-    border: 1px solid black;
-    color: white;
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 30px;
+  .border{
+    background: rgb(100, 100, 100);
+    transform: translateY(30px);
+    height: 2px;
+    width: 65%;
+    margin: 20px auto;
+  }
+  .product-card{
+    box-shadow: 0px 1px 5px rgb(70, 70, 70);
+    max-width: 330px;
+    height: auto;
+    margin: 20px auto;
+    position: relative;
+    .border{
+      background: rgb(130, 130, 130);
+      transform: translateY(-60px);
+      height: 2px;
+      width: 65%;
+      margin: 0 auto;
+    }
+    .text{
+      .product-name{
+        padding: 10px;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      .product-price{
+        transform: translateY(-40px);
+        font-size: 16px;
+        color: rgb(120, 120, 120);
+      }
+    }
+    .buttons-product-section{
+      display: flex;
+      width: 100%;
+      a{
+        border-radius: 10px;
+        border: 2px solid transparent;
+        font-size: 18px;
+        margin: 10px;
+        width: 50%;
+        padding: 5px;
+        &:nth-child(1){
+          background: rgb(25, 25, 25);
+          color: white;
+        }
+        &:nth-child(2){
+          background: white;
+          color: black;
+          border: 2px solid black;
+        }
+      }
+    }
+  }
+}
+.contact-us{
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgb(245, 245, 245);
+  text-align: center;
+  h1{
+    font-size: 28px;
     font-weight: bold;
-    text-decoration: none;
+    color: rgb(15, 15, 15);
+    margin-bottom: 15px;
+  }
+  p{
+    font-size: 18px;
+    color: rgb(15, 15, 15);
+    margin-bottom: 15px;
+
+  }
+  form{
+    label{
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    input{
+      width: 60%;
+      margin: auto;
+      border: 1px solid black;
+      border-radius: 7px;
+      padding: 3px;
+      &.beskjed{
+        height: 100px;
+        width: 80%;
+      }
+    }
+    .form-actions{
+      margin: 20px;
+      button{
+        border-radius: 30px;
+        border: 2px solid black;
+        color: rgb(30, 30, 30);
+        width: 200px;
+        font-size: 18px;
+        padding: 5px;
+        transition: all .2s ease-in-out;
+        background: black;
+        color: white;
+        &:hover{
+          background: white;
+          color: black;
+        }
+      }
+    }
   }
 }

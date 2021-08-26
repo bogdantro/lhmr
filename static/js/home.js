@@ -38,9 +38,47 @@
 
 function addToCartHomePage(){
     document.getElementById('cartNav').classList.add('active')
-    document.getElementById('addToCartOverlay').classList.add('active')
 }
 
+function prices(){
+    const scrollDiv = document.getElementById("productHomePage").offsetTop;
+    const sidebar = document.getElementById('sidebar');
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburger');
+    const sidebarLi = document.getElementById('sidebarLi');
+    const allContentArea = document.getElementById('allContentArea');
+    const html = document.querySelector("html");
+    const body = document.body;
+  
+    window.scrollTo({ top: scrollDiv-60, behavior: 'smooth'});
+    html.style.overflow = 'unset'
+    body.style.overflow = 'unset'
+    sidebar.classList.remove('active')  
+    hamburger.classList.remove('click')  
+    sidebarLi.classList.remove('active')  
+    navbar.classList.remove('menu-active')  
+    allContentArea.style.filter = 'brightness(100%)';
+}
+
+function contact(){
+    const scrollDiv = document.getElementById("contactUs").offsetTop;
+    const sidebar = document.getElementById('sidebar');
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburger');
+    const sidebarLi = document.getElementById('sidebarLi');
+    const allContentArea = document.getElementById('allContentArea');
+    const html = document.querySelector("html");
+    const body = document.body;
+  
+    window.scrollTo({ top: scrollDiv-60, behavior: 'smooth'});
+    html.style.overflow = 'unset'
+    body.style.overflow = 'unset'
+    sidebar.classList.remove('active')  
+    hamburger.classList.remove('click')  
+    sidebarLi.classList.remove('active')  
+    navbar.classList.remove('menu-active')  
+    allContentArea.style.filter = 'brightness(100%)';
+}
 
 
 window.onload = () =>{
