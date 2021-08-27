@@ -196,6 +196,46 @@ $primaryColor: #2d9cb3;
             font-size: 22px;
         }
     }
+    .login-signup{
+        text-align: center;
+        width: 85%;
+        height: auto;
+        padding: 10px;
+        position: fixed;
+        top: 80px;
+        left: 8%;
+        opacity: 0;
+        background: rgb(245, 245, 245);
+        border-radius: 25px;
+        transition: all .6s ease-in-out;
+        pointer-events: none;
+        a{
+            display: inline-block;
+            border-radius: 30px;
+            border: 2px solid black;
+            color: rgb(30, 30, 30);
+            display: inline-block;
+            text-decoration: none;
+            width: 60%;
+            font-size: 18px;
+            margin: 25px;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 5px;
+            transition: all .5s ease-in-out;
+            background: black;
+            color: white;
+            &:nth-child(3){
+                background: white;
+                color: black;
+            }
+        }
+        &.active{
+            top: 110px;
+            opacity: 1;
+            pointer-events: visible;
+        }
+    }
     .cart{
         margin: 0;
         position: absolute;

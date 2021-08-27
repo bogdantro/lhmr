@@ -2,6 +2,12 @@
 #signUpForm{
     margin: 20px;
     margin-left: 10px;
+    background: rgb(245, 245, 245);
+    position: fixed;
+    top: 90px;
+    z-index: 10;
+    padding: 15px;
+    display: none;
     #signupFormRequire{
         font-size: 14px;
     }
@@ -38,33 +44,7 @@
             color: white;
         }
     }
+    &.active{
+        display: block;
+    }
 }
-
-// TABLET TO DESKTOP
-@media only screen and (min-device-width:640px) {
-    #signUpForm{
-        margin-left: 80px;
-        #signUpFormPasswordRequire{
-            li{
-                font-size: 15px;
-            }
-        }
-        #submit{
-            text-align: left;
-            width: auto;
-            margin: 40px;
-            margin-left: 0;
-        }
-        #signUpFormButton{
-            width: 30%;
-        }
-    }
-} 
-
-
-// DESKTOP BIG AND NORMAL
-@media only screen and (min-device-width:1024px) {
-    #signUpForm{
-        margin-left: 180px;
-    }
-} 

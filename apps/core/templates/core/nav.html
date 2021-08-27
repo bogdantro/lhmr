@@ -15,7 +15,7 @@
 
 
 <div id="navbar">
-    <div class="logo" onclick="window.location.href=''">
+    <div class="logo" id="logo" onclick="window.location.href=''">
         <img src="{% static '/images/logo/logo-name-white.png' %}" class="logo1" alt="logo1">
         <img src="{% static '/images/logo/logo-name-black.png' %}" class="logo2" alt="logo2">
     </div>
@@ -28,17 +28,22 @@
     <div class="sidebar" id="sidebar">
         <ul class="sidebar-ul">
             <li class="sidebar-li" id="sidebarLi">
-                <a href="#">Hjelp</a>
-                <a href="">Om oss</a>
                 <a onclick="prices()">Priser</a>
+                <a onclick="about()">Om oss</a>
+                <a onclick="frontend()">Info</a>
                 <a onclick="contact()">Kontakt oss</a>
             </li>   
         </ul>
     </div>
     <!-- PHONE END -->
-    <a href="/logg-in" class="my-account" id="myAccount">
+    <a onclick="signUpORLogin()" class="my-account" id="myAccount">
         <i class="far fa-user-astronaut"></i>    
     </a>
+    <div class="login-signup" id="loginORSignUp">
+        <a href="">Logg inn</a>
+        <a onclick="signup()">Lag bruker</a>
+        <a onclick="signUpORLoginBack()">Tilbake</a>
+    </div>
     {% if cart %}
     <a href="/handlekurv" class="cart active" id="cartNav">
         <i class="fab fa-opencart"></i>

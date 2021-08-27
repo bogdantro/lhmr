@@ -13,7 +13,7 @@
     <img src="{% static '/images/covers/cover-1.jpg' %}" id="cover-1" alt="cover-1">
     <div class="cover-content">
         <h1 class="cover-text" id="coverTxt">Få en profesjonell nettiside med Webiser</h1>
-        <a onclick="pricesHome()"><button class="cover-btn" id="coverBtn">kom i gang</button></a>
+        <a onclick="prices()"><button class="cover-btn" id="coverBtn">kom i gang</button></a>
     </div>
 </div>
 <div class="services">
@@ -60,7 +60,33 @@
    {% endfor %}
    <div class="border"></div>
 </div>
-<div class="contact-us" id="contactUs">
+<div class="about-us" id="aboutUs">
+   <h1>Hvem er vi?</h1>
+   <img src="{% static '/images/logo/logo-name-black.png' %}" alt="about-us-logo-img">
+   <div class="text">
+      <p id="firstText">Webiser er en nettiside development firma. Vi bygger nettsidene ved hjelp av de tre frontend progamering språkene, som er Html5, CSS3 og JavaScript...</p>
+      <p id="secondText"><span id="opacity0">Webiser er en nettiside development firma. Vi bygger nettsidene ved hjelp av de tre frontend progamering språkene, som er Html5, CSS3 og JavaScript.</span><br> Vi bruker Python og Django for å bygge enten ecommerce eller blog nettsider, derfor anbefaller vi at du har noe python forståelse om du vil gjøre noen endringer selv. Vi bruker ikke Python eller Django for å bygge nettsider som ikke trenger bruk av Python eller Django, men vi anbefaller at du kan de tre frontend progamering språkene, som er <a onclick="html()">Html5</a>, <a onclick="css()">CSS3</a> og <a onclick="javascript()">JavaScript</a> <br>Du får 7 timer gratis hjelp hver uke uansett. Vår team består av web designere som sørger for at designen blir best som mulig, og web developers som bidrar til at alt virker som det skal.</p>
+      <button id="readMore" onclick="aboutUsReadMore()">Les mer</button>
+   </div>
+   <div class="border"></div>
+</div>
+<div id="frontend">
+   <h1>De tre frontend språkene</h1>
+   <div class="html frontend" id="html">
+      <h1>Html5</h1>
+      <img src="{% static '/images/covers/html.png' %}" alt="html">
+   </div>
+   <div class="css frontend" id="css">
+      <h1>CSS3</h1>
+      <img src="{% static '/images/covers/css.png' %}" alt="css">
+   </div>
+   <div class="javascript frontend" id="javascript">
+      <h1>JavaScript</h1>
+      <img src="{% static '/images/covers/javascript.png' %}" alt="javascript">
+      <div class="border"></div>
+   </div>
+</div>
+   <div class="contact-us" id="contactUs">
    <h1>Trenger du extra hjelp?</h1>
    <p>Kontakter oss under</p>
    <form method="post">

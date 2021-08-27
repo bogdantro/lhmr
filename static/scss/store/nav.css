@@ -230,6 +230,52 @@
   font-size: 22px;
 }
 
+#navbar .login-signup {
+  text-align: center;
+  width: 85%;
+  height: auto;
+  padding: 10px;
+  position: fixed;
+  top: 80px;
+  left: 8%;
+  opacity: 0;
+  background: whitesmoke;
+  border-radius: 25px;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+  pointer-events: none;
+}
+
+#navbar .login-signup a {
+  display: inline-block;
+  border-radius: 30px;
+  border: 2px solid black;
+  color: #1e1e1e;
+  display: inline-block;
+  text-decoration: none;
+  width: 60%;
+  font-size: 18px;
+  margin: 25px;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 5px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  background: black;
+  color: white;
+}
+
+#navbar .login-signup a:nth-child(3) {
+  background: white;
+  color: black;
+}
+
+#navbar .login-signup.active {
+  top: 110px;
+  opacity: 1;
+  pointer-events: visible;
+}
+
 #navbar .cart {
   margin: 0;
   position: absolute;

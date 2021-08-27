@@ -208,6 +208,122 @@ html, body {
   border: 2px solid black;
 }
 
+.about-us {
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: whitesmoke;
+  text-align: center;
+}
+
+.about-us .border {
+  background: #646464;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  height: 2px;
+  width: 65%;
+  margin: 20px auto;
+}
+
+.about-us h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0f0f0f;
+  margin-bottom: 20px;
+}
+
+.about-us img {
+  width: 80px;
+  height: 20px;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.about-us .text {
+  width: 100%;
+}
+
+.about-us .text p {
+  margin: 0 auto;
+  width: 90%;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.about-us .text #secondText {
+  display: none;
+}
+
+.about-us .text #secondText a {
+  text-decoration: underline;
+  color: #1212cc;
+}
+
+.about-us .text button {
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  border-radius: 30px;
+  border: 2px solid black;
+  color: #1e1e1e;
+  width: 150px;
+  font-size: 16px;
+  padding: 5px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  background: black;
+  color: white;
+}
+
+.about-us .text button:hover {
+  background: white;
+  color: black;
+}
+
+#frontend {
+  background: whitesmoke;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#frontend h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0f0f0f;
+  margin-bottom: 25px;
+}
+
+#frontend .frontend {
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#frontend .frontend h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0f0f0f;
+  margin-bottom: 20px;
+}
+
+#frontend .frontend img {
+  width: 250px;
+  height: 220px;
+}
+
+#frontend .frontend.javascript .border {
+  background: #646464;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  height: 2px;
+  width: 65%;
+  margin: 20px auto;
+}
+
 .contact-us {
   width: 100%;
   height: auto;
@@ -259,7 +375,7 @@ html, body {
   border: 2px solid black;
   color: #1e1e1e;
   width: 200px;
-  font-size: 18px;
+  font-size: 16px;
   padding: 5px;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;

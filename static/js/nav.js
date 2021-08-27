@@ -29,3 +29,45 @@ window.addEventListener("scroll", function(){
   const navbar = document.getElementById('navbar');
   navbar.classList.toggle("sticky", window.scrollY > 1)
 })
+
+function signUpORLogin(){
+  const hamburger = document.getElementById('hamburger');
+  const allContentArea = document.getElementById('allContentArea');
+  const html = document.querySelector("html");
+  const body = document.body;
+  
+  document.getElementById('loginORSignUp').classList.add('active')
+  document.getElementById('logo').style.pointerEvents = 'none';
+    html.style.overflow = 'hidden'
+    body.style.overflow = 'hidden'
+    hamburger.style.pointerEvents = 'none'
+    allContentArea.style.filter = 'brightness(50%)';
+}
+function signUpORLoginBack(){
+  const hamburger = document.getElementById('hamburger');
+  const allContentArea = document.getElementById('allContentArea');
+  const html = document.querySelector("html");
+  const body = document.body;
+  
+  document.getElementById('loginORSignUp').classList.remove('active')
+  document.getElementById('logo').style.pointerEvents = 'visible';
+    html.style.overflow = 'unset'
+    body.style.overflow = 'unset'
+    hamburger.style.pointerEvents = 'visibile'
+    allContentArea.style.filter = 'brightness(100%)';
+}
+function signup(){
+  const hamburger = document.getElementById('hamburger');
+  const allContentArea = document.getElementById('allContentArea');
+  const html = document.querySelector("html");
+  const body = document.body;
+  
+  document.getElementById('signUpForm').classList.add('active')
+  document.getElementById('logo').style.pointerEvents = 'visible';
+  document.getElementById('loginORSignUp').classList.remove('active')
+    html.style.overflow = 'hidden'
+    body.style.overflow = 'hidden'
+    hamburger.style.pointerEvents = 'none'
+    allContentArea.style.filter = 'brightness(50%)';
+}
+
