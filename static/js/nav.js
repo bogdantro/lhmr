@@ -51,23 +51,21 @@ function signUpORLoginBack(){
   
   document.getElementById('loginORSignUp').classList.remove('active')
   document.getElementById('logo').style.pointerEvents = 'visible';
-    html.style.overflow = 'unset'
-    body.style.overflow = 'unset'
-    hamburger.style.pointerEvents = 'visibile'
+  document.getElementById('myAccount').style.pointerEvents = 'visible';
+    html.style.overflow = 'unset';
+    body.style.overflow = 'unset';
+    hamburger.style.pointerEvents = 'visible';  
     allContentArea.style.filter = 'brightness(100%)';
 }
-function signup(){
-  const hamburger = document.getElementById('hamburger');
-  const allContentArea = document.getElementById('allContentArea');
-  const html = document.querySelector("html");
-  const body = document.body;
-  
+function signup(){  
   document.getElementById('signUpForm').classList.add('active')
-  document.getElementById('logo').style.pointerEvents = 'visible';
-  document.getElementById('loginORSignUp').classList.remove('active')
-    html.style.overflow = 'hidden'
-    body.style.overflow = 'hidden'
-    hamburger.style.pointerEvents = 'none'
-    allContentArea.style.filter = 'brightness(50%)';
+  document.getElementById('logo').style.pointerEvents = 'none';
+  document.getElementById('myAccount').style.pointerEvents = 'none';
+  document.getElementById('choose').style.display = 'none';
 }
 
+function signUpBack(){
+
+  document.getElementById('choose').style.display = 'block';
+  document.getElementById('signUpForm').classList.remove('active')
+}

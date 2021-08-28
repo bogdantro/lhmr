@@ -40,9 +40,42 @@
         <i class="far fa-user-astronaut"></i>    
     </a>
     <div class="login-signup" id="loginORSignUp">
-        <a href="">Logg inn</a>
-        <a onclick="signup()">Lag bruker</a>
-        <a onclick="signUpORLoginBack()">Tilbake</a>
+        <div id="choose">
+            <a href="">Logg inn</a>
+            <a onclick="signup()">Lag bruker</a>
+            <a onclick="signUpORLoginBack()">Tilbake</a>
+        </div>
+        <form id="signUpForm" method="post">      
+            {% csrf_token %}
+            <label for="id_username">Brukernavn *</label>
+            <br>
+            <input type="text" id="username" name="username">
+            <br>
+            <div class="form-flex-text">
+                <label for="id_first_name">Fornavn *</label>
+                <label for="id_last_name">Etternavn *</label>
+            </div>
+            <div class="form-flex-input">
+                <input type="text" id="first_name" name="first_name">
+                <input type="text" id="last_name" name="last_name">
+            </div>
+            <label for="id_email">Epost *</label>
+            <br>
+            <input type="text" id="email" name="email">
+            <div class="form-flex-text">
+                <label for="id_password1">Passord *</label>
+                <label for="id_password1">Gjenta passord *</label>
+            </div>
+            <div class="form-flex-input">
+                <input type="text" id="password1" name="password1">
+                <input type="text" id="password2" name="password2">
+            </div>
+            <br>
+            <div id="submit">
+                <button id="signUpFormButton">Lag Bruker</button>
+            </div>
+            <span onclick="signUpBack()">Tilbake</span>
+        </form>
     </div>
     {% if cart %}
     <a href="/handlekurv" class="cart active" id="cartNav">

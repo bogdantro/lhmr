@@ -10,7 +10,7 @@ from django.contrib.auth import login
 
 
 
-def hjemme(request):
+def hjemme(request,  backend='django.contrib.auth.backends.ModelBackend'):
     products = Product.objects.all()
     cart = Cart(request)    
 
@@ -44,7 +44,7 @@ def hjemme(request):
             userprofile.user = user
             userprofile.save()
 
-            login(request, user)
+            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
 
             return redirect('hjemme')
     else:
