@@ -36,12 +36,13 @@ function signUpORLogin(){
   const html = document.querySelector("html");
   const body = document.body;
   
+  document.getElementById('myAccountIcon').style.filter = 'brightness(40%)';
   document.getElementById('loginORSignUp').classList.add('active')
-  document.getElementById('logo').style.pointerEvents = 'none';
     html.style.overflow = 'hidden'
     body.style.overflow = 'hidden'
     hamburger.style.pointerEvents = 'none'
-    allContentArea.style.filter = 'brightness(50%)';
+    hamburger.style.filter = 'brightness(40%)'
+    allContentArea.style.filter = 'brightness(40%)';
 }
 function signUpORLoginBack(){
   const hamburger = document.getElementById('hamburger');
@@ -50,22 +51,31 @@ function signUpORLoginBack(){
   const body = document.body;
   
   document.getElementById('loginORSignUp').classList.remove('active')
-  document.getElementById('logo').style.pointerEvents = 'visible';
-  document.getElementById('myAccount').style.pointerEvents = 'visible';
+  document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
+  document.getElementById('myAccountIcon').style.filter = 'brightness(100%)';
     html.style.overflow = 'unset';
     body.style.overflow = 'unset';
     hamburger.style.pointerEvents = 'visible';  
+    hamburger.style.filter = 'brightness(100%)'
     allContentArea.style.filter = 'brightness(100%)';
 }
-function signup(){  
-  document.getElementById('signUpForm').classList.add('active')
-  document.getElementById('logo').style.pointerEvents = 'none';
-  document.getElementById('myAccount').style.pointerEvents = 'none';
+
+function myaccount(){  
+  document.getElementById('myAccount').classList.add('active')
+  document.getElementById('myAccountIcon').style.pointerEvents = 'none';
   document.getElementById('choose').style.display = 'none';
 }
+function myAccountBack(){  
+  document.getElementById('myAccount').classList.remove('active')
+  document.getElementById('choose').style.display = 'block';
+}
 
+function signup(){  
+  document.getElementById('signUpForm').classList.add('active')
+  document.getElementById('myAccountIcon').style.pointerEvents = 'none';
+  document.getElementById('choose').style.display = 'none';
+}
 function signUpBack(){
-
   document.getElementById('choose').style.display = 'block';
   document.getElementById('signUpForm').classList.remove('active')
 }

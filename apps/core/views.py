@@ -5,7 +5,7 @@ from apps.cart.cart import Cart
 from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 from apps.userprofile.forms import SignUpForm, UserprofileForm
-from django.contrib.auth import login
+from django.contrib.auth import login, authenticate
 
 
 
@@ -33,7 +33,7 @@ def hjemme(request,  backend='django.contrib.auth.backends.ModelBackend'):
                 return HttpResponse('Invalid header found.')
             return redirect('/')
 
-    if request.method == 'POST':
+    if request.POST.get('submit') == 'sign_up':
         form = SignUpForm(request.POST)
         userprofileform = UserprofileForm(request.POST)
 
@@ -47,9 +47,11 @@ def hjemme(request,  backend='django.contrib.auth.backends.ModelBackend'):
             login(request, user, backend='django.contrib.auth.backends.ModelBackend')
 
             return redirect('hjemme')
-    else:
-        form = SignUpForm()
-        userprofileform = UserprofileForm()
+        else:
+                form = SignUpForm()
+                userprofileform = UserprofileForm()            
+    
+            
 
 
     context = {

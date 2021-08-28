@@ -20,7 +20,7 @@ $primaryColor: #2d9cb3;
                 background: black;
             }
         }
-        .my-account{
+        .my-account-icon{
             i{
                 color: black;
             }
@@ -50,7 +50,7 @@ $primaryColor: #2d9cb3;
                 background: black;
             }
         }
-        .my-account{
+        .my-account-icon{
             i{
                 color: black;
             }
@@ -186,7 +186,7 @@ $primaryColor: #2d9cb3;
             right: 0;
         }
     }
-    .my-account{
+    .my-account-icon{
         margin: 0;
         position: absolute;
         right: 60px;
@@ -202,7 +202,7 @@ $primaryColor: #2d9cb3;
         height: auto;
         padding: 10px;
         position: fixed;
-        top: 80px;
+        top: 50px;
         left: 8%;
         opacity: 0;
         background: rgb(245, 245, 245);
@@ -231,9 +231,29 @@ $primaryColor: #2d9cb3;
             }
         }
         &.active{
-            top: 110px;
+            top: 80px;
             opacity: 1;
             pointer-events: visible;
+        }
+        .my-account{
+            width: 100%;
+            display: none;
+            a{
+                margin: 15px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .my-orders{
+                background: black;
+                color: white;
+            }
+            .my-account-back{
+                background: white;
+                color: black;
+            }
+            &.active{
+                display: block;
+            }
         }
     }
     .cart{

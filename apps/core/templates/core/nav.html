@@ -36,43 +36,57 @@
         </ul>
     </div>
     <!-- PHONE END -->
-    <a onclick="signUpORLogin()" class="my-account" id="myAccount">
+    <a onclick="signUpORLogin()" class="my-account-icon" id="myAccountIcon">
         <i class="far fa-user-astronaut"></i>    
     </a>
     <div class="login-signup" id="loginORSignUp">
         <div id="choose">
+            {% if request.user.is_authenticated %}
+            <a onclick="myaccount()">Min bruker</a>
+            <a href="{% url 'logout' %}">Logg ut</a>
+            <a onclick="signUpORLoginBack()">Tilbake</a>
+            {% else %}
             <a href="">Logg inn</a>
             <a onclick="signup()">Lag bruker</a>
             <a onclick="signUpORLoginBack()">Tilbake</a>
+            {% endif %}
+        </div>
+        <div class="my-account" id="myAccount">
+            <p><strong>Navn:</strong> {{ request.user.get_full_name }}</p>
+            <p><strong>Epost:</strong> {{ request.user.email }}</p>
+            <a class="my-orders" href="/">Mine bestillinger</a>
+            <a class="my-account-back" onclick="myAccountBack()">Tilbake</a>
         </div>
         <form id="signUpForm" method="post">      
             {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{form.errors}}
             <label for="id_username">Brukernavn *</label>
             <br>
-            <input type="text" id="username" name="username">
+            <input type="text" id="username" name="username" placeholder="Brukernavn" required oninvalid="this.setCustomValidity('Værsåsnill velg en brukernavn')" oninput="this.setCustomValidity('')">
             <br>
             <div class="form-flex-text">
                 <label for="id_first_name">Fornavn *</label>
                 <label for="id_last_name">Etternavn *</label>
             </div>
             <div class="form-flex-input">
-                <input type="text" id="first_name" name="first_name">
-                <input type="text" id="last_name" name="last_name">
+                <input type="text" id="first_name" name="first_name" placeholder="Fornavn" required oninvalid="this.setCustomValidity('Fornavn kan ikke være tom')" oninput="this.setCustomValidity('')">
+                <input type="text" id="last_name" name="last_name" placeholder="Etternavn" required oninvalid="this.setCustomValidity('Etternavn kan ikke være tom')" oninput="this.setCustomValidity('')">
             </div>
             <label for="id_email">Epost *</label>
             <br>
-            <input type="text" id="email" name="email">
+            <input type="text" id="email" name="email" placeholder="Epost" required oninvalid="this.setCustomValidity('Skriv din epost her')" oninput="this.setCustomValidity('')">
             <div class="form-flex-text">
                 <label for="id_password1">Passord *</label>
                 <label for="id_password1">Gjenta passord *</label>
             </div>
             <div class="form-flex-input">
-                <input type="password" id="password1" name="password1">
-                <input type="password" id="password2" name="password2">
+                <input type="password" id="password1" name="password1" required oninvalid="this.setCustomValidity('Velg et passord')" oninput="this.setCustomValidity('')">
+                <input type="password" id="password2" name="password2" required oninvalid="this.setCustomValidity('Du må gjenta passordet')" oninput="this.setCustomValidity('')">
             </div>
             <br>
             <div id="submit">
-                <button id="signUpFormButton">Lag Bruker</button>
+                <button id="signUpFormButton" type="submit" name="sumbit" value="sign_up">Lag Bruker</button>
             </div>
             <span onclick="signUpBack()">Tilbake</span>
         </form>

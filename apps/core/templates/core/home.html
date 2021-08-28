@@ -93,15 +93,15 @@
       {% csrf_token %}
       <label for="fra_epost">Din epost</label>
       <br>
-      <input type="text" name="fra_epost">
+      <input type="text" id="fra_epost" name="fra_epost">
       <br>
       <label for="navn">Din navn</label>
       <br>
-      <input type="text" name="navn">
+      <input type="text" id="navn" name="navn">
       <br>
       <label for="beskjed">Hva ønsker du fortelle oss?</label>
       <br>
-      <textarea class="beskjed" type="text" name="beskjed" cols="30" rows="10"></textarea>
+      <textarea class="beskjed" type="text" id="beskjed" name="beskjed" cols="30" rows="10"></textarea>
       <div class="form-actions">
          <button type="submit">Send</button>
       </div>
