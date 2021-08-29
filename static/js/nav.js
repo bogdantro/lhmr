@@ -13,7 +13,10 @@ function menu(){
     hamburger.classList.add('click')  
     sidebarLi.classList.add('active')  
     navbar.classList.add('menu-active')  
-    allContentArea.style.filter = 'brightness(50%)';
+    allContentArea.style.transition = '.5s';
+    setTimeout(function(){
+      allContentArea.style.filter = 'brightness(50%)';
+    }, 100)
   } else{
     html.style.overflow = 'unset'
     body.style.overflow = 'unset'
@@ -68,6 +71,16 @@ function myaccount(){
 function myAccountBack(){  
   document.getElementById('myAccount').classList.remove('active')
   document.getElementById('choose').style.display = 'block';
+}
+
+function login(){  
+  document.getElementById('loginForm').classList.add('active')
+  document.getElementById('myAccountIcon').style.pointerEvents = 'none';
+  document.getElementById('choose').style.display = 'none';
+}
+function loginBack(){
+  document.getElementById('choose').style.display = 'block';
+  document.getElementById('loginForm').classList.remove('active')
 }
 
 function signup(){  

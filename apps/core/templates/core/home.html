@@ -10,37 +10,35 @@
 
 
 <div class="cover">
-    <img src="{% static '/images/covers/cover-1.jpg' %}" id="cover-1" alt="cover-1">
-    <div class="cover-form">
-      <form method="post">
-         {% csrf_token %}
-         {{form.order}}
-      </form>
-    </div>
+   <img src="{% static '/images/covers/cover-1.jpg' %}" id="cover-1" alt="cover-1">
+   <div class="cover-text">
+      <img class="cover-text-img" src="{% static '/images/logo/logo-no-name-white.png' %}" id="cover-img-2" alt="cover-img-2">
+      <p>Norges største web design og web development team</p>
+   </div>
 </div>
 <div class="services">
    <h1>Hvorfor velge Webiser?</h1>
    <div class="icon">
       <i class="fas fa-users"></i>      
-      <h1 id="servicesFirstText1">Profesjonell team</h1>
+      <h1 id="servicesFirstText">Profesjonell team</h1>
       <p id="servicesSecondText1">Vi har et stor og profesjonell team som er motiverte og lidenskapelige for å levere et fantastisk nettsted, som garanterer at du vil elske den</p>
       <button id="readMoreServices1" onclick="servicesReadMore1()">Les mer</button>
    </div>
    <div class="icon">
       <i class="fas fa-check"></i>
-      <h1 id="servicesFirstText2">Få 4 timer gratis hjelp hver uke</h1>
+      <h1 id="servicesFirstText">Få 4 timer gratis hjelp hver uke</h1>
       <p id="servicesSecondText2">Vår team finner glede i å hjelpe deg, derfor du vil få 4 timer gratis hjelp og veiledning hver uke av våres web designere og web developers, for å sørge at alt er akkurat som du vil ha det</p>
       <button id="readMoreServices2" onclick="servicesReadMore2()">Les mer</button>
    </div>
    <div class="icon">
       <i class="fal fa-phone-laptop"></i>      
-      <h1 id="servicesFirstText3">Responsiv og modern design</h1>
+      <h1 id="servicesFirstText">Responsiv og modern design</h1>
       <p id="servicesSecondText3">Et bra nettsted begynner med en modern og unik design, våres web designere sørger at designen blir responsiv og modern og ikke minst akkurat som du ønsker at den skal være</p>
       <button id="readMoreServices3" onclick="servicesReadMore3()">Les mer</button>
    </div>
    <div class="icon">
       <i class="fab fa-python"></i>      
-      <h1 id="servicesFirstText4">Skrevet i python, enkelt å forstå</h1>
+      <h1 id="servicesFirstText">Skrevet i python, enkelt å forstå</h1>
       <p id="servicesSecondText4">Python teamet vår består av de beste python-utviklerne i Norge. Alt relatert til python, de har svaret</p>
       <button id="readMoreServices4" onclick="servicesReadMore4()">Les mer</button>
    </div>
@@ -105,7 +103,7 @@
       <br>
       <textarea class="beskjed" type="text" id="beskjed" name="beskjed" cols="30" rows="10"></textarea>
       <div class="form-actions">
-         <button type="submit">Send</button>
+         <button type="submit" name="contact" value="contact">Send</button>
       </div>
    </form>
 </div>

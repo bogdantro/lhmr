@@ -31,7 +31,6 @@ urlpatterns = [
 
 
     #AUTH
-    path('logg-in/', views.LoginView.as_view(template_name='core/base.html'), name='login'),
     path('logg-ut/', views.LogoutView.as_view(), name='logout'),
     path('min-bruker/', myaccount, name='myaccount'),
 

@@ -19,6 +19,8 @@ html, body {
   position: relative;
   width: auto;
   min-height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(whitesmoke), color-stop(30%, transparent));
+  background: linear-gradient(to top, whitesmoke, transparent 30%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,14 +30,36 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left bottom, left top, from(whitesmoke), color-stop(30%, transparent));
-  background: linear-gradient(to top, whitesmoke, transparent 30%);
 }
 
-.cover .cover-content {
+.cover .cover-text {
+  position: absolute;
   text-align: center;
   margin: 10px;
   margin-top: 0;
+}
+
+.cover .cover-text .cover-text-img {
+  -webkit-transform: translateY(-150px);
+          transform: translateY(-150px);
+  z-index: 1;
+  position: unset;
+  top: 0;
+  left: 0;
+  width: 13%;
+  height: 13%;
+  pointer-events: none;
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.cover .cover-text p {
+  color: #fafafa;
+  font-size: 16px;
+  -webkit-transform: translateY(-140px);
+          transform: translateY(-140px);
+  letter-spacing: 1px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .cover img {
@@ -63,16 +87,22 @@ html, body {
 
 .services h1 {
   font-size: 28px;
-  font-weight: bold;
   color: #0f0f0f;
   margin-bottom: 45px;
+  font-weight: bold;
+}
+
+.services h1#servicesFirstText {
+  font-weight: unset;
 }
 
 .services .border {
   background: #646464;
   height: 2px;
   width: 65%;
-  margin: 0 auto;
+  margin: 20px auto;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
 }
 
 .services .icon {
@@ -99,7 +129,6 @@ html, body {
   color: black;
   padding: 5px;
   margin-bottom: 10px;
-  font-weight: bold;
 }
 
 .services .icon p {
@@ -158,6 +187,7 @@ html, body {
   height: auto;
   margin: 20px auto;
   position: relative;
+  border-radius: 15px;
 }
 
 .product-section .product-card .border {
@@ -346,7 +376,7 @@ html, body {
 }
 
 .contact-us form {
-  background: #ebebeb;
+  background: gainsboro;
   border-radius: 150px;
   padding: 10px;
 }

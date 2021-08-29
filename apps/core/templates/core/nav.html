@@ -46,7 +46,7 @@
             <a href="{% url 'logout' %}">Logg ut</a>
             <a onclick="signUpORLoginBack()">Tilbake</a>
             {% else %}
-            <a href="">Logg inn</a>
+            <a onclick="login()">Logg inn</a>
             <a onclick="signup()">Lag bruker</a>
             <a onclick="signUpORLoginBack()">Tilbake</a>
             {% endif %}
@@ -57,6 +57,25 @@
             <a class="my-orders" href="/">Mine bestillinger</a>
             <a class="my-account-back" onclick="myAccountBack()">Tilbake</a>
         </div>
+        <form id="loginForm" method="post">
+            {% csrf_token %}
+            <br>
+            <div class="form-flex-text">
+                <label for="id_username">Brukernavn</label>
+                <label for="id_password">Passord</label>
+            </div>
+            <div class="form-flex-input">
+                <input type="text" id="username" name="username" placeholder="Brukernavn" required oninvalid="this.setCustomValidity('Værsåsnill skriv inn brukernavnet')" oninput="this.setCustomValidity('')">
+                <input type="password" id="password" name="password" placeholder="Passord" required oninvalid="this.setCustomValidity('Skriv inn passordet')" oninput="this.setCustomValidity('')">
+            </div>
+            <div id="signUpFormErrors">{{ form.username.errors }}</div>
+            <br>
+            <div id="signUpFormErrors">{{ form.password.errors }}</div>
+            <div id="submit">
+                <button id="logInButton" type="submit" value="login" name="login">Logg inn</button>
+                <span onclick="loginBack()">Tilbake</span>
+            </div>
+        </form>
         <form id="signUpForm" method="post">      
             {% csrf_token %}
             {{ form.non_field_errors }}
@@ -86,7 +105,7 @@
             </div>
             <br>
             <div id="submit">
-                <button id="signUpFormButton" type="submit" name="sumbit" value="sign_up">Lag Bruker</button>
+                <button id="signUpFormButton" type="submit" name="signup" value="signup">Lag Bruker</button>
             </div>
             <span onclick="signUpBack()">Tilbake</span>
         </form>
