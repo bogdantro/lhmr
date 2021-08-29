@@ -11,35 +11,38 @@
 
 <div class="cover">
     <img src="{% static '/images/covers/cover-1.jpg' %}" id="cover-1" alt="cover-1">
-    <div class="cover-content">
-        <h1 class="cover-text" id="coverTxt">Få en profesjonell nettiside med Webiser</h1>
-        <a onclick="prices()"><button class="cover-btn" id="coverBtn">kom i gang</button></a>
+    <div class="cover-form">
+      <form method="post">
+         {% csrf_token %}
+         {{form.order}}
+      </form>
     </div>
 </div>
 <div class="services">
-   <div class="icon">
-      <i class="fas fa-check"></i>
-      <h1>Rask levering</h1>
-   </div>
+   <h1>Hvorfor velge Webiser?</h1>
    <div class="icon">
       <i class="fas fa-users"></i>      
-      <h1>Få 2 timer gratis hjelp hver uke</h1>
+      <h1 id="servicesFirstText1">Profesjonell team</h1>
+      <p id="servicesSecondText1">Vi har et stor og profesjonell team som er motiverte og lidenskapelige for å levere et fantastisk nettsted, som garanterer at du vil elske den</p>
+      <button id="readMoreServices1" onclick="servicesReadMore1()">Les mer</button>
+   </div>
+   <div class="icon">
+      <i class="fas fa-check"></i>
+      <h1 id="servicesFirstText2">Få 4 timer gratis hjelp hver uke</h1>
+      <p id="servicesSecondText2">Vår team finner glede i å hjelpe deg, derfor du vil få 4 timer gratis hjelp og veiledning hver uke av våres web designere og web developers, for å sørge at alt er akkurat som du vil ha det</p>
+      <button id="readMoreServices2" onclick="servicesReadMore2()">Les mer</button>
    </div>
    <div class="icon">
       <i class="fal fa-phone-laptop"></i>      
-      <h1>Responsiv og modern design</h1>
-   </div>
-   <div class="icon">
-      <i class="far fa-shield-check"></i>      
-      <h1>Vi tar en backup av nettsiden, i tilfelle du mister den</h1>
+      <h1 id="servicesFirstText3">Responsiv og modern design</h1>
+      <p id="servicesSecondText3">Et bra nettsted begynner med en modern og unik design, våres web designere sørger at designen blir responsiv og modern og ikke minst akkurat som du ønsker at den skal være</p>
+      <button id="readMoreServices3" onclick="servicesReadMore3()">Les mer</button>
    </div>
    <div class="icon">
       <i class="fab fa-python"></i>      
-      <h1>Skrevet i python, enkelt å forstå</h1>
-   </div>
-   <div class="icon">
-      <i class="fas fa-coins"></i>      
-      <h1>Fleksible priser som passer til alle</h1>
+      <h1 id="servicesFirstText4">Skrevet i python, enkelt å forstå</h1>
+      <p id="servicesSecondText4">Python teamet vår består av de beste python-utviklerne i Norge. Alt relatert til python, de har svaret</p>
+      <button id="readMoreServices4" onclick="servicesReadMore4()">Les mer</button>
    </div>
    <div class="border"></div>
 </div>
@@ -53,8 +56,7 @@
       </div>
       <div class="border"></div>
       <div class="buttons-product-section">
-         <a @click="addToCart({{ product.id }})" onclick="addToCartHomePage()" class="btn-buy">Bestill</a>
-         <a href="{% url  'product_detail' product.slug  %}">Se detaljer</a>
+         <a href="{% url  'product_detail' product.slug  %}" class="btn-buy">Bestill</a>
       </div>
    </div>
    {% endfor %}
@@ -65,7 +67,7 @@
    <img src="{% static '/images/logo/logo-name-black.png' %}" alt="about-us-logo-img">
    <div class="text">
       <p id="firstText">Webiser er en nettiside development firma. Vi bygger nettsidene ved hjelp av de tre frontend progamering språkene, som er Html5, CSS3 og JavaScript...</p>
-      <p id="secondText"><span id="opacity0">Webiser er en nettiside development firma. Vi bygger nettsidene ved hjelp av de tre frontend progamering språkene, som er Html5, CSS3 og JavaScript.</span><br> Vi bruker Python og Django for å bygge enten ecommerce eller blog nettsider, derfor anbefaller vi at du har noe python forståelse om du vil gjøre noen endringer selv. Vi bruker ikke Python eller Django for å bygge nettsider som ikke trenger bruk av Python eller Django, men vi anbefaller at du kan de tre frontend progamering språkene, som er <a onclick="html()">Html5</a>, <a onclick="css()">CSS3</a> og <a onclick="javascript()">JavaScript</a> <br>Du får 7 timer gratis hjelp hver uke uansett. Vår team består av web designere som sørger for at designen blir best som mulig, og web developers som bidrar til at alt virker som det skal.</p>
+      <p id="secondText"><span id="opacity0">Webiser er en nettiside development firma. Vi bygger nettsidene ved hjelp av de tre frontend progamering språkene, som er Html5, CSS3 og JavaScript.</span><br> Vi bruker Python og Django for å bygge enten ecommerce eller blog nettsider, derfor anbefaller vi at du har noe python forståelse om du vil gjøre noen endringer selv. Vi bruker ikke Python eller Django for å bygge nettsider som ikke trenger bruk av Python eller Django, men vi anbefaller at du kan de tre frontend progamering språkene, som er <a onclick="html()">Html5</a>, <a onclick="css()">CSS3</a> og <a onclick="javascript()">JavaScript</a> <br>Du får 4 timer gratis hjelp hver uke uansett. Vår team består av web designere som sørger for at designen blir best som mulig, og web developers som bidrar til at alt virker som det skal.</p>
       <button id="readMore" onclick="aboutUsReadMore()">Les mer</button>
    </div>
    <div class="border"></div>

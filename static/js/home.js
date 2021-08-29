@@ -36,9 +36,6 @@
 //     }
 // };
 
-function addToCartHomePage(){
-    document.getElementById('cartNav').classList.add('active')
-}
 
 function prices(){
     const scrollDiv = document.getElementById("productHomePage").offsetTop;
@@ -143,15 +140,52 @@ function aboutUsReadMore(){
 }
 
 
-window.onload = () =>{
-    const coverTxt = document.getElementById('coverTxt');
-    const coverBtn = document.getElementById('coverBtn');
-    setTimeout(function(){
-        coverTxt.style.opacity = '1';
-        coverTxt.style.top = '20px';
-    }, 1000)
-    setTimeout(function(){
-        coverBtn.style.opacity = '1';
-    }, 2500)
+function servicesReadMore1(){
+    const firstText = document.getElementById('servicesSecondText1');
+    if (window.getComputedStyle(firstText ,null).getPropertyValue("display") == 'none'){  
+    firstText.style.display = 'block';
+    document.getElementById('readMoreServices1').classList.add('active')
+    document.getElementById('readMoreServices1').innerHTML = "Lukk";
+    } else{
+        firstText.style.display = 'none';
+        document.getElementById('readMoreServices1').classList.remove('active')
+        document.getElementById('readMoreServices1').innerHTML = "Les mer";
+    }
+}
+function servicesReadMore2(){
+    const firstText = document.getElementById('servicesSecondText2');
+    if (window.getComputedStyle(firstText ,null).getPropertyValue("display") == 'none'){  
+    firstText.style.display = 'block';
+    document.getElementById('readMoreServices2').classList.add('active')
+    document.getElementById('readMoreServices2').innerHTML = "Lukk";
+    } else{
+        firstText.style.display = 'none';
+        document.getElementById('readMoreServices2').classList.remove('active')
+        document.getElementById('readMoreServices2').innerHTML = "Les mer";
+    }
+}
+function servicesReadMore3(){
+    const firstText = document.getElementById('servicesSecondText3');
+    if (window.getComputedStyle(firstText ,null).getPropertyValue("display") == 'none'){  
+    firstText.style.display = 'block';
+    document.getElementById('readMoreServices3').classList.add('active')
+    document.getElementById('readMoreServices3').innerHTML = "Lukk";
+    } else{
+        firstText.style.display = 'none';
+        document.getElementById('readMoreServices3').classList.remove('active')
+        document.getElementById('readMoreServices3').innerHTML = "Les mer";
+    }
+}
+function servicesReadMore4(){
+    const firstText = document.getElementById('servicesSecondText4');
+    if (window.getComputedStyle(firstText ,null).getPropertyValue("display") == 'none'){  
+    firstText.style.display = 'block';
+    document.getElementById('readMoreServices4').classList.add('active')
+    document.getElementById('readMoreServices4').innerHTML = "Lukk";
+    } else{
+        firstText.style.display = 'none';
+        document.getElementById('readMoreServices4').classList.remove('active')
+        document.getElementById('readMoreServices4').innerHTML = "Les mer";
+    }
 }
 
