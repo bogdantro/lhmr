@@ -18,9 +18,9 @@ html, body {
 .cover {
   position: relative;
   width: auto;
-  min-height: 100vh;
-  background: -webkit-gradient(linear, left bottom, left top, from(whitesmoke), color-stop(30%, transparent));
-  background: linear-gradient(to top, whitesmoke, transparent 30%);
+  min-height: 110vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(whitesmoke), color-stop(25%, transparent));
+  background: linear-gradient(to top, whitesmoke, transparent 25%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,31 +33,25 @@ html, body {
 }
 
 .cover .cover-text {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
   position: absolute;
   text-align: center;
   margin: 10px;
   margin-top: 0;
 }
 
-.cover .cover-text .cover-text-img {
-  -webkit-transform: translateY(-150px);
-          transform: translateY(-150px);
-  z-index: 1;
-  position: unset;
-  top: 0;
-  left: 0;
-  width: 13%;
-  height: 13%;
-  pointer-events: none;
-  -webkit-filter: brightness(100%);
-          filter: brightness(100%);
+.cover .cover-text h1 {
+  font-size: 28px;
+  color: #fafafa;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .cover .cover-text p {
   color: #fafafa;
   font-size: 16px;
-  -webkit-transform: translateY(-140px);
-          transform: translateY(-140px);
   letter-spacing: 1px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -88,7 +82,7 @@ html, body {
 .services h1 {
   font-size: 28px;
   color: #0f0f0f;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
   font-weight: bold;
 }
 
@@ -108,20 +102,21 @@ html, body {
 .services .icon {
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
-  margin: 0 auto;
   margin-bottom: 15px;
-  border-radius: 20px;
-  width: 240px;
+  width: 45%;
   height: auto;
-  border: 1px solid black;
   padding: 5px;
+  display: inline-table;
+  position: relative;
 }
 
 .services .icon i {
   margin: 30px;
   padding: 20px;
-  color: black;
-  font-size: 60px;
+  color: #2d2d2d;
+  font-size: 50px;
+  background: rgba(53, 173, 197, 0.6);
+  border-radius: 25px;
 }
 
 .services .icon h1 {
@@ -138,14 +133,14 @@ html, body {
 .services .icon button {
   margin-top: 10px;
   border-radius: 30px;
-  border: 2px solid black;
+  border: 2px solid #2d2d2d;
   color: #1e1e1e;
   width: 100px;
-  font-size: 12px;
+  font-size: 15px;
   padding: 5px;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  background: black;
+  background: #2d2d2d;
   color: white;
   outline: none;
 }
@@ -236,6 +231,82 @@ html, body {
   color: white;
 }
 
+.what-we-do {
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: whitesmoke;
+  text-align: center;
+}
+
+.what-we-do .border {
+  background: #646464;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  height: 2px;
+  width: 65%;
+  margin: 20px auto;
+}
+
+.what-we-do h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0f0f0f;
+  margin-bottom: 20px;
+}
+
+.what-we-do .text p {
+  margin: 0 auto;
+  width: 90%;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+#frontend {
+  background: whitesmoke;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#frontend h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0f0f0f;
+  margin-bottom: 25px;
+}
+
+#frontend .frontend {
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#frontend .frontend h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0f0f0f;
+  margin-bottom: 20px;
+}
+
+#frontend .frontend img {
+  width: 250px;
+  height: 220px;
+}
+
+#frontend .frontend.javascript .border {
+  background: #646464;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  height: 2px;
+  width: 65%;
+  margin: 20px auto;
+}
+
 .about-us {
   width: 100%;
   height: auto;
@@ -307,50 +378,6 @@ html, body {
 .about-us .text button:hover {
   background: white;
   color: black;
-}
-
-#frontend {
-  background: whitesmoke;
-  text-align: center;
-  width: 100%;
-  height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-#frontend h1 {
-  font-size: 28px;
-  font-weight: bold;
-  color: #0f0f0f;
-  margin-bottom: 25px;
-}
-
-#frontend .frontend {
-  width: 100%;
-  height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-#frontend .frontend h1 {
-  font-size: 22px;
-  font-weight: bold;
-  color: #0f0f0f;
-  margin-bottom: 20px;
-}
-
-#frontend .frontend img {
-  width: 250px;
-  height: 220px;
-}
-
-#frontend .frontend.javascript .border {
-  background: #646464;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
-  height: 2px;
-  width: 65%;
-  margin: 20px auto;
 }
 
 .contact-us {

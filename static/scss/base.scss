@@ -22,31 +22,27 @@ html, body {
 .cover{ 
   position: relative;
   width: auto;
-  min-height: 100vh;
-  background: linear-gradient(to top, rgb(245, 245, 245), transparent 30%);
+  min-height: 110vh;
+  background: linear-gradient(to top, rgb(245, 245, 245), transparent 25%);
   display: flex;
   justify-content: center;
   align-items: center;
   .cover-text{
+    transform: translateY(-20px);
     position: absolute;
     text-align: center;
     margin: 10px;
     margin-top: 0;
-    .cover-text-img{
-      transform: translateY(-150px);
-      z-index: 1;
-      position: unset;
-      top: 0;
-      left: 0;
-      width: 13%;
-      height: 13%;
-      pointer-events: none;
-      filter: brightness(100%);   
+    h1{
+      font-size: 28px;
+      color: rgb(250, 250, 250);
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
     p{
       color: rgb(250, 250, 250);
       font-size: 16px;
-      transform: translateY(-140px);
       letter-spacing: 1px;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
@@ -73,7 +69,7 @@ html, body {
   h1{
     font-size: 28px;
     color: rgb(15, 15, 15);
-    margin-bottom: 45px;
+    margin-bottom: 25px;
     font-weight: bold;
     &#servicesFirstText{
       font-weight: unset;
@@ -88,18 +84,19 @@ html, body {
   }
   .icon{
     backdrop-filter: blur(20px);
-    margin: 0 auto;
     margin-bottom: 15px;
-    border-radius: 20px;
-    width: 240px;
+    width: 45%;
     height: auto;
-    border: 1px solid black;
     padding: 5px;
+    display: inline-table;
+    position: relative;
     i{
       margin: 30px;
       padding: 20px;
-      color: black;
-      font-size: 60px;
+      color: rgb(45, 45, 45);
+      font-size: 50px;
+      background: rgba(53, 173, 197, 0.6);
+      border-radius: 25px;
     }
     h1{
       font-size: 16px;
@@ -113,13 +110,13 @@ html, body {
     button{
       margin-top: 10px;
       border-radius: 30px;
-      border: 2px solid black;
+      border: 2px solid rgb(45, 45, 45);
       color: rgb(30, 30, 30);
       width: 100px;
-      font-size: 12px;
+      font-size: 15px;
       padding: 5px;
       transition: all .2s ease-in-out;
-      background: black;
+      background: rgb(45, 45, 45);
       color: white;
       outline: none;
       &.active{
@@ -193,6 +190,75 @@ html, body {
     }
   }
 }
+.what-we-do{
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgb(245, 245, 245);
+  text-align: center;
+  .border{
+    background: rgb(100, 100, 100);
+    transform: translateY(30px);
+    height: 2px;
+    width: 65%;
+    margin: 20px auto;
+  }
+  h1{
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(15, 15, 15);
+    margin-bottom: 20px;
+  }
+  .text{
+    p{
+      margin: 0 auto;
+      width: 90%;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+#frontend{
+  background: rgb(245, 245, 245);
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  h1{
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(15, 15, 15);
+    margin-bottom: 25px;
+  }
+  .frontend{
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    h1{
+      font-size: 22px;
+      font-weight: bold;
+      color: rgb(15, 15, 15);
+      margin-bottom: 20px;
+    }
+    img{
+      width: 250px;
+      height: 220px;
+    }
+    &.javascript{
+      .border{
+        background: rgb(100, 100, 100);
+        transform: translateY(30px);
+        height: 2px;
+        width: 65%;
+        margin: 20px auto;
+      }
+    }
+  }
+}
 .about-us{
   width: 100%;
   height: auto;
@@ -248,45 +314,6 @@ html, body {
       &:hover{
         background: white;
         color: black;
-      }
-    }
-  }
-}
-#frontend{
-  background: rgb(245, 245, 245);
-  text-align: center;
-  width: 100%;
-  height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  h1{
-    font-size: 28px;
-    font-weight: bold;
-    color: rgb(15, 15, 15);
-    margin-bottom: 25px;
-  }
-  .frontend{
-    width: 100%;
-    height: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    h1{
-      font-size: 22px;
-      font-weight: bold;
-      color: rgb(15, 15, 15);
-      margin-bottom: 20px;
-    }
-    img{
-      width: 250px;
-      height: 220px;
-    }
-    &.javascript{
-      .border{
-        background: rgb(100, 100, 100);
-        transform: translateY(30px);
-        height: 2px;
-        width: 65%;
-        margin: 20px auto;
       }
     }
   }
