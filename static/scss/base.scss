@@ -28,7 +28,7 @@ html, body {
   align-items: center;
   background:linear-gradient(rgba(0, 0, 0 ,0.4), rgba(0, 0, 0, 0.4)), url("/static/images/covers/cover-1.png");
   background-repeat: no-repeat;
-  background-attachment: scroll, fixed;
+  background-attachment: scroll;
   -o-background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size:cover;
