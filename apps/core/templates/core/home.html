@@ -10,10 +10,9 @@
 
 
 <div class="cover">
-   <img src="{% static '/images/covers/cover-1.jpg' %}" id="cover-1" alt="cover-1">
    <div class="cover-text">
       <h1>Velkomen til Webiser</h1>
-      <p>Norges største web design og web development team</p>
+      <p>Norges største web design og web utviklere team</p>
    </div>
 </div>
 <div class="services">
@@ -37,9 +36,9 @@
       <button id="readMoreServices3" onclick="servicesReadMore3()">Les mer</button>
    </div>
    <div class="icon">
-      <i class="fab fa-python"></i>      
-      <h1 id="servicesFirstText">Skrevet i python, enkelt å forstå</h1>
-      <p id="servicesSecondText4">Python teamet vår består av de beste python-utviklerne i Norge. Alt relatert til python, de har svaret</p>
+      <i class="fas fa-user-headset"></i>      
+      <h1 id="servicesFirstText">24/7 kundeservice</h1>
+      <p id="servicesSecondText4">Våres utviklere og designere kan hjelpe deg når som helst</p>
       <button id="readMoreServices4" onclick="servicesReadMore4()">Les mer</button>
    </div>
    <div class="border"></div>
@@ -60,11 +59,8 @@
    {% endfor %}
    <div class="border"></div>
 </div>
-<div class="what-we-do">
-   <h1>Hva vi gjør</h1>
-   <div class="text">
-      <p>Vi bygger og designer fantastiske nettsider ved hjelp Norges beste designere og utviklere. Alle nettsidene vi bygger blir skrevet i de tre frontend språkene, som er Html5, CSS3 og JavaScript, du finner info om de <a style="text-decoration: underline; color: blue;" onclick="frontend()">her. Net</a></p>
-   </div>
+<!-- <div class="reviews">
+   <h1>Prosjekter</h1>
    <div class="border"></div>
 </div>
 <div id="frontend">
@@ -92,17 +88,17 @@
       <button id="readMore" onclick="aboutUsReadMore()">Les mer</button>
    </div>
    <div class="border"></div>
-</div>
+</div> -->
 <div class="contact-us" id="contactUs">
    <h1>Trenger du extra hjelp?</h1>
    <p>Kontakter oss under</p>
    <form method="post">
       {% csrf_token %}
-      <label for="fra_epost">Din epost</label>
+      <label for="fra_epost">Epost</label>
       <br>
       <input type="text" id="fra_epost" name="fra_epost">
       <br>
-      <label for="navn">Din navn</label>
+      <label for="navn">Navn</label>
       <br>
       <input type="text" id="navn" name="navn">
       <br>

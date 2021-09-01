@@ -1,47 +1,19 @@
 .login-signup #loginForm {
+  text-align: left;
   width: auto;
   display: none;
+  margin: 5px;
 }
 
 .login-signup #loginForm input {
-  border: 1px solid black;
-  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #787878;
+  border-radius: 3px;
   padding: 3px;
 }
 
 .login-signup #loginForm label {
-  font-weight: bold;
-}
-
-.login-signup #loginForm .form-flex-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-}
-
-.login-signup #loginForm .form-flex-text label {
-  width: 50%;
-}
-
-.login-signup #loginForm .form-flex-input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 10px;
-  margin-top: 0;
-}
-
-.login-signup #loginForm .form-flex-input input {
-  width: 50%;
-  margin-right: 5px;
-  margin-left: 5px;
+  font-size: 16px;
 }
 
 .login-signup #loginForm #submit {
@@ -63,7 +35,7 @@
 
 .login-signup #loginForm #logInButton {
   border-radius: 30px;
-  border: 2px solid black;
+  border: 2px solid #2d2d2d;
   color: #1e1e1e;
   display: inline-block;
   text-decoration: none;
@@ -72,13 +44,14 @@
   padding: 5px;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  background: black;
+  background: #2d2d2d;
   color: white;
+  outline: none;
 }
 
 .login-signup #loginForm span {
   border-radius: 30px;
-  border: 2px solid black;
+  border: 2px solid #2d2d2d;
   color: #1e1e1e;
   display: inline-block;
   text-decoration: none;

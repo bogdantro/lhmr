@@ -1,34 +1,18 @@
 // STANDARD PHONE
 .login-signup{
     #loginForm{
+        text-align: left;
         width: auto;
         display: none;
+        margin: 5px;
         input{
-            border: 1px solid black;
-            border-radius: 5px;
+            width: 100%;
+            border: 1px solid rgb(120, 120, 120);
+            border-radius: 3px;
             padding: 3px;
         }
         label{
-            font-weight: bold;
-        }
-        .form-flex-text{
-            display: flex;
-            text-align: center;   
-            label{
-                width: 50%;
-            }
-        }
-        .form-flex-input{
-            display: flex;
-            align-items: center;
-            justify-content: center;  
-            margin: 10px;
-            margin-top: 0;
-            input{
-                width: 50%;
-                margin-right: 5px;
-                margin-left: 5px;
-            }
+            font-size: 16px;
         }
         #submit{
             text-align: center;
@@ -46,7 +30,7 @@
         }
         #logInButton{
             border-radius: 30px;
-            border: 2px solid black;
+            border: 2px solid rgb(45, 45, 45);
             color: rgb(30, 30, 30);
             display: inline-block;
             text-decoration: none;
@@ -54,12 +38,13 @@
             font-size: 18px;
             padding: 5px;
             transition: all .5s ease-in-out;
-            background: black;
+            background: rgb(45, 45, 45);
             color: white;
+            outline: none;
         }
         span{
             border-radius: 30px;
-            border: 2px solid black;
+            border: 2px solid rgb(45, 45, 45);
             color: rgb(30, 30, 30);
             display: inline-block;
             text-decoration: none;

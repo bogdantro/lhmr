@@ -59,15 +59,13 @@
         </div>
         <form id="loginForm" method="post">
             {% csrf_token %}
+            <label for="id_username">Brukernavn</label>
             <br>
-            <div class="form-flex-text">
-                <label for="id_username">Brukernavn</label>
-                <label for="id_password">Passord</label>
-            </div>
-            <div class="form-flex-input">
-                <input type="text" id="username" name="username" placeholder="Brukernavn" required oninvalid="this.setCustomValidity('Værsåsnill skriv inn brukernavnet')" oninput="this.setCustomValidity('')">
-                <input type="password" id="password" name="password" placeholder="Passord" required oninvalid="this.setCustomValidity('Skriv inn passordet')" oninput="this.setCustomValidity('')">
-            </div>
+            <input type="text" id="username" name="username" placeholder="Brukernavn" required oninvalid="this.setCustomValidity('Værsåsnill skriv inn brukernavnet')" oninput="this.setCustomValidity('')">
+            <br>
+            <label for="id_password">Passord</label>
+            <br>
+            <input type="password" id="password" name="password" placeholder="Passord" required oninvalid="this.setCustomValidity('Skriv inn passordet')" oninput="this.setCustomValidity('')">
             <div id="signUpFormErrors">{{ form.username.errors }}</div>
             <br>
             <div id="signUpFormErrors">{{ form.password.errors }}</div>
@@ -80,34 +78,33 @@
             {% csrf_token %}
             {{ form.non_field_errors }}
             {{form.errors}}
-            <label for="id_username">Brukernavn *</label>
+            <label for="id_username">Brukernavn</label>
             <br>
-            <input type="text" id="username" name="username" placeholder="Brukernavn" required oninvalid="this.setCustomValidity('Værsåsnill velg en brukernavn')" oninput="this.setCustomValidity('')">
+            <input type="text" id="username" name="username" required oninvalid="this.setCustomValidity('Værsåsnill velg en brukernavn')" oninput="this.setCustomValidity('')">
             <br>
-            <div class="form-flex-text">
-                <label for="id_first_name">Fornavn *</label>
-                <label for="id_last_name">Etternavn *</label>
-            </div>
-            <div class="form-flex-input">
-                <input type="text" id="first_name" name="first_name" placeholder="Fornavn" required oninvalid="this.setCustomValidity('Fornavn kan ikke være tom')" oninput="this.setCustomValidity('')">
-                <input type="text" id="last_name" name="last_name" placeholder="Etternavn" required oninvalid="this.setCustomValidity('Etternavn kan ikke være tom')" oninput="this.setCustomValidity('')">
-            </div>
-            <label for="id_email">Epost *</label>
+            <label for="id_first_name">Fornavn</label>
             <br>
-            <input type="text" id="email" name="email" placeholder="Epost" required oninvalid="this.setCustomValidity('Skriv din epost her')" oninput="this.setCustomValidity('')">
-            <div class="form-flex-text">
-                <label for="id_password1">Passord *</label>
-                <label for="id_password1">Gjenta passord *</label>
-            </div>
-            <div class="form-flex-input">
-                <input type="password" id="password1" name="password1" required oninvalid="this.setCustomValidity('Velg et passord')" oninput="this.setCustomValidity('')">
-                <input type="password" id="password2" name="password2" required oninvalid="this.setCustomValidity('Du må gjenta passordet')" oninput="this.setCustomValidity('')">
-            </div>
+            <input type="text" id="first_name" name="first_name" required oninvalid="this.setCustomValidity('Fornavn kan ikke være tom')" oninput="this.setCustomValidity('')">
             <br>
+            <label for="id_last_name">Etternavn</label>
+            <br>
+            <input type="text" id="last_name" name="last_name" required oninvalid="this.setCustomValidity('Etternavn kan ikke være tom')" oninput="this.setCustomValidity('')">
+            <br>
+            <label for="id_email">Epost</label>
+            <br>
+            <input type="text" id="email" name="email" required oninvalid="this.setCustomValidity('Skriv din epost her')" oninput="this.setCustomValidity('')">
+            <br>
+            <label for="id_password1">Passord</label>
+            <br>
+            <input type="password" id="password1" name="password1" required oninvalid="this.setCustomValidity('Velg et passord')" oninput="this.setCustomValidity('')">
+            <br>
+            <label for="id_password1">Gjenta passord</label>
+            <br>
+            <input type="password" id="password2" name="password2" required oninvalid="this.setCustomValidity('Du må gjenta passordet')" oninput="this.setCustomValidity('')">
             <div id="submit">
                 <button id="signUpFormButton" type="submit" name="signup" value="signup">Lag Bruker</button>
+                <span onclick="signUpBack()">Tilbake</span>
             </div>
-            <span onclick="signUpBack()">Tilbake</span>
         </form>
     </div>
     {% if cart %}
