@@ -35,6 +35,7 @@ window.addEventListener("scroll", function(){
 
 function signUpORLogin(){
   const hamburger = document.getElementById('hamburger');
+  const logo = document.getElementById('logo');
   const allContentArea = document.getElementById('allContentArea');
   const html = document.querySelector("html");
   const body = document.body;
@@ -44,6 +45,8 @@ function signUpORLogin(){
     html.style.overflow = 'hidden'
     body.style.overflow = 'hidden'
     hamburger.style.pointerEvents = 'none'
+    logo.style.pointerEvents = 'none'
+    logo.style.filter = 'brightness(40%)'
     hamburger.style.filter = 'brightness(40%)'
     allContentArea.style.filter = 'brightness(40%)';
 }
@@ -60,6 +63,8 @@ function signUpORLoginBack(){
     body.style.overflow = 'unset';
     hamburger.style.pointerEvents = 'visible';  
     hamburger.style.filter = 'brightness(100%)'
+    logo.style.pointerEvents = 'visible'
+    logo.style.filter = 'brightness(100%)'
     allContentArea.style.filter = 'brightness(100%)';
 }
 

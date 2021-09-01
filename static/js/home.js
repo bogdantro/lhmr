@@ -36,6 +36,46 @@
 //     }
 // };
 
+window.onload = function () {
+    setTimeout(function(){
+        document.getElementById('coverText2').classList.add('active')
+    }, 500)
+};
+
+var prev_handler = window.onload;
+window.onload = function () {
+    if (prev_handler) {
+        prev_handler();
+    }
+    setTimeout(function(){
+        const hamburger = document.getElementById('hamburger');
+        const allContentArea = document.getElementById('allContentArea');
+        const html = document.querySelector("html");
+        const body = document.body;
+        const logo = document.getElementById('logo');
+        
+        document.getElementById('myAccountIcon').style.filter = 'brightness(40%)';
+        document.getElementById('loginORSignUp').classList.add('active')
+          html.style.overflow = 'hidden'
+          body.style.overflow = 'hidden'
+          hamburger.style.pointerEvents = 'none'
+          hamburger.style.filter = 'brightness(40%)'
+          logo.style.pointerEvents = 'none'
+          logo.style.filter = 'brightness(40%)'      
+          allContentArea.style.filter = 'brightness(40%)';
+    }, 10000)
+};
+
+
+$(window).scroll(function() {
+    const services = document.getElementById('services');
+    var hT = $('#services').offset().top,
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+360-wH)){
+        services.classList.add('active');
+    }
+ });
 
 function prices(){
     const scrollDiv = document.getElementById("productHomePage").offsetTop;

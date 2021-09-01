@@ -53,10 +53,17 @@ html, body {
 }
 
 .cover .cover-text p {
+  opacity: 0;
+  -webkit-transition: ease-in 1s;
+  transition: ease-in 1s;
   color: #fafafa;
   font-size: 16px;
   letter-spacing: 1px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cover .cover-text p.active {
+  opacity: 1;
 }
 
 .services {
@@ -67,6 +74,14 @@ html, body {
   padding-top: 40px;
   text-align: center;
   position: relative;
+  -webkit-transition: all ease-in .5s;
+  transition: all ease-in .5s;
+}
+
+.services.active .icon {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .services h1 {
@@ -97,6 +112,11 @@ html, body {
   padding: 5px;
   display: inline-table;
   position: relative;
+  opacity: 0;
+  -webkit-transition: all ease-in .5s;
+  transition: all ease-in .5s;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
 }
 
 .services .icon i {
