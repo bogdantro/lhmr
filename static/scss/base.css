@@ -32,6 +32,9 @@ html, body {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/static/images/covers/cover-1.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  -o-background-attchament: fixed;
+  -moz-background-attchament: fixed;
+  -webkit-background-attchament: fixed;
   background-size: cover;
 }
 
