@@ -28,14 +28,10 @@ html, body {
   align-items: center;
   background:linear-gradient(rgba(0, 0, 0 ,0.4), rgba(0, 0, 0, 0.4)), url("/static/images/covers/cover-1.png");
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  -o-background-attchament: fixed;
-  -moz-background-attchament: fixed;
-  -webkit-background-attchament: fixed;
   -o-background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size:cover;
-    background-size: cover;
+  background-size: cover;
   .cover-text{
     transform: translateY(-20px);
     position: absolute;
