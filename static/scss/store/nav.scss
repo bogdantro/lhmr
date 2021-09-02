@@ -158,7 +158,8 @@ $primaryColor: #2d9cb3;
                     transition: all .5s ease-in-out;
                 }
                 :nth-child(4){
-                    background: black;
+                    border: 2px solid transparent;
+                    background: rgb(72, 90, 185);
                     color: white;
                 }
                 &.active{

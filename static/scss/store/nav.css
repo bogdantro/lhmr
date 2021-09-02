@@ -185,7 +185,8 @@
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li :nth-child(4) {
-  background: black;
+  border: 2px solid transparent;
+  background: #485ab9;
   color: white;
 }
 

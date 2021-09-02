@@ -39,6 +39,7 @@ function signUpORLogin(){
   const allContentArea = document.getElementById('allContentArea');
   const html = document.querySelector("html");
   const body = document.body;
+  const navbar = document.getElementById('navbar');
   
   document.getElementById('myAccountIcon').style.filter = 'brightness(40%)';
   document.getElementById('loginORSignUp').classList.add('active')
@@ -49,12 +50,14 @@ function signUpORLogin(){
     logo.style.filter = 'brightness(40%)'
     hamburger.style.filter = 'brightness(40%)'
     allContentArea.style.filter = 'brightness(40%)';
+    navbar.classList.remove("sticky")
 }
 function signUpORLoginBack(){
   const hamburger = document.getElementById('hamburger');
   const allContentArea = document.getElementById('allContentArea');
   const html = document.querySelector("html");
   const body = document.body;
+  const navbar = document.getElementById('navbar');
   
   document.getElementById('loginORSignUp').classList.remove('active')
   document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
@@ -66,6 +69,7 @@ function signUpORLoginBack(){
     logo.style.pointerEvents = 'visible'
     logo.style.filter = 'brightness(100%)'
     allContentArea.style.filter = 'brightness(100%)';
+    navbar.classList.toggle("sticky", window.scrollY > 1)
 }
 
 function myaccount(){  

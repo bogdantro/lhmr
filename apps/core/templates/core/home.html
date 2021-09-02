@@ -10,8 +10,13 @@
 
 <div class="cover">
    <div class="cover-text">
-      <h1>Velkomen til Webiser</h1>
-      <p id="coverText2">Norges største web design og web utvikling firma</p>
+      <img src="{% static '/images/covers/cover-1.png' %}" alt="cover-img">
+      <h1>Moderne nettsider til lave priser</h1>
+      <p id="coverText2">Bli synlig på nett og ta neste steg for ditt bedrift, ved hjelp av våres fantastiske og moderne nettsider laget av Norges beste designere og utviklere</p>
+      <div class="cover-buttons">
+         <a href="">Se priser</a>
+         <a href="">Kontakt oss</a>
+      </div>
    </div>
 </div>
 <div class="services" id="services">
@@ -35,14 +40,14 @@
       <button id="readMoreServices3" onclick="servicesReadMore3()">Les mer</button>
    </div>
    <div class="icon" id="icon4">
-      <i class="fas fa-user-headset"></i>      
-      <h1 id="servicesFirstText">24/7 kundeservice</h1>
-      <p id="servicesSecondText4">Våres utviklere og designere kan hjelpe deg når som helst</p>
+      <i class="far fa-skiing-nordic"></i>     
+      <h1 id="servicesFirstText">De beste utviklere i Norge</h1>
+      <p id="servicesSecondText4"></p>
       <button id="readMoreServices4" onclick="servicesReadMore4()">Les mer</button>
    </div>
    <div class="border"></div>
 </div>
-<div class="product-section" id="productHomePage">
+<!-- <div class="product-section" id="productHomePage">
    <h1>Velg din plan</h1>
    {% for product in products %}
    <div class="product-card">
@@ -52,12 +57,12 @@
       </div>
       <div class="border"></div>
       <div class="buttons-product-section">
-         <a href="{% url  'product_detail' product.slug  %}" class="btn-buy">Bestill</a>
+         <a href="{% url  'product_detail' product.slug  %}" class="btn-buy">Se detaljer</a>
       </div>
    </div>
    {% endfor %}
    <div class="border"></div>
-</div>
+</div> -->
 <!-- <div class="reviews">
    <h1>Prosjekter</h1>
    <div class="border"></div>
