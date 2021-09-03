@@ -73,12 +73,15 @@ $primaryColor: #2d9cb3;
         margin: 0;
         position: absolute;
         left: 20px;
+        margin-bottom: 5px;
         .logo2{
             display: none;
         }
         img{
-            width: 120px;
-            height: 30px;
+            transform: scale(100%);
+            width: 100px;
+            height: auto;
+            transition: all 0.2s ease-in-out;
         }
     }
     .hamburger{
@@ -144,8 +147,8 @@ $primaryColor: #2d9cb3;
                 list-style: none;
                 a{
                     border-radius: 30px;
-                    border: 2px solid black;
-                    color: rgb(30, 30, 30);
+                    border: 2px solid transparent;
+                    color: rgb(72, 90, 185);
                     display: inline-block;
                     text-decoration: none;
                     width: 60%;
@@ -195,6 +198,7 @@ $primaryColor: #2d9cb3;
         i{
             color: white;
             font-size: 22px;
+            transition: all 0.2s ease-in-out;
         }
     }
     .login-signup{
@@ -213,7 +217,7 @@ $primaryColor: #2d9cb3;
         a{
             display: inline-block;
             border-radius: 30px;
-            border: 2px solid rgb(45, 45, 45);
+            border: 2px solid transparent;
             color: rgb(30, 30, 30);
             display: inline-block;
             text-decoration: none;
@@ -224,11 +228,11 @@ $primaryColor: #2d9cb3;
             margin-right: 0;
             padding: 5px;
             transition: all .5s ease-in-out;
-            background: rgb(45, 45, 45);
+            background: rgb(72, 90, 185);
             color: white;
             &:nth-child(3){
-                background: white;
-                color: black;
+                color: rgb(72, 90, 185);
+                background: transparent;
             }
         }
         &.active{
@@ -245,12 +249,14 @@ $primaryColor: #2d9cb3;
                 margin-right: 0;
             }
             .my-orders{
-                background: rgb(45, 45, 45);
+                background: rgb(72, 90, 185);
                 color: white;
+                border-color: transparent;
             }
             .my-account-back{
-                background: white;
-                color: black;
+                color: rgb(72, 90, 185);
+                background: transparent;
+                border-color: transparent;
             }
             &.active{
                 display: block;

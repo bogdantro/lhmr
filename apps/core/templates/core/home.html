@@ -40,14 +40,14 @@
       <button id="readMoreServices3" onclick="servicesReadMore3()">Les mer</button>
    </div>
    <div class="icon" id="icon4">
-      <i class="far fa-skiing-nordic"></i>     
-      <h1 id="servicesFirstText">De beste utviklere i Norge</h1>
+      <i class="fas fa-shield-check"></i>      
+      <h1 id="servicesFirstText">Sikkerthet med våres hosting</h1>
       <p id="servicesSecondText4"></p>
       <button id="readMoreServices4" onclick="servicesReadMore4()">Les mer</button>
    </div>
    <div class="border"></div>
 </div>
-<!-- <div class="product-section" id="productHomePage">
+<div class="product-section" id="productHomePage">
    <h1>Velg din plan</h1>
    {% for product in products %}
    <div class="product-card">
@@ -55,40 +55,17 @@
          <h1 class="product-name">{{product.name}}</h1>
          <h1 class="product-price">{{product.price|floatformat}} kr</h1>
       </div>
-      <div class="border"></div>
-      <div class="buttons-product-section">
-         <a href="{% url  'product_detail' product.slug  %}" class="btn-buy">Se detaljer</a>
+      <div class="button-product-section">
+         <a href="{% url  'product_detail' product.slug  %}" class="btn-details">Se detaljer</a>
       </div>
    </div>
    {% endfor %}
-   <div class="border"></div>
-</div> -->
-<!-- <div class="reviews">
-   <h1>Prosjekter</h1>
-   <div class="border"></div>
 </div>
-<div id="frontend">
-   <h1>De tre frontend språkene</h1>
-   <div class="html frontend" id="html">
-      <h1>Html5</h1>
-      <img src="{% static '/images/covers/html.png' %}" alt="html">
-   </div>
-   <div class="css frontend" id="css">
-      <h1>CSS3</h1>
-      <img src="{% static '/images/covers/css.png' %}" alt="css">
-   </div>
-   <div class="javascript frontend" id="javascript">
-      <h1>JavaScript</h1>
-      <img src="{% static '/images/covers/javascript.png' %}" alt="javascript">
-      <div class="border"></div>
-   </div>
-</div>
-<div class="about-us" id="aboutUs">
+<!-- <div class="about-us" id="aboutUs">
    <h1>Hvem er vi?</h1>
-   <img src="{% static '/images/logo/logo-name-black.png' %}" alt="about-us-logo-img">
    <div class="text">
-      <p id="firstText">Webiser er en nettiside development firma. Vi bygger nettsidene ved hjelp av de tre frontend progamering språkene, som er Html5, CSS3 og JavaScript...</p>
-      <p id="secondText"><span id="opacity0">Webiser er en nettiside development firma. Vi bygger nettsidene ved hjelp av de tre frontend progamering språkene, som er Html5, CSS3 og JavaScript.</span><br> Vi bruker Python og Django for å bygge enten ecommerce eller blog nettsider, derfor anbefaller vi at du har noe python forståelse om du vil gjøre noen endringer selv. Vi bruker ikke Python eller Django for å bygge nettsider som ikke trenger bruk av Python eller Django, men vi anbefaller at du kan de tre frontend progamering språkene, som er <a onclick="html()">Html5</a>, <a onclick="css()">CSS3</a> og <a onclick="javascript()">JavaScript</a> <br>Du får 4 timer gratis hjelp hver uke uansett. Vår team består av web designere som sørger for at designen blir best som mulig, og web developers som bidrar til at alt virker som det skal.</p>
+      <p id="firstText">Webiser er en nettiside utvikling og design firma. Vi bygger nettsidene ved hjelp av de tre frontend progamering språkene, som er Html5, CSS3 og JavaScript...</p>
+      <p id="secondText"><span id="opacity0">Webiser er en nettiside development firma. Vi bygger nettsidene ved hjelp av de tre frontend progamering språkene, som er Html5, CSS3 og JavaScript.</span><br> Vi bruker Python og Django for å bygge enten ecommerce eller blog nettsider, derfor anbefaller vi at du har noe python forståelse om du vil gjøre noen endringer selv. Vi bruker ikke Python eller Django for å bygge nettsider som ikke trenger bruk av Python eller Django, men vi anbefaller at du kan de tre frontend progamering språkene, som er <a onclick="html()">Html5</a>, <a onclick="css()">CSS3</a> og <a onclick="javascript()">JavaScript</a> <br>Ved bestilling hos oss, så har du plikt til å få 4 timer gratis hjelp hver uke. Vår team består av designere som sørger for at designen blir best som mulig, og utviklere som bidrar til at alt virker som det skal.</p>
       <button id="readMore" onclick="aboutUsReadMore()">Les mer</button>
    </div>
    <div class="border"></div>

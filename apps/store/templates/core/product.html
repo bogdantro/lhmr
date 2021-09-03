@@ -10,9 +10,7 @@
 
 <div id="productapp">
 
-   <div class="main-image">
-      <img :src="mainImage">
-   </div>
+
 
    
    {% if product.in_cart %}
@@ -43,17 +41,12 @@
       data () {
          return {
             showMessage: false,
-            mainImage: '{{product.image.url}}',
-            images: [{{imagesstring|safe}}],
          }
       },
       mounted() {
          console.log('Mounted');
       },
-      methods: {
-         changeMainImage(image) {
-               this.mainImage = image;
-         },
+      methods: {,
          addToCart(product_id) {
             console.log('Product_id', product_id);
 

@@ -75,6 +75,7 @@
   margin: 0;
   position: absolute;
   left: 20px;
+  margin-bottom: 5px;
 }
 
 #navbar .logo .logo2 {
@@ -82,8 +83,12 @@
 }
 
 #navbar .logo img {
-  width: 120px;
-  height: 30px;
+  -webkit-transform: scale(100%);
+          transform: scale(100%);
+  width: 100px;
+  height: auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 #navbar .hamburger {
@@ -169,8 +174,8 @@
 
 #navbar .sidebar .sidebar-ul .sidebar-li a {
   border-radius: 30px;
-  border: 2px solid black;
-  color: #1e1e1e;
+  border: 2px solid transparent;
+  color: #485ab9;
   display: inline-block;
   text-decoration: none;
   width: 60%;
@@ -229,6 +234,8 @@
 #navbar .my-account-icon i {
   color: white;
   font-size: 22px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 #navbar .login-signup {
@@ -250,7 +257,7 @@
 #navbar .login-signup a {
   display: inline-block;
   border-radius: 30px;
-  border: 2px solid #2d2d2d;
+  border: 2px solid transparent;
   color: #1e1e1e;
   display: inline-block;
   text-decoration: none;
@@ -262,13 +269,13 @@
   padding: 5px;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  background: #2d2d2d;
+  background: #485ab9;
   color: white;
 }
 
 #navbar .login-signup a:nth-child(3) {
-  background: white;
-  color: black;
+  color: #485ab9;
+  background: transparent;
 }
 
 #navbar .login-signup.active {
@@ -289,13 +296,15 @@
 }
 
 #navbar .login-signup .my-account .my-orders {
-  background: #2d2d2d;
+  background: #485ab9;
   color: white;
+  border-color: transparent;
 }
 
 #navbar .login-signup .my-account .my-account-back {
-  background: white;
-  color: black;
+  color: #485ab9;
+  background: transparent;
+  border-color: transparent;
 }
 
 #navbar .login-signup .my-account.active {
