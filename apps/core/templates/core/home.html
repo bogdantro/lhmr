@@ -41,7 +41,7 @@
    </div>
    <div class="icon" id="icon4">
       <i class="fas fa-shield-check"></i>      
-      <h1 id="servicesFirstText">Sikkerthet med våres hosting</h1>
+      <h1 id="servicesFirstText">Sikkerthet med vår hosting</h1>
       <p id="servicesSecondText4"></p>
       <button id="readMoreServices4" onclick="servicesReadMore4()">Les mer</button>
    </div>
@@ -53,20 +53,6 @@
    <div class="product-card">
       <div class="text">
          <h1 class="product-name">{{product.name}}</h1>
-         {% if product.is_ecommerce %}
-         <p>Inkludert:</p>
-         <li><a class="product-inc">Handlekurv</a></li>
-         <li><a class="product-inc">Admin dashboard</a></li>
-         <li><a class="product-inc">5 sider</a></li>
-         <li><a class="product-inc">Logg inn/ut</a></li>
-         {% endif %}
-         {% if product.is_blog %}
-         <p>Inkludert:</p>
-         <li><a class="product-inc">Admin dashboard</a></li>
-         <li><a class="product-inc">5 sider</a></li>
-         <li><a class="product-inc">Logg inn/ut</a></li>
-         <li><a class="product-inc">Blogg</a></li>
-         {% endif %}
          <h1 class="product-price">{{product.price|floatformat}} kr</h1>
       </div>
       <div class="button-product-section">
@@ -74,6 +60,7 @@
       </div>
    </div>
    {% endfor %}
+   <div class="border"></div>
 </div>
 <!-- <div class="about-us" id="aboutUs">
    <h1>Hvem er vi?</h1>
@@ -84,6 +71,37 @@
    </div>
    <div class="border"></div>
 </div> -->
+<div class="proccess" id="info">
+   <h1>Så enkelt er det</h1>
+   <div class="content">
+      <div class="class-1">
+         <h1>Vi motar bestillingen din</h1>
+         <img src="{% static '/images/other/loading-bar-1.png' %}" alt="load-bar-1">
+         <p>Med engang bestillingen er fullført, så sender vi det videre til våres designere som starter å lage designen. Du vil mota en mail gjennom alle stegene</p>
+      </div>
+      <div class="class-2">
+         <h1>Designerne har fullført designen</h1>
+         <img src="{% static '/images/other/loading-bar-2.png' %}" alt="load-bar-2">
+         <p>Da designen har blitt fullført, så blir designen sendt videre til våres utviklere, som starter å bygge nettsiden</p>
+      </div>
+      <div class="class-3">
+         <h1>Nettsiden er ferdig bygget</h1>
+         <img src="{% static '/images/other/loading-bar-3.png' %}" alt="load-bar-3">
+         <p>Da utviklerne våres har bygget ferdig nettsiden, så vil du mota en mail sånn at du kan sjekke om noe skal bli endres</p>
+      </div>
+      <div class="class-4">
+         <h1>Siste endringer blir gjort</h1>
+         <img src="{% static '/images/other/loading-bar-4.png' %}" alt="load-bar-4">
+         <p>Om det er noe feil eller endringer som skal bli gjort, så vil utviklerne våres utføre det</p>
+      </div>
+      <div class="class-5">
+         <h1>Alt har blitt fullført!</h1>
+         <img src="{% static '/images/other/loading-bar-5.png' %}" alt="load-bar-5">
+         <p>Da alt er 100% fullført, så vil nettsiden bli sendt over til deg innen 2 dager</p>
+      </div>
+   </div>
+   <div class="border"></div>
+</div>
 <div class="contact-us" id="contactUs">
    <h1>Trenger du extra hjelp?</h1>
    <p>Kontakter oss under</p>

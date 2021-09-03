@@ -34,7 +34,7 @@ html, body {
 .cover img {
   position: absolute;
   left: 0;
-  top: 120px;
+  top: 130px;
   width: 100%;
   height: auto;
 }
@@ -216,6 +216,18 @@ html, body {
   text-align: center;
   width: 100%;
   height: auto;
+  padding: 15px;
+  padding-top: 40px;
+  position: relative;
+}
+
+.product-section .border {
+  background: #646464;
+  height: 2px;
+  width: 65%;
+  margin: 20px auto;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
 }
 
 .product-section.active .product-card {
@@ -227,12 +239,11 @@ html, body {
 .product-section h1 {
   font-size: 26px;
   color: #0f0f0f;
-  margin-top: 32px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .product-section .product-card {
-  margin: 30px;
+  margin: 30px auto;
   border-radius: 5%;
   background: #485ab9;
   padding: 5px;
@@ -241,6 +252,7 @@ html, body {
   transition: all ease-in .5s;
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
+  max-width: 320px;
 }
 
 .product-section .product-card .text .product-name {
@@ -253,18 +265,6 @@ html, body {
   text-align: left;
   -webkit-transform: translateX(23px);
           transform: translateX(23px);
-}
-
-.product-section .product-card .text li {
-  width: 100%;
-  color: white;
-  text-align: left;
-  font-size: 14px;
-}
-
-.product-section .product-card .text li a {
-  color: white;
-  font-size: 14px;
 }
 
 .product-section .product-card .text .product-price {
@@ -302,6 +302,197 @@ html, body {
   font-family: 'Oswald', sans-serif;
   font-weight: 600;
   letter-spacing: 0.5px;
+}
+
+.proccess {
+  background: white;
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.proccess.active .content .class-1 {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all ease-in .2s;
+  transition: all ease-in .2s;
+}
+
+.proccess.active .content .class-2 {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all ease-in .6s;
+  transition: all ease-in .6s;
+}
+
+.proccess.active .content .class-3 {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all ease-in .8s;
+  transition: all ease-in .8s;
+}
+
+.proccess.active .content .class-4 {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all ease-in 1s;
+  transition: all ease-in 1s;
+}
+
+.proccess.active .content .class-5 {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all ease-in 1.2s;
+  transition: all ease-in 1.2s;
+}
+
+.proccess .border {
+  background: #646464;
+  height: 2px;
+  width: 65%;
+  margin: 20px auto;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.proccess h1 {
+  font-size: 26px;
+  color: #0f0f0f;
+  margin-bottom: 55px;
+  margin-top: 10px;
+}
+
+.proccess .content {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.proccess .content .class-1 {
+  opacity: 0;
+  margin: 35px auto;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
+.proccess .content .class-1 h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.proccess .content .class-1 img {
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+  border: 1px solid #7890dc;
+}
+
+.proccess .content .class-1 p {
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.proccess .content .class-2 {
+  opacity: 0;
+  margin: 35px auto;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
+.proccess .content .class-2 h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.proccess .content .class-2 img {
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+  border: 1px solid #7890dc;
+}
+
+.proccess .content .class-2 p {
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.proccess .content .class-3 {
+  opacity: 0;
+  margin: 35px auto;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
+.proccess .content .class-3 h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.proccess .content .class-3 img {
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+  border: 1px solid #7890dc;
+}
+
+.proccess .content .class-3 p {
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.proccess .content .class-4 {
+  opacity: 0;
+  margin: 35px auto;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
+.proccess .content .class-4 h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.proccess .content .class-4 img {
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+  border: 1px solid #7890dc;
+}
+
+.proccess .content .class-4 p {
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.proccess .content .class-5 {
+  opacity: 0;
+  margin: 35px auto;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
+.proccess .content .class-5 h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.proccess .content .class-5 img {
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+  border: 1px solid #7890dc;
+}
+
+.proccess .content .class-5 p {
+  margin-top: 5px;
+  font-size: 15px;
 }
 
 .about-us {

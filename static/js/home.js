@@ -57,6 +57,16 @@ $(window).scroll(function() {
         productHomePage.classList.add('active');
     }
  });
+
+ $(window).scroll(function() {
+    const info = document.getElementById('info');
+    var hT = $('#info').offset().top,
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+360-wH)){
+        info.classList.add('active');
+    }
+ });
  
 
 function prices(){
@@ -119,8 +129,8 @@ function contact(){
     allContentArea.style.filter = 'brightness(100%)';
 }
 
-function frontend(){
-    const scrollDiv = document.getElementById("frontend").offsetTop;
+function info(){
+    const scrollDiv = document.getElementById("info").offsetTop;
     const sidebar = document.getElementById('sidebar');
     const navbar = document.getElementById('navbar');
     const hamburger = document.getElementById('hamburger');
