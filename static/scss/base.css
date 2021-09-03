@@ -248,6 +248,25 @@ html, body {
   color: white;
 }
 
+.product-section .product-card .text p {
+  color: white;
+  text-align: left;
+  -webkit-transform: translateX(23px);
+          transform: translateX(23px);
+}
+
+.product-section .product-card .text li {
+  width: 100%;
+  color: white;
+  text-align: left;
+  font-size: 14px;
+}
+
+.product-section .product-card .text li a {
+  color: white;
+  font-size: 14px;
+}
+
 .product-section .product-card .text .product-price {
   font-size: 18px;
   opacity: 0.8;

@@ -53,6 +53,20 @@
    <div class="product-card">
       <div class="text">
          <h1 class="product-name">{{product.name}}</h1>
+         {% if product.is_ecommerce %}
+         <p>Inkludert:</p>
+         <li><a class="product-inc">Handlekurv</a></li>
+         <li><a class="product-inc">Admin dashboard</a></li>
+         <li><a class="product-inc">5 sider</a></li>
+         <li><a class="product-inc">Logg inn/ut</a></li>
+         {% endif %}
+         {% if product.is_blog %}
+         <p>Inkludert:</p>
+         <li><a class="product-inc">Admin dashboard</a></li>
+         <li><a class="product-inc">5 sider</a></li>
+         <li><a class="product-inc">Logg inn/ut</a></li>
+         <li><a class="product-inc">Blogg</a></li>
+         {% endif %}
          <h1 class="product-price">{{product.price|floatformat}} kr</h1>
       </div>
       <div class="button-product-section">

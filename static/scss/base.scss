@@ -200,6 +200,21 @@ html, body {
         font-size: 22px;
         color: white;
       }
+      p{
+        color: white;
+        text-align: left;
+        transform: translateX(23px);
+      }
+      li{
+        width: 100%;
+        color: white;
+        text-align: left;
+        font-size: 14px;
+        a{
+          color: white;
+          font-size: 14px;
+        }
+      }
       .product-price{
         font-size: 18px;
         opacity: 0.8;
