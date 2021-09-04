@@ -10,14 +10,8 @@
 
 <div id="productapp">
 
-
-
-   
-   {% if product.in_cart %}
-      <p>Produktet har blitt lagt til handlekurv</p>
-   {% else %}  
-   <button @click="addToCart({{ product.id }})">legg til handlekurv</button>
-   {% endif %}   
+ 
+   <button @click="addToCart({{ product.id }})" onclick="cart()">legg til handlekurv</button>
 
 
    <hr>
@@ -46,7 +40,7 @@
       mounted() {
          console.log('Mounted');
       },
-      methods: {,
+      methods: {
          addToCart(product_id) {
             console.log('Product_id', product_id);
 

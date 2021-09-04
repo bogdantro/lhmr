@@ -39,6 +39,3 @@ def success(request):
     cart.clear()
 
     return render(request, 'core/success.html')
-
-def checkout(request):
-    return render(request, 'core/checkout.html')    

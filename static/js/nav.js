@@ -101,3 +101,9 @@ function signUpBack(){
   document.getElementById('choose').style.display = 'block';
   document.getElementById('signUpForm').classList.remove('active')
 }
+
+
+function cart(){
+  const cart = document.getElementById('cartNav');
+  cart.classList.add('active');
+}

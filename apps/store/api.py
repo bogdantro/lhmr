@@ -33,7 +33,6 @@ def create_checkout_session(request):
                 },
                 'unit_amount': price
             },
-            'quantity': item['quantity']
         }
 
         items.append(obj)
@@ -46,7 +45,7 @@ def create_checkout_session(request):
 
     for item in cart:
         product = item['product']
-        total_price = total_price + (float(product.price) * int(item['quantity']))
+        total_price = total_price + (float(product.price))
 
         
 

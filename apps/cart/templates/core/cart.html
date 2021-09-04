@@ -2,116 +2,44 @@
 {% load static %}
 
 
-{% block title %}Handlekurv | StellCare{% endblock %}
+{% block title %}Handlekurv | Webiser{% endblock %}
 
 {% block content %}
 <link rel="stylesheet" href="{% static '/scss/cart/cart.css' %}" type="text/css">
 
 <div id="cartapp">
     {% if cart %}
-     <div v-if="products.length > 0">
-        <div id="productInCart">
-            <div id="cartNoMoreStockMessage">Produktet er tom for lager</div>
-            <div id="productCard" v-for="product in products">
-                <h1 id="productName">Navn: [[product.name]]</h1>
-                <div id="productInfo">
-                    <div id="div">
-                        <img :src="product.thumbnail" style="width: 75px; height: 75px;">
-                    </div>
-                    <div id="div">
-                        <button id="lowerQuantity" @click="decrementQuantity(product.id, product.quantity, product.price)">-</button>&nbsp;<b>[[product.quantity]]</b>&nbsp;<button id="higherQuantity" @click="incrementQuantity(product.id, product.quantity, product.price)">+</button>
-                    </div>
-                    <div id="div">
-                        [[product.total_price]] kr
-                    </div>
-                </div>
-            </div>
-            <div id="sum">
-                <div id="div">
-                    <h1>Sum:</h1>
-                </div>
-                <div id="div">
-                    <li><strong>Antall:</strong> [[ numItems ]]</li>
-                </div>
-                <div id="div">
-                    <li><strong>Pris:</strong> [[ totalCost ]] kr</li>
-                </div>
-            </div>
-            <div id="coupon">
-                <input type="text" v-model="coupon_code" placeholder="Rabatt kode (valgfritt)" style="padding: 5px;">
-                <button id="applyCoupon" @click="applyCoupon()">ok</button>
-                <div id="couponAfterApply" v-if="coupon_value">
-                    <p>Ny pris med rabatt:</p>
-                    <h1>[[ totalCostWithCoupon ]] kr</h1>
-                </div>
-            </div>
-        </div>         
-
-     {% if not request.user.is_authenticated %}
-         <p style="margin-left: 20px;">Forsett som gjest eller <a href="{% url 'login' %}">Logg inn</a> / <a href="{% url 'signup' %}">Lag bruker</a> </p>
-     {% endif %}
-
-     <div id="btnCenter">
-        <div @click='checkoutShow()' id="checkoutBtn">betal</div>
-     </div>   
-
-
-    <br><br>
-
-    
-    <!------------------------------------------------CHECKOUT-------------------------------------------------------------------->
-    
-    <form id="checkoutForm" v-on:submit.prevent="buy()" style="text-align: center;">
-      <div id="orderInfo">
-            <h1>Værsåsnill fyll ut skjemaet nedenfor</h1>
-            <label>Fornavn</label>
-            <input type="text" name="first_name" v-model="first_name" placeholder="Din fornavn">
-            <br>
-            <label>Etternavn</label>
-            <input type="text" name="last_name" v-model="last_name" placeholder="Din etternavn">
-            <br>
-            <label>E-post</label>
-            <input class="email" type="text" name="email" v-model="email" placeholder="Din e-post">
-            <br>
-            <label>Adresse</label>
-            <input type="text" name="address" v-model="address" placeholder="Din fullt adresse">
-            <br>
-            <label>Postnummer</label>
-            <input type="text" name="zipcode" v-model="zipcode" placeholder="Din postnummer">
-    </div>
-    <div id="cartPayButton">
-        <button id="stripeBtn" v-on:click="buy('stripe')">Betal med kort</button>
-        <div id="paypal-button"></div>    
-    </div>
-    </form>
-    <!-- ----------------------------------------------CHECKOUT-------------------------------------------------------------------- -->
-
-    
-    </div>
-  <div v-else>
-      <h1 id="emptyCartTxt">DIN HANDLEKURV ER TOM!</h1>
-      <div id="btnCenter">
-          <a href="/hjemme"><button id="continueShoppingBtn">FORSETT Å HANDLE</button></a>
-     </div>
-  </div>
-  {% else %}
-        <h1 id="emptyCartTxt">DIN HANDLEKURV ER TOM!</h1>
-        <div id="btnCenter">
-            <a href="/hjemme"><button id="continueShoppingBtn">FORSETT Å HANDLE</button></a>
+    <div v-if="products.length > 0">
+        <div id="productCard" v-for="product in products">
+            [[product.name]]
         </div>
-   {% endif %}
-
-    <!----style the error---->
-
-   <div id="errorBody" v-if="errors.length > 0">
-       <p>Det er noe feil med:</p>
-       <div v-for="error in errors">
-           <h1>[[error]]</h1>
-       </div>
-   </div>
-
-
-  </div>
+        <form id="checkoutForm" v-on:submit.prevent="buy()" style="text-align: center;">
+            <div id="orderInfo">
+                  <h1>Værsåsnill fyll ut skjemaet nedenfor</h1>
+                  <label>Fornavn</label>
+                  <input type="text" name="first_name" v-model="first_name" placeholder="Din fornavn">
+                  <br>
+                  <label>Etternavn</label>
+                  <input type="text" name="last_name" v-model="last_name" placeholder="Din etternavn">
+                  <br>
+                  <label>E-post</label>
+                  <input class="email" type="text" name="email" v-model="email" placeholder="Din e-post">
+                  <br>
+                  <label>Adresse</label>
+                  <input type="text" name="address" v-model="address" placeholder="Din fullt adresse">
+                  <br>
+                  <label>Postnummer</label>
+                  <input type="text" name="zipcode" v-model="zipcode" placeholder="Din postnummer">
+          </div>
+          <div id="cartPayButton">
+              <button id="stripeBtn" v-on:click="buy('stripe')">Send</button>
+          </div>
+          </form>
+    {% else %}
+        <h1>din handlekurv er tom</h1>
+    </div>
+    {% endif %}
+</div>     
 {% endblock %}
      
      
