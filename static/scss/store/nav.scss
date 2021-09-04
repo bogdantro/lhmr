@@ -33,13 +33,9 @@ $primaryColor: #2d9cb3;
                 display: block;
             }
         }
-        .cart{
+        .order{
             i{
                 color: black;
-            }
-            p{
-                color: white;
-                background: rgb(20, 20, 20);
             }
         }
     }
@@ -61,6 +57,11 @@ $primaryColor: #2d9cb3;
             }
             .logo2{
                 display: block;
+            }
+        }
+        .order{
+            i{
+                color: black;
             }
         }
 
@@ -263,40 +264,16 @@ $primaryColor: #2d9cb3;
             }
         }
     }
-    .cart{
+    .order{
         margin: 0;
         position: absolute;
-        right: 160px;
+        right: 105px;
         cursor: pointer;
-        opacity: 0;
-        transition: all 0.6s ease-in;
-        pointer-events: none;
         i{
+            transition: all 0.2s ease-in-out;
             position: relative;
             color: white;
             font-size: 22px;
-        }
-        p{
-            position: absolute;
-            top: -5px;
-            right: -6px;
-            background: rgb(245, 245, 245);
-            padding-top: 1px;
-            padding-bottom: 1px;
-            padding-right: 5px;
-            padding-left: 5px;
-            color: black;
-            border-radius: 40px;
-            font-size: 10px;
-            font-weight: bold;
-            margin: 0;
-            text-align: center;
-        }
-        &.active{
-            opacity: 1;
-            right: 105px;
-            margin-top: 1px;
-            pointer-events: visible;
         }
     }
 }

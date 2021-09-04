@@ -62,7 +62,6 @@ INSTALLED_APPS = [
     'apps.core',
     'apps.store',
     'apps.userprofile',
-    'apps.cart',
     'apps.order',
 ]
 
@@ -89,8 +88,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'apps.cart.context_processors.cart',
-
             ],
         },
     },

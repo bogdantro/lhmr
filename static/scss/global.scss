@@ -4,3 +4,19 @@
     font-family: 'Alata', sans-serif;
     box-sizing: border-box;
   }
+
+// STANDARD PHONE
+.page-cover{
+  width: 100%;
+  height: auto;
+  background: rgb(120, 144, 220);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1{
+    font-size: 24px;
+    color: rgb(250, 250, 250);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+} 

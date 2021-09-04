@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/scss/store/order.css' %}" type="text/css">
+
+<div class="page-cover"><h1>Start bestillingen</h1></div>
+
+<div class="make-order">
+    <form method='post'>
+        {% csrf_token %}
+        <label for="products">Velg nettside</label>
+        <br>
+        {{form.products}}
+        <br>
+        <label for="first_name">Fornavn</label>
+        <br>
+        <input type="text" id="first_name" name="first_name">
+        <br>
+        <label for="last_name">Etternavn</label>
+        <br>
+        <input type="text" id="last_name" name="last_name">
+        <br>
+        <label for="email">Epost</label>
+        <br>
+        <input type="text" id="email" name="email">
+        <br>
+        <label for="message">Fortell oss om bedriften din</label>
+        <br>
+        <textarea id="message" name="message"></textarea>
+        <br>
+        <div class="form-actions">
+            <button type='submit'>Send</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,11 +1,9 @@
 import warnings
 
-
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from apps.store.models import Product
-from apps.cart.cart import Cart
-from .forms import ContactForm, Order
+from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 from apps.userprofile.forms import SignUpForm, UserprofileForm
 from django.contrib.auth import login, authenticate
@@ -41,13 +39,6 @@ from django.views.decorators.debug import sensitive_post_parameters
 @never_cache
 def hjemme(request,  backend='django.contrib.auth.backends.ModelBackend'):
     products = Product.objects.all()
-    # cart = Cart(request)    
-    # for product in products:
-    #     if cart.has_product(product.id):
-    #         product.in_cart = True
-    #     else:
-    #         product.in_cart = False   
-    # if request.method=='POST' and 'order' in request.POST:
 
     if request.method=='POST' and 'login' in request.POST:
         username = request.POST['username']

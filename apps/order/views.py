@@ -1,36 +1,25 @@
-from io import BytesIO
-
-
-from django.shortcuts import render, get_object_or_404
-from django.contrib.auth.decorators import login_required
-from django.template.loader import get_template
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from xhtml2pdf import pisa
+from apps.store.models import Product
+from .forms import Order
+from django.template import RequestContext
 
-from .models import Order
 
-def render_to_pdf(template_src, context_dict={}):
-    template = get_template(template_src)
-    html = template.render(context_dict)
-    result = BytesIO()
-    pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
+def send_order(request):
+    if request.method == 'POST':
+        form = Order(request.POST)
+        if form.is_valid():
+            form.save()
+            first_name = form.cleaned_data['first_name']
+            last_name = form.cleaned_data['first_name']
+            email = form.cleaned_data['first_name']
+            message = form.cleaned_data['message']
+            products = form.cleaned_data['products']
+            form = Order()
+            return redirect('/')
+    else:
+        form = Order()
 
-    if not pdf.err:
-        return result.getvalue()
+    return render(request, 'core/order.html', {'form': form})
+        
     
-    return None
-
-@login_required
-def admin_order_pdf(request, order_id):
-    if request.user.is_superuser:
-        order = get_object_or_404(Order, pk=order_id)
-        pdf = render_to_pdf('core/order_pdf.html', {'order': order})
-
-        if pdf:
-            response = HttpResponse(pdf, content_type='application/pdf')
-            content = "attachment; filename=%s.pdf" % order_id
-            response['Content-Disposition'] = content
-
-            return response
-    
-    return HttpResponse("Not found")

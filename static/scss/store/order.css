@@ -1,0 +1,58 @@
+.make-order {
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.make-order form {
+  text-align: left;
+  padding: 10px;
+  margin: 15px;
+  margin-top: 0;
+}
+
+.make-order form label {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.make-order form textarea {
+  width: 100%;
+  border: 1px solid #787878;
+  border-radius: 3px;
+  padding: 3px;
+  height: 100px;
+}
+
+.make-order form input {
+  width: 100%;
+  border: 1px solid #787878;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.make-order form .form-actions {
+  margin-top: 15px;
+}
+
+.make-order form .form-actions button {
+  border-radius: 30px;
+  border: 2px solid transparent;
+  color: #1e1e1e;
+  background: #485ab9;
+  width: 200px;
+  font-size: 16px;
+  padding: 5px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  background: 245;
+  color: white;
+}
+
+.make-order form .form-actions button:hover {
+  background: white;
+  color: black;
+}
+/*# sourceMappingURL=order.css.map */
