@@ -1,0 +1,49 @@
+.cover {
+  margin-top: -160px;
+}
+
+.cover .cover-text img {
+  top: 155px;
+  width: 75%;
+}
+
+.order-success {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.order-success h1 {
+  font-size: 26px;
+  color: #0f0f0f;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+.order-success .info p {
+  font-size: 18px;
+  color: #0f0f0f;
+  margin-bottom: 40px;
+}
+
+.order-success a {
+  border-radius: 30px;
+  border: 2px solid transparent;
+  color: #1e1e1e;
+  background: #485ab9;
+  width: 200px;
+  font-size: 16px;
+  padding: 5px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  background: 245;
+  color: white;
+  margin: 0 15px;
+}
+
+.order-success a:hover {
+  background: white;
+  color: black;
+}
+/*# sourceMappingURL=success.css.map */

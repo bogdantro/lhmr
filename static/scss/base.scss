@@ -428,6 +428,7 @@ html, body {
         transition: all .2s ease-in-out;
         background: 245;
         color: white;
+        outline: none;
         &:hover{
           background: white;
           color: black;

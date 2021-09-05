@@ -22,7 +22,7 @@ urlpatterns = [
     #STORE
     path('produkt/:<slug>/', product_detail, name='product_detail'),
     path('bestill/', send_order, name='send-order'),
-    path('bestilling-utfort/', success, name='success'),
+    path('bestilling-utfort:1-2-3-4/', success, name='success'),
     path('hosting-informasjon/', hosting, name='hosting'),
 
     #AUTH

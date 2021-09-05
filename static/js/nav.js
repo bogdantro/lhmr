@@ -40,6 +40,7 @@ function signUpORLogin(){
   const html = document.querySelector("html");
   const body = document.body;
   const navbar = document.getElementById('navbar');
+  const makeOrder = document.getElementById('makeOrder');
   
   document.getElementById('myAccountIcon').style.filter = 'brightness(40%)';
   document.getElementById('loginORSignUp').classList.add('active')
@@ -49,6 +50,8 @@ function signUpORLogin(){
     logo.style.pointerEvents = 'none'
     logo.style.filter = 'brightness(40%)'
     hamburger.style.filter = 'brightness(40%)'
+    makeOrder.style.pointerEvents = 'none'
+    makeOrder.style.filter = 'brightness(40%)'
     allContentArea.style.filter = 'brightness(40%)';
     navbar.classList.remove("sticky")
 }
@@ -58,6 +61,9 @@ function signUpORLoginBack(){
   const html = document.querySelector("html");
   const body = document.body;
   const navbar = document.getElementById('navbar');
+  const makeOrder = document.getElementById('makeOrder');
+  const logo = document.getElementById('logo');
+
   
   document.getElementById('loginORSignUp').classList.remove('active')
   document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
@@ -68,6 +74,8 @@ function signUpORLoginBack(){
     hamburger.style.filter = 'brightness(100%)'
     logo.style.pointerEvents = 'visible'
     logo.style.filter = 'brightness(100%)'
+    makeOrder.style.pointerEvents = 'visible'
+    makeOrder.style.filter = 'brightness(100%)'
     allContentArea.style.filter = 'brightness(100%)';
     navbar.classList.toggle("sticky", window.scrollY > 1)
 }

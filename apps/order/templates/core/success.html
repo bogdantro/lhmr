@@ -2,9 +2,20 @@
 {% load static %}
 
 {% block content %}
-<div class="page-cover"><h1>Takk for din bestilling!</h1><h1>Værsåsnill les informasjonen under</h1></div>
+<link rel="stylesheet" href="{% static '/scss/store/success.css' %}" type="text/css">
 
+<div class="cover">
+    <div class="cover-text">
+       <img src="{% static '/images/covers/cover-3.png' %}" alt="cover-img">
+       <h1>Takk for din bestilling!</h1>
+       <p id="coverText2">Vi har motat bestillingen din, og designerne våres skal starte å lage designen. Under finner du viktig informasjon</p>
+    </div>
+ </div>
 <div class="order-success">
-
+    <h1>Viktig informasjon</h1>
+    <div class="info">
+        <p>Betalingen vil foregå når designen er ferdig bygget, sånn at du kan bekrefte den. Betaling foregår via vipps eller paypal. Du vil mota en mail fra oss med informasjon om hva som skal skje videre</p>
+    </div>
+    <a href="/">Tilbake til hjemmesiden</a>
 </div>
 {% endblock %}

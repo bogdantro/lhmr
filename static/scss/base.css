@@ -517,6 +517,7 @@ html, body {
   transition: all .2s ease-in-out;
   background: 245;
   color: white;
+  outline: none;
 }
 
 .contact-us form .form-actions button:hover {

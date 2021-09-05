@@ -1,0 +1,46 @@
+// STANDARD PHONE
+.cover{
+    margin-top: -160px;
+    .cover-text{
+      img{
+        top: 155px;
+        width: 75%;
+      }
+    }
+  }
+.order-success{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    h1{
+        font-size: 26px;
+        color: rgb(15, 15, 15);
+        margin-top: 32px;
+        margin-bottom: 40px;
+    }
+    .info{
+        p{
+            font-size: 18px;
+            color: rgb(15, 15, 15);
+            margin-bottom: 40px;
+        }
+    }
+    a{
+        border-radius: 30px;
+        border: 2px solid transparent;
+        color: rgb(30, 30, 30);
+        background: rgb(72, 90, 185);
+        width: 200px;
+        font-size: 16px;
+        padding: 5px;
+        transition: all .2s ease-in-out;
+        background: 245;
+        color: white;
+        margin: 0 15px;
+        &:hover{
+          background: white;
+          color: black;
+        }
+      }
+}

@@ -18,11 +18,11 @@ def send_order(request):
             hosting = form.cleaned_data['hosting']
             image = form.cleaned_data['image']
             form = Order()
-            return redirect('/bestilling-utført')
+            return redirect('/bestilling-utfort:1-2-3-4')
     else:
         form = Order()
 
     return render(request, 'core/order.html', {'form': form})
-        
+
 def success(request):
     return render(request, 'core/success.html')    
