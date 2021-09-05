@@ -2,6 +2,7 @@
 from datetime import date
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import tree
 
 from apps.store.models import Product
 
@@ -10,9 +11,13 @@ PRODUCT_CHOICES = (
     ('ecommerce','Ecommerce'),
     ('blog', 'Blog'),
     ('personal','Personal'),
-    ('business','Business'),
+    ('business','Bedrift'),
 )
-
+HOSTING_CHOICES = (
+    ('none','-------'),
+    ('no','Nei'),
+    ('yes','Ja'),
+)
 class Order(models.Model):
     user = models.ForeignKey(User, related_name='orders', on_delete=models.SET_NULL, blank=True, null=True)
     first_name = models.CharField(max_length=100)
@@ -20,6 +25,8 @@ class Order(models.Model):
     email = models.CharField(max_length=100)
     message = models.CharField(max_length=500, blank=True)
     products = models.CharField(max_length=50, choices=PRODUCT_CHOICES, default='none', blank=False)
+    hosting = models.CharField(max_length=50, choices=HOSTING_CHOICES, default='none', blank=False)
+    image = models.ImageField(upload_to='order-logo-images', blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     paid = models.BooleanField(default=False)
 

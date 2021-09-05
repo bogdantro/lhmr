@@ -1,8 +1,17 @@
+.cover {
+  margin-top: -160px;
+}
+
+.cover .cover-text img {
+  width: 85%;
+}
+
 .make-order {
   width: 100%;
   height: auto;
   padding: 10px 0;
   text-align: center;
+  background: white;
 }
 
 .make-order form {

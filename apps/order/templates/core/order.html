@@ -5,26 +5,39 @@
 {% block content %}
 <link rel="stylesheet" href="{% static '/scss/store/order.css' %}" type="text/css">
 
-<div class="page-cover"><h1>Start bestillingen</h1></div>
-
+<div class="cover">
+    <div class="cover-text">
+       <img src="{% static '/images/covers/cover-2.png' %}" alt="cover-img">
+       <h1>Kom i gang med bestillingen</h1>
+       <p id="coverText2">Fyll ut skjemaet under, også kommer vi tilbake til deg innen 4 timer</p>
+    </div>
+ </div>
 <div class="make-order">
     <form method='post'>
         {% csrf_token %}
-        <label for="products">Velg nettside</label>
+        {{form.errors}}
+        <label for="products">Velg nettside *</label>
         <br>
         {{form.products}}
+        <label for="hosting">Vil du ha våres hosting tjeneste? *</label>
+        <br>
+        {{form.hosting}}
+        <br>
+        <label for="image">Har du allerede en logo?</label>
+        <br>
+        {{form.image}}
         <br>
         <label for="first_name">Fornavn</label>
         <br>
-        <input type="text" id="first_name" name="first_name">
+        <input type="text" id="first_name" name="first_name" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
         <br>
         <label for="last_name">Etternavn</label>
         <br>
-        <input type="text" id="last_name" name="last_name">
+        <input type="text" id="last_name" name="last_name" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
         <br>
         <label for="email">Epost</label>
         <br>
-        <input type="text" id="email" name="email">
+        <input type="text" id="email" name="email" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
         <br>
         <label for="message">Fortell oss om bedriften din</label>
         <br>

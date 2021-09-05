@@ -188,7 +188,7 @@
   transition: all .5s ease-in-out;
 }
 
-#navbar .sidebar .sidebar-ul .sidebar-li :nth-child(4) {
+#navbar .sidebar .sidebar-ul .sidebar-li :nth-child(5) {
   border: 2px solid transparent;
   background: #485ab9;
   color: white;
@@ -216,6 +216,12 @@
   opacity: 1;
   -webkit-transition: all 1s ease-in-out 0.8s;
   transition: all 1s ease-in-out 0.8s;
+}
+
+#navbar .sidebar .sidebar-ul .sidebar-li.active :nth-child(5) {
+  opacity: 1;
+  -webkit-transition: all 1s ease-in-out 1s;
+  transition: all 1s ease-in-out 1s;
 }
 
 #navbar .sidebar.active {
@@ -315,14 +321,12 @@
   position: absolute;
   right: 105px;
   cursor: pointer;
-}
-
-#navbar .order i {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  position: relative;
   color: white;
-  font-size: 22px;
+  background: #3e50af;
+  padding: 5px;
+  width: 75px;
+  text-align: center;
+  border-radius: 25px;
 }
 
 @media only screen and (min-device-width: 1024px) {

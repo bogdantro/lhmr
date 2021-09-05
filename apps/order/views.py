@@ -15,11 +15,14 @@ def send_order(request):
             email = form.cleaned_data['first_name']
             message = form.cleaned_data['message']
             products = form.cleaned_data['products']
+            hosting = form.cleaned_data['hosting']
+            image = form.cleaned_data['image']
             form = Order()
-            return redirect('/')
+            return redirect('/bestilling-utført')
     else:
         form = Order()
 
     return render(request, 'core/order.html', {'form': form})
         
-    
+def success(request):
+    return render(request, 'core/success.html')    
