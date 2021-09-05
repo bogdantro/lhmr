@@ -1,7 +1,7 @@
 import datetime
 import os
 from random import randint
-from apps.order.models import Order, OrderItem
+from apps.order.models import Order
 
 def checkout(request, first_name, last_name, email):
     order = Order(first_name=first_name, last_name=last_name, email=email)

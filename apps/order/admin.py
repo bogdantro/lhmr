@@ -16,7 +16,7 @@ order_name.short_description = 'Name'
 class OrderAdmin(admin.ModelAdmin):
     list_display = ['id', order_name, 'created_at']
     list_filter = ['created_at']
-    search_fields = ['first_name', 'address']
+    search_fields = ['first_name',]
 
 admin.site.register(Order, OrderAdmin)
 
