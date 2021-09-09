@@ -3,18 +3,17 @@ from datetime import date
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import tree
+from colorfield.fields import ColorField
 
 from apps.store.models import Product
 
 PRODUCT_CHOICES = (
-    ('none','-------'),
     ('ecommerce','Ecommerce'),
     ('blog', 'Blog'),
     ('personal','Personal'),
     ('business','Bedrift'),
 )
 HOSTING_CHOICES = (
-    ('none','-------'),
     ('no','Nei'),
     ('yes','Ja'),
 )
@@ -24,8 +23,9 @@ class Order(models.Model):
     last_name = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
     message = models.CharField(max_length=500, blank=True)
-    products = models.CharField(max_length=50, choices=PRODUCT_CHOICES, default='none', blank=False)
-    hosting = models.CharField(max_length=50, choices=HOSTING_CHOICES, default='none', blank=False)
+    products = models.CharField(max_length=50, choices=PRODUCT_CHOICES, blank=False)
+    hosting = models.CharField(max_length=50, choices=HOSTING_CHOICES, blank=False)
+    color = ColorField(blank=False)
     image = models.ImageField(upload_to='order-logo-images', blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     paid = models.BooleanField(default=False)

@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
+    'colorfield',
     'apps.core',
     'apps.store',
     'apps.userprofile',
@@ -154,17 +155,14 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL='images/'
+MEDIA_URL='media/'
 STATIC_URL='static/'
 STATICFILES_DIRS = [
      BASE_DIR / "static"
  ]
  
 
-#change when pushing
-STATIC_ROOT='/home/stelcbfw/public_html/static'
-MEDIA_ROOT='/home/stelcbfw/public_html/images'
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 SITE_ID = 1

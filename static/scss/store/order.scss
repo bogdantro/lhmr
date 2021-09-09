@@ -35,6 +35,18 @@
           border: 1px solid rgb(120, 120, 120);
           border-radius: 3px;
           padding: 3px;
+          &#color{
+            width: 60px;
+            height: 35px;
+          }
+        }
+        .order-products{
+          width: 150px;
+          padding: 3px;
+        }
+        .order-hosting{
+          width: 150px;
+          padding: 3px;
         }
         .form-actions{
           margin-top: 15px;

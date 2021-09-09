@@ -13,19 +13,23 @@
     </div>
  </div>
 <div class="make-order">
-    <form method='post'>
+    <form method='post' enctype="multipart/form-data">
         {% csrf_token %}
         {{form.errors}}
-        <label for="products">Velg nettside *</label>
+        <label for="products">Velg nettside</label>
         <br>
         {{form.products}}
-        <label for="hosting">Vil du ha våres hosting tjeneste? *</label>
+        <label for="hosting">Vil du ha våres hosting tjeneste?</label>
         <br>
         {{form.hosting}}
         <br>
         <label for="image">Har du allerede en logo?</label>
         <br>
         {{form.image}}
+        <br>
+        <label for="color">Velg en farge som passer bedriften din</label>
+        <br>
+        <input type="color" id="color" name="color" required oninvalid="this.setCustomValidity('Værsåsnill, velg en farge')" oninput="this.setCustomValidity('')">
         <br>
         <label for="first_name">Fornavn</label>
         <br>
