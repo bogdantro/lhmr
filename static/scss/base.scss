@@ -381,6 +381,11 @@ html, body {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
+  &.active{
+    form{
+      opacity: 1;
+    }
+  }
   h1{
     font-size: 26px;
     color: rgb(15, 15, 15);
@@ -397,6 +402,8 @@ html, body {
     padding: 10px;
     margin: 15px;
     margin-top: 0;
+    opacity: 0;
+    transition: all ease-in .5s;
     label{
       margin-top: 30px;
       margin-bottom: 10px;

@@ -29,12 +29,13 @@
         <ul class="sidebar-ul">
             <li class="sidebar-li" id="sidebarLi">
                 <a onclick="prices()">Priser</a>
-                <a onclick="about()">Om oss</a>
+                <a href="/">Om oss</a>
                 <a onclick="info()">Prosess</a>
-                <a onclick="window.location.href='/hosting-informasjon'">Hosting</a>
+                <a href="/hosting-informasjon">Hosting</a>
                 <a onclick="contact()">Kontakt oss</a>
             </li>   
         </ul>
+        <img src="{% static '/images/other/sidebar-bottom-img.png' %}" class="sidebar-bottom-img" alt="sidebar-bottom-img">
     </div>
     <!-- PHONE END -->
     <a onclick="signUpORLogin()" class="my-account-icon" id="myAccountIcon">

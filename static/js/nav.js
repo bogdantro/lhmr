@@ -14,6 +14,7 @@ function menu(){
     sidebarLi.classList.add('active')  
     navbar.classList.add('menu-active')  
     allContentArea.style.transition = '.5s';
+    document.getElementById('myAccountIcon').style.pointerEvents = 'none';
     setTimeout(function(){
       allContentArea.style.filter = 'brightness(50%)';
     }, 100)
@@ -25,6 +26,7 @@ function menu(){
     sidebarLi.classList.remove('active')  
     navbar.classList.remove('menu-active')  
     allContentArea.style.filter = 'brightness(100%)';
+    document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
   }
 };
 
@@ -39,21 +41,18 @@ function signUpORLogin(){
   const allContentArea = document.getElementById('allContentArea');
   const html = document.querySelector("html");
   const body = document.body;
-  const navbar = document.getElementById('navbar');
   const makeOrder = document.getElementById('makeOrder');
+  const navbar = document.getElementById('navbar');
+
   
-  document.getElementById('myAccountIcon').style.filter = 'brightness(40%)';
   document.getElementById('loginORSignUp').classList.add('active')
     html.style.overflow = 'hidden'
     body.style.overflow = 'hidden'
     hamburger.style.pointerEvents = 'none'
     logo.style.pointerEvents = 'none'
-    logo.style.filter = 'brightness(40%)'
-    hamburger.style.filter = 'brightness(40%)'
     makeOrder.style.pointerEvents = 'none'
-    makeOrder.style.filter = 'brightness(40%)'
     allContentArea.style.filter = 'brightness(40%)';
-    navbar.classList.remove("sticky")
+    navbar.classList.add("sticky")
 }
 function signUpORLoginBack(){
   const hamburger = document.getElementById('hamburger');
@@ -110,8 +109,3 @@ function signUpBack(){
   document.getElementById('signUpForm').classList.remove('active')
 }
 
-
-function cart(){
-  const cart = document.getElementById('cartNav');
-  cart.classList.add('active');
-}
