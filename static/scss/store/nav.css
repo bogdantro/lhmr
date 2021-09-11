@@ -1,3 +1,7 @@
+#navbarUpperSpace {
+  position: relative;
+}
+
 #navbar {
   background: transparent;
   z-index: 100000;

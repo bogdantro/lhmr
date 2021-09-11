@@ -1,6 +1,9 @@
 $primaryColor: #2d9cb3;
 
 // STANDARD PHONE
+#navbarUpperSpace{
+    position: relative;
+}
 #navbar{
     background: transparent;
     z-index: 100000;
