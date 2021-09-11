@@ -13,117 +13,115 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-<div id="navbarUpperSpace">
-    <div id="navbar">
-        <div class="logo" id="logo" onclick="window.location.href=''">
-            <img src="{% static '/images/logo/logo-white-name.png' %}" class="logo1" alt="logo1">
-            <img src="{% static '/images/logo/logo-black-name.png' %}" class="logo2" alt="logo2">
+
+<div id="navbar">
+    <div class="logo" id="logo" onclick="window.location.href=''">
+        <img src="{% static '/images/logo/logo-white-name.png' %}" class="logo1" alt="logo1">
+        <img src="{% static '/images/logo/logo-black-name.png' %}" class="logo2" alt="logo2">
+    </div>
+    <!-- PHONE -->
+    <div class="hamburger" id="hamburger" onclick="menu()">
+        <span class="upper-span"></span>
+        <span class="center-span"></span>
+        <span class="lower-span"></span>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <ul class="sidebar-ul">
+            <li class="sidebar-li" id="sidebarLi">
+                <a onclick="prices()">Priser</a>
+                <a href="/om-webiser">Om oss</a>
+                <a onclick="info()">Prosess</a>
+                <a href="/hosting-informasjon">Hosting</a>
+                <a onclick="contact()">Kontakt oss</a>
+            </li>   
+        </ul>
+        <img src="{% static '/images/other/sidebar-bottom-img.png' %}" class="sidebar-bottom-img" alt="sidebar-bottom-img">
+    </div>
+    <!-- PHONE END -->
+    <a onclick="signUpORLogin()" class="my-account-icon" id="myAccountIcon">
+        <i class="far fa-user-astronaut"></i>    
+    </a>
+    <div class="login-signup" id="loginORSignUp">
+        <div id="choose">
+            {% if request.user.is_authenticated %}
+            <a onclick="myaccount()">Min bruker</a>
+            <a href="{% url 'logout' %}">Logg ut</a>
+            <a onclick="signUpORLoginBack()">Tilbake</a>
+            {% else %}
+            <a onclick="login()">Logg inn</a>
+            <a onclick="signup()">Lag bruker</a>
+            <a onclick="signUpORLoginBack()">Tilbake</a>
+            {% endif %}
         </div>
-        <!-- PHONE -->
-        <div class="hamburger" id="hamburger" onclick="menu()">
-            <span class="upper-span"></span>
-            <span class="center-span"></span>
-            <span class="lower-span"></span>
+        <div class="my-account" id="myAccount">
+            <p><strong>Navn:</strong> {{ request.user.get_full_name }}</p>
+            <p><strong>Epost:</strong> {{ request.user.email }}</p>
+            <a class="my-orders" href="/">Mine bestillinger</a>
+            <a class="my-account-back" onclick="myAccountBack()">Tilbake</a>
         </div>
-        <div class="sidebar" id="sidebar">
-            <ul class="sidebar-ul">
-                <li class="sidebar-li" id="sidebarLi">
-                    <a onclick="prices()">Priser</a>
-                    <a href="/">Om oss</a>
-                    <a onclick="info()">Prosess</a>
-                    <a href="/hosting-informasjon">Hosting</a>
-                    <a onclick="contact()">Kontakt oss</a>
-                </li>   
-            </ul>
-            <img src="{% static '/images/other/sidebar-bottom-img.png' %}" class="sidebar-bottom-img" alt="sidebar-bottom-img">
-        </div>
-        <!-- PHONE END -->
-        <a onclick="signUpORLogin()" class="my-account-icon" id="myAccountIcon">
-            <i class="far fa-user-astronaut"></i>    
-        </a>
-        <div class="login-signup" id="loginORSignUp">
-            <div id="choose">
-                {% if request.user.is_authenticated %}
-                <a onclick="myaccount()">Min bruker</a>
-                <a href="{% url 'logout' %}">Logg ut</a>
-                <a onclick="signUpORLoginBack()">Tilbake</a>
-                {% else %}
-                <a onclick="login()">Logg inn</a>
-                <a onclick="signup()">Lag bruker</a>
-                <a onclick="signUpORLoginBack()">Tilbake</a>
-                {% endif %}
+        <form id="loginForm" method="post">
+            {% csrf_token %}
+            <label for="id_username">Brukernavn</label>
+            <br>
+            <input type="text" id="username" name="username" placeholder="Brukernavn" required oninvalid="this.setCustomValidity('Værsåsnill skriv inn brukernavnet')" oninput="this.setCustomValidity('')">
+            <br>
+            <label for="id_password">Passord</label>
+            <br>
+            <input type="password" id="password" name="password" placeholder="Passord" required oninvalid="this.setCustomValidity('Skriv inn passordet')" oninput="this.setCustomValidity('')">
+            <div id="signUpFormErrors">{{ form.username.errors }}</div>
+            <br>
+            <div id="signUpFormErrors">{{ form.password.errors }}</div>
+            <div id="submit">
+                <button id="logInButton" type="submit" value="login" name="login">Logg inn</button>
+                <span onclick="loginBack()">Tilbake</span>
             </div>
-            <div class="my-account" id="myAccount">
-                <p><strong>Navn:</strong> {{ request.user.get_full_name }}</p>
-                <p><strong>Epost:</strong> {{ request.user.email }}</p>
-                <a class="my-orders" href="/">Mine bestillinger</a>
-                <a class="my-account-back" onclick="myAccountBack()">Tilbake</a>
+        </form>
+        <form id="signUpForm" method="post">      
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{form.errors}}
+            <label for="id_username">Brukernavn</label>
+            <br>
+            <input type="text" id="username" name="username" required oninvalid="this.setCustomValidity('Værsåsnill velg en brukernavn')" oninput="this.setCustomValidity('')">
+            <br>
+            <label for="id_first_name">Fornavn</label>
+            <br>
+            <input type="text" id="first_name" name="first_name" required oninvalid="this.setCustomValidity('Fornavn kan ikke være tom')" oninput="this.setCustomValidity('')">
+            <br>
+            <label for="id_last_name">Etternavn</label>
+            <br>
+            <input type="text" id="last_name" name="last_name" required oninvalid="this.setCustomValidity('Etternavn kan ikke være tom')" oninput="this.setCustomValidity('')">
+            <br>
+            <label for="id_email">Epost</label>
+            <br>
+            <input type="text" id="email" name="email" required oninvalid="this.setCustomValidity('Skriv din epost her')" oninput="this.setCustomValidity('')">
+            <br>
+            <label for="id_password1">Passord</label>
+            <br>
+            <input type="password" id="password1" name="password1" required oninvalid="this.setCustomValidity('Velg et passord')" oninput="this.setCustomValidity('')">
+            <br>
+            <label for="id_password1">Gjenta passord</label>
+            <br>
+            <input type="password" id="password2" name="password2" required oninvalid="this.setCustomValidity('Du må gjenta passordet')" oninput="this.setCustomValidity('')">
+            <div id="submit">
+                <button id="signUpFormButton" type="submit" name="signup" value="signup">Lag Bruker</button>
+                <span onclick="signUpBack()">Tilbake</span>
             </div>
-            <form id="loginForm" method="post">
-                {% csrf_token %}
-                <label for="id_username">Brukernavn</label>
-                <br>
-                <input type="text" id="username" name="username" placeholder="Brukernavn" required oninvalid="this.setCustomValidity('Værsåsnill skriv inn brukernavnet')" oninput="this.setCustomValidity('')">
-                <br>
-                <label for="id_password">Passord</label>
-                <br>
-                <input type="password" id="password" name="password" placeholder="Passord" required oninvalid="this.setCustomValidity('Skriv inn passordet')" oninput="this.setCustomValidity('')">
-                <div id="signUpFormErrors">{{ form.username.errors }}</div>
-                <br>
-                <div id="signUpFormErrors">{{ form.password.errors }}</div>
-                <div id="submit">
-                    <button id="logInButton" type="submit" value="login" name="login">Logg inn</button>
-                    <span onclick="loginBack()">Tilbake</span>
-                </div>
-            </form>
-            <form id="signUpForm" method="post">      
-                {% csrf_token %}
-                {{ form.non_field_errors }}
-                {{form.errors}}
-                <label for="id_username">Brukernavn</label>
-                <br>
-                <input type="text" id="username" name="username" required oninvalid="this.setCustomValidity('Værsåsnill velg en brukernavn')" oninput="this.setCustomValidity('')">
-                <br>
-                <label for="id_first_name">Fornavn</label>
-                <br>
-                <input type="text" id="first_name" name="first_name" required oninvalid="this.setCustomValidity('Fornavn kan ikke være tom')" oninput="this.setCustomValidity('')">
-                <br>
-                <label for="id_last_name">Etternavn</label>
-                <br>
-                <input type="text" id="last_name" name="last_name" required oninvalid="this.setCustomValidity('Etternavn kan ikke være tom')" oninput="this.setCustomValidity('')">
-                <br>
-                <label for="id_email">Epost</label>
-                <br>
-                <input type="text" id="email" name="email" required oninvalid="this.setCustomValidity('Skriv din epost her')" oninput="this.setCustomValidity('')">
-                <br>
-                <label for="id_password1">Passord</label>
-                <br>
-                <input type="password" id="password1" name="password1" required oninvalid="this.setCustomValidity('Velg et passord')" oninput="this.setCustomValidity('')">
-                <br>
-                <label for="id_password1">Gjenta passord</label>
-                <br>
-                <input type="password" id="password2" name="password2" required oninvalid="this.setCustomValidity('Du må gjenta passordet')" oninput="this.setCustomValidity('')">
-                <div id="submit">
-                    <button id="signUpFormButton" type="submit" name="signup" value="signup">Lag Bruker</button>
-                    <span onclick="signUpBack()">Tilbake</span>
-                </div>
-            </form>
-        </div>
-        <a href="/bestill" class="order" id="makeOrder">Bestill</a>
-        <!-- <i class="fab fa-opencart"></i> -->
-        <!-- DESKTOP -->
-        <div class="desktop-menu">
-            <ul class="desktop-ul">
-                <li class="desktop-li" id="desktopLi">
-                    <a href="#">Hjelp</a>
-                    <a href="">Om oss</a>
-                    <a href="">Priser</a>
-                    <a href="">Kontakt oss</a>
-                </li>   
-            </ul>
-        </div>
+        </form>
+    </div>
+    <a href="/bestill" class="order" id="makeOrder">Bestill</a>
+    <!-- <i class="fab fa-opencart"></i> -->
+    <!-- DESKTOP -->
+    <div class="desktop-menu">
+        <ul class="desktop-ul">
+            <li class="desktop-li" id="desktopLi">
+                <a href="#">Hjelp</a>
+                <a href="">Om oss</a>
+                <a href="">Priser</a>
+                <a href="">Kontakt oss</a>
+            </li>   
+        </ul>
     </div>
 </div>
-    
-    
-    
+
+

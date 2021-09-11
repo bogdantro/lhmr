@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from apps.core.views import hjemme, hosting
+from apps.core.views import hjemme, hosting, about
 from apps.store.views import product_detail
 from django.conf import settings
 from django.contrib.sitemaps.views import sitemap
@@ -24,6 +24,7 @@ urlpatterns = [
     path('bestill/', send_order, name='send-order'),
     path('bestilling-utfort:1-2-3-4/', success, name='success'),
     path('hosting-informasjon/', hosting, name='hosting'),
+    path('om-webiser/', about, name='about'),
 
     #AUTH
     path('logg-ut/', views.LogoutView.as_view(), name='logout'),

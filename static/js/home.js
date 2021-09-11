@@ -88,6 +88,15 @@ $(window).scroll(function() {
     }
  });
  
+ function coverPrices(){
+    const scrollDiv = document.getElementById("productHomePage").offsetTop;
+    window.scrollTo({ top: scrollDiv-60, behavior: 'smooth'});
+}
+ function coverContact(){
+    const scrollDiv = document.getElementById("contactUs").offsetTop;
+    window.scrollTo({ top: scrollDiv-60, behavior: 'smooth'});
+}
+
  function prices(){
     const sidebar = document.getElementById('sidebar');
     const navbar = document.getElementById('navbar');

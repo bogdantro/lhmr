@@ -46,6 +46,7 @@ function signUpORLogin(){
 
   
   document.getElementById('loginORSignUp').classList.add('active')
+  document.getElementById('myAccountIcon').classList.add('active')
     html.style.overflow = 'hidden'
     body.style.overflow = 'hidden'
     hamburger.style.pointerEvents = 'none'
@@ -65,8 +66,7 @@ function signUpORLoginBack(){
 
   
   document.getElementById('loginORSignUp').classList.remove('active')
-  document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
-  document.getElementById('myAccountIcon').style.filter = 'brightness(100%)';
+  document.getElementById('myAccountIcon').classList.remove('active')
     html.style.overflow = 'unset';
     body.style.overflow = 'unset';
     hamburger.style.pointerEvents = 'visible';  

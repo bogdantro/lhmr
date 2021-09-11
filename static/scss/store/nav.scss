@@ -1,9 +1,6 @@
 $primaryColor: #2d9cb3;
 
 // STANDARD PHONE
-#navbarUpperSpace{
-    position: relative;
-}
 #navbar{
     background: transparent;
     z-index: 100000;
@@ -210,10 +207,20 @@ $primaryColor: #2d9cb3;
         position: absolute;
         right: 60px;
         cursor: pointer;
+        padding: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: .5em;
+        pointer-events: visible;
+        border: 1px solid transparent;
         i{
             color: white;
             font-size: 22px;
             transition: all 0.2s ease-in-out;
+        }
+        &.active{
+            border-color: rgb(72, 90, 185);    
+            pointer-events: none;      
         }
     }
     .login-signup{

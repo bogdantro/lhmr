@@ -1,2 +1,15 @@
 {% extends 'core/base.html' %}
 {% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/scss/store/hosting.css' %}" type="text/css">
+
+
+<div class="cover">
+    <div class="cover-text">
+       <img src="{% static '/images/covers/cover-5.png' %}" alt="cover-img">
+       <h1>100% sikerhet med vår hosting tjeneste</h1>
+       <p id="coverText2">Bli synlig på nett i dag, med vår hosting tjeneste</p>
+    </div>
+ </div>
+ {% endblock %}

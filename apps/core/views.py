@@ -92,3 +92,6 @@ def hjemme(request,  backend='django.contrib.auth.backends.ModelBackend'):
 
 def hosting(request):
     return render(request, 'pages/hosting.html')
+
+def about(request):
+    return render(request, 'pages/about.html')

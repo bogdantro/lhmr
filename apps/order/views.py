@@ -7,12 +7,12 @@ from base64 import b64encode
 
 
 def send_order(request):
-    if request.method == 'POST':
+    if request.method == 'POST' and 'order' in request.POST:
         form = Order(request.POST, request.FILES)
         if form.is_valid():
             first_name = form.cleaned_data['first_name']
-            last_name = form.cleaned_data['first_name']
-            email = form.cleaned_data['first_name']
+            last_name = form.cleaned_data['last_name']
+            email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             products = form.cleaned_data['products']
             hosting = form.cleaned_data['hosting']
