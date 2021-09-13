@@ -32,7 +32,10 @@ html, body {
     color: rgb(15, 15, 15);
     margin-top: 32px;
     margin-bottom: 40px;
-    &#servicesFirstText{
+    &.heading{
+      font-family: 'Arima Madurai', cursive;
+    }
+     &#servicesFirstText{
       font-weight: unset;
     }
   }
@@ -116,6 +119,9 @@ html, body {
     font-size: 26px;
     color: rgb(15, 15, 15);
     margin-bottom: 60px;
+    &.heading{
+      font-family: 'Arima Madurai', cursive;
+    }
   }
   .product-card{
     margin: 30px auto;
@@ -126,6 +132,7 @@ html, body {
     transition: all ease-in .5s;
     transform: translateY(40px);
     max-width: 320px;
+    box-shadow: 0px 3px 7px rgb(50, 50, 50);
     .text{
       .product-name{
         font-size: 22px;
@@ -140,32 +147,6 @@ html, body {
         font-size: 18px;
         opacity: 0.8;
         color: white;
-      }
-    }
-    .button-product-section{
-      width: 100%;
-      padding: 5px;
-      .btn-details{
-        outline: none;
-        background: transparent;
-        color: white;
-        box-shadow: 0px 1px 1px rgba(230, 230, 230, 0.5);
-        border: 2px solid white;
-        backdrop-filter: blur(20px);
-        text-decoration: none;
-        text-align: center;
-        margin-top: 10px;
-        margin-right: 15px;
-        border-radius: 30px;
-        width: 130px;
-        font-size: 14px;
-        padding: 6px;
-        transition: all .2s ease-in-out;
-        outline: none;
-        text-transform: uppercase;
-        font-family: 'Oswald', sans-serif;
-        font-weight: 600;
-        letter-spacing: 0.5px;
       }
     }
   }
@@ -218,6 +199,9 @@ html, body {
     color: rgb(15, 15, 15);
     margin-bottom: 55px;
     margin-top: 10px;
+    &.heading{
+      font-family: 'Arima Madurai', cursive;
+    }
   }
   .content{
     width: 100%;
@@ -391,11 +375,13 @@ html, body {
     color: rgb(15, 15, 15);
     margin-top: 32px;
     margin-bottom: 5px;
+    font-family: 'Arima Madurai', cursive;
   }
   p{
     font-size: 18px;
     color: rgb(15, 15, 15);
     margin-bottom: 0px;
+    font-family: 'Arima Madurai', cursive;
   }
   form{
     text-align: left;
@@ -404,11 +390,6 @@ html, body {
     margin-top: 0;
     opacity: 0;
     transition: all ease-in .5s;
-    label{
-      margin-top: 30px;
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
     textarea{
       width: 100%;
       border: 1px solid rgb(120, 120, 120);

@@ -1,9 +1,11 @@
 // STANDARD PHONE
 .cover{
-    margin-top: -160px;
-    .cover-text{
-      img{
-        width: 85%;
-      }
+  height: 40vh;
+  .cover-text{
+    transform: translateY(-70px) translateX(0);
+    img{
+      top: 50px;
+      left: -35px;
     }
   }
+}

@@ -28,17 +28,12 @@ $primaryColor: #2d9cb3;
             }
         }
         .logo{
-            .logo1{
-                display: none;
-            }
-            .logo2{
-                display: block;
+            h1{
+                color: black;
             }
         }
         .order{
-            i{
-                color: black;
-            }
+            background: rgb(62, 80, 175);
         }
     }
     &.menu-active{
@@ -54,17 +49,12 @@ $primaryColor: #2d9cb3;
             }
         }
         .logo{
-            .logo1{
-                display: none;
-            }
-            .logo2{
-                display: block;
+            h1{
+                color: black;
             }
         }
         .order{
-            i{
-                color: black;
-            }
+            background: rgb(62, 80, 175);
         }
 
     }
@@ -76,14 +66,15 @@ $primaryColor: #2d9cb3;
         margin: 0;
         position: absolute;
         left: 20px;
-        margin-bottom: 5px;
-        .logo2{
-            display: none;
-        }
-        img{
-            transform: scale(100%);
-            width: 100px;
-            height: auto;
+        top: 8px;
+        width: auto;
+        height: 100%;
+        h1{
+            font-family: 'Indie Flower', cursive;
+            color: white;
+            font-size: 32px;
+            height: 100%;
+            width: auto;
             transition: all 0.2s ease-in-out;
         }
     }
@@ -291,11 +282,12 @@ $primaryColor: #2d9cb3;
         right: 105px;
         cursor: pointer;
         color: white;
-        background: rgb(62, 80, 175);
         padding: 5px;
         width: 75px;
         text-align: center;
         border-radius: 25px;
+        border: 2px solid white;
+        transition: all 0.2s ease-in;
     }
 }
 // NORMAL DESKTOP

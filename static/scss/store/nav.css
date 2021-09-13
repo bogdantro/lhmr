@@ -32,16 +32,12 @@
   color: black;
 }
 
-#navbar.sticky .logo .logo1 {
-  display: none;
-}
-
-#navbar.sticky .logo .logo2 {
-  display: block;
-}
-
-#navbar.sticky .order i {
+#navbar.sticky .logo h1 {
   color: black;
+}
+
+#navbar.sticky .order {
+  background: #3e50af;
 }
 
 #navbar.menu-active {
@@ -56,16 +52,12 @@
   color: black;
 }
 
-#navbar.menu-active .logo .logo1 {
-  display: none;
-}
-
-#navbar.menu-active .logo .logo2 {
-  display: block;
-}
-
-#navbar.menu-active .order i {
+#navbar.menu-active .logo h1 {
   color: black;
+}
+
+#navbar.menu-active .order {
+  background: #3e50af;
 }
 
 #navbar .desktop-menu {
@@ -77,18 +69,17 @@
   margin: 0;
   position: absolute;
   left: 20px;
-  margin-bottom: 5px;
+  top: 8px;
+  width: auto;
+  height: 100%;
 }
 
-#navbar .logo .logo2 {
-  display: none;
-}
-
-#navbar .logo img {
-  -webkit-transform: scale(100%);
-          transform: scale(100%);
-  width: 100px;
-  height: auto;
+#navbar .logo h1 {
+  font-family: 'Indie Flower', cursive;
+  color: white;
+  font-size: 32px;
+  height: 100%;
+  width: auto;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -342,11 +333,13 @@
   right: 105px;
   cursor: pointer;
   color: white;
-  background: #3e50af;
   padding: 5px;
   width: 75px;
   text-align: center;
   border-radius: 25px;
+  border: 2px solid white;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 @media only screen and (min-device-width: 1024px) {

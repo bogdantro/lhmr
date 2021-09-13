@@ -12,12 +12,13 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 
 <div id="navbar">
     <div class="logo" id="logo" onclick="window.location.href=''">
-        <img src="{% static '/images/logo/logo-white-name.png' %}" class="logo1" alt="logo1">
-        <img src="{% static '/images/logo/logo-black-name.png' %}" class="logo2" alt="logo2">
+        <h1 class="logo1" alt="logo1">Webiser</h1>
     </div>
     <!-- PHONE -->
     <div class="hamburger" id="hamburger" onclick="menu()">
@@ -61,11 +62,9 @@
         </div>
         <form id="loginForm" method="post">
             {% csrf_token %}
-            <label for="id_username">Brukernavn</label>
             <br>
             <input type="text" id="username" name="username" placeholder="Brukernavn" required oninvalid="this.setCustomValidity('Værsåsnill skriv inn brukernavnet')" oninput="this.setCustomValidity('')">
             <br>
-            <label for="id_password">Passord</label>
             <br>
             <input type="password" id="password" name="password" placeholder="Passord" required oninvalid="this.setCustomValidity('Skriv inn passordet')" oninput="this.setCustomValidity('')">
             <div id="signUpFormErrors">{{ form.username.errors }}</div>
@@ -80,29 +79,23 @@
             {% csrf_token %}
             {{ form.non_field_errors }}
             {{form.errors}}
-            <label for="id_username">Brukernavn</label>
             <br>
-            <input type="text" id="username" name="username" required oninvalid="this.setCustomValidity('Værsåsnill velg en brukernavn')" oninput="this.setCustomValidity('')">
+            <input type="text" id="username" name="username" placeholder="Brukernavn" required oninvalid="this.setCustomValidity('Værsåsnill velg en brukernavn')" oninput="this.setCustomValidity('')">
             <br>
-            <label for="id_first_name">Fornavn</label>
             <br>
-            <input type="text" id="first_name" name="first_name" required oninvalid="this.setCustomValidity('Fornavn kan ikke være tom')" oninput="this.setCustomValidity('')">
+            <input type="text" id="first_name" name="first_name" placeholder="Fornavn" required oninvalid="this.setCustomValidity('Fornavn kan ikke være tom')" oninput="this.setCustomValidity('')">
             <br>
-            <label for="id_last_name">Etternavn</label>
             <br>
-            <input type="text" id="last_name" name="last_name" required oninvalid="this.setCustomValidity('Etternavn kan ikke være tom')" oninput="this.setCustomValidity('')">
+            <input type="text" id="last_name" name="last_name" placeholder="Etternavn" required oninvalid="this.setCustomValidity('Etternavn kan ikke være tom')" oninput="this.setCustomValidity('')">
             <br>
-            <label for="id_email">Epost</label>
             <br>
-            <input type="text" id="email" name="email" required oninvalid="this.setCustomValidity('Skriv din epost her')" oninput="this.setCustomValidity('')">
+            <input type="email" id="email" name="email" placeholder="Epost" required oninvalid="this.setCustomValidity('Skriv din epost her')" oninput="this.setCustomValidity('')">
             <br>
-            <label for="id_password1">Passord</label>
             <br>
-            <input type="password" id="password1" name="password1" required oninvalid="this.setCustomValidity('Velg et passord')" oninput="this.setCustomValidity('')">
+            <input type="password" id="password1" placeholder="Passord" name="password1" required oninvalid="this.setCustomValidity('Velg et passord')" oninput="this.setCustomValidity('')">
             <br>
-            <label for="id_password1">Gjenta passord</label>
             <br>
-            <input type="password" id="password2" name="password2" required oninvalid="this.setCustomValidity('Du må gjenta passordet')" oninput="this.setCustomValidity('')">
+            <input type="password" id="password2" placeholder="Gjenta passord" name="password2" required oninvalid="this.setCustomValidity('Du må gjenta passordet')" oninput="this.setCustomValidity('')">
             <div id="submit">
                 <button id="signUpFormButton" type="submit" name="signup" value="signup">Lag Bruker</button>
                 <span onclick="signUpBack()">Tilbake</span>

@@ -8,35 +8,35 @@
 // STANDARD PHONE
 .cover{ 
   position: relative;
-  width: auto;
-  min-height: 80vh;
+  width: 100%;
+  height: 65vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgb(120, 144, 220);
-  img{
-    position: absolute;
-    left: 0;
-    top: 130px;
-    width: 85%;
-    height: auto;
-  }
   .cover-text{
-    transform: translateY(-20px) translateX(0);
-    position: absolute;
+    width: 100%;
+    transform: translateY(-70px) translateX(0);
+    position: relative;
     text-align: left;
-    margin: 10px;
+    margin: 5px;
     margin-top: 0;
+    img{
+      position: absolute;
+      left: 0;
+      top: 180px;
+      max-width: 350px;
+    }
     h1{
       width: 100%;
-      font-size: 24px;
+      font-size: 22px;
       color: rgb(250, 250, 250);
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     p{
       transition: ease-in 1s;
       color: rgb(250, 250, 250);
-      font-size: 16px;
+      font-size: 14px;
     }
   }
   .cover-buttons{

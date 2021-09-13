@@ -12,10 +12,6 @@
   padding: 3px;
 }
 
-.login-signup #signUpForm label {
-  font-size: 16px;
-}
-
 .login-signup #signUpForm #submit {
   text-align: center;
   width: auto;

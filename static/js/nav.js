@@ -37,11 +37,9 @@ window.addEventListener("scroll", function(){
 
 function signUpORLogin(){
   const hamburger = document.getElementById('hamburger');
-  const logo = document.getElementById('logo');
   const allContentArea = document.getElementById('allContentArea');
   const html = document.querySelector("html");
   const body = document.body;
-  const makeOrder = document.getElementById('makeOrder');
   const navbar = document.getElementById('navbar');
 
   
@@ -50,8 +48,6 @@ function signUpORLogin(){
     html.style.overflow = 'hidden'
     body.style.overflow = 'hidden'
     hamburger.style.pointerEvents = 'none'
-    logo.style.pointerEvents = 'none'
-    makeOrder.style.pointerEvents = 'none'
     allContentArea.style.filter = 'brightness(40%)';
     navbar.classList.add("sticky")
 }
@@ -61,8 +57,6 @@ function signUpORLoginBack(){
   const html = document.querySelector("html");
   const body = document.body;
   const navbar = document.getElementById('navbar');
-  const makeOrder = document.getElementById('makeOrder');
-  const logo = document.getElementById('logo');
 
   
   document.getElementById('loginORSignUp').classList.remove('active')
@@ -71,10 +65,6 @@ function signUpORLoginBack(){
     body.style.overflow = 'unset';
     hamburger.style.pointerEvents = 'visible';  
     hamburger.style.filter = 'brightness(100%)'
-    logo.style.pointerEvents = 'visible'
-    logo.style.filter = 'brightness(100%)'
-    makeOrder.style.pointerEvents = 'visible'
-    makeOrder.style.filter = 'brightness(100%)'
     allContentArea.style.filter = 'brightness(100%)';
     navbar.classList.toggle("sticky", window.scrollY > 1)
 }

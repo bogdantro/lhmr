@@ -32,6 +32,10 @@ html, body {
   margin-bottom: 40px;
 }
 
+.services h1.heading {
+  font-family: 'Arima Madurai', cursive;
+}
+
 .services h1#servicesFirstText {
   font-weight: unset;
 }
@@ -132,6 +136,10 @@ html, body {
   margin-bottom: 60px;
 }
 
+.product-section h1.heading {
+  font-family: 'Arima Madurai', cursive;
+}
+
 .product-section .product-card {
   margin: 30px auto;
   border-radius: 5%;
@@ -143,6 +151,8 @@ html, body {
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
   max-width: 320px;
+  -webkit-box-shadow: 0px 3px 7px #323232;
+          box-shadow: 0px 3px 7px #323232;
 }
 
 .product-section .product-card .text .product-name {
@@ -161,37 +171,6 @@ html, body {
   font-size: 18px;
   opacity: 0.8;
   color: white;
-}
-
-.product-section .product-card .button-product-section {
-  width: 100%;
-  padding: 5px;
-}
-
-.product-section .product-card .button-product-section .btn-details {
-  outline: none;
-  background: transparent;
-  color: white;
-  -webkit-box-shadow: 0px 1px 1px rgba(230, 230, 230, 0.5);
-          box-shadow: 0px 1px 1px rgba(230, 230, 230, 0.5);
-  border: 2px solid white;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  text-decoration: none;
-  text-align: center;
-  margin-top: 10px;
-  margin-right: 15px;
-  border-radius: 30px;
-  width: 130px;
-  font-size: 14px;
-  padding: 6px;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  outline: none;
-  text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.5px;
 }
 
 .proccess {
@@ -257,6 +236,10 @@ html, body {
   color: #0f0f0f;
   margin-bottom: 55px;
   margin-top: 10px;
+}
+
+.proccess h1.heading {
+  font-family: 'Arima Madurai', cursive;
 }
 
 .proccess .content {
@@ -469,12 +452,14 @@ html, body {
   color: #0f0f0f;
   margin-top: 32px;
   margin-bottom: 5px;
+  font-family: 'Arima Madurai', cursive;
 }
 
 .contact-us p {
   font-size: 18px;
   color: #0f0f0f;
   margin-bottom: 0px;
+  font-family: 'Arima Madurai', cursive;
 }
 
 .contact-us form {
@@ -485,12 +470,6 @@ html, body {
   opacity: 0;
   -webkit-transition: all ease-in .5s;
   transition: all ease-in .5s;
-}
-
-.contact-us form label {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-size: 16px;
 }
 
 .contact-us form textarea {

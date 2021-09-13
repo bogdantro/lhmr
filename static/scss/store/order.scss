@@ -2,10 +2,13 @@ $loader: rgb(80, 104, 180);
 
 // STANDARD PHONE
 .cover{
-  margin-top: -160px;
+  height: 40vh;
   .cover-text{
+    transform: translateY(-70px) translateX(0);
     img{
-      width: 85%;
+      top: 70px;
+      left: -35px;
+      max-width: 300px;
     }
   }
 }

@@ -1,8 +1,15 @@
 .cover {
-  margin-top: -160px;
+  height: 40vh;
+}
+
+.cover .cover-text {
+  -webkit-transform: translateY(-70px) translateX(0);
+          transform: translateY(-70px) translateX(0);
 }
 
 .cover .cover-text img {
-  width: 85%;
+  top: 70px;
+  left: -35px;
+  max-width: 320px;
 }
 /*# sourceMappingURL=hosting.css.map */
