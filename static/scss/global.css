@@ -6,7 +6,23 @@
           box-sizing: border-box;
 }
 
-.cover {
+@media only screen and (min-device-width: 1024px) {
+  .flex {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.cover-desktop {
+  display: none;
+}
+
+.cover-mobile {
   position: relative;
   width: 100%;
   height: 65vh;
@@ -22,7 +38,7 @@
   background: #7890dc;
 }
 
-.cover .cover-text {
+.cover-mobile .cover-text {
   width: 100%;
   -webkit-transform: translateY(-70px) translateX(0);
           transform: translateY(-70px) translateX(0);
@@ -32,28 +48,28 @@
   margin-top: 0;
 }
 
-.cover .cover-text img {
+.cover-mobile .cover-text img {
   position: absolute;
   left: 0;
   top: 180px;
   max-width: 350px;
 }
 
-.cover .cover-text h1 {
+.cover-mobile .cover-text h1 {
   width: 100%;
   font-size: 22px;
   color: #fafafa;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.cover .cover-text p {
+.cover-mobile .cover-text p {
   -webkit-transition: ease-in 1s;
   transition: ease-in 1s;
   color: #fafafa;
   font-size: 14px;
 }
 
-.cover .cover-buttons {
+.cover-mobile .cover-buttons {
   text-align: left;
   -webkit-transform: translateY(30px);
           transform: translateY(30px);
@@ -63,7 +79,7 @@
   display: flex;
 }
 
-.cover .cover-buttons a {
+.cover-mobile .cover-buttons a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,7 +114,101 @@
           backdrop-filter: blur(20px);
 }
 
-.cover .cover-buttons a:nth-child(1) {
+.cover-mobile .cover-buttons a:nth-child(1) {
   background: #3c54a0;
+}
+
+@media only screen and (min-device-width: 1024px) {
+  .cover-mobile {
+    display: none;
+  }
+  .cover-desktop {
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #7890dc;
+  }
+  .cover-desktop .cover-text {
+    width: 100%;
+    -webkit-transform: translateY(0) translateX(10px);
+            transform: translateY(0) translateX(10px);
+    position: relative;
+    text-align: left;
+    margin: 5px;
+    margin-top: 0;
+  }
+  .cover-desktop .cover-text img {
+    position: absolute;
+    left: 0;
+    top: 180px;
+    max-width: 350px;
+  }
+  .cover-desktop .cover-text h1 {
+    width: 100%;
+    font-size: 22px;
+    color: #fafafa;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .cover-desktop .cover-text p {
+    -webkit-transition: ease-in 1s;
+    transition: ease-in 1s;
+    color: #fafafa;
+    font-size: 14px;
+  }
+  .cover-desktop .cover-buttons {
+    text-align: left;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .cover-desktop .cover-buttons a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 15px;
+    border-radius: 30px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 14px;
+    padding: 10px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    outline: none;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: transparent;
+    -webkit-box-shadow: 0px 1px 1px rgba(230, 230, 230, 0.5);
+            box-shadow: 0px 1px 1px rgba(230, 230, 230, 0.5);
+    border: 2px solid white;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  .cover-desktop .cover-buttons a:nth-child(1) {
+    background: #3c54a0;
+  }
 }
 /*# sourceMappingURL=global.css.map */

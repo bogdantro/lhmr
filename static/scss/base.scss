@@ -304,60 +304,6 @@ html, body {
     }
   }
 }
-.about-us{
-  width: 100%;
-  height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background: white;
-  text-align: center;
-  .border{
-    background: rgb(100, 100, 100);
-    transform: translateY(30px);
-    height: 2px;
-    width: 65%;
-    margin: 20px auto;
-  }
-  h1{
-    font-size: 26px;
-    color: rgb(15, 15, 15);
-    margin-top: 32px;
-    margin-bottom: 45px;
-  }
-  .text{
-    width: 100%;
-    p{
-      margin: 0 auto;
-      width: 90%;
-      font-size: 15px;
-      letter-spacing: 1px;
-    }
-    #secondText{
-      display: none;
-      a{
-        text-decoration: underline;
-        color: rgb(18, 18, 204);
-      }
-    }
-    button{
-      transform: translateY(30px);
-      border-radius: 30px;
-      border: 2px solid transparent;
-      color: rgb(30, 30, 30);
-      width: 150px;
-      font-size: 16px;
-      padding: 5px;
-      transition: all .2s ease-in-out;
-      background: rgb(72, 90, 185);
-      color: white;
-      outline: none;
-      &:hover{
-        background: white;
-        color: black;
-      }
-    }
-  }
-}
 .contact-us{
   background: white;
   width: 100%;
@@ -420,6 +366,113 @@ html, body {
         &:hover{
           background: white;
           color: black;
+        }
+      }
+    }
+  }
+}
+
+// NORMAL DESKTOP
+@media only screen and (min-device-width:1024px) { 
+  .product-section{
+    .product-card{
+      width: 100%;
+    }
+  }
+  .contact-us{
+    form{
+      margin: 15px 85px;
+    }
+  }
+  .proccess{
+    background: white;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    &.active{
+      .content{
+        .class-1{
+          opacity: 1;
+          transform: translateY(0);
+          transition: all ease-in .2s;
+        }
+        .class-2{
+          opacity: 1;
+          transform: translateY(0);
+          transition: all ease-in .6s;
+        }
+        .class-3{
+          opacity: 1;
+          transform: translateY(0);
+        transition: all ease-in .8s;
+      }
+      .class-4{
+        opacity: 1;
+        transform: translateY(0);
+        transition: all ease-in 1s;
+      }
+      .class-5{
+        opacity: 1;
+        transform: translateY(0);
+        transition: all ease-in 1.2s;
+      }
+    }
+  }
+    .border{
+      background: rgb(100, 100, 100);
+      height: 2px;
+      width: 65%;
+      margin: 20px auto;
+      transform: translateY(20px);
+    }
+    h1{
+      font-size: 26px;
+      color: rgb(15, 15, 15);
+      margin-bottom: 55px;
+      margin-top: 10px;
+      &.heading{
+        font-family: 'Arima Madurai', cursive;
+      }
+    }
+    .content{
+      width: 100%;
+      height: auto;
+      margin: 0;
+      .class-1{
+        p{
+          margin: 5px auto;
+          width: 55%;
+          font-size: 15px;
+        }
+      }
+      .class-2{
+        p{
+          margin: 5px auto;
+          width: 55%;
+          font-size: 15px;
+        }
+      }
+      .class-3{
+        p{
+          margin: 5px auto;
+          width: 55%;
+          font-size: 15px;
+        }
+      }
+      .class-4{
+        p{
+          margin: 5px auto;
+          width: 55%;
+          font-size: 15px;
+        }
+      }
+      .class-5{
+        p{
+          margin: 5px auto;
+          width: 55%;
+          font-size: 15px;
         }
       }
     }

@@ -261,7 +261,9 @@
   padding: 10px;
   position: fixed;
   top: 50px;
-  left: 8%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   opacity: 0;
   background: whitesmoke;
   border-radius: 25px;
@@ -287,6 +289,7 @@
   transition: all .5s ease-in-out;
   background: #485ab9;
   color: white;
+  cursor: pointer;
 }
 
 #navbar .login-signup a:nth-child(3) {
@@ -333,13 +336,18 @@
   right: 105px;
   cursor: pointer;
   color: white;
-  padding: 5px;
-  width: 75px;
+  padding: 5px 8px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   text-align: center;
-  border-radius: 25px;
+  border-radius: 7px;
   border: 2px solid white;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+  font-size: 14px;
+  background: #324a96;
+  color: #d9e2ff;
 }
 
 @media only screen and (min-device-width: 1024px) {
@@ -358,19 +366,16 @@
   #navbar .sidebar {
     display: none;
   }
-  #navbar .my-account {
+  #navbar .my-account-icon {
     right: 40px;
   }
-  #navbar .my-account i {
-    font-size: 28px;
-  }
-  #navbar .cart i {
-    font-size: 28px;
+  #navbar .my-account-icon i {
+    font-size: 26px;
   }
   #navbar .desktop-menu {
     display: unset;
     position: absolute;
-    right: 130px;
+    right: 190px;
     top: 12px;
   }
   #navbar .desktop-menu .desktop-ul .desktop-li {
@@ -381,7 +386,7 @@
     color: white;
     text-decoration: none;
     font-size: 16px;
-    margin: 30px;
+    margin: 10px;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
     overflow: hidden;
@@ -431,6 +436,9 @@
             transform: translateX(0);
     -webkit-transition: .3s transform linear, .3s height linear .5s;
     transition: .3s transform linear, .3s height linear .5s;
+  }
+  #navbar .login-signup {
+    max-width: 35em;
   }
 }
 /*# sourceMappingURL=nav.css.map */

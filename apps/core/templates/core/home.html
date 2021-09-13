@@ -13,18 +13,34 @@
 
 
 <div class="cover">
-   <div class="cover-text">
-      <img src="{% static '/images/covers/cover-1.png' %}" alt="cover-img">
-      <h1>Moderne nettsider til lave priser</h1>
-      <p id="coverText2">Bli synlig på nett og ta neste steg for ditt bedrift, ved hjelp av våres fantastiske og moderne nettsider laget av Norges beste designere og utviklere</p>
-      <div class="cover-buttons">
-         <a onclick="coverPrices()" style="color: white;">Se priser</a>
-         <a onclick="coverContact()" style="color: white;">Kontakt oss</a>
+   <div class="cover-desktop">
+      <div class="cover-text">
+         <h1>Moderne nettsider til lave priser</h1>
+         <p id="coverText2">Bli synlig på nett og ta neste steg for ditt bedrift, ved hjelp av våres fantastiske og moderne nettsider laget av Norges beste designere og utviklere</p>
+         <div class="cover-buttons">
+            <a onclick="coverPrices()" style="color: white;">Se priser</a>
+            <a onclick="coverContact()" style="color: white;">Kontakt oss</a>
+         </div>
+      </div>
+      <div class="img">
+         <img src="{% static '/images/covers/cover-1.png' %}" alt="cover-img">
+      </div>
+   </div>
+   <div class="cover-mobile">
+      <div class="cover-text">
+         <img src="{% static '/images/covers/cover-1.png' %}" alt="cover-img">
+         <h1>Moderne nettsider til lave priser</h1>
+         <p id="coverText2">Bli synlig på nett og ta neste steg for ditt bedrift, ved hjelp av våres fantastiske og moderne nettsider laget av Norges beste designere og utviklere</p>
+         <div class="cover-buttons">
+            <a onclick="coverPrices()" style="color: white;">Se priser</a>
+            <a onclick="coverContact()" style="color: white;">Kontakt oss</a>
+         </div>
       </div>
    </div>
 </div>
 <div class="services" id="services">
    <h1 class="heading">Hvorfor velge Webiser?</h1>
+   <div class="flex">
    <div class="icon" id="icon1">
       <i class="fas fa-users"></i>      
       <h1 id="servicesFirstText">Designere og utviklere</h1>
@@ -49,20 +65,23 @@
       <p id="servicesSecondText4">Ikke frykt at nettsiden er nede ofte. Med vår hosting tjeneste så har du garantert 99% uptime, og 24/7 kundeservice. Vi hoster nettsiden i maks 6 måneder, og den koster 80kr/m</p>
       <button id="readMoreServices4" onclick="servicesReadMore4()">Les mer</button>
    </div>
+</div>
    <div class="border"></div>
 </div>
 
 <div id="productScrollTo" style="height: 60px; width: 100%; background: white;"></div>
 <div class="product-section" id="productHomePage">
    <h1 class="heading">Hva passer deg?</h1>
-   {% for product in products %}
-   <div class="product-card" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
-      <div class="text">
-         <h1 class="product-name">{{product.name}}</h1>
-         <h1 class="product-price">{{product.price|floatformat}} kr</h1>
+   <div class="flex">
+      {% for product in products %}
+      <div class="product-card" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
+         <div class="text">
+            <h1 class="product-name">{{product.name}}</h1>
+            <h1 class="product-price">{{product.price|floatformat}} kr</h1>
+         </div>
       </div>
+      {% endfor %}
    </div>
-   {% endfor %}
    <div class="border"></div>
 </div>
 <!-- <div class="about-us" id="aboutUs">

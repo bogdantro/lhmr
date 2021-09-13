@@ -221,7 +221,8 @@ $primaryColor: #2d9cb3;
         padding: 10px;
         position: fixed;
         top: 50px;
-        left: 8%;
+        left: 50%;
+        transform: translateX(-50%);
         opacity: 0;
         background: rgb(245, 245, 245);
         border-radius: 25px;
@@ -243,6 +244,7 @@ $primaryColor: #2d9cb3;
             transition: all .5s ease-in-out;
             background: rgb(72, 90, 185);
             color: white;
+            cursor: pointer;
             &:nth-child(3){
                 color: rgb(72, 90, 185);
                 background: transparent;
@@ -282,12 +284,15 @@ $primaryColor: #2d9cb3;
         right: 105px;
         cursor: pointer;
         color: white;
-        padding: 5px;
-        width: 75px;
+        padding: 5px 8px;
+        width: max-content;
         text-align: center;
-        border-radius: 25px;
+        border-radius: 7px;
         border: 2px solid white;
         transition: all 0.2s ease-in;
+        font-size: 14px;
+        background: rgb(50, 74, 150);
+        color: rgb(217, 226, 255);
     }
 }
 // NORMAL DESKTOP
@@ -319,21 +324,16 @@ $primaryColor: #2d9cb3;
         .sidebar{
             display: none;
         }
-        .my-account{
+        .my-account-icon{
             right: 40px;
             i{
-                font-size: 28px;
-            }
-        }
-        .cart{
-            i{
-                font-size: 28px;
+                font-size: 26px;
             }
         }
         .desktop-menu{
             display: unset;
             position: absolute;
-            right: 130px;
+            right: 190px;
             top: 12px;
             .desktop-ul{
                 .desktop-li{
@@ -343,7 +343,7 @@ $primaryColor: #2d9cb3;
                         color: white;
                         text-decoration: none;
                         font-size: 16px;
-                        margin: 30px;
+                        margin: 10px;
                         transition: all .3s ease;
                         overflow: hidden;
                         background: transparent;
@@ -389,6 +389,9 @@ $primaryColor: #2d9cb3;
                     }
                 }
             }
+        }
+        .login-signup{
+            max-width: 35em;
         }
     }
 }
