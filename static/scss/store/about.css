@@ -1,1 +1,8 @@
-/* No CSS *//*# sourceMappingURL=about.css.map */
+.cover-mobile {
+  height: 55vh;
+}
+
+.cover-mobile .cover-text img {
+  top: 120px;
+}
+/*# sourceMappingURL=about.css.map */

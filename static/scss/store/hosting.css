@@ -1,15 +1,8 @@
-.cover {
-  height: 40vh;
+.cover-mobile {
+  height: 55vh;
 }
 
-.cover .cover-text {
-  -webkit-transform: translateY(-70px) translateX(0);
-          transform: translateY(-70px) translateX(0);
-}
-
-.cover .cover-text img {
-  top: 70px;
-  left: -35px;
-  max-width: 320px;
+.cover-mobile .cover-text img {
+  top: 120px;
 }
 /*# sourceMappingURL=hosting.css.map */

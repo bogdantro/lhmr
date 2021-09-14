@@ -52,10 +52,17 @@
   position: absolute;
   left: 0;
   top: 180px;
-  max-width: 350px;
+  max-width: 320px;
+  background: -webkit-gradient(linear, left top, right top, from(#5068b4), to(transparent));
+  background: linear-gradient(to right, #5068b4, transparent);
+  border-radius: 45px;
+  border-bottom-right-radius: 125px;
+  border-top-right-radius: 125px;
 }
 
 .cover-mobile .cover-text h1 {
+  -webkit-transform: translateY(-10);
+          transform: translateY(-10);
   width: 100%;
   font-size: 22px;
   color: #fafafa;
@@ -71,8 +78,6 @@
 
 .cover-mobile .cover-buttons {
   text-align: left;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,7 +147,7 @@
     -webkit-transform: translateY(0) translateX(10px);
             transform: translateY(0) translateX(10px);
     position: relative;
-    text-align: left;
+    text-align: center;
     margin: 5px;
     margin-top: 0;
   }
@@ -165,13 +170,19 @@
     font-size: 14px;
   }
   .cover-desktop .cover-buttons {
-    text-align: left;
+    text-align: center;
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .cover-desktop .cover-buttons a {
     display: -webkit-box;

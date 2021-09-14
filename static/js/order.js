@@ -1,7 +1,13 @@
-function orderLoading(){
-const allContentArea = document.getElementById('allContentArea');
-    allContentArea.style.transition = '.5s';
-    setTimeout(function(){
-    allContentArea.style.filter = 'brightness(50%)';
-    }, 100)
-};
+
+
+$.ajax({
+    type: "GET",
+    url: "bestill/",
+    success: function (response){
+        document.getElementById('orderLoader').classList.add('hidden');
+        console.log('Ok');
+    },
+    error: function(er){
+      console.log('Not ok');  
+    },
+})

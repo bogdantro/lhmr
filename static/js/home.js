@@ -36,7 +36,17 @@
 //     }
 // };
 
-
+$.ajax({
+    type: "GET",
+    url: "bestill/",
+    success: function (response){
+        document.getElementById('homeLoader').classList.add('hidden');
+        console.log('Ok');
+    },
+    error: function(er){
+      console.log('Not ok');  
+    },
+})
 
 $(window).scroll(function() {
     const services = document.getElementById('services');

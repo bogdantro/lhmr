@@ -23,7 +23,7 @@
   </div>
  </div>
 
- <div class="load-wrapp">
+ <div class="load-wrapp" id="orderLoader">
     <div class="load-2">
       <div class="line"></div>
       <div class="line"></div>
@@ -32,7 +32,7 @@
   </div>
 
 <div class="make-order">
-    <form method='post' enctype="multipart/form-data">
+    <form method='post' id="makeOrder" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.errors}}
         <label for="products">Velg nettside</label>

@@ -382,6 +382,7 @@
     list-style: none;
   }
   #navbar .desktop-menu .desktop-ul .desktop-li a {
+    cursor: pointer;
     position: relative;
     color: white;
     text-decoration: none;

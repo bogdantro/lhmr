@@ -33,10 +33,6 @@ from django.views.decorators.debug import sensitive_post_parameters
 
 
 
-
-@sensitive_post_parameters()
-@csrf_protect
-@never_cache
 def hjemme(request,  backend='django.contrib.auth.backends.ModelBackend'):
     products = Product.objects.all()
 
@@ -69,20 +65,19 @@ def hjemme(request,  backend='django.contrib.auth.backends.ModelBackend'):
                 userprofileform = UserprofileForm()        
 
     if request.method=='POST' and 'contact' in request.POST:
-        form = ContactForm()
-    else:
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            fra_epost = form.cleaned_data['fra_epost']
-            navn = form.cleaned_data['navn']
-            beskjed = form.cleaned_data['beskjed']
-            try:
-                send_mail(fra_epost, navn, beskjed, ['support@stellcare.com'])
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return redirect('/')
-    
-        
+        fra_epost = request.POST.get['fra_epost']
+        navn = request.POST.get['navn']
+        beskjed = request.POST.get['beskjed']
+        # send an email
+        send_mail('Contact Form',
+            navn, #subject
+            beskjed, #message
+            fra_epost, #from email
+            settings.EMAIL_HOST_USER,
+            ['sabertoothtri@gmail.com'], #to email
+            fail_silently=False
+        )
+
     context = {
     'products':products,
     }

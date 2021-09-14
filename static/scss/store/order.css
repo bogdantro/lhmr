@@ -1,16 +1,9 @@
-.cover {
-  height: 40vh;
+.cover-mobile {
+  height: 55vh;
 }
 
-.cover .cover-text {
-  -webkit-transform: translateY(-70px) translateX(0);
-          transform: translateY(-70px) translateX(0);
-}
-
-.cover .cover-text img {
-  top: 70px;
-  left: -35px;
-  max-width: 300px;
+.cover-mobile .cover-text img {
+  top: 90px;
 }
 
 .make-order {
@@ -90,14 +83,17 @@
 .load-wrapp {
   float: left;
   width: 100%;
-  height: 100px;
+  height: 100vh;
   padding: 20px;
   border-radius: 5px;
   text-align: center;
   background-color: white;
   position: fixed;
   left: 0;
-  top: 400px;
+  top: 0;
+  z-index: 100000;
+  opacity: 1;
+  pointer-events: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,6 +103,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+.load-wrapp.hidden {
+  opacity: 0;
 }
 
 .load-wrapp p {
