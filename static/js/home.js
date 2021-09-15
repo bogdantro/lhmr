@@ -38,7 +38,7 @@
 
 $.ajax({
     type: "GET",
-    url: "bestill/",
+    url: "/",
     success: function (response){
         document.getElementById('homeLoader').classList.add('hidden');
         console.log('Ok');

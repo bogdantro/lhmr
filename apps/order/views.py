@@ -25,5 +25,5 @@ def send_order(request):
 
     return render(request, 'core/order.html', {'form': form})
 
-def success(request):
+def order_success(request):
     return render(request, 'core/success.html')    

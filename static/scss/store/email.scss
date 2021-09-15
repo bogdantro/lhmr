@@ -1,0 +1,32 @@
+// STANDARD PHONE
+.cover-mobile{ 
+    height: 55vh;
+    .cover-text{
+        img{
+            top: 120px;
+        }
+    }
+  }
+.email-success-content{
+    background: white;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    padding-top: 40px;
+    text-align: center;
+    position: relative;
+    transition: all ease-in .5s;
+    h1{
+        font-size: 26px;
+        color: rgb(15, 15, 15);
+        margin-top: 32px;
+        margin-bottom: 5px;
+        font-family: 'Arima Madurai', cursive;
+      }
+      p{
+        font-size: 18px;
+        color: rgb(15, 15, 15);
+        margin-bottom: 0px;
+        font-family: 'Arima Madurai', cursive;
+      }
+}  

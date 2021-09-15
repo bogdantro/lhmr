@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/scss/store/email.css' %}" type="text/css">
+
+
+<div class="cover">
+    <div class="cover-desktop">
+       <div class="cover-text">
+          <h1>Vi har motatt mailen</h1>
+          <p id="coverText2">Mailen har blitt tilsendt, og vi vill svare deg så fort som mulig</p>
+       </div>
+       <div class="img">
+          <img src="{% static '/images/covers/cover-6.png' %}" alt="cover-img">
+       </div>
+    </div>
+    <div class="cover-mobile">
+       <div class="cover-text">
+          <img src="{% static '/images/covers/cover-6.png' %}" alt="cover-img">
+          <h1>Vi har motatt mailen</h1>
+          <p id="coverText2">Mailen har blitt tilsendt, og vi vill svare deg så fort som mulig</p>
+       </div>
+    </div>
+ </div>
+ <div class="email-success-content">
+    <h1>Imens du venter på svar fra oss</h1>
+    <p>Sjekk ut instagramen og tiktoken våres</p>
+ </div>
+ {% endblock %}

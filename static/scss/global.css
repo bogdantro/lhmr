@@ -53,9 +53,9 @@
   left: 0;
   top: 180px;
   max-width: 320px;
-  background: -webkit-gradient(linear, left top, right top, from(#5068b4), to(transparent));
-  background: linear-gradient(to right, #5068b4, transparent);
-  border-radius: 45px;
+  background: -webkit-gradient(linear, left top, right top, from(#6e86c8), color-stop(70%, transparent));
+  background: linear-gradient(to right, #6e86c8, transparent 70%);
+  border-radius: 75px;
   border-bottom-right-radius: 125px;
   border-top-right-radius: 125px;
 }
