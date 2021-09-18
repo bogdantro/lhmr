@@ -138,13 +138,16 @@
 <div class="contact-us" id="contactUs">
    <h1>Trenger du extra hjelp?</h1>
    <p>Kontakter oss under</p>
-   <form method="POST">
+   <form action="" method="POST">
       {% csrf_token %}
       <br>
-      <input type="email" id="fra_epost" name="fra_epost" placeholder="Epost">
+      <input type="text" name="navn" placeholder="Navn">
       <br>
       <br>
-      <textarea class="beskjed" type="text" id="beskjed" name="beskjed" cols="30" rows="10" placeholder="Hva ønsker du fortelle oss?"></textarea>
+      <input type="email" name="email" placeholder="Epost">
+      <br>
+      <br>
+      <textarea name="message" cols="30" rows="10" placeholder="Hva ønsker du fortelle oss?"></textarea>
       <div class="form-actions">
          <button type="submit" name="contact" value="contact">Send</button>
       </div>

@@ -3,7 +3,16 @@
 
 {% block content %}
 <link rel="stylesheet" href="{% static '/scss/store/email.css' %}" type="text/css">
+<script rel="stylesheet" src="{% static '/js/email.js' %}" type="text/javascript"></script>
 
+
+<div class="load-wrapp" id="emailLoader">
+   <div class="load-2">
+     <div class="line"></div>
+     <div class="line"></div>
+     <div class="line"></div>
+   </div>
+ </div>
 
 <div class="cover">
     <div class="cover-desktop">
@@ -22,9 +31,5 @@
           <p id="coverText2">Mailen har blitt tilsendt, og vi vill svare deg så fort som mulig</p>
        </div>
     </div>
- </div>
- <div class="email-success-content">
-    <h1>Imens du venter på svar fra oss</h1>
-    <p>Sjekk ut instagramen og tiktoken våres</p>
  </div>
  {% endblock %}

@@ -44,26 +44,34 @@ def hjemme(request,  backend='django.contrib.auth.backends.ModelBackend'):
 
             login(request, user, backend='django.contrib.auth.backends.ModelBackend')
 
-            return redirect('hjemme')
+            return redirect('/hjemme')
         else:
                 form = SignUpForm()
                 userprofileform = UserprofileForm()        
 
     if request.method=='POST' and 'contact' in request.POST:
-        beskjed = request.POST.get('beskjed')
-        fra_epost = request.POST.get('fra_epost')
-        # send an email
-        send_mail(
-            fra_epost, #from email
-            beskjed, #message
-            settings.EMAIL_HOST_USER,
-            ['sabertoothtri@gmail.com'], #to email
-            fail_silently=False
-        )
+        navn = request.POST.get('navn')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        data = {
+            'navn': navn,
+            'email': email,
+            'message': message,
+        }
+        message = '''
+        Fra: {}
+
+        Navn: {}
+
+        Beskjed: {}
+        '''.format(data['email'], data['navn'], data['message'], )
+        send_mail('Webiser Contact Form', message, '', ['sabertoothtri@gmail.com'])
         return redirect('/email-success')
 
     context = {
     'products':products,
+    'navn':navn
     }
 
     return render(request, 'core/home.html', context)
