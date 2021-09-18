@@ -19,9 +19,11 @@
 }
 
 #footer .footer-section .footer-ul h1 {
-  font-size: 30px;
-  font-weight: bold;
-  margin: 5px;
+  text-transform: uppercase;
+  font-family: 'Sniglet', cursive;
+  color: #142c78;
+  font-weight: 700;
+  font-size: 26px;
 }
 
 #footer .footer-section .footer-ul .footer-li {
@@ -29,13 +31,14 @@
 }
 
 #footer .footer-section .footer-ul .footer-li a {
+  font-family: 'Sniglet', cursive;
   display: inline-block;
   width: 50%;
   text-decoration: none;
-  color: black;
+  color: #3c54a0;
   font-size: 14px;
   padding: 5px;
-  opacity: 0.5;
+  opacity: 0.7;
   -webkit-transition: .3s;
   transition: .3s;
 }

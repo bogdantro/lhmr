@@ -10,6 +10,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+
+
 
 <div class="load-wrapp" id="homeLoader">
    <div class="load-2">
@@ -30,18 +35,20 @@
          </div>
       </div>
       <div class="img">
-         <img src="{% static '/images/covers/cover-1.png' %}" alt="cover-img">
+         <img src="{% static '/images/covers/cover-7.png' %}" alt="cover-img">
       </div>
    </div>
    <div class="cover-mobile">
       <div class="cover-text">
-         <img src="{% static '/images/covers/cover-1.png' %}" alt="cover-img">
-         <h1>Moderne nettsider til lave priser</h1>
+         <h1>Moderne nettsider til<br><span>lave priser</span></h1>
          <p id="coverText2">Bli synlig på nett og ta neste steg for ditt bedrift, ved hjelp av våres fantastiske og moderne nettsider laget av Norges beste designere og utviklere</p>
          <div class="cover-buttons">
             <a onclick="coverPrices()" style="color: white;">Se priser</a>
             <a onclick="coverContact()" style="color: white;">Kontakt oss</a>
          </div>
+      </div>
+      <div class="img">
+         <img src="{% static '/images/covers/cover-7.png' %}" alt="cover-img">
       </div>
    </div>
 </div>
@@ -78,7 +85,7 @@
 
 <div id="productScrollTo" style="height: 60px; width: 100%; background: white;"></div>
 <div class="product-section" id="productHomePage">
-   <h1 class="heading">Hva passer deg?</h1>
+   <h1 class="heading">Våres priser</h1>
    <div class="flex">
       {% for product in products %}
       <div class="product-card" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
@@ -108,7 +115,7 @@
       <div class="class-1">
          <h1>Vi motar bestillingen din</h1>
          <img src="{% static '/images/other/loading-bar-1.png' %}" alt="load-bar-1">
-         <p>Med engang bestillingen er fullført, så sender vi det videre til våres designere som starter å lage designen. Du vil mota en mail gjennom alle stegene</p>
+         <p>Med engang bestillingen er fullført, så sender vi det videre til våres designere som starter å lage designen. Du kan følge med på hvor langt vi har kommet under "mine bestillinger"</p>
       </div>
       <div class="class-2">
          <h1>Designen har blitt fullført</h1>
@@ -136,18 +143,21 @@
 
 <div id="contactScrollTo" style="height: 60px; width: 100%; background: white;"></div>
 <div class="contact-us" id="contactUs">
-   <h1>Trenger du extra hjelp?</h1>
+   <h1 class="heading">Trenger du extra hjelp?</h1>
    <p>Kontakter oss under</p>
    <form action="" method="POST">
       {% csrf_token %}
       <br>
-      <input type="text" name="navn" placeholder="Navn">
+      <label for="navn" class="form-tag-navn tag">Navn</label>
+      <input type="text" name="navn">
       <br>
       <br>
-      <input type="email" name="email" placeholder="Epost">
+      <label for="email" class="form-tag-email tag">Epost</label>
+      <input type="email" name="email">
       <br>
       <br>
-      <textarea name="message" cols="30" rows="10" placeholder="Hva ønsker du fortelle oss?"></textarea>
+      <label for="message" class="form-tag-message tag">Hva ønsker du fortelle oss?</label>
+      <textarea name="message" cols="30" rows="10"></textarea>
       <div class="form-actions">
          <button type="submit" name="contact" value="contact">Send</button>
       </div>

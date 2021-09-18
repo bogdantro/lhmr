@@ -15,7 +15,7 @@ $primaryColor: #2d9cb3;
     border-bottom: 1px solid rgba(200, 200, 200, 0.7);
     &.sticky{
         background: white;
-        box-shadow: 0px 2px 5px rgba(70, 70, 70, 0.7);
+        box-shadow: 0px 3px 5px rgb(20, 44, 120);
         border-color: transparent;
         .hamburger{
             span{
@@ -26,14 +26,6 @@ $primaryColor: #2d9cb3;
             i{
                 color: black;
             }
-        }
-        .logo{
-            h1{
-                color: black;
-            }
-        }
-        .order{
-            background: rgb(62, 80, 175);
         }
     }
     &.menu-active{
@@ -48,15 +40,6 @@ $primaryColor: #2d9cb3;
                 color: black;
             }
         }
-        .logo{
-            h1{
-                color: black;
-            }
-        }
-        .order{
-            background: rgb(62, 80, 175);
-        }
-
     }
     .desktop-menu{
         display: none;
@@ -71,10 +54,11 @@ $primaryColor: #2d9cb3;
         height: 100%;
         h1{
             font-family: 'Indie Flower', cursive;
-            color: white;
+            color: rgb(60, 84, 160);
             font-size: 32px;
             height: 100%;
-            width: auto;
+            width: max-content;
+            height: max-content;
             transition: all 0.2s ease-in-out;
         }
     }
@@ -92,19 +76,17 @@ $primaryColor: #2d9cb3;
             display: block;
             width: 20px;
             height: 2px;
-            background: white;
+            background: black;
             transition: all 0.2s ease-in-out;
         }
         .upper-span{
             margin-bottom: 7px;
-            width: 18px;
         }
         .center-span{
-            width: 15px;
+            transform: translateX(-5px);
         }
         .lower-span{
             margin-top: 7px;
-            width: 16px;
         }
         &.click{
             border: 1px solid rgb(72, 90, 185);
@@ -147,7 +129,6 @@ $primaryColor: #2d9cb3;
             .sidebar-li{
                 list-style: none;
                 a{
-                    border-radius: 30px;
                     border: 2px solid transparent;
                     color: rgb(72, 90, 185);
                     display: inline-block;
@@ -161,8 +142,10 @@ $primaryColor: #2d9cb3;
                 }
                 :nth-child(5){
                     border: 2px solid transparent;
-                    background: rgb(72, 90, 185);
+                    background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
+                    border-radius: 4px;
                     color: white;
+                    box-shadow: 0px 5px 2px rgb(60, 84, 160);
                 }
                 &.active{
                     :nth-child(1){
@@ -205,7 +188,7 @@ $primaryColor: #2d9cb3;
         pointer-events: visible;
         border: 1px solid transparent;
         i{
-            color: white;
+            color: black;
             font-size: 22px;
             transition: all 0.2s ease-in-out;
         }
@@ -288,12 +271,11 @@ $primaryColor: #2d9cb3;
         width: max-content;
         text-align: center;
         border-radius: 7px;
-        border: 2px solid white;
         transition: all 0.2s ease-in;
         font-size: 14px;
-        background: rgb(50, 74, 150);
-        color: rgb(217, 226, 255);
-    }
+        border-radius: 4px;
+        background: linear-gradient(135deg,rgb(60, 84, 160), #6e8efb);    
+      }
 }
 // NORMAL DESKTOP
 @media only screen and (min-device-width:1024px) { 

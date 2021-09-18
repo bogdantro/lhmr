@@ -22,7 +22,20 @@ def send_order(request):
             image = form.cleaned_data['image']
             color = form.cleaned_data['color']
             form.save()
-            send_mail('Du har motatt en bestiling', 'Sjekk ut hva bestilingen handler om', settings.EMAIL_HOST_USER, ['sabertoothtri@gmail.com'])
+            
+            data = {
+                'email':email,
+                'products':products,
+                'message':message,
+            }
+            message = '''
+            Fra: {}
+
+            Produkt: {}
+
+            Om Bedrift: {}
+            '''.format(data['email'], data['products'], data['message'])
+            send_mail('Du har motatt en bestiling', message, '', ['sabertoothtri@gmail.com'])
             return redirect('/bestilling-utfort:1-2-3-4')
     else:
         form = Order()

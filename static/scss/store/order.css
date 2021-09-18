@@ -73,6 +73,7 @@
   transition: all .2s ease-in-out;
   background: 245;
   color: white;
+  outline: none;
 }
 
 .make-order form .form-actions button:hover {
