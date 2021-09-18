@@ -4,6 +4,9 @@ from apps.store.models import Product
 from .forms import Order
 from django.template import RequestContext
 from base64 import b64encode
+from django.core.mail import send_mail, BadHeaderError
+from django.conf import settings
+
 
 
 def send_order(request):
@@ -19,6 +22,7 @@ def send_order(request):
             image = form.cleaned_data['image']
             color = form.cleaned_data['color']
             form.save()
+            send_mail('Du har motatt en bestiling', 'Sjekk ut hva bestilingen handler om', settings.EMAIL_HOST_USER, ['sabertoothtri@gmail.com'])
             return redirect('/bestilling-utfort:1-2-3-4')
     else:
         form = Order()

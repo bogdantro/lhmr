@@ -1,10 +1,9 @@
-.cover {
-  margin-top: -160px;
+.cover-mobile {
+  height: 55vh;
 }
 
-.cover .cover-text img {
-  top: 155px;
-  width: 75%;
+.cover-mobile .cover-text img {
+  top: 120px;
 }
 
 .order-success {
