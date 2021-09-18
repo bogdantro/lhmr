@@ -71,7 +71,6 @@ def hjemme(request,  backend='django.contrib.auth.backends.ModelBackend'):
 
     context = {
     'products':products,
-    'navn':navn
     }
 
     return render(request, 'core/home.html', context)
