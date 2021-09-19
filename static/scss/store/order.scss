@@ -93,10 +93,12 @@ $loader: rgb(80, 104, 180);
               display: flex;
               width: 100%;
               position: relative;
+              border: 2px solid rgb(60, 84, 160);
+              border-radius: 4px;
               .or{
                 font-size: 15px;
                 color: rgb(60, 84, 160);
-                background: white;
+                background: transparent;
                 width: max-content;
                 padding: 0 2px;
                 align-self: center;
@@ -104,24 +106,16 @@ $loader: rgb(80, 104, 180);
               .input{
                 height: 55px;
                 padding-top: 10px;
-                &.order-products{
-                  height: 55px;
-                  padding-top: 10px;
-                }
-                &.order-hosting{
-                  height: 55px;
-                  padding-top: 10px;
-                }
                 &.color{
                   padding: 1px;
                   padding-left: 50px;
                   padding-right: 50px;
                   padding-top: 15px;
                   background: white;
-                  border-left: 1px solid transparent;
+                  border: none;
                 }  
                 &.color-hex{
-                  border-right: 1px solid transparent;
+                  border: none;
                 }
               }
             }
@@ -146,11 +140,24 @@ $loader: rgb(80, 104, 180);
               &.order-image{
                 padding: 15px;
               }
+              &.order-products{
+                padding: 7px;
+              }
+              &.order-hosting{
+                padding: 7px;
+              }
             }
           }
           .order-form-step2{
             position: relative;
             padding-top: 20px;
+            .google-recaptcha{
+              margin: 20px 0;
+              width: 100%;
+              display: flex;
+              justify-content: left;
+              align-items: left;
+            }
             h1{
               &.heading{
                 width: 100%;
@@ -232,10 +239,6 @@ $loader: rgb(80, 104, 180);
             background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
             box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
             border: 2px solid transparent;      
-            &:hover{
-              background: white;
-              color: black;
-            }
           }
         }
       }

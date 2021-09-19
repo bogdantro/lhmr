@@ -1,5 +1,3 @@
-
-
 $.ajax({
     type: "GET",
     url: "bestill/",

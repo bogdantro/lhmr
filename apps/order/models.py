@@ -26,12 +26,12 @@ class Order(models.Model):
     message = models.CharField(max_length=500, blank=True)
     products = models.CharField(max_length=50, choices=PRODUCT_CHOICES, blank=False)
     hosting = models.CharField(max_length=50, choices=HOSTING_CHOICES, blank=False)
-    color = ColorField(blank=False)
-    color_hex = models.CharField(max_length=20)
+    color = ColorField()
+    color_hex = models.CharField(max_length=20, blank=True)
     image = models.ImageField(upload_to='order-logo-images', blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     paid = models.BooleanField(default=False)
-    num_pages = models.FloatField(blank=False, null=True)
+    num_pages = models.IntegerField(blank=False, null=True)
     def __str__(self):
         return '%s' % self.first_name
     

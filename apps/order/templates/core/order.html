@@ -5,6 +5,25 @@
 {% block content %}
 <link rel="stylesheet" href="{% static '/scss/store/order.css' %}" type="text/css">
 <script rel="stylesheet" src="{% static '/js/order.js' %}" type="text/javascript"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+
+function get_action(form) 
+{
+    var v = grecaptcha.getResponse();
+    if(v.length == 0)
+    {
+        document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
+        return false;
+    }
+    else
+    {
+         document.getElementById('captcha').innerHTML="Captcha completed";
+        return true; 
+    }
+}
+
+</script>
 
 <div class="cover">
   <div class="cover-desktop">
@@ -41,32 +60,32 @@
         {{form.errors}}
         <div class="order-form-step1">
            <h1 class="heading">Steg 1</h1>
-           <!-- <label for="products" class="form-tag-products tag">Velg nettside</label> -->
+           <label for="products" class="form-tag-products tag">Velg nettside</label>
            <br>
            {{form.products}}
            <br>
            <br>
-           <!-- <label for="hosting" class="form-tag-hosting tag">Vil du ha våres hosting tjeneste?</label> -->
+           <label for="hosting" class="form-tag-hosting tag">Vil du ha våres hosting tjeneste?</label>
            <br>
            {{form.hosting}}
            <br>
            <br>
-           <!-- <label for="image" class="form-tag-image tag">Har du allerede en logo?</label> -->
+           <label for="image" class="form-tag-image tag">Har du allerede en logo?</label>
            <br>
            {{form.image}}
            <br>
            <br>
-           <!-- <label for="color" class="form-tag-color tag">Velg en farge som passer bedriften din</label> -->
+           <label for="color" class="form-tag-color tag">Velg en farge som passer bedriften din</label>
            <br>
            <div class="color-inputs">
-              <input type="text" name="color_hex" class="color-hex input" id="color_hex" placeholder="#3c54a0">
+              <input type="text" name="color_hex" class="color-hex input" id="color_hex" value="#">
                <div class="or">eller</div>
               <input type="color" id="color" name="color" class="color input" required oninvalid="this.setCustomValidity('Værsåsnill, velg en farge')" oninput="this.setCustomValidity('')">
             </div>
             <br>
-            <!-- <label for="num_pages" class="form-tag-num_pages tag">Velg antall sider</label> -->
+            <label for="num_pages" class="form-tag-num_pages tag">Velg antall sider</label>
             <br>
-            <input type="number" id="num_pages" name="num_pages" class="input" placeholder="1" required oninvalid="this.setCustomValidity('Værsåsnill, velg antall sider')" oninput="this.setCustomValidity('')">
+            <input type="number" id="num_pages" name="num_pages" class="input" placeholder="2" required oninvalid="this.setCustomValidity('Værsåsnill, velg antall sider')" oninput="this.setCustomValidity('')">
          </div>
         <br>
         <div class="order-form-step2">
@@ -83,6 +102,10 @@
            <br>
            <textarea id="message" name="message"></textarea>
            <br>
+           <div class="google-recaptcha">
+              <div class="g-recaptcha" id="rcaptcha"  data-sitekey="site key"></div>
+              <span id="captcha" style="color:red" /></span> <!-- this will show captcha errors -->  
+           </div>
          </div>
         <div class="form-actions">
             <button onclick="orderLoading()" name="order" value="order" type='submit'>Send</button>
