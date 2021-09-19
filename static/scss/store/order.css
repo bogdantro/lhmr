@@ -134,6 +134,16 @@
   padding-top: 10px;
 }
 
+.make-order form .order-form-step1 .color-inputs .input.order-products {
+  height: 55px;
+  padding-top: 10px;
+}
+
+.make-order form .order-form-step1 .color-inputs .input.order-hosting {
+  height: 55px;
+  padding-top: 10px;
+}
+
 .make-order form .order-form-step1 .color-inputs .input.color {
   padding: 1px;
   padding-left: 50px;

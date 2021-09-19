@@ -34,11 +34,12 @@ def send_order(request):
                 'color':color,
                 'color_hex':color_hex,
                 'text':text,
+                'name':name,
             }
             message = '''
             {}
 
-            Fra: {}
+            Fra: {} {} 
 
             Produkt: {}
             Antall Sider: {}
@@ -47,7 +48,7 @@ def send_order(request):
             Farge: {}    
             Farge(Hex) {}
             Om Bedrift: {}
-            '''.format(data['text'], data['email'], data['products'], data['num_pages'], data['hosting'], data['color'], data['color_hex'], data['message'])
+            '''.format(data['text'], data['name'], data['email'], data['products'], data['num_pages'], data['hosting'], data['color'], data['color_hex'], data['message'])
             send_mail('Du har motatt en bestiling', message, '', ['sabertoothtri@gmail.com'])
             return redirect('/bestilling-utfort:1-2-3-4')
     else:

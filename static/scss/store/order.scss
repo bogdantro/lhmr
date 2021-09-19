@@ -104,6 +104,14 @@ $loader: rgb(80, 104, 180);
               .input{
                 height: 55px;
                 padding-top: 10px;
+                &.order-products{
+                  height: 55px;
+                  padding-top: 10px;
+                }
+                &.order-hosting{
+                  height: 55px;
+                  padding-top: 10px;
+                }
                 &.color{
                   padding: 1px;
                   padding-left: 50px;
