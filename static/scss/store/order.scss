@@ -119,6 +119,15 @@ $loader: rgb(80, 104, 180);
                 }
               }
             }
+            .info{
+              width: 100%;
+              text-align: center;
+              font-size: 14px;
+              color: rgb(60, 84, 160);
+              margin-bottom: -5px;
+              margin-top: 10px;
+              opacity: 0.7;
+            }
             .form-tag-num_pages{
               font-size: 15px;
               color: rgb(60, 84, 160);
@@ -127,7 +136,7 @@ $loader: rgb(80, 104, 180);
               padding: 0 2px;
               position: absolute;
               left: 15px;
-              top: 434px;
+              top: 475px;
               z-index: 1;
             }
             .input{

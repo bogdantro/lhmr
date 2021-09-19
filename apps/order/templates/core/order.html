@@ -5,25 +5,7 @@
 {% block content %}
 <link rel="stylesheet" href="{% static '/scss/store/order.css' %}" type="text/css">
 <script rel="stylesheet" src="{% static '/js/order.js' %}" type="text/javascript"></script>
-<script src='https://www.google.com/recaptcha/api.js'></script>
-<script>
 
-function get_action(form) 
-{
-    var v = grecaptcha.getResponse();
-    if(v.length == 0)
-    {
-        document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
-        return false;
-    }
-    else
-    {
-         document.getElementById('captcha').innerHTML="Captcha completed";
-        return true; 
-    }
-}
-
-</script>
 
 <div class="cover">
   <div class="cover-desktop">
@@ -83,6 +65,7 @@ function get_action(form)
               <input type="color" id="color" name="color" class="color input" required oninvalid="this.setCustomValidity('Værsåsnill, velg en farge')" oninput="this.setCustomValidity('')">
             </div>
             <br>
+            <h1 class="info">Alle priser har inkludert en Hjemme side og en Kontakt oss side. En ekstra side koster 199kr</h1>
             <label for="num_pages" class="form-tag-num_pages tag">Velg antall sider</label>
             <br>
             <input type="number" id="num_pages" name="num_pages" class="input" placeholder="2" required oninvalid="this.setCustomValidity('Værsåsnill, velg antall sider')" oninput="this.setCustomValidity('')">
@@ -103,8 +86,7 @@ function get_action(form)
            <textarea id="message" name="message"></textarea>
            <br>
            <div class="google-recaptcha">
-              <div class="g-recaptcha" id="rcaptcha"  data-sitekey="site key"></div>
-              <span id="captcha" style="color:red" /></span> <!-- this will show captcha errors -->  
+            <div class="g-recaptcha" data-sitekey="6Ld3UXocAAAAAJ2xfcaZlld0nlT5f8VfW5F2O6o6"></div>
            </div>
          </div>
         <div class="form-actions">
