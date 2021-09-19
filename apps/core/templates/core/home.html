@@ -76,7 +76,7 @@
    <div class="icon" id="icon4">
       <i class="fas fa-shield-check"></i>      
       <h1 id="servicesFirstText">Sikkerthet med vår hosting</h1>
-      <p id="servicesSecondText4">Ikke frykt at nettsiden er nede ofte. Med vår hosting tjeneste så har du garantert 99% uptime, og 24/7 kundeservice. Vi hoster nettsiden i maks 6 måneder, og den koster 80kr/m</p>
+      <p id="servicesSecondText4">Ikke frykt at nettsiden er nede ofte. Med vår hosting tjeneste så har du garantert 99% uptime, og 24/7 kundeservice. Vi hoster nettsiden i maks 6 måneder, og den koster 60kr/m</p>
       <button id="readMoreServices4" onclick="servicesReadMore4()">Les mer</button>
    </div>
 </div>
@@ -85,7 +85,7 @@
 
 <div id="productScrollTo" style="height: 60px; width: 100%; background: white;"></div>
 <div class="product-section" id="productHomePage">
-   <h1 class="heading">Våres priser</h1>
+   <h1 class="heading">Priser</h1>
    <div class="flex">
       {% for product in products %}
       <div class="product-card" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
@@ -115,7 +115,7 @@
       <div class="class-1">
          <h1>Vi motar bestillingen din</h1>
          <img src="{% static '/images/other/loading-bar-1.png' %}" alt="load-bar-1">
-         <p>Med engang bestillingen er fullført, så sender vi det videre til våres designere som starter å lage designen. Du kan følge med på hvor langt vi har kommet under "mine bestillinger"</p>
+         <p>Med engang bestillingen er fullført, så sender vi det videre til våres designere som starter å lage designen. Du kan følge med på hvor langt vi har kommet under "min bruker" >> "mine bestillinger"</p>
       </div>
       <div class="class-2">
          <h1>Designen har blitt fullført</h1>

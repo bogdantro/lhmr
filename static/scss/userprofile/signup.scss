@@ -5,12 +5,74 @@
         width: auto;
         display: none;
         margin: 5px;
+        .form-tag-username{
+            font-size: 15px;
+            color: rgb(60, 84, 160);
+            background: white;
+            width: max-content;
+            padding: 0 2px;
+            position: absolute;
+            left: 25px;
+            top: 28px;
+        }
+        .form-tag-first_name{
+            font-size: 15px;
+            color: rgb(60, 84, 160);
+            background: white;
+            width: max-content;
+            padding: 0 2px;
+            position: absolute;
+            left: 25px;
+            top: 93px;
+        }
+        .form-tag-last_name{
+            font-size: 15px;
+            color: rgb(60, 84, 160);
+            background: white;
+            width: max-content;
+            padding: 0 2px;
+            position: absolute;
+            left: 25px;
+            top: 155px;
+        }
+        .form-tag-email{
+            font-size: 15px;
+            color: rgb(60, 84, 160);
+            background: white;
+            width: max-content;
+            padding: 0 2px;
+            position: absolute;
+            left: 25px;
+            top: 221px;
+        }
+        .form-tag-password1{
+            font-size: 15px;
+            color: rgb(60, 84, 160);
+            background: white;
+            width: max-content;
+            padding: 0 2px;
+            position: absolute;
+            left: 25px;
+            top: 285px;
+        }
+        .form-tag-password2{
+            font-size: 15px;
+            color: rgb(60, 84, 160);
+            background: white;
+            width: max-content;
+            padding: 0 2px;
+            position: absolute;
+            left: 25px;
+            top: 348px;
+        }
         input{
             width: 100%;
-            border: 1px solid rgb(120, 120, 120);
-            border-radius: 3px;
-            padding: 3px;
-            }
+            border: 2px solid rgb(60, 84, 160);
+            border-radius: 4px;
+            padding: 7px;
+            outline: none;
+            font-size: 15px;      
+        }
         #submit{
             text-align: center;
             width: auto;
@@ -26,17 +88,19 @@
             margin-right: 0;
         }
         #signUpFormButton{
-            border-radius: 30px;
-            border: 2px solid transparent;
-            color: rgb(30, 30, 30);
+            border-radius: 4px;
             display: inline-block;
             text-decoration: none;
             width: 60%;
             font-size: 18px;
             padding: 5px;
             transition: all .5s ease-in-out;
-            background: rgb(72, 90, 185);
             color: white;
+            outline: none;
+            background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
+            box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
+            border: 2px solid transparent;      
+            margin-top: 20px;
         }
         span{
             text-align: center;

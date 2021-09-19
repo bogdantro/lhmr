@@ -5,11 +5,91 @@
   margin: 5px;
 }
 
+.login-signup #signUpForm .form-tag-username {
+  font-size: 15px;
+  color: #3c54a0;
+  background: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 2px;
+  position: absolute;
+  left: 25px;
+  top: 28px;
+}
+
+.login-signup #signUpForm .form-tag-first_name {
+  font-size: 15px;
+  color: #3c54a0;
+  background: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 2px;
+  position: absolute;
+  left: 25px;
+  top: 93px;
+}
+
+.login-signup #signUpForm .form-tag-last_name {
+  font-size: 15px;
+  color: #3c54a0;
+  background: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 2px;
+  position: absolute;
+  left: 25px;
+  top: 155px;
+}
+
+.login-signup #signUpForm .form-tag-email {
+  font-size: 15px;
+  color: #3c54a0;
+  background: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 2px;
+  position: absolute;
+  left: 25px;
+  top: 221px;
+}
+
+.login-signup #signUpForm .form-tag-password1 {
+  font-size: 15px;
+  color: #3c54a0;
+  background: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 2px;
+  position: absolute;
+  left: 25px;
+  top: 285px;
+}
+
+.login-signup #signUpForm .form-tag-password2 {
+  font-size: 15px;
+  color: #3c54a0;
+  background: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 2px;
+  position: absolute;
+  left: 25px;
+  top: 348px;
+}
+
 .login-signup #signUpForm input {
   width: 100%;
-  border: 1px solid #787878;
-  border-radius: 3px;
-  padding: 3px;
+  border: 2px solid #3c54a0;
+  border-radius: 4px;
+  padding: 7px;
+  outline: none;
+  font-size: 15px;
 }
 
 .login-signup #signUpForm #submit {
@@ -30,9 +110,7 @@
 }
 
 .login-signup #signUpForm #signUpFormButton {
-  border-radius: 30px;
-  border: 2px solid transparent;
-  color: #1e1e1e;
+  border-radius: 4px;
   display: inline-block;
   text-decoration: none;
   width: 60%;
@@ -40,8 +118,13 @@
   padding: 5px;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  background: #485ab9;
   color: white;
+  outline: none;
+  background: linear-gradient(135deg, #3c54a0, #7996f8);
+  -webkit-box-shadow: 1.5px 3px 2px #3c54a0;
+          box-shadow: 1.5px 3px 2px #3c54a0;
+  border: 2px solid transparent;
+  margin-top: 20px;
 }
 
 .login-signup #signUpForm span {

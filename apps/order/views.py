@@ -13,28 +13,41 @@ def send_order(request):
     if request.method == 'POST' and 'order' in request.POST:
         form = Order(request.POST, request.FILES)
         if form.is_valid():
-            first_name = form.cleaned_data['first_name']
-            last_name = form.cleaned_data['last_name']
+            name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             products = form.cleaned_data['products']
             hosting = form.cleaned_data['hosting']
             image = form.cleaned_data['image']
             color = form.cleaned_data['color']
+            color_hex = form.cleaned_data['color_hex']
+            num_pages = form.cleaned_data['num_pages']
             form.save()
             
+            text = 'Du har motatt en bestiling. Sjekk under hva bestillingen handler om, og send en mail til klienten med info om hva som skal skje videre'
             data = {
                 'email':email,
                 'products':products,
                 'message':message,
+                'num_pages':num_pages,
+                'hosting':hosting,
+                'color':color,
+                'color_hex':color_hex,
+                'text':text,
             }
             message = '''
+            {}
+
             Fra: {}
 
             Produkt: {}
+            Antall Sider: {}
+            Hosting: {}
 
+            Farge: {}    
+            Farge(Hex) {}
             Om Bedrift: {}
-            '''.format(data['email'], data['products'], data['message'])
+            '''.format(data['text'], data['email'], data['products'], data['num_pages'], data['hosting'], data['color'], data['color_hex'], data['message'])
             send_mail('Du har motatt en bestiling', message, '', ['sabertoothtri@gmail.com'])
             return redirect('/bestilling-utfort:1-2-3-4')
     else:

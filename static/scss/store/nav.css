@@ -96,16 +96,19 @@
 }
 
 #navbar .hamburger .upper-span {
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 }
 
 #navbar .hamburger .center-span {
-  -webkit-transform: translateX(-5px);
-          transform: translateX(-5px);
+  -webkit-transition: all 0.4 ease-in-out;
+  transition: all 0.4 ease-in-out;
+  opacity: 1;
+  -webkit-transform: translateX(-8px);
+          transform: translateX(-8px);
 }
 
 #navbar .hamburger .lower-span {
-  margin-top: 7px;
+  margin-top: 6px;
 }
 
 #navbar .hamburger.click {
@@ -113,14 +116,16 @@
 }
 
 #navbar .hamburger.click .upper-span {
-  margin-bottom: -2px;
+  margin-bottom: -3.5px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   width: 20px;
 }
 
 #navbar .hamburger.click .center-span {
-  display: none;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+  opacity: 0;
 }
 
 #navbar .hamburger.click .lower-span {
@@ -255,7 +260,7 @@
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   opacity: 0;
-  background: whitesmoke;
+  background: white;
   border-radius: 25px;
   -webkit-transition: all .6s ease-in-out;
   transition: all .6s ease-in-out;
@@ -264,8 +269,7 @@
 
 #navbar .login-signup a {
   display: inline-block;
-  border-radius: 30px;
-  border: 2px solid transparent;
+  border-radius: 4px;
   color: #1e1e1e;
   display: inline-block;
   text-decoration: none;
@@ -277,14 +281,20 @@
   padding: 5px;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  background: #485ab9;
-  color: white;
+  outline: none;
+  background: linear-gradient(135deg, #3c54a0, #7996f8);
+  -webkit-box-shadow: 1.5px 3px 2px #3c54a0;
+          box-shadow: 1.5px 3px 2px #3c54a0;
+  border: 2px solid transparent;
   cursor: pointer;
+  color: white;
 }
 
 #navbar .login-signup a:nth-child(3) {
   color: #485ab9;
   background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 #navbar .login-signup.active {
@@ -305,15 +315,20 @@
 }
 
 #navbar .login-signup .my-account .my-orders {
-  background: #485ab9;
+  outline: none;
+  background: linear-gradient(135deg, #3c54a0, #7996f8);
+  -webkit-box-shadow: 1.5px 3px 2px #3c54a0;
+          box-shadow: 1.5px 3px 2px #3c54a0;
+  border: 2px solid transparent;
   color: white;
-  border-color: transparent;
 }
 
 #navbar .login-signup .my-account .my-account-back {
   color: #485ab9;
   background: transparent;
   border-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 #navbar .login-signup .my-account.active {

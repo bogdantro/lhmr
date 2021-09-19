@@ -80,23 +80,26 @@ $primaryColor: #2d9cb3;
             transition: all 0.2s ease-in-out;
         }
         .upper-span{
-            margin-bottom: 7px;
+            margin-bottom: 6px;
         }
         .center-span{
-            transform: translateX(-5px);
+            transition: all 0.4 ease-in-out;
+            opacity: 1;
+            transform: translateX(-8px);
         }
         .lower-span{
-            margin-top: 7px;
+            margin-top: 6px;
         }
         &.click{
             border: 1px solid rgb(72, 90, 185);
             .upper-span{
-                margin-bottom: -2px;
+                margin-bottom: -3.5px;
                 transform: rotate(45deg);
                 width: 20px;
             }
             .center-span{
-                display: none;
+                transform: translateX(-20px);
+                opacity: 0;
             }
             .lower-span{
                 margin-top: 0;
@@ -207,14 +210,13 @@ $primaryColor: #2d9cb3;
         left: 50%;
         transform: translateX(-50%);
         opacity: 0;
-        background: rgb(245, 245, 245);
+        background: white;
         border-radius: 25px;
         transition: all .6s ease-in-out;
         pointer-events: none;
         a{
             display: inline-block;
-            border-radius: 30px;
-            border: 2px solid transparent;
+            border-radius: 4px;
             color: rgb(30, 30, 30);
             display: inline-block;
             text-decoration: none;
@@ -225,12 +227,16 @@ $primaryColor: #2d9cb3;
             margin-right: 0;
             padding: 5px;
             transition: all .5s ease-in-out;
-            background: rgb(72, 90, 185);
-            color: white;
+            outline: none;
+            background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
+            box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
+            border: 2px solid transparent;
             cursor: pointer;
+            color: white;
             &:nth-child(3){
                 color: rgb(72, 90, 185);
                 background: transparent;
+                box-shadow: none;
             }
         }
         &.active{
@@ -247,14 +253,17 @@ $primaryColor: #2d9cb3;
                 margin-right: 0;
             }
             .my-orders{
-                background: rgb(72, 90, 185);
-                color: white;
-                border-color: transparent;
-            }
+                outline: none;
+                background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
+                box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
+                border: 2px solid transparent;  
+                color: white;    
+                }
             .my-account-back{
                 color: rgb(72, 90, 185);
                 background: transparent;
                 border-color: transparent;
+                box-shadow: none;
             }
             &.active{
                 display: block;

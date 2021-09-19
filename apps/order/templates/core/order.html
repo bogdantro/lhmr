@@ -7,21 +7,25 @@
 <script rel="stylesheet" src="{% static '/js/order.js' %}" type="text/javascript"></script>
 
 <div class="cover">
-  <div class="cover-mobile">
-    <div class="cover-text">
-       <img src="{% static '/images/covers/cover-2.png' %}" alt="cover-img">
-       <h1>Kom i gang med bestillingen</h1>
-       <p id="coverText2">Fyll ut skjemaet under, også kommer vi tilbake til deg innen 4 timer</p>
-    </div>
-  </div>
   <div class="cover-desktop">
-    <div class="cover-text">
-       <img src="{% static '/images/covers/cover-2.png' %}" alt="cover-img">
-       <h1>Kom i gang med bestillingen</h1>
-       <p id="coverText2">Fyll ut skjemaet under, også kommer vi tilbake til deg innen 4 timer</p>
+     <div class="cover-text">
+        <h1>Kom i gang med bestillingen</h1>
+        <p id="coverText2">Fyll ut skjemaet under, også kommer vi tilbake til deg innen 4 timer</p>
+     </div>
+     <div class="img">
+        <img src="{% static '/images/covers/cover-2.png' %}" alt="cover-img">
     </div>
   </div>
- </div>
+  <div class="cover-mobile">
+     <div class="cover-text">
+        <h1>Kom i gang med bestillingen</h1>
+        <p id="coverText2">Fyll ut skjemaet under, også kommer vi tilbake til deg innen 4 timer</p>
+     </div>
+     <div class="img">
+        <img src="{% static '/images/covers/cover-2.png' %}" alt="cover-img">
+    </div>
+  </div>
+</div>
 
  <div class="load-wrapp" id="orderLoader">
     <div class="load-2">
@@ -35,33 +39,51 @@
     <form method='post' id="makeOrder" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.errors}}
-        <label for="products">Velg nettside</label>
+        <div class="order-form-step1">
+           <h1 class="heading">Steg 1</h1>
+           <label for="products" class="form-tag-products tag">Velg nettside</label>
+           <br>
+           {{form.products}}
+           <br>
+           <br>
+           <label for="hosting" class="form-tag-hosting tag">Vil du ha våres hosting tjeneste?</label>
+           <br>
+           {{form.hosting}}
+           <br>
+           <br>
+           <label for="image" class="form-tag-image tag">Har du allerede en logo?</label>
+           <br>
+           {{form.image}}
+           <br>
+           <br>
+           <label for="color" class="form-tag-color tag">Velg en farge som passer bedriften din</label>
+           <br>
+           <div class="color-inputs">
+              <input type="text" name="color_hex" class="color-hex input" id="color_hex" placeholder="#3c54a0">
+               <div class="or">eller</div>
+              <input type="color" id="color" name="color" class="color input" required oninvalid="this.setCustomValidity('Værsåsnill, velg en farge')" oninput="this.setCustomValidity('')">
+            </div>
+            <br>
+            <label for="num_pages" class="form-tag-num_pages tag">Velg antall sider</label>
+            <br>
+            <input type="number" id="num_pages" name="num_pages" class="input" placeholder="1" required oninvalid="this.setCustomValidity('Værsåsnill, velg antall sider')" oninput="this.setCustomValidity('')">
+         </div>
         <br>
-        {{form.products}}
-        <label for="hosting">Vil du ha våres hosting tjeneste?</label>
-        <br>
-        {{form.hosting}}
-        <br>
-        <label for="image">Har du allerede en logo?</label>
-        <br>
-        {{form.image}}
-        <br>
-        <label for="color">Velg en farge som passer bedriften din</label>
-        <br>
-        <input type="color" id="color" name="color" required oninvalid="this.setCustomValidity('Værsåsnill, velg en farge')" oninput="this.setCustomValidity('')">
-        <br>
-        <br>
-        <input type="text" id="first_name" name="first_name" placeholder="Fornavn" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
-        <br>
-        <br>
-        <input type="text" id="last_name" name="last_name" placeholder="Etternavn" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
-        <br>
-        <br>
-        <input type="email" id="email" name="email" placeholder="Epost" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
-        <br>
-        <br>
-        <textarea id="message" name="message" placeholder="Fortell oss om bedriften din"></textarea>
-        <br>
+        <div class="order-form-step2">
+           <h1 class="heading">Steg 2</h1>
+           <label for="name" class="form-tag-name tag">Navn</label>
+           <br>
+           <input type="text" id="name" name="name" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
+           <br>
+           <label for="email" class="form-tag-email tag">Epost</label>
+           <br>
+           <input type="email" id="email" name="email" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
+           <br>
+           <label for="message" class="form-tag-message tag">Fortell oss om bedriften din</label>
+           <br>
+           <textarea id="message" name="message"></textarea>
+           <br>
+         </div>
         <div class="form-actions">
             <button onclick="orderLoading()" name="order" value="order" type='submit'>Send</button>
         </div>

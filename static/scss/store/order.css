@@ -2,6 +2,11 @@
   height: 55vh;
 }
 
+.cover-mobile .cover-text {
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
+}
+
 .cover-mobile .cover-text img {
   top: 90px;
 }
@@ -35,16 +40,212 @@
   height: 100px;
 }
 
-.make-order form input {
-  width: 100%;
-  border: 1px solid #787878;
-  border-radius: 3px;
-  padding: 3px;
+.make-order form .order-form-step1 {
+  position: relative;
+  padding-top: 20px;
 }
 
-.make-order form input#color {
-  width: 60px;
-  height: 35px;
+.make-order form .order-form-step1 h1.heading {
+  width: 100%;
+  text-transform: uppercase;
+  font-family: 'Sniglet', cursive;
+  color: #142c78;
+  font-weight: 700;
+  font-size: 26px;
+  text-align: center;
+}
+
+.make-order form .order-form-step1 .form-tag-products {
+  font-size: 15px;
+  color: #3c54a0;
+  background: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 2px;
+  position: absolute;
+  left: 15px;
+  top: 43px;
+}
+
+.make-order form .order-form-step1 .form-tag-hosting {
+  font-size: 15px;
+  color: #3c54a0;
+  background: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 2px;
+  position: absolute;
+  left: 15px;
+  top: 132px;
+}
+
+.make-order form .order-form-step1 .form-tag-image {
+  font-size: 15px;
+  color: #3c54a0;
+  background: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 2px;
+  position: absolute;
+  left: 15px;
+  top: 220px;
+}
+
+.make-order form .order-form-step1 .form-tag-color {
+  font-size: 15px;
+  color: #3c54a0;
+  background: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 2px;
+  position: absolute;
+  left: 15px;
+  top: 331px;
+  z-index: 1;
+}
+
+.make-order form .order-form-step1 .color-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.make-order form .order-form-step1 .color-inputs .or {
+  font-size: 15px;
+  color: #3c54a0;
+  background: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 2px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.make-order form .order-form-step1 .color-inputs .input {
+  height: 55px;
+  padding-top: 10px;
+}
+
+.make-order form .order-form-step1 .color-inputs .input.color {
+  padding: 1px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 15px;
+  background: white;
+  border-left: 1px solid transparent;
+}
+
+.make-order form .order-form-step1 .color-inputs .input.color-hex {
+  border-right: 1px solid transparent;
+}
+
+.make-order form .order-form-step1 .form-tag-num_pages {
+  font-size: 15px;
+  color: #3c54a0;
+  background: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 2px;
+  position: absolute;
+  left: 15px;
+  top: 434px;
+  z-index: 1;
+}
+
+.make-order form .order-form-step1 .input {
+  width: 100%;
+  border: 2px solid #3c54a0;
+  border-radius: 4px;
+  padding: 7px;
+  outline: none;
+  font-size: 15px;
+}
+
+.make-order form .order-form-step1 .input.order-image {
+  padding: 15px;
+}
+
+.make-order form .order-form-step2 {
+  position: relative;
+  padding-top: 20px;
+}
+
+.make-order form .order-form-step2 h1.heading {
+  width: 100%;
+  text-transform: uppercase;
+  font-family: 'Sniglet', cursive;
+  color: #142c78;
+  font-weight: 700;
+  font-size: 26px;
+  text-align: center;
+}
+
+.make-order form .order-form-step2 .form-tag-name {
+  font-size: 15px;
+  color: #3c54a0;
+  background: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 2px;
+  position: absolute;
+  left: 15px;
+  top: 43px;
+}
+
+.make-order form .order-form-step2 .form-tag-email {
+  font-size: 15px;
+  color: #3c54a0;
+  background: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 2px;
+  position: absolute;
+  left: 15px;
+  top: 107px;
+}
+
+.make-order form .order-form-step2 .form-tag-message {
+  font-size: 15px;
+  color: #3c54a0;
+  background: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 2px;
+  position: absolute;
+  left: 15px;
+  top: 171px;
+}
+
+.make-order form .order-form-step2 input {
+  width: 100%;
+  border: 2px solid #3c54a0;
+  border-radius: 4px;
+  padding: 7px;
+  outline: none;
+  font-size: 15px;
+}
+
+.make-order form .order-form-step2 textarea {
+  width: 100%;
+  border: 2px solid #3c54a0;
+  border-radius: 4px;
+  padding: 3px;
+  padding-top: 5px;
+  height: 100px;
+  outline: none;
+  font-size: 15px;
 }
 
 .make-order form .order-products {
@@ -62,18 +263,18 @@
 }
 
 .make-order form .form-actions button {
-  border-radius: 30px;
-  border: 2px solid transparent;
-  color: #1e1e1e;
-  background: #485ab9;
+  border-radius: 4px;
   width: 200px;
   font-size: 16px;
   padding: 5px;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  background: 245;
   color: white;
   outline: none;
+  background: linear-gradient(135deg, #3c54a0, #7996f8);
+  -webkit-box-shadow: 1.5px 3px 2px #3c54a0;
+          box-shadow: 1.5px 3px 2px #3c54a0;
+  border: 2px solid transparent;
 }
 
 .make-order form .form-actions button:hover {

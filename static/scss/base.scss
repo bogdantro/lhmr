@@ -18,7 +18,7 @@ html, body {
   width: 100%;
   height: auto;
   padding: 15px;
-  padding-top: 40px;
+  padding-top: 0;
   text-align: center;
   position: relative;
   transition: all ease-in .5s;
@@ -374,27 +374,27 @@ html, body {
     transition: all ease-in .5s;
     position: relative;
     .form-tag-navn{
-      font-size: 14px;
+      font-size: 15px;
       color: rgb(60, 84, 160);
       background: white;
       width: max-content;
       padding: 0 2px;
       position: absolute;
       left: 20px;
-      top: 25px;
+      top: 24px;
     }
     .form-tag-email{
-      font-size: 14px;
+      font-size: 15px;
       color: rgb(60, 84, 160);
       background: white;
       width: max-content;
       padding: 0 2px;
       position: absolute;
       left: 20px;
-      top: 90px;
+      top: 88px;
     }
     .form-tag-message{
-      font-size: 14px;
+      font-size: 15px;
       color: rgb(60, 84, 160);
       background: white;
       width: max-content;
@@ -412,13 +412,6 @@ html, body {
         height: 100px;
         outline: none;
         font-size: 15px;
-    }
-    input:-webkit-autofill,
-    input:-webkit-autofill:hover, 
-    input:-webkit-autofill:focus, 
-    input:-webkit-autofill:active
-    {
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
     }
     input{
       width: 100%;

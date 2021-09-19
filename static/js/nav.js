@@ -77,6 +77,7 @@ function myaccount(){
 function myAccountBack(){  
   document.getElementById('myAccount').classList.remove('active')
   document.getElementById('choose').style.display = 'block';
+  document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
 }
 
 function login(){  
@@ -87,6 +88,7 @@ function login(){
 function loginBack(){
   document.getElementById('choose').style.display = 'block';
   document.getElementById('loginForm').classList.remove('active')
+  document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
 }
 
 function signup(){  
@@ -97,5 +99,6 @@ function signup(){
 function signUpBack(){
   document.getElementById('choose').style.display = 'block';
   document.getElementById('signUpForm').classList.remove('active')
+  document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
 }
 

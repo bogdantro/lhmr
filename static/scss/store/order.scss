@@ -4,6 +4,7 @@ $loader: rgb(80, 104, 180);
 .cover-mobile{ 
   height: 55vh;
   .cover-text{
+    transform: translateY(-60px);
       img{
           top: 90px;
       }
@@ -33,16 +34,175 @@ $loader: rgb(80, 104, 180);
             padding: 3px;
             height: 100px;
           }
-        input{
-          width: 100%;
-          border: 1px solid rgb(120, 120, 120);
-          border-radius: 3px;
-          padding: 3px;
-          &#color{
-            width: 60px;
-            height: 35px;
+          .order-form-step1{
+            position: relative;
+            padding-top: 20px;
+            h1{
+              &.heading{
+                width: 100%;
+                text-transform: uppercase;
+                font-family: 'Sniglet', cursive;
+                color: rgb(20, 44, 120);
+                font-weight: 700;
+                font-size: 26px;
+                text-align: center;
+              }
+            }
+            .form-tag-products{
+              font-size: 15px;
+              color: rgb(60, 84, 160);
+              background: white;
+              width: max-content;
+              padding: 0 2px;
+              position: absolute;
+              left: 15px;
+              top: 43px;
+            }
+            .form-tag-hosting{
+              font-size: 15px;
+              color: rgb(60, 84, 160);
+              background: white;
+              width: max-content;
+              padding: 0 2px;
+              position: absolute;
+              left: 15px;
+              top: 132px;
+            }
+            .form-tag-image{
+              font-size: 15px;
+              color: rgb(60, 84, 160);
+              background: white;
+              width: max-content;
+              padding: 0 2px;
+              position: absolute;
+              left: 15px;
+              top: 220px;
+            }
+            .form-tag-color{
+              font-size: 15px;
+              color: rgb(60, 84, 160);
+              background: white;
+              width: max-content;
+              padding: 0 2px;
+              position: absolute;
+              left: 15px;
+              top: 331px;
+              z-index: 1;
+            }
+            .color-inputs{
+              display: flex;
+              width: 100%;
+              position: relative;
+              .or{
+                font-size: 15px;
+                color: rgb(60, 84, 160);
+                background: white;
+                width: max-content;
+                padding: 0 2px;
+                align-self: center;
+              }
+              .input{
+                height: 55px;
+                padding-top: 10px;
+                &.color{
+                  padding: 1px;
+                  padding-left: 50px;
+                  padding-right: 50px;
+                  padding-top: 15px;
+                  background: white;
+                  border-left: 1px solid transparent;
+                }  
+                &.color-hex{
+                  border-right: 1px solid transparent;
+                }
+              }
+            }
+            .form-tag-num_pages{
+              font-size: 15px;
+              color: rgb(60, 84, 160);
+              background: white;
+              width: max-content;
+              padding: 0 2px;
+              position: absolute;
+              left: 15px;
+              top: 434px;
+              z-index: 1;
+            }
+            .input{
+              width: 100%;
+              border: 2px solid rgb(60, 84, 160);
+              border-radius: 4px;
+              padding: 7px;
+              outline: none;
+              font-size: 15px;   
+              &.order-image{
+                padding: 15px;
+              }
+            }
           }
-        }
+          .order-form-step2{
+            position: relative;
+            padding-top: 20px;
+            h1{
+              &.heading{
+                width: 100%;
+                text-transform: uppercase;
+                font-family: 'Sniglet', cursive;
+                color: rgb(20, 44, 120);
+                font-weight: 700;
+                font-size: 26px;
+                text-align: center;
+              }
+            }
+            .form-tag-name{
+              font-size: 15px;
+              color: rgb(60, 84, 160);
+              background: white;
+              width: max-content;
+              padding: 0 2px;
+              position: absolute;
+              left: 15px;
+              top: 43px;
+            }
+            .form-tag-email{
+              font-size: 15px;
+              color: rgb(60, 84, 160);
+              background: white;
+              width: max-content;
+              padding: 0 2px;
+              position: absolute;
+              left: 15px;
+              top: 107px;
+            }
+            .form-tag-message{
+              font-size: 15px;
+              color: rgb(60, 84, 160);
+              background: white;
+              width: max-content;
+              padding: 0 2px;
+              position: absolute;
+              left: 15px;
+              top: 171px;
+            }
+            input{
+              width: 100%;
+              border: 2px solid rgb(60, 84, 160);
+              border-radius: 4px;
+              padding: 7px;
+              outline: none;
+              font-size: 15px;   
+            }
+            textarea{
+              width: 100%;
+              border: 2px solid rgb(60, 84, 160);
+              border-radius: 4px;
+              padding: 3px;
+              padding-top: 5px;
+              height: 100px;
+              outline: none;
+              font-size: 15px;
+          }
+          }
         .order-products{
           width: 150px;
           padding: 3px;
@@ -54,17 +214,16 @@ $loader: rgb(80, 104, 180);
         .form-actions{
           margin-top: 15px;
           button{
-            border-radius: 30px;
-            border: 2px solid transparent;
-            color: rgb(30, 30, 30);
-            background: rgb(72, 90, 185);
+            border-radius: 4px;
             width: 200px;
             font-size: 16px;
             padding: 5px;
             transition: all .2s ease-in-out;
-            background: 245;
             color: white;
             outline: none;
+            background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
+            box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
+            border: 2px solid transparent;      
             &:hover{
               background: white;
               color: black;

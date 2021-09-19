@@ -117,6 +117,7 @@ $(window).scroll(function() {
     const body = document.body;
     
     window.location.href = "#productScrollTo";
+    document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
     html.style.overflow = 'unset'
     body.style.overflow = 'unset'
     sidebar.classList.remove('active')  
@@ -135,6 +136,7 @@ $(window).scroll(function() {
     const body = document.body;
     
     window.location.href = "#proccessScrollTo";
+    document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
     html.style.overflow = 'unset'
     body.style.overflow = 'unset'
     sidebar.classList.remove('active')  
@@ -153,6 +155,7 @@ $(window).scroll(function() {
     const body = document.body;
     
     window.location.href = "#contactScrollTo";
+    document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
     html.style.overflow = 'unset'
     body.style.overflow = 'unset'
     sidebar.classList.remove('active')  
