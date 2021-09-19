@@ -41,22 +41,22 @@
         {{form.errors}}
         <div class="order-form-step1">
            <h1 class="heading">Steg 1</h1>
-           <label for="products" class="form-tag-products tag">Velg nettside</label>
+           <!-- <label for="products" class="form-tag-products tag">Velg nettside</label> -->
            <br>
            {{form.products}}
            <br>
            <br>
-           <label for="hosting" class="form-tag-hosting tag">Vil du ha våres hosting tjeneste?</label>
+           <!-- <label for="hosting" class="form-tag-hosting tag">Vil du ha våres hosting tjeneste?</label> -->
            <br>
            {{form.hosting}}
            <br>
            <br>
-           <label for="image" class="form-tag-image tag">Har du allerede en logo?</label>
+           <!-- <label for="image" class="form-tag-image tag">Har du allerede en logo?</label> -->
            <br>
            {{form.image}}
            <br>
            <br>
-           <label for="color" class="form-tag-color tag">Velg en farge som passer bedriften din</label>
+           <!-- <label for="color" class="form-tag-color tag">Velg en farge som passer bedriften din</label> -->
            <br>
            <div class="color-inputs">
               <input type="text" name="color_hex" class="color-hex input" id="color_hex" placeholder="#3c54a0">
@@ -64,7 +64,7 @@
               <input type="color" id="color" name="color" class="color input" required oninvalid="this.setCustomValidity('Værsåsnill, velg en farge')" oninput="this.setCustomValidity('')">
             </div>
             <br>
-            <label for="num_pages" class="form-tag-num_pages tag">Velg antall sider</label>
+            <!-- <label for="num_pages" class="form-tag-num_pages tag">Velg antall sider</label> -->
             <br>
             <input type="number" id="num_pages" name="num_pages" class="input" placeholder="1" required oninvalid="this.setCustomValidity('Værsåsnill, velg antall sider')" oninput="this.setCustomValidity('')">
          </div>
