@@ -15,10 +15,37 @@
 }
 
 // STANDARD PHONE
+#backToTop{
+  position: fixed;
+  right: 0;
+  top: 70vh;
+  z-index: 1000;
+  transition: all .5s ease-in-out;
+  outline: none;
+  background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
+  box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
+  border: 2px solid transparent;
+  opacity: 0;
+  transform: scale(0.7);
+  &.active{
+    opacity: 1;
+    transform: scale(1);
+  }
+  &:active{
+    transform: scale(.8);
+    transition: all .1s ease-in-out;
+  }
+    i{
+    font-size: 18px;
+    color: white;
+    padding: 15px;
+    transform: rotate(-44deg);
+  }
+}
+
 .cover-desktop{
   display: none;
 }
-
 .cover-mobile{ 
   position: relative;
   width: 100%;

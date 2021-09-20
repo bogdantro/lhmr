@@ -48,15 +48,15 @@ $.ajax({
     },
 })
 
-$(window).scroll(function() {
-    const services = document.getElementById('services');
-    var hT = $('#services').offset().top,
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT+360-wH)){
-        services.classList.add('active');
-    }
- });
+window.addEventListener("scroll", function(){
+    const backToTop = document.getElementById('backToTop');
+    backToTop.classList.toggle("active", window.scrollY > 500)
+})
+
+function backToTop(){
+  window.scrollTo({ top: 0, behavior: 'smooth'});
+}
+
 
 $(window).scroll(function() {
     const services = document.getElementById('services');
@@ -85,6 +85,16 @@ $(window).scroll(function() {
         wS = $(this).scrollTop();
     if (wS > (hT+360-wH)){
         info.classList.add('active');
+    }
+ });
+
+ $(window).scroll(function() {
+    const services = document.getElementById('hosting');
+    var hT = $('#hosting').offset().top,
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+360-wH)){
+        services.classList.add('active');
     }
  });
 
@@ -145,6 +155,27 @@ $(window).scroll(function() {
     navbar.classList.remove('menu-active')  
     allContentArea.style.filter = 'brightness(100%)';
 }
+
+ function hosting(){
+    const sidebar = document.getElementById('sidebar');
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburger');
+    const sidebarLi = document.getElementById('sidebarLi');
+    const allContentArea = document.getElementById('allContentArea');
+    const html = document.querySelector("html");
+    const body = document.body;
+    
+    window.location.href = "#hostingScrollTo";
+    document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
+    html.style.overflow = 'unset'
+    body.style.overflow = 'unset'
+    sidebar.classList.remove('active')  
+    hamburger.classList.remove('click')  
+    sidebarLi.classList.remove('active')  
+    navbar.classList.remove('menu-active')  
+    allContentArea.style.filter = 'brightness(100%)';
+}
+
  function contact(){
     const sidebar = document.getElementById('sidebar');
     const navbar = document.getElementById('navbar');
