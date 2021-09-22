@@ -44,12 +44,43 @@
            <h1 class="heading">Steg 1</h1>
            <label for="products" class="form-tag-products tag">Velg nettside</label>
            <br>
-           <input type="text" name="products" class="products input" id="products">
+           <h1 class="if-custom info" id="ifCustom">Hvis du velger en Custom nettside, så bestemmer du selv hva du vil nettsiden skal være. For eksempel, kan være både en Ecommerce og en Blogg nettside.
+            <div class="loader">
+               <div class="loader__element" id="loaderEl"></div>
+             </div>
+           </h1>
+           <input type="text" name="products" class="products input" id="products" readonly onclick="orderProductDropdown()" required oninvalid="this.setCustomValidity('Værsåsnill, velg et produkt')" oninput="this.setCustomValidity('')"><div class="product-price" id="productPrice" onclick="orderProductDropdown()">0kr</div><div onclick="orderProductDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
+           <div class="products-dropdown" id="productDropdown">
+              <div class="dropdown-border">
+                 <h1 class="dropdown-none" onclick="noneProducts()">---------</h1>
+                 <div class="flex">
+                    <h1 onclick="ecommerce()">Ecommerce</h1>
+                    <h1 onclick="blog()">Blogg</h1>
+                  </div>
+                  <div class="flex">   
+                     <h1 onclick="portofolio()">Portofolio</h1>
+                     <h1 onclick="bedrift()">Bedrift</h1>
+                  </div>
+                  <div class="flex">
+                     <h1 onclick="personal()">Personal</h1>
+                     <h1 onclick="custom()">Custom</h1>
+                  </div>
+               </div>
+            </div>
            <br>
            <br>
            <label for="hosting" class="form-tag-hosting tag">Vil du ha våres hosting tjeneste?</label>
            <br>
-           <input type="text" name="hosting" class="hosting input" id="hosting" placeholder="Ja/Nei">
+           <input type="text" name="hosting" class="hosting input" id="hosting" readonly onclick="orderhostingDropdown()"><div class="hosting-price" id="hostingPrice" onclick="orderhostingDropdown()">0kr</div><div onclick="orderhostingDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
+           <div class="hosting-dropdown" id="hostingDropdown">
+            <div class="dropdown-border">
+               <h1 class="dropdown-none" onclick="noneHosting()">---------</h1>
+               <div class="flex">
+                  <h1 onclick="ja()">Ja</h1>
+                  <h1 onclick="nei()">Nei</h1>
+                </div>
+             </div>
+          </div>
            <br>
            <br>
            <label for="image" class="form-tag-image tag">Har du allerede en logo?</label>
@@ -65,14 +96,17 @@
               <input type="color" id="color" name="color" class="color input" required oninvalid="this.setCustomValidity('Værsåsnill, velg en farge')" oninput="this.setCustomValidity('')">
             </div>
             <br>
-            <h1 class="info">Alle priser har inkludert en Hjemme side og en Kontakt oss side. En ekstra side koster 199kr</h1>
+            <h1 class="info">Alle priser har inkludert en Hjemme side og en Kontakt oss side. En ekstra side koster 399kr</h1>
             <label for="num_pages" class="form-tag-num_pages tag">Velg antall sider</label>
             <br>
-            <input type="number" id="num_pages" name="num_pages" class="input" placeholder="2" required oninvalid="this.setCustomValidity('Værsåsnill, velg antall sider')" oninput="this.setCustomValidity('')">
+            <input type="number" id="num_pages" name="num_pages" class="input" placeholder="2">
          </div>
         <br>
         <div class="order-form-step2">
            <h1 class="heading">Steg 2</h1>
+        </div>
+        <div class="order-form-step3">
+           <h1 class="heading">Steg 3</h1>
            <label for="name" class="form-tag-name tag">Navn</label>
            <br>
            <input type="text" id="name" name="name" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">

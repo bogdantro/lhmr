@@ -157,6 +157,76 @@
   margin-bottom: -5px;
   margin-top: 10px;
   opacity: 0.7;
+  pointer-events: none;
+}
+
+.make-order form .order-form-step1 .info.if-custom {
+  display: block;
+  position: absolute;
+  background: white;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  opacity: 0;
+  padding-top: 10px;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.make-order form .order-form-step1 .info.if-custom.active {
+  opacity: 1;
+}
+
+.make-order form .order-form-step1 .loader {
+  background-color: white;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  pointer-events: none;
+}
+
+.make-order form .order-form-step1 .loader__element {
+  -webkit-transform: translateY(-320px);
+          transform: translateY(-320px);
+  height: 5px;
+  width: 100%;
+  background: #3c54a0;
+  display: none;
+}
+
+.make-order form .order-form-step1 .loader__element:before {
+  content: '';
+  display: block;
+  background-color: white;
+  height: 30px;
+  width: 0;
+  -webkit-animation: getWidth 4s ease-in infinite;
+          animation: getWidth 4s ease-in infinite;
+}
+
+@-webkit-keyframes getWidth {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes getWidth {
+  100% {
+    width: 100%;
+  }
 }
 
 .make-order form .order-form-step1 .form-tag-num_pages {
@@ -171,6 +241,135 @@
   left: 15px;
   top: 475px;
   z-index: 1;
+}
+
+.make-order form .order-form-step1 .product-price {
+  position: absolute;
+  right: 40px;
+  -webkit-transform: translateY(-32px);
+          transform: translateY(-32px);
+  font-size: 14px;
+  color: #3c54a0;
+  opacity: 0.7;
+}
+
+.make-order form .order-form-step1 .hosting-price {
+  position: absolute;
+  right: 40px;
+  -webkit-transform: translateY(-32px);
+          transform: translateY(-32px);
+  font-size: 14px;
+  color: #3c54a0;
+  opacity: 0.7;
+}
+
+.make-order form .order-form-step1 .products-dropdown {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index: 1000;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  pointer-events: none;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.make-order form .order-form-step1 .products-dropdown.active {
+  opacity: 1;
+  pointer-events: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.make-order form .order-form-step1 .products-dropdown .dropdown-border {
+  border: 2px solid #3c54a0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.make-order form .order-form-step1 .products-dropdown .dropdown-border h1 {
+  font-size: 17px;
+  padding: 3px;
+  background: rgba(240, 240, 240, 0.6);
+}
+
+.make-order form .order-form-step1 .products-dropdown .dropdown-border .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.make-order form .order-form-step1 .products-dropdown .dropdown-border .flex h1 {
+  width: 50%;
+  border: 2px solid white;
+}
+
+.make-order form .order-form-step1 .hosting-dropdown {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index: 1000;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  pointer-events: none;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.make-order form .order-form-step1 .hosting-dropdown.active {
+  opacity: 1;
+  pointer-events: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.make-order form .order-form-step1 .hosting-dropdown .dropdown-border {
+  border: 2px solid #3c54a0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.make-order form .order-form-step1 .hosting-dropdown .dropdown-border h1 {
+  font-size: 17px;
+  padding: 3px;
+  background: rgba(240, 240, 240, 0.6);
+}
+
+.make-order form .order-form-step1 .hosting-dropdown .dropdown-border .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.make-order form .order-form-step1 .hosting-dropdown .dropdown-border .flex h1 {
+  width: 50%;
+  border: 2px solid white;
+}
+
+.make-order form .order-form-step1 .arrow-down {
+  position: absolute;
+  right: 2px;
+  background: #3c54a0;
+  padding: 7px;
+  -webkit-transform: translateY(-39px);
+          transform: translateY(-39px);
+  border-radius: 0;
+}
+
+.make-order form .order-form-step1 .arrow-down i {
+  font-size: 20px;
+  color: white;
 }
 
 .make-order form .order-form-step1 .input {
@@ -199,7 +398,22 @@
   padding-top: 20px;
 }
 
-.make-order form .order-form-step2 .google-recaptcha {
+.make-order form .order-form-step2 h1.heading {
+  width: 100%;
+  text-transform: uppercase;
+  font-family: 'Sniglet', cursive;
+  color: #142c78;
+  font-weight: 700;
+  font-size: 26px;
+  text-align: center;
+}
+
+.make-order form .order-form-step3 {
+  position: relative;
+  padding-top: 20px;
+}
+
+.make-order form .order-form-step3 .google-recaptcha {
   margin: 20px 0;
   width: 100%;
   display: -webkit-box;
@@ -213,7 +427,7 @@
           align-items: left;
 }
 
-.make-order form .order-form-step2 h1.heading {
+.make-order form .order-form-step3 h1.heading {
   width: 100%;
   text-transform: uppercase;
   font-family: 'Sniglet', cursive;
@@ -223,7 +437,7 @@
   text-align: center;
 }
 
-.make-order form .order-form-step2 .form-tag-name {
+.make-order form .order-form-step3 .form-tag-name {
   font-size: 15px;
   color: #3c54a0;
   background: white;
@@ -236,7 +450,7 @@
   top: 43px;
 }
 
-.make-order form .order-form-step2 .form-tag-email {
+.make-order form .order-form-step3 .form-tag-email {
   font-size: 15px;
   color: #3c54a0;
   background: white;
@@ -249,7 +463,7 @@
   top: 107px;
 }
 
-.make-order form .order-form-step2 .form-tag-message {
+.make-order form .order-form-step3 .form-tag-message {
   font-size: 15px;
   color: #3c54a0;
   background: white;
@@ -262,7 +476,7 @@
   top: 171px;
 }
 
-.make-order form .order-form-step2 input {
+.make-order form .order-form-step3 input {
   width: 100%;
   border: 2px solid #3c54a0;
   border-radius: 4px;
@@ -271,7 +485,7 @@
   font-size: 15px;
 }
 
-.make-order form .order-form-step2 textarea {
+.make-order form .order-form-step3 textarea {
   width: 100%;
   border: 2px solid #3c54a0;
   border-radius: 4px;
