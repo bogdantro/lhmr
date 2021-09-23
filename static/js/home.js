@@ -88,15 +88,6 @@ $(window).scroll(function() {
     }
  });
 
- $(window).scroll(function() {
-    const services = document.getElementById('hosting');
-    var hT = $('#hosting').offset().top,
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT+360-wH)){
-        services.classList.add('active');
-    }
- });
 
  $(window).scroll(function() {
     const info = document.getElementById('contactUs');

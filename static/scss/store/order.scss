@@ -128,7 +128,7 @@ $loader: rgb(80, 104, 180);
               margin-top: 10px;
               opacity: 0.7;
               pointer-events: none;
-              &.if-custom{
+              &.order-product-info{
                 display: block;
                 position: absolute;
                 background: white;
@@ -170,7 +170,7 @@ $loader: rgb(80, 104, 180);
               background-color: white;
               height: 30px;
               width: 0;
-              animation: getWidth 4s ease-in infinite;
+              animation: getWidth 5s ease-in infinite;
             }
             
             @keyframes getWidth {
@@ -196,6 +196,14 @@ $loader: rgb(80, 104, 180);
               opacity: 0.7;
             }
             .hosting-price{
+              position: absolute;
+              right: 40px;
+              transform: translateY(-32px);
+              font-size: 14px;
+              color: rgb(60, 84, 160);
+              opacity: 0.7;
+            }
+            .num-pages-price{
               position: absolute;
               right: 40px;
               transform: translateY(-32px);
@@ -240,6 +248,42 @@ $loader: rgb(80, 104, 180);
               }
             }
             .hosting-dropdown{
+              position: absolute;
+              width: 100%;
+              height: 100vh;
+              background: white;
+              z-index: 1000;
+              text-align: center;
+              padding: 20px;
+              opacity: 0;
+              transition: all .3s ease-in-out;
+              pointer-events: none;
+              transform: translateY(-30px);
+              &.active{
+                opacity: 1;
+                pointer-events: visible;
+                transform: translateY(0);
+              }
+              .dropdown-border{
+                border: 2px solid rgb(60, 84, 160);
+                padding: 10px;
+                border-radius: 4px;
+                h1{
+                  font-size: 17px;
+                  padding: 3px;
+                  background: rgba(240, 240, 240, 0.6);
+                }
+                .flex{
+                  display: flex;
+                  width: 100%;
+                  h1{
+                    width: 50%;
+                    border: 2px solid white;
+                  }
+                }
+              }
+            }
+            .num-pages-dropdown{
               position: absolute;
               width: 100%;
               height: 100vh;

@@ -43,16 +43,148 @@ function orderhostingDropdown(){
   }  
 }
 
-function noneHosting(){
+function orderNumPagesDropdown(){
   const html = document.querySelector("html");
   const body = document.body;
-  const hostingDropdown = document.getElementById('hostingDropdown');
+  const numPagesDropdown = document.getElementById('numPagesDropdown');
 
-  document.getElementById("hosting").value = "";
-  document.getElementById('hostingPrice').innerHTML = '0kr';
+  if (window.getComputedStyle(numPagesDropdown,null).getPropertyValue("pointer-events") == 'none'){  
+    numPagesDropdown.classList.add('active');
+    html.style.overflow = 'hidden'
+    body.style.overflow = 'hidden'
+
+  } else{
+    numPagesDropdown.classList.remove('active');
+    html.style.overflow = 'unset'
+    body.style.overflow = 'unset'
+  }  
+}
+
+function noneNumPages(){
+  const html = document.querySelector("html");
+  const body = document.body;
+  const numPagesDropdown = document.getElementById('numPagesDropdown');
+
+  document.getElementById("num_pages").value = "";
+  document.getElementById('numPagesPrice').innerHTML = '0kr';
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
-  hostingDropdown.classList.remove('active');
+  numPagesDropdown.classList.remove('active');
+}
+function a1(){
+  const html = document.querySelector("html");
+  const body = document.body;
+  const numPagesDropdown = document.getElementById('numPagesDropdown');
+
+  document.getElementById("num_pages").value = "1";
+  document.getElementById('numPagesPrice').innerHTML = '399kr';
+  html.style.overflow = 'unset'
+  body.style.overflow = 'unset'
+  numPagesDropdown.classList.remove('active');
+}
+function a2(){
+  const html = document.querySelector("html");
+  const body = document.body;
+  const numPagesDropdown = document.getElementById('numPagesDropdown');
+
+  document.getElementById("num_pages").value = "2";
+  document.getElementById('numPagesPrice').innerHTML = '798kr';
+  html.style.overflow = 'unset'
+  body.style.overflow = 'unset'
+  numPagesDropdown.classList.remove('active');
+}
+function a3(){
+  const html = document.querySelector("html");
+  const body = document.body;
+  const numPagesDropdown = document.getElementById('numPagesDropdown');
+
+  document.getElementById("num_pages").value = "3";
+  document.getElementById('numPagesPrice').innerHTML = '1197kr';
+  html.style.overflow = 'unset'
+  body.style.overflow = 'unset'
+  numPagesDropdown.classList.remove('active');
+}
+function a4(){
+  const html = document.querySelector("html");
+  const body = document.body;
+  const numPagesDropdown = document.getElementById('numPagesDropdown');
+
+  document.getElementById("num_pages").value = "4";
+  document.getElementById('numPagesPrice').innerHTML = '1596kr';
+  html.style.overflow = 'unset'
+  body.style.overflow = 'unset'
+  numPagesDropdown.classList.remove('active');
+}
+function a5(){
+  const html = document.querySelector("html");
+  const body = document.body;
+  const numPagesDropdown = document.getElementById('numPagesDropdown');
+
+  document.getElementById("num_pages").value = "5";
+  document.getElementById('numPagesPrice').innerHTML = '1995kr';
+  html.style.overflow = 'unset'
+  body.style.overflow = 'unset'
+  numPagesDropdown.classList.remove('active');
+}
+
+function a6(){
+  const html = document.querySelector("html");
+  const body = document.body;
+  const numPagesDropdown = document.getElementById('numPagesDropdown');
+
+  document.getElementById("num_pages").value = "6";
+  document.getElementById('numPagesPrice').innerHTML = '2394kr';
+  html.style.overflow = 'unset'
+  body.style.overflow = 'unset'
+  numPagesDropdown.classList.remove('active');
+}
+
+function a7(){
+  const html = document.querySelector("html");
+  const body = document.body;
+  const numPagesDropdown = document.getElementById('numPagesDropdown');
+
+  document.getElementById("num_pages").value = "7";
+  document.getElementById('numPagesPrice').innerHTML = '2793kr';
+  html.style.overflow = 'unset'
+  body.style.overflow = 'unset'
+  numPagesDropdown.classList.remove('active');
+}
+
+function a8(){
+  const html = document.querySelector("html");
+  const body = document.body;
+  const numPagesDropdown = document.getElementById('numPagesDropdown');
+
+  document.getElementById("num_pages").value = "8";
+  document.getElementById('numPagesPrice').innerHTML = '3192kr';
+  html.style.overflow = 'unset'
+  body.style.overflow = 'unset'
+  numPagesDropdown.classList.remove('active');
+}
+
+function a9(){
+  const html = document.querySelector("html");
+  const body = document.body;
+  const numPagesDropdown = document.getElementById('numPagesDropdown');
+
+  document.getElementById("num_pages").value = "9";
+  document.getElementById('numPagesPrice').innerHTML = '3591kr';
+  html.style.overflow = 'unset'
+  body.style.overflow = 'unset'
+  numPagesDropdown.classList.remove('active');
+}
+
+function a10(){
+  const html = document.querySelector("html");
+  const body = document.body;
+  const numPagesDropdown = document.getElementById('numPagesDropdown');
+
+  document.getElementById("num_pages").value = "10";
+  document.getElementById('numPagesPrice').innerHTML = '3990kr';
+  html.style.overflow = 'unset'
+  body.style.overflow = 'unset'
+  numPagesDropdown.classList.remove('active');
 }
 
 function ja(){
@@ -99,6 +231,12 @@ function ecommerce(){
   document.getElementById("products").value = "Ecommerce";
   document.getElementById('productPrice').innerHTML = '4399kr';
   document.getElementById('ifCustom').classList.remove('active');
+  document.getElementById('ifEcommerce').classList.add('active');
+  document.getElementById('loaderElEcommerce').style.display = 'block';
+  setTimeout( function(){
+    document.getElementById('ifEcommerce').classList.remove('active');
+    document.getElementById('loaderElEcommerce').style.display = 'none';
+  }, 4900)
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   productDropdown.classList.remove('active');
@@ -112,6 +250,12 @@ function blog(){
   document.getElementById("products").value = "Blogg";
   document.getElementById('productPrice').innerHTML = '3699kr';
   document.getElementById('ifCustom').classList.remove('active');
+  document.getElementById('ifBlog').classList.add('active');
+  document.getElementById('loaderElBlog').style.display = 'block';
+  setTimeout( function(){
+    document.getElementById('ifBlog').classList.remove('active');
+    document.getElementById('loaderElBlog').style.display = 'none';
+  }, 4900)
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   productDropdown.classList.remove('active');
@@ -125,6 +269,12 @@ function portofolio(){
   document.getElementById("products").value = "Portofolio";
   document.getElementById('productPrice').innerHTML = '2999kr';
   document.getElementById('ifCustom').classList.remove('active'); 
+  document.getElementById('ifPortofolio').classList.add('active');
+  document.getElementById('loaderElPortofolio').style.display = 'block';
+  setTimeout( function(){
+    document.getElementById('ifPortofolio').classList.remove('active');
+    document.getElementById('loaderElPortofolio').style.display = 'none';
+  }, 4900)
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   productDropdown.classList.remove('active');
@@ -138,6 +288,12 @@ function bedrift(){
   document.getElementById("products").value = "Bedrift";
   document.getElementById('productPrice').innerHTML = '3399kr';
   document.getElementById('ifCustom').classList.remove('active');
+  document.getElementById('ifBedrift').classList.add('active');
+  document.getElementById('loaderElBedrift').style.display = 'block';
+  setTimeout( function(){
+    document.getElementById('ifBedrift').classList.remove('active');
+    document.getElementById('loaderElBedrift').style.display = 'none';
+  }, 4900)
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   productDropdown.classList.remove('active');
@@ -151,6 +307,12 @@ function personal(){
   document.getElementById("products").value = "Personal";
   document.getElementById('productPrice').innerHTML = '1699kr';
   document.getElementById('ifCustom').classList.remove('active');
+  document.getElementById('ifPersonal').classList.add('active');
+  document.getElementById('loaderElPersonal').style.display = 'block';
+  setTimeout( function(){
+    document.getElementById('ifPersonal').classList.remove('active');
+    document.getElementById('loaderElPersonal').style.display = 'none';
+  }, 4900)
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   productDropdown.classList.remove('active');
@@ -164,11 +326,11 @@ function custom(){
   document.getElementById("products").value = "Custom";
   document.getElementById('productPrice').innerHTML = '599kr-9999kr';
   document.getElementById('ifCustom').classList.add('active');
-  document.getElementById('loaderEl').style.display = 'block';
+  document.getElementById('loaderElCustom').style.display = 'block';
   setTimeout( function(){
     document.getElementById('ifCustom').classList.remove('active');
-    document.getElementById('loaderEl').style.display = 'none';
-  }, 3900)
+    document.getElementById('loaderElCustom').style.display = 'none';
+  }, 4900)
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   productDropdown.classList.remove('active');

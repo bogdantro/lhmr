@@ -160,7 +160,7 @@
   pointer-events: none;
 }
 
-.make-order form .order-form-step1 .info.if-custom {
+.make-order form .order-form-step1 .info.order-product-info {
   display: block;
   position: absolute;
   background: white;
@@ -175,7 +175,7 @@
   transition: all .3s ease-in-out;
 }
 
-.make-order form .order-form-step1 .info.if-custom.active {
+.make-order form .order-form-step1 .info.order-product-info.active {
   opacity: 1;
 }
 
@@ -213,8 +213,8 @@
   background-color: white;
   height: 30px;
   width: 0;
-  -webkit-animation: getWidth 4s ease-in infinite;
-          animation: getWidth 4s ease-in infinite;
+  -webkit-animation: getWidth 5s ease-in infinite;
+          animation: getWidth 5s ease-in infinite;
 }
 
 @-webkit-keyframes getWidth {
@@ -254,6 +254,16 @@
 }
 
 .make-order form .order-form-step1 .hosting-price {
+  position: absolute;
+  right: 40px;
+  -webkit-transform: translateY(-32px);
+          transform: translateY(-32px);
+  font-size: 14px;
+  color: #3c54a0;
+  opacity: 0.7;
+}
+
+.make-order form .order-form-step1 .num-pages-price {
   position: absolute;
   right: 40px;
   -webkit-transform: translateY(-32px);
@@ -353,6 +363,53 @@
 }
 
 .make-order form .order-form-step1 .hosting-dropdown .dropdown-border .flex h1 {
+  width: 50%;
+  border: 2px solid white;
+}
+
+.make-order form .order-form-step1 .num-pages-dropdown {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index: 1000;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  pointer-events: none;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.make-order form .order-form-step1 .num-pages-dropdown.active {
+  opacity: 1;
+  pointer-events: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.make-order form .order-form-step1 .num-pages-dropdown .dropdown-border {
+  border: 2px solid #3c54a0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.make-order form .order-form-step1 .num-pages-dropdown .dropdown-border h1 {
+  font-size: 17px;
+  padding: 3px;
+  background: rgba(240, 240, 240, 0.6);
+}
+
+.make-order form .order-form-step1 .num-pages-dropdown .dropdown-border .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.make-order form .order-form-step1 .num-pages-dropdown .dropdown-border .flex h1 {
   width: 50%;
   border: 2px solid white;
 }

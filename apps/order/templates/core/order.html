@@ -44,12 +44,37 @@
            <h1 class="heading">Steg 1</h1>
            <label for="products" class="form-tag-products tag">Velg nettside</label>
            <br>
-           <h1 class="if-custom info" id="ifCustom">Hvis du velger en Custom nettside, så bestemmer du selv hva du vil nettsiden skal være. For eksempel, kan være både en Ecommerce og en Blogg nettside.
+           <h1 class="if-custom info order-product-info" id="ifCustom">Hvis du velger en Custom nettside, så bestemmer du selv hva du vil nettsiden skal være. For eksempel, kan være både en Ecommerce og en Blogg nettside.
             <div class="loader">
-               <div class="loader__element" id="loaderEl"></div>
+               <div class="loader__element" id="loaderElCustom"></div>
              </div>
            </h1>
-           <input type="text" name="products" class="products input" id="products" readonly onclick="orderProductDropdown()" required oninvalid="this.setCustomValidity('Værsåsnill, velg et produkt')" oninput="this.setCustomValidity('')"><div class="product-price" id="productPrice" onclick="orderProductDropdown()">0kr</div><div onclick="orderProductDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
+           <h1 class="if-ecommerce info order-product-info" id="ifEcommerce">Hvis du velger en Ecommerce nettside, så vil du få en nettside med handlekurv, checkout, admin panel og mye mer sånn at du kan ha den perfekte Ecommerce nettsiden.
+            <div class="loader">
+               <div class="loader__element" id="loaderElEcommerce"></div>
+             </div>
+           </h1>
+           <h1 class="if-custom info order-product-info" id="ifBlog">Hvis du velger en Blogg nettside, så får du en nettside hvor du kan legge ut og skrive artikler. Du kan også få en funksjon sånn at andre personer også kan legge ut og skrive artikler.
+            <div class="loader">
+               <div class="loader__element" id="loaderElBlog"></div>
+             </div>
+           </h1>
+           <h1 class="if-custom info order-product-info" id="ifPortofolio">Hvis du velger en Portofolio nettside, så får du en nettside hvor du kan legge ut dine "skills", og han en måte for folk å se hva du er god på.
+            <div class="loader">
+               <div class="loader__element" id="loaderElPortofolio"></div>
+             </div>
+           </h1>
+           <h1 class="if-custom info order-product-info" id="ifBedrift">Hvis du velger en Bedrift nettside, så får du en nettside for din bedrift.
+            <div class="loader">
+               <div class="loader__element" id="loaderElBedrift"></div>
+             </div>
+           </h1>
+           <h1 class="if-custom info order-product-info" id="ifPersonal">Hvis du velger en Personal nettside, så får du en nettside som er simpel og kan handle om hva du ønsker.
+            <div class="loader">
+               <div class="loader__element" id="loaderElPersonal"></div>
+             </div>
+           </h1>
+           <input type="text" name="products" class="products input" id="products" readonly required oninvalid="this.setCustomValidity('Værsåsnill, velg et produkt')" oninput="this.setCustomValidity('')"><div class="product-price" id="productPrice" onclick="orderProductDropdown()">0kr</div><div onclick="orderProductDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
            <div class="products-dropdown" id="productDropdown">
               <div class="dropdown-border">
                  <h1 class="dropdown-none" onclick="noneProducts()">---------</h1>
@@ -71,7 +96,7 @@
            <br>
            <label for="hosting" class="form-tag-hosting tag">Vil du ha våres hosting tjeneste?</label>
            <br>
-           <input type="text" name="hosting" class="hosting input" id="hosting" readonly onclick="orderhostingDropdown()"><div class="hosting-price" id="hostingPrice" onclick="orderhostingDropdown()">0kr</div><div onclick="orderhostingDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
+           <input type="text" name="hosting" class="hosting input" id="hosting" readonly><div class="hosting-price" id="hostingPrice" onclick="orderhostingDropdown()">0kr</div><div onclick="orderhostingDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
            <div class="hosting-dropdown" id="hostingDropdown">
             <div class="dropdown-border">
                <h1 class="dropdown-none" onclick="noneHosting()">---------</h1>
@@ -97,9 +122,34 @@
             </div>
             <br>
             <h1 class="info">Alle priser har inkludert en Hjemme side og en Kontakt oss side. En ekstra side koster 399kr</h1>
-            <label for="num_pages" class="form-tag-num_pages tag">Velg antall sider</label>
+            <label for="num_pages" class="form-tag-num_pages tag">Velg antall ekstra sider</label>
             <br>
-            <input type="number" id="num_pages" name="num_pages" class="input" placeholder="2">
+            <input type="number" id="num_pages" name="num_pages" class="input" readonly><div class="num-pages-price" id="numPagesPrice" onclick="orderNumPagesDropdown()">0kr</div><div onclick="orderNumPagesDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
+            <div class="num-pages-dropdown" id="numPagesDropdown">
+               <div class="dropdown-border">
+                  <h1 class="dropdown-none" onclick="noneNumPages()">---------</h1>
+                  <div class="flex">
+                     <h1 onclick="a1()">1</h1>
+                     <h1 onclick="a2()">2</h1>
+                   </div>
+                   <div class="flex">   
+                      <h1 onclick="a3()">3</h1>
+                      <h1 onclick="a4()">4</h1>
+                   </div>
+                   <div class="flex">
+                      <h1 onclick="a5()">5</h1>
+                      <h1 onclick="a6()">6</h1>
+                   </div>
+                   <div class="flex">
+                      <h1 onclick="a7()">7</h1>
+                      <h1 onclick="a8()">8</h1>
+                   </div>
+                   <div class="flex">
+                      <h1 onclick="a9()">9</h1>
+                      <h1 onclick="a10()">10</h1>
+                   </div>
+                </div>
+             </div>
          </div>
         <br>
         <div class="order-form-step2">

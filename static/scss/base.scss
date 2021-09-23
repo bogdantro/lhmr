@@ -344,12 +344,6 @@ html, body {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
-  &.active{
-    .icon{
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
   h1{
     &.heading{
       width: 100%;
@@ -365,59 +359,6 @@ html, body {
     text-transform: uppercase;
     font-family: 'Sniglet', cursive;
     color: rgb(60, 84, 160);
-  }
-  .icon{
-    margin-bottom: 50px;
-    width: 45%;
-    height: auto;
-    padding: 5px;
-    display: inline-table;
-    position: relative;
-    opacity: 0;
-    transition: all ease-in .5s;
-    transform: translateY(40px);
-    i{
-      margin: 30px;
-      margin-bottom: -15px;
-      padding: 20px;
-      color: black;
-      font-size: 50px;
-      border-radius: 8px;
-      color: rgb(60, 84, 160);
-      box-shadow: 2px 2px 2px rgb(60, 84, 160);
-    }
-    h1{
-      font-family: 'Sniglet', cursive;
-      font-size: 16px;
-      color: black;
-      padding: 5px;
-      margin-bottom: 7px;
-      margin-top: 25px;
-    }
-    p{
-      display: none;
-      font-size: 14px;
-      opacity: 0.9;
-    }
-    button{
-      margin-top: 10px;
-      border-radius: 4px;
-      color: rgb(30, 30, 30);
-      width: 100px;
-      font-size: 15px;
-      padding: 5px;
-      transition: all .2s ease-in-out;
-      color: white;
-      outline: none;
-      background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
-      box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
-      border: 2px solid transparent;
-      &.active{
-        background: white;
-        color: black;
-        border-color: black;
-      }
-    }
   }
   .border{
     background: rgb(100, 100, 100);
