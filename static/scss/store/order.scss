@@ -331,6 +331,10 @@ $loader: rgb(80, 104, 180);
                 color: white;
               }
             }
+            .num-pages-extra-pages{
+              width: 100%;
+              text-align: center;
+            }
             .input{
               width: 100%;
               border: 2px solid rgb(60, 84, 160);
@@ -346,6 +350,12 @@ $loader: rgb(80, 104, 180);
               }
               &.order-hosting{
                 padding: 7px;
+              }
+              &.num-pages-extra{
+                width: 80%;
+                margin: 7px auto;
+                padding: 6px;
+                display: none;
               }
             }
           }

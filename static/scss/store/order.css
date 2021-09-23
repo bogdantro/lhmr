@@ -429,6 +429,11 @@
   color: white;
 }
 
+.make-order form .order-form-step1 .num-pages-extra-pages {
+  width: 100%;
+  text-align: center;
+}
+
 .make-order form .order-form-step1 .input {
   width: 100%;
   border: 2px solid #3c54a0;
@@ -448,6 +453,13 @@
 
 .make-order form .order-form-step1 .input.order-hosting {
   padding: 7px;
+}
+
+.make-order form .order-form-step1 .input.num-pages-extra {
+  width: 80%;
+  margin: 7px auto;
+  padding: 6px;
+  display: none;
 }
 
 .make-order form .order-form-step2 {

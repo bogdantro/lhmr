@@ -67,6 +67,16 @@ function noneNumPages(){
 
   document.getElementById("num_pages").value = "";
   document.getElementById('numPagesPrice').innerHTML = '0kr';
+  document.getElementById('page1').style.display = 'none';
+  document.getElementById('page2').style.display = 'none';
+  document.getElementById('page3').style.display = 'none';
+  document.getElementById('page4').style.display = 'none';
+  document.getElementById('page5').style.display = 'none';
+  document.getElementById('page6').style.display = 'none';
+  document.getElementById('page7').style.display = 'none';
+  document.getElementById('page8').style.display = 'none';
+  document.getElementById('page9').style.display = 'none';
+  document.getElementById('page10').style.display = 'none';
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   numPagesDropdown.classList.remove('active');
@@ -78,6 +88,16 @@ function a1(){
 
   document.getElementById("num_pages").value = "1";
   document.getElementById('numPagesPrice').innerHTML = '399kr';
+  document.getElementById('page1').style.display = 'block';
+  document.getElementById('page2').style.display = 'none';
+  document.getElementById('page3').style.display = 'none';
+  document.getElementById('page4').style.display = 'none';
+  document.getElementById('page5').style.display = 'none';
+  document.getElementById('page6').style.display = 'none';
+  document.getElementById('page7').style.display = 'none';
+  document.getElementById('page8').style.display = 'none';
+  document.getElementById('page9').style.display = 'none';
+  document.getElementById('page10').style.display = 'none';
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   numPagesDropdown.classList.remove('active');
@@ -89,6 +109,16 @@ function a2(){
 
   document.getElementById("num_pages").value = "2";
   document.getElementById('numPagesPrice').innerHTML = '798kr';
+  document.getElementById('page1').style.display = 'block';
+  document.getElementById('page2').style.display = 'block';
+  document.getElementById('page3').style.display = 'none';
+  document.getElementById('page4').style.display = 'none';
+  document.getElementById('page5').style.display = 'none';
+  document.getElementById('page6').style.display = 'none';
+  document.getElementById('page7').style.display = 'none';
+  document.getElementById('page8').style.display = 'none';
+  document.getElementById('page9').style.display = 'none';
+  document.getElementById('page10').style.display = 'none';
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   numPagesDropdown.classList.remove('active');
@@ -100,6 +130,17 @@ function a3(){
 
   document.getElementById("num_pages").value = "3";
   document.getElementById('numPagesPrice').innerHTML = '1197kr';
+  document.getElementById('page1').style.display = 'block';
+  document.getElementById('page2').style.display = 'block';
+  document.getElementById('page3').style.display = 'block';
+  document.getElementById('page4').style.display = 'none';
+  document.getElementById('page5').style.display = 'none';
+  document.getElementById('page6').style.display = 'none';
+  document.getElementById('page7').style.display = 'none';
+  document.getElementById('page8').style.display = 'none';
+  document.getElementById('page9').style.display = 'none';
+  document.getElementById('page10').style.display = 'none';
+
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   numPagesDropdown.classList.remove('active');
@@ -111,6 +152,17 @@ function a4(){
 
   document.getElementById("num_pages").value = "4";
   document.getElementById('numPagesPrice').innerHTML = '1596kr';
+  document.getElementById('page1').style.display = 'block';
+  document.getElementById('page2').style.display = 'block';
+  document.getElementById('page3').style.display = 'block';
+  document.getElementById('page4').style.display = 'block';
+  document.getElementById('page5').style.display = 'none';
+  document.getElementById('page6').style.display = 'none';
+  document.getElementById('page7').style.display = 'none';
+  document.getElementById('page8').style.display = 'none';
+  document.getElementById('page9').style.display = 'none';
+  document.getElementById('page10').style.display = 'none';
+
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   numPagesDropdown.classList.remove('active');
@@ -122,6 +174,17 @@ function a5(){
 
   document.getElementById("num_pages").value = "5";
   document.getElementById('numPagesPrice').innerHTML = '1995kr';
+  document.getElementById('page1').style.display = 'block';
+  document.getElementById('page2').style.display = 'block';
+  document.getElementById('page3').style.display = 'block';
+  document.getElementById('page4').style.display = 'block';
+  document.getElementById('page5').style.display = 'block';
+  document.getElementById('page6').style.display = 'none';
+  document.getElementById('page7').style.display = 'none';
+  document.getElementById('page8').style.display = 'none';
+  document.getElementById('page9').style.display = 'none';
+  document.getElementById('page10').style.display = 'none';
+
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   numPagesDropdown.classList.remove('active');
@@ -134,6 +197,17 @@ function a6(){
 
   document.getElementById("num_pages").value = "6";
   document.getElementById('numPagesPrice').innerHTML = '2394kr';
+  document.getElementById('page1').style.display = 'block';
+  document.getElementById('page2').style.display = 'block';
+  document.getElementById('page3').style.display = 'block';
+  document.getElementById('page4').style.display = 'block';
+  document.getElementById('page5').style.display = 'block';
+  document.getElementById('page6').style.display = 'block';
+  document.getElementById('page7').style.display = 'none';
+  document.getElementById('page8').style.display = 'none';
+  document.getElementById('page9').style.display = 'none';
+  document.getElementById('page10').style.display = 'none';
+
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   numPagesDropdown.classList.remove('active');
@@ -146,6 +220,18 @@ function a7(){
 
   document.getElementById("num_pages").value = "7";
   document.getElementById('numPagesPrice').innerHTML = '2793kr';
+  document.getElementById('page1').style.display = 'block';
+  document.getElementById('page2').style.display = 'block';
+  document.getElementById('page3').style.display = 'block';
+  document.getElementById('page4').style.display = 'block';
+  document.getElementById('page5').style.display = 'block';
+  document.getElementById('page6').style.display = 'block';
+  document.getElementById('page7').style.display = 'block';
+  document.getElementById('page8').style.display = 'none';
+  document.getElementById('page9').style.display = 'none';
+  document.getElementById('page10').style.display = 'none';
+  
+
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   numPagesDropdown.classList.remove('active');
@@ -158,6 +244,17 @@ function a8(){
 
   document.getElementById("num_pages").value = "8";
   document.getElementById('numPagesPrice').innerHTML = '3192kr';
+  document.getElementById('page1').style.display = 'block';
+  document.getElementById('page2').style.display = 'block';
+  document.getElementById('page3').style.display = 'block';
+  document.getElementById('page4').style.display = 'block';
+  document.getElementById('page5').style.display = 'block';
+  document.getElementById('page6').style.display = 'block';
+  document.getElementById('page7').style.display = 'block';  
+  document.getElementById('page8').style.display = 'block';
+  document.getElementById('page9').style.display = 'none';
+  document.getElementById('page10').style.display = 'none';
+
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   numPagesDropdown.classList.remove('active');
@@ -170,6 +267,17 @@ function a9(){
 
   document.getElementById("num_pages").value = "9";
   document.getElementById('numPagesPrice').innerHTML = '3591kr';
+  document.getElementById('page1').style.display = 'block';
+  document.getElementById('page2').style.display = 'block';
+  document.getElementById('page3').style.display = 'block';
+  document.getElementById('page4').style.display = 'block';
+  document.getElementById('page5').style.display = 'block';
+  document.getElementById('page6').style.display = 'block';
+  document.getElementById('page7').style.display = 'block';
+  document.getElementById('page8').style.display = 'block'; 
+  document.getElementById('page9').style.display = 'block';
+  document.getElementById('page10').style.display = 'none';
+
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   numPagesDropdown.classList.remove('active');
@@ -182,6 +290,17 @@ function a10(){
 
   document.getElementById("num_pages").value = "10";
   document.getElementById('numPagesPrice').innerHTML = '3990kr';
+  document.getElementById('page1').style.display = 'block';
+  document.getElementById('page2').style.display = 'block';
+  document.getElementById('page3').style.display = 'block';
+  document.getElementById('page4').style.display = 'block';
+  document.getElementById('page5').style.display = 'block';
+  document.getElementById('page6').style.display = 'block';
+  document.getElementById('page7').style.display = 'block';
+  document.getElementById('page8').style.display = 'block';
+  document.getElementById('page9').style.display = 'block';
+  document.getElementById('page10').style.display = 'block';
+
   html.style.overflow = 'unset'
   body.style.overflow = 'unset'
   numPagesDropdown.classList.remove('active');
