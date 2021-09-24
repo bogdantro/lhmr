@@ -1,40 +1,40 @@
-// const cookieStorage = {
-//     getItem: (key) => {
-//         const cookies = document.cookie
-//             .split(';')
-//             .map(cookie => cookie.split('='))
-//             .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
-//         return cookies[key];
-//     },
-//     setItem: (key, value) => {
-//         document.cookie = `${key}=${value}`;
-//     },
-// };
+const cookieStorage = {
+    getItem: (key) => {
+        const cookies = document.cookie
+            .split(';')
+            .map(cookie => cookie.split('='))
+            .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
+        return cookies[key];
+    },
+    setItem: (key, value) => {
+        document.cookie = `${key}=${value}`;
+    },
+};
 
-// const storageType = cookieStorage;
-// const consentPropertyName = 'stellcare';
+const storageType = cookieStorage;
+const consentPropertyName = 'webiser';
 
-// const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
-// const saveToStorage = () => storageType.setItem(consentPropertyName, true);
+const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
+const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
-// window.onload = () => {
-//     const consentPopup = document.getElementById('popup');
-//     const acceptBtn = document.getElementById('accept');
+window.onload = () => {
+    const consentPopup = document.getElementById('popup');
+    const acceptBtn = document.getElementById('accept');
 
 
-//     const acceptFn = event => {
-//         saveToStorage(storageType);
-//         consentPopup.classList.add('hidden')
-//     };
+    const acceptFn = event => {
+        saveToStorage(storageType);
+        consentPopup.classList.add('hidden')
+    };
     
-//     acceptBtn.addEventListener('click', acceptFn);
+    acceptBtn.addEventListener('click', acceptFn);
     
-//     if (shouldShowPopup(storageType)) {
-//         setTimeout(() => {
-//             consentPopup.classList.remove('hidden')
-//         }, 3000);
-//     }
-// };
+    if (shouldShowPopup(storageType)) {
+        setTimeout(() => {
+            consentPopup.classList.remove('hidden')
+        }, 3000);
+    }
+};
 
 $.ajax({
     type: "GET",

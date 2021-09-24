@@ -14,4 +14,6 @@ class Order(forms.ModelForm):
 
     class Meta:
         model = Order
-        fields = ('name', 'email', 'products', 'message', 'hosting', 'image', 'color', 'num_pages', 'color_hex',)
+        fields = ('name', 'email', 'products', 'message', 'hosting', 'image', 'color', 'num_pages', 
+        'color_hex', 'page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10', 'css', 'html', 'javascript', 'python_django',
+        )

@@ -74,7 +74,7 @@
                <div class="loader__element" id="loaderElPersonal"></div>
              </div>
            </h1>
-           <input type="text" name="products" class="products input" id="products" readonly required oninvalid="this.setCustomValidity('Værsåsnill, velg et produkt')" oninput="this.setCustomValidity('')"><div class="product-price" id="productPrice" onclick="orderProductDropdown()">0kr</div><div onclick="orderProductDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
+           <input type="text" name="products" class="products input" id="products" readonly required oninvalid="this.setCustomValidity('Værsåsnill, velg et produkt')" oninput="this.setCustomValidity('')" onclick="orderProductDropdown()"><div class="product-price" id="productPrice" onclick="orderProductDropdown()">0kr</div><div onclick="orderProductDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
            <div class="products-dropdown" id="productDropdown">
               <div class="dropdown-border">
                  <h1 class="dropdown-none" onclick="noneProducts()">---------</h1>
@@ -96,7 +96,7 @@
            <br>
            <label for="hosting" class="form-tag-hosting tag">Vil du ha våres hosting tjeneste?</label>
            <br>
-           <input type="text" name="hosting" class="hosting input" id="hosting" readonly><div class="hosting-price" id="hostingPrice" onclick="orderhostingDropdown()">0kr</div><div onclick="orderhostingDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
+           <input type="text" name="hosting" class="hosting input" id="hosting" readonly onclick="orderhostingDropdown()"><div class="hosting-price" id="hostingPrice" onclick="orderhostingDropdown()">0kr</div><div onclick="orderhostingDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
            <div class="hosting-dropdown" id="hostingDropdown">
             <div class="dropdown-border">
                <h1 class="dropdown-none" onclick="noneHosting()">---------</h1>
@@ -124,7 +124,7 @@
             <h1 class="info">Alle priser har inkludert en Hjemme side og en Kontakt oss side. En ekstra side koster 399kr</h1>
             <label for="num_pages" class="form-tag-num_pages tag">Velg antall ekstra sider</label>
             <br>
-            <input type="number" id="num_pages" name="num_pages" class="input" readonly><div class="num-pages-price" id="numPagesPrice" onclick="orderNumPagesDropdown()">0kr</div><div onclick="orderNumPagesDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
+            <input type="number" id="num_pages" name="num_pages" class="input" readonly onclick="orderNumPagesDropdown()"><div class="num-pages-price" id="numPagesPrice" onclick="orderNumPagesDropdown()">0kr</div><div onclick="orderNumPagesDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
             <div class="num-pages-dropdown" id="numPagesDropdown">
                <div class="dropdown-border">
                   <h1 class="dropdown-none" onclick="noneNumPages()">---------</h1>
@@ -151,21 +151,38 @@
                 </div>
              </div>
              <div class="num-pages-extra-pages">
-                <input type="text" class="input num-pages-extra" value="Side 1:" id="page1">
-                <input type="text" class="input num-pages-extra" value="Side 2:" id="page2">
-                <input type="text" class="input num-pages-extra" value="Side 3:" id="page3">
-                <input type="text" class="input num-pages-extra" value="Side 4:" id="page4">
-                <input type="text" class="input num-pages-extra" value="Side 5:" id="page5">
-                <input type="text" class="input num-pages-extra" value="Side 6:" id="page6">
-                <input type="text" class="input num-pages-extra" value="Side 7:" id="page7">
-                <input type="text" class="input num-pages-extra" value="Side 8:" id="page8">
-                <input type="text" class="input num-pages-extra" value="Side 9:" id="page9">
-                <input type="text" class="input num-pages-extra" value="Side 10:" id="page10">
+                <input type="text" name="page1" class="input num-pages-extra" value="Side 1:" id="page1">
+                <input type="text" name="page2" class="input num-pages-extra" value="Side 2:" id="page2">
+                <input type="text" name="page3"  class="input num-pages-extra" value="Side 3:" id="page3">
+                <input type="text" name="page4"  class="input num-pages-extra" value="Side 4:" id="page4">
+                <input type="text" name="page5"  class="input num-pages-extra" value="Side 5:" id="page5">
+                <input type="text" name="page6"  class="input num-pages-extra" value="Side 6:" id="page6">
+                <input type="text" name="page7"  class="input num-pages-extra" value="Side 7:" id="page7">
+                <input type="text" name="page8"  class="input num-pages-extra" value="Side 8:" id="page8">
+                <input type="text" name="page9"  class="input num-pages-extra" value="Side 9:" id="page9">
+                <input type="text" name="page10"  class="input num-pages-extra" value="Side 10:" id="page10">
             </div>
          </div>
         <br>
         <div class="order-form-step2">
            <h1 class="heading">Steg 2</h1>
+           <h1 class="info">Fortell oss om erfaringen din med koding, sånn at vi kan skrive en nettside som du kan skjønne</h1>
+           <label for="css" class="form-tag-css tag">Har du noe erfaring med CSS?</label>
+           <br>
+           <input type="text" id="css" name="css" class="input" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
+           <br>
+           <label for="html" class="form-tag-html tag">Har du noe erfaring med HTML?</label>
+           <br>
+           <input type="text" id="html" name="html" class="input" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
+           <br>
+           <label for="javascript" class="form-tag-javascript tag">Har du noe erfaring med JavaScript?</label>
+           <br>
+           <input type="text" id="javascript" name="javascript" class="input" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
+           <br>
+           <label for="python_django" class="form-tag-python_django tag">Hva med Python og Django?</label>
+           <br>
+           <input type="text" id="python_django" name="python_django" class="input" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
+           <br>
         </div>
         <div class="order-form-step3">
            <h1 class="heading">Steg 3</h1>
@@ -181,9 +198,6 @@
            <br>
            <textarea id="message" name="message"></textarea>
            <br>
-           <div class="google-recaptcha">
-            <div class="g-recaptcha" data-sitekey="6Ld3UXocAAAAAJ2xfcaZlld0nlT5f8VfW5F2O6o6"></div>
-           </div>
          </div>
         <div class="form-actions">
             <button onclick="orderLoading()" name="order" value="order" type='submit'>Send bestillingen</button>

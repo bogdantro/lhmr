@@ -7,6 +7,7 @@ from django.core.mail import send_mail, BadHeaderError
 from apps.userprofile.forms import SignUpForm, UserprofileForm
 from django.contrib.auth import login, authenticate
 from django.template.loader import render_to_string
+from textwrap import dedent
 
 
 from django.conf import settings
@@ -59,13 +60,13 @@ def hjemme(request,  backend='django.contrib.auth.backends.ModelBackend'):
             'email': email,
             'message': message,
         }
-        message = '''
+        message = dedent('''
         Fra: {}
 
         Navn: {}
 
         Beskjed: {}
-        '''.format(data['email'], data['navn'], data['message'], )
+        ''').format(data['email'], data['navn'], data['message'], )
         send_mail('Webiser Contact Form', message, '', ['sabertoothtri@gmail.com'])
         return redirect('/email-success')
 

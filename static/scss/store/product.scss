@@ -1,0 +1,28 @@
+// STANDARD PHONE
+.cover-mobile{ 
+    height: 55vh;
+    .cover-text{
+      transform: translateY(-60px);
+        img{
+            top: 90px;
+        }
+    }
+  }
+  .product-page{
+      padding: 20px;
+      margin-top: 15px;
+      position: relative;
+      width: 100%;
+      text-align: center;
+    h1{
+        &.heading{
+          width: 100%;
+          text-transform: uppercase;
+          font-family: 'Sniglet', cursive;
+          color: rgb(20, 44, 120);
+          font-weight: 700;
+          font-size: 26px;
+          text-align: center;
+        }
+      }
+  }

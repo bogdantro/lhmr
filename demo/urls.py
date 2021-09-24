@@ -22,7 +22,7 @@ urlpatterns = [
     #STORE
     path('produkt/:<slug>/', product_detail, name='product_detail'),
     path('bestill/', send_order, name='send-order'),
-    path('bestilling-utfort:1-2-3-4/', order_success, name='order_success'),
+    path('bestilling-utfort/webiser/bestilling/', order_success, name='order_success'),
     path('om-webiser/', about, name='about'),
     path('email-success/', email_success, name='email_success'),
 

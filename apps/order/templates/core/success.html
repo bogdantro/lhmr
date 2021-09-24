@@ -3,30 +3,44 @@
 
 {% block content %}
 <link rel="stylesheet" href="{% static '/scss/store/success.css' %}" type="text/css">
+<script rel="stylesheet" src="{% static '/js/success.js' %}" type="text/javascript"></script>
+
+
+
+<div class="load-wrapp" id="orderSentLoader">
+  <div class="load-2">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</div>
 
 <div class="cover">
-    <div class="cover-mobile">
-      <div class="cover-text">
-         <img src="{% static '/images/covers/cover-2.png' %}" alt="cover-img">
-         <h1>Takk for din bestilling!</h1>
-         <p id="coverText2">Vi har motat bestillingen din, og designerne våres skal starte å lage designen. Under finner du viktig informasjon</p>
-    </div>
-    </div>
     <div class="cover-desktop">
-      <div class="cover-text">
-         <img src="{% static '/images/covers/cover-2.png' %}" alt="cover-img">
+       <div class="cover-text">
          <h1>Takk for din bestilling!</h1>
-         <p id="coverText2">Vi har motat bestillingen din, og designerne våres skal starte å lage designen. Under finner du viktig informasjon</p>
+         <p id="coverText2">Vi har motat bestillingen din, og våres designere vil svare deg så fort som mulig</p>
+       </div>
+       <div class="img">
+          <img src="{% static '/images/covers/cover-2.png' %}" alt="cover-img">
+      </div>
     </div>
+    <div class="cover-mobile">
+       <div class="cover-text">
+         <h1>Takk for din bestilling!</h1>
+         <p id="coverText2">Vi har motat bestillingen din, og våres designere vil svare deg så fort som mulig</p>
+       </div>
+       <div class="img">
+          <img src="{% static '/images/covers/cover-2.png' %}" alt="cover-img">
+      </div>
     </div>
-</div>
+  </div>
+
 
 
 <div class="order-success">
-    <h1>Viktig informasjon</h1>
-    <div class="info">
-        <p>Betalingen vil foregå når designen er ferdig bygget, sånn at du kan bekrefte den. Betaling foregår via vipps eller paypal. Du vil mota en mail fra oss med informasjon om hva som skal skje videre</p>
-    </div>
+    <h1 class="heading">Viktig informasjon</h1>
+    <p class="info">Betalingen vil foregå når designen er ferdig plannlagt, og da du har bekrefta bestillingen. Betaling foregår via vipps eller paypal. Du vil mota en mail fra oss med informasjon om hva som skal skje videre</p>
     <a href="/">Tilbake til hjemmesiden</a>
 </div>
 {% endblock %}

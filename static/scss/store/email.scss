@@ -2,13 +2,14 @@ $loader: rgb(80, 104, 180);
 
 // STANDARD PHONE
 .cover-mobile{ 
-    height: 55vh;
-    .cover-text{
-        img{
-            top: 120px;
-        }
-    }
-  } 
+  height: 55vh;
+  .cover-text{
+    transform: translateY(-60px);
+      img{
+          top: 90px;
+      }
+  }
+}
 .load-wrapp {
   float: left;
   width: 100%;

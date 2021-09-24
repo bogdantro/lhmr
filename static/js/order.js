@@ -306,6 +306,18 @@ function a10(){
   numPagesDropdown.classList.remove('active');
 }
 
+function noneHosting(){
+  const html = document.querySelector("html");
+  const body = document.body;
+  const productDropdown = document.getElementById('hostingDropdown');
+
+  document.getElementById("hosting").value = "";
+  document.getElementById('hostingPrice').innerHTML = '0kr';
+  html.style.overflow = 'unset'
+  body.style.overflow = 'unset'
+  productDropdown.classList.remove('active');
+}
+
 function ja(){
   const html = document.querySelector("html");
   const body = document.body;
@@ -405,7 +417,7 @@ function bedrift(){
   const productDropdown = document.getElementById('productDropdown');
 
   document.getElementById("products").value = "Bedrift";
-  document.getElementById('productPrice').innerHTML = '3399kr';
+  document.getElementById('productPrice').innerHTML = '2999kr';
   document.getElementById('ifCustom').classList.remove('active');
   document.getElementById('ifBedrift').classList.add('active');
   document.getElementById('loaderElBedrift').style.display = 'block';

@@ -2,8 +2,13 @@
   height: 55vh;
 }
 
+.cover-mobile .cover-text {
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
+}
+
 .cover-mobile .cover-text img {
-  top: 120px;
+  top: 90px;
 }
 
 .load-wrapp {

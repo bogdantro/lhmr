@@ -86,7 +86,7 @@ $loader: rgb(80, 104, 180);
               padding: 0 2px;
               position: absolute;
               left: 15px;
-              top: 331px;
+              top: 329px;
               z-index: 1;
             }
             .color-inputs{
@@ -371,7 +371,65 @@ $loader: rgb(80, 104, 180);
                 font-weight: 700;
                 font-size: 26px;
                 text-align: center;
-              }
+            }
+          }
+          .info{
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: rgb(60, 84, 160);
+            margin-bottom: -5px;
+            margin-top: 10px;
+            opacity: 0.7;
+            pointer-events: none;
+          }
+          .form-tag-css{
+            font-size: 15px;
+            color: rgb(60, 84, 160);
+            background: white;
+            width: max-content;
+            padding: 0 2px;
+            position: absolute;
+            left: 15px;
+            top: 72px;
+          }
+          .form-tag-html{
+            font-size: 15px;
+            color: rgb(60, 84, 160);
+            background: white;
+            width: max-content;
+            padding: 0 2px;
+            position: absolute;
+            left: 15px;
+            top: 136px;
+          }
+          .form-tag-javascript{
+            font-size: 15px;
+            color: rgb(60, 84, 160);
+            background: white;
+            width: max-content;
+            padding: 0 2px;
+            position: absolute;
+            left: 15px;
+            top: 200px;
+          }
+          .form-tag-python_django{
+            font-size: 15px;
+            color: rgb(60, 84, 160);
+            background: white;
+            width: max-content;
+            padding: 0 2px;
+            position: absolute;
+            left: 15px;
+            top: 265px;
+          }
+          .input{
+            width: 100%;
+            border: 2px solid rgb(60, 84, 160);
+            border-radius: 4px;
+            padding: 7px;
+            outline: none;
+            font-size: 15px;   
           }
         }  
           .order-form-step3{
