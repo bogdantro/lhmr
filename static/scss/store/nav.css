@@ -270,7 +270,7 @@
 }
 
 #navbar .login-signup.active {
-  bottom: 20px;
+  bottom: 70px;
   opacity: 1;
   pointer-events: visible;
 }
