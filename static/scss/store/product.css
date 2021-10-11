@@ -13,10 +13,11 @@
 
 .product-page {
   padding: 20px;
-  margin-top: 15px;
+  padding-top: 25px;
   position: relative;
   width: 100%;
   text-align: center;
+  background: white;
 }
 
 .product-page h1.heading {
@@ -27,5 +28,44 @@
   font-weight: 700;
   font-size: 26px;
   text-align: center;
+}
+
+.product-page .product-info {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-page .product-info h1.subject {
+  width: 100%;
+  text-transform: uppercase;
+  font-family: 'Sniglet', cursive;
+  color: #142c78;
+  font-size: 22px;
+  text-align: center;
+}
+
+.product-page .product-info .part-one {
+  width: 100%;
+}
+
+.product-page .product-info .part-one li {
+  text-align: left;
+  font-size: 14px;
+  color: #142c78;
+}
+
+.product-page .product-info .part-two {
+  width: 100%;
+}
+
+.product-page .product-info .part-two p {
+  text-align: center;
+  font-size: 14px;
+  color: #142c78;
 }
 /*# sourceMappingURL=product.css.map */

@@ -30,8 +30,8 @@
          <h1>Moderne nettsider til lave priser</h1>
          <p id="coverText2">Bli synlig på nett og ta neste steg for ditt bedrift, ved hjelp av våres fantastiske og moderne nettsider laget av Norges beste designere og utviklere</p>
          <div class="cover-buttons">
-            <a onclick="coverPrices()" style="color: white;">Se priser</a>
-            <a onclick="coverContact()" style="color: white;">Kontakt oss</a>
+            <a class="hover" onclick="coverPrices()">Se priser</a>
+            <a class="hover" onclick="coverContact()">Kontakt oss</a>
          </div>
       </div>
       <div class="img">
@@ -43,8 +43,8 @@
          <h1>Moderne nettsider til<br><span>lave priser</span></h1>
          <p id="coverText2">Bli synlig på nett og ta neste steg for ditt bedrift, ved hjelp av våres fantastiske og moderne nettsider laget av Norges beste designere og utviklere</p>
          <div class="cover-buttons">
-            <a onclick="coverPrices()" style="color: white;">Se priser</a>
-            <a onclick="coverContact()" style="color: white;">Kontakt oss</a>
+            <a class="hover" onclick="coverPrices()">Se priser</a>
+            <a class="hover" onclick="coverContact()">Kontakt oss</a>
          </div>
       </div>
       <div class="img">
@@ -59,25 +59,25 @@
       <i class="fas fa-users"></i>      
       <h1 id="servicesFirstText">Designere og utviklere</h1>
       <p id="servicesSecondText1">Vi har et stort og profesjonell team som er motiverte og lidenskapelige for å levere et fantastisk nettside, som garanterer at du vil elske den</p>
-      <button id="readMoreServices1" onclick="servicesReadMore1()">Les mer</button>
+      <button class="hover" id="readMoreServices1" onclick="servicesReadMore1()">Les mer</button>
    </div>
    <div class="icon" id="icon2">
       <i class="fas fa-check"></i>
       <h1 id="servicesFirstText">Få 4 timer gratis hjelp hver uke</h1>
       <p id="servicesSecondText2">Vår team finner glede i å hjelpe deg, derfor du vil få 4 timer gratis hjelp og veiledning hver uke av våres designere og utviklere, for å sørge at alt er akkurat som du vil ha det</p>
-      <button id="readMoreServices2" onclick="servicesReadMore2()">Les mer</button>
+      <button class="hover" id="readMoreServices2" onclick="servicesReadMore2()">Les mer</button>
    </div>
    <div class="icon" id="icon3">
       <i class="fal fa-phone-laptop"></i>      
       <h1 id="servicesFirstText">Responsiv og modern design</h1>
       <p id="servicesSecondText3">Et bra nettsted begynner med en modern og unik design, våres designere sørger at designen blir responsiv og modern og ikke minst akkurat som du ønsker at den skal være</p>
-      <button id="readMoreServices3" onclick="servicesReadMore3()">Les mer</button>
+      <button class="hover" id="readMoreServices3" onclick="servicesReadMore3()">Les mer</button>
    </div>
    <div class="icon" id="icon4">
       <i class="fas fa-shield-check"></i>    
       <h1 id="servicesFirstText">Sikkerthet med vår hosting</h1>
       <p id="servicesSecondText4">Ikke frykt at nettsiden er nede ofte. Med vår hosting tjeneste så har du garantert 99% uptime, og 24/7 kundeservice. Vi hoster nettsiden i maks 6 måneder, og den koster 60kr/m</p>
-      <button id="readMoreServices4" onclick="servicesReadMore4()">Les mer</button>
+      <button class="hover" id="readMoreServices4" onclick="servicesReadMore4()">Les mer</button>
    </div>
 </div>
    <div class="border"></div>
@@ -145,7 +145,7 @@
 <div class="hosting" id="hosting">
    <h1 class="heading">100% sikkerhet med vår hosting tjeneste</h1>
    <p>Bli synlig på nett i dag med Norges beste hosting tjeneste</p>
-   <button onclick="window.location.href='/bestill'" class="home-order">Bestill</button>
+   <button onclick="window.location.href='/bestill'" class="home-order hover">Bestill</button>
    <div class="border"></div>
 </div>
 
@@ -157,17 +157,17 @@
       {% csrf_token %}
       <br>
       <label for="navn" class="form-tag-navn tag">Navn</label>
-      <input type="text" name="navn">
+      <input type="text" name="navn" required oninvalid="this.setCustomValidity('Værsåsnill, skriv inn navn')" oninput="this.setCustomValidity('')">
       <br>
       <br>
       <label for="email" class="form-tag-email tag">Epost</label>
-      <input type="email" name="email">
+      <input type="email" name="email" required oninvalid="this.setCustomValidity('Værsåsnill, skirv inn epost')" oninput="this.setCustomValidity('')">
       <br>
       <br>
       <label for="message" class="form-tag-message tag">Hva ønsker du fortelle oss?</label>
-      <textarea name="message" cols="30" rows="10"></textarea>
+      <textarea name="message" cols="30" rows="10" required oninvalid="this.setCustomValidity('Værsåsnill, skriv inn beskjed')" oninput="this.setCustomValidity('')"></textarea>
       <div class="form-actions">
-         <button type="submit" name="contact" value="contact">Send</button>
+         <button class="hover" type="submit" name="contact" value="contact">Send</button>
       </div>
    </form>
 </div>

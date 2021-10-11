@@ -16,6 +16,20 @@ html, body {
 .scroll-to{
   background: white;
 }
+.hover{
+  &:hover{
+    background: white;
+    color: rgb(60, 84, 160);
+    border: 2px solid rgb(60, 84, 160);
+    box-shadow: none;
+  }
+  &:active{
+    background: white;
+    color: rgb(60, 84, 160);
+    border: 2px solid rgb(60, 84, 160);
+    box-shadow: none;
+  }
+}
 .services{
   background: white;
   width: 100%;
@@ -88,7 +102,6 @@ html, body {
     button{
       margin-top: 10px;
       border-radius: 4px;
-      color: rgb(30, 30, 30);
       width: 100px;
       font-size: 15px;
       padding: 5px;
@@ -100,8 +113,9 @@ html, body {
       border: 2px solid transparent;
       &.active{
         background: white;
-        color: black;
-        border-color: black;
+        border-color: rgb(60, 84, 160);
+        box-shadow: none;
+        color: rgb(60, 84, 160);
       }
     }
   }
@@ -377,6 +391,20 @@ html, body {
     background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
     box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
     border: 2px solid transparent;
+    &.hover{
+      &:hover{
+        background: white;
+        color: rgb(60, 84, 160);
+        border: 2px solid rgb(60, 84, 160);
+        box-shadow: none;
+      }
+      &:active{
+        background: white;
+        color: rgb(60, 84, 160);
+        border: 2px solid rgb(60, 84, 160);
+        box-shadow: none;
+      }
+    }
   }
   .border{
     background: rgb(100, 100, 100);

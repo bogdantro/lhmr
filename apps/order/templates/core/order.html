@@ -96,7 +96,7 @@
            <br>
            <label for="hosting" class="form-tag-hosting tag">Vil du ha våres hosting tjeneste?</label>
            <br>
-           <input type="text" name="hosting" class="hosting input" id="hosting" readonly onclick="orderhostingDropdown()"><div class="hosting-price" id="hostingPrice" onclick="orderhostingDropdown()">0kr</div><div onclick="orderhostingDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
+           <input type="text" name="hosting" class="hosting input" id="hosting" readonly required oninvalid="this.setCustomValidity('Værsåsnill, velg ja eller nei')" oninput="this.setCustomValidity('')" onclick="orderhostingDropdown()"><div class="hosting-price" id="hostingPrice" onclick="orderhostingDropdown()">0kr</div><div onclick="orderhostingDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
            <div class="hosting-dropdown" id="hostingDropdown">
             <div class="dropdown-border">
                <h1 class="dropdown-none" onclick="noneHosting()">---------</h1>

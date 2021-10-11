@@ -10,10 +10,11 @@
   }
   .product-page{
       padding: 20px;
-      margin-top: 15px;
+      padding-top: 25px;
       position: relative;
       width: 100%;
       text-align: center;
+      background: white;
     h1{
         &.heading{
           width: 100%;
@@ -23,6 +24,39 @@
           font-weight: 700;
           font-size: 26px;
           text-align: center;
+        }
+      }
+      .product-info{
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        background: white;
+        display: flex;
+        h1{
+          &.subject{
+            width: 100%;
+            text-transform: uppercase;
+            font-family: 'Sniglet', cursive;
+            color: rgb(20, 44, 120);
+            font-size: 22px;
+            text-align: center;
+          }
+        }
+        .part-one{
+          width: 100%;
+          li{
+            text-align: left;
+            font-size: 14px;
+            color: rgb(20, 44, 120);
+          }
+        }
+        .part-two{
+          width: 100%;
+          p{
+            text-align: center;
+            font-size: 14px;
+            color: rgb(20, 44, 120);
+          }
         }
       }
   }

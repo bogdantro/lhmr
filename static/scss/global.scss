@@ -101,6 +101,20 @@
     text-align: left;
     width: 100%;
     display: flex;
+    .hover{
+      &:hover{
+        background: white;
+        color: rgb(60, 84, 160) !important;
+        border: 2px solid rgb(60, 84, 160);
+        box-shadow: none;
+      }
+      &:active{
+        background: white;
+        color: rgb(60, 84, 160) !important;
+        border: 2px solid rgb(60, 84, 160);
+        box-shadow: none;
+      }
+    }
     a{
       cursor: pointer;
       display: flex;
@@ -111,6 +125,7 @@
       margin-top: 10px;
       margin-right: 15px;
       border-radius: 4px;
+      color: white !important;
       width: max-content;
       font-size: 15px;
       padding: 8px 13px;
