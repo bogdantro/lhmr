@@ -270,7 +270,7 @@
 }
 
 #navbar .login-signup.active {
-  bottom: 70px;
+  bottom: 40px;
   opacity: 1;
   pointer-events: visible;
 }
@@ -333,7 +333,7 @@
           align-items: center;
   height: 55px;
   width: 100%;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 #navbar .login-signup .part-two a:active {

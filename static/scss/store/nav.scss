@@ -216,7 +216,7 @@ $primaryColor: #2d9cb3;
         pointer-events: none;
         transition: all .3s ease-in-out;
         &.active{
-            bottom: 70px;
+            bottom: 40px;
             opacity: 1;
             pointer-events: visible;
         }
@@ -259,7 +259,7 @@ $primaryColor: #2d9cb3;
                 align-items: center;
                 height: 55px;
                 width: 100%;
-                font-weight: bold;
+                font-weight: bolder;
                 &:active{
                     background: rgb(215, 215, 215);
                 }
