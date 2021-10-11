@@ -7,6 +7,10 @@ html, body {
   display: none;
 }
 
+.scroll-to {
+  background: white;
+}
+
 .services {
   background: white;
   width: 100%;
@@ -32,6 +36,7 @@ html, body {
   color: #142c78;
   font-weight: 700;
   font-size: 26px;
+  margin-bottom: 20px;
 }
 
 .services h1#servicesFirstText {
@@ -416,6 +421,23 @@ html, body {
   text-transform: uppercase;
   font-family: 'Sniglet', cursive;
   color: #3c54a0;
+}
+
+.hosting .home-order {
+  margin-top: 20px;
+  border-radius: 4px;
+  color: #1e1e1e;
+  width: 100px;
+  font-size: 15px;
+  padding: 5px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  color: white;
+  outline: none;
+  background: linear-gradient(135deg, #3c54a0, #7996f8);
+  -webkit-box-shadow: 1.5px 3px 2px #3c54a0;
+          box-shadow: 1.5px 3px 2px #3c54a0;
+  border: 2px solid transparent;
 }
 
 .hosting .border {

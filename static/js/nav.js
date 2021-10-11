@@ -16,7 +16,7 @@ function menu(){
     allContentArea.style.transition = '.5s';
     document.getElementById('myAccountIcon').style.pointerEvents = 'none';
     setTimeout(function(){
-      allContentArea.style.filter = 'brightness(50%)';
+      allContentArea.style.filter = 'brightness(60%)';
     }, 100)
   } else{
     html.style.overflow = 'unset'
@@ -29,6 +29,8 @@ function menu(){
     document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
   }
 };
+
+
 
 window.addEventListener("scroll", function(){
   const navbar = document.getElementById('navbar');
@@ -48,8 +50,8 @@ function signUpORLogin(){
     html.style.overflow = 'hidden'
     body.style.overflow = 'hidden'
     hamburger.style.pointerEvents = 'none'
-    allContentArea.style.filter = 'brightness(40%)';
-    navbar.classList.add("sticky")
+    allContentArea.style.filter = 'brightness(60%)';
+    navbar.classList.add("account-active")
 }
 function signUpORLoginBack(){
   const hamburger = document.getElementById('hamburger');
@@ -66,6 +68,7 @@ function signUpORLoginBack(){
     hamburger.style.pointerEvents = 'visible';  
     hamburger.style.filter = 'brightness(100%)'
     allContentArea.style.filter = 'brightness(100%)';
+    navbar.classList.remove("account-active")
     navbar.classList.toggle("sticky", window.scrollY > 1)
 }
 

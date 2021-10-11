@@ -2,17 +2,20 @@ $primaryColor: #2d9cb3;
 
 // STANDARD PHONE
 #navbar{
-    background: transparent;
+    background: white;
     z-index: 100000;
     width: 100%;
     height: 60px;
     padding-bottom: 5px;
     position: fixed;
-    top: 0;
+    top: 0px;
     display: flex;
     align-items: center;
     transition: .3s;
     border-bottom: 1px solid rgba(200, 200, 200, 0.7);
+    &.account-active{
+        top: -60px;
+    }
     &.sticky{
         background: white;
         box-shadow: 0px 3px 5px rgb(20, 44, 120);
@@ -201,48 +204,66 @@ $primaryColor: #2d9cb3;
         }
     }
     .login-signup{
-        text-align: center;
-        width: 85%;
+        width: 97%;
         height: auto;
-        padding: 10px;
+        text-align: center;
         position: fixed;
-        top: 50px;
+        bottom: -60px;
         left: 50%;
         transform: translateX(-50%);
+        border-radius: 15px;
         opacity: 0;
-        background: white;
-        border-radius: 25px;
-        transition: all .6s ease-in-out;
         pointer-events: none;
-        a{
-            display: inline-block;
-            border-radius: 4px;
-            color: rgb(30, 30, 30);
-            display: inline-block;
-            text-decoration: none;
-            width: 60%;
-            font-size: 18px;
-            margin: 25px;
-            margin-left: 0;
-            margin-right: 0;
-            padding: 5px;
-            transition: all .5s ease-in-out;
-            outline: none;
-            background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
-            box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
-            border: 2px solid transparent;
-            cursor: pointer;
-            color: white;
-            &:nth-child(3){
-                color: rgb(72, 90, 185);
-                background: transparent;
-                box-shadow: none;
-            }
-        }
+        transition: all .3s ease-in-out;
         &.active{
-            top: 80px;
+            bottom: 20px;
             opacity: 1;
             pointer-events: visible;
+        }
+        .part-one{
+            border-radius: 10px;
+            background: rgb(235, 235, 235);
+            width: 100%;
+            #logOut{
+                color: rgb(248, 18, 18);
+            }
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 47px;
+                width: 100%;
+                border-bottom: 1px solid rgb(225, 225, 225);
+                font-size: 17px;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                &:active{
+                    background: rgb(215, 215, 215);
+                }
+                &:nth-child(2){
+                    border-bottom-right-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    border: none;
+                }
+            }
+        }
+        .part-two{
+            border-radius: 10px;
+            background: white;
+            margin: 7px 0;
+            a{
+                border-radius: 10px;
+                font-size: 17px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 47px;
+                width: 100%;
+                font-weight: bold;
+                &:active{
+                    background: rgb(215, 215, 215);
+                }
+            }
         }
         .my-account{
             width: 100%;

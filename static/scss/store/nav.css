@@ -1,11 +1,11 @@
 #navbar {
-  background: transparent;
+  background: white;
   z-index: 100000;
   width: 100%;
   height: 60px;
   padding-bottom: 5px;
   position: fixed;
-  top: 0;
+  top: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,6 +15,10 @@
   -webkit-transition: .3s;
   transition: .3s;
   border-bottom: 1px solid rgba(200, 200, 200, 0.7);
+}
+
+#navbar.account-active {
+  top: -60px;
 }
 
 #navbar.sticky {
@@ -250,57 +254,90 @@
 }
 
 #navbar .login-signup {
-  text-align: center;
-  width: 85%;
+  width: 97%;
   height: auto;
-  padding: 10px;
+  text-align: center;
   position: fixed;
-  top: 50px;
+  bottom: -60px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  border-radius: 15px;
   opacity: 0;
-  background: white;
-  border-radius: 25px;
-  -webkit-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
   pointer-events: none;
-}
-
-#navbar .login-signup a {
-  display: inline-block;
-  border-radius: 4px;
-  color: #1e1e1e;
-  display: inline-block;
-  text-decoration: none;
-  width: 60%;
-  font-size: 18px;
-  margin: 25px;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 5px;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-  outline: none;
-  background: linear-gradient(135deg, #3c54a0, #7996f8);
-  -webkit-box-shadow: 1.5px 3px 2px #3c54a0;
-          box-shadow: 1.5px 3px 2px #3c54a0;
-  border: 2px solid transparent;
-  cursor: pointer;
-  color: white;
-}
-
-#navbar .login-signup a:nth-child(3) {
-  color: #485ab9;
-  background: transparent;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 #navbar .login-signup.active {
-  top: 80px;
+  bottom: 20px;
   opacity: 1;
   pointer-events: visible;
+}
+
+#navbar .login-signup .part-one {
+  border-radius: 10px;
+  background: #ebebeb;
+  width: 100%;
+}
+
+#navbar .login-signup .part-one #logOut {
+  color: #f81212;
+}
+
+#navbar .login-signup .part-one a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 47px;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 17px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+#navbar .login-signup .part-one a:active {
+  background: #d7d7d7;
+}
+
+#navbar .login-signup .part-one a:nth-child(2) {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: none;
+}
+
+#navbar .login-signup .part-two {
+  border-radius: 10px;
+  background: white;
+  margin: 7px 0;
+}
+
+#navbar .login-signup .part-two a {
+  border-radius: 10px;
+  font-size: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 47px;
+  width: 100%;
+  font-weight: bold;
+}
+
+#navbar .login-signup .part-two a:active {
+  background: #d7d7d7;
 }
 
 #navbar .login-signup .my-account {
