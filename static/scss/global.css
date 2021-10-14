@@ -124,9 +124,19 @@
 }
 
 .cover-mobile .cover-text h1 span {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 30px;
-  color: #324a96;
+  color: transparent;
+}
+
+.cover-mobile .cover-text h1 span .text-overlay {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: auto;
+  background: -webkit-gradient(linear, left top, right top, from(#7a97f8), to(#324a96));
+  background: linear-gradient(to right, #7a97f8, #324a96);
+  -webkit-background-clip: text;
 }
 
 .cover-mobile .cover-text p {

@@ -84,9 +84,15 @@
       color: rgb(60, 84, 160);
       font-weight: 500;
       span{
-        font-weight: 700;
+        font-weight: 900;
         font-size: 30px;
-        color: rgb(50, 74, 150);
+        color: transparent;
+        .text-overlay{
+          width: max-content;
+          height: auto;
+          background: linear-gradient(to right, rgb(122, 151, 248), rgb(50, 74, 150));
+          -webkit-background-clip: text;
+        }
       }
     }
     p{
