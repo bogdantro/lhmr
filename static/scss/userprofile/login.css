@@ -46,6 +46,7 @@
 }
 
 .login-signup #loginForm .part-one button {
+  color: #0f0f0f;
   background: white;
   border: none;
   display: -webkit-box;

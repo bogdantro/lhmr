@@ -286,6 +286,7 @@
 }
 
 #navbar .login-signup .part-one a {
+  color: #0f0f0f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -98,6 +98,7 @@
 }
 
 .login-signup #signUpForm .part-one button {
+  color: #0f0f0f;
   margin-top: 25px;
   background: white;
   border: none;

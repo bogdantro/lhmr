@@ -1,6 +1,9 @@
 // STANDARD PHONE
 .cover-mobile{ 
     height: 60vh;
+    .img{
+      box-shadow: 0px 5px 5px rgb(60, 84, 160);
+    }
     .cover-text{
       transform: translateY(-60px);
     }
