@@ -1,6 +1,19 @@
+.cover-mobile {
+  height: 55vh;
+  padding-bottom: 40px;
+}
+
+.cover-mobile .img {
+  -webkit-box-shadow: 0px 5px 5px #3c54a0;
+          box-shadow: 0px 5px 5px #3c54a0;
+}
+
+.cover-mobile .cover-text {
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
+}
+
 .product-page {
-  padding: 20px;
-  padding-top: 25px;
   position: relative;
   width: 100%;
   text-align: center;

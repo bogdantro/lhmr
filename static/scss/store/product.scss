@@ -1,7 +1,15 @@
 // STANDARD PHONE
+.cover-mobile{ 
+    height: 55vh;
+    padding-bottom: 40px;
+    .img{
+      box-shadow: 0px 5px 5px rgb(60, 84, 160);
+    }
+    .cover-text{
+      transform: translateY(-60px);
+    }
+  }
   .product-page{
-      padding: 20px;
-      padding-top: 25px;
       position: relative;
       width: 100%;
       text-align: center;
