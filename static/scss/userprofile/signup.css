@@ -2,10 +2,15 @@
   text-align: left;
   width: auto;
   display: none;
-  margin: 5px;
 }
 
-.login-signup #signUpForm .form-tag-username {
+.login-signup #signUpForm .part-one {
+  border-radius: 10px;
+  background: white !important;
+  width: 100%;
+}
+
+.login-signup #signUpForm .part-one .form-tag-username {
   font-size: 15px;
   color: #3c54a0;
   background: white;
@@ -14,11 +19,11 @@
   width: max-content;
   padding: 0 2px;
   position: absolute;
-  left: 25px;
-  top: 28px;
+  left: 20px;
+  top: 13px;
 }
 
-.login-signup #signUpForm .form-tag-first_name {
+.login-signup #signUpForm .part-one .form-tag-first_name {
   font-size: 15px;
   color: #3c54a0;
   background: white;
@@ -27,11 +32,11 @@
   width: max-content;
   padding: 0 2px;
   position: absolute;
-  left: 25px;
-  top: 93px;
+  left: 20px;
+  top: 78px;
 }
 
-.login-signup #signUpForm .form-tag-last_name {
+.login-signup #signUpForm .part-one .form-tag-last_name {
   font-size: 15px;
   color: #3c54a0;
   background: white;
@@ -40,11 +45,11 @@
   width: max-content;
   padding: 0 2px;
   position: absolute;
-  left: 25px;
-  top: 155px;
+  left: 20px;
+  top: 142px;
 }
 
-.login-signup #signUpForm .form-tag-email {
+.login-signup #signUpForm .part-one .form-tag-email {
   font-size: 15px;
   color: #3c54a0;
   background: white;
@@ -53,11 +58,11 @@
   width: max-content;
   padding: 0 2px;
   position: absolute;
-  left: 25px;
-  top: 221px;
+  left: 20px;
+  top: 205px;
 }
 
-.login-signup #signUpForm .form-tag-password1 {
+.login-signup #signUpForm .part-one .form-tag-password1 {
   font-size: 15px;
   color: #3c54a0;
   background: white;
@@ -66,11 +71,11 @@
   width: max-content;
   padding: 0 2px;
   position: absolute;
-  left: 25px;
-  top: 285px;
+  left: 20px;
+  top: 270px;
 }
 
-.login-signup #signUpForm .form-tag-password2 {
+.login-signup #signUpForm .part-one .form-tag-password2 {
   font-size: 15px;
   color: #3c54a0;
   background: white;
@@ -79,11 +84,11 @@
   width: max-content;
   padding: 0 2px;
   position: absolute;
-  left: 25px;
-  top: 348px;
+  left: 20px;
+  top: 334px;
 }
 
-.login-signup #signUpForm input {
+.login-signup #signUpForm .part-one input {
   width: 100%;
   border: 2px solid #3c54a0;
   border-radius: 4px;
@@ -92,55 +97,57 @@
   font-size: 15px;
 }
 
-.login-signup #signUpForm #submit {
-  text-align: center;
-  width: auto;
-}
-
-.login-signup #signUpForm button {
-  margin: 15px;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.login-signup #signUpForm span {
-  margin: 15px;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.login-signup #signUpForm #signUpFormButton {
-  border-radius: 4px;
-  display: inline-block;
-  text-decoration: none;
-  width: 60%;
+.login-signup #signUpForm .part-one button {
+  margin-top: 25px;
+  background: white;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  width: 100%;
+  border-top: 1px solid #e1e1e1;
   font-size: 18px;
-  padding: 5px;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-  color: white;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   outline: none;
-  background: linear-gradient(135deg, #3c54a0, #7996f8);
-  -webkit-box-shadow: 1.5px 3px 2px #3c54a0;
-          box-shadow: 1.5px 3px 2px #3c54a0;
-  border: 2px solid transparent;
-  margin-top: 20px;
 }
 
-.login-signup #signUpForm span {
-  text-align: center;
-  border-radius: 30px;
-  border: 2px solid transparent;
-  color: #1e1e1e;
-  display: inline-block;
-  text-decoration: none;
-  width: 60%;
+.login-signup #signUpForm .part-one button:active {
+  background: #d7d7d7;
+}
+
+.login-signup #signUpForm .part-two {
+  border-radius: 10px;
+  background: white;
+  margin: 7px 0;
+}
+
+.login-signup #signUpForm .part-two a {
+  border-radius: 10px;
   font-size: 18px;
-  padding: 5px;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-  color: #485ab9;
-  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  width: 100%;
+  font-weight: bolder;
+}
+
+.login-signup #signUpForm .part-two a:active {
+  background: #d7d7d7;
 }
 
 .login-signup #signUpForm.active {

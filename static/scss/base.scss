@@ -109,12 +109,12 @@ html, body {
       color: white;
       outline: none;
       background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
-      box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
+      box-shadow: 1px 2px 2px rgb(60, 84, 160);
       border: 2px solid transparent;
+      outline: none;
       &.active{
         background: white;
-        border-color: rgb(60, 84, 160);
-        box-shadow: none;
+        border: 2px solid rgb(60, 84, 160);
         color: rgb(60, 84, 160);
       }
     }
@@ -387,11 +387,11 @@ html, body {
     padding: 5px;
     transition: all .2s ease-in-out;
     color: white;
+    border: 2px solid transparent;
     outline: none;
     background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
-    box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
-    border: 2px solid transparent;
-    &.hover{
+    box-shadow: 1px 2px 2px rgb(60, 84, 160);
+  &.hover{
       &:hover{
         background: white;
         color: rgb(60, 84, 160);

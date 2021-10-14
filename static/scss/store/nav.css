@@ -148,8 +148,8 @@
   position: absolute;
   top: 60px;
   right: -65%;
-  -webkit-transition: all .7s ease-in-out;
-  transition: all .7s ease-in-out;
+  -webkit-transition: .7s ease-in-out;
+  transition: .7s ease-in-out;
 }
 
 #navbar .sidebar img {
@@ -270,7 +270,7 @@
 }
 
 #navbar .login-signup.active {
-  bottom: 45px;
+  bottom: 15px;
   opacity: 1;
   pointer-events: visible;
 }
@@ -295,7 +295,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 55px;
+  height: 60px;
   width: 100%;
   border-bottom: 1px solid #e1e1e1;
   font-size: 18px;
@@ -331,7 +331,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 55px;
+  height: 60px;
   width: 100%;
   font-weight: bolder;
 }

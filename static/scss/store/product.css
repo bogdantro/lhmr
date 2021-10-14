@@ -1,14 +1,14 @@
 .cover-mobile {
-  height: 55vh;
+  height: 55vh !important;
 }
 
 .cover-mobile .cover-text {
-  -webkit-transform: translateY(-60px);
-          transform: translateY(-60px);
+  -webkit-transform: translateY(-60px) !important;
+          transform: translateY(-60px) !important;
 }
 
 .cover-mobile .cover-text img {
-  top: 90px;
+  top: 90px !important;
 }
 
 .product-page {

@@ -4,118 +4,115 @@
         text-align: left;
         width: auto;
         display: none;
-        margin: 5px;
-        .form-tag-username{
-            font-size: 15px;
-            color: rgb(60, 84, 160);
-            background: white;
-            width: max-content;
-            padding: 0 2px;
-            position: absolute;
-            left: 25px;
-            top: 28px;
-        }
-        .form-tag-first_name{
-            font-size: 15px;
-            color: rgb(60, 84, 160);
-            background: white;
-            width: max-content;
-            padding: 0 2px;
-            position: absolute;
-            left: 25px;
-            top: 93px;
-        }
-        .form-tag-last_name{
-            font-size: 15px;
-            color: rgb(60, 84, 160);
-            background: white;
-            width: max-content;
-            padding: 0 2px;
-            position: absolute;
-            left: 25px;
-            top: 155px;
-        }
-        .form-tag-email{
-            font-size: 15px;
-            color: rgb(60, 84, 160);
-            background: white;
-            width: max-content;
-            padding: 0 2px;
-            position: absolute;
-            left: 25px;
-            top: 221px;
-        }
-        .form-tag-password1{
-            font-size: 15px;
-            color: rgb(60, 84, 160);
-            background: white;
-            width: max-content;
-            padding: 0 2px;
-            position: absolute;
-            left: 25px;
-            top: 285px;
-        }
-        .form-tag-password2{
-            font-size: 15px;
-            color: rgb(60, 84, 160);
-            background: white;
-            width: max-content;
-            padding: 0 2px;
-            position: absolute;
-            left: 25px;
-            top: 348px;
-        }
-        input{
+        .part-one{
+            border-radius: 10px;
+            background: white !important;
             width: 100%;
-            border: 2px solid rgb(60, 84, 160);
-            border-radius: 4px;
-            padding: 7px;
-            outline: none;
-            font-size: 15px;      
+            .form-tag-username{
+                font-size: 15px;
+                color: rgb(60, 84, 160);
+                background: white;
+                width: max-content;
+                padding: 0 2px;
+                position: absolute;
+                left: 20px;
+                top: 13px;
+            }
+            .form-tag-first_name{
+                font-size: 15px;
+                color: rgb(60, 84, 160);
+                background: white;
+                width: max-content;
+                padding: 0 2px;
+                position: absolute;
+                left: 20px;
+                top: 78px;
+            }
+            .form-tag-last_name{
+                font-size: 15px;
+                color: rgb(60, 84, 160);
+                background: white;
+                width: max-content;
+                padding: 0 2px;
+                position: absolute;
+                left: 20px;
+                top: 142px;
+            }
+            .form-tag-email{
+                font-size: 15px;
+                color: rgb(60, 84, 160);
+                background: white;
+                width: max-content;
+                padding: 0 2px;
+                position: absolute;
+                left: 20px;
+                top: 205px;
+            }
+            .form-tag-password1{
+                font-size: 15px;
+                color: rgb(60, 84, 160);
+                background: white;
+                width: max-content;
+                padding: 0 2px;
+                position: absolute;
+                left: 20px;
+                top: 270px;
+            }
+            .form-tag-password2{
+                font-size: 15px;
+                color: rgb(60, 84, 160);
+                background: white;
+                width: max-content;
+                padding: 0 2px;
+                position: absolute;
+                left: 20px;
+                top: 334px;
+            }
+            input{
+                width: 100%;
+                border: 2px solid rgb(60, 84, 160);
+                border-radius: 4px;
+                padding: 7px;
+                outline: none;
+                font-size: 15px;  
+            }
+            button{
+                margin-top: 25px;
+                background: white;
+                border: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60px;
+                width: 100%;
+                border-top: 1px solid rgb(225, 225, 225);
+                font-size: 18px;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                outline: none;
+                &:active{
+                    background: rgb(215, 215, 215);
+                }
+            }
         }
-        #submit{
-            text-align: center;
-            width: auto;
+        .part-two{
+            border-radius: 10px;
+            background: white;
+            margin: 7px 0;
+            a{
+                border-radius: 10px;
+                font-size: 18px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60px;
+                width: 100%;
+                font-weight: bolder;
+                &:active{
+                    background: rgb(215, 215, 215);
+                }
+            }
         }
-        button{
-            margin: 15px;
-            margin-left: 0;
-            margin-right: 0;
-        }
-        span{
-            margin: 15px;
-            margin-left: 0;
-            margin-right: 0;
-        }
-        #signUpFormButton{
-            border-radius: 4px;
-            display: inline-block;
-            text-decoration: none;
-            width: 60%;
-            font-size: 18px;
-            padding: 5px;
-            transition: all .5s ease-in-out;
-            color: white;
-            outline: none;
-            background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
-            box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
-            border: 2px solid transparent;      
-            margin-top: 20px;
-        }
-        span{
-            text-align: center;
-            border-radius: 30px;
-            border: 2px solid transparent;
-            color: rgb(30, 30, 30);
-            display: inline-block;
-            text-decoration: none;
-            width: 60%;
-            font-size: 18px;
-            padding: 5px;
-            transition: all .5s ease-in-out;
-            color: rgb(72, 90, 185);
-            background: transparent;
-    }
         &.active{
             display: block;
         }

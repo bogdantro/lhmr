@@ -86,10 +86,10 @@ function myAccountBack(){
 function login(){  
   document.getElementById('loginForm').classList.add('active')
   document.getElementById('myAccountIcon').style.pointerEvents = 'none';
-  document.getElementById('choose').style.display = 'none';
+  document.getElementById('signUpOrLogin').style.display = 'none';
 }
 function loginBack(){
-  document.getElementById('choose').style.display = 'block';
+  document.getElementById('signUpOrLogin').style.display = 'block';
   document.getElementById('loginForm').classList.remove('active')
   document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
 }
@@ -97,10 +97,10 @@ function loginBack(){
 function signup(){  
   document.getElementById('signUpForm').classList.add('active')
   document.getElementById('myAccountIcon').style.pointerEvents = 'none';
-  document.getElementById('choose').style.display = 'none';
+  document.getElementById('signUpOrLogin').style.display = 'none';
 }
 function signUpBack(){
-  document.getElementById('choose').style.display = 'block';
+  document.getElementById('signUpOrLogin').style.display = 'block';
   document.getElementById('signUpForm').classList.remove('active')
   document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
 }
