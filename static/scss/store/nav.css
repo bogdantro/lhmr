@@ -145,7 +145,7 @@
   background: white;
   width: 65%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 60px;
   right: -65%;
   -webkit-transition: .7s ease-in-out;
