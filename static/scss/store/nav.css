@@ -223,6 +223,8 @@
 }
 
 #navbar .sidebar.active {
+  transition: .7s ease-in-out;
+  -webkit-transition: .7s ease-in-out;
   pointer-events: visible;
   right: 0;
 }

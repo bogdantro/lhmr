@@ -178,6 +178,8 @@ $primaryColor: #2d9cb3;
             }
         }
         &.active{
+            transition: .7s ease-in-out;
+            -webkit-transition: .7s ease-in-out;    
             pointer-events: visible;
             right: 0;
         }
