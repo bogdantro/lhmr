@@ -18,10 +18,30 @@
 
 
 <div id="navbar">
+    <!-- LOGO -->
+    <div class="logo" id="logo" onclick="window.location.href='/'">
+        <h1>Webiser</h1>
+    </div>
+    <!-- MENU -->
+        <!-- HAMBURGER -->
+        <div class="hamburger" id="hamburger" onclick="menu()">
+            <span class="upper-span"></span>
+            <span class="center-span"></span>
+            <span class="lower-span"></span>
+        </div>
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="sidebar"></div>
+    <!-- USER -->
+    <a onclick="myaccount()" class="my-account-icon" id="myAccountIcon">
+        <i class="far fa-user-astronaut"></i>    
+    </a>
+</div>
+
+
+<!-- <div id="navbar">
     <div class="logo" id="logo" onclick="window.location.href='/'">
         <h1 class="logo1" alt="logo1">Webiser</h1>
     </div>
-    <!-- PHONE -->
     <div class="hamburger" id="hamburger" onclick="menu()">
         <span class="upper-span"></span>
         <span class="center-span"></span>
@@ -39,7 +59,6 @@
         </ul>
         <img src="{% static '/images/other/sidebar-bottom-img.png' %}" class="sidebar-bottom-img" alt="sidebar-bottom-img">
     </div>
-    <!-- PHONE END -->
     <a onclick="signUpORLogin()" class="my-account-icon" id="myAccountIcon">
         <i class="far fa-user-astronaut"></i>    
     </a>
@@ -126,7 +145,6 @@
     </div>
         
     <a href="/bestill" class="order" id="makeOrder">Bestill</a>
-    <!-- DESKTOP -->
     <div class="desktop-menu">
         <ul class="desktop-ul">
             <li class="desktop-li" id="desktopLi">
@@ -138,6 +156,6 @@
             </li>   
         </ul>
     </div>
-</div>
+</div> -->
 
 

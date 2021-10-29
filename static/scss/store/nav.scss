@@ -1,80 +1,43 @@
-$primaryColor: #2d9cb3;
 
 // STANDARD PHONE
 #navbar{
+    // NAVBAR CSS
     background: white;
-    z-index: 100000;
+    z-index: 100;
     width: 100%;
     height: 60px;
-    padding-bottom: 5px;
     position: fixed;
     top: 0px;
     display: flex;
     align-items: center;
-    transition: .3s;
     border-bottom: 1px solid rgba(200, 200, 200, 0.7);
-    &.account-active{
-        top: -60px;
-    }
-    &.sticky{
-        background: white;
-        box-shadow: 0px 3px 5px rgb(20, 44, 120);
-        border-color: transparent;
-        .hamburger{
-            span{
-                background: black;
-            }
-        }
-        .my-account-icon{
-            i{
-                color: black;
-            }
-        }
-    }
-    &.menu-active{
-        background: white;
-        .hamburger{
-            span{
-                background: black;
-            }
-        }
-        .my-account-icon{
-            i{
-                color: black;
-            }
-        }
-    }
-    .desktop-menu{
-        display: none;
-    }
+    // LOGO CSS 
     .logo{
         cursor: pointer;
-        margin: 0;
         position: absolute;
         left: 20px;
-        top: 8px;
         width: auto;
-        height: 100%;
+        height: auto;
         h1{
+            margin: 0;
             font-family: 'Indie Flower', cursive;
             color: rgb(60, 84, 160);
-            font-size: 32px;
-            height: 100%;
-            width: max-content;
-            height: max-content;
+            font-size: 30px;
             transition: all 0.2s ease-in-out;
         }
     }
+    // // // MENU CSS
+    // HAMBURGER CSS
     .hamburger{
-        margin: 0;
-        padding: 5px;
+        padding: 15px;
         padding-top: 20px;
-        padding-bottom: 20px;
-        position: absolute;
-        right: 15px;
-        height: auto;
+        padding-bottom: 23px;
+        margin: 0;
         transform: rotate(180deg);
-        border-radius: .5em;
+        width: auto;
+        height: auto;
+        position: absolute;
+        right: 0;
         span{
             display: block;
             width: 20px;
@@ -83,34 +46,31 @@ $primaryColor: #2d9cb3;
             transition: all 0.2s ease-in-out;
         }
         .upper-span{
-            margin-bottom: 6px;
+            margin-bottom: 5px;
         }
         .center-span{
-            transition: all 0.4 ease-in-out;
             opacity: 1;
-            transform: translateX(-8px);
+            transform: translateX(-6px);
         }
         .lower-span{
-            margin-top: 6px;
+            margin-top: 5px;
         }
         &.click{
-            border: 1px solid rgb(72, 90, 185);
-            .upper-span{
-                margin-bottom: -3.5px;
-                transform: rotate(45deg);
-                width: 20px;
-            }
+            background: linear-gradient(to top, rgb(230, 230, 230), rgb(245, 245, 245), rgb(230, 230, 230));
+            animation-name: hamburger-scale;
+            animation-duration: .1s;
             .center-span{
-                transform: translateX(-20px);
                 opacity: 0;
-            }
-            .lower-span{
-                margin-top: 0;
-                transform: rotate(-45deg);
-                width: 20px;
+                transform: translateX(-16px);
             }
         }
+        // HAMBURGER CSS KEYFRAMES ANIMATION
+        @keyframes hamburger-scale {
+            0%   {transform: scale(1) rotate(180deg);}
+            100% {transform: scale(1.2) rotate(180deg);}
+        }
     }
+    // SIDEBAR
     .sidebar{
         pointer-events: none;
         background: rgb(255, 255, 255);
@@ -120,196 +80,265 @@ $primaryColor: #2d9cb3;
         top: 60px;
         right: -65%;
         transition: .7s ease-in-out;
-        -webkit-transition: .7s ease-in-out;
-        img{
-            position: absolute;
-            right: 0;
-            bottom: 15px;
-            width: auto;
-            height: auto;
-        }
-        .sidebar-ul{
-            position: relative;
-            width: 100%;
-            text-align: center;
-            .sidebar-li{
-                list-style: none;
-                a{
-                    border: 2px solid transparent;
-                    color: rgb(72, 90, 185);
-                    display: inline-block;
-                    text-decoration: none;
-                    width: 60%;
-                    font-size: 18px;
-                    margin: 25px auto;
-                    padding: 5px;
-                    opacity: 0;
-                    transition: all .5s ease-in-out;
-                }
-                :nth-child(5){
-                    border: 2px solid transparent;
-                    background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
-                    border-radius: 4px;
-                    color: white;
-                    box-shadow: 0px 5px 2px rgb(60, 84, 160);
-                }
-                &.active{
-                    :nth-child(1){
-                        opacity: 1;
-                        transition: 1s ease-in-out 0.2s;
-                    }
-                    :nth-child(2){
-                        opacity: 1;
-                        transition: 1s ease-in-out 0.4s;
-                    }
-                    :nth-child(3){
-                        opacity: 1;
-                        transition: 1s ease-in-out 0.6s;
-                    }
-                    :nth-child(4){
-                        opacity: 1;
-                        transition: 1s ease-in-out 0.8s;
-                    }
-                    :nth-child(5){
-                        opacity: 1;
-                        transition: 1s ease-in-out 1s;
-                    }
-                }
-            }
-        }
         &.active{
-            transition: .7s ease-in-out;
-            -webkit-transition: .7s ease-in-out;    
-            pointer-events: visible;
             right: 0;
+            pointer-events: visible;
         }
-    }
+    }    
+    // USER CSS
     .my-account-icon{
         margin: 0;
         position: absolute;
-        right: 60px;
+        right: 50px;
         cursor: pointer;
-        padding: 5px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-radius: .5em;
-        pointer-events: visible;
-        border: 1px solid transparent;
+        padding: 15px;
+        padding-top: 20px;
+        width: auto;
+        height: auto;
         i{
             color: black;
             font-size: 22px;
-            transition: all 0.2s ease-in-out;
         }
-        &.active{
-            border-color: rgb(72, 90, 185);    
-            pointer-events: none;      
-        }
-    }
-    .login-signup{
-        width: 97%;
-        height: auto;
-        text-align: center;
-        position: fixed;
-        bottom: -60px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 15px;
-        opacity: 0;
-        pointer-events: none;
-        transition: all .3s ease-in-out;
-        &.active{
-            bottom: 15px;
-            opacity: 1;
-            pointer-events: visible;
-        }
-        .part-one{
-            border-radius: 10px;
-            background: rgb(235, 235, 235);
-            width: 100%;
-            #logOut{
-                color: rgb(248, 18, 18);
-            }
-            a{
-                color: rgb(15, 15, 15);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 60px;
-                width: 100%;
-                border-bottom: 1px solid rgb(225, 225, 225);
-                font-size: 18px;
-                border-top-right-radius: 10px;
-                border-top-left-radius: 10px;
-                &:active{
-                    background: rgb(215, 215, 215);
-                }
-                &:nth-child(2){
-                    border-bottom-right-radius: 10px;
-                    border-bottom-left-radius: 10px;
-                    border: none;
-                }
+        &.click{
+            background: linear-gradient(to top, rgb(230, 230, 230), rgb(245, 245, 245), rgb(230, 230, 230));  
+            i{
+                animation-name: user-scale;
+                animation-duration: .1s;
             }
         }
-        .part-two{
-            border-radius: 10px;
-            background: white;
-            margin: 7px 0;
-            a{
-                border-radius: 10px;
-                font-size: 18px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 60px;
-                width: 100%;
-                font-weight: bolder;
-                &:active{
-                    background: rgb(215, 215, 215);
-                }
-            }
-        }
-        .my-account{
-            width: 100%;
-            display: none;
-            a{
-                margin: 15px;
-                margin-left: 0;
-                margin-right: 0;
-            }
-            .my-orders{
-                outline: none;
-                background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
-                box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
-                border: 2px solid transparent;  
-                color: white;    
-                }
-            .my-account-back{
-                color: rgb(72, 90, 185);
-                background: transparent;
-                border-color: transparent;
-                box-shadow: none;
-            }
-            &.active{
-                display: block;
-            }
+        // USER CSS KEYFRAMES ANIMATION
+        @keyframes user-scale {
+            0%   {transform: scale(1);}
+            100% {transform: scale(1.2);}
         }
     }
-    .order{
-        margin: 0;
-        position: absolute;
-        right: 105px;
-        cursor: pointer;
-        color: white;
-        padding: 5px 8px;
-        width: max-content;
-        text-align: center;
-        border-radius: 7px;
-        transition: all 0.2s ease-in;
-        font-size: 14px;
-        border-radius: 4px;
-        background: linear-gradient(135deg,rgb(60, 84, 160), #6e8efb);    
-      }
 }
+
+// #navbar{
+//     background: white;
+//     z-index: 100000;
+//     width: 100%;
+//     height: 60px;
+//     padding-bottom: 5px;
+//     position: fixed;
+//     top: 0px;
+//     display: flex;
+//     align-items: center;
+//     transition: .3s;
+//     border-bottom: 1px solid rgba(200, 200, 200, 0.7);
+//     &.account-active{
+//         top: -60px;
+//     }
+//     &.sticky{
+//         background: white;
+//         box-shadow: 0px 3px 5px rgb(20, 44, 120);
+//         border-color: transparent;
+//         .hamburger{
+//             span{
+//                 background: black;
+//             }
+//         }
+//         .my-account-icon{
+//             i{
+//                 color: black;
+//             }
+//         }
+//     }
+//     &.menu-active{
+//         background: white;
+//         .hamburger{
+//             span{
+//                 background: black;
+//             }
+//         }
+//         .my-account-icon{
+//             i{
+//                 color: black;
+//             }
+//         }
+//     }
+//     .desktop-menu{
+//         display: none;
+//     }
+// 
+//     .sidebar{
+//         pointer-events: none;
+//         background: rgb(255, 255, 255);
+//         width: 65%;
+//         height: 100vh;
+//         position: absolute;
+//         top: 60px;
+//         right: -65%;
+//         transition: .7s ease-in-out;
+//         -webkit-transition: .7s ease-in-out;
+//         img{
+//             position: absolute;
+//             right: 0;
+//             bottom: 15px;
+//             width: auto;
+//             height: auto;
+//         }
+//         .sidebar-ul{
+//             position: relative;
+//             width: 100%;
+//             text-align: center;
+//             .sidebar-li{
+//                 list-style: none;
+//                 a{
+//                     border: 2px solid transparent;
+//                     color: rgb(72, 90, 185);
+//                     display: inline-block;
+//                     text-decoration: none;
+//                     width: 60%;
+//                     font-size: 18px;
+//                     margin: 25px auto;
+//                     padding: 5px;
+//                     opacity: 0;
+//                     transition: all .5s ease-in-out;
+//                 }
+//                 :nth-child(5){
+//                     border: 2px solid transparent;
+//                     background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
+//                     border-radius: 4px;
+//                     color: white;
+//                     box-shadow: 0px 5px 2px rgb(60, 84, 160);
+//                 }
+//                 &.active{
+//                     :nth-child(1){
+//                         opacity: 1;
+//                         transition: 1s ease-in-out 0.2s;
+//                     }
+//                     :nth-child(2){
+//                         opacity: 1;
+//                         transition: 1s ease-in-out 0.4s;
+//                     }
+//                     :nth-child(3){
+//                         opacity: 1;
+//                         transition: 1s ease-in-out 0.6s;
+//                     }
+//                     :nth-child(4){
+//                         opacity: 1;
+//                         transition: 1s ease-in-out 0.8s;
+//                     }
+//                     :nth-child(5){
+//                         opacity: 1;
+//                         transition: 1s ease-in-out 1s;
+//                     }
+//                 }
+//             }
+//         }
+//         &.active{
+//             transition: .7s ease-in-out;
+//             -webkit-transition: .7s ease-in-out;    
+//             pointer-events: visible;
+//             right: 0;
+//         }
+//     }
+//     .login-signup{
+//         width: 97%;
+//         height: auto;
+//         text-align: center;
+//         position: fixed;
+//         bottom: -60px;
+//         left: 50%;
+//         transform: translateX(-50%);
+//         border-radius: 15px;
+//         opacity: 0;
+//         pointer-events: none;
+//         transition: all .3s ease-in-out;
+//         &.active{
+//             bottom: 15px;
+//             opacity: 1;
+//             pointer-events: visible;
+//         }
+//         .part-one{
+//             border-radius: 10px;
+//             background: rgb(235, 235, 235);
+//             width: 100%;
+//             #logOut{
+//                 color: rgb(248, 18, 18);
+//             }
+//             a{
+//                 color: rgb(15, 15, 15);
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 height: 60px;
+//                 width: 100%;
+//                 border-bottom: 1px solid rgb(225, 225, 225);
+//                 font-size: 18px;
+//                 border-top-right-radius: 10px;
+//                 border-top-left-radius: 10px;
+//                 &:active{
+//                     background: rgb(215, 215, 215);
+//                 }
+//                 &:nth-child(2){
+//                     border-bottom-right-radius: 10px;
+//                     border-bottom-left-radius: 10px;
+//                     border: none;
+//                 }
+//             }
+//         }
+//         .part-two{
+//             border-radius: 10px;
+//             background: white;
+//             margin: 7px 0;
+//             a{
+//                 border-radius: 10px;
+//                 font-size: 18px;
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 height: 60px;
+//                 width: 100%;
+//                 font-weight: bolder;
+//                 &:active{
+//                     background: rgb(215, 215, 215);
+//                 }
+//             }
+//         }
+//         .my-account{
+//             width: 100%;
+//             display: none;
+//             a{
+//                 margin: 15px;
+//                 margin-left: 0;
+//                 margin-right: 0;
+//             }
+//             .my-orders{
+//                 outline: none;
+//                 background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
+//                 box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
+//                 border: 2px solid transparent;  
+//                 color: white;    
+//                 }
+//             .my-account-back{
+//                 color: rgb(72, 90, 185);
+//                 background: transparent;
+//                 border-color: transparent;
+//                 box-shadow: none;
+//             }
+//             &.active{
+//                 display: block;
+//             }
+//         }
+//     }
+//     .order{
+//         margin: 0;
+//         position: absolute;
+//         right: 105px;
+//         cursor: pointer;
+//         color: white;
+//         padding: 5px 8px;
+//         width: max-content;
+//         text-align: center;
+//         border-radius: 7px;
+//         transition: all 0.2s ease-in;
+//         font-size: 14px;
+//         border-radius: 4px;
+//         background: linear-gradient(135deg,rgb(60, 84, 160), #6e8efb);    
+//       }
+// }
 // NORMAL DESKTOP
 @media only screen and (min-device-width:1024px) { 
     #navbar{

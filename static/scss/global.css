@@ -7,7 +7,7 @@
 }
 
 body {
-  background: -webkit-gradient(linear, right top, left bottom, from(red), to(white));
-  background: linear-gradient(to bottom left, red, white);
+  background: -webkit-gradient(linear, left top, right bottom, from(#3c54a0), color-stop(#3c54a0), color-stop(#3c54a0), to(white));
+  background: linear-gradient(to bottom right, #3c54a0, #3c54a0, #3c54a0, white);
 }
 /*# sourceMappingURL=global.css.map */
