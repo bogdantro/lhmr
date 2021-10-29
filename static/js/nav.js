@@ -13,7 +13,7 @@ function menu(){
   const html = document.querySelector("html");
   const body = document.body;
 
-  if (window.getComputedStyle(sidebar,null).getPropertyValue("pointer-events") == 'none'){
+  if (window.getComputedStyle(sidebar,null).getPropertyValue("opacity") == '0'){
     hamburger.classList.add('click')  
     sidebar.classList.add('active')
   } else{

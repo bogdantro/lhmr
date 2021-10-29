@@ -105,7 +105,6 @@
 }
 
 #navbar .sidebar {
-  pointer-events: none;
   background: white;
   width: 65%;
   height: 100vh;
@@ -114,11 +113,12 @@
   right: -65%;
   -webkit-transition: .7s;
   transition: .7s;
+  opacity: 0;
 }
 
 #navbar .sidebar.active {
   right: 0;
-  pointer-events: visible;
+  opacity: 1;
 }
 
 #navbar .my-account-icon {

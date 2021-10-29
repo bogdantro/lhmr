@@ -72,7 +72,6 @@
     }
     // SIDEBAR
     .sidebar{
-        pointer-events: none;
         background: rgb(255, 255, 255);
         width: 65%;
         height: 100vh;
@@ -80,9 +79,10 @@
         top: 60px;
         right: -65%;
         transition: .7s;
+        opacity: 0;
         &.active{
             right: 0;
-            pointer-events: visible;
+            opacity: 1;
         }
     }    
     // USER CSS
