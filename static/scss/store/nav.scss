@@ -38,6 +38,7 @@
         height: auto;
         position: absolute;
         right: 0;
+        z-index: 1000;
         span{
             display: block;
             width: 20px;
@@ -71,24 +72,35 @@
         }
     }
     // SIDEBAR
+    .circle{
+        border-radius: 100%;
+        background: rgb(60, 84, 160);
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) scale(1);
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 1s ease-in-out;
+        &.active{
+            transform: scale(20);
+            opacity: 1;
+        }
+    }
     .sidebar{
-        background: rgb(255, 255, 255);
+        background: transparent;
         height: 100vh;
         position: absolute;
-        top: -60px;
+        top: 60px;
         right: 0px;
         width: 100%;
         transition: .7s;
         z-index: 1000;
         opacity: 0;
         pointer-events: none;
-        img{
-            position: absolute;
-            right: 0;
-            bottom: 15px;
-            width: auto;
-            height: auto;
-        }
         .sidebar-ul{
             position: relative;
             width: 100%;
@@ -97,7 +109,8 @@
                 list-style: none;
                 a{
                     border: 2px solid transparent;
-                    color: rgb(72, 90, 185);
+                    // color: rgb(72, 90, 185);
+                    color: white;
                     display: inline-block;
                     text-decoration: none;
                     width: 60%;
@@ -109,42 +122,42 @@
                 }
                 :nth-child(5){
                     border: 2px solid transparent;
-                    background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
+                    background: linear-gradient(135deg,#688bfc, #7996f8);    
                     border-radius: 4px;
                     color: white;
+                    padding: 10px;
                     box-shadow: 0px 5px 2px rgb(60, 84, 160);
                 }
                 &.active{
                     :nth-child(1){
                         opacity: 1;
-                        transition: 1s ease-in-out 0.2s;
+                        transition: 1s ease-in-out 0.6s;
                     }
                     :nth-child(2){
                         opacity: 1;
-                        transition: 1s ease-in-out 0.4s;
+                        transition: 1s ease-in-out 0.8s;
                     }
                     :nth-child(3){
                         opacity: 1;
-                        transition: 1s ease-in-out 0.6s;
+                        transition: 1s ease-in-out 1.2s;
                     }
                     :nth-child(4){
                         opacity: 1;
-                        transition: 1s ease-in-out 0.8s;
+                        transition: 1s ease-in-out 1.4s;
                     }
                     :nth-child(5){
                         opacity: 1;
-                        transition: 1s ease-in-out 1s;
+                        transition: 1s ease-in-out 1.6s;
                     }
                 }
             }
         }
         &.active{
-            top: 60px;
             opacity: 1;
             pointer-events: visible;
         }
     }    
-    // USER CSS
+    // USER ICON CSS
     .my-account-icon{
         margin: 0;
         position: absolute;
@@ -171,6 +184,73 @@
             100% {transform: scale(1.2);}
         }
     }
+    // USER LOGIN OR SIGNUP CSS
+    .login-signup{
+        width: 97%;
+        height: auto;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 15px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .3s ease-in-out;
+        background: transparent;
+        backdrop-filter: blur(50px);
+        &.active{
+            padding-bottom: 20px;
+            opacity: 1;
+            pointer-events: visible;
+        }
+        .part-one{
+            border-radius: 10px;
+            background: rgb(235, 235, 235);
+            width: 100%;
+            #logOut{
+                color: rgb(248, 18, 18);
+            }
+            a{
+                color: rgb(15, 15, 15);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60px;
+                width: 100%;
+                border-bottom: 1px solid rgb(225, 225, 225);
+                font-size: 18px;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                &:active{
+                    background: rgb(215, 215, 215);
+                }
+                &:nth-child(2){
+                    border-bottom-right-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    border: none;
+                }
+            }
+        }
+        .part-two{
+            border-radius: 10px;
+            background: white;
+            margin: 7px 0;
+            a{
+                border-radius: 10px;
+                font-size: 18px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60px;
+                width: 100%;
+                font-weight: bolder;
+                &:active{
+                    background: rgb(215, 215, 215);
+                }
+            }
+        }
+    }
     // ORDER CSS
     .order{
         margin: 0;
@@ -187,13 +267,13 @@
         border-radius: 4px;
         background: linear-gradient(135deg,rgb(60, 84, 160), #6e8efb); 
         text-decoration: none;
-        animation: order-repeat-animation 2s infinite;
+        animation: order-repeat-animation 1.5s infinite;
         animation-timing-function: ease-in-out;
         animation-direction:alternate;
          // ORDER CSS KEYFRAMES ANIMATION
          @keyframes order-repeat-animation {
-            from {box-shadow: 5px 1px 20px rgb(255, 255, 255);}
-            to {box-shadow: 1px 1px 5px rgb(60, 84, 160);}
+            from {box-shadow: none;}
+            to {box-shadow: 0px 0px 3px 2px rgb(60, 84, 160);}
         }
       }
 }

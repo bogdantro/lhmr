@@ -29,26 +29,48 @@
             <span class="center-span"></span>
             <span class="lower-span"></span>
         </div>
-    <!-- SIDEBAR -->
-    <div class="sidebar" id="sidebar">
-        <ul class="sidebar-ul">
-            <li class="sidebar-li" id="sidebarLi">
-                <a onclick="prices()">Priser</a>
-                <a href="/om-webiser">Om oss</a>
-                <a onclick="info()">Prosess</a>
-                <a onclick="hosting()">Hosting</a>
-                <a onclick="contact()">Kontakt oss</a>
-            </li>   
-        </ul>
-        <img src="{% static '/images/other/sidebar-bottom-img.png' %}" class="sidebar-bottom-img" alt="sidebar-bottom-img">
-    </div>
+        <!-- SIDEBAR CIRCLE BACKGROUND -->
+        <div class="circle" id="sidebarCircleBackground"></div>
+        <!-- SIDEBAR -->
+        <div class="sidebar" id="sidebar">
+            <ul class="sidebar-ul">
+                <li class="sidebar-li" id="sidebarLi">
+                    <a onclick="prices()">Priser</a>
+                    <a href="/om-webiser">Om oss</a>
+                    <a onclick="info()">Prosess</a>
+                    <a onclick="hosting()">Hosting</a>
+                    <a onclick="contact()">Kontakt oss</a>
+                </li>   
+            </ul>
+        </div>
     <!-- USER -->
-    <a onclick="myaccount()" class="my-account-icon" id="myAccountIcon">
-        <i class="far fa-user-astronaut"></i>    
-    </a>
+        <!-- USER ICON -->
+        <a onclick="myaccount()" class="my-account-icon" id="myAccountIcon">
+            <i class="far fa-user-astronaut"></i>    
+        </a>
+        <!-- USER LOGIN OR SIGNUP -->
+        <div class="login-signup" id="loginORSignUp">
+            <div id="choose">
+                <div id="signUpOrLogin">
+                    <div class="part-one">
+                        {% if request.user.is_authenticated %}
+                        <a onclick="myaccount()">Min bruker</a>
+                        <a id="logOut" href="{% url 'logout' %}">Logg ut</a>
+                        {% else %}
+                        <a onclick="login()">Logg inn</a>
+                        <a onclick="signup()">Lag bruker</a>
+                        {% endif %}
+                    </div>
+                    <div class="part-two">
+                        <a onclick="myaccount_back()">Tilbake</a>
+                    </div>
+                </div>
+            </div>  
+        </div>
     <!-- ORDER -->
     <a href="/bestill" class="order" id="makeOrder">Bestill</a>
 </div>
+  
 
 
 <!-- <div id="navbar">

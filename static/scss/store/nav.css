@@ -42,6 +42,7 @@
   height: auto;
   position: absolute;
   right: 0;
+  z-index: 1000;
 }
 
 #navbar .hamburger span {
@@ -104,11 +105,34 @@
   }
 }
 
+#navbar .circle {
+  border-radius: 100%;
+  background: #3c54a0;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) scale(1);
+          transform: translateX(-50%) scale(1);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+#navbar .circle.active {
+  -webkit-transform: scale(20);
+          transform: scale(20);
+  opacity: 1;
+}
+
 #navbar .sidebar {
-  background: white;
+  background: transparent;
   height: 100vh;
   position: absolute;
-  top: -60px;
+  top: 60px;
   right: 0px;
   width: 100%;
   -webkit-transition: .7s;
@@ -116,14 +140,6 @@
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
-}
-
-#navbar .sidebar img {
-  position: absolute;
-  right: 0;
-  bottom: 15px;
-  width: auto;
-  height: auto;
 }
 
 #navbar .sidebar .sidebar-ul {
@@ -138,7 +154,7 @@
 
 #navbar .sidebar .sidebar-ul .sidebar-li a {
   border: 2px solid transparent;
-  color: #485ab9;
+  color: white;
   display: inline-block;
   text-decoration: none;
   width: 60%;
@@ -152,45 +168,45 @@
 
 #navbar .sidebar .sidebar-ul .sidebar-li :nth-child(5) {
   border: 2px solid transparent;
-  background: linear-gradient(135deg, #3c54a0, #7996f8);
+  background: linear-gradient(135deg, #688bfc, #7996f8);
   border-radius: 4px;
   color: white;
+  padding: 10px;
   -webkit-box-shadow: 0px 5px 2px #3c54a0;
           box-shadow: 0px 5px 2px #3c54a0;
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li.active :nth-child(1) {
   opacity: 1;
-  -webkit-transition: 1s ease-in-out 0.2s;
-  transition: 1s ease-in-out 0.2s;
-}
-
-#navbar .sidebar .sidebar-ul .sidebar-li.active :nth-child(2) {
-  opacity: 1;
-  -webkit-transition: 1s ease-in-out 0.4s;
-  transition: 1s ease-in-out 0.4s;
-}
-
-#navbar .sidebar .sidebar-ul .sidebar-li.active :nth-child(3) {
-  opacity: 1;
   -webkit-transition: 1s ease-in-out 0.6s;
   transition: 1s ease-in-out 0.6s;
 }
 
-#navbar .sidebar .sidebar-ul .sidebar-li.active :nth-child(4) {
+#navbar .sidebar .sidebar-ul .sidebar-li.active :nth-child(2) {
   opacity: 1;
   -webkit-transition: 1s ease-in-out 0.8s;
   transition: 1s ease-in-out 0.8s;
 }
 
+#navbar .sidebar .sidebar-ul .sidebar-li.active :nth-child(3) {
+  opacity: 1;
+  -webkit-transition: 1s ease-in-out 1.2s;
+  transition: 1s ease-in-out 1.2s;
+}
+
+#navbar .sidebar .sidebar-ul .sidebar-li.active :nth-child(4) {
+  opacity: 1;
+  -webkit-transition: 1s ease-in-out 1.4s;
+  transition: 1s ease-in-out 1.4s;
+}
+
 #navbar .sidebar .sidebar-ul .sidebar-li.active :nth-child(5) {
   opacity: 1;
-  -webkit-transition: 1s ease-in-out 1s;
-  transition: 1s ease-in-out 1s;
+  -webkit-transition: 1s ease-in-out 1.6s;
+  transition: 1s ease-in-out 1.6s;
 }
 
 #navbar .sidebar.active {
-  top: 60px;
   opacity: 1;
   pointer-events: visible;
 }
@@ -245,6 +261,97 @@
   }
 }
 
+#navbar .login-signup {
+  width: 97%;
+  height: auto;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 15px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  background: transparent;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+
+#navbar .login-signup.active {
+  padding-bottom: 20px;
+  opacity: 1;
+  pointer-events: visible;
+}
+
+#navbar .login-signup .part-one {
+  border-radius: 10px;
+  background: #ebebeb;
+  width: 100%;
+}
+
+#navbar .login-signup .part-one #logOut {
+  color: #f81212;
+}
+
+#navbar .login-signup .part-one a {
+  color: #0f0f0f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 18px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+#navbar .login-signup .part-one a:active {
+  background: #d7d7d7;
+}
+
+#navbar .login-signup .part-one a:nth-child(2) {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: none;
+}
+
+#navbar .login-signup .part-two {
+  border-radius: 10px;
+  background: white;
+  margin: 7px 0;
+}
+
+#navbar .login-signup .part-two a {
+  border-radius: 10px;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  width: 100%;
+  font-weight: bolder;
+}
+
+#navbar .login-signup .part-two a:active {
+  background: #d7d7d7;
+}
+
 #navbar .order {
   margin: 0;
   position: absolute;
@@ -263,8 +370,8 @@
   border-radius: 4px;
   background: linear-gradient(135deg, #3c54a0, #6e8efb);
   text-decoration: none;
-  -webkit-animation: order-repeat-animation 2s infinite;
-          animation: order-repeat-animation 2s infinite;
+  -webkit-animation: order-repeat-animation 1.5s infinite;
+          animation: order-repeat-animation 1.5s infinite;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   -webkit-animation-direction: alternate;
@@ -273,23 +380,23 @@
 
 @-webkit-keyframes order-repeat-animation {
   from {
-    -webkit-box-shadow: 5px 1px 20px white;
-            box-shadow: 5px 1px 20px white;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   to {
-    -webkit-box-shadow: 1px 1px 5px #3c54a0;
-            box-shadow: 1px 1px 5px #3c54a0;
+    -webkit-box-shadow: 0px 0px 3px 2px #3c54a0;
+            box-shadow: 0px 0px 3px 2px #3c54a0;
   }
 }
 
 @keyframes order-repeat-animation {
   from {
-    -webkit-box-shadow: 5px 1px 20px white;
-            box-shadow: 5px 1px 20px white;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   to {
-    -webkit-box-shadow: 1px 1px 5px #3c54a0;
-            box-shadow: 1px 1px 5px #3c54a0;
+    -webkit-box-shadow: 0px 0px 3px 2px #3c54a0;
+            box-shadow: 0px 0px 3px 2px #3c54a0;
   }
 }
 

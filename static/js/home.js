@@ -58,46 +58,46 @@ function backToTop(){
 }
 
 
-$(window).scroll(function() {
-    const services = document.getElementById('services');
-    var hT = $('#services').offset().top,
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT+360-wH)){
-        services.classList.add('active');
-    }
- });
+// $(window).scroll(function() {
+//     const services = document.getElementById('services');
+//     var hT = $('#services').offset().top,
+//         wH = $(window).height(),
+//         wS = $(this).scrollTop();
+//     if (wS > (hT+360-wH)){
+//         services.classList.add('active');
+//     }
+//  });
 
- $(window).scroll(function() {
-    const productHomePage = document.getElementById('productHomePage');
-    var hT = $('#productHomePage').offset().top,
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT+360-wH)){
-        productHomePage.classList.add('active');
-    }
- });
+//  $(window).scroll(function() {
+//     const productHomePage = document.getElementById('productHomePage');
+//     var hT = $('#productHomePage').offset().top,
+//         wH = $(window).height(),
+//         wS = $(this).scrollTop();
+//     if (wS > (hT+360-wH)){
+//         productHomePage.classList.add('active');
+//     }
+//  });
 
- $(window).scroll(function() {
-    const info = document.getElementById('info');
-    var hT = $('#info').offset().top,
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT+360-wH)){
-        info.classList.add('active');
-    }
- });
+//  $(window).scroll(function() {
+//     const info = document.getElementById('info');
+//     var hT = $('#info').offset().top,
+//         wH = $(window).height(),
+//         wS = $(this).scrollTop();
+//     if (wS > (hT+360-wH)){
+//         info.classList.add('active');
+//     }
+//  });
 
 
- $(window).scroll(function() {
-    const info = document.getElementById('contactUs');
-    var hT = $('#contactUs').offset().top,
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT+360-wH)){
-        info.classList.add('active');
-    }
- });
+//  $(window).scroll(function() {
+//     const info = document.getElementById('contactUs');
+//     var hT = $('#contactUs').offset().top,
+//         wH = $(window).height(),
+//         wS = $(this).scrollTop();
+//     if (wS > (hT+360-wH)){
+//         info.classList.add('active');
+//     }
+//  });
  
  function coverPrices(){
     const scrollDiv = document.getElementById("productHomePage").offsetTop;
