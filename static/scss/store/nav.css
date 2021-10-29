@@ -106,19 +106,22 @@
 
 #navbar .sidebar {
   background: white;
-  width: 65%;
   height: 100vh;
   position: absolute;
-  top: 60px;
-  right: -65%;
+  top: -60px;
+  right: 0px;
+  width: 100%;
   -webkit-transition: .7s;
   transition: .7s;
+  z-index: 1000;
   opacity: 0;
+  pointer-events: none;
 }
 
 #navbar .sidebar.active {
-  right: 10px;
+  top: 60px;
   opacity: 1;
+  pointer-events: visible;
 }
 
 #navbar .my-account-icon {
