@@ -79,7 +79,7 @@
         position: absolute;
         top: 60px;
         right: -65%;
-        transition: .7s ease-in-out;
+        transition: .7s;
         &.active{
             right: 0;
             pointer-events: visible;
