@@ -81,7 +81,7 @@
         transition: .7s;
         opacity: 0;
         &.active{
-            right: 0;
+            right: 10px;
             opacity: 1;
         }
     }    

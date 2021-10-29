@@ -117,7 +117,7 @@
 }
 
 #navbar .sidebar.active {
-  right: 0;
+  right: 10px;
   opacity: 1;
 }
 
