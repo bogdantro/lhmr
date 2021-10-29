@@ -58,12 +58,14 @@
         }
         &.click{
             background: linear-gradient(to top, rgb(230, 230, 230), rgb(245, 245, 245), rgb(230, 230, 230));
-            animation-name: hamburger-scale;
-            animation-duration: .1s;
             .center-span{
                 opacity: 0;
                 transform: translateX(-16px);
             }
+        }
+        &:active{
+            animation-name: hamburger-scale;
+            animation-duration: .1s;
         }
         // HAMBURGER CSS KEYFRAMES ANIMATION
         @keyframes hamburger-scale {
@@ -170,13 +172,13 @@
         i{
             color: black;
             font-size: 22px;
-        }
-        &.click{
-            background: linear-gradient(to top, rgb(230, 230, 230), rgb(245, 245, 245), rgb(230, 230, 230));  
-            i{
+            &:active{
                 animation-name: user-scale;
                 animation-duration: .1s;
             }
+        }
+        &.click{
+            background: linear-gradient(to top, rgb(230, 230, 230), rgb(245, 245, 245), rgb(230, 230, 230));  
         }
         // USER CSS KEYFRAMES ANIMATION
         @keyframes user-scale {
