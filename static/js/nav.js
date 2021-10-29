@@ -16,9 +16,11 @@ function menu(){
   if (window.getComputedStyle(sidebar,null).getPropertyValue("opacity") == '0'){
     hamburger.classList.add('click')  
     sidebar.classList.add('active')
+    sidebarLi.classList.add('active')
   } else{
-    sidebar.classList.remove('active')
     hamburger.classList.remove('click')  
+    sidebar.classList.remove('active')
+    sidebarLi.classList.remove('active')
   }  
 };
 

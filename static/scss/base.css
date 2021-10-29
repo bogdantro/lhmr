@@ -4,7 +4,7 @@ html, body {
 }
 
 #navBarSpace {
-  display: none;
+  display: block;
 }
 
 .scroll-to {
@@ -611,7 +611,7 @@ html, body {
   padding: 20px;
   border-radius: 5px;
   text-align: center;
-  background-color: white;
+  background-color: #3c54a0;
   position: fixed;
   left: 0;
   top: 0;
@@ -650,7 +650,7 @@ html, body {
   width: 15px;
   height: 15px;
   border-radius: 15px;
-  background-color: #3c54a0;
+  background-color: white;
 }
 
 .load-wrapp .ring-1 {
