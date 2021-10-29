@@ -56,8 +56,8 @@ body {
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
   opacity: 0;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 }
 
 .cover .content.active {
