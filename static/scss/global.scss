@@ -9,26 +9,97 @@
 body{
   background: linear-gradient(to left, rgb(37, 59, 131), rgb(60, 84, 160), rgb(60, 84, 160), rgb(99, 124, 204));
 }
+#backToTop{
+  position: fixed;
+  right: 0;
+  top: 80vh;
+  z-index: 1000;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  transition: .3s;
+  opacity: 0;
+  pointer-events: none;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg,#688bfc, #7996f8);    
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0px 5px 2px rgb(60, 84, 160);
+  text-decoration: none;
+  i{
+    padding-top: 5px;
+    font-size: 22px;
+    color: white;
+    transform: rotate(-45deg);
+  }
+  &.active{
+    opacity: 1;
+    pointer-events: visible;
+  }
+}
 
 // COVER
 .cover{
   width: 100%;
-  height: 65vh;
+  height: 80vh;
   background: transparent;
   padding-top: 60px;
-  text-align: center;
   .content{
-    transform: translateY(60px);
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    &.active{
+      opacity: 1;
+      transform: translateY(80px);
+    }
     img{
       width: 240px;
       height: auto;
     }
     .text{
-      transform: translateY(80px);
       width: auto;
-      margin: auto;
       text-align: left;
       padding-left: 5px;
+      h1{
+        text-transform: uppercase;
+        color: white;
+        font-family: 'Sniglet', cursive;
+        &.maintext{
+          font-size: 26px;
+        }
+        &.secondtext{
+          font-size: 42px;
+          font-weight: bold;
+        }
+      }
+      .cover-paragraph{
+        font-size: 16px;
+        color: white;
+        font-family: 'Sniglet', cursive;
+        opacity: 0.7;
+      }
+    }
+    .cover-action{
+      text-align: left;
+      width: auto;
+      transform: translateY(30px);
+      padding-left: 5px;
+      a{
+        border: 2px solid transparent;
+        background: linear-gradient(135deg,#688bfc, #7996f8);    
+        border-radius: 4px;
+        color: white;
+        padding: 10px;
+        box-shadow: 0px 5px 2px rgb(60, 84, 160);
+        text-decoration: none;
+      }
+    }
+    img{
+      width: 250px;
+      height: auto;
+      position: absolute;
+      right: 5px;
+      transform: translateY(30px);
     }
   }
 }

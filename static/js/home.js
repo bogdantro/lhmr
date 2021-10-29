@@ -1,40 +1,40 @@
-const cookieStorage = {
-    getItem: (key) => {
-        const cookies = document.cookie
-            .split(';')
-            .map(cookie => cookie.split('='))
-            .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
-        return cookies[key];
-    },
-    setItem: (key, value) => {
-        document.cookie = `${key}=${value}`;
-    },
-};
+// const cookieStorage = {
+//     getItem: (key) => {
+//         const cookies = document.cookie
+//             .split(';')
+//             .map(cookie => cookie.split('='))
+//             .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
+//         return cookies[key];
+//     },
+//     setItem: (key, value) => {
+//         document.cookie = `${key}=${value}`;
+//     },
+// };
 
-const storageType = cookieStorage;
-const consentPropertyName = 'webiser';
+// const storageType = cookieStorage;
+// const consentPropertyName = 'webiser';
 
-const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
-const saveToStorage = () => storageType.setItem(consentPropertyName, true);
+// const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
+// const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
-window.onload = () => {
-    const consentPopup = document.getElementById('popup');
-    const acceptBtn = document.getElementById('accept');
+// window.onload = () => {
+//     const consentPopup = document.getElementById('popup');
+//     const acceptBtn = document.getElementById('accept');
 
 
-    const acceptFn = event => {
-        saveToStorage(storageType);
-        consentPopup.classList.add('hidden')
-    };
+//     const acceptFn = event => {
+//         saveToStorage(storageType);
+//         consentPopup.classList.add('hidden')
+//     };
     
-    acceptBtn.addEventListener('click', acceptFn);
+//     acceptBtn.addEventListener('click', acceptFn);
     
-    if (shouldShowPopup(storageType)) {
-        setTimeout(() => {
-            consentPopup.classList.remove('hidden')
-        }, 3000);
-    }
-};
+//     if (shouldShowPopup(storageType)) {
+//         setTimeout(() => {
+//             consentPopup.classList.remove('hidden')
+//         }, 3000);
+//     }
+// };
 
 $.ajax({
     type: "GET",
@@ -50,13 +50,22 @@ $.ajax({
 
 window.addEventListener("scroll", function(){
     const backToTop = document.getElementById('backToTop');
-    backToTop.classList.toggle("active", window.scrollY > 500)
+    backToTop.classList.toggle("active", window.scrollY > 20)
+    // backToTop.classList.toggle("active", window.scrollY > 500)
 })
 
 function backToTop(){
   window.scrollTo({ top: 0, behavior: 'smooth'});
 }
 
+
+function cover(){
+    const coverContent = document.getElementById('coverContent');
+
+    coverContent.classList.add('active')
+}
+    
+window.onload=cover();
 
 // $(window).scroll(function() {
 //     const services = document.getElementById('services');
@@ -188,53 +197,4 @@ function backToTop(){
 }
 
 
-
-function servicesReadMore1(){
-    const firstText = document.getElementById('servicesSecondText1');
-    if (window.getComputedStyle(firstText ,null).getPropertyValue("display") == 'none'){  
-    firstText.style.display = 'block';
-    document.getElementById('readMoreServices1').classList.add('active')
-    document.getElementById('readMoreServices1').innerHTML = "Lukk";
-    } else{
-        firstText.style.display = 'none';
-        document.getElementById('readMoreServices1').classList.remove('active')
-        document.getElementById('readMoreServices1').innerHTML = "Les mer";
-    }
-}
-function servicesReadMore2(){
-    const firstText = document.getElementById('servicesSecondText2');
-    if (window.getComputedStyle(firstText ,null).getPropertyValue("display") == 'none'){  
-    firstText.style.display = 'block';
-    document.getElementById('readMoreServices2').classList.add('active')
-    document.getElementById('readMoreServices2').innerHTML = "Lukk";
-    } else{
-        firstText.style.display = 'none';
-        document.getElementById('readMoreServices2').classList.remove('active')
-        document.getElementById('readMoreServices2').innerHTML = "Les mer";
-    }
-}
-function servicesReadMore3(){
-    const firstText = document.getElementById('servicesSecondText3');
-    if (window.getComputedStyle(firstText ,null).getPropertyValue("display") == 'none'){  
-    firstText.style.display = 'block';
-    document.getElementById('readMoreServices3').classList.add('active')
-    document.getElementById('readMoreServices3').innerHTML = "Lukk";
-    } else{
-        firstText.style.display = 'none';
-        document.getElementById('readMoreServices3').classList.remove('active')
-        document.getElementById('readMoreServices3').innerHTML = "Les mer";
-    }
-}
-function servicesReadMore4(){
-    const firstText = document.getElementById('servicesSecondText4');
-    if (window.getComputedStyle(firstText ,null).getPropertyValue("display") == 'none'){  
-    firstText.style.display = 'block';
-    document.getElementById('readMoreServices4').classList.add('active')
-    document.getElementById('readMoreServices4').innerHTML = "Lukk";
-    } else{
-        firstText.style.display = 'none';
-        document.getElementById('readMoreServices4').classList.remove('active')
-        document.getElementById('readMoreServices4').innerHTML = "Les mer";
-    }
-}
 

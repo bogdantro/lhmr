@@ -56,11 +56,19 @@
         .lower-span{
             margin-top: 5px;
         }
+        .close-hamburger{
+            font-size: 26px;
+            display: none;
+            transform: translateY(-3px);
+        }
         &.click{
             background: linear-gradient(to top, rgb(230, 230, 230), rgb(245, 245, 245), rgb(230, 230, 230));
-            .center-span{
-                opacity: 0;
-                transform: translateX(-16px);
+            padding-bottom: 14px;
+            span{
+                display: none;
+            }
+            .close-hamburger{
+                display: block;
             }
         }
         &:active{
@@ -76,7 +84,7 @@
     // SIDEBAR
     .circle{
         border-radius: 100%;
-        background: rgb(60, 84, 160);
+        background: rgb(7, 24, 82);
         width: 100px;
         height: 100px;
         position: fixed;
@@ -90,6 +98,7 @@
         &.active{
             transform: scale(20);
             opacity: 1;
+            background: rgb(60, 84, 160);
         }
     }
     .sidebar{

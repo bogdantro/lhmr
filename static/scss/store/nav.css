@@ -68,15 +68,25 @@
   margin-top: 5px;
 }
 
+#navbar .hamburger .close-hamburger {
+  font-size: 26px;
+  display: none;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
 #navbar .hamburger.click {
   background: -webkit-gradient(linear, left bottom, left top, from(#e6e6e6), color-stop(whitesmoke), to(#e6e6e6));
   background: linear-gradient(to top, #e6e6e6, whitesmoke, #e6e6e6);
+  padding-bottom: 14px;
 }
 
-#navbar .hamburger.click .center-span {
-  opacity: 0;
-  -webkit-transform: translateX(-16px);
-          transform: translateX(-16px);
+#navbar .hamburger.click span {
+  display: none;
+}
+
+#navbar .hamburger.click .close-hamburger {
+  display: block;
 }
 
 #navbar .hamburger:active {
@@ -110,7 +120,7 @@
 
 #navbar .circle {
   border-radius: 100%;
-  background: #3c54a0;
+  background: #071852;
   width: 100px;
   height: 100px;
   position: fixed;
@@ -129,6 +139,7 @@
   -webkit-transform: scale(20);
           transform: scale(20);
   opacity: 1;
+  background: #3c54a0;
 }
 
 #navbar .sidebar {

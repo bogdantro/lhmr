@@ -26,43 +26,31 @@
  </div>
 <!-- COVER -->
 <div class="cover" id="cover">
-   <div class="content">
+   <div class="content" id="coverContent">
       <div class="text">
+         <h1 class="maintext">moderne nettsider til</h1>
+         <h1 class="secondtext">lave priser</h1>
+         <p class="cover-paragraph">Ta neste steg for ditt bedrift med hjelp av våres fantastiske og moderne nettsider laget av Norges beste designere og utviklere</p>
+      </div>
+      <div class="cover-action">
+         <a href="/bestill">Bestill</a>
+         <a onclick="contact()">Kontakt oss</a>
+      </div>
+      <img src="{% static '/images/covers/cover-7.png' %}" alt="cover-1">
+   </div>
+</div>
+<div class="services">
+   <h1 class="heading">Hvorfor velge Webiser?</h1>
+   <div class="service-1">
+      <div class="colum-1">
+         <img src="{% static '/images/icons/responsive-design.png' %}" alt="services responsive design">
+      </div>
+      <div class="colum-2">
+         <h1>responsiv<br>design</h1>
       </div>
    </div>
 </div>
-<!-- <div class="services" id="services">
-   <h1 class="heading">Hvorfor velge Webiser?</h1>
-<div class="flex">
-   <div class="icon" id="icon1">
-      <i class="fas fa-users"></i>      
-      <h1 id="servicesFirstText">Designere og utviklere</h1>
-      <p id="servicesSecondText1">Vi har et stort og profesjonell team som er motiverte og lidenskapelige for å levere et fantastisk nettside, som garanterer at du vil elske den</p>
-      <button class="hover" id="readMoreServices1" onclick="servicesReadMore1()">Les mer</button>
-   </div>
-   <div class="icon" id="icon2">
-      <i class="fas fa-check"></i>
-      <h1 id="servicesFirstText">Få 4 timer gratis hjelp hver uke</h1>
-      <p id="servicesSecondText2">Vår team finner glede i å hjelpe deg, derfor du vil få 4 timer gratis hjelp og veiledning hver uke av våres designere og utviklere, for å sørge at alt er akkurat som du vil ha det</p>
-      <button class="hover" id="readMoreServices2" onclick="servicesReadMore2()">Les mer</button>
-   </div>
-   <div class="icon" id="icon3">
-      <i class="fal fa-phone-laptop"></i>      
-      <h1 id="servicesFirstText">Responsiv og modern design</h1>
-      <p id="servicesSecondText3">Et bra nettsted begynner med en modern og unik design, våres designere sørger at designen blir responsiv og modern og ikke minst akkurat som du ønsker at den skal være</p>
-      <button class="hover" id="readMoreServices3" onclick="servicesReadMore3()">Les mer</button>
-   </div>
-   <div class="icon" id="icon4">
-      <i class="fas fa-shield-check"></i>    
-      <h1 id="servicesFirstText">Sikkerthet med vår hosting</h1>
-      <p id="servicesSecondText4">Ikke frykt at nettsiden er nede ofte. Med vår hosting tjeneste så har du garantert 99% uptime, og 24/7 kundeservice. Vi hoster nettsiden i maks 6 måneder, og den koster 60kr/m</p>
-      <button class="hover" id="readMoreServices4" onclick="servicesReadMore4()">Les mer</button>
-   </div>
-</div>
-   <div class="border"></div>
-</div> -->
-
-<div id="productScrollTo" class="scroll-to" style="height: 60px; width: 100%"></div>
+<!-- <div id="productScrollTo" class="scroll-to" style="height: 60px; width: 100%"></div>
 <div class="product-section" id="productHomePage">
    <h1 class="heading">Priser</h1>
    <div class="flex">
@@ -76,7 +64,7 @@
       {% endfor %}
    </div>
    <div class="border"></div>
-</div>
+</div> -->
 <!-- <div id="proccessScrollTo" class="scroll-to" style="height: 60px; width: 100%;"></div>
 <div class="proccess" id="info">
    <h1 class="heading">Så enkelt er det</h1>
