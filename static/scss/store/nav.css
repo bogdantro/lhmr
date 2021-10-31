@@ -232,7 +232,7 @@
   right: 70px;
   cursor: pointer;
   padding: 25px;
-  padding-top: 12px;
+  padding-top: 10px;
   width: auto;
   height: auto;
   border-right: 1px solid rgba(220, 220, 220, 0.7);
@@ -242,8 +242,8 @@
 #navbar .my-account-icon i {
   color: black;
   font-size: 22px;
-  -webkit-transform: translateY(8.3px);
-          transform: translateY(8.3px);
+  -webkit-transform: translateY(8.5px);
+          transform: translateY(8.5px);
 }
 
 #navbar .my-account-icon i:active {
@@ -375,7 +375,7 @@
 #navbar .order {
   margin: 0;
   position: absolute;
-  right: 145px;
+  right: 150px;
   cursor: pointer;
   color: white;
   padding: 5px 8px;
