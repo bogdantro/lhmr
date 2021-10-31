@@ -37,6 +37,12 @@ html, body {
   position: relative;
 }
 
+.product-section.active .product-card {
+  opacity: 1;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
 .product-section .border-up {
   background: #e6e6e6;
   height: 2px;
@@ -71,11 +77,11 @@ html, body {
   -webkit-backdrop-filter: blur(100px);
           backdrop-filter: blur(100px);
   padding: 5px;
-  opacity: 1;
+  opacity: 0;
   -webkit-transition: all ease-in .5s;
   transition: all ease-in .5s;
-  -webkit-transform: translateY(40px);
-          transform: translateY(40px);
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
   max-width: 320px;
 }
 
@@ -135,7 +141,7 @@ html, body {
 }
 
 .proccess {
-  background: white;
+  background: transparent;
   width: 100%;
   height: auto;
   padding: 30px;
@@ -184,7 +190,7 @@ html, body {
 }
 
 .proccess .border {
-  background: #646464;
+  background: #e6e6e6;
   height: 2px;
   width: 65%;
   margin: 20px auto;
@@ -196,7 +202,7 @@ html, body {
   width: 100%;
   text-transform: uppercase;
   font-family: 'Sniglet', cursive;
-  color: #142c78;
+  color: white;
   font-weight: 700;
   font-size: 26px;
 }
@@ -218,7 +224,7 @@ html, body {
   font-size: 20px;
   margin-bottom: 10px;
   font-family: 'Sniglet', cursive;
-  color: #3c54a0;
+  color: white;
 }
 
 .proccess .content .class-1 img {
@@ -231,8 +237,9 @@ html, body {
 .proccess .content .class-1 p {
   margin-top: 5px;
   font-size: 15px;
+  opacity: 0.8;
   font-family: 'Sniglet', cursive;
-  opacity: 0.9;
+  color: white;
 }
 
 .proccess .content .class-2 {
@@ -246,7 +253,7 @@ html, body {
   font-size: 20px;
   margin-bottom: 10px;
   font-family: 'Sniglet', cursive;
-  color: #3c54a0;
+  color: white;
 }
 
 .proccess .content .class-2 img {
@@ -259,8 +266,9 @@ html, body {
 .proccess .content .class-2 p {
   margin-top: 5px;
   font-size: 15px;
+  opacity: 0.8;
   font-family: 'Sniglet', cursive;
-  opacity: 0.9;
+  color: white;
 }
 
 .proccess .content .class-3 {
@@ -274,7 +282,7 @@ html, body {
   font-size: 20px;
   margin-bottom: 10px;
   font-family: 'Sniglet', cursive;
-  color: #3c54a0;
+  color: white;
 }
 
 .proccess .content .class-3 img {
@@ -287,8 +295,9 @@ html, body {
 .proccess .content .class-3 p {
   margin-top: 5px;
   font-size: 15px;
+  opacity: 0.8;
   font-family: 'Sniglet', cursive;
-  opacity: 0.9;
+  color: white;
 }
 
 .proccess .content .class-4 {
@@ -302,7 +311,7 @@ html, body {
   font-size: 20px;
   margin-bottom: 10px;
   font-family: 'Sniglet', cursive;
-  color: #3c54a0;
+  color: white;
 }
 
 .proccess .content .class-4 img {
@@ -315,8 +324,9 @@ html, body {
 .proccess .content .class-4 p {
   margin-top: 5px;
   font-size: 15px;
+  opacity: 0.8;
   font-family: 'Sniglet', cursive;
-  opacity: 0.9;
+  color: white;
 }
 
 .proccess .content .class-5 {
@@ -330,7 +340,7 @@ html, body {
   font-size: 20px;
   margin-bottom: 10px;
   font-family: 'Sniglet', cursive;
-  color: #3c54a0;
+  color: white;
 }
 
 .proccess .content .class-5 img {
@@ -343,8 +353,9 @@ html, body {
 .proccess .content .class-5 p {
   margin-top: 5px;
   font-size: 15px;
-  opacity: 0.9;
+  opacity: 0.8;
   font-family: 'Sniglet', cursive;
+  color: white;
 }
 
 .contact-us {

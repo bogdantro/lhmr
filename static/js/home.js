@@ -77,25 +77,25 @@ window.onload=cover();
 //     }
 //  });
 
-//  $(window).scroll(function() {
-//     const productHomePage = document.getElementById('productHomePage');
-//     var hT = $('#productHomePage').offset().top,
-//         wH = $(window).height(),
-//         wS = $(this).scrollTop();
-//     if (wS > (hT+360-wH)){
-//         productHomePage.classList.add('active');
-//     }
-//  });
+ $(window).scroll(function() {
+    const productHomePage = document.getElementById('productHomePage');
+    var hT = $('#productHomePage').offset().top,
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+360-wH)){
+        productHomePage.classList.add('active');
+    }
+ });
 
-//  $(window).scroll(function() {
-//     const info = document.getElementById('info');
-//     var hT = $('#info').offset().top,
-//         wH = $(window).height(),
-//         wS = $(this).scrollTop();
-//     if (wS > (hT+360-wH)){
-//         info.classList.add('active');
-//     }
-//  });
+ $(window).scroll(function() {
+    const info = document.getElementById('info');
+    var hT = $('#info').offset().top,
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+360-wH)){
+        info.classList.add('active');
+    }
+ });
 
 
 //  $(window).scroll(function() {
