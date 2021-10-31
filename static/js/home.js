@@ -67,22 +67,22 @@ function cover(){
     
 window.onload=cover();
 
-// $(window).scroll(function() {
-//     const services = document.getElementById('services');
-//     var hT = $('#services').offset().top,
-//         wH = $(window).height(),
-//         wS = $(this).scrollTop();
-//     if (wS > (hT+360-wH)){
-//         services.classList.add('active');
-//     }
-//  });
+$(window).scroll(function() {
+    const services = document.getElementById('services');
+    var hT = $('#services').offset().top,
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+360-wH)){
+        services.classList.add('active');
+    }
+ });
 
  $(window).scroll(function() {
     const productHomePage = document.getElementById('productHomePage');
     var hT = $('#productHomePage').offset().top,
         wH = $(window).height(),
         wS = $(this).scrollTop();
-    if (wS > (hT+360-wH)){
+    if (wS > (hT+460-wH)){
         productHomePage.classList.add('active');
     }
  });
@@ -97,16 +97,6 @@ window.onload=cover();
     }
  });
 
-
-//  $(window).scroll(function() {
-//     const info = document.getElementById('contactUs');
-//     var hT = $('#contactUs').offset().top,
-//         wH = $(window).height(),
-//         wS = $(this).scrollTop();
-//     if (wS > (hT+360-wH)){
-//         info.classList.add('active');
-//     }
-//  });
  
  function coverPrices(){
     const scrollDiv = document.getElementById("productHomePage").offsetTop;
@@ -197,4 +187,30 @@ window.onload=cover();
 }
 
 
+
+function services1(){
+    document.getElementById('service1').classList.add('click');
+    document.getElementById('service2').classList.remove('click');
+    document.getElementById('service3').classList.remove('click');
+    document.getElementById('service4').classList.remove('click');
+}
+function services2(){
+    document.getElementById('service2').classList.add('click');
+    document.getElementById('service1').classList.remove('click');
+    document.getElementById('service3').classList.remove('click');
+    document.getElementById('service4').classList.remove('click');
+}
+function services3(){
+    document.getElementById('service3').classList.add('click');
+    document.getElementById('service1').classList.remove('click');
+    document.getElementById('service2').classList.remove('click');
+    document.getElementById('service4').classList.remove('click');
+
+}
+function services4(){
+    document.getElementById('service4').classList.add('click');
+    document.getElementById('service3').classList.remove('click');
+    document.getElementById('service2').classList.remove('click');
+    document.getElementById('service1').classList.remove('click');
+}
 

@@ -39,9 +39,47 @@
       <img src="{% static '/images/covers/cover-7.png' %}" alt="cover-1">
    </div>
 </div>
+<!-- SERVICES -->
+<div class="services" id="services">
+   <div class="border-up"></div>
+   <h1 class="heading">hvorfor velge webiser</h1>
+   <p class="services-paragraph">Klikk for å lese mer</p>
+   <div class="service-1 service" id="service1" onclick="services1()">
+      <div class="img">
+         <i class="fal fa-phone-laptop"></i>
+      </div>
+      <div class="text">
+         <h1>Responsiv<br>design</h1>
+      </div>
+   </div>
+   <div class="service-2 service" id="service2" onclick="services2()">
+      <div class="text">
+         <h1>Veileding</h1>
+      </div>
+      <div class="img">
+         <i class="fas fa-hands-helping"></i>      
+      </div>
+   </div>
+   <div class="service-3 service" id="service3" onclick="services3()">
+      <div class="img">
+         <i class="fas fa-medal"></i>
+      </div>
+      <div class="text">
+         <h1>Norges<br>beste</h1>
+      </div>
+   </div>
+   <div class="service-4 service" id="service4" onclick="services4()">
+      <div class="img">
+         <i class="fas fa-coins"></i>
+      </div>
+      <div class="text">
+         <h1>Lave priser</h1>
+      </div>
+   </div>
+</div>
+<!-- PRODUCT -->
 <div id="productScrollTo" class="scroll-to" style="height: 60px; width: 100%"></div>
 <div class="product-section" id="productHomePage">
-   <div class="border-up"></div>
    <h1 class="heading">Priser</h1>
    <div class="flex">
       {% for product in products %}
@@ -54,8 +92,8 @@
       </div>
       {% endfor %}
    </div>
-   <div class="border-down"></div>
 </div>
+<!-- INFO/PROCCESS -->
 <div id="proccessScrollTo" class="scroll-to" style="height: 60px; width: 100%;"></div>
 <div class="proccess" id="info">
    <h1 class="heading">Så enkelt er det</h1>
@@ -86,10 +124,8 @@
          <p>Da alt er 100% fullført, så vil nettsiden bli sendt over til deg innen 2 dager</p>
       </div>
    </div>
-   <div class="border"></div>
 </div>
-
-
+<!-- CONTACT US -->
 <div id="contactScrollTo" class="scroll-to" style="height: 60px; width: 100%;"></div>
 <div class="contact-us" id="contactUs">
    <h1 class="heading">Trenger du extra hjelp?</h1>
