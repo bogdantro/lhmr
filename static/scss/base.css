@@ -418,6 +418,7 @@ html, body {
 .contact-us form .form-tag-email {
   font-size: 15px;
   color: #304792;
+  border-radius: 5px;
   background: #e8edff;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -426,7 +427,6 @@ html, body {
   position: absolute;
   left: 20px;
   top: 88px;
-  border-radius: 5px;
 }
 
 .contact-us form .form-tag-message {

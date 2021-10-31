@@ -1,14 +1,11 @@
-.cover-mobile {
-  height: 55vh;
+.cover .content img {
+  -webkit-transform: translateY(70px);
+          transform: translateY(70px);
 }
 
-.cover-mobile .cover-text {
-  -webkit-transform: translateY(-60px);
-          transform: translateY(-60px);
-}
-
-.cover-mobile .cover-text img {
-  top: 90px;
+.cover .content .cover-action {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .make-order {
@@ -16,7 +13,7 @@
   height: auto;
   padding: 10px 0;
   text-align: center;
-  background: white;
+  background: transparent;
 }
 
 .make-order form {
@@ -24,6 +21,8 @@
   padding: 10px;
   margin: 15px;
   margin-top: 0;
+  background: #e8edff;
+  border-radius: 4px;
 }
 
 .make-order form label {
@@ -49,7 +48,7 @@
   width: 100%;
   text-transform: uppercase;
   font-family: 'Sniglet', cursive;
-  color: #142c78;
+  color: white;
   font-weight: 700;
   font-size: 26px;
   text-align: center;
@@ -57,8 +56,9 @@
 
 .make-order form .order-form-step1 .form-tag-products {
   font-size: 15px;
-  color: #3c54a0;
-  background: white;
+  color: #304792;
+  border-radius: 5px;
+  background: #e8edff;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -70,8 +70,9 @@
 
 .make-order form .order-form-step1 .form-tag-hosting {
   font-size: 15px;
-  color: #3c54a0;
-  background: white;
+  color: #304792;
+  border-radius: 5px;
+  background: #e8edff;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -83,8 +84,9 @@
 
 .make-order form .order-form-step1 .form-tag-image {
   font-size: 15px;
-  color: #3c54a0;
-  background: white;
+  color: #304792;
+  border-radius: 5px;
+  background: #e8edff;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -96,8 +98,9 @@
 
 .make-order form .order-form-step1 .form-tag-color {
   font-size: 15px;
-  color: #3c54a0;
-  background: white;
+  color: #304792;
+  border-radius: 5px;
+  background: #e8edff;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -228,8 +231,9 @@
 
 .make-order form .order-form-step1 .form-tag-num_pages {
   font-size: 15px;
-  color: #3c54a0;
-  background: white;
+  color: #304792;
+  border-radius: 5px;
+  background: #e8edff;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;

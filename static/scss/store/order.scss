@@ -1,13 +1,15 @@
 $loader: rgb(80, 104, 180);
 
 // STANDARD PHONE
-.cover-mobile{ 
-  height: 55vh;
-  .cover-text{
-    transform: translateY(-60px);
-      img{
-          top: 90px;
-      }
+.cover{ 
+  .content{
+    img{
+      transform: translateY(70px);
+    }
+    .cover-action{
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 }
 
@@ -16,12 +18,14 @@ $loader: rgb(80, 104, 180);
     height: auto;
     padding: 10px 0;
     text-align: center;
-    background: white;
+    background: transparent;
     form{
         text-align: left;
         padding: 10px;
         margin: 15px;
         margin-top: 0;
+        background: #e8edff;
+        border-radius: 4px;
         label{
           margin-top: 30px;
           margin-bottom: 10px;
@@ -42,7 +46,7 @@ $loader: rgb(80, 104, 180);
                 width: 100%;
                 text-transform: uppercase;
                 font-family: 'Sniglet', cursive;
-                color: rgb(20, 44, 120);
+                color: white;
                 font-weight: 700;
                 font-size: 26px;
                 text-align: center;
@@ -50,8 +54,9 @@ $loader: rgb(80, 104, 180);
             }
             .form-tag-products{
               font-size: 15px;
-              color: rgb(60, 84, 160);
-              background: white;
+              color: rgb(48, 71, 146);
+              border-radius: 5px;
+              background: #e8edff;
               width: max-content;
               padding: 0 2px;
               position: absolute;
@@ -60,8 +65,9 @@ $loader: rgb(80, 104, 180);
             }
             .form-tag-hosting{
               font-size: 15px;
-              color: rgb(60, 84, 160);
-              background: white;
+              color: rgb(48, 71, 146);
+              border-radius: 5px;
+              background: #e8edff;
               width: max-content;
               padding: 0 2px;
               position: absolute;
@@ -70,8 +76,9 @@ $loader: rgb(80, 104, 180);
             }
             .form-tag-image{
               font-size: 15px;
-              color: rgb(60, 84, 160);
-              background: white;
+              color: rgb(48, 71, 146);
+              border-radius: 5px;
+              background: #e8edff;
               width: max-content;
               padding: 0 2px;
               position: absolute;
@@ -80,8 +87,9 @@ $loader: rgb(80, 104, 180);
             }
             .form-tag-color{
               font-size: 15px;
-              color: rgb(60, 84, 160);
-              background: white;
+              color: rgb(48, 71, 146);
+              border-radius: 5px;
+              background: #e8edff;
               width: max-content;
               padding: 0 2px;
               position: absolute;
@@ -175,8 +183,9 @@ $loader: rgb(80, 104, 180);
             }
             .form-tag-num_pages{
               font-size: 15px;
-              color: rgb(60, 84, 160);
-              background: white;
+              color: rgb(48, 71, 146);
+              border-radius: 5px;
+              background: #e8edff;
               width: max-content;
               padding: 0 2px;
               position: absolute;
