@@ -13,7 +13,7 @@ body{
   position: fixed;
   right: 0;
   top: 80vh;
-  z-index: 1000;
+  z-index: 110;
   background: white;
   padding: 10px;
   border-radius: 4px;
@@ -36,6 +36,10 @@ body{
     opacity: 1;
     pointer-events: visible;
   }
+  &.menu-active{
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 // COVER
@@ -51,10 +55,6 @@ body{
     &.active{
       opacity: 1;
       transform: translateY(80px);
-    }
-    img{
-      width: 240px;
-      height: auto;
     }
     .text{
       width: auto;
@@ -95,11 +95,11 @@ body{
       }
     }
     img{
-      width: 250px;
+      width: 255px;
       height: auto;
       position: absolute;
       right: 5px;
-      transform: translateY(30px);
+      transform: translateY(35px);
     }
   }
 }

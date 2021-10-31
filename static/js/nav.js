@@ -10,6 +10,7 @@ function menu(){
   const hamburger = document.getElementById('hamburger');
   const sidebarLi = document.getElementById('sidebarLi');
   const background = document.getElementById('sidebarCircleBackground');
+  const backToTop = document.getElementById('backToTop');
   const html = document.querySelector("html");
   const body = document.body;
 
@@ -18,6 +19,7 @@ function menu(){
     sidebar.classList.add('active')
     sidebarLi.classList.add('active')
     background.classList.add('active')
+    backToTop.classList.add('menu-active')
   } else{
     setTimeout(function(){ 
       hamburger.classList.remove('click')  
@@ -25,15 +27,23 @@ function menu(){
     sidebar.classList.remove('active')
     sidebarLi.classList.remove('active')
     background.classList.remove('active')
+    setTimeout(function(){
+      backToTop.classList.remove('menu-active')
+    }, 900);
   }  
 };
 
 function myaccount(){
   const user = document.getElementById('myAccountIcon');
   const loginORSignUp = document.getElementById('loginORSignUp');
-  
-  user.classList.add('click')
-  loginORSignUp.classList.add('active')
+
+  if (window.getComputedStyle(user,null).getPropertyValue("position") == 'absolute'){
+    user.classList.add('click')
+    loginORSignUp.classList.add('active')
+  } else{
+    user.classList.remove('click')
+    loginORSignUp.classList.remove('active')  
+  }
 };
 
 function myaccount_back(){

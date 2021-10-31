@@ -15,7 +15,7 @@ body {
   position: fixed;
   right: 0;
   top: 80vh;
-  z-index: 1000;
+  z-index: 110;
   background: white;
   padding: 10px;
   border-radius: 4px;
@@ -45,6 +45,11 @@ body {
   pointer-events: visible;
 }
 
+#backToTop.menu-active {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .cover {
   width: 100%;
   height: 80vh;
@@ -64,11 +69,6 @@ body {
   opacity: 1;
   -webkit-transform: translateY(80px);
           transform: translateY(80px);
-}
-
-.cover .content img {
-  width: 240px;
-  height: auto;
 }
 
 .cover .content .text {
@@ -119,11 +119,11 @@ body {
 }
 
 .cover .content img {
-  width: 250px;
+  width: 255px;
   height: auto;
   position: absolute;
   right: 5px;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
+  -webkit-transform: translateY(35px);
+          transform: translateY(35px);
 }
 /*# sourceMappingURL=global.css.map */

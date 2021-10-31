@@ -39,23 +39,14 @@
       <img src="{% static '/images/covers/cover-7.png' %}" alt="cover-1">
    </div>
 </div>
-<!-- <div class="services">
-   <h1 class="heading">Hvorfor velge Webiser?</h1>
-   <div class="service-1">
-      <div class="colum-1">
-         <img src="{% static '/images/icons/responsive-design.png' %}" alt="services responsive design">
-      </div>
-      <div class="colum-2">
-         <h1>responsiv<br>design</h1>
-      </div>
-   </div>
-</div> -->
-<!-- <div id="productScrollTo" class="scroll-to" style="height: 60px; width: 100%"></div>
+<div id="productScrollTo" class="scroll-to" style="height: 60px; width: 100%"></div>
 <div class="product-section" id="productHomePage">
+   <div class="border-up"></div>
    <h1 class="heading">Priser</h1>
    <div class="flex">
       {% for product in products %}
       <div class="product-card" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
+         <div class="ribbon"></div>
          <div class="text">
             <h1 class="product-name">{{product.name}}</h1>
             <h1 class="product-price">{{product.price|floatformat}} kr</h1>
@@ -63,8 +54,8 @@
       </div>
       {% endfor %}
    </div>
-   <div class="border"></div>
-</div> -->
+   <div class="border-down"></div>
+</div>
 <!-- <div id="proccessScrollTo" class="scroll-to" style="height: 60px; width: 100%;"></div>
 <div class="proccess" id="info">
    <h1 class="heading">Så enkelt er det</h1>
