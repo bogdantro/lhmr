@@ -82,7 +82,7 @@ $(window).scroll(function() {
     var hT = $('#productHomePage').offset().top,
         wH = $(window).height(),
         wS = $(this).scrollTop();
-    if (wS > (hT+460-wH)){
+    if (wS > (hT+400-wH)){
         productHomePage.classList.add('active');
     }
  });
@@ -113,6 +113,7 @@ $(window).scroll(function() {
     const hamburger = document.getElementById('hamburger');
     const sidebarLi = document.getElementById('sidebarLi');
     const allContentArea = document.getElementById('allContentArea');
+    const background = document.getElementById('sidebarCircleBackground');
     const html = document.querySelector("html");
     const body = document.body;
     
@@ -124,7 +125,7 @@ $(window).scroll(function() {
     hamburger.classList.remove('click')  
     sidebarLi.classList.remove('active')  
     navbar.classList.remove('menu-active')  
-    allContentArea.style.filter = 'brightness(100%)';
+    background.classList.remove('active')
 }
  function info(){
     const sidebar = document.getElementById('sidebar');
@@ -132,6 +133,7 @@ $(window).scroll(function() {
     const hamburger = document.getElementById('hamburger');
     const sidebarLi = document.getElementById('sidebarLi');
     const allContentArea = document.getElementById('allContentArea');
+    const background = document.getElementById('sidebarCircleBackground');
     const html = document.querySelector("html");
     const body = document.body;
     
@@ -143,28 +145,28 @@ $(window).scroll(function() {
     hamburger.classList.remove('click')  
     sidebarLi.classList.remove('active')  
     navbar.classList.remove('menu-active')  
-    allContentArea.style.filter = 'brightness(100%)';
+    background.classList.remove('active')
 }
 
- function hosting(){
-    const sidebar = document.getElementById('sidebar');
-    const navbar = document.getElementById('navbar');
-    const hamburger = document.getElementById('hamburger');
-    const sidebarLi = document.getElementById('sidebarLi');
-    const allContentArea = document.getElementById('allContentArea');
-    const html = document.querySelector("html");
-    const body = document.body;
+//  function jobs(){
+//     const sidebar = document.getElementById('sidebar');
+//     const navbar = document.getElementById('navbar');
+//     const hamburger = document.getElementById('hamburger');
+//     const sidebarLi = document.getElementById('sidebarLi');
+//     const allContentArea = document.getElementById('allContentArea');
+//     const background = document.getElementById('sidebarCircleBackground');
+//     const html = document.querySelector("html");
+//     const body = document.body;
     
-    window.location.href = "#hostingScrollTo";
-    document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
-    html.style.overflow = 'unset'
-    body.style.overflow = 'unset'
-    sidebar.classList.remove('active')  
-    hamburger.classList.remove('click')  
-    sidebarLi.classList.remove('active')  
-    navbar.classList.remove('menu-active')  
-    allContentArea.style.filter = 'brightness(100%)';
-}
+//     window.location.href = "#hostingScrollTo";
+//     document.getElementById('myAccountIcon').style.pointerEvents = 'visible';
+//     html.style.overflow = 'unset'
+//     body.style.overflow = 'unset'
+//     sidebar.classList.remove('active')  
+//     hamburger.classList.remove('click')  
+//     sidebarLi.classList.remove('active')  
+//     navbar.classList.remove('menu-active')  
+//     background.classList.remove('active')}
 
  function contact(){
     const sidebar = document.getElementById('sidebar');
@@ -172,6 +174,7 @@ $(window).scroll(function() {
     const hamburger = document.getElementById('hamburger');
     const sidebarLi = document.getElementById('sidebarLi');
     const allContentArea = document.getElementById('allContentArea');
+    const background = document.getElementById('sidebarCircleBackground');
     const html = document.querySelector("html");
     const body = document.body;
     
@@ -183,8 +186,7 @@ $(window).scroll(function() {
     hamburger.classList.remove('click')  
     sidebarLi.classList.remove('active')  
     navbar.classList.remove('menu-active')  
-    allContentArea.style.filter = 'brightness(100%)';
-}
+    background.classList.remove('active')}
 
 
 
@@ -193,24 +195,46 @@ function services1(){
     document.getElementById('service2').classList.remove('click');
     document.getElementById('service3').classList.remove('click');
     document.getElementById('service4').classList.remove('click');
+    // TEXT BLOCK
+    document.getElementById('aboutService1').classList.add('click');
+    document.getElementById('aboutService2').classList.remove('click');
+    document.getElementById('aboutService3').classList.remove('click');
+    document.getElementById('aboutService4').classList.remove('click');
 }
+
 function services2(){
     document.getElementById('service2').classList.add('click');
     document.getElementById('service1').classList.remove('click');
     document.getElementById('service3').classList.remove('click');
     document.getElementById('service4').classList.remove('click');
+    // TEXT BLOCK
+    document.getElementById('aboutService2').classList.add('click');
+    document.getElementById('aboutService1').classList.remove('click');
+    document.getElementById('aboutService3').classList.remove('click');
+    document.getElementById('aboutService4').classList.remove('click');
 }
+
 function services3(){
     document.getElementById('service3').classList.add('click');
     document.getElementById('service1').classList.remove('click');
     document.getElementById('service2').classList.remove('click');
     document.getElementById('service4').classList.remove('click');
-
+    // TEXT BLOCK
+    document.getElementById('aboutService3').classList.add('click');
+    document.getElementById('aboutService2').classList.remove('click');
+    document.getElementById('aboutService1').classList.remove('click');
+    document.getElementById('aboutService4').classList.remove('click');
 }
+
 function services4(){
     document.getElementById('service4').classList.add('click');
     document.getElementById('service3').classList.remove('click');
     document.getElementById('service2').classList.remove('click');
     document.getElementById('service1').classList.remove('click');
+    // TEXT BLOCK
+    document.getElementById('aboutService4').classList.add('click');
+    document.getElementById('aboutService3').classList.remove('click');
+    document.getElementById('aboutService2').classList.remove('click');
+    document.getElementById('aboutService1').classList.remove('click');
 }
 

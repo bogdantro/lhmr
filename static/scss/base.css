@@ -96,7 +96,7 @@ html, body {
 
 .services .service-1.click {
   margin-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 200px;
   margin-left: 0;
   margin-right: 0;
   -webkit-transform: scale(1.1);
@@ -142,6 +142,48 @@ html, body {
   font-family: 'Sniglet', cursive;
 }
 
+.services .service-1 .text .about {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  text-align: center;
+  border: 1px solid white;
+  border-top: none;
+  width: 80%;
+  position: absolute;
+  background: rgba(240, 240, 240, 0.3);
+  top: 110px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 200px;
+}
+
+.services .service-1 .text .about.click {
+  opacity: 1;
+}
+
+.services .service-1 .text .about::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 15px;
+  height: 10px;
+  background: rgba(240, 240, 240, 0.3);
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.services .service-1 .text .about p {
+  font-size: 16px;
+  color: white;
+  font-family: 'Sniglet', cursive;
+}
+
 .services .service-1 .img {
   width: 50%;
   display: -webkit-box;
@@ -182,7 +224,7 @@ html, body {
 
 .services .service-2.click {
   margin-top: 55px;
-  margin-bottom: 25px;
+  margin-bottom: 200px;
   margin-left: 0;
   margin-right: 0;
   -webkit-transform: scale(1.1);
@@ -228,6 +270,48 @@ html, body {
   font-family: 'Sniglet', cursive;
 }
 
+.services .service-2 .text .about {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  text-align: center;
+  border: 1px solid white;
+  border-top: none;
+  width: 80%;
+  position: absolute;
+  background: rgba(240, 240, 240, 0.3);
+  top: 110px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 200px;
+}
+
+.services .service-2 .text .about.click {
+  opacity: 1;
+}
+
+.services .service-2 .text .about::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 15px;
+  height: 10px;
+  background: rgba(240, 240, 240, 0.3);
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.services .service-2 .text .about p {
+  font-size: 16px;
+  color: white;
+  font-family: 'Sniglet', cursive;
+}
+
 .services .service-2 .img {
   width: 50%;
   display: -webkit-box;
@@ -268,7 +352,7 @@ html, body {
 
 .services .service-3.click {
   margin-top: 55px;
-  margin-bottom: 25px;
+  margin-bottom: 200px;
   margin-left: 0;
   margin-right: 0;
   -webkit-transform: scale(1.1);
@@ -314,6 +398,48 @@ html, body {
   font-family: 'Sniglet', cursive;
 }
 
+.services .service-3 .text .about {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  text-align: center;
+  border: 1px solid white;
+  border-top: none;
+  width: 80%;
+  position: absolute;
+  background: rgba(240, 240, 240, 0.3);
+  top: 110px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 200px;
+}
+
+.services .service-3 .text .about.click {
+  opacity: 1;
+}
+
+.services .service-3 .text .about::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 15px;
+  height: 10px;
+  background: rgba(240, 240, 240, 0.3);
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.services .service-3 .text .about p {
+  font-size: 16px;
+  color: white;
+  font-family: 'Sniglet', cursive;
+}
+
 .services .service-3 .img {
   width: 50%;
   display: -webkit-box;
@@ -354,7 +480,7 @@ html, body {
 
 .services .service-4.click {
   margin-top: 55px;
-  margin-bottom: 25px;
+  margin-bottom: 200px;
   margin-left: 0;
   margin-right: 0;
   -webkit-transform: scale(1.1);
@@ -397,6 +523,48 @@ html, body {
   font-size: 22px;
   color: white;
   text-transform: uppercase;
+  font-family: 'Sniglet', cursive;
+}
+
+.services .service-4 .text .about {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  text-align: center;
+  border: 1px solid white;
+  border-top: none;
+  width: 80%;
+  position: absolute;
+  background: rgba(240, 240, 240, 0.3);
+  top: 110px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 200px;
+}
+
+.services .service-4 .text .about.click {
+  opacity: 1;
+}
+
+.services .service-4 .text .about::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 15px;
+  height: 10px;
+  background: rgba(240, 240, 240, 0.3);
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.services .service-4 .text .about p {
+  font-size: 16px;
+  color: white;
   font-family: 'Sniglet', cursive;
 }
 

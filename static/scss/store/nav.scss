@@ -284,14 +284,6 @@
         border-radius: 4px;
         background: linear-gradient(135deg,rgb(60, 84, 160), #6e8efb); 
         text-decoration: none;
-        animation: order-repeat-animation 1.5s infinite;
-        animation-timing-function: ease-in-out;
-        animation-direction:alternate;
-         // ORDER CSS KEYFRAMES ANIMATION
-         @keyframes order-repeat-animation {
-            from {box-shadow: none;}
-            to {box-shadow: 0px 0px 3px 2px rgb(60, 84, 160);}
-        }
       }
 }
 

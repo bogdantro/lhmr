@@ -84,7 +84,7 @@ html, body {
     animation-direction:alternate;
     &.click{
       margin-top: 25px;
-      margin-bottom: 25px;
+      margin-bottom: 200px;
       margin-left: 0;
       margin-right: 0;
       transform: scale(1.1);
@@ -105,6 +105,41 @@ html, body {
         color: white;
         text-transform: uppercase;
         font-family: 'Sniglet', cursive;
+      }
+      .about{
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.7s ease-in-out;
+        text-align: center;
+        border: 1px solid white;
+        border-top: none;
+        width: 80%;
+        position: absolute;
+        background: rgba(240, 240, 240, 0.3);
+        top: 110px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 200px;
+        &.click{
+          opacity: 1;
+        }
+        &::before{
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: -10px;
+          transform: translateX(-50%);
+          width: 15px;
+          height: 10px;
+          background: rgba(240, 240, 240, 0.3);
+          border-top-left-radius: 100px;
+          border-top-right-radius: 100px;
+        }
+        p{
+          font-size: 16px;
+          color: white;
+          font-family: 'Sniglet', cursive;
+        }
       }
     }
     .img{
@@ -130,7 +165,7 @@ html, body {
     animation-direction:alternate;
     &.click{
       margin-top: 55px;
-      margin-bottom: 25px;
+      margin-bottom: 200px;
       margin-left: 0;
       margin-right: 0;
       transform: scale(1.1);
@@ -151,6 +186,41 @@ html, body {
         color: white;
         text-transform: uppercase;
         font-family: 'Sniglet', cursive;
+      }
+      .about{
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.7s ease-in-out;
+        text-align: center;
+        border: 1px solid white;
+        border-top: none;
+        width: 80%;
+        position: absolute;
+        background: rgba(240, 240, 240, 0.3);
+        top: 110px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 200px;
+        &.click{
+          opacity: 1;
+        }
+        &::before{
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: -10px;
+          transform: translateX(-50%);
+          width: 15px;
+          height: 10px;
+          background: rgba(240, 240, 240, 0.3);
+          border-top-left-radius: 100px;
+          border-top-right-radius: 100px;
+        }
+        p{
+          font-size: 16px;
+          color: white;
+          font-family: 'Sniglet', cursive;
+        }
       }
     }
     .img{
@@ -176,7 +246,7 @@ html, body {
     animation-direction:alternate;
     &.click{
       margin-top: 55px;
-      margin-bottom: 25px;
+      margin-bottom: 200px;
       margin-left: 0;
       margin-right: 0;
       transform: scale(1.1);
@@ -197,6 +267,41 @@ html, body {
         color: white;
         text-transform: uppercase;
         font-family: 'Sniglet', cursive;
+      }
+      .about{
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.7s ease-in-out;
+        text-align: center;
+        border: 1px solid white;
+        border-top: none;
+        width: 80%;
+        position: absolute;
+        background: rgba(240, 240, 240, 0.3);
+        top: 110px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 200px;
+        &.click{
+          opacity: 1;
+        }
+        &::before{
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: -10px;
+          transform: translateX(-50%);
+          width: 15px;
+          height: 10px;
+          background: rgba(240, 240, 240, 0.3);
+          border-top-left-radius: 100px;
+          border-top-right-radius: 100px;
+        }
+        p{
+          font-size: 16px;
+          color: white;
+          font-family: 'Sniglet', cursive;
+        }
       }
     }
     .img{
@@ -222,7 +327,7 @@ html, body {
     animation-direction:alternate;
     &.click{
       margin-top: 55px;
-      margin-bottom: 25px;
+      margin-bottom: 200px;
       margin-left: 0;
       margin-right: 0;
       transform: scale(1.1);
@@ -243,6 +348,41 @@ html, body {
         color: white;
         text-transform: uppercase;
         font-family: 'Sniglet', cursive;
+      }
+      .about{
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.7s ease-in-out;
+        text-align: center;
+        border: 1px solid white;
+        border-top: none;
+        width: 80%;
+        position: absolute;
+        background: rgba(240, 240, 240, 0.3);
+        top: 110px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 200px;
+        &.click{
+          opacity: 1;
+        }
+        &::before{
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: -10px;
+          transform: translateX(-50%);
+          width: 15px;
+          height: 10px;
+          background: rgba(240, 240, 240, 0.3);
+          border-top-left-radius: 100px;
+          border-top-right-radius: 100px;
+        }
+        p{
+          font-size: 16px;
+          color: white;
+          font-family: 'Sniglet', cursive;
+        }
       }
     }
     .img{
