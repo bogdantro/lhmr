@@ -6,14 +6,16 @@
 
 .login-signup #signUpForm .part-one {
   border-radius: 10px;
-  background: white !important;
+  background: #e8edff !important;
   width: 100%;
 }
 
 .login-signup #signUpForm .part-one .form-tag-username {
   font-size: 15px;
-  color: #3c54a0;
-  background: white;
+  color: #304792;
+  background: #e8edff;
+  z-index: 10;
+  border-radius: 5px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -25,8 +27,10 @@
 
 .login-signup #signUpForm .part-one .form-tag-first_name {
   font-size: 15px;
-  color: #3c54a0;
-  background: white;
+  color: #304792;
+  background: #e8edff;
+  z-index: 10;
+  border-radius: 5px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -38,8 +42,10 @@
 
 .login-signup #signUpForm .part-one .form-tag-last_name {
   font-size: 15px;
-  color: #3c54a0;
-  background: white;
+  color: #304792;
+  background: #e8edff;
+  z-index: 10;
+  border-radius: 5px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -51,8 +57,10 @@
 
 .login-signup #signUpForm .part-one .form-tag-email {
   font-size: 15px;
-  color: #3c54a0;
-  background: white;
+  color: #304792;
+  background: #e8edff;
+  z-index: 10;
+  border-radius: 5px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -64,8 +72,10 @@
 
 .login-signup #signUpForm .part-one .form-tag-password1 {
   font-size: 15px;
-  color: #3c54a0;
-  background: white;
+  color: #304792;
+  background: #e8edff;
+  z-index: 10;
+  border-radius: 5px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -77,8 +87,10 @@
 
 .login-signup #signUpForm .part-one .form-tag-password2 {
   font-size: 15px;
-  color: #3c54a0;
-  background: white;
+  color: #304792;
+  background: #e8edff;
+  z-index: 10;
+  border-radius: 5px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -89,12 +101,17 @@
 }
 
 .login-signup #signUpForm .part-one input {
-  width: 100%;
+  width: 95%;
   border: 2px solid #3c54a0;
   border-radius: 4px;
   padding: 7px;
   outline: none;
   font-size: 15px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: white;
 }
 
 .login-signup #signUpForm .part-one button {
@@ -149,6 +166,7 @@
 
 .login-signup #signUpForm .part-two a:active {
   background: #d7d7d7;
+  text-decoration: underline;
 }
 
 .login-signup #signUpForm.active {

@@ -41,7 +41,6 @@
 </div>
 <!-- SERVICES -->
 <div class="services" id="services">
-   <div class="border-up"></div>
    <h1 class="heading">hvorfor velge webiser</h1>
    <p class="services-paragraph">Klikk for å lese mer</p>
    <div class="service-1 service" id="service1" onclick="services1()">
@@ -96,7 +95,7 @@
    <div class="flex">
       {% for product in products %}
       <div class="product-card" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
-         <div class="ribbon"></div>
+         <div class="ribbon"><p>webiser</p></div>
          <div class="text">
             <h1 class="product-name">{{product.name}}</h1>
             <h1 class="product-price">{{product.price|floatformat}} kr</h1>

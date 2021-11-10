@@ -3,7 +3,7 @@ window.addEventListener("scroll", function(){
   navbar.classList.toggle("sticky", window.scrollY > 1)
 })
 
-
+// MENU
 function menu(){
   const sidebar = document.getElementById('sidebar');
   const navbar = document.getElementById('navbar');
@@ -32,7 +32,7 @@ function menu(){
     }, 900);
   }  
 };
-
+// ACCOUNT LOGIN/SIGNUP
 function myaccount(){
   const user = document.getElementById('myAccountIcon');
   const loginORSignUp = document.getElementById('loginORSignUp');
@@ -45,7 +45,7 @@ function myaccount(){
     loginORSignUp.classList.remove('active')  
   }
 };
-
+// ACCOUNT LOGIN/SIGNUP BACK
 function myaccount_back(){
   const user = document.getElementById('myAccountIcon');
   const loginORSignUp = document.getElementById('loginORSignUp');
@@ -53,3 +53,23 @@ function myaccount_back(){
   user.classList.remove('click')
   loginORSignUp.classList.remove('active')
 };
+// ACCOUNT LOGIN
+function login(){
+  document.getElementById('loginForm').classList.add('active')
+  document.getElementById('choose').classList.add('hidden')
+}
+// ACCOUNT LOGIN BACK
+function loginBack(){
+  document.getElementById('loginForm').classList.remove('active')
+  document.getElementById('choose').classList.remove('hidden')
+}
+// ACCOUNT SIGNUP
+function signup(){
+  document.getElementById('signUpForm').classList.add('active')
+  document.getElementById('choose').classList.add('hidden')
+}
+// ACCOUNT SIGNUP BACK
+function signUpBack(){
+  document.getElementById('signUpForm').classList.remove('active')
+  document.getElementById('choose').classList.remove('hidden')
+}

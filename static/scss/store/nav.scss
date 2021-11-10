@@ -216,6 +216,12 @@
         transition: all .3s ease-in-out;
         background: transparent;
         backdrop-filter: blur(50px);
+        #choose{
+            display: block;
+            &.hidden{
+                display: none;
+            }
+        }
         &.active{
             padding-bottom: 20px;
             opacity: 1;
@@ -223,7 +229,7 @@
         }
         .part-one{
             border-radius: 10px;
-            background: rgb(235, 235, 235);
+            background: white;
             width: 100%;
             #logOut{
                 color: rgb(248, 18, 18);
@@ -241,6 +247,7 @@
                 border-top-left-radius: 10px;
                 &:active{
                     background: rgb(215, 215, 215);
+                    text-decoration: underline;
                 }
                 &:nth-child(2){
                     border-bottom-right-radius: 10px;

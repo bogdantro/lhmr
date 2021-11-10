@@ -6,12 +6,14 @@
         display: none;
         .part-one{
             border-radius: 10px;
-            background: white !important;
+            background: #e8edff !important;
             width: 100%;
             .form-tag-username{
                 font-size: 15px;
-                color: rgb(60, 84, 160);
-                background: white;
+                color: rgb(48, 71, 146);
+                background: #e8edff;
+                z-index: 10;
+                border-radius: 5px;
                 width: max-content;
                 padding: 0 2px;
                 position: absolute;
@@ -20,8 +22,10 @@
             }
             .form-tag-first_name{
                 font-size: 15px;
-                color: rgb(60, 84, 160);
-                background: white;
+                color: rgb(48, 71, 146);
+                background: #e8edff;
+                z-index: 10;
+                border-radius: 5px;
                 width: max-content;
                 padding: 0 2px;
                 position: absolute;
@@ -30,8 +34,10 @@
             }
             .form-tag-last_name{
                 font-size: 15px;
-                color: rgb(60, 84, 160);
-                background: white;
+                color: rgb(48, 71, 146);
+                background: #e8edff;
+                z-index: 10;
+                border-radius: 5px;
                 width: max-content;
                 padding: 0 2px;
                 position: absolute;
@@ -40,8 +46,10 @@
             }
             .form-tag-email{
                 font-size: 15px;
-                color: rgb(60, 84, 160);
-                background: white;
+                color: rgb(48, 71, 146);
+                background: #e8edff;
+                z-index: 10;
+                border-radius: 5px;
                 width: max-content;
                 padding: 0 2px;
                 position: absolute;
@@ -50,8 +58,10 @@
             }
             .form-tag-password1{
                 font-size: 15px;
-                color: rgb(60, 84, 160);
-                background: white;
+                color: rgb(48, 71, 146);
+                background: #e8edff;
+                z-index: 10;
+                border-radius: 5px;
                 width: max-content;
                 padding: 0 2px;
                 position: absolute;
@@ -60,8 +70,10 @@
             }
             .form-tag-password2{
                 font-size: 15px;
-                color: rgb(60, 84, 160);
-                background: white;
+                color: rgb(48, 71, 146);
+                background: #e8edff;
+                z-index: 10;
+                border-radius: 5px;
                 width: max-content;
                 padding: 0 2px;
                 position: absolute;
@@ -69,12 +81,16 @@
                 top: 334px;
             }
             input{
-                width: 100%;
+                width: 95%;
                 border: 2px solid rgb(60, 84, 160);
                 border-radius: 4px;
                 padding: 7px;
                 outline: none;
                 font-size: 15px;  
+                position: relative; 
+                left: 50%;
+                transform: translateX(-50%);
+                background: white;
             }
             button{
                 color: rgb(15, 15, 15);
@@ -111,6 +127,7 @@
                 font-weight: bolder;
                 &:active{
                     background: rgb(215, 215, 215);
+                    text-decoration: underline;
                 }
             }
         }

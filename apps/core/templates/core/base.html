@@ -31,8 +31,6 @@
 
 </head>
 <body ontouchstart="">
-    {% include 'core/nav.html' %}
-
     <div id="backToTop" onclick="backToTop()"><i class="fas fa-location-arrow" id="backToTopIcon"></i></div>
     <style type="text/css">
         #navBarSpace{
@@ -43,7 +41,8 @@
         #navbar{
             margin-top: 0;
         }
-    </style>
+        </style>
+        {% include 'core/nav.html' %}
     <div id="allContentArea">
         {% include 'popup/cookie.html' %}
         <!---CONTENT---> 

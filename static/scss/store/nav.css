@@ -293,6 +293,14 @@
           backdrop-filter: blur(50px);
 }
 
+#navbar .login-signup #choose {
+  display: block;
+}
+
+#navbar .login-signup #choose.hidden {
+  display: none;
+}
+
 #navbar .login-signup.active {
   padding-bottom: 20px;
   opacity: 1;
@@ -301,7 +309,7 @@
 
 #navbar .login-signup .part-one {
   border-radius: 10px;
-  background: #ebebeb;
+  background: white;
   width: 100%;
 }
 
@@ -330,6 +338,7 @@
 
 #navbar .login-signup .part-one a:active {
   background: #d7d7d7;
+  text-decoration: underline;
 }
 
 #navbar .login-signup .part-one a:nth-child(2) {

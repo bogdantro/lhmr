@@ -50,7 +50,7 @@ $.ajax({
 
 window.addEventListener("scroll", function(){
     const backToTop = document.getElementById('backToTop');
-    backToTop.classList.toggle("active", window.scrollY > 20)
+    backToTop.classList.toggle("active", window.scrollY > 1200)
     // backToTop.classList.toggle("active", window.scrollY > 500)
 })
 

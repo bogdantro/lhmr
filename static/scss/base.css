@@ -43,8 +43,8 @@ html, body {
   height: 2px;
   width: 65%;
   margin: 80px auto;
-  -webkit-transform: translateY(-80px);
-          transform: translateY(-80px);
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
 }
 
 .services h1.heading {
@@ -653,6 +653,13 @@ html, body {
   border-radius: 30px;
   background: #fafafa;
   border-bottom-left-radius: 0;
+}
+
+.product-section .product-card .ribbon p {
+  margin: 0;
+  font-family: 'Indie Flower', cursive;
+  color: #3c54a0;
+  font-size: 18px;
 }
 
 .product-section .product-card .ribbon::before {
