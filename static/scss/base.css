@@ -43,8 +43,8 @@ html, body {
   height: 2px;
   width: 65%;
   margin: 80px auto;
-  -webkit-transform: translateY(-40px);
-          transform: translateY(-40px);
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
 }
 
 .services h1.heading {
@@ -644,48 +644,6 @@ html, body {
   max-width: 320px;
 }
 
-.product-section .product-card .ribbon {
-  width: 30%;
-  height: 20px;
-  position: absolute;
-  left: -15px;
-  top: 45px;
-  border-radius: 30px;
-  background: #fafafa;
-  border-bottom-left-radius: 0;
-}
-
-.product-section .product-card .ribbon p {
-  margin: 0;
-  font-family: 'Indie Flower', cursive;
-  color: #3c54a0;
-  font-size: 18px;
-}
-
-.product-section .product-card .ribbon::before {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: 0px;
-  height: 20px;
-  width: 15px;
-  background: #aaaaaa;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  z-index: 2;
-}
-
-.product-section .product-card .ribbon::after {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: 0px;
-  height: 10px;
-  width: 15px;
-  background: #fafafa;
-  z-index: 1;
-}
-
 .product-section .product-card .text .product-name {
   font-size: 22px;
   color: white;
@@ -922,6 +880,12 @@ html, body {
   opacity: 0.8;
   font-family: 'Sniglet', cursive;
   color: white;
+}
+
+.order-now {
+  width: 100%;
+  height: auto;
+  background: transparent;
 }
 
 .contact-us {

@@ -72,7 +72,7 @@ $(window).scroll(function() {
     var hT = $('#services').offset().top,
         wH = $(window).height(),
         wS = $(this).scrollTop();
-    if (wS > (hT+360-wH)){
+    if (wS > (hT+260-wH)){
         services.classList.add('active');
     }
  });
@@ -82,7 +82,7 @@ $(window).scroll(function() {
     var hT = $('#productHomePage').offset().top,
         wH = $(window).height(),
         wS = $(this).scrollTop();
-    if (wS > (hT+400-wH)){
+    if (wS > (hT+300-wH)){
         productHomePage.classList.add('active');
     }
  });
@@ -92,7 +92,7 @@ $(window).scroll(function() {
     var hT = $('#info').offset().top,
         wH = $(window).height(),
         wS = $(this).scrollTop();
-    if (wS > (hT+360-wH)){
+    if (wS > (hT+300-wH)){
         info.classList.add('active');
     }
  });

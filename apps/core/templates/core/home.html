@@ -95,7 +95,6 @@
    <div class="flex">
       {% for product in products %}
       <div class="product-card" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
-         <div class="ribbon"><p>webiser</p></div>
          <div class="text">
             <h1 class="product-name">{{product.name}}</h1>
             <h1 class="product-price">{{product.price|floatformat}} kr</h1>
@@ -135,6 +134,10 @@
          <p>Da alt er 100% fullført, så vil nettsiden bli sendt over til deg innen 2 dager</p>
       </div>
    </div>
+</div>
+<!-- ORDER NOW -->
+<div class="order-now">
+   
 </div>
 <!-- CONTACT US -->
 <div id="contactScrollTo" class="scroll-to" style="height: 60px; width: 100%;"></div>
