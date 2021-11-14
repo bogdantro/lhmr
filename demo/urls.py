@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from apps.core.views import hjemme, about, email_success, phone_mockup
+from apps.core.views import hjemme, about, email_success
 from apps.store.views import product_detail
 from django.conf import settings
 from django.contrib.sitemaps.views import sitemap
@@ -25,7 +25,6 @@ urlpatterns = [
     path('bestilling-utfort/webiser/bestilling/', order_success, name='order_success'),
     path('om-webiser/', about, name='about'),
     path('email-success/', email_success, name='email_success'),
-    path('phone/', phone_mockup, name='phone_mockup'),
 
 
     #AUTH

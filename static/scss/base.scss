@@ -651,6 +651,31 @@ html, body {
   width: 100%;
   height: auto;
   background: transparent;
+  text-align: center;
+  opacity: 0;
+  transition: .5s ease-in-out;
+  transform: translateX(20px);
+  img{
+    height: auto;
+    transform: translateX(-15px);
+  }
+    .order-button{
+      transform: translateY(-220px);
+      border-radius: 4px;
+      width: 200px;
+      font-size: 16px;
+      padding: 10px;
+      transition: all .2s ease-in-out;
+      color: white;
+      outline: none;
+      background: linear-gradient(135deg,#5a7ef5, #607bd3);  
+      box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
+      border: 2px solid transparent; 
+    }
+    &.active{
+      opacity: 1;
+      transform: translateX(0);
+    }
 }
 // CONTACT US
 .contact-us{

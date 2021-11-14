@@ -81,6 +81,3 @@ def about(request):
 
 def email_success(request):
     return render(request, 'pages/email.html')
-
-def phone_mockup(request):
-    return render(request, 'core/phone.html')

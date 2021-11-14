@@ -886,6 +886,41 @@ html, body {
   width: 100%;
   height: auto;
   background: transparent;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
+
+.order-now img {
+  height: auto;
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+}
+
+.order-now .order-button {
+  -webkit-transform: translateY(-220px);
+          transform: translateY(-220px);
+  border-radius: 4px;
+  width: 200px;
+  font-size: 16px;
+  padding: 10px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  color: white;
+  outline: none;
+  background: linear-gradient(135deg, #5a7ef5, #607bd3);
+  -webkit-box-shadow: 1.5px 3px 2px #3c54a0;
+          box-shadow: 1.5px 3px 2px #3c54a0;
+  border: 2px solid transparent;
+}
+
+.order-now.active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .contact-us {

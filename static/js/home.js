@@ -97,6 +97,16 @@ $(window).scroll(function() {
     }
  });
 
+ $(window).scroll(function() {
+    const info = document.getElementById('orderNow');
+    var hT = $('#orderNow').offset().top,
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+280-wH)){
+        info.classList.add('active');
+    }
+ });
+
  
  function coverPrices(){
     const scrollDiv = document.getElementById("productHomePage").offsetTop;
