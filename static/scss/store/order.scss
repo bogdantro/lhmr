@@ -24,7 +24,7 @@ $loader: rgb(80, 104, 180);
         padding: 10px;
         margin: 15px;
         margin-top: 0;
-        background: #e8edff;
+        background: #f1f4ff;
         border-radius: 4px;
         label{
           margin-top: 30px;
@@ -46,7 +46,7 @@ $loader: rgb(80, 104, 180);
                 width: 100%;
                 text-transform: uppercase;
                 font-family: 'Sniglet', cursive;
-                color: white;
+                color: rgb(20, 44, 120);
                 font-weight: 700;
                 font-size: 26px;
                 text-align: center;
@@ -359,8 +359,9 @@ $loader: rgb(80, 104, 180);
           }
           .form-tag-css{
             font-size: 15px;
-            color: rgb(60, 84, 160);
-            background: white;
+            color: rgb(48, 71, 146);
+            border-radius: 5px;
+            background: #e8edff;
             width: max-content;
             padding: 0 2px;
             position: absolute;
@@ -369,8 +370,9 @@ $loader: rgb(80, 104, 180);
           }
           .form-tag-html{
             font-size: 15px;
-            color: rgb(60, 84, 160);
-            background: white;
+            color: rgb(48, 71, 146);
+            border-radius: 5px;
+            background: #e8edff;
             width: max-content;
             padding: 0 2px;
             position: absolute;
@@ -379,8 +381,9 @@ $loader: rgb(80, 104, 180);
           }
           .form-tag-javascript{
             font-size: 15px;
-            color: rgb(60, 84, 160);
-            background: white;
+            color: rgb(48, 71, 146);
+            border-radius: 5px;
+            background: #e8edff;
             width: max-content;
             padding: 0 2px;
             position: absolute;
@@ -389,8 +392,9 @@ $loader: rgb(80, 104, 180);
           }
           .form-tag-python_django{
             font-size: 15px;
-            color: rgb(60, 84, 160);
-            background: white;
+            color: rgb(48, 71, 146);
+            border-radius: 5px;
+            background: #e8edff;
             width: max-content;
             padding: 0 2px;
             position: absolute;
@@ -429,8 +433,9 @@ $loader: rgb(80, 104, 180);
             }
             .form-tag-name{
               font-size: 15px;
-              color: rgb(60, 84, 160);
-              background: white;
+              color: rgb(48, 71, 146);
+              border-radius: 5px;
+              background: #e8edff;
               width: max-content;
               padding: 0 2px;
               position: absolute;
@@ -439,8 +444,9 @@ $loader: rgb(80, 104, 180);
             }
             .form-tag-email{
               font-size: 15px;
-              color: rgb(60, 84, 160);
-              background: white;
+              color: rgb(48, 71, 146);
+              border-radius: 5px;
+              background: #e8edff;
               width: max-content;
               padding: 0 2px;
               position: absolute;
@@ -449,8 +455,9 @@ $loader: rgb(80, 104, 180);
             }
             .form-tag-message{
               font-size: 15px;
-              color: rgb(60, 84, 160);
-              background: white;
+              color: rgb(48, 71, 146);
+              border-radius: 5px;
+              background: #e8edff;
               width: max-content;
               padding: 0 2px;
               position: absolute;
@@ -490,11 +497,11 @@ $loader: rgb(80, 104, 180);
             border-radius: 4px;
             width: 200px;
             font-size: 16px;
-            padding: 5px;
+            padding: 10px;
             transition: all .2s ease-in-out;
             color: white;
             outline: none;
-            background: linear-gradient(135deg,rgb(60, 84, 160), #7996f8);    
+            background: linear-gradient(135deg,#5a7ef5, #607bd3);  
             box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
             border: 2px solid transparent;      
           }

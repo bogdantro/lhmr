@@ -886,7 +886,6 @@ html, body {
   width: 100%;
   height: auto;
   background: transparent;
-  text-align: center;
   opacity: 0;
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
@@ -901,8 +900,8 @@ html, body {
 }
 
 .order-now .order-button {
-  -webkit-transform: translateY(-220px);
-          transform: translateY(-220px);
+  -webkit-transform: translateY(-220px) translateX(90px);
+          transform: translateY(-220px) translateX(90px);
   border-radius: 4px;
   width: 200px;
   font-size: 16px;
