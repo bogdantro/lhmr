@@ -220,39 +220,8 @@
   font-size: 25px;
 }
 
-#navbar .my-account-icon i:active {
-  -webkit-animation-name: user-scale;
-          animation-name: user-scale;
-  -webkit-animation-duration: .1s;
-          animation-duration: .1s;
-}
-
 #navbar .my-account-icon.click {
-  background: -webkit-gradient(linear, left bottom, left top, from(#e6e6e6), color-stop(whitesmoke), to(#e6e6e6));
-  background: linear-gradient(to top, #e6e6e6, whitesmoke, #e6e6e6);
   position: fixed;
-}
-
-@-webkit-keyframes user-scale {
-  0% {
-    -webkit-transform: scale(1) translateY(8.3px);
-            transform: scale(1) translateY(8.3px);
-  }
-  100% {
-    -webkit-transform: scale(1.2) translateY(8.3px);
-            transform: scale(1.2) translateY(8.3px);
-  }
-}
-
-@keyframes user-scale {
-  0% {
-    -webkit-transform: scale(1) translateY(8.3px);
-            transform: scale(1) translateY(8.3px);
-  }
-  100% {
-    -webkit-transform: scale(1.2) translateY(8.3px);
-            transform: scale(1.2) translateY(8.3px);
-  }
 }
 
 #navbar .login-signup {

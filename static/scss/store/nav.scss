@@ -197,19 +197,9 @@
         i{
             color: rgb(235, 235, 235);
             font-size: 25px;
-            &:active{
-                animation-name: user-scale;
-                animation-duration: .1s;
-            }
         }
         &.click{
-            background: linear-gradient(to top, rgb(230, 230, 230), rgb(245, 245, 245), rgb(230, 230, 230)); 
             position: fixed; 
-        }
-        // USER CSS KEYFRAMES ANIMATION
-        @keyframes user-scale {
-            0%   {transform: scale(1) translateY(8.3px);}
-            100% {transform: scale(1.2) translateY(8.3px);}
         }
     }
     // USER LOGIN OR SIGNUP CSS
