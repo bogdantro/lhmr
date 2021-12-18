@@ -59,13 +59,13 @@ function backToTop(){
 }
 
 
-function cover(){
-    const coverContent = document.getElementById('coverContent');
+// function cover(){
+//     const coverContent = document.getElementById('coverContent');
 
-    coverContent.classList.add('active')
-}
+//     coverContent.classList.add('active')
+// }
     
-window.onload=cover();
+// window.onload=cover();
 
 $(window).scroll(function() {
     const services = document.getElementById('services');

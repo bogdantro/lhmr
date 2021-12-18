@@ -10,7 +10,23 @@ $loader: rgb(80, 104, 180);
 
 // GLOBAL
 body{
-  background: linear-gradient(to left, rgb(37, 59, 131), rgb(60, 84, 160), rgb(60, 84, 160), rgb(99, 124, 204));
+  background: linear-gradient(to left, rgba(202, 215, 255, 0.226));
+}
+.bottom-nav{
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #6e8efb;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a{
+    color: white !important;
+    font-size: 16px;
+  }
 }
 #backToTop{
   position: fixed;
@@ -48,13 +64,11 @@ body{
 // COVER
 .cover{
   width: 100%;
-  height: 80vh;
+  height: 400px;
   background: transparent;
-  padding-top: 60px;
   margin-bottom: 60px;
   .content{
-    transform: translateY(10px);
-    opacity: 0;
+    opacity: 1;
     transition: all 1.5s ease-in-out;
     &.active{
       opacity: 1;
@@ -99,11 +113,10 @@ body{
       }
     }
     img{
-      width: 255px;
+      width: 100%;
       height: auto;
-      position: absolute;
-      right: 5px;
-      transform: translateY(35px);
+      object-fit: cover;
+      filter: brightness(50%);
     }
   }
 }

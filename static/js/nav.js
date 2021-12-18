@@ -6,6 +6,7 @@ window.addEventListener("scroll", function(){
 // MENU
 function menu(){
   const sidebar = document.getElementById('sidebar');
+  const logo = document.getElementById('logo');
   const navbar = document.getElementById('navbar');
   const hamburger = document.getElementById('hamburger');
   const sidebarLi = document.getElementById('sidebarLi');
@@ -20,6 +21,7 @@ function menu(){
     sidebarLi.classList.add('active')
     background.classList.add('active')
     backToTop.classList.add('menu-active')
+    logo.classList.add('menu-click')
   } else{
     setTimeout(function(){ 
       hamburger.classList.remove('click')  
@@ -27,6 +29,7 @@ function menu(){
     sidebar.classList.remove('active')
     sidebarLi.classList.remove('active')
     background.classList.remove('active')
+    logo.classList.remove('menu-click')
     setTimeout(function(){
       backToTop.classList.remove('menu-active')
     }, 900);
