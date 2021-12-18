@@ -89,31 +89,51 @@ body{
       text-align: center;
       z-index: 10;
       h1{
-        color: white;
-        font-size: 38px;
+        color: rgb(240, 240, 240);
+        font-size: 34px;
         font-family: 'Alata', sans-serif;
         line-height: 160%;
+        text-transform: uppercase;
+        font-weight: bold;
         .moderne{
           color: transparent;
           -webkit-text-stroke: 1px white;
           text-stroke: 1px white;
           text-shadow: none;
           font-family: 'Alata', sans-serif;
+          font-weight: normal;
         }
         .lave.priser{
           font-family: 'Alata', sans-serif;
-          // background: #6e8efb;
-          padding: 10px;
           position: relative;
+          top: 5px;
+          color: #6e8efb;
         }
         .background-overlay{
-          width: 200px;
-          height: 50px;
-          background: #6e8efb;
+          width: 210px;
+          height: 55px;
+          background: rgb(240, 240, 240);
           position: absolute;
           left: 50%;
           transform: skew(-18deg) translateY(6px) translateX(-50%);
         }
+      }
+    }
+    .cover-action{
+      width: 100%;
+      height: auto;
+      position: relative;
+      top: 90px;
+      .button-case-studies{
+        padding: 10px;
+        width: 160px;
+        border-radius: 4px;
+        color: white;
+        background: #6e8efb;
+        outline: none;
+        border: none;
+        box-shadow: 1px 1px 2px white;
+        font-size: 14px;
       }
     }
   }

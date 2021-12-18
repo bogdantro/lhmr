@@ -112,10 +112,12 @@ body {
 }
 
 .cover .content .text h1 {
-  color: white;
-  font-size: 38px;
+  color: #f0f0f0;
+  font-size: 34px;
   font-family: 'Alata', sans-serif;
   line-height: 160%;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .cover .content .text h1 .moderne {
@@ -124,22 +126,44 @@ body {
   text-stroke: 1px white;
   text-shadow: none;
   font-family: 'Alata', sans-serif;
+  font-weight: normal;
 }
 
 .cover .content .text h1 .lave.priser {
   font-family: 'Alata', sans-serif;
-  padding: 10px;
   position: relative;
+  top: 5px;
+  color: #6e8efb;
 }
 
 .cover .content .text h1 .background-overlay {
-  width: 200px;
-  height: 50px;
-  background: #6e8efb;
+  width: 210px;
+  height: 55px;
+  background: #f0f0f0;
   position: absolute;
   left: 50%;
   -webkit-transform: skew(-18deg) translateY(6px) translateX(-50%);
           transform: skew(-18deg) translateY(6px) translateX(-50%);
+}
+
+.cover .content .cover-action {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 90px;
+}
+
+.cover .content .cover-action .button-case-studies {
+  padding: 10px;
+  width: 160px;
+  border-radius: 4px;
+  color: white;
+  background: #6e8efb;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 1px 1px 2px white;
+          box-shadow: 1px 1px 2px white;
+  font-size: 14px;
 }
 
 .load-wrapp {
