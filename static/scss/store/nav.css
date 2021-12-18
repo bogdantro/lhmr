@@ -31,6 +31,11 @@
   color: #323232;
 }
 
+#navbar.sticky .order {
+  background: #6e8efb;
+  border: 2px solid transparent;
+}
+
 #navbar .logo {
   cursor: pointer;
   position: absolute;
@@ -338,7 +343,8 @@
   transition: all 0.2s ease-in;
   font-size: 14px;
   border-radius: 4px;
-  background: #6e8efb;
+  background: transparent;
   text-decoration: none;
+  border: 2px solid white;
 }
 /*# sourceMappingURL=nav.css.map */
