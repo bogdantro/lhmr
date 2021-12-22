@@ -1,20 +1,40 @@
-.login-signup #loginForm {
+.login {
+  background: #829efc;
+  width: 100%;
+  height: 500px;
+}
+
+.login h1 {
+  -webkit-transform: translateY(190px) translateX(10px);
+          transform: translateY(190px) translateX(10px);
+  font-size: 16px;
+  color: white;
+  padding: 5px;
+  position: absolute;
+}
+
+.login h1 a {
+  color: white;
+  text-decoration: underline;
+}
+
+.login #loginForm {
   text-align: left;
   width: 100%;
-  display: none;
-  border-radius: 4px;
+  display: block;
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
 }
 
-.login-signup #loginForm .part-one {
-  border-radius: 10px;
-  background: #e8edff !important;
+.login #loginForm .part-one {
+  background: #bdcdff;
   width: 100%;
 }
 
-.login-signup #loginForm .part-one .form-tag-username {
+.login #loginForm .part-one .form-tag-username {
   font-size: 15px;
   color: #304792;
-  background: #e8edff;
+  background: #bdcdff;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -26,10 +46,10 @@
   border-radius: 5px;
 }
 
-.login-signup #loginForm .part-one .form-tag-password {
+.login #loginForm .part-one .form-tag-password {
   font-size: 15px;
   color: #304792;
-  background: #e8edff;
+  background: #bdcdff;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -41,7 +61,7 @@
   border-radius: 5px;
 }
 
-.login-signup #loginForm .part-one input {
+.login #loginForm .part-one input {
   width: 95%;
   border: 2px solid #3c54a0;
   border-radius: 4px;
@@ -53,63 +73,5 @@
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background: white;
-}
-
-.login-signup #loginForm .part-one button {
-  color: #0f0f0f;
-  background: white;
-  border: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 60px;
-  width: 100%;
-  border-top: 1px solid #e1e1e1;
-  font-size: 18px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  outline: none;
-}
-
-.login-signup #loginForm .part-one button:active {
-  background: #d7d7d7;
-}
-
-.login-signup #loginForm .part-two {
-  border-radius: 10px;
-  background: white;
-  margin: 7px 0;
-}
-
-.login-signup #loginForm .part-two a {
-  border-radius: 10px;
-  font-size: 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 60px;
-  width: 100%;
-  font-weight: bolder;
-}
-
-.login-signup #loginForm .part-two a:active {
-  background: #d7d7d7;
-  text-decoration: underline;
-}
-
-.login-signup #loginForm.active {
-  display: block;
 }
 /*# sourceMappingURL=login.css.map */

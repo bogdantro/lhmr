@@ -26,6 +26,7 @@ html, body {
   h1{
     &.heading{
       padding-left: 8px;
+      margin-bottom: 15px;
       width: 100%;
       font-family: 'Sniglet', cursive;
       color: black;
@@ -39,7 +40,7 @@ html, body {
     font-family: 'Sniglet', cursive;
     color: black;
     opacity: 0.8;
-    line-height: 190%;
+    line-height: 230%;
   }
   .light-overlay{
     width: max-content;
@@ -49,37 +50,40 @@ html, body {
     border-radius: 7px;
   }
   .sites{
-    width: 100%;
-    height: auto;
     padding: 10px;
     text-align: left;
     background: #93acffa8;
-    .product-card{
-      background: #607bd3;
-      display: inline-block;
-      width: 140px;
-      height: 80px;
-      text-align: center;
-      margin: 20px;
-      margin-left: 0;
-      border-radius: 7px;
-      position: relative;
-      h1{
-        font-size: 15px;
-        color: white;
-        padding-top: 10px;
-      }
-      i{
-        color: white;
-        font-size: 32px;
-        position: absolute;
-        bottom: -5px;
-        right: -9px;
+    width: 100%;
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .swiper-wrapper{
+      .swiper-slide{
+        background: #607bd3;
+        width: 140px !important;
+        height: 80px !important;
+        text-align: center;
+        margin: 20px;
+        margin-left: 0;
+        border-radius: 7px;
+        position: relative;
+        h1{
+          font-size: 15px;
+          color: white;
+          padding-top: 10px;
+        }
+        i{
+          color: white;
+          font-size: 32px;
+          position: absolute;
+          bottom: -5px;
+          right: -9px;
+        }
       }
     }
   }
 }
-
 // CONTACT US
 .contact-us{
   background: transparent;

@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}    
+{% load static %}    
+    
+
+{% block content %}
+
+
+
+<div class="login">
+     <!-- USER LOGIN -->
+        <form id="loginForm" method="post">
+            {% csrf_token %}
+            <div class="part-one">
+                <br>
+                <label for="username" class="form-tag-username tag">Brukernavn</label>
+                <input type="text" id="username" name="username" required oninvalid="this.setCustomValidity('Værsåsnill skriv inn brukernavnet')" oninput="this.setCustomValidity('')">
+                <br>
+                <br>
+                <label for="password" class="form-tag-password tag">Passord</label>
+                <input type="password" id="password" name="password" required oninvalid="this.setCustomValidity('Skriv inn passordet')" oninput="this.setCustomValidity('')">
+                <div id="signUpFormErrors">{{ form.username.errors }}</div>
+                <br>
+                <div id="signUpFormErrors">{{ form.password.errors }}</div>
+            </div>
+        </form>
+    <h1>Eller <a href="">lag bruker</a></h1>
+</div>
+
+{% endblock %}
+            

@@ -1,17 +1,31 @@
 // STANDARD PHONE
-.login-signup{
+.signup{
+    background: #829efc;
+    width: 100%;
+    height: 700px;
+    h1{
+        transform: translateY(190px) translateX(10px);
+        font-size: 16px;
+        color: white;
+        padding: 5px;
+        position: absolute;
+        a{
+            color: white;
+            text-decoration: underline;
+        }
+    }
     #signUpForm{
         text-align: left;
-        width: auto;
-        display: none;
+        width: 100%;
+        display: block;
+        transform: translateY(150px);
         .part-one{
-            border-radius: 10px;
-            background: #e8edff !important;
+            background: #bdcdff;
             width: 100%;
             .form-tag-username{
                 font-size: 15px;
                 color: rgb(48, 71, 146);
-                background: #e8edff;
+                background: #bdcdff;
                 z-index: 10;
                 border-radius: 5px;
                 width: max-content;
@@ -23,7 +37,7 @@
             .form-tag-first_name{
                 font-size: 15px;
                 color: rgb(48, 71, 146);
-                background: #e8edff;
+                background: #bdcdff;
                 z-index: 10;
                 border-radius: 5px;
                 width: max-content;
@@ -35,104 +49,63 @@
             .form-tag-last_name{
                 font-size: 15px;
                 color: rgb(48, 71, 146);
-                background: #e8edff;
+                background: #bdcdff;
                 z-index: 10;
                 border-radius: 5px;
                 width: max-content;
                 padding: 0 2px;
                 position: absolute;
                 left: 20px;
-                top: 142px;
+                top: 146px;
             }
             .form-tag-email{
                 font-size: 15px;
                 color: rgb(48, 71, 146);
-                background: #e8edff;
+                background: #bdcdff;
                 z-index: 10;
                 border-radius: 5px;
                 width: max-content;
                 padding: 0 2px;
                 position: absolute;
                 left: 20px;
-                top: 205px;
+                top: 213px;
             }
             .form-tag-password1{
                 font-size: 15px;
                 color: rgb(48, 71, 146);
-                background: #e8edff;
+                background: #bdcdff;
                 z-index: 10;
                 border-radius: 5px;
                 width: max-content;
                 padding: 0 2px;
                 position: absolute;
                 left: 20px;
-                top: 270px;
+                top: 280px;
             }
             .form-tag-password2{
                 font-size: 15px;
                 color: rgb(48, 71, 146);
-                background: #e8edff;
+                background: #bdcdff;
                 z-index: 10;
                 border-radius: 5px;
                 width: max-content;
                 padding: 0 2px;
                 position: absolute;
                 left: 20px;
-                top: 334px;
+                top: 345px;
             }
             input{
                 width: 95%;
                 border: 2px solid rgb(60, 84, 160);
                 border-radius: 4px;
-                padding: 7px;
+                padding: 8px;
                 outline: none;
                 font-size: 15px;  
                 position: relative; 
                 left: 50%;
                 transform: translateX(-50%);
                 background: white;
-            }
-            button{
-                color: rgb(15, 15, 15);
-                margin-top: 25px;
-                background: white;
-                border: none;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 60px;
-                width: 100%;
-                border-top: 1px solid rgb(225, 225, 225);
-                font-size: 18px;
-                border-bottom-right-radius: 10px;
-                border-bottom-left-radius: 10px;
-                outline: none;
-                &:active{
-                    background: rgb(215, 215, 215);
-                }
-            }
-        }
-        .part-two{
-            border-radius: 10px;
-            background: white;
-            margin: 7px 0;
-            a{
-                border-radius: 10px;
-                font-size: 18px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 60px;
-                width: 100%;
-                font-weight: bolder;
-                &:active{
-                    background: rgb(215, 215, 215);
-                    text-decoration: underline;
-                }
-            }
-        }
-        &.active{
-            display: block;
+            }           
         }
     }
 }

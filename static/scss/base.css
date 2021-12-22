@@ -18,6 +18,7 @@ html, body {
 
 .intro h1.heading {
   padding-left: 8px;
+  margin-bottom: 15px;
   width: 100%;
   font-family: 'Sniglet', cursive;
   color: black;
@@ -31,7 +32,7 @@ html, body {
   font-family: 'Sniglet', cursive;
   color: black;
   opacity: 0.8;
-  line-height: 190%;
+  line-height: 230%;
 }
 
 .intro .light-overlay {
@@ -47,18 +48,26 @@ html, body {
 }
 
 .intro .sites {
-  width: 100%;
-  height: auto;
   padding: 10px;
   text-align: left;
   background: #93acffa8;
+  width: 100%;
+  height: 190px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.intro .sites .product-card {
+.intro .sites .swiper-wrapper .swiper-slide {
   background: #607bd3;
-  display: inline-block;
-  width: 140px;
-  height: 80px;
+  width: 140px !important;
+  height: 80px !important;
   text-align: center;
   margin: 20px;
   margin-left: 0;
@@ -66,13 +75,13 @@ html, body {
   position: relative;
 }
 
-.intro .sites .product-card h1 {
+.intro .sites .swiper-wrapper .swiper-slide h1 {
   font-size: 15px;
   color: white;
   padding-top: 10px;
 }
 
-.intro .sites .product-card i {
+.intro .sites .swiper-wrapper .swiper-slide i {
   color: white;
   font-size: 32px;
   position: absolute;

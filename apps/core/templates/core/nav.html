@@ -61,8 +61,8 @@
                             <a onclick="myaccount()">Min bruker</a>
                             <a id="logOut" href="{% url 'logout' %}">Logg ut</a>
                             {% else %}
-                            <a>Logg inn</a>
-                            <a>Lag bruker</a>
+                            <a href="/logg-inn">Logg inn</a>
+                            <a href="/lag-bruker">Lag bruker</a>
                             {% endif %}
                         </div>
                     </div>

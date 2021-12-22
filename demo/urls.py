@@ -7,7 +7,7 @@ from django.contrib.sitemaps.views import sitemap
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.auth import views
-from apps.userprofile.views import myaccount
+from apps.userprofile.views import myaccount, login, signup
 from apps.order.views import send_order, order_success
 
 
@@ -25,6 +25,8 @@ urlpatterns = [
     path('bestilling-utfort/webiser/bestilling/', order_success, name='order_success'),
     path('om-webiser/', about, name='about'),
     path('email-success/', email_success, name='email_success'),
+    path('logg-inn/', login, name='login'),
+    path('lag-bruker/', signup, name='signup'),
 
 
     #AUTH

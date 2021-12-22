@@ -1,18 +1,31 @@
 // STANDARD PHONE
-.login-signup{
+.login{
+    background: #829efc;
+    width: 100%;
+    height: 500px;
+    h1{
+        transform: translateY(190px) translateX(10px);
+        font-size: 16px;
+        color: white;
+        padding: 5px;
+        position: absolute;
+        a{
+            color: white;
+            text-decoration: underline;
+        }
+    }
     #loginForm{
         text-align: left;
         width: 100%;
-        display: none;
-        border-radius: 4px;
+        display: block;
+        transform: translateY(150px);
         .part-one{
-            border-radius: 10px;
-            background: #e8edff !important;
+            background: #bdcdff;
             width: 100%;
             .form-tag-username{
                 font-size: 15px;
                 color: rgb(48, 71, 146);
-                background: #e8edff;
+                background: #bdcdff;
                 width: max-content;
                 padding: 0 2px;
                 position: absolute;
@@ -24,7 +37,7 @@
             .form-tag-password{
                 font-size: 15px;
                 color: rgb(48, 71, 146);
-                background: #e8edff;
+                background: #bdcdff;
                 width: max-content;
                 padding: 0 2px;
                 position: absolute;
@@ -45,46 +58,6 @@
                 transform: translateX(-50%);
                 background: white;
             }
-            button{
-                color: rgb(15, 15, 15);
-                background: white;
-                border: none;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 60px;
-                width: 100%;
-                border-top: 1px solid rgb(225, 225, 225);
-                font-size: 18px;
-                border-bottom-right-radius: 10px;
-                border-bottom-left-radius: 10px;
-                outline: none;
-                &:active{
-                    background: rgb(215, 215, 215);
-                }
-            }
-        }
-        .part-two{
-            border-radius: 10px;
-            background: white;
-            margin: 7px 0;
-            a{
-                border-radius: 10px;
-                font-size: 18px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 60px;
-                width: 100%;
-                font-weight: bolder;
-                &:active{
-                    background: rgb(215, 215, 215);
-                    text-decoration: underline;
-                }
-            }
-        }
-        &.active{
-            display: block;
         }
     }
 }
