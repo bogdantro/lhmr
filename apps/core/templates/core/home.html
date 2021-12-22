@@ -30,149 +30,39 @@
  </div>
 <!-- COVER -->
 <div class="cover" id="cover">
-   <img src="{% static '/images/covers/main-cover2.jpg' %}" alt="cover-1">
+   <img src="{% static '/images/covers/cover2.jpg' %}" alt="cover-1">
    <div class="content" id="coverContent">
       <div class="text">
          <h1><span class="moderne">Moderne</span> nettsider <br>til<br> <div class="background-overlay"></div> <span class="lave priser">lave priser</span></h1>
       </div>
       <div class="cover-action">
-         <!-- <button class="button-case-studies">Prosjekter</button> 
+         <button class="button-web-dev">Nettutvikling</button> 
          <br>
          <br>
-         <button class="button-case-studies">NESTE BUTTON</button> -->
       </div>
    </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<!-- SERVICES
-<div class="services" id="services">
-   <h1 class="heading">hvorfor velge webiser</h1>
-   <p class="services-paragraph">Klikk for å lese mer</p>
-   <div class="service-1 service" id="service1" onclick="services1()">
-      <div class="img">
-         <i class="fal fa-phone-laptop"></i>
-      </div>
-      <div class="text">
-         <h1>Responsiv<br>design</h1>
-         <div class="about" id="aboutService1">
-            <p>Alle designene våres er responsive og moderne. De er designet av de beste webdesignerne i Norge, og garanterer at du kommer til å elske den!</p>
-         </div>
-      </div>
-   </div>
-   <div class="service-2 service" id="service2" onclick="services2()">
-      <div class="text">
-         <h1>Veileding</h1>
-         <div class="about" id="aboutService2">
-            <p>Du får 4 timer gratis veileding hver uke etter bestilling, sånn at du kan gjøre endringer på nettsiden.</p>
-         </div>
-      </div>
-      <div class="img">
-         <i class="fas fa-hands-helping"></i>      
-      </div>
-   </div>
-   <div class="service-3 service" id="service3" onclick="services3()">
-      <div class="img">
-         <i class="fas fa-medal"></i>
-      </div>
-      <div class="text">
-         <h1>Norges<br>beste</h1>
-         <div class="about" id="aboutService3">
-            <p>Vi har et team som består av de mest motiverte og kreative webdesignerne i hele Norge. Vi har bygget over 100 nettsider i løpet av de siste 8 måneder, og våre designere og utviklere har fått en topp anmeldelse!</p>
-         </div>
-      </div>
-   </div>
-   <div class="service-4 service" id="service4" onclick="services4()">
-      <div class="text">
-         <h1>Lave priser</h1>
-         <div class="about" id="aboutService4">
-            <p>Når det gjelder priser, så har vi har nemlig de laveste prisene på markedet ;)</p>
-         </div>
-      </div>
-      <div class="img">
-         <i class="fas fa-coins"></i>
-      </div>
-   </div>
-</div> -->
-<!-- PRODUCT -->
-<!-- <div id="productScrollTo" class="scroll-to" style="height: 60px; width: 100%"></div>
-<div class="product-section" id="productHomePage">
-   <h1 class="heading">Priser</h1>
-   <div class="flex">
+<!-- INTRO -->
+<div class="intro" id="intro">
+   <h1 class="heading">Vi bygger nettsider som konverterer</h1>
+   <p>Har du en nettbutikk eller driver eget firma?<br><span class="light-overlay">Vi er her for å hjelpe deg!</span> Vi består av Norges beste designere og utviklere, og vi garanter at du vil elske nettsiden</p>
+   <br>
+   <h1 class="heading">Klikk for å se demo</h1>
+   <div class="sites">
       {% for product in products %}
-      <div class="product-card" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
-         <div class="text">
+         <div class="product-card">
             <h1 class="product-name">{{product.name}}</h1>
-            <h1 class="product-price">{{product.price|floatformat}} kr</h1>
+            <i class="fas fa-chevron-right"></i>
          </div>
-      </div>
       {% endfor %}
    </div>
-</div> -->
-<!-- INFO/PROCCESS -->
-<!-- <div id="proccessScrollTo" class="scroll-to" style="height: 60px; width: 100%;"></div>
-<div class="proccess" id="info">
-   <h1 class="heading">Så enkelt er det</h1>
-   <div class="content">
-      <div class="class-1">
-         <h1>Vi motar bestillingen din</h1>
-         <img src="{% static '/images/other/loading-bar-1.png' %}" alt="load-bar-1">
-         <p>Med engang bestillingen er fullført, så sender vi det videre til våres designere som starter å lage designen. Du kan følge med på hvor langt vi har kommet under "min bruker" >> "mine bestillinger"</p>
-      </div>
-      <div class="class-2">
-         <h1>Designen har blitt fullført</h1>
-         <img src="{% static '/images/other/loading-bar-2.png' %}" alt="load-bar-2">
-         <p>Da designen har blitt fullført, så blir designen sendt videre til våres utviklere, som starter å bygge nettsiden</p>
-      </div>
-      <div class="class-3">
-         <h1>Nettsiden er ferdig bygget</h1>
-         <img src="{% static '/images/other/loading-bar-3.png' %}" alt="load-bar-3">
-         <p>Da utviklerne våres har bygget ferdig nettsiden, så vil du mota en mail sånn at du kan sjekke om noe skal endres</p>
-      </div>
-      <div class="class-4">
-         <h1>Siste endringer blir gjort</h1>
-         <img src="{% static '/images/other/loading-bar-4.png' %}" alt="load-bar-4">
-         <p>Om det er noe feil eller endringer som skal bli gjort, så vil utviklerne våres utføre det</p>
-      </div>
-      <div class="class-5">
-         <h1>Alt har blitt fullført!</h1>
-         <img src="{% static '/images/other/loading-bar-5.png' %}" alt="load-bar-5">
-         <p>Da alt er 100% fullført, så vil nettsiden bli sendt over til deg innen 2 dager</p>
-      </div>
-   </div>
-</div> -->
-<!-- ORDER NOW -->
-<!-- <div class="order-now" id="orderNow">
-   <img src="{% static 'images/icons/phone-sreen.png' %}" alt="ios screen mockup preview webiste order webiser">
-   <button class="order-button" onclick="window.location.href='/bestill'">kom i gang</button>
-</div> -->
+</div>
+<!-- DEMO -->
+<div class="demo-slider"></div>
 <!-- CONTACT US -->
-<!-- <div id="contactScrollTo" class="scroll-to" style="height: 60px; width: 100%;"></div>
 <div class="contact-us" id="contactUs">
    <h1 class="heading">Trenger du extra hjelp?</h1>
-   <p>Kontakter oss under</p>
+   <p>Trykk på chatt ikonet nederst til høyre, eller kontakter oss under</p>
    <form action="" method="POST">
       {% csrf_token %}
       <br>
@@ -190,5 +80,5 @@
          <button class="hover" type="submit" name="contact" value="contact">Send</button>
       </div>
    </form>
-</div>  -->
+</div> 
 {% endblock %}

@@ -7,8 +7,8 @@
 }
 
 body {
-  background: -webkit-gradient(linear, right top, left top, from(rgba(202, 215, 255, 0.226)));
-  background: linear-gradient(to left, rgba(202, 215, 255, 0.226));
+  background: -webkit-gradient(linear, right top, left top, from(rgba(202, 215, 255, 0.13)));
+  background: linear-gradient(to left, rgba(202, 215, 255, 0.13));
 }
 
 .bottom-nav {
@@ -82,7 +82,7 @@ body {
 
 .cover img {
   width: 100%;
-  height: auto;
+  height: 600px;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-filter: brightness(50%);
@@ -116,11 +116,12 @@ body {
   font-size: 34px;
   font-family: 'Alata', sans-serif;
   line-height: 160%;
-  text-transform: uppercase;
   font-weight: bold;
+  text-shadow: 0.3px 0.3px 1px white;
 }
 
 .cover .content .text h1 .moderne {
+  font-size: 35px;
   color: transparent;
   -webkit-text-stroke: 1px white;
   text-stroke: 1px white;
@@ -153,17 +154,30 @@ body {
   top: 90px;
 }
 
-.cover .content .cover-action .button-case-studies {
+.cover .content .cover-action .button-web-dev {
   padding: 10px;
   width: 160px;
   border-radius: 4px;
   color: white;
-  background: #6e8efb;
   outline: none;
   border: none;
   -webkit-box-shadow: 1px 1px 2px white;
           box-shadow: 1px 1px 2px white;
   font-size: 14px;
+  border: 1px solid white;
+  background: transparent;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.cover .content .cover-action .button-web-dev:hover {
+  background: #f0f0f0;
+  color: #6e8efb;
+}
+
+.cover .content .cover-action .button-web-dev:active {
+  background: #f0f0f0;
+  color: #6e8efb;
 }
 
 .load-wrapp {

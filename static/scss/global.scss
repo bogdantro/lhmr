@@ -10,7 +10,7 @@ $loader: rgb(80, 104, 180);
 
 // GLOBAL
 body{
-  background: linear-gradient(to left, rgba(202, 215, 255, 0.226));
+  background: linear-gradient(to left, rgba(202, 215, 255, 0.13));
 }
 .bottom-nav{
   width: 100%;
@@ -68,7 +68,7 @@ body{
   position: relative;
   img{
     width: 100%;
-    height: auto;
+    height: 600px;
     object-fit: cover;
     filter: brightness(50%);
   }
@@ -93,9 +93,10 @@ body{
         font-size: 34px;
         font-family: 'Alata', sans-serif;
         line-height: 160%;
-        text-transform: uppercase;
         font-weight: bold;
+        text-shadow: 0.3px 0.3px 1px white;        
         .moderne{
+          font-size: 35px;
           color: transparent;
           -webkit-text-stroke: 1px white;
           text-stroke: 1px white;
@@ -124,16 +125,26 @@ body{
       height: auto;
       position: relative;
       top: 90px;
-      .button-case-studies{
+      .button-web-dev{
         padding: 10px;
         width: 160px;
         border-radius: 4px;
         color: white;
-        background: #6e8efb;
         outline: none;
         border: none;
         box-shadow: 1px 1px 2px white;
         font-size: 14px;
+        border: 1px solid white;
+        background: transparent;
+        transition: .2s;
+        &:hover{
+          background: rgb(240, 240, 240);
+          color: #6e8efb;
+        }
+        &:active{
+          background: rgb(240, 240, 240);
+          color: #6e8efb;
+        }
       }
     }
   }
