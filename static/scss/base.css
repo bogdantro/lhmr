@@ -19,16 +19,17 @@ html, body {
 .intro h1.heading {
   padding-left: 8px;
   margin-bottom: 15px;
+  margin-top: 10px;
   width: 100%;
   font-family: 'Sniglet', cursive;
   color: black;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 26px;
 }
 
 .intro p {
   padding-left: 8px;
-  font-size: 15px;
+  font-size: 14px;
   font-family: 'Sniglet', cursive;
   color: black;
   opacity: 0.8;
