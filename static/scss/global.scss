@@ -12,13 +12,20 @@ $loader: rgb(80, 104, 180);
 body{
   background: linear-gradient(to left, rgba(202, 215, 255, 0.13));
 }
+.light-overlay{
+  width: max-content;
+  height: max-content;
+  background: rgb(216, 224, 255);
+  padding: 4px;
+  border-radius: 7px;
+}
 .bottom-nav{
   width: 100%;
   height: 50px;
   position: fixed;
   bottom: 0;
   left: 0;
-  background: #6e8efb;
+  background: rgb(28, 211, 28);
   z-index: 100;
   display: flex;
   justify-content: center;

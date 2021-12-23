@@ -43,13 +43,6 @@ html, body {
     opacity: 0.8;
     line-height: 230%;
   }
-  .light-overlay{
-    width: max-content;
-    height: max-content;
-    background: rgb(216, 224, 255);
-    padding: 4px;
-    border-radius: 7px;
-  }
   .sites{
     padding: 10px;
     text-align: left;
@@ -76,12 +69,79 @@ html, body {
         }
         i{
           color: white;
-          font-size: 32px;
-          position: absolute;
-          bottom: -5px;
-          right: -9px;
+          font-size: 10px;
+          padding-top: 5px;
         }
       }
+    }
+  }
+}
+// INFO
+.info{
+  background: transparent;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  h1{
+    &.heading{
+      padding-left: 8px;
+      margin-bottom: 15px;
+      margin-top: 10px;
+      width: 100%;
+      font-family: 'Sniglet', cursive;
+      color: black;
+      font-weight: bold;
+      font-size: 26px;
+    }
+  }
+  p{
+    padding-left: 8px;
+    font-size: 14px;
+    font-family: 'Sniglet', cursive;
+    color: black;
+    opacity: 0.8;
+    line-height: 230%;
+    word-spacing: 1.5px;
+  }
+  img{
+    width: auto;
+    height: 140px;
+    float: right;
+  }
+}
+// ECOMMERCE
+.ecommerce{
+  background: transparent;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  h1{
+    &.heading{
+      padding-left: 8px;
+      margin-bottom: 15px;
+      margin-top: 10px;
+      width: 100%;
+      font-family: 'Sniglet', cursive;
+      color: black;
+      font-weight: bold;
+      font-size: 26px;
+    }
+  }
+  .content{
+    background: #93acffa8;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: auto;
+      height: 210px;
+      transform: translateY(25px);
     }
   }
 }
