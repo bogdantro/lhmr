@@ -24,6 +24,7 @@
 
 
 
+
 <!-- LOADER -->
 <div class="load-wrapp" id="homeLoader">
    <div class="load-2">
@@ -38,7 +39,7 @@
    <div class="content" id="coverContent">
       <div class="text">
          <h1><span class="moderne">Moderne</span> nettsider <br>til<br> <div class="background-overlay"></div> <span class="lave priser">lave priser</span></h1>
-         <p>Nettsider designet og utviklet av Norges beste</p>
+         <p>--</p>
       </div>
    </div>
 </div>
@@ -52,10 +53,12 @@
       <div class="swiper mySwiper">
          <div class="swiper-wrapper">
             {% for product in products %}
-            <div class="swiper-slide">
-               <h1 class="product-name">{{product.name}}</h1>
-               <i class="fas fa-chevron-right"></i>
-            </div>
+            <a href="{% url  'product_detail' product.slug  %}">
+               <div class="swiper-slide">
+                  <h1 class="product-name">{{product.name}}</h1>
+                  <i class="fas fa-chevron-right"></i>
+               </div>
+            </a>
             {% endfor %}   
          </div>
        </div>
@@ -77,14 +80,43 @@
       <img src="{% static '/images/covers/ecommerce.png' %}" alt="image ecommerce nettbutikk shop monye online shop">
    </div>
 </div>
+<!-- ECOMMERCE ICONS -->
+<div class="icons">
+   <i class="far fa-phone-laptop"></i>
+   <p>Responsiv design</p>
+   <br>
+   <i class="fas fa-store"></i>
+   <p>Alle nettbutikk funksjonene du trenger</p>
+   <br>
+   <i class="fas fa-usd-circle"></i>
+   <p>Nettside som konverter</p>
+   <br>
+   <i class="fas fa-truck-loading"></i>   
+   <p>Bra for små og store lager</p>
+</div>
+<br>
+<br>
+<br>
+<!-- PERSONAL -->
+<div class="personal">
+   <h1 class="heading">Kom i gang med en personlig nettside</h1>
+   <p>Fortell hele verden hva du er god på med din egen nettside</p>
+   <div class="content">
+      <img src="{% static '/images/covers/personal.png' %}" alt="image personal skills copywrite web nett">
+   </div>
+</div>
+<!-- PERSONAL ICONS -->
+<div class="icons">
+   <i class="fas fa-chalkboard-teacher"></i>   
+   <p>Fortell folk dine ferdigheter</p>
+   <br>
+   <i class="fas fa-users"></i>   
+   <p>Få flere kunder</p>
+   <br>
+   <i class="fas fa-eye"></i>   
+   <p>Bli synlig på nettet</p>
+</div>
 
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 <br>

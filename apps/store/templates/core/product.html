@@ -7,52 +7,8 @@
 {% block content %}
 <link rel="stylesheet" href="{% static '/scss/store/product.css' %}" type="text/css">
 
-<div class="cover">
-   <div class="cover-desktop">
-      <div class="cover-text">
-         <h1>Les mer om {{product.name}}</h1>
-         <p id="coverText2">Finn ut om en {{product.name}} nettside passer for deg</p>
-      </div>
-      <div class="img">
-         <img src="{% static '/images/covers/cover-8.png' %}" alt="cover-img">
-      </div>
-   </div>
-   <div class="cover-mobile">
-      <div class="cover-text">
-         <h1>Les mer om {{product.name}}</h1>
-         <p id="coverText2">Finn ut om en {{product.name}} nettside passer for deg</p>
-      </div>
-      <div class="img">
-         <img src="{% static '/images/covers/cover-8.png' %}" alt="cover-img">
-      </div>
-   </div>
-</div>
-
 <div class="product-page">
    <h1 class="heading">Info om {{product.name}}</h1>
    <br>
-   <div class="product-info">
-      <div class="part-one">
-         <h1 class="subject">Inkludert</h1>
-         {% if product.is_ecommerce %}
-         <li>Kontakt oss</li>
-         <li>Om oss</li>
-         <li>Responsiv design</li>
-         <li>Admin dashboard</li>
-         <li>Handlekurv</li>
-         <li>Mota betalinger</li>
-         {% endif %}
-         {% if product.is_blog %}
-         <li>Kontakt oss</li>
-         <li>Om oss</li>
-         <li>Responsiv design</li>
-         <li>Admin dashboard</li>
-         {% endif %}
-      </div>
-      <div class="part-two">
-         <h1 class="subject">Beskrivelse</h1>
-         <p>{{product.description}}</p>
-      </div>
-   </div>
 </div>
 {% endblock %}

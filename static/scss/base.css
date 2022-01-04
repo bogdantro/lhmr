@@ -65,7 +65,7 @@ html, body {
 }
 
 .intro .sites .swiper-wrapper .swiper-slide h1 {
-  font-size: 15px;
+  font-size: 17px;
   color: white;
   padding-top: 10px;
 }
@@ -149,9 +149,106 @@ html, body {
 
 .ecommerce .content img {
   width: auto;
-  height: 210px;
+  height: 230px;
   -webkit-transform: translateY(25px);
           transform: translateY(25px);
+}
+
+.icons {
+  background: transparent;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 8px;
+  text-align: center;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+}
+
+.icons i {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: linear-gradient(135deg, #688bfc, #7996f8);
+  font-size: 50px;
+  padding: 15px;
+  border-radius: 50px;
+  color: white;
+  width: 90px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icons p {
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
+  font-size: 15px;
+  font-family: 'Sniglet', cursive;
+  color: black;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.personal {
+  background: transparent;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.personal .content {
+  background: #93acffa8;
+  width: 100%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.personal .content img {
+  width: auto;
+  height: 180px;
+  -webkit-transform: translateY(45px);
+          transform: translateY(45px);
+}
+
+.personal h1.heading {
+  padding-left: 8px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  width: 100%;
+  font-family: 'Sniglet', cursive;
+  color: black;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.personal p {
+  padding-left: 8px;
+  font-size: 14px;
+  font-family: 'Sniglet', cursive;
+  color: black;
+  opacity: 0.8;
+  line-height: 230%;
+  word-spacing: 1.5px;
 }
 
 .contact-us {
