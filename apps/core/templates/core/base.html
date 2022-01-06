@@ -29,14 +29,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet">
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="ff04893c-2cf8-4240-aee3-ca713e0652e1";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-
+    
 </head>
 <body ontouchstart="">
-    <div id="backToTop" onclick="backToTop()"><i class="fas fa-location-arrow" id="backToTopIcon"></i></div>
+    <div id="backToTop" onclick="backToTop()"><i class="fas fa-location-arrow" id="backToTopIcon"></i><p>Til topp</p></div>
     <div class="bottom-nav" onclick="window.location.href='/bestill'"><a>Kom i gang</a></div>
-        {% include 'core/nav.html' %}
+    {% include 'core/nav.html' %}
+    {% include 'popup/cookie.html' %}
     <div id="allContentArea">
-        {% include 'popup/cookie.html' %}
         <!---CONTENT---> 
         {% block content %}{% endblock %}
         <!---CONTENT END---> 

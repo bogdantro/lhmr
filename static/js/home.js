@@ -1,40 +1,46 @@
-// const cookieStorage = {
-//     getItem: (key) => {
-//         const cookies = document.cookie
-//             .split(';')
-//             .map(cookie => cookie.split('='))
-//             .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
-//         return cookies[key];
-//     },
-//     setItem: (key, value) => {
-//         document.cookie = `${key}=${value}`;
-//     },
-// };
+const cookieStorage = {
+    getItem: (key) => {
+        const cookies = document.cookie
+            .split(';')
+            .map(cookie => cookie.split('='))
+            .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
+        return cookies[key];
+    },
+    setItem: (key, value) => {
+        document.cookie = `${key}=${value}`;
+    },
+};
 
-// const storageType = cookieStorage;
-// const consentPropertyName = 'webiser';
+const storageType = cookieStorage;
+const consentPropertyName = 'webiser';
 
-// const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
-// const saveToStorage = () => storageType.setItem(consentPropertyName, true);
+const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
+const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
-// window.onload = () => {
-//     const consentPopup = document.getElementById('popup');
-//     const acceptBtn = document.getElementById('accept');
+window.onload = () => {
+    const consentPopup = document.getElementById('popup');
+    const acceptBtn = document.getElementById('accept');
 
+    const coverContent = document.getElementById('coverContent');
 
-//     const acceptFn = event => {
-//         saveToStorage(storageType);
-//         consentPopup.classList.add('hidden')
-//     };
+    coverContent.classList.add('active')
     
-//     acceptBtn.addEventListener('click', acceptFn);
     
-//     if (shouldShowPopup(storageType)) {
-//         setTimeout(() => {
-//             consentPopup.classList.remove('hidden')
-//         }, 3000);
-//     }
-// };
+    const acceptFn = event => {
+        saveToStorage(storageType);
+        consentPopup.classList.add('hidden')
+        document.getElementById('popupCircleBackground').classList.remove('active');
+    };
+    
+    acceptBtn.addEventListener('click', acceptFn);
+    
+    if (shouldShowPopup(storageType)) {
+        setTimeout(() => {
+            consentPopup.classList.remove('hidden');
+            document.getElementById('popupCircleBackground').classList.add('active');
+        }, 6000);
+    }
+};
 
 $.ajax({
     type: "GET",
@@ -50,22 +56,14 @@ $.ajax({
 
 window.addEventListener("scroll", function(){
     const backToTop = document.getElementById('backToTop');
-    backToTop.classList.toggle("active", window.scrollY > 1200)
-    // backToTop.classList.toggle("active", window.scrollY > 500)
+    backToTop.classList.toggle("active", window.scrollY > 2000)
 })
 
 function backToTop(){
   window.scrollTo({ top: 0, behavior: 'smooth'});
 }
 
-
-function cover(){
-    const coverContent = document.getElementById('coverContent');
-
-    coverContent.classList.add('active')
-}
     
-window.onload=cover();
 
 $(window).scroll(function() {
     const services = document.getElementById('services');

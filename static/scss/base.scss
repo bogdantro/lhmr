@@ -138,6 +138,8 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom-left-radius: 8%;
+    border-bottom-right-radius: 8%;
     img{
       width: auto;
       height: 230px;
@@ -194,6 +196,8 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom-left-radius: 8%;
+    border-bottom-right-radius: 8%;
     img{
       width: auto;
       height: 180px;
@@ -220,6 +224,42 @@ html, body {
     opacity: 0.8;
     line-height: 230%;
     word-spacing: 1.5px;
+  }
+}
+// POSITIVE
+.positive{
+  background: transparent;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  .content{
+    background: #93acffa8;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 8%;
+    border-bottom-right-radius: 8%;
+    img{
+      width: auto;
+      height: 180px;
+      transform: translateY(45px);
+    }
+  }
+  h1{
+    &.heading{
+      padding-left: 8px;
+      margin-bottom: 15px;
+      margin-top: 10px;
+      width: 100%;
+      font-family: 'Sniglet', cursive;
+      color: black;
+      font-weight: bold;
+      font-size: 26px;
+    }
   }
 }
 // CONTACT US

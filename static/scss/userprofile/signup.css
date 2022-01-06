@@ -5,8 +5,8 @@
 }
 
 .signup h1 {
-  -webkit-transform: translateY(190px) translateX(10px);
-          transform: translateY(190px) translateX(10px);
+  -webkit-transform: translateY(150px) translateX(10px);
+          transform: translateY(150px) translateX(10px);
   font-size: 16px;
   color: white;
   padding: 5px;
@@ -22,8 +22,8 @@
   text-align: left;
   width: 100%;
   display: block;
-  -webkit-transform: translateY(150px);
-          transform: translateY(150px);
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
 }
 
 .signup #signUpForm .part-one {
@@ -133,5 +133,27 @@
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background: white;
+}
+
+.signup #signUpForm .form-sumbit {
+  border-radius: 4px;
+  width: 170px;
+  font-size: 16px;
+  padding: 10px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  color: #0a0a0a;
+  outline: none;
+  background: white;
+  -webkit-box-shadow: 1.5px 3px 2px #3c54a0;
+          box-shadow: 1.5px 3px 2px #3c54a0;
+  border: 2px solid transparent;
+  -webkit-transform: translateY(15px) translateX(10px);
+          transform: translateY(15px) translateX(10px);
+}
+
+.signup #signUpForm .form-sumbit:hover {
+  background: white;
+  color: black;
 }
 /*# sourceMappingURL=signup.css.map */

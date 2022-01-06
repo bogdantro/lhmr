@@ -4,7 +4,7 @@
     width: 100%;
     height: 500px;
     h1{
-        transform: translateY(190px) translateX(10px);
+        transform: translateY(150px) translateX(10px);
         font-size: 16px;
         color: white;
         padding: 5px;
@@ -18,7 +18,7 @@
         text-align: left;
         width: 100%;
         display: block;
-        transform: translateY(150px);
+        transform: translateY(100px);
         .part-one{
             background: #bdcdff;
             width: 100%;
@@ -59,5 +59,22 @@
                 background: white;
             }
         }
+        .form-sumbit{
+            border-radius: 4px;
+            width: 170px;
+            font-size: 16px;
+            padding: 10px;
+            transition: all .2s ease-in-out;
+            color: rgb(10, 10, 10);
+            outline: none;
+            background: white;  
+            box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
+            border: 2px solid transparent;  
+            transform: translateY(15px) translateX(10px);
+            &:hover{
+              background: white;
+              color: black;
+            }
+          }
     }
 }

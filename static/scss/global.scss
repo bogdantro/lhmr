@@ -12,6 +12,7 @@ $loader: rgb(80, 104, 180);
 body{
   background: linear-gradient(to left, rgba(202, 215, 255, 0.13));
 }
+
 .light-overlay{
   width: max-content;
   height: max-content;
@@ -38,25 +39,33 @@ body{
 #backToTop{
   position: fixed;
   right: 0;
-  top: 80vh;
+  top: 50vh;
   z-index: 110;
   background: white;
   padding: 10px;
-  border-radius: 4px;
+  padding-bottom: 20px;
   transition: .3s;
   opacity: 0;
   pointer-events: none;
   border: 2px solid transparent;
   background: linear-gradient(135deg,#688bfc, #7996f8);    
   border-radius: 4px;
-  padding: 10px;
   box-shadow: 0px 5px 2px rgb(60, 84, 160);
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   i{
     padding-top: 5px;
     font-size: 22px;
     color: white;
     transform: rotate(-45deg);
+  }
+  p{
+    font-size: 8px;
+    color: white;
+    position: absolute;
+    bottom: -10px;
   }
   &.active{
     opacity: 1;
