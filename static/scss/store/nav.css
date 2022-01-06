@@ -261,6 +261,10 @@
   opacity: 0.65 !important;
 }
 
+#navbar .sidebar .sidebar-ul .sidebar-li .account-dropdown .account-dropdown-links a#logOut {
+  color: #ff2a2a;
+}
+
 #navbar .sidebar .sidebar-ul .sidebar-li .account-dropdown .account-dropdown-links.active {
   display: block;
 }

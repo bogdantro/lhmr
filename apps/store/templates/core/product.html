@@ -7,8 +7,75 @@
 {% block content %}
 <link rel="stylesheet" href="{% static '/scss/store/product.css' %}" type="text/css">
 
-<div class="product-page">
-   <h1 class="heading">Info om {{product.name}}</h1>
-   <br>
+<div class="product-page-blog">
+   <div id="navbar-blog">
+      <!-- LOGO -->
+      <div class="logo" id="logo" onclick="window.location.href='/'">
+          <h1>DIN LOGO</h1>
+      </div>
+      <!-- MENU -->
+          <!-- HAMBURGER -->
+          <div class="hamburger" id="hamburger" onclick="menu()">
+              <span class="upper-span"></span>
+              <span class="center-span"></span>
+              <span class="lower-span"></span>
+          </div>
+          <!-- SIDEBAR CIRCLE BACKGROUND -->
+          <div class="circle" id="sidebarCircleBackground"></div>
+          <!-- SIDEBAR -->
+          <div class="sidebar" id="sidebar">
+              <ul class="sidebar-ul">
+                  <li class="sidebar-li" id="sidebarLi">
+                      <div class="prices-dropdown">
+                          <a onclick="prices()" id="pricesToggle">Priser<i class="fas fa-chevron-down"></i></a>
+                          <div class="prices-dropdown-links" id="pricesDropdown">
+                              <a href="">Nettbutikk/eCommerce</a>
+                              <a href="">Blogg</a>
+                              <a href="">Personlig nettside</a>
+                              <a href="">Nettsider for firmaer</a>
+                              <a href="">Lag din egen</a>
+                          </div>
+                      </div>
+                      <div class="help-dropdown">
+                          <a onclick="help()" id="helpToggle">Kundeservice<i class="fas fa-chevron-down"></i></a>
+                          <div class="help-dropdown-links" id="helpDropdown">
+                              <a href="">Prossesen av bestillinger</a>
+                              <a href="">Forum</a>
+                              <a href="">Spørr om redigeringer på nettsiden</a>
+                              <a href="">Programering språkene</a>
+                          </div>
+                      </div>
+                      <div class="account-dropdown">
+                          <a onclick="account()" id="accountToggle">Min bruker<i class="fas fa-chevron-down"></i></a>
+                          <div class="account-dropdown-links" id="accountDropdown">
+                              {% if request.user.is_authenticated %}
+                              <a onclick="myaccount()">Min bruker</a>
+                              <a id="logOut" href="{% url 'logout' %}">Logg ut</a>
+                              {% else %}
+                              <a href="/logg-inn">Logg inn</a>
+                              <a href="/lag-bruker">Lag bruker</a>
+                              {% endif %}
+                          </div>
+                      </div>
+                      <a onclick="">Vårt arbeid</a>
+                      <div class="about-dropdown">
+                          <a onclick="about()" id="aboutToggle">Hvem vi er<i class="fas fa-chevron-down"></i></a>
+                          <div class="about-dropdown-links" id="aboutDropdown">
+                              <a href="">Om oss</a>
+                              <a href="">Blogg</a>
+                              <a href="">Sosiale medier</a>
+                              <a href="">Sektorer</a>
+                              <a href="">Vår historie</a>
+                          </div>
+                      </div>
+                      <a>Kontakt oss</a>
+                  </li>   
+              </ul>
+          </div>
+      <!-- ORDER -->
+      <a href="/" class="order" id="makeOrder">heisann</a>
+  </div>
+    
+  
 </div>
 {% endblock %}
