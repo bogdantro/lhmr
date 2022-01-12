@@ -23,8 +23,8 @@ urlpatterns = [
     # KUNDESERVICE PAGES
         path('prossesen-av-bestillinger/', proccess, name='proccess'),
         path('forum/', forum, name='forum'),
-        path('spørr-om-endringer/', edit, name='edit'),
-        path('de-tre-frontend-språkene/', frontend, name='frontend'),
+        path('sporr-om-endringer/', edit, name='edit'),
+        path('de-tre-frontend-spraakene/', frontend, name='frontend'),
 
     #STORE
     path('produkt/:<slug>/', product_detail, name='product_detail'),
