@@ -39,7 +39,7 @@ html, body {
 .intro .sites {
   padding: 10px;
   text-align: left;
-  background: #93acffa8;
+  background: #93acff67;
   width: 100%;
   height: 190px;
   display: -webkit-box;
@@ -55,8 +55,8 @@ html, body {
 
 .intro .sites .swiper-wrapper .swiper-slide {
   background: #607bd3;
-  width: 140px !important;
-  height: 80px !important;
+  width: 150px !important;
+  height: 100px !important;
   text-align: center;
   margin: 20px;
   margin-left: 0;
@@ -74,6 +74,8 @@ html, body {
   color: white;
   font-size: 10px;
   padding-top: 5px;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
 }
 
 .info {

@@ -28,84 +28,51 @@
 </div>
 <br>
 
+<!-- MAKE ORDER -->
 <div class="make-order">
     <form method='post' id="makeOrder" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.errors}}
+        <!-- STEP ONE -->
         <div class="order-form-step1">
            <h1 class="heading">Steg 1</h1>
+           <!-- SITES -->
            <label for="products" class="form-tag-products tag">Velg nettside</label>
            <br>
-           <h1 class="if-custom info order-product-info" id="ifCustom">Hvis du velger en Custom nettside, så bestemmer du selv hva du vil nettsiden skal være. For eksempel, kan være både en Ecommerce og en Blogg nettside.
-            <div class="loader">
-               <div class="loader__element" id="loaderElCustom"></div>
-             </div>
-           </h1>
-           <h1 class="if-ecommerce info order-product-info" id="ifEcommerce">Hvis du velger en Ecommerce nettside, så vil du få en nettside med handlekurv, checkout, admin panel og mye mer sånn at du kan ha den perfekte Ecommerce nettsiden.
-            <div class="loader">
-               <div class="loader__element" id="loaderElEcommerce"></div>
-             </div>
-           </h1>
-           <h1 class="if-custom info order-product-info" id="ifBlog">Hvis du velger en Blogg nettside, så får du en nettside hvor du kan legge ut og skrive artikler. Du kan også få en funksjon sånn at andre personer også kan legge ut og skrive artikler.
-            <div class="loader">
-               <div class="loader__element" id="loaderElBlog"></div>
-             </div>
-           </h1>
-           <h1 class="if-custom info order-product-info" id="ifPortofolio">Hvis du velger en Portofolio nettside, så får du en nettside hvor du kan legge ut dine "skills", og han en måte for folk å se hva du er god på.
-            <div class="loader">
-               <div class="loader__element" id="loaderElPortofolio"></div>
-             </div>
-           </h1>
-           <h1 class="if-custom info order-product-info" id="ifBedrift">Hvis du velger en Bedrift nettside, så får du en nettside som forklarer hva bedriften din handler om.
-            <div class="loader">
-               <div class="loader__element" id="loaderElBedrift"></div>
-             </div>
-           </h1>
-           <h1 class="if-custom info order-product-info" id="ifPersonal">Hvis du velger en Personal nettside, så får du en nettside som er simpel og kan handle om hva du ønsker.
-            <div class="loader">
-               <div class="loader__element" id="loaderElPersonal"></div>
-             </div>
-           </h1>
            <input type="text" name="products" class="products input" id="products" readonly required oninvalid="this.setCustomValidity('Værsåsnill, velg et produkt')" oninput="this.setCustomValidity('')" onclick="orderProductDropdown()"><div class="product-price" id="productPrice" onclick="orderProductDropdown()">0kr</div><div onclick="orderProductDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
            <div class="products-dropdown" id="productDropdown">
-              <div class="dropdown-border">
-                 <h1 class="dropdown-none" onclick="noneProducts()">---------</h1>
-                 <div class="flex">
-                    <h1 onclick="ecommerce()">Ecommerce</h1>
-                    <h1 onclick="blog()">Blogg</h1>
-                  </div>
-                  <div class="flex">   
-                     <h1 onclick="portofolio()">Portofolio</h1>
-                     <h1 onclick="bedrift()">Bedrift</h1>
-                  </div>
-                  <div class="flex">
-                     <h1 onclick="personal()">Personal</h1>
-                     <h1 onclick="custom()">Custom</h1>
-                  </div>
+               <h1 class="dropdown-none" onclick="noneProducts()">---------</h1>
+               <div class="choices">
+                  <h1 onclick="ecommerce()">Nettbutikk/eCommerce</h1>
+                  <h1 onclick="blog()">Blogg</h1>
+                  <h1 onclick="bedrift()">Nettside for bedrifter</h1>
+                  <h1 onclick="personal()">Personslig nettside</h1>
+                  <h1 onclick="custom()">Lag din egen</h1>
                </div>
             </div>
            <br>
            <br>
+           <!-- HOSTING -->
            <label for="hosting" class="form-tag-hosting tag">Vil du ha våres hosting tjeneste?</label>
            <br>
            <input type="text" name="hosting" class="hosting input" id="hosting" readonly required oninvalid="this.setCustomValidity('Værsåsnill, velg ja eller nei')" oninput="this.setCustomValidity('')" onclick="orderhostingDropdown()"><div class="hosting-price" id="hostingPrice" onclick="orderhostingDropdown()">0kr</div><div onclick="orderhostingDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
            <div class="hosting-dropdown" id="hostingDropdown">
-            <div class="dropdown-border">
-               <h1 class="dropdown-none" onclick="noneHosting()">---------</h1>
-               <div class="flex">
-                  <h1 onclick="ja()">Ja</h1>
-                  <h1 onclick="nei()">Nei</h1>
-                </div>
+              <h1 class="dropdown-none" onclick="noneHosting()">---------</h1>
+            <div class="choices">
+               <h1 onclick="ja()">Ja</h1>
+               <h1 onclick="nei()">Nei</h1>
              </div>
           </div>
            <br>
            <br>
+           <!-- IMAGE -->
            <label for="image" class="form-tag-image tag">Har du allerede en logo?</label>
            <br>
            {{form.image}}
            <br>
            <br>
-           <label for="color" class="form-tag-color tag">Velg en farge som passer bedriften din</label>
+           <!-- COLOR -->
+           <label for="color" class="form-tag-color tag">Velg en farge som du vil ha med</label>
            <br>
            <div class="color-inputs">
               <input type="text" name="color_hex" class="color-hex input" id="color_hex" value="#ffff">
@@ -113,35 +80,27 @@
               <input type="color" id="color" name="color" class="color input" required oninvalid="this.setCustomValidity('Værsåsnill, velg en farge')" oninput="this.setCustomValidity('')">
             </div>
             <br>
+            <br>
+            <!-- EXTRA PAGES -->
             <h1 class="info">Alle priser har inkludert en Om oss side og en Kontakt oss side. En ekstra side koster 399kr</h1>
             <label for="num_pages" class="form-tag-num_pages tag">Velg antall ekstra sider</label>
             <br>
             <input type="number" id="num_pages" name="num_pages" class="input" readonly onclick="orderNumPagesDropdown()"><div class="num-pages-price" id="numPagesPrice" onclick="orderNumPagesDropdown()">0kr</div><div onclick="orderNumPagesDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
             <div class="num-pages-dropdown" id="numPagesDropdown">
-               <div class="dropdown-border">
                   <h1 class="dropdown-none" onclick="noneNumPages()">---------</h1>
-                  <div class="flex">
+                  <div class="choices">
                      <h1 onclick="a1()">1</h1>
                      <h1 onclick="a2()">2</h1>
-                   </div>
-                   <div class="flex">   
-                      <h1 onclick="a3()">3</h1>
-                      <h1 onclick="a4()">4</h1>
-                   </div>
-                   <div class="flex">
-                      <h1 onclick="a5()">5</h1>
-                      <h1 onclick="a6()">6</h1>
-                   </div>
-                   <div class="flex">
-                      <h1 onclick="a7()">7</h1>
-                      <h1 onclick="a8()">8</h1>
-                   </div>
-                   <div class="flex">
-                      <h1 onclick="a9()">9</h1>
-                      <h1 onclick="a10()">10</h1>
-                   </div>
-                </div>
-             </div>
+                     <h1 onclick="a3()">3</h1>
+                     <h1 onclick="a4()">4</h1>
+                     <h1 onclick="a5()">5</h1>
+                     <h1 onclick="a6()">6</h1>
+                     <h1 onclick="a7()">7</h1>
+                     <h1 onclick="a8()">8</h1>
+                     <h1 onclick="a9()">9</h1>
+                     <h1 onclick="a10()">10</h1>
+                  </div>
+               </div>
              <div class="num-pages-extra-pages">
                 <input type="text" name="page1" class="input num-pages-extra" value="Side 1:" id="page1">
                 <input type="text" name="page2" class="input num-pages-extra" value="Side 2:" id="page2">
@@ -158,7 +117,7 @@
         <br>
         <div class="order-form-step2">
            <h1 class="heading">Steg 2</h1>
-           <h1 class="info">Fortell oss om erfaringen din med koding, sånn at vi kan skrive en nettside som du kan skjønne</h1>
+           <h1 class="info">Fortell oss om erfaringen din med web utvikling, sånn at vi kan utvikle en nettside som er lett å skjønne</h1>
            <label for="css" class="form-tag-css tag">Har du noe erfaring med CSS?</label>
            <br>
            <input type="text" id="css" name="css" class="input" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
@@ -175,7 +134,7 @@
            <br>
            <input type="text" id="python_django" name="python_django" class="input" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
            <br>
-        </div>
+        </div> 
         <div class="order-form-step3">
            <h1 class="heading">Steg 3</h1>
            <label for="name" class="form-tag-name tag">Navn</label>
@@ -190,7 +149,7 @@
            <br>
            <textarea id="message" name="message"></textarea>
            <br>
-         </div>
+         </div> 
         <div class="form-actions">
             <button onclick="orderLoading()" name="order" value="order" type='submit'>Send bestillingen</button>
         </div>

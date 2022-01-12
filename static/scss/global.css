@@ -7,8 +7,7 @@
 }
 
 body {
-  background: -webkit-gradient(linear, right top, left top, from(rgba(202, 215, 255, 0.13)));
-  background: linear-gradient(to left, rgba(202, 215, 255, 0.13));
+  background: #fafbff;
 }
 
 .light-overlay {

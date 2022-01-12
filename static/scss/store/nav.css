@@ -262,7 +262,7 @@
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .account-dropdown .account-dropdown-links a#logOut {
-  color: #ff2a2a;
+  color: #ff2a2a !important;
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .account-dropdown .account-dropdown-links.active {
