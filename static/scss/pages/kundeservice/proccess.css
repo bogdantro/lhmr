@@ -1,0 +1,86 @@
+.cover {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  background: #8fa9ff;
+}
+
+.cover .content {
+  opacity: 0;
+  -webkit-transition: .4s ease-in;
+  transition: .4s ease-in;
+  position: absolute;
+  top: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.cover .content.active {
+  opacity: 1;
+  top: 120px;
+}
+
+.cover .content .text {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  z-index: 10;
+}
+
+.cover .content .text h1 {
+  color: #f0f0f0;
+  font-size: 34px;
+  font-family: 'Alata', sans-serif;
+  line-height: 160%;
+  font-weight: bold;
+  text-shadow: 0.3px 0.3px 1px white;
+}
+
+.cover .content .text h1 .moderne {
+  font-size: 35px;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  text-stroke: 1px white;
+  text-shadow: none;
+  font-family: 'Alata', sans-serif;
+  font-weight: normal;
+}
+
+.cover .content .text h1 .lave.priser {
+  font-family: 'Alata', sans-serif;
+  position: relative;
+  top: 5px;
+  color: #6e8efb;
+}
+
+.cover .content .text h1 .background-overlay {
+  width: 210px;
+  height: 55px;
+  background: #f0f0f0;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: skew(-18deg) translateY(6px) translateX(-50%);
+          transform: skew(-18deg) translateY(6px) translateX(-50%);
+}
+
+.proccess {
+  background: white;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.proccess h1 {
+  font-size: 16px;
+  font-family: 'Sniglet', cursive;
+  color: black;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.proccess img {
+  border-radius: 20px;
+  width: 70%;
+  border: 2px solid #6E86D2;
+}
+/*# sourceMappingURL=proccess.css.map */

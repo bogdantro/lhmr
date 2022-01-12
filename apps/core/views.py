@@ -81,3 +81,17 @@ def about(request):
 
 def email_success(request):
     return render(request, 'pages/email.html')
+
+# KUNDESERVICE PAGES
+def proccess(request):
+    return render(request, 'pages/kundeservice/proccess.html')   
+     
+def forum(request):
+    return render(request, 'pages/kundeservice/forum.html')
+
+def edit(request):
+    return render(request, 'pages/kundeservice/edit.html')   
+
+def frontend(request):
+    return render(request, 'pages/kundeservice/frontend.html')   
+
