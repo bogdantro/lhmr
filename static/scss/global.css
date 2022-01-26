@@ -102,17 +102,21 @@ body {
 
 .cover {
   width: 100%;
-  height: auto;
+  height: 85vh;
   position: relative;
+  background: #6a81df;
 }
 
 .cover img {
-  width: 100%;
-  height: 600px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-filter: brightness(50%);
-          filter: brightness(50%);
+  width: 265px;
+  height: auto;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(100px);
+          transform: translateX(-50%) translateY(100px);
+  -webkit-box-shadow: 8px 6px 3px rgba(255, 255, 255, 0.438);
+          box-shadow: 8px 6px 3px rgba(255, 255, 255, 0.438);
+  border-radius: 30px;
 }
 
 .cover .content {
@@ -120,21 +124,24 @@ body {
   -webkit-transition: .4s ease-in;
   transition: .4s ease-in;
   position: absolute;
-  top: 500px;
+  top: 240px;
+  right: -200px;
   width: 100%;
-  text-align: center;
+  padding-left: 15px;
 }
 
 .cover .content.active {
   opacity: 1;
-  top: 140px;
+  right: 0;
 }
 
 .cover .content .text {
   width: 100%;
   height: auto;
-  text-align: center;
+  text-align: left;
   z-index: 10;
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
 }
 
 .cover .content .text h1 {
@@ -146,41 +153,36 @@ body {
   text-shadow: 0.3px 0.3px 1px white;
 }
 
-.cover .content .text h1 .moderne {
-  font-size: 35px;
-  color: transparent;
-  -webkit-text-stroke: 1px white;
-  text-stroke: 1px white;
-  text-shadow: none;
-  font-family: 'Alata', sans-serif;
-  font-weight: normal;
-}
-
-.cover .content .text h1 .lave.priser {
-  font-family: 'Alata', sans-serif;
-  position: relative;
-  top: 5px;
-  color: #6e8efb;
-}
-
-.cover .content .text h1 .background-overlay {
-  width: 210px;
-  height: 55px;
-  background: #f0f0f0;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: skew(-18deg) translateY(6px) translateX(-50%);
-          transform: skew(-18deg) translateY(6px) translateX(-50%);
-}
-
 .cover .content .text p {
   color: #f0f0f0;
   font-size: 16px;
   font-family: 'Alata', sans-serif;
-  line-height: 160%;
   opacity: 0.7;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
+}
+
+.cover .content .text .cover-actions {
+  width: 100%;
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cover .content .text .cover-actions a {
+  padding: 10px;
+  background: transparent;
+  border-radius: 7px;
+  border: 2px solid white;
+  outline: none;
+  color: white;
+  text-align: center;
+}
+
+.cover .content .text .cover-actions a:nth-child(2) {
+  -webkit-transform: translateX(13px);
+          transform: translateX(13px);
+  background: #1cd31c;
 }
 
 .load-wrapp {

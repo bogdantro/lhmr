@@ -1,5 +1,7 @@
-
 // STANDARD PHONE
+.desktop-menu{
+    display: none;
+  }
 #navbar{
     // NAVBAR CSS
     background: transparent;
@@ -11,6 +13,7 @@
     display: flex;
     align-items: center;
     transition: .2s ease-in-out;
+    box-shadow: 1px 0px 3px rgba(255, 255, 255, 0.329);
     // NAVBAR STICKY
     &.sticky{
         background: white;
@@ -41,7 +44,6 @@
         h1{
             margin: 0;
             font-family: 'Indie Flower', cursive;
-            // color: rgb(60, 84, 160);
             color: rgb(235, 235, 235);
             font-size: 26px;
             transition: .2s ease-in-out;
@@ -128,6 +130,7 @@
         z-index: 120;
         opacity: 0;
         pointer-events: none;
+        display: unset;
         .sidebar-ul{
             position: relative;
             width: 100%;
@@ -284,3 +287,180 @@
       }
 }
 
+// // SMALL DESKTOP
+@media only screen and (min-device-width: 1024px) {
+    // DESKTOP NAVBAR START
+    #navbar{
+        // NAVBAR DESKTOP STICKY
+        &.sticky{
+            .desktop-menu{
+                .desktop-menu-ul{
+                    .desktop-menu-li{
+                        a{
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+        // SIDEBAR DISPLAY NONE ON DESKTOP
+        .sidebar{
+            display: none;
+        }
+        // HAMBURGER MENU DISPLAY NONE ON DESKTOP
+        .hamburger{
+            display: none;
+            background: red;
+        }
+        // ORDER BUTTON DESKTOP
+        .order{
+            right: 700px;
+            font-size: 12px;
+        }
+        // LOGO DESKTOP
+        .logo{
+            h1{
+                font-size: 30px;
+            }
+        }
+        // DESKTOP MENU
+        .desktop-menu{
+            display: block;
+            background: transparent;
+            height: auto;
+            width: 100%;
+            position: absolute;
+            right: 20px;
+            top: 16px;
+            transition: .7s;
+            text-align: right;
+            .desktop-menu-ul{
+                position: relative;
+                width: 100%;
+                .desktop-menu-li{
+                    list-style: none;
+                    a{
+                        display: inline-block;
+                        color: white;
+                        text-decoration: none;
+                        width: auto;
+                        font-size: 14px;
+                        padding: 5px;
+                        transition: .2s;
+                        margin: auto 10px;
+                        cursor: pointer;
+                        i{
+                            transform: translateX(10px);
+                            font-size: 14px;
+                            transition: .2s !important;
+                        }
+                    }
+                    // DESKTOP PRICES MENU HOVER
+                    .desktop-menu-prices{
+                        display: inline-block;
+                        .desktop-prices-dropdown-links{
+                            display: none;
+                            width: 250px;
+                            position: absolute;
+                            transform: translateX(-60px);
+                            background: rgb(247, 247, 247);
+                            border-radius: 7px;
+                            text-align: left;
+                            a{
+                                color: black;
+                                font-size: 13px;
+                                opacity: 0.7;
+                                width: 100%;
+                                display: inline-block;
+                                text-decoration: underline;
+                            }
+                        }
+                        &:hover{
+                            .desktop-prices-dropdown-links{
+                                display: block;
+                            }
+                        }
+                    }
+                    // DESKTOP HELP MENU HOVER
+                    .desktop-menu-help{
+                        display: inline-block;
+                        .desktop-help-dropdown-links{
+                            display: none;
+                            width: 250px;
+                            position: absolute;
+                            transform: translateX(-60px);
+                            background: rgb(247, 247, 247);
+                            border-radius: 7px;
+                            text-align: left;
+                            a{
+                                color: black;
+                                font-size: 13px;
+                                opacity: 0.7;
+                                width: 100%;
+                                display: inline-block;
+                                text-decoration: underline;
+                            }
+                        }
+                        &:hover{
+                            .desktop-help-dropdown-links{
+                                display: block;
+                            }
+                        }
+                    }
+                    // DESKTOP ACCOUNT MENU HOVER
+                    .desktop-menu-account{
+                        display: inline-block;
+                        .desktop-account-dropdown-links{
+                            display: none;
+                            width: 250px;
+                            position: absolute;
+                            transform: translateX(-60px);
+                            background: rgb(247, 247, 247);
+                            border-radius: 7px;
+                            text-align: left;
+                            a{
+                                color: black;
+                                font-size: 13px;
+                                opacity: 0.7;
+                                width: 100%;
+                                display: inline-block;
+                                text-decoration: underline;
+                            }
+                        }
+                        &:hover{
+                            .desktop-account-dropdown-links{
+                                display: block;
+                            }
+                        }
+                    }
+                    // DESKTOP ABOUT MENU HOVER
+                    .desktop-menu-about{
+                        display: inline-block;
+                        .desktop-about-dropdown-links{
+                            display: none;
+                            width: 250px;
+                            position: absolute;
+                            transform: translateX(-60px);
+                            background: rgb(247, 247, 247);
+                            border-radius: 7px;
+                            text-align: left;
+                            a{
+                                color: black;
+                                font-size: 13px;
+                                opacity: 0.7;
+                                width: 100%;
+                                display: inline-block;
+                                text-decoration: underline;
+                            }
+                        }
+                        &:hover{
+                            .desktop-about-dropdown-links{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

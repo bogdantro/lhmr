@@ -15,68 +15,6 @@ html, body {
   background: transparent;
 }
 // // // STANDARD PHONE
-// INTRO
-.intro{
-  background: transparent;
-  width: 100%;
-  height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: left;
-  h1{
-    &.heading{
-      padding-left: 8px;
-      margin-bottom: 15px;
-      margin-top: 10px;
-      width: 100%;
-      font-family: 'Sniglet', cursive;
-      color: black;
-      font-weight: bold;
-      font-size: 26px;
-    }
-  }
-  p{
-    padding-left: 8px;
-    font-size: 14px;
-    font-family: 'Sniglet', cursive;
-    color: black;
-    opacity: 0.8;
-    line-height: 230%;
-  }
-  .sites{
-    padding: 10px;
-    text-align: left;
-    background: #93acff67;
-    width: 100%;
-    height: 190px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .swiper-wrapper{
-      .swiper-slide{
-        background: #607bd3;
-        width: 150px !important;
-        height: 100px !important;
-        text-align: center;
-        margin: 20px;
-        margin-left: 0;
-        border-radius: 7px;
-        position: relative;
-        h1{
-          font-size: 17px;
-          color: white;
-          padding-top: 10px;
-        }
-        i{
-          color: white;
-          font-size: 10px;
-          padding-top: 5px;
-          transform: translateY(10px);
-        }
-      }
-    }
-  }
-}
 // INFO
 .info{
   background: transparent;
@@ -91,25 +29,84 @@ html, body {
       margin-bottom: 15px;
       margin-top: 10px;
       width: 100%;
-      font-family: 'Sniglet', cursive;
+      font-family: 'Lato', sans-serif;
       color: black;
-      font-weight: bold;
       font-size: 26px;
     }
   }
-  p{
-    padding-left: 8px;
-    font-size: 14px;
-    font-family: 'Sniglet', cursive;
-    color: black;
-    opacity: 0.8;
-    line-height: 230%;
-    word-spacing: 1.5px;
+  .info-text{
+    -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+    p{
+      padding-left: 8px;
+      font-size: 14px;
+      font-family: 'Sniglet', cursive;
+      color: black;
+      opacity: 0.8;
+      line-height: 230%;
+      word-spacing: 1.5px;
+    }
   }
   img{
     width: auto;
     height: 140px;
     float: right;
+  }
+  .info-actions{
+    width: 100%;
+    transform: translateY(25px);
+    display: flex;
+    padding-left: 8px;
+    a{
+      width: 120px;
+      padding: 10px;
+      background: transparent;
+      border-radius: 7px;
+      border: 2px solid white;
+      outline: none;
+      color: white;
+      text-align: center;
+      background: #6a81df;
+    }
+  }
+}
+// OUR SKILLS
+.skills{
+  background: transparent;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  h1{
+    &.heading{
+      padding-left: 8px;
+      margin-bottom: 15px;
+      margin-top: 10px;
+      width: 100%;
+      font-family: 'Lato', sans-serif;
+      color: black;
+      font-size: 26px;
+    }
+  }
+}
+// SITES
+.sites{
+  background: transparent;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  h1{
+    &.heading{
+      padding-left: 8px;
+      margin-bottom: 15px;
+      margin-top: 10px;
+      width: 100%;
+      font-family: 'Lato', sans-serif;
+      color: black;
+      font-size: 26px;
+    }
   }
 }
 // ECOMMERCE
@@ -396,4 +393,32 @@ html, body {
       }
     }
   }
+}
+// // TABLET
+@media only screen and (min-device-width: 768px) {
+// CONTACT US
+.contact-us{
+  form{
+    max-width: 560px;
+    .form-tag-navn{
+      left: 20px;
+      top: 24px;
+    }
+    .form-tag-email{
+      left: 20px;
+      top: 92px;
+    }
+    .form-tag-message{
+      left: 20px;
+      top: 165px;
+    }
+    input{
+      padding: 10px;
+    }
+  }
+}
+}
+// // SMALL DESKTOP
+@media only screen and (min-device-width: 1024px) {
+
 }

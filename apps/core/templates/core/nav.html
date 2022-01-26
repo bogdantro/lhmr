@@ -83,5 +83,59 @@
         </div>
     <!-- ORDER -->
     <a href="/bestill" class="order" id="makeOrder">Bestill nå</a>
+    <!-- DESKTOP MENU AND NAVBAR STARTR -->
+    <div class="desktop-menu" id="desktopMenu">
+        <ul class="desktop-menu-ul">
+            <li class="desktop-menu-li" id="desktopMenuLi">
+                    <div class="desktop-menu-prices">
+                        <a id="pricesToggle">Priser<i class="fas fa-chevron-down"></i>
+                            <div class="desktop-prices-dropdown-links" id="pricesDropdown">
+                                <a href="">Nettbutikk/eCommerce</a>
+                                <a href="">Blogg</a>
+                                <a href="">Personlig nettside</a>
+                                <a href="">Nettsider for firmaer</a>
+                                <a href="">Lag din egen</a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="desktop-menu-help">
+                        <a id="helpToggle">Kundeservice<i class="fas fa-chevron-down"></i>
+                            <div class="desktop-help-dropdown-links" id="helpDropdown">
+                                <a href="/prossesen-av-bestillinger">Prossesen av bestillinger</a>
+                                <a href="/forum">Forum</a>
+                                <a href="/spørr-om-endringer">Spørr om redigeringer på nettsiden</a>
+                                <a href="/de-tre-frontend-språkene">Programering språkene</a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="desktop-menu-account">
+                        <a id="accountToggle">Min bruker<i class="fas fa-chevron-down"></i>
+                            <div class="desktop-account-dropdown-links" id="accountDropdown">
+                                {% if request.user.is_authenticated %}
+                                <a onclick="myaccount()">Min bruker</a>
+                                <a id="logOut" href="{% url 'logout' %}">Logg ut</a>
+                                {% else %}
+                                <a href="/logg-inn">Logg inn</a>
+                                <a href="/lag-bruker">Lag bruker</a>
+                                {% endif %}
+                            </div>
+                        </a>
+                    </div>
+                <a onclick="">Vårt arbeid</a>          
+                    <div class="desktop-menu-about">
+                        <a id="aboutToggle">Hvem vi er<i class="fas fa-chevron-down"></i>
+                            <div class="desktop-about-dropdown-links" id="aboutDropdown">
+                                <a href="">Om oss</a>
+                                <a href="">Blogg</a>
+                                <a href="">Sosiale medier</a>
+                                <a href="">Sektorer</a>
+                                <a href="">Vår historie</a>
+                            </div>
+                        </a>
+                    </div>
+                <a>Kontakt oss</a>
+            </li>   
+        </ul>
+    </div>
 </div>
   

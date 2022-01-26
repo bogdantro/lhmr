@@ -5,73 +5,101 @@
 {% block content %}
 <link rel="stylesheet" href="{% static '/scss/base.css' %}" type="text/css">
 <script rel="stylesheet" src="{% static '/js/home.js' %}" type="text/javascript"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
 
 
 
 <!-- LOADER -->
-<div class="load-wrapp" id="homeLoader">
+<!-- <div class="load-wrapp" id="homeLoader">
    <div class="load-2">
      <div class="line"></div>
      <div class="line"></div>
      <div class="line"></div>
    </div>
- </div>
+ </div> -->
 <!-- COVER -->
 <div class="cover" id="cover">
-   <img src="{% static '/images/covers/cover4.jpg' %}" alt="cover-1">
+   <img src="{% static '/images/covers/cover-3.png' %}" alt="cover-1">
+
    <div class="content" id="coverContent">
       <div class="text">
-         <h1><span class="moderne">Moderne</span> nettsider <br>til<br> <div class="background-overlay"></div> <span class="lave priser">lave priser</span></h1>
-         <p>--</p>
+         <h1>Moderne nettsider til lave priser</h1>
+         <p>Lave priser, kort leverings tid</p>
+         <div class="cover-actions">
+            <a href="/">Les om oss</a>
+            <a href="/bestill">Kom i gang</a>
+         </div>
       </div>
    </div>
 </div>
-<br>
-<!-- INTRO -->
-<div class="intro" id="intro">
-   <h1 class="heading">Vi utvikler nettsider som konverterer</h1>
-   <p>Har du en nettbutikk eller driver eget firma?<br><span class="light-overlay">Vi er her for å hjelpe deg!</span> Vi består av Norges beste designere og utviklere, og vi garanter at du vil elske nettsiden. Under finner du en demo for hver enkel nettside</p>
-   <br>
-   <div class="sites">
-      <div class="swiper mySwiper">
-         <div class="swiper-wrapper">
-            {% for product in products %}
-            <div class="swiper-slide">
-               <a href="{% url  'product_detail' product.slug  %}">
-                  <h1 class="product-name">{{product.name}}</h1>
-                  <i class="fas fa-chevron-right"></i>
-               </a>
-            </div>
-            {% endfor %}   
-         </div>
-       </div>
-   </div>
-</div>
+
 <br>
 <br>
+
 <!-- PROCCESS -->
 <div class="info">
    <h1 class="heading">Bli kjent med Webiser</h1>
    <img src="{% static '/images/covers/cover-4.png' %}" alt="image build website pencil people purple vector">
-   <p>Webiser er en <span class="light-overlay">nettutvikling firma</span> med et stort team som består av motiverte designere og utviklere som klarer å levere på topp. Designerne sørger for at nettsiden blir akuratt som du vil, og våres utviklere sørger at nettsiden fungerer 100% som den skal. Hos Webiser bryr vi oss om kvalitet. Alle nettsider har en <span class="light-overlay">responsiv ov modern</span> desgin, og du kan bestemme selv hvordan nettsiden skal se ut.<br><span class="light-overlay">Prossen av bestilling</span> er enkelt. Du sender inn skjemaet som ligger inne <a style="text-decoration: underline;" href="/bestill">her</a>. Når du har sendt inn skjemaet vil du mota en mail når bestillingen har blitt godkjent<br><span class="light-overlay">Betaling</span> foregår via vipps når design har blitt ferdig laget, og du har bekreftet den<br>Ønsker du <span class="light-overlay">mer informasjon?</span> Les mer <a style="text-decoration: underline;" href="/om-webiser">her</a></p>
+   <div class="info-text">
+      <p>Webiser er en <span class="light-overlay">nettutvikling firma</span> med et stort team som består av motiverte designere og utviklere som klarer å levere på topp. Designerne sørger for at nettsiden blir akuratt som du vil, og våres utviklere sørger at nettsiden fungerer 100% som den skal. Hos Webiser . . . 
+         <!-- bryr vi oss om kvalitet. Alle nettsider har en <span class="light-overlay">responsiv ov modern</span> desgin, og du kan bestemme selv hvordan nettsiden skal se ut.<br><span class="light-overlay">Prossen av bestilling</span> er enkelt. Du sender inn skjemaet som ligger inne <a style="text-decoration: underline;" href="/bestill">her</a>. Når du har sendt inn skjemaet vil du mota en mail når bestillingen har blitt godkjent<br><span class="light-overlay">Betaling</span> foregår via vipps når design har blitt ferdig laget, og du har bekreftet den<br>Ønsker du <span class="light-overlay">mer informasjon?</span> Les mer -->
+      </p>
+   </div>
+   <div class="info-actions">
+      <a href="">Les mer</a>
+   </div>
 </div>
+<br>
+<br>
+<!-- OUR SKILLS -->
+<div class="skills">
+   <h1 class="heading">Våres ferdigheter</h1>
+</div>
+
+<br>
+<br>
+
+<!-- SITES -->
+<div class="sites" id="sites">
+   <h1 class="heading">Nettsider som konverterer</h1>
+   {% for product in products %}
+   {% endfor %}   
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <!-- ECOMMERCE -->
 <div class="ecommerce">
@@ -108,7 +136,7 @@
 <!-- PERSONAL ICONS -->
 <div class="icons">
    <i class="fas fa-chalkboard-teacher"></i>   
-   <p>Fortell folk dine ferdigheter</p>
+   <p>Fortell folk om dine ferdigheter</p>
    <br>
    <i class="fas fa-users"></i>   
    <p>Få flere kunder</p>
@@ -156,15 +184,4 @@
       </div>
    </form>
 </div> 
- <!-- Swiper JS -->
- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
- <!-- Initialize Swiper -->
- <script>
-   var swiper = new Swiper(".mySwiper", {
-     slidesPerView: 'auto',
-     spaceBetween: 25,
-     freeMode: true,
-   });
- </script>
 {% endblock %}

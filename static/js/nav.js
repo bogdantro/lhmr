@@ -3,6 +3,8 @@ window.addEventListener("scroll", function(){
   navbar.classList.toggle("sticky", window.scrollY > 1)
 })
 
+
+/////////// MOBILE JAVASCRIPT
 // MENU
 function menu(){
   const sidebar = document.getElementById('sidebar');
@@ -89,3 +91,6 @@ function account(){
     accountToggle.classList.remove('click')
   }
 }
+
+
+/////// DESKTOP JAVASCRIPT
