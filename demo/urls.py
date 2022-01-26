@@ -22,7 +22,7 @@ urlpatterns = [
         path('om-webiser/', about, name='about'),
     # KUNDESERVICE PAGES
         path('prossesen-av-bestillinger/', proccess, name='proccess'),
-        path('forum/', forum, name='forum'),
+        path('webiser-forum/', forum, name='forum'),
         path('sporr-om-endringer/', edit, name='edit'),
         path('de-tre-frontend-spraakene/', frontend, name='frontend'),
 

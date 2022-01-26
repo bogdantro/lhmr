@@ -31,7 +31,7 @@ html, body {
       width: 100%;
       font-family: 'Lato', sans-serif;
       color: black;
-      font-size: 26px;
+      font-size: 24px;
     }
   }
   .info-text{
@@ -61,31 +61,169 @@ html, body {
       padding: 10px;
       background: transparent;
       border-radius: 7px;
-      border: 2px solid white;
+      border: 2px solid #6a81df;
       outline: none;
-      color: white;
+      color: #4a60b9;
       text-align: center;
-      background: #6a81df;
+      background: white;
+      text-decoration: underline;
     }
   }
 }
-// OUR SKILLS
-.skills{
+// INTRO
+.intro{
   background: transparent;
   width: 100%;
   height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: left;
-  h1{
-    &.heading{
-      padding-left: 8px;
-      margin-bottom: 15px;
-      margin-top: 10px;
-      width: 100%;
-      font-family: 'Lato', sans-serif;
-      color: black;
-      font-size: 26px;
+  padding-bottom: 180px;
+  position: relative;
+  // SQUARES
+  .square{
+    // SQUARE BOTTOM
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 300px;
+      height: 300px;
+      background: rgba(248, 80, 50, 1);
+      background:linear-gradient(to bottom right,rgba(255, 255, 255, 0) 50%,#829efc33 50%);
+    }
+    // SQUARE TOP
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 300px;
+      height: 300px;
+      background: rgba(248, 80, 50, 1);
+      background:linear-gradient(to bottom right,#829efc13 50%,rgba(255, 255, 255, 0) 50%);
+    }
+  }
+  .content{
+    img{
+      z-index: 90;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%) translateY(-65px);
+    }
+    h1{
+      &.heading{
+        padding-left: 8px;
+        margin-bottom: 15px;
+        margin-top: 20px;
+        width: 100%;
+        font-family: 'Lato', sans-serif;
+        color: black;
+        font-size: 24px;
+      }
+    }
+    #benefits{
+      &.active{
+        li{
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      li{
+        opacity: 0;
+        transform: translateX(90px);
+        padding-left: 8px;
+        font-size: 15px;
+        width: 95%;
+        font-family: 'Lato', sans-serif;
+        color: black;
+        margin: 9px 0;
+        list-style: none;
+        &::before{
+          content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+          color: rgb(28, 211, 28); /* Change the color */
+          font-weight: bold; /* If you want it to be bold */
+          display: inline-block; /* Needed to add space between the bullet and the text */
+          width: 1em; /* Also needed for space (tweak if needed) */
+        }
+        &:nth-child(1){
+          transition: .6s;
+        }
+        &:nth-child(2){
+          transition: .8s;
+        }
+        &:nth-child(3){
+          transition: 1s;
+        }
+        &:nth-child(4){
+          transition: 1.2s;
+        }
+        &:nth-child(5){
+          transition: 1.4s;
+        }
+        &:nth-child(6){
+          transition: 1.6s;
+        }
+        &:nth-child(7){
+          transition: 1.8s;
+        }
+        &:nth-child(8){
+          transition: 2s;
+        }
+        &:nth-child(9){
+          transition: 2.2s;
+        }
+      }
+    }
+  }
+}
+// RESTAURANT EXMPLE
+.restaurant-example{
+  background: transparent;
+  width: 100%;
+  height: auto;
+  position: relative;
+  img{
+    object-fit: cover;
+    height: auto;
+    max-width: 900px;
+    filter: brightness(40%);
+    z-index: 10;
+  }
+  .content{
+    text-align: center;
+    .text{
+      position: absolute;
+      top: 120px;
+      h1{
+        color: rgb(240, 240, 240);
+        font-size: 34px;
+        font-family: 'Alata', sans-serif;
+        font-weight: bold;
+        text-shadow: 0.3px 0.3px 1px white;   
+      }
+      p{
+        color: rgb(240, 240, 240);
+        font-size: 18px;
+        font-family: 'Alata', sans-serif;
+        transform: translateY(20px);
+      }
+    }
+    .restaurant-example-actions{
+      position: absolute;
+      top: 320px;
+      left: 50%;
+      transform: translateX(-50%);
+      a{
+        padding: 10px;
+        background: transparent;
+        border-radius: 7px;
+        outline: none;
+        border: none;
+        color: white;
+        text-align: center;
+        background: rgb(28, 211, 28);
+      }
     }
   }
 }
@@ -105,8 +243,16 @@ html, body {
       width: 100%;
       font-family: 'Lato', sans-serif;
       color: black;
-      font-size: 26px;
+      font-size: 24px;
     }
+  }
+  .card{
+    height: 350px;
+    max-width: 280px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 7px;
+    margin: 20px auto;
   }
 }
 // ECOMMERCE

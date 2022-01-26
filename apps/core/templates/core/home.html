@@ -57,20 +57,69 @@
 </div>
 <br>
 <br>
-<!-- OUR SKILLS -->
-<div class="skills">
-   <h1 class="heading">Våres ferdigheter</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- INTRO -->
+<div class="intro">
+   <!-- SQUARE FOR TOP AND BOTTOM -->
+   <div class="square"></div>
+   <!-- CONTENT FOR THE WHOLE SECTION -->
+   <div class="content">
+      <!-- PHONE IMAGE -->
+      <img src="{% static '/images/covers/phone-web.png' %}" alt="image phone web design iphone webiser">
+      <!-- TEXT -->
+      <h1 class="heading">Fordeler med å velge oss</h1>
+      <!-- BENEFITS -->
+      <div id="benefits">
+         <li>24/7 kundeservice, TIL OG MED etter bestillingen har blitt fullført</li>
+         <li>Vi bygger nettsider som konverterer</li>
+         <li>Laveste prisene i Norge</li>
+         <li>Mange muligheter for nettsider du kan velge</li>
+         <li>Skrevet i Python, lett å forstå</li>
+         <li>Få hjelp av andre kundere som har tidligere bestillt hos Webiser <a href="/webiser-forum">her</a></li>
+         <li>Du bestemmer alt ved designen, eller la våres designere lage den</li>
+         <li>Betailing skjer veldig enkelt via vipps</li>
+         <li>NO RISK, vi jobber sammen til nettsiden har blitt 100% bekreftet av deg</li>
+      </div>
+   </div>
+</div>
+<!-- RESTAURANT AGENCY EXAMPLE -->
+<div class="restaurant-example">
+   <!-- TRAVEL AGEMCY IMAGE -->
+   <img src="{% static '/images/covers/restaurant-example.jpg' %}" alt="restaurant food norway kebab shop food love shop">
+   <!-- CONTENT -->
+   <div class="content">
+      <!-- TEXT -->
+      <div class="text">
+         <h1>Er du eier av en restaurant?</h1>
+         <p>Bli synlig på nettet, få inn flere kunder</p>
+      </div>
+      <!-- ACTIONS -->
+      <div class="restaurant-example-actions">
+         <a href="/bestill">Kom i gang</a>
+      </div>
+   </div>
+   
 </div>
 
-<br>
 <br>
 
 <!-- SITES -->
 <div class="sites" id="sites">
-   <h1 class="heading">Nettsider som konverterer</h1>
+   <h1 class="heading">Priser</h1>
    {% for product in products %}
+   <div class="card">
+      {{ product.name }}
+      {{ product.price }}
+   </div>
    {% endfor %}   
 </div>
+
+
 <br>
 <br>
 <br>

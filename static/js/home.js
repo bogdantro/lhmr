@@ -65,3 +65,12 @@ function backToTop(){
 
     
 
+$(window).scroll(function() {
+    const benefits = document.getElementById('benefits');
+    var hT = $('#benefits').offset().top,
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+260-wH)){
+        benefits.classList.add('active');
+    }
+ });

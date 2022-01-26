@@ -23,7 +23,7 @@ html, body {
   width: 100%;
   font-family: 'Lato', sans-serif;
   color: black;
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .info .info-text {
@@ -62,30 +62,202 @@ html, body {
   padding: 10px;
   background: transparent;
   border-radius: 7px;
-  border: 2px solid white;
+  border: 2px solid #6a81df;
   outline: none;
-  color: white;
+  color: #4a60b9;
   text-align: center;
-  background: #6a81df;
+  background: white;
+  text-decoration: underline;
 }
 
-.skills {
+.intro {
   background: transparent;
   width: 100%;
   height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: left;
+  padding-bottom: 180px;
+  position: relative;
 }
 
-.skills h1.heading {
+.intro .square::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: #f85032;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50%, #829efc33));
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 50%, #829efc33 50%);
+}
+
+.intro .square::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 300px;
+  background: #f85032;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #829efc13), color-stop(50%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom right, #829efc13 50%, rgba(255, 255, 255, 0) 50%);
+}
+
+.intro .content img {
+  z-index: 90;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-65px);
+          transform: translateX(-50%) translateY(-65px);
+}
+
+.intro .content h1.heading {
   padding-left: 8px;
   margin-bottom: 15px;
-  margin-top: 10px;
+  margin-top: 20px;
   width: 100%;
   font-family: 'Lato', sans-serif;
   color: black;
-  font-size: 26px;
+  font-size: 24px;
+}
+
+.intro .content #benefits.active li {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.intro .content #benefits li {
+  opacity: 0;
+  -webkit-transform: translateX(90px);
+          transform: translateX(90px);
+  padding-left: 8px;
+  font-size: 15px;
+  width: 95%;
+  font-family: 'Lato', sans-serif;
+  color: black;
+  margin: 9px 0;
+  list-style: none;
+}
+
+.intro .content #benefits li::before {
+  content: "\2022";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #1cd31c;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+}
+
+.intro .content #benefits li:nth-child(1) {
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+.intro .content #benefits li:nth-child(2) {
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+.intro .content #benefits li:nth-child(3) {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.intro .content #benefits li:nth-child(4) {
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+}
+
+.intro .content #benefits li:nth-child(5) {
+  -webkit-transition: 1.4s;
+  transition: 1.4s;
+}
+
+.intro .content #benefits li:nth-child(6) {
+  -webkit-transition: 1.6s;
+  transition: 1.6s;
+}
+
+.intro .content #benefits li:nth-child(7) {
+  -webkit-transition: 1.8s;
+  transition: 1.8s;
+}
+
+.intro .content #benefits li:nth-child(8) {
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.intro .content #benefits li:nth-child(9) {
+  -webkit-transition: 2.2s;
+  transition: 2.2s;
+}
+
+.restaurant-example {
+  background: transparent;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.restaurant-example img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
+  max-width: 900px;
+  -webkit-filter: brightness(40%);
+          filter: brightness(40%);
+  z-index: 10;
+}
+
+.restaurant-example .content {
+  text-align: center;
+}
+
+.restaurant-example .content .text {
+  position: absolute;
+  top: 120px;
+}
+
+.restaurant-example .content .text h1 {
+  color: #f0f0f0;
+  font-size: 34px;
+  font-family: 'Alata', sans-serif;
+  font-weight: bold;
+  text-shadow: 0.3px 0.3px 1px white;
+}
+
+.restaurant-example .content .text p {
+  color: #f0f0f0;
+  font-size: 18px;
+  font-family: 'Alata', sans-serif;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.restaurant-example .content .restaurant-example-actions {
+  position: absolute;
+  top: 320px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.restaurant-example .content .restaurant-example-actions a {
+  padding: 10px;
+  background: transparent;
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  color: white;
+  text-align: center;
+  background: #1cd31c;
 }
 
 .sites {
@@ -104,7 +276,16 @@ html, body {
   width: 100%;
   font-family: 'Lato', sans-serif;
   color: black;
-  font-size: 26px;
+  font-size: 24px;
+}
+
+.sites .card {
+  height: 350px;
+  max-width: 280px;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 7px;
+  margin: 20px auto;
 }
 
 .ecommerce {

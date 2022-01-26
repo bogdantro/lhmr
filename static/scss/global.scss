@@ -82,7 +82,7 @@ body{
   width: 100%;
   height: 85vh;
   position: relative;
-  background:#6a81df;
+  background: #829efc;
   img{
     width: 265px;
     height: auto;
@@ -132,11 +132,11 @@ body{
           padding: 10px;
           background: transparent;
           border-radius: 7px;
-          border: 2px solid white;
           outline: none;
           color: white;
           text-align: center;
           &:nth-child(1){
+            border: 2px solid rgba(255, 255, 255, 0.329);
           }
           &:nth-child(2){
             transform: translateX(13px);
