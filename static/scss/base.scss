@@ -268,7 +268,7 @@ html, body {
       padding-bottom: 20px;
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.082);
       .product-name{
-        font-size: 20px;
+        font-size: 18px;
         transform: translateY(20px) translateX(10px);
         position: relative;
         &::after{
@@ -292,7 +292,8 @@ html, body {
         ul{
           overflow: hidden; 
           overflow-y: scroll;
-          height: 108px;
+          height: 100px;
+          -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
           li{
             opacity: 0.7;
             margin: 0;
@@ -316,6 +317,18 @@ html, body {
         }
       }
     }
+  }
+}
+// LANGUAGES
+.languages{
+  background: transparent;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  i{
+    margin: 15px;
+    font-size: 38px; 
+    color: rgba(0, 0, 0, 0.411);
   }
 }
 // POSITIVE
@@ -377,34 +390,16 @@ html, body {
   }
 }
 // CONTACT US
-.contact-us{
-  background: transparent;
+.contact-us-home{
+  background: rgba(0, 0, 0, 0.89);
   width: 100%;
-  height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 8px;
+  height: 500px;
   text-align: left;
+  color: white;
   &.active{
     form{
       opacity: 1;
     }
-  }
-  h1{
-    &.heading{
-      width: 100%;
-      font-family: 'Sniglet', cursive;
-      color: black;
-      font-weight: 700;
-      font-size: 26px;
-    }
-  }
-  p{
-    font-size: 15px;
-    font-family: 'Sniglet', cursive;
-    color: black;
-    opacity: 0.8;
-    line-height: 190%;
   }
   form{
     text-align: left;

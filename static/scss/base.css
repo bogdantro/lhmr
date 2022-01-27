@@ -304,7 +304,7 @@ html, body {
 }
 
 .sites .product-flex-section .card .product-name {
-  font-size: 20px;
+  font-size: 18px;
   -webkit-transform: translateY(20px) translateX(10px);
           transform: translateY(20px) translateX(10px);
   position: relative;
@@ -337,7 +337,9 @@ html, body {
 .sites .product-flex-section .card .included ul {
   overflow: hidden;
   overflow-y: scroll;
-  height: 108px;
+  height: 100px;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #000), to(transparent));
+  -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
 }
 
 .sites .product-flex-section .card .included ul li {
@@ -368,6 +370,19 @@ html, body {
 .sites .product-flex-section .card .product-actions a {
   color: #1cd31c;
   font-size: 25px;
+}
+
+.languages {
+  background: transparent;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.languages i {
+  margin: 15px;
+  font-size: 38px;
+  color: rgba(0, 0, 0, 0.411);
 }
 
 .positive {
@@ -433,37 +448,19 @@ html, body {
   font-size: 26px;
 }
 
-.contact-us {
-  background: transparent;
+.contact-us-home {
+  background: rgba(0, 0, 0, 0.89);
   width: 100%;
-  height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 8px;
+  height: 500px;
   text-align: left;
+  color: white;
 }
 
-.contact-us.active form {
+.contact-us-home.active form {
   opacity: 1;
 }
 
-.contact-us h1.heading {
-  width: 100%;
-  font-family: 'Sniglet', cursive;
-  color: black;
-  font-weight: 700;
-  font-size: 26px;
-}
-
-.contact-us p {
-  font-size: 15px;
-  font-family: 'Sniglet', cursive;
-  color: black;
-  opacity: 0.8;
-  line-height: 190%;
-}
-
-.contact-us form {
+.contact-us-home form {
   text-align: left;
   padding: 10px;
   margin-top: 0;
@@ -476,7 +473,7 @@ html, body {
   max-width: 360px;
 }
 
-.contact-us form .form-tag-navn {
+.contact-us-home form .form-tag-navn {
   font-size: 15px;
   color: #304792;
   background: #e8edff;
@@ -490,7 +487,7 @@ html, body {
   border-radius: 5px;
 }
 
-.contact-us form .form-tag-email {
+.contact-us-home form .form-tag-email {
   font-size: 15px;
   color: #304792;
   border-radius: 5px;
@@ -504,7 +501,7 @@ html, body {
   top: 88px;
 }
 
-.contact-us form .form-tag-message {
+.contact-us-home form .form-tag-message {
   font-size: 15px;
   color: #304792;
   background: #e8edff;
@@ -518,7 +515,7 @@ html, body {
   border-radius: 5px;
 }
 
-.contact-us form textarea {
+.contact-us-home form textarea {
   width: 100%;
   border: 2px solid #3c54a0;
   border-radius: 4px;
@@ -529,7 +526,7 @@ html, body {
   font-size: 15px;
 }
 
-.contact-us form input {
+.contact-us-home form input {
   width: 100%;
   border: 2px solid #3c54a0;
   border-radius: 4px;
@@ -538,11 +535,11 @@ html, body {
   font-size: 15px;
 }
 
-.contact-us form .form-actions {
+.contact-us-home form .form-actions {
   margin-top: 25px;
 }
 
-.contact-us form .form-actions button {
+.contact-us-home form .form-actions button {
   border-radius: 4px;
   width: 200px;
   font-size: 16px;
@@ -557,7 +554,7 @@ html, body {
   border: 2px solid transparent;
 }
 
-.contact-us form .form-actions button:hover {
+.contact-us-home form .form-actions button:hover {
   background: white;
   color: black;
 }
