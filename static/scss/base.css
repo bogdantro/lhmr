@@ -74,7 +74,7 @@ html, body {
   background: transparent;
   width: 100%;
   height: auto;
-  padding-bottom: 180px;
+  padding-bottom: 150px;
   position: relative;
 }
 
@@ -104,7 +104,7 @@ html, body {
   background: linear-gradient(to bottom right, #829efc13 50%, rgba(255, 255, 255, 0) 50%);
 }
 
-.intro .content img {
+.intro .content .intro-img1 {
   z-index: 90;
   position: relative;
   left: 50%;

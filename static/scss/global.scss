@@ -24,13 +24,19 @@ body{
   width: 100%;
   height: 50px;
   position: fixed;
-  bottom: 0;
+  bottom: -35px;
   left: 0;
   background: rgb(28, 211, 28);
   z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transition: .4s;
+  &.active{
+    opacity: 1;
+    bottom: 0;
+  }
   a{
     color: white !important;
     font-size: 16px;
@@ -38,35 +44,27 @@ body{
 }
 #backToTop{
   position: fixed;
-  right: 0;
-  top: 50vh;
+  right: 15px;
+  bottom: 20px;
   z-index: 110;
-  background: white;
   padding: 10px;
   padding-bottom: 20px;
   transition: .3s;
   opacity: 0;
   pointer-events: none;
-  border: 2px solid transparent;
-  background: linear-gradient(135deg,#688bfc, #7996f8);    
+  background: white;
   border-radius: 4px;
-  box-shadow: 0px 5px 2px rgb(60, 84, 160);
   text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.664);
   i{
     padding-top: 5px;
     font-size: 22px;
-    color: white;
-    transform: rotate(-45deg);
+    color: #4a60b9;
   }
-  p{
-    font-size: 8px;
-    color: white;
-    position: absolute;
-    bottom: -10px;
-  }
+
   &.active{
     opacity: 1;
     pointer-events: visible;
@@ -80,23 +78,18 @@ body{
 // COVER
 .cover{
   width: 100%;
-  height: 85vh;
+  height: auto;
   position: relative;
-  background: #829efc;
   img{
-    width: 265px;
-    height: auto;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%) translateY(100px);
-    box-shadow: 8px 6px 3px rgba(255, 255, 255, 0.438);
-    border-radius: 30px;
+    width: 100%;
+    height: 70vh;
+    filter: brightness(50%);
   }
   .content{
     opacity: 0;
     transition: .4s ease-in;
     position: absolute;
-    top: 240px;
+    top: 60px;
     right: -200px;
     width: 100%;
     padding-left: 15px;

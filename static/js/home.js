@@ -63,6 +63,13 @@ function backToTop(){
   window.scrollTo({ top: 0, behavior: 'smooth'});
 }
 
+
+window.addEventListener("scroll", function(){
+    const bottomNav = document.getElementById('bottomNav');
+    bottomNav.classList.toggle("active", window.scrollY > 1400)
+})
+
+
     
 
 $(window).scroll(function() {
@@ -70,7 +77,7 @@ $(window).scroll(function() {
     var hT = $('#benefits').offset().top,
         wH = $(window).height(),
         wS = $(this).scrollTop();
-    if (wS > (hT+260-wH)){
+    if (wS > (hT+80-wH)){
         benefits.classList.add('active');
     }
  });
