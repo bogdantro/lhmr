@@ -114,95 +114,66 @@
 <!-- SITES -->
 <div class="sites" id="sites">
    <h1 class="heading">Priser</h1>
+   <!-- PRODUCT FLEX SECTION -->
+   <div class="product-flex-section">
    {% for product in products %}
-   <div class="card">
-      {{ product.name }}
-      {{ product.price }}
+      <!-- PRODUCT CARD -->
+      <div class="card">
+         <!-- PRODUCT NAME -->
+         <h1 class="product-name">{{ product.name }}</h1>
+         <!-- PRODUCT PRICE -->
+         <h1 class="product-price">{{ product.price | floatformat }}kr</h1>
+         <!-- PRODUCT INCLUDED -->
+         <div class="included">
+            <!-- ECOMMERCE -->
+            <ul>
+               {% if product.is_ecommerce %}
+               <li>ecommerce</li>
+               <li>ecommerce</li>
+               <li>ecommerce</li>
+               <li>ecommerce</li>
+               <li>ecommerce</li>
+               <li>ecommerce</li>
+               <li>ecommerce</li>
+               <li>ecommerce</li>
+               <li>ecommerce</li>
+               <li>ecommerce</li>
+               <li>ecommerce</li>
+               <li>ecommerce</li>
+               <li>ecommerce</li>
+               <li>ecommerce</li>
+               {% endif %}
+               <!-- BLOG -->
+               {% if product.is_blog %}
+               <li>blog</li>
+               <li>blog</li>
+               <li>blog</li>
+               <li>blog</li>
+               <li>blog</li>
+               <li>blog</li>
+               <li>blog</li>
+               <li>blog</li>
+               <li>blog</li>
+               <li>blog</li>
+               <li>blog</li>
+               <li>blog</li>
+               <li>blog</li>
+               <li>blog</li>
+               {% endif %}
+            </ul>
+         </div>
+      <br>
+      <div class="product-actions">
+         <a href="{% url 'product_detail' product.slug %}"><i class="fas fa-arrow-right"></i></a>
+      </div>
    </div>
    {% endfor %}   
 </div>
+</div>
 
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<!-- ECOMMERCE -->
-<div class="ecommerce">
-   <h1 class="heading">Kom i gang med en nettbutikk</h1>
-   <div class="content">
-      <img src="{% static '/images/covers/ecommerce.png' %}" alt="image ecommerce nettbutikk shop monye online shop">
-   </div>
-</div>
-<!-- ECOMMERCE ICONS -->
-<div class="icons">
-   <i class="far fa-phone-laptop"></i>
-   <p>Responsiv design</p>
-   <br>
-   <i class="fas fa-store"></i>
-   <p>Alle nettbutikk funksjonene du trenger</p>
-   <br>
-   <i class="fas fa-usd-circle"></i>
-   <p>Nettside som konverter</p>
-   <br>
-   <i class="fas fa-truck-loading"></i>   
-   <p>Bra for små og store lager</p>
-</div>
-<br>
-<br>
-<br>
-<!-- PERSONAL -->
-<div class="personal">
-   <h1 class="heading">Kom i gang med en personlig nettside</h1>
-   <p>Fortell hele verden hva du er god på med din egen nettside</p>
-   <div class="content">
-      <img src="{% static '/images/covers/personal.png' %}" alt="image personal skills copywrite web nett">
-   </div>
-</div>
-<!-- PERSONAL ICONS -->
-<div class="icons">
-   <i class="fas fa-chalkboard-teacher"></i>   
-   <p>Fortell folk om dine ferdigheter</p>
-   <br>
-   <i class="fas fa-users"></i>   
-   <p>Få flere kunder</p>
-   <br>
-   <i class="fas fa-eye"></i>   
-   <p>Bli synlig på nettet</p>
-</div>
-<br>
-<br>
-<br>
 <br>
 <!-- POSITIVE -->
 <div class="positive">
-   <h1 class="heading">Vi garanter positive resultater</h1>
    <div class="content">
       <div class="content-2">
          <h1>Hva venter du på?</h1>
@@ -218,7 +189,7 @@
 <div class="contact-us" id="contactUs">
    <h1 class="heading">Trenger du ekstra hjelp?</h1>
    <p>Trykk på chatt ikonet nederst til høyre, eller kontakter oss under</p>
-   <form action="" method="POST">
+   <!-- <form action="" method="POST">
       {% csrf_token %}
       <br>
       <label for="navn" class="form-tag-navn tag">Navn</label>
@@ -234,6 +205,6 @@
       <div class="form-actions">
          <button class="hover" type="submit" name="contact" value="contact">Send</button>
       </div>
-   </form>
+   </form> -->
 </div> 
 {% endblock %}

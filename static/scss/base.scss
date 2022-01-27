@@ -101,7 +101,7 @@ html, body {
       width: 300px;
       height: 300px;
       background: rgba(248, 80, 50, 1);
-      background:linear-gradient(to bottom right,#829efc13 50%,rgba(255, 255, 255, 0) 50%);
+      background:linear-gradient(to bottom right,#829efc1c 50%,rgba(255, 255, 255, 0) 50%);
     }
   }
   .content{
@@ -253,128 +253,69 @@ html, body {
       font-size: 24px;
     }
   }
-  .card{
-    height: 350px;
-    max-width: 280px;
-    border: 1px solid black;
-    outline: none;
-    border-radius: 7px;
-    margin: 20px auto;
-  }
-}
-// ECOMMERCE
-.ecommerce{
-  background: transparent;
-  width: 100%;
-  height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: left;
-  h1{
-    &.heading{
-      padding-left: 8px;
-      margin-bottom: 15px;
-      margin-top: 10px;
-      width: 100%;
-      font-family: 'Sniglet', cursive;
-      color: black;
-      font-weight: bold;
-      font-size: 26px;
-    }
-  }
-  .content{
-    background: #93acffa8;
+  .product-flex-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom-left-radius: 8%;
-    border-bottom-right-radius: 8%;
-    img{
-      width: auto;
-      height: 230px;
-      transform: translateY(25px);
+    .card{
+      height: auto;
+      width: 45%;
+      max-width: 415px;
+      border: none;
+      outline: none;
+      border-radius: 7px;
+      padding-bottom: 20px;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.082);
+      .product-name{
+        font-size: 20px;
+        transform: translateY(20px) translateX(10px);
+        position: relative;
+        &::after{
+          content: '';
+          display: block;
+          transform: translateY(45px);
+          width: 80%;
+          height: 3px;
+          background: rgb(28, 211, 28);
+        }
+      }
+      .product-price{
+        font-size: 13px;
+        transform: translateY(30px) translateX(10px);
+        position: relative;
+      }
+      .included{
+        width: 100%;
+        transform: translateY(40px);
+        padding: 10px;
+        ul{
+          overflow: hidden; 
+          overflow-y: scroll;
+          height: 108px;
+          li{
+            opacity: 0.7;
+            margin: 0;
+            list-style: none;
+            font-size: 14px;
+            &::before{
+              content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+              color: rgb(28, 211, 28); /* Change the color */
+              font-weight: bold; /* If you want it to be bold */
+              display: inline-block; /* Needed to add space between the bullet and the text */
+              width: 1em; /* Also needed for space (tweak if needed) */
+            }
+          }
+        }
+      }
+      .product-actions{
+        transform: translateY(10px) translateX(120px);
+        a{
+          color: rgb(28, 211, 28);
+          font-size: 25px;
+        }
+      }
     }
-  }
-}
-// ECOMMERCE ICONS
-.icons{
-  background: transparent;
-  width: 100%;
-  height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 8px;
-  text-align: center;
-  transform: translateY(60px);
-  i{
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(135deg,#688bfc, #7996f8);  
-    font-size: 50px;
-    padding: 15px;
-    border-radius: 50px;
-    color: white;
-    width: 90px;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  p{
-    transform: translateY(7px);
-    font-size: 15px;
-    font-family: 'Sniglet', cursive;
-    color: black;
-    opacity: 0.8;
-    margin-bottom: 10px;
-  }
-}
-// PERSONAL
-.personal{
-  background: transparent;
-  width: 100%;
-  height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: left;
-  .content{
-    background: #93acffa8;
-    width: 100%;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom-left-radius: 8%;
-    border-bottom-right-radius: 8%;
-    img{
-      width: auto;
-      height: 180px;
-      transform: translateY(45px);
-    }
-  }
-  h1{
-    &.heading{
-      padding-left: 8px;
-      margin-bottom: 15px;
-      margin-top: 10px;
-      width: 100%;
-      font-family: 'Sniglet', cursive;
-      color: black;
-      font-weight: bold;
-      font-size: 26px;
-    }
-  }
-  p{
-    padding-left: 8px;
-    font-size: 14px;
-    font-family: 'Sniglet', cursive;
-    color: black;
-    opacity: 0.8;
-    line-height: 230%;
-    word-spacing: 1.5px;
   }
 }
 // POSITIVE
