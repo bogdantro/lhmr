@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from apps.core.views import hjemme, about, email_success, proccess, forum, edit, frontend
+from apps.core.views import hjemme, about, email_success, proccess, forum, edit, frontend, contact
 from apps.store.views import product_detail
 from django.conf import settings
 from django.contrib.sitemaps.views import sitemap
@@ -25,6 +25,7 @@ urlpatterns = [
         path('webiser-forum/', forum, name='forum'),
         path('sporr-om-endringer/', edit, name='edit'),
         path('de-tre-frontend-spraakene/', frontend, name='frontend'),
+        path('kontakter-oss/', contact, name='contact'),
 
     #STORE
     path('produkt/:<slug>/', product_detail, name='product_detail'),

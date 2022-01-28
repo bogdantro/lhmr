@@ -83,6 +83,9 @@ def email_success(request):
     return render(request, 'pages/email.html')
 
 # KUNDESERVICE PAGES
+def contact(request):
+    return render(request, 'pages/kundeservice/contact.html')   
+
 def proccess(request):
     return render(request, 'pages/kundeservice/proccess.html')   
      
