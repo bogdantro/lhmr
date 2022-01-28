@@ -75,7 +75,7 @@ html, body {
   background: transparent;
   width: 100%;
   height: auto;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
   position: relative;
   // SQUARES
   .square{
@@ -86,8 +86,8 @@ html, body {
       position: absolute;
       bottom: 0;
       right: 0;
-      width: 300px;
-      height: 300px;
+      width: 200px;
+      height: 200px;
       background: rgba(248, 80, 50, 1);
       background:linear-gradient(to bottom right,rgba(255, 255, 255, 0) 50%,#829efc33 50%);
     }
@@ -395,7 +395,22 @@ html, body {
   width: 100%;
   height: 500px;
   text-align: left;
-  color: white;
+  h1{
+    color: white;
+    font-size: 18px;
+    padding-left: 10px;
+    &.heading{
+      font-size: 26px;
+    }
+  }
+  a{
+    padding-left: 15px;
+    i{
+      transform: translateY(10px) translateX(20px);
+      font-size: 18px;
+      color: white;
+    }
+  }
   &.active{
     form{
       opacity: 1;

@@ -112,18 +112,22 @@ body {
 
 .cover .content {
   opacity: 0;
-  -webkit-transition: .4s ease-in;
-  transition: .4s ease-in;
+  -webkit-transition: .8s ease-in;
+  transition: .8s ease-in;
   position: absolute;
   top: 60px;
   right: -200px;
   width: 100%;
   padding-left: 15px;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
 }
 
 .cover .content.active {
   opacity: 1;
   right: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .cover .content .text {

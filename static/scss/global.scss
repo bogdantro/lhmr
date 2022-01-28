@@ -87,15 +87,17 @@ body{
   }
   .content{
     opacity: 0;
-    transition: .4s ease-in;
+    transition: .8s ease-in;
     position: absolute;
     top: 60px;
     right: -200px;
     width: 100%;
     padding-left: 15px;
+    transform: scale(0.5);
     &.active{
       opacity: 1;
       right: 0;
+      transform: scale(1);
     }
     .text{
       width: 100%;
