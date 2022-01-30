@@ -77,6 +77,11 @@ html, body {
   height: auto;
   padding-bottom: 50px;
   position: relative;
+  &.active{
+    .intro-img1{
+      
+    }
+  }
   // SQUARES
   .square{
     // SQUARE BOTTOM
@@ -109,7 +114,11 @@ html, body {
       z-index: 90;
       position: relative;
       left: 50%;
-      transform: translateX(-50%) translateY(-65px);
+      transform: translateX(-50%) translateY(215px);
+      transition: .8s;
+      &.active{
+        transform: translateX(-50%) translateY(-65px);
+      }
     }
     // .intro-img2{
     //   width: 280px;

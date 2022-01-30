@@ -108,6 +108,13 @@ html, body {
   z-index: 90;
   position: relative;
   left: 50%;
+  -webkit-transform: translateX(-50%) translateY(215px);
+          transform: translateX(-50%) translateY(215px);
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+.intro .content .intro-img1.active {
   -webkit-transform: translateX(-50%) translateY(-65px);
           transform: translateX(-50%) translateY(-65px);
 }

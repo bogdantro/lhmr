@@ -81,3 +81,13 @@ $(window).scroll(function() {
         benefits.classList.add('active');
     }
  });
+
+ $(window).scroll(function() {
+    const benefits = document.getElementById('introImgPhone');
+    var hT = $('#introImgPhone').offset().top,
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+-120-wH)){
+        benefits.classList.add('active');
+    }
+ });
