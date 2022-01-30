@@ -19,6 +19,7 @@
   transition: .2s ease-in-out;
   -webkit-box-shadow: 1px 0px 3px rgba(255, 255, 255, 0.329);
           box-shadow: 1px 0px 3px rgba(255, 255, 255, 0.329);
+  background: rgba(0, 0, 0, 0.25);
 }
 
 #navbar.sticky {
@@ -33,26 +34,68 @@
   color: #323232;
 }
 
+#navbar.sticky .logo {
+  left: -100px;
+}
+
 #navbar.sticky .logo h1 {
-  color: #5370d1;
+  color: black;
+  opacity: 0;
+}
+
+#navbar.sticky .logo .logo1 {
+  display: none;
+}
+
+#navbar.sticky .logo .logo2 {
+  display: block;
 }
 
 #navbar .logo {
+  -webkit-transition: .8s;
+  transition: .8s;
   cursor: pointer;
   position: absolute;
   left: 20px;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
   width: auto;
   height: auto;
   z-index: 1000;
 }
 
 #navbar .logo h1 {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
   margin: 0;
   font-family: 'Indie Flower', cursive;
   color: #ebebeb;
   font-size: 26px;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
+}
+
+#navbar .logo img {
+  height: auto;
+  width: 28px;
+  position: absolute;
+  left: 95px;
+  top: 8px;
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+#navbar .logo img.logo1 {
+  display: block;
+}
+
+#navbar .logo img.logo2 {
+  display: none;
+  width: 50px;
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+  top: 4px;
 }
 
 #navbar .logo.menu-click h1 {

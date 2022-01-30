@@ -14,6 +14,7 @@
     align-items: center;
     transition: .2s ease-in-out;
     box-shadow: 1px 0px 3px rgba(255, 255, 255, 0.329);
+    background: rgba(0, 0, 0, 0.25);
     // NAVBAR STICKY
     &.sticky{
         background: white;
@@ -28,25 +29,54 @@
             }
         }
         .logo{
+            left: -100px;
             h1{
-                color: #5370d1;
+                color: black;
+                opacity: 0;
+            }
+            .logo1{
+                display: none;
+            }
+            .logo2{
+                display: block;
             }
         }
     }
     // LOGO CSS 
     .logo{
+        transition: .8s;
         cursor: pointer;
         position: absolute;
         left: 20px;
+        transform: translateY(1px);
         width: auto;
         height: auto;
         z-index: 1000;
         h1{
+            transform: translateX(0);
+            opacity: 1;
             margin: 0;
             font-family: 'Indie Flower', cursive;
             color: rgb(235, 235, 235);
             font-size: 26px;
             transition: .2s ease-in-out;
+        }
+        img{
+            height: auto;
+            width: 28px;
+            position: absolute;
+            left: 95px;
+            top: 8px;
+            transition: .8s;
+            &.logo1{
+                display: block;
+            }
+            &.logo2{
+                display: none;
+                width: 50px;
+                transform: translateX(40px);
+                top: 4px;
+            }
         }
         &.menu-click{
             h1{

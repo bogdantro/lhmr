@@ -10,64 +10,118 @@ html, body {
 .info {
   background: transparent;
   width: 100%;
-  height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  height: 800px;
   text-align: left;
+  background: #130216;
 }
 
-.info h1.heading {
-  padding-left: 8px;
-  margin-bottom: 15px;
-  margin-top: 10px;
-  width: 100%;
-  font-family: 'Lato', sans-serif;
-  color: black;
+.info .content {
+  padding-top: 80px;
+  position: relative;
+}
+
+.info .content.active .heading {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.info .content .heading {
+  -webkit-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
+  opacity: 0;
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
   font-size: 24px;
+  color: white;
+  padding-left: 15px;
+  font-family: 'Lato', sans-serif;
 }
 
-.info .info-text {
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #000), to(transparent));
-  -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
-}
-
-.info .info-text p {
-  padding-left: 8px;
-  font-size: 14px;
-  font-family: 'Sniglet', cursive;
-  color: black;
-  opacity: 0.8;
-  line-height: 230%;
-  word-spacing: 1.5px;
-}
-
-.info img {
-  width: auto;
-  height: 140px;
-  float: right;
-}
-
-.info .info-actions {
-  width: 100%;
+.info .content .info-card1 {
+  background: #fafafa;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  right: -75px;
+  opacity: 0;
   -webkit-transform: translateY(25px);
           transform: translateY(25px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 8px;
+  -webkit-transition: .8s;
+  transition: .8s;
 }
 
-.info .info-actions a {
-  width: 120px;
-  padding: 10px;
-  background: transparent;
-  border-radius: 7px;
-  border: 2px solid #6a81df;
-  outline: none;
-  color: #4a60b9;
+.info .content .info-card1.active {
+  opacity: 1;
+  right: 5px;
+}
+
+.info .content .info-card2 {
+  background: #fafafa;
+  width: 200px;
+  height: 200px;
   text-align: center;
-  background: white;
-  text-decoration: underline;
+  border-radius: 5px;
+  position: absolute;
+  left: -75px;
+  -webkit-transform: translateY(145px);
+          transform: translateY(145px);
+  -webkit-box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.116);
+          box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.116);
+  opacity: 0;
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+.info .content .info-card2.active {
+  opacity: 1;
+  left: 5px;
+}
+
+.info .content .info-card3 {
+  background: #fafafa;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  right: -75px;
+  opacity: 0;
+  -webkit-transform: translateY(260px);
+          transform: translateY(260px);
+  -webkit-transition: .8s;
+  transition: .8s;
+  -webkit-box-shadow: -1px 0px 3px rgba(0, 0, 0, 0.116);
+          box-shadow: -1px 0px 3px rgba(0, 0, 0, 0.116);
+}
+
+.info .content .info-card3.active {
+  opacity: 1;
+  right: 5px;
+}
+
+.info .content .info-card4 {
+  background: #fafafa;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  left: -75px;
+  -webkit-transform: translateY(375px);
+          transform: translateY(375px);
+  -webkit-box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.116);
+          box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.116);
+  opacity: 0;
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+.info .content .info-card4.active {
+  opacity: 1;
+  left: 5px;
 }
 
 .intro {
@@ -108,15 +162,10 @@ html, body {
   z-index: 90;
   position: relative;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(215px);
-          transform: translateX(-50%) translateY(215px);
-  -webkit-transition: .8s;
-  transition: .8s;
-}
-
-.intro .content .intro-img1.active {
   -webkit-transform: translateX(-50%) translateY(-65px);
           transform: translateX(-50%) translateY(-65px);
+  -webkit-transition: .8s;
+  transition: .8s;
 }
 
 .intro .content h1.heading {

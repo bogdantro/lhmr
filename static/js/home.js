@@ -66,10 +66,38 @@ function backToTop(){
 
 window.addEventListener("scroll", function(){
     const bottomNav = document.getElementById('bottomNav');
-    bottomNav.classList.toggle("active", window.scrollY > 1400)
+    bottomNav.classList.toggle("active", window.scrollY > 1200)
 })
 
 
+
+window.addEventListener("scroll", function(){
+    const coverContent = document.getElementById('coverContent');
+    coverContent.classList.toggle("hide", window.scrollY > 200)
+})
+
+window.addEventListener("scroll", function(){
+    const infoContent = document.getElementById('infoContent');
+    infoContent.classList.toggle("active", window.scrollY > 200)
+})
+
+
+window.addEventListener("scroll", function(){
+    const infoCard1 = document.getElementById('infoCard1');
+    infoCard1.classList.toggle("active", window.scrollY > 230)
+})
+window.addEventListener("scroll", function(){
+    const infoCard2 = document.getElementById('infoCard2');
+    infoCard2.classList.toggle("active", window.scrollY > 320)
+})
+window.addEventListener("scroll", function(){
+    const infoCard3 = document.getElementById('infoCard3');
+    infoCard3.classList.toggle("active", window.scrollY > 410)
+})
+window.addEventListener("scroll", function(){
+    const infoCard4 = document.getElementById('infoCard4');
+    infoCard4.classList.toggle("active", window.scrollY > 500)
+})
     
 
 $(window).scroll(function() {
@@ -78,16 +106,6 @@ $(window).scroll(function() {
         wH = $(window).height(),
         wS = $(this).scrollTop();
     if (wS > (hT+80-wH)){
-        benefits.classList.add('active');
-    }
- });
-
- $(window).scroll(function() {
-    const benefits = document.getElementById('introImgPhone');
-    var hT = $('#introImgPhone').offset().top,
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT+-120-wH)){
         benefits.classList.add('active');
     }
  });
