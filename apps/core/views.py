@@ -22,53 +22,34 @@ from django.contrib.auth import (
 def hjemme(request,  backend='django.contrib.auth.backends.ModelBackend'):
     products = Product.objects.all()
 
-    if request.method=='POST' and 'login' in request.POST:
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            return redirect('/')
-        else:
-            return redirect('/')
+    # if request.method=='POST' and 'login' in request.POST:
+    #     username = request.POST['username']
+    #     password = request.POST['password']
+    #     user = authenticate(request, username=username, password=password)
+    #     if user is not None:
+    #         login(request, user)
+    #         return redirect('/')
+    #     else:
+    #         return redirect('/')
 
-    if request.method=='POST' and 'signup' in request.POST:
-        form = SignUpForm(request.POST)
-        userprofileform = UserprofileForm(request.POST)
+    # if request.method=='POST' and 'signup' in request.POST:
+    #     form = SignUpForm(request.POST)
+    #     userprofileform = UserprofileForm(request.POST)
 
-        if form.is_valid() and userprofileform.is_valid():
-            user = form.save()
+    #     if form.is_valid() and userprofileform.is_valid():
+    #         user = form.save()
 
-            userprofile = userprofileform.save(commit=False)
-            userprofile.user = user
-            userprofile.save()
+    #         userprofile = userprofileform.save(commit=False)
+    #         userprofile.user = user
+    #         userprofile.save()
 
-            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+    #         login(request, user, backend='django.contrib.auth.backends.ModelBackend')
 
-            return redirect('/hjemme')
-        else:
-                form = SignUpForm()
-                userprofileform = UserprofileForm()        
+    #         return redirect('/hjemme')
+    #     else:
+    #             form = SignUpForm()
+    #             userprofileform = UserprofileForm()        
 
-    if request.method=='POST' and 'contact' in request.POST:
-        navn = request.POST.get('navn')
-        email = request.POST.get('email')
-        message = request.POST.get('message')
-
-        data = {
-            'navn': navn,
-            'email': email,
-            'message': message,
-        }
-        message = dedent('''
-        Fra: {}
-
-        Navn: {}
-
-        Beskjed: {}
-        ''').format(data['email'], data['navn'], data['message'], )
-        send_mail('Webiser Contact Form', message, '', ['sabertoothtri@gmail.com'])
-        return redirect('/email-success')
 
     context = {
     'products':products,
@@ -84,6 +65,27 @@ def email_success(request):
 
 # KUNDESERVICE PAGES
 def contact(request):
+
+    # if request.method=='POST' and 'contact' in request.POST:
+    #     navn = request.POST.get('navn')
+    #     email = request.POST.get('email')
+    #     message = request.POST.get('message')
+
+    #     data = {
+    #         'navn': navn,
+    #         'email': email,
+    #         'message': message,
+    #     }
+    #     message = dedent('''
+    #     Fra: {}
+
+    #     Navn: {}
+
+    #     Beskjed: {}
+    #     ''').format(data['email'], data['navn'], data['message'], )
+    #     send_mail('Webiser Contact Form', message, '', ['sabertoothtri@gmail.com'])
+    #     return redirect('/email-success')
+
     return render(request, 'pages/kundeservice/contact.html')   
 
 def proccess(request):

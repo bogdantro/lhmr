@@ -259,6 +259,7 @@ html, body {
     justify-content: center;
     width: 100%;
     .card{
+      margin: 5px 5px;
       height: auto;
       width: 45%;
       max-width: 415px;
@@ -409,92 +410,6 @@ html, body {
       transform: translateY(10px) translateX(20px);
       font-size: 18px;
       color: white;
-    }
-  }
-  &.active{
-    form{
-      opacity: 1;
-    }
-  }
-  form{
-    text-align: left;
-    padding: 10px;
-    margin-top: 0;
-    opacity: 1;
-    transition: all ease-in .5s;
-    position: relative;
-    background: #e8edff;
-    border-radius: 4px;
-    max-width: 360px;
-    .form-tag-navn{
-      font-size: 15px;
-      color: rgb(48, 71, 146);
-      background: #e8edff;
-      width: max-content;
-      padding: 0 2px;
-      position: absolute;
-      left: 20px;
-      top: 24px;
-      border-radius: 5px;
-    }
-    .form-tag-email{
-      font-size: 15px;
-      color: rgb(48, 71, 146);
-      border-radius: 5px;
-      background: #e8edff;
-      width: max-content;
-      padding: 0 2px;
-      position: absolute;
-      left: 20px;
-      top: 88px;
-    }
-    .form-tag-message{
-      font-size: 15px;
-      color: rgb(48, 71, 146);
-      background: #e8edff;
-      width: max-content;
-      padding: 0 2px;
-      position: absolute;
-      left: 20px;
-      top: 152px;
-      border-radius: 5px;
-    }
-      textarea{
-        width: 100%;
-        border: 2px solid rgb(60, 84, 160);
-        border-radius: 4px;
-        padding: 3px;
-        padding-top: 5px;
-        height: 100px;
-        outline: none;
-        font-size: 15px;
-    }
-    input{
-      width: 100%;
-      border: 2px solid rgb(60, 84, 160);
-      border-radius: 4px;
-      padding: 7px;
-      outline: none;
-      font-size: 15px;      
-    }
-    .form-actions{
-      margin-top: 25px;
-      button{
-        border-radius: 4px;
-        width: 200px;
-        font-size: 16px;
-        padding: 10px;
-        transition: all .2s ease-in-out;
-        color: white;
-        outline: none;
-        background: linear-gradient(135deg,#5a7ef5, #607bd3);  
-        box-shadow: 1.5px 3px 2px rgb(60, 84, 160);
-        border: 2px solid transparent;  
-        &:hover{
-          background: white;
-          color: black;
-        }
-      }
     }
   }
 }

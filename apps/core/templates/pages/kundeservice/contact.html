@@ -1,2 +1,41 @@
 {% extends 'core/base.html' %}
 {% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/scss/pages/kundeservice/contact.css' %}" type="text/css">
+<script rel="stylesheet" src="{% static '/js/contact.js' %}" type="text/javascript"></script>
+
+
+
+<div class="cover" id="cover">
+    <img src="{% static '/images/covers/cover4.jpg' %}" alt="main cover landig page">
+    <div class="content" id="coverContent">
+       <div class="text">
+          <h1>Lurer du på noe?</h1>
+          <p>Send oss en epost under</p>
+       </div>
+    </div>
+ </div>
+ 
+  <div class="contact-page">
+      <form action="" method="POST">
+          {% csrf_token %}
+          <br>
+          <label for="navn" class="form-tag-navn tag" id="contactNameLabel">Navn</label>
+          <input type="text" name="navn" onclick="contactName()" required oninvalid="this.setCustomValidity('Værsåsnill, skriv inn navn')" oninput="this.setCustomValidity('')">
+          <br>
+          <br>
+          <label for="email" class="form-tag-email tag" id="contactEmailLabel">Epost</label>
+          <input type="email" name="email" onclick="contactEmail()" required oninvalid="this.setCustomValidity('Værsåsnill, skirv inn epost')" oninput="this.setCustomValidity('')">
+          <br>
+          <br>
+          <label for="message" class="form-tag-message tag" id="contactMessageLabel">Hva ønsker du fortelle oss?</label>
+          <textarea name="message" cols="30" rows="10" onclick="contactMessage()" required oninvalid="this.setCustomValidity('Værsåsnill, skriv inn beskjed')" oninput="this.setCustomValidity('')"></textarea>
+          <div class="form-actions">
+              <button class="hover" type="submit" name="contact" value="contact">Send</button>
+          </div>
+        </form>
+     </div>
+ 
+
+{% endblock %}

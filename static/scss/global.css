@@ -119,15 +119,11 @@ body {
   right: -200px;
   width: 100%;
   padding-left: 15px;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
 }
 
 .cover .content.active {
   opacity: 1;
   right: 0;
-  -webkit-transform: scale(1);
-          transform: scale(1);
 }
 
 .cover .content .text {
