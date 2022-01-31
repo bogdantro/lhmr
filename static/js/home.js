@@ -76,6 +76,7 @@ window.addEventListener("scroll", function(){
     coverContent.classList.toggle("hide", window.scrollY > 200)
 })
 
+
 window.addEventListener("scroll", function(){
     const infoContent = document.getElementById('infoContent');
     infoContent.classList.toggle("active", window.scrollY > 200)
@@ -84,21 +85,34 @@ window.addEventListener("scroll", function(){
 
 window.addEventListener("scroll", function(){
     const infoCard1 = document.getElementById('infoCard1');
-    infoCard1.classList.toggle("active", window.scrollY > 230)
+    infoCard1.classList.toggle("active", window.scrollY > 260)
 })
 window.addEventListener("scroll", function(){
     const infoCard2 = document.getElementById('infoCard2');
-    infoCard2.classList.toggle("active", window.scrollY > 320)
+    infoCard2.classList.toggle("active", window.scrollY > 350)
 })
 window.addEventListener("scroll", function(){
     const infoCard3 = document.getElementById('infoCard3');
-    infoCard3.classList.toggle("active", window.scrollY > 410)
+    infoCard3.classList.toggle("active", window.scrollY > 470)
 })
 window.addEventListener("scroll", function(){
     const infoCard4 = document.getElementById('infoCard4');
-    infoCard4.classList.toggle("active", window.scrollY > 500)
+    infoCard4.classList.toggle("active", window.scrollY > 570)
 })
     
+
+window.addEventListener("scroll", function(){
+    const cta1Content = document.getElementById('cta1Content');
+    cta1Content.classList.toggle("active", window.scrollY > 1020)
+})
+window.addEventListener("scroll", function(){
+    const cta1Text = document.getElementById('cta1Text');
+    cta1Text.classList.toggle("active", window.scrollY > 1120)
+})
+window.addEventListener("scroll", function(){
+    const cta1Action = document.getElementById('cta1Action');
+    cta1Action.classList.toggle("active", window.scrollY > 1120)
+})
 
 $(window).scroll(function() {
     const benefits = document.getElementById('benefits');

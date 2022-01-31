@@ -1,16 +1,23 @@
 $loader: rgb(80, 104, 180);
 
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Alata', sans-serif;
-    box-sizing: border-box;
-}
+
 
 // GLOBAL
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Alata', sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body{
-  background:rgb(250, 251, 255);
+  background: red;
 }
 
 .light-overlay{
