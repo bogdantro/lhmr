@@ -27,9 +27,7 @@ function menu(){
     backToTop.classList.add('menu-active')
     logo.classList.add('menu-click')
   } else{
-    setTimeout(function(){ 
-      hamburger.classList.remove('click')  
-    }, 1000);
+    hamburger.classList.remove('click')  
     sidebar.classList.remove('active')
     sidebarLi.classList.remove('active')
     background.classList.remove('active')

@@ -7,81 +7,31 @@
     background: transparent;
     z-index: 100;
     width: 100%;
-    height: 60px;
+    height: 63px;
     position: fixed;
     top: 0px;
     display: flex;
     align-items: center;
     transition: .2s ease-in-out;
     box-shadow: 1px 0px 3px rgba(255, 255, 255, 0.329);
-    background: rgba(0, 0, 0, 0.25);
+    background: white;
     // NAVBAR STICKY
     &.sticky{
-        background: white;
-        .hamburger{
-            span{
-                background: rgb(50, 50, 50);
-            }
-        }
-        .my-account-icon{
-            i{
-                color: rgb(50, 50, 50);
-            }
-        }
-        .logo{
-            left: -100px;
-            h1{
-                color: black;
-                opacity: 0;
-            }
-            .logo1{
-                display: none;
-            }
-            .logo2{
-                display: block;
-            }
-        }
+        background: #ffffffb9;
     }
     // LOGO CSS 
     .logo{
         transition: .8s;
         cursor: pointer;
         position: absolute;
-        left: 20px;
+        left: 77px;
         transform: translateY(1px);
         width: auto;
         height: auto;
         z-index: 1000;
-        h1{
-            transform: translateX(0);
-            opacity: 1;
-            margin: 0;
-            font-family: 'Indie Flower', cursive;
-            color: rgb(235, 235, 235);
-            font-size: 26px;
-            transition: .2s ease-in-out;
-        }
         img{
             height: auto;
-            width: 28px;
-            position: absolute;
-            left: 95px;
-            top: 8px;
-            transition: .8s;
-            &.logo1{
-                display: block;
-            }
-            &.logo2{
-                display: none;
-                width: 50px;
-                transform: translateX(40px);
-                top: 4px;
-            }
-        }
-        &.menu-click{
-            h1{
-                color: rgb(235, 235, 235);
-            }
+            width: 120px;
         }
     }
     // // // MENU CSS
@@ -92,7 +42,7 @@
         width: auto;
         height: auto;
         position: absolute;
-        right: 0px;
+        left: 18px;
         z-index: 1000;
         display: flex;
         span{
@@ -100,7 +50,7 @@
             width: 7px;
             height: 7px;
             transition: .2s;
-            background: rgb(235, 235, 235);
+            background: rgb(50, 50, 50);
             border-radius: 100%;
             margin: 3px;
             transform: translateX(-9px);
@@ -122,90 +72,97 @@
             .lower-span{
                 margin-top: 15px;
             }
-            span{
-                background: rgb(235, 235, 235) !important;
-            }
         }
     }
     // SIDEBAR
-    .circle{
-        border-radius: 100%;
-        // background: rgb(7, 24, 82);
-        background: rgb(30, 30, 30);
-        width: 100px;
-        height: 100px;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) scale(1);
-        z-index: 100;
-        pointer-events: none;
-        transition: all 1s ease-in-out;
-        opacity: 0;
-        &.active{
-            transform: scale(20);
-            opacity: 1;
-            // background: rgb(76, 102, 187);
-            background: rgba(10, 10, 10, 0.95);
-        }
-    }
     .sidebar{
-        background: transparent;
+        background: white;
         height: 100vh;
         position: absolute;
         top: 60px;
         right: 0px;
         width: 100%;
-        transition: .7s;
         z-index: 120;
         opacity: 0;
         pointer-events: none;
         display: unset;
+        .sidebar-cta{
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: #4287f5;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: .4s;
+            a{
+              color: white !important;
+              font-size: 16px;
+            }
+        }
         .sidebar-ul{
             position: relative;
             width: 100%;
-            text-align: center;
+            text-align: left;
+            transform: translateY(25px);
             .sidebar-li{
                 list-style: none;
                 a{
-                    border: 2px solid transparent;
-                    // color: rgb(72, 90, 185);
-                    color: white;
+                    color: #082133;
                     display: inline-block;
                     text-decoration: none;
-                    width: 60%;
-                    font-size: 18px;
-                    margin: 13px auto;
-                    padding: 5px;
-                    opacity: 0;
-                    transition: .1s;
-                    transition: opacity .3s;
+                    width: 100%;
+                    font-weight: 800;
+                    font-size: 0.875rem;
+                    margin: 18px 0;
+                    transform: translateX(25px);
+                    cursor: pointer;
+                    &::after{
+                        content: '';
+                        display: block;
+                        height: 1px;
+                        width: 100%;
+                        background: rgba(0, 0, 0, 0.17);
+                        transform: translateY(19px) translateX(-25px);
+                        position: absolute;
+                        left: 0;
+                    }
                     i{
-                        transform: translateX(10px);
-                        font-size: 14px;
+                        transform: translateX(-50px) translateY(5px);
+                        font-size: 16px;
                         transition: .2s !important;
+                        float: right;
                     }
                 }
                 .prices-dropdown{
                     .prices-dropdown-links{
                         width: 100%;
-                        height: 100vh;
                         display: none;
-                        a{
-                            font-size: 16px;
-                            margin: 5px;
-                            opacity: 0.65 !important;
-                        }
                         &.active{
                             display: block;
+                        }
+                        .nav-link-parent{
+                            width: 100%;
+                            height: 100%;
+                            background: #f3f9fd;
+                        }
+                        a{
+                            transform: translateX(45px);
+                            &::after{
+                                transform: translateY(19px) translateX(-45px);
+                            }
                         }
                     }
                     #pricesToggle{
                         &.click{
-                            transform: scale(1.2);
-                            color: #8fa9ff;
+                            color: #4287f5;
                             i{
-                                transform: rotate(180deg) translateX(-10px);
+                                transform: rotateX(180deg) translateX(-50px) translateY(-7px);
+                                transform-origin: center center;                            
                             }
                         }
                     }
@@ -213,23 +170,28 @@
                 .about-dropdown{
                     .about-dropdown-links{
                         width: 100%;
-                        height: 100vh;
                         display: none;
-                        a{
-                            font-size: 16px;
-                            margin: 5px;
-                            opacity: 0.65 !important;
-                        }
                         &.active{
                             display: block;
+                        }
+                        .nav-link-parent{
+                            width: 100%;
+                            height: 100%;
+                            background: #f3f9fd;
+                        }
+                        a{
+                            transform: translateX(45px);
+                            &::after{
+                                transform: translateY(19px) translateX(-45px);
+                            }
                         }
                     }
                     #aboutToggle{
                         &.click{
-                            transform: scale(1.2);
-                            color: #8fa9ff;
+                            color: #4287f5;
                             i{
-                                transform: rotate(180deg) translateX(-10px);
+                                transform: rotateX(180deg) translateX(-50px) translateY(-7px);
+                                transform-origin: center center;                            
                             }
                         }
                     }
@@ -237,23 +199,28 @@
                 .help-dropdown{
                     .help-dropdown-links{
                         width: 100%;
-                        height: 100vh;
                         display: none;
-                        a{
-                            font-size: 16px;
-                            margin: 5px;
-                            opacity: 0.65 !important;
-                        }
                         &.active{
                             display: block;
+                        }
+                        .nav-link-parent{
+                            width: 100%;
+                            height: 100%;
+                            background: #f3f9fd;
+                        }
+                        a{
+                            transform: translateX(45px);
+                            &::after{
+                                transform: translateY(19px) translateX(-45px);
+                            }
                         }
                     }
                     #helpToggle{
                         &.click{
-                            transform: scale(1.2);
-                            color: #8fa9ff;
+                            color: #4287f5;
                             i{
-                                transform: rotate(180deg) translateX(-10px);
+                                transform: rotateX(180deg) translateX(-50px) translateY(-7px);
+                                transform-origin: center center;                            
                             }
                         }
                     }
@@ -261,33 +228,30 @@
                 .account-dropdown{
                     .account-dropdown-links{
                         width: 100%;
-                        height: 100vh;
                         display: none;
-                        a{
-                            font-size: 16px;
-                            margin: 5px;
-                            opacity: 0.65 !important;
-                            &#logOut{
-                                color: rgb(255, 42, 42) !important;
-                            }
-                        }
                         &.active{
                             display: block;
+                        }
+                        .nav-link-parent{
+                            width: 100%;
+                            height: 100%;
+                            background: #f3f9fd;
+                        }
+                        a{
+                            transform: translateX(45px);
+                            &::after{
+                                transform: translateY(19px) translateX(-45px);
+                            }
                         }
                     }
                     #accountToggle{
                         &.click{
-                            transform: scale(1.2);
-                            color: #8fa9ff;
+                            color: #4287f5;
                             i{
-                                transform: rotate(180deg) translateX(-10px);
+                                transform: rotateX(180deg) translateX(-50px) translateY(-7px);
+                                transform-origin: center center;                            
                             }
                         }
-                    }
-                }
-                &.active{
-                    a{
-                        opacity: 1;
                     }
                 }
             }
@@ -295,25 +259,26 @@
         &.active{
             opacity: 1;
             pointer-events: visible;
+            transition: .7s;
         }
     }    
     // ORDER CSS
     .order{
         margin: 0;
         position: absolute;
-        right: 80px;
+        right: 15px;
         cursor: pointer;
-        color: white;
-        padding: 5px 5px;
-        width: 80px;
+        color: black;
+        padding: 7px 2px;
+        width: 70px;
         text-align: center;
-        border-radius: 7px;
+        border-radius: 15px;
         transition: .2s;
-        font-size: 12px;
+        font-size: 13px;
         border-radius: 4px;
-        background: transparent;
         text-decoration: none;
-        background: rgb(28, 211, 28);
+        background: white;
+        border: 2px solid black;
       }
 }
 

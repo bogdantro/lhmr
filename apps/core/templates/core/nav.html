@@ -14,13 +14,12 @@
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
 <div id="navbar">
     <!-- LOGO -->
     <div class="logo" id="logo" onclick="window.location.href='/'">
-        <h1>Webiser</h1><img class="logo1" src="{% static '/images/logo/logo1.png' %}" alt="logo1"><img class="logo2" src="{% static '/images/logo/logo2.png' %}" alt="logo2">
+        <img class="logo1" src="{% static '/images/logo/logo1.png' %}" alt="logo1">
     </div>
     <!-- MENU -->
         <!-- HAMBURGER -->
@@ -29,52 +28,89 @@
             <span class="center-span"></span>
             <span class="lower-span"></span>
         </div>
-        <!-- SIDEBAR CIRCLE BACKGROUND -->
-        <div class="circle" id="sidebarCircleBackground"></div>
         <!-- SIDEBAR -->
         <div class="sidebar" id="sidebar">
+            <div class="sidebar-cta">
+                <a href="">Kom i gang</a>
+            </div>
             <ul class="sidebar-ul">
                 <li class="sidebar-li" id="sidebarLi">
                     <div class="prices-dropdown">
-                        <a onclick="prices()" id="pricesToggle">Priser<i class="fas fa-chevron-down"></i></a>
+                        <a onclick="prices()" id="pricesToggle">Priser<i class="fas fa-sort-down"></i></a>
                         <div class="prices-dropdown-links" id="pricesDropdown">
-                            <a href="">Nettbutikk/eCommerce</a>
-                            <a href="">Blogg</a>
-                            <a href="">Personlig nettside</a>
-                            <a href="">Nettsider for firmaer</a>
-                            <a href="">Lag din egen</a>
+                            <div class="nav-link-parent">
+                                <a href="">Nettbutikk/eCommerce</a>
+                            </div>
+                            <div class="nav-link-parent">
+                                <a href="">Blogg</a>
+                            </div>
+                            <div class="nav-link-parent">
+                                <a href="">Personlig nettside</a>
+                            </div>
+                            <div class="nav-link-parent">
+                                <a href="">Nettsider for firmaer</a>
+                            </div>
+                            <div class="nav-link-parent">
+                                <a href="">Lag din egen</a>
+                            </div>
                         </div>
                     </div>
                     <div class="help-dropdown">
-                        <a onclick="help()" id="helpToggle">Kundeservice<i class="fas fa-chevron-down"></i></a>
+                        <a onclick="help()" id="helpToggle">Kundeservice<i class="fas fa-sort-down"></i></a>
                         <div class="help-dropdown-links" id="helpDropdown">
-                            <a href="/prossesen-av-bestillinger">Prossesen av bestillinger</a>
-                            <a href="/forum">Forum</a>
-                            <a href="/spørr-om-endringer">Spørr om redigeringer på nettsiden</a>
-                            <a href="/de-tre-frontend-språkene">Programering språkene</a>
+                            <div class="nav-link-parent">
+                                <a href="/prossesen-av-bestillinger">Prossesen av bestillinger</a>
+                            </div>
+                            <div class="nav-link-parent">
+                                <a href="/forum">Forum</a>
+                            </div>
+                            <div class="nav-link-parent">
+                                <a href="/spørr-om-endringer">Spørr om redigeringer på nettsiden</a>
+                            </div>
+                            <div class="nav-link-parent">
+                                <a href="/de-tre-frontend-språkene">Programering språkene</a>
+                            </div>
                         </div>
                     </div>
                     <div class="account-dropdown">
-                        <a onclick="account()" id="accountToggle">Min bruker<i class="fas fa-chevron-down"></i></a>
+                        <a onclick="account()" id="accountToggle">Min bruker<i class="fas fa-sort-down"></i></a>
                         <div class="account-dropdown-links" id="accountDropdown">
                             {% if request.user.is_authenticated %}
-                            <a onclick="myaccount()">Min bruker</a>
-                            <a id="logOut" href="{% url 'logout' %}">Logg ut</a>
+                            <div class="nav-link-parent">
+                                <a onclick="myaccount()">Min bruker</a>
+                            </div>
+                            <div class="nav-link-parent">
+                                <a id="logOut" href="{% url 'logout' %}">Logg ut</a>
+                            </div>
                             {% else %}
-                            <a href="/logg-inn">Logg inn</a>
-                            <a href="/lag-bruker">Lag bruker</a>
+                            <div class="nav-link-parent">
+                                <a href="/logg-inn">Logg inn</a>
+                            </div>
+                            <div class="nav-link-parent">
+                                <a href="/lag-bruker">Lag bruker</a>
+                            </div>
                             {% endif %}
                         </div>
                     </div>
                     <a onclick="">Vårt arbeid</a>
                     <div class="about-dropdown">
-                        <a onclick="about()" id="aboutToggle">Hvem vi er<i class="fas fa-chevron-down"></i></a>
+                        <a onclick="about()" id="aboutToggle">Hvem vi er<i class="fas fa-sort-down"></i></a>
                         <div class="about-dropdown-links" id="aboutDropdown">
-                            <a href="">Om oss</a>
-                            <a href="">Blogg</a>
-                            <a href="">Sosiale medier</a>
-                            <a href="">Sektorer</a>
-                            <a href="">Vår historie</a>
+                            <div class="nav-link-parent">
+                                <a href="">Om oss</a>
+                            </div>
+                            <div class="nav-link-parent">
+                                <a href="">Blogg</a>
+                            </div>
+                            <div class="nav-link-parent">
+                                <a href="">Sosiale medier</a>
+                            </div>
+                            <div class="nav-link-parent">
+                                <a href="">Sektorer</a>
+                            </div>
+                            <div class="nav-link-parent">
+                                <a href="">Vår historie</a>
+                            </div>
                         </div>
                     </div>
                     <a>Kontakt oss</a>
@@ -82,7 +118,9 @@
             </ul>
         </div>
     <!-- ORDER -->
-    <a href="/bestill" class="order" id="makeOrder">Bestill nå</a>
+    <a href="/bestill" class="order" id="makeOrder">Bestill</a>
+
+
     <!-- DESKTOP MENU AND NAVBAR STARTR -->
     <div class="desktop-menu" id="desktopMenu">
         <ul class="desktop-menu-ul">
