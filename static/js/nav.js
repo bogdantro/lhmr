@@ -41,10 +41,24 @@ function menu(){
 function prices(){
   const pricesToggle = document.getElementById('pricesToggle');
   const prices = document.getElementById('pricesDropdown');
+  const about = document.getElementById('aboutDropdown');
+  const account = document.getElementById('accountDropdown');
+  const help = document.getElementById('helpDropdown');
+
+  const aboutToggle = document.getElementById('aboutToggle');
+  const helpToggle = document.getElementById('helpToggle');
+  const accountToggle = document.getElementById('accountToggle');
+
 
   if (window.getComputedStyle(prices,null).getPropertyValue("display") == 'none'){
     prices.classList.add('active')
+    about.classList.remove('active')
+    account.classList.remove('active')
+    help.classList.remove('active')
     pricesToggle.classList.add('click')
+    aboutToggle.classList.remove('click')
+    helpToggle.classList.remove('click')
+    accountToggle.classList.remove('click')
   } else{
     prices.classList.remove('active')
     pricesToggle.classList.remove('click')
@@ -54,10 +68,23 @@ function prices(){
 function about(){
   const aboutToggle = document.getElementById('aboutToggle');
   const about = document.getElementById('aboutDropdown');
+  const account = document.getElementById('accountDropdown');
+  const prices = document.getElementById('pricesDropdown');
+  const help = document.getElementById('helpDropdown');
+
+  const pricesToggle = document.getElementById('pricesToggle');
+  const helpToggle = document.getElementById('helpToggle');
+  const accountToggle = document.getElementById('accountToggle');
 
   if (window.getComputedStyle(about,null).getPropertyValue("display") == 'none'){
     about.classList.add('active')
+    account.classList.remove('active')
+    help.classList.remove('active')
+    prices.classList.remove('active')
     aboutToggle.classList.add('click')
+    pricesToggle.classList.remove('click')
+    helpToggle.classList.remove('click')
+    accountToggle.classList.remove('click')
   } else{
     about.classList.remove('active')
     aboutToggle.classList.remove('click')
@@ -67,23 +94,50 @@ function about(){
 function help(){
   const helpToggle = document.getElementById('helpToggle');
   const help = document.getElementById('helpDropdown');
+  const about = document.getElementById('aboutDropdown');
+  const account = document.getElementById('accountDropdown');
+  const prices = document.getElementById('pricesDropdown');
+
+  const aboutToggle = document.getElementById('aboutToggle');
+  const pricesToggle = document.getElementById('pricesToggle');
+  const accountToggle = document.getElementById('accountToggle');
 
   if (window.getComputedStyle(help,null).getPropertyValue("display") == 'none'){
     help.classList.add('active')
+    about.classList.remove('active')
+    prices.classList.remove('active')
+    account.classList.remove('active')
     helpToggle.classList.add('click')
+    accountToggle.classList.remove('click')
+    pricesToggle.classList.remove('click')
+    aboutToggle.classList.remove('click')
   } else{
     help.classList.remove('active')
     helpToggle.classList.remove('click')
+
   }
 }
 // ACCOUNT DROPDOWN
 function account(){
   const accountToggle = document.getElementById('accountToggle');
   const account = document.getElementById('accountDropdown');
+  const about = document.getElementById('aboutDropdown');
+  const prices = document.getElementById('pricesDropdown');
+  const help = document.getElementById('helpDropdown');
+
+  const aboutToggle = document.getElementById('aboutToggle');
+  const pricesToggle = document.getElementById('pricesToggle');
+  const helpToggle = document.getElementById('helpToggle');
 
   if (window.getComputedStyle(account,null).getPropertyValue("display") == 'none'){
     account.classList.add('active')
+    about.classList.remove('active')
+    prices.classList.remove('active')
+    help.classList.remove('active')
     accountToggle.classList.add('click')
+    pricesToggle.classList.remove('click')
+    aboutToggle.classList.remove('click')
+    helpToggle.classList.remove('click')
   } else{
     account.classList.remove('active')
     accountToggle.classList.remove('click')

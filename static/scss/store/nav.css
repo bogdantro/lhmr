@@ -31,7 +31,7 @@
   transition: .8s;
   cursor: pointer;
   position: absolute;
-  left: 77px;
+  left: 65px;
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
   width: auto;
@@ -50,37 +50,41 @@
   width: auto;
   height: auto;
   position: absolute;
-  left: 18px;
+  left: 15px;
   z-index: 1000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  text-align: center;
 }
 
 #navbar .hamburger span {
+  height: 3px;
+  width: 24px;
+  background: #183b56;
+  border: 2px solid #183b56;
+  border-radius: 3px;
   display: block;
-  width: 7px;
-  height: 7px;
   -webkit-transition: .2s;
   transition: .2s;
-  background: #323232;
-  border-radius: 100%;
-  margin: 3px;
-  -webkit-transform: translateX(-9px);
-          transform: translateX(-9px);
+  margin: 4px;
+  -webkit-transform: translateX(-9px) rotate(0deg);
+          transform: translateX(-9px) rotate(0deg);
+  text-align: center;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
 }
 
 #navbar .hamburger.click .upper-span {
-  margin-top: 15px;
+  -webkit-transform: rotate(45deg) translateY(11.3px);
+          transform: rotate(45deg) translateY(11.3px);
 }
 
 #navbar .hamburger.click .center-span {
-  width: 8px;
-  height: 8px;
+  opacity: 0;
+  width: 0px;
 }
 
 #navbar .hamburger.click .lower-span {
-  margin-top: 15px;
+  -webkit-transform: rotate(-45deg) translateY(-11px);
+          transform: rotate(-45deg) translateY(-11px);
 }
 
 #navbar .sidebar {
@@ -141,7 +145,7 @@
   text-decoration: none;
   width: 100%;
   font-weight: 800;
-  font-size: 0.875rem;
+  font-size: 14.5px;
   margin: 18px 0;
   -webkit-transform: translateX(25px);
           transform: translateX(25px);
@@ -181,7 +185,7 @@
 #navbar .sidebar .sidebar-ul .sidebar-li .prices-dropdown .prices-dropdown-links .nav-link-parent {
   width: 100%;
   height: 100%;
-  background: #f3f9fd;
+  background: #f1f9ff9a;
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .prices-dropdown .prices-dropdown-links a {
@@ -199,8 +203,8 @@
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .prices-dropdown #pricesToggle.click i {
-  -webkit-transform: rotateX(180deg) translateX(-50px) translateY(-7px);
-          transform: rotateX(180deg) translateX(-50px) translateY(-7px);
+  -webkit-transform: rotateX(180deg) translateX(-50px) translateY(-11px);
+          transform: rotateX(180deg) translateX(-50px) translateY(-11px);
   -webkit-transform-origin: center center;
           transform-origin: center center;
 }
@@ -217,7 +221,7 @@
 #navbar .sidebar .sidebar-ul .sidebar-li .about-dropdown .about-dropdown-links .nav-link-parent {
   width: 100%;
   height: 100%;
-  background: #f3f9fd;
+  background: #f1f9ff9a;
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .about-dropdown .about-dropdown-links a {
@@ -235,8 +239,8 @@
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .about-dropdown #aboutToggle.click i {
-  -webkit-transform: rotateX(180deg) translateX(-50px) translateY(-7px);
-          transform: rotateX(180deg) translateX(-50px) translateY(-7px);
+  -webkit-transform: rotateX(180deg) translateX(-50px) translateY(-11px);
+          transform: rotateX(180deg) translateX(-50px) translateY(-11px);
   -webkit-transform-origin: center center;
           transform-origin: center center;
 }
@@ -253,7 +257,7 @@
 #navbar .sidebar .sidebar-ul .sidebar-li .help-dropdown .help-dropdown-links .nav-link-parent {
   width: 100%;
   height: 100%;
-  background: #f3f9fd;
+  background: #f1f9ff9a;
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .help-dropdown .help-dropdown-links a {
@@ -271,8 +275,8 @@
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .help-dropdown #helpToggle.click i {
-  -webkit-transform: rotateX(180deg) translateX(-50px) translateY(-7px);
-          transform: rotateX(180deg) translateX(-50px) translateY(-7px);
+  -webkit-transform: rotateX(180deg) translateX(-50px) translateY(-11px);
+          transform: rotateX(180deg) translateX(-50px) translateY(-11px);
   -webkit-transform-origin: center center;
           transform-origin: center center;
 }
@@ -289,7 +293,7 @@
 #navbar .sidebar .sidebar-ul .sidebar-li .account-dropdown .account-dropdown-links .nav-link-parent {
   width: 100%;
   height: 100%;
-  background: #f3f9fd;
+  background: #f1f9ff9a;
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .account-dropdown .account-dropdown-links a {
@@ -307,8 +311,8 @@
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .account-dropdown #accountToggle.click i {
-  -webkit-transform: rotateX(180deg) translateX(-50px) translateY(-7px);
-          transform: rotateX(180deg) translateX(-50px) translateY(-7px);
+  -webkit-transform: rotateX(180deg) translateX(-50px) translateY(-11px);
+          transform: rotateX(180deg) translateX(-50px) translateY(-11px);
   -webkit-transform-origin: center center;
           transform-origin: center center;
 }
