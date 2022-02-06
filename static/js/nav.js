@@ -18,8 +18,10 @@ function menu(){
   const body = document.body;
 
   if (window.getComputedStyle(sidebar,null).getPropertyValue("opacity") == '0'){
+    navbar.classList.add('menu')  
     hamburger.classList.add('click')  
     sidebar.classList.add('active')
+    document.getElementsByTagName('body').classList.add('menu');
     setTimeout(function(){
       sidebarLi.classList.add('active')
     }, 800)
@@ -27,6 +29,7 @@ function menu(){
     backToTop.classList.add('menu-active')
     logo.classList.add('menu-click')
   } else{
+    navbar.classList.remove('menu') 
     hamburger.classList.remove('click')  
     sidebar.classList.remove('active')
     sidebarLi.classList.remove('active')

@@ -1,193 +1,62 @@
 .intro {
-  background: transparent;
+  background: white;
   width: 100%;
   height: auto;
-  padding-bottom: 50px;
-  position: relative;
+  margin-top: 55px;
 }
 
-.intro .square::after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
-  background: #f85032;
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50%, #829efc33));
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 50%, #829efc33 50%);
-}
-
-.intro .square::before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 300px;
-  height: 300px;
-  background: #f85032;
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #829efc1c), color-stop(50%, rgba(255, 255, 255, 0)));
-  background: linear-gradient(to bottom right, #829efc1c 50%, rgba(255, 255, 255, 0) 50%);
-}
-
-.intro .content .intro-img1 {
-  z-index: 90;
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-65px);
-          transform: translateX(-50%) translateY(-65px);
-  -webkit-transition: .8s;
-  transition: .8s;
-}
-
-.intro .content h1.heading {
-  padding-left: 8px;
-  margin-bottom: 15px;
-  margin-top: 20px;
-  width: 100%;
-  font-family: 'Lato', sans-serif;
-  color: black;
-  font-size: 24px;
-}
-
-.intro .content #benefits.active li {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.intro .content #benefits li {
-  opacity: 0;
-  -webkit-transform: translateX(90px);
-          transform: translateX(90px);
-  padding-left: 8px;
-  font-size: 15px;
-  width: 95%;
-  font-family: 'Lato', sans-serif;
-  color: black;
-  margin: 9px 0;
-  list-style: none;
-}
-
-.intro .content #benefits li::before {
-  content: "\2022";
-  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #1cd31c;
-  /* Change the color */
-  font-weight: bold;
-  /* If you want it to be bold */
-  display: inline-block;
-  /* Needed to add space between the bullet and the text */
-  width: 1em;
-  /* Also needed for space (tweak if needed) */
-}
-
-.intro .content #benefits li:nth-child(1) {
-  -webkit-transition: .6s;
-  transition: .6s;
-}
-
-.intro .content #benefits li:nth-child(2) {
-  -webkit-transition: .8s;
-  transition: .8s;
-}
-
-.intro .content #benefits li:nth-child(3) {
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.intro .content #benefits li:nth-child(4) {
-  -webkit-transition: 1.2s;
-  transition: 1.2s;
-}
-
-.intro .content #benefits li:nth-child(5) {
-  -webkit-transition: 1.4s;
-  transition: 1.4s;
-}
-
-.intro .content #benefits li:nth-child(6) {
-  -webkit-transition: 1.6s;
-  transition: 1.6s;
-}
-
-.intro .content #benefits li:nth-child(7) {
-  -webkit-transition: 1.8s;
-  transition: 1.8s;
-}
-
-.intro .content #benefits li:nth-child(8) {
-  -webkit-transition: 2s;
-  transition: 2s;
-}
-
-.intro .content #benefits li:nth-child(9) {
-  -webkit-transition: 2.2s;
-  transition: 2.2s;
-}
-
-.restaurant-example {
-  background: transparent;
-  width: 100%;
+.intro .content {
+  width: 90%;
   height: auto;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
+  border-top: 4px solid #0088F9;
+  border-radius: 0.45rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
-.restaurant-example img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: auto;
-  max-width: 900px;
-  -webkit-filter: brightness(40%);
-          filter: brightness(40%);
-  z-index: 10;
-}
-
-.restaurant-example .content {
-  text-align: center;
-}
-
-.restaurant-example .content .text {
-  position: absolute;
-  top: 120px;
-}
-
-.restaurant-example .content .text h1 {
-  color: #f0f0f0;
-  font-size: 34px;
-  font-family: 'Alata', sans-serif;
-  font-weight: bold;
-  text-shadow: 0.3px 0.3px 1px white;
-}
-
-.restaurant-example .content .text p {
-  color: #f0f0f0;
-  font-size: 18px;
-  font-family: 'Alata', sans-serif;
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
-}
-
-.restaurant-example .content .restaurant-example-actions {
-  position: absolute;
-  top: 320px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.restaurant-example .content .restaurant-example-actions a {
-  padding: 10px;
-  background: transparent;
-  border-radius: 7px;
-  outline: none;
+.intro .content .card {
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
   border: none;
-  color: white;
+  width: 50%;
+  height: auto;
+  padding: 10px;
   text-align: center;
-  background: #1cd31c;
+}
+
+.intro .content .card:nth-child(3) {
+  -webkit-transform: translateY(46px);
+          transform: translateY(46px);
+}
+
+.intro .content .card:nth-child(4) {
+  -webkit-transform: translateY(48px);
+          transform: translateY(48px);
+}
+
+.intro .content .card h1 {
+  font-size: 24px;
+  color: #183B56;
+  font-weight: 800;
+}
+
+.intro .content .card p {
+  font-size: 16px;
+  color: #183B56;
+  opacity: 0.9;
 }
 
 .sites {
