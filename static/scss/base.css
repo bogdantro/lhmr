@@ -2,7 +2,7 @@
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 55px;
+  margin-top: 80px;
 }
 
 .intro .content {
@@ -28,8 +28,8 @@
 }
 
 .intro .content .card {
-  -webkit-transform: translateY(25px);
-          transform: translateY(25px);
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
   border: none;
   width: 50%;
   height: auto;
@@ -38,23 +38,23 @@
 }
 
 .intro .content .card:nth-child(3) {
-  -webkit-transform: translateY(46px);
-          transform: translateY(46px);
+  -webkit-transform: translateY(32px);
+          transform: translateY(32px);
 }
 
 .intro .content .card:nth-child(4) {
-  -webkit-transform: translateY(48px);
-          transform: translateY(48px);
+  -webkit-transform: translateY(34px);
+          transform: translateY(34px);
 }
 
 .intro .content .card h1 {
-  font-size: 24px;
+  font-size: 22px;
   color: #183B56;
   font-weight: 800;
 }
 
 .intro .content .card p {
-  font-size: 16px;
+  font-size: 15px;
   color: #183B56;
   opacity: 0.9;
 }

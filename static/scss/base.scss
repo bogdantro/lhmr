@@ -10,7 +10,7 @@ $loader: rgb(80, 104, 180);
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 55px;
+  margin-top: 80px;
   .content{
     width: 90%;
     height: auto;
@@ -25,25 +25,25 @@ $loader: rgb(80, 104, 180);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     .card{
-      transform: translateY(25px);
+      transform: translateY(20px);
       border: none;
       width: 50%;
       height: auto;
       padding: 10px;
       text-align: center;
       &:nth-child(3){
-        transform: translateY(46px);
+        transform: translateY(32px);
       }
       &:nth-child(4){
-        transform: translateY(48px);
+        transform: translateY(34px);
       }
       h1{
-        font-size: 24px;
+        font-size: 22px;
         color: #183B56;
         font-weight: 800;
       }
       p{
-        font-size: 16px;
+        font-size: 15px;
         color: #183B56;
         opacity: 0.9;
       }
