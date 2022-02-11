@@ -3,6 +3,7 @@
   width: 100%;
   height: auto;
   margin-top: 80px;
+  padding: 17px;
 }
 
 .intro .content {
@@ -51,12 +52,106 @@
   font-size: 22px;
   color: #183B56;
   font-weight: 800;
+  text-shadow: 0.5px 0 #183B56;
+  letter-spacing: 0.5px;
 }
 
 .intro .content .card p {
   font-size: 15px;
   color: #183B56;
   opacity: 0.9;
+  font-weight: 500;
+}
+
+.why-webiser {
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: 110px;
+  padding: 17px;
+}
+
+.why-webiser .content .text {
+  text-align: center;
+}
+
+.why-webiser .content .text .why-webiser-headingp {
+  color: #183B56;
+  opacity: 0.7;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.why-webiser .content .text h1 {
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
+  color: #183B56;
+  text-shadow: 1px 0 #183B56;
+  letter-spacing: 1px;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.why-webiser .content .text .why-webiser-long-ptext {
+  margin: auto;
+  width: 85%;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  color: #183B56;
+  opacity: 0.7;
+  font-size: 16px;
+}
+
+.why-webiser .content .text .why-webiser-long-ptext span {
+  position: relative;
+  top: 17px;
+  font-weight: bold;
+}
+
+.why-webiser .content .text .why-webiser-long-ptext span::after {
+  content: '';
+  display: block;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(10px);
+          transform: translateX(-50%) translateY(10px);
+  width: 50%;
+  height: 3px;
+  background: #183B56;
+}
+
+.info {
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: 150px;
+  padding: 25px;
+}
+
+.info .content .text {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.info .content .text h1 {
+  color: #183B56;
+  font-size: 22px;
+  font-weight: 800;
+  text-shadow: 1px 0 #183B56;
+  letter-spacing: 1px;
+}
+
+.info .content .card {
+  margin: 34px 0;
+  height: 150px;
+  width: 100%;
+  border-radius: 14px;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.065);
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.094);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.094);
 }
 
 .sites {
@@ -170,82 +265,6 @@
 .sites .product-flex-section .card .product-actions a {
   color: #1cd31c;
   font-size: 25px;
-}
-
-.languages {
-  background: transparent;
-  width: 100%;
-  height: auto;
-  text-align: center;
-}
-
-.languages i {
-  margin: 15px;
-  font-size: 38px;
-  color: rgba(0, 0, 0, 0.411);
-}
-
-.positive {
-  background: transparent;
-  width: 100%;
-  height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: left;
-}
-
-.positive .content {
-  background: #93acffa8;
-  width: 100%;
-  height: 150px;
-  border-bottom-left-radius: 8%;
-  border-bottom-right-radius: 8%;
-}
-
-.positive .content .content-2 {
-  text-align: center;
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(80px);
-          transform: translateX(-50%) translateY(80px);
-  background: white;
-  width: 280px;
-  height: auto;
-  padding: 10px;
-  border-radius: 8px;
-  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.212);
-          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.212);
-}
-
-.positive .content .content-2 h1 {
-  margin-bottom: 15px;
-  margin-top: 10px;
-  width: 100%;
-  font-family: 'Sniglet', cursive;
-  color: black;
-  font-size: 22px;
-}
-
-.positive .content .content-2 a {
-  margin-bottom: 15px;
-  margin-top: 10px;
-  width: 100%;
-  font-family: 'Sniglet', cursive;
-  color: #1cd31c;
-  font-size: 18px;
-  margin: 10px;
-  text-decoration: underline;
-}
-
-.positive h1.heading {
-  padding-left: 8px;
-  margin-bottom: 15px;
-  margin-top: 10px;
-  width: 100%;
-  font-family: 'Sniglet', cursive;
-  color: black;
-  font-weight: bold;
-  font-size: 26px;
 }
 
 .contact-us-home {

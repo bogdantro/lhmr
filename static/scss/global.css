@@ -124,6 +124,8 @@ body.menu {
 
 .cover .content .text .cover-h1 {
   color: #183B56;
+  text-shadow: 1px 0 #183B56;
+  letter-spacing: 1px;
   font-size: 48px;
   font-weight: 800;
 }
@@ -173,7 +175,7 @@ body.menu {
 }
 
 .cover .content .cover-actions a:nth-child(1) {
-  background: #031931;
+  background: #072546;
 }
 
 .cover .content .cover-actions a:nth-child(1):hover {
@@ -200,17 +202,17 @@ body.menu {
 }
 
 .cover .content .cover-actions a:nth-child(3):hover {
-  background: #0b2e57;
+  background: #072546;
   color: white;
 }
 
 .cover .content .cover-actions a:nth-child(3):focus {
-  background: #0b2e57;
+  background: #072546;
   color: white;
 }
 
 .cover .content .cover-actions a:nth-child(3):active {
-  background: #0b2e57;
+  background: #072546;
   color: white;
 }
 
@@ -231,7 +233,7 @@ body.menu {
 
 .cover .content .cover-image-div img {
   height: auto;
-  width: 125%;
+  width: 110%;
 }
 
 .load-wrapp {

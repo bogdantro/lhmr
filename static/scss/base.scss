@@ -11,6 +11,7 @@ $loader: rgb(80, 104, 180);
   width: 100%;
   height: auto;
   margin-top: 80px;
+  padding: 17px;
   .content{
     width: 90%;
     height: auto;
@@ -41,15 +42,143 @@ $loader: rgb(80, 104, 180);
         font-size: 22px;
         color: #183B56;
         font-weight: 800;
+        text-shadow: 0.5px 0 #183B56;
+        letter-spacing: 0.5px;    
       }
       p{
         font-size: 15px;
         color: #183B56;
         opacity: 0.9;
+        font-weight: 500;
       }
     }
   }
 }
+// WHY WEBISER
+.why-webiser{
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: 110px;
+  padding: 17px;
+  .content{
+    .text{
+      text-align: center;
+      .why-webiser-headingp{
+        color: #183B56;
+        opacity: 0.7;
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      h1{
+        transform: translateY(7px);
+        color: #183B56;
+        text-shadow: 1px 0 #183B56;
+        letter-spacing:1px;    
+        font-size: 32px;
+        font-weight: 800;
+      }
+      .why-webiser-long-ptext{
+        margin: auto;
+        width: 85%;
+        transform: translateY(30px);
+        color: #183B56;
+        opacity: 0.7;
+        font-size: 16px;
+        span{
+          position: relative;
+          top: 17px;
+          font-weight: bold;
+          &::after{
+            content: '';
+            display: block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            width: 50%;
+            height: 3px;
+            background: #183B56;
+          }
+        }
+      }
+    }
+  }
+}
+// INFO
+.info{
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: 150px;
+  padding: 25px;
+  .content{
+    .text{
+      text-align: center;
+      margin-bottom: 45px;
+      h1{
+        color: #183B56;
+        font-size: 22px;
+        font-weight: 800;
+        text-shadow: 1px 0 #183B56;
+        letter-spacing:1px; 
+      }
+    }
+    .card{
+      margin: 34px 0;
+      height: 150px;
+      width: 100%;
+      border-radius: 14px;
+      border: none;
+      border: 1px solid rgba(0, 0, 0, 0.065);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.094);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // SITES
 .sites{
@@ -134,76 +263,6 @@ $loader: rgb(80, 104, 180);
           font-size: 25px;
         }
       }
-    }
-  }
-}
-// LANGUAGES
-.languages{
-  background: transparent;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  i{
-    margin: 15px;
-    font-size: 38px; 
-    color: rgba(0, 0, 0, 0.411);
-  }
-}
-// POSITIVE
-.positive{
-  background: transparent;
-  width: 100%;
-  height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: left;
-  .content{
-    background: #93acffa8;
-    width: 100%;
-    height: 150px;
-    border-bottom-left-radius: 8%;
-    border-bottom-right-radius: 8%;
-    .content-2{
-      text-align: center;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%) translateY(80px);
-      background: white;
-      width: 280px;
-      height: auto;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.212);
-      h1{
-        margin-bottom: 15px;
-        margin-top: 10px;
-        width: 100%;
-        font-family: 'Sniglet', cursive;
-        color: black;
-        font-size: 22px;
-      }
-      a{
-        margin-bottom: 15px;
-        margin-top: 10px;
-        width: 100%;
-        font-family: 'Sniglet', cursive;
-        color: rgb(28, 211, 28);
-        font-size: 18px;
-        margin: 10px;
-        text-decoration: underline;
-      }
-    }
-  }
-  h1{
-    &.heading{
-      padding-left: 8px;
-      margin-bottom: 15px;
-      margin-top: 10px;
-      width: 100%;
-      font-family: 'Sniglet', cursive;
-      color: black;
-      font-weight: bold;
-      font-size: 26px;
     }
   }
 }

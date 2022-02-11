@@ -99,6 +99,8 @@ body{
     .text{
       .cover-h1{
         color: #183B56;
+        text-shadow: 1px 0 #183B56;
+        letter-spacing:1px;        
         font-size: 48px;
         font-weight: 800;
       }
@@ -132,7 +134,7 @@ body{
           transform: translateX(18px) translateY(2px);
         }
         &:nth-child(1){
-          background: rgb(3, 25, 49);
+          background: rgb(7, 37, 70);
           &:hover{
             background: white;
             border: 2px solid rgb(11, 46, 87);
@@ -153,15 +155,15 @@ body{
           border: 2px solid rgb(11, 46, 87);
           color: rgb(11, 46, 87);
             &:hover{
-              background: rgb(11, 46, 87);
+              background: rgb(7, 37, 70);
               color: white;
             }
             &:focus{
-              background: rgb(11, 46, 87);
+              background: rgb(7, 37, 70);
               color: white;
             }
             &:active{
-              background: rgb(11, 46, 87);
+              background: rgb(7, 37, 70);
               color: white;
             }
         }
@@ -176,7 +178,7 @@ body{
       bottom: 115px;
       img{
         height: auto;
-        width: 125%;
+        width: 110%;
     }
   }
   }
