@@ -2,7 +2,7 @@
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 80px;
+  margin-top: 70px;
   padding: 17px;
 }
 
@@ -67,8 +67,9 @@
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 110px;
+  margin-top: 100px;
   padding: 17px;
+  position: relative;
 }
 
 .why-webiser .content .text {
@@ -78,7 +79,7 @@
 .why-webiser .content .text .why-webiser-headingp {
   color: #183B56;
   opacity: 0.7;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -90,7 +91,7 @@
   color: #183B56;
   text-shadow: 1px 0 #183B56;
   letter-spacing: 1px;
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 800;
 }
 
@@ -106,7 +107,7 @@
 
 .why-webiser .content .text .why-webiser-long-ptext span {
   position: relative;
-  top: 17px;
+  top: 20px;
   font-weight: bold;
 }
 
@@ -117,9 +118,9 @@
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(10px);
           transform: translateX(-50%) translateY(10px);
-  width: 50%;
+  width: 70%;
   height: 3px;
-  background: #183B56;
+  background: #183b5665;
 }
 
 .info {
@@ -144,14 +145,103 @@
 }
 
 .info .content .card {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   margin: 34px 0;
-  height: 150px;
-  width: 100%;
+  height: auto;
+  padding: 30px;
+  max-width: 400px;
   border-radius: 14px;
   border: none;
   border: 1px solid rgba(0, 0, 0, 0.065);
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.094);
           box-shadow: 0 0 2px rgba(0, 0, 0, 0.094);
+}
+
+.info .content .card .card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info .content .card .card-content .icon {
+  width: 25%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.info .content .card .card-content .icon i {
+  color: #0088F9;
+  font-size: 42px;
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+}
+
+.info .content .card .card-content .card-text {
+  width: 75%;
+  text-align: left;
+  -webkit-transform: translateX(7px);
+          transform: translateX(7px);
+}
+
+.info .content .card .card-content .card-text h1 {
+  color: black;
+  font-size: 18px;
+  font-weight: 800;
+  text-shadow: 0.3px 0 black;
+  letter-spacing: 0.3px;
+}
+
+.info .content .card .card-content .card-text p {
+  opacity: 0.9;
+  font-size: 15px;
+}
+
+.benefits {
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: 0px;
+  padding: 0px 25px;
+}
+
+.benefits .content {
+  text-align: left;
+}
+
+.benefits .content .flex {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 27px 0;
+}
+
+.benefits .content .flex .icon {
+  border-radius: 50%;
+  padding: 3px 6px;
+  background: rgba(28, 211, 28, 0.2);
+}
+
+.benefits .content .flex .icon i {
+  color: rgba(28, 211, 28, 0.7);
+  font-size: 16px;
+}
+
+.benefits .content .flex p {
+  font-size: 17px;
+  color: black;
+  margin: 0 15px;
+  opacity: 0.8;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
 }
 
 .sites {
