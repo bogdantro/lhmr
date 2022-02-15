@@ -67,9 +67,19 @@
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 100px;
+  margin-top: 80px;
   padding: 17px;
   position: relative;
+}
+
+.why-webiser .square {
+  width: 0;
+  height: 0;
+  border-bottom: 220px solid rgba(0, 0, 0, 0.04);
+  border-left: 220px solid transparent;
+  position: absolute;
+  right: 0;
+  bottom: -70px;
 }
 
 .why-webiser .content .text {
@@ -105,24 +115,6 @@
   font-size: 16px;
 }
 
-.why-webiser .content .text .why-webiser-long-ptext span {
-  position: relative;
-  top: 20px;
-  font-weight: bold;
-}
-
-.why-webiser .content .text .why-webiser-long-ptext span::after {
-  content: '';
-  display: block;
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(10px);
-          transform: translateX(-50%) translateY(10px);
-  width: 70%;
-  height: 3px;
-  background: #183b5665;
-}
-
 .info {
   background: white;
   width: 100%;
@@ -132,7 +124,7 @@
 }
 
 .info .content .text {
-  text-align: center;
+  text-align: left;
   margin-bottom: 45px;
 }
 
@@ -209,6 +201,8 @@
   width: 100%;
   height: auto;
   margin-top: 0px;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
   padding: 0px 25px;
 }
 
@@ -226,12 +220,12 @@
 
 .benefits .content .flex .icon {
   border-radius: 50%;
-  padding: 3px 6px;
-  background: rgba(28, 211, 28, 0.2);
+  padding: 3px 7px;
+  background: rgba(28, 211, 28, 0.15);
 }
 
 .benefits .content .flex .icon i {
-  color: rgba(28, 211, 28, 0.7);
+  color: rgba(28, 211, 28, 0.534);
   font-size: 16px;
 }
 
@@ -242,6 +236,121 @@
   opacity: 0.8;
   -webkit-transform: translateY(3px);
           transform: translateY(3px);
+}
+
+.proccess {
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: 60px;
+  padding: 25px;
+}
+
+.proccess .content i {
+  font-size: 50px;
+  margin: 50px auto;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #0088F9;
+}
+
+.proccess .content .text {
+  text-align: left;
+  margin-bottom: 45px;
+}
+
+.proccess .content .text h1 {
+  color: #183B56;
+  font-size: 30px;
+  font-weight: 800;
+  text-shadow: 1px 0 #183B56;
+  letter-spacing: 1px;
+}
+
+.proccess .content .proccess-card {
+  margin: 60px auto;
+}
+
+.proccess .content .proccess-image {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 0;
+  width: 100%;
+}
+
+.proccess .content .proccess-image img {
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.164);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.164);
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 0;
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+  margin: 15px auto;
+}
+
+.proccess .content .proccess-image .ribbon-number {
+  position: absolute;
+  right: 30px;
+  top: -12px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  background: #007be0;
+  font-size: 22px;
+  color: white;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+}
+
+.proccess .content .proccess-image-text {
+  width: 100%;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.proccess .content .proccess-image-text::before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 28px;
+  width: 4px;
+  background: #183b56bd;
+  border-radius: 12px;
+}
+
+.proccess .content .proccess-image-text h1 {
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.proccess .content .proccess-image-text p {
+  -webkit-transform: translateX(20px) translateY(-3px);
+          transform: translateX(20px) translateY(-3px);
+  font-size: 16.3px;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
 }
 
 .sites {
