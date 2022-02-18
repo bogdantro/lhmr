@@ -179,8 +179,8 @@ $loader: rgb(80, 104, 180);
     }
   }
 }
-// BENEFITS
-.benefits{
+// WEBSITE BENEFITS
+.website-benefits{
   background: white;
   width: 100%;
   height: auto;
@@ -220,14 +220,6 @@ $loader: rgb(80, 104, 180);
   margin-top: 60px;
   padding: 25px;
   .content{
-    i{
-      font-size: 50px;
-      margin: 50px auto;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #0088F9;
-    }
     .text{
       text-align: left;
       margin-bottom: 45px;
@@ -265,7 +257,7 @@ $loader: rgb(80, 104, 180);
       .ribbon-number{
         position: absolute;
         right: 30px;
-        top: -12px;
+        top: -5px;
         width: 40px;
         height: 40px;
         padding: 10px;
@@ -298,15 +290,141 @@ $loader: rgb(80, 104, 180);
       }
       p{
         transform: translateX(20px) translateY(-3px);
-        font-size: 16.3px;
-        letter-spacing: 0.5px;
+        font-size: 15.3px;
+        letter-spacing: 0.2px;
         opacity: 0.8;
       }
     }
   }
 }
-
-
+// HOSTING
+.hosting{
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: -30px;
+  padding: 25px;
+  .content{
+    .text{
+      text-align: left;
+      .hosting-headingp{
+        color: #183B56;
+        opacity: 0.7;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transform: translateX(2px) translateY(2px);
+      }
+      h1{
+        transform: translateY(5px);
+        color: #183B56;
+        text-shadow: 1px 0 #183B56;
+        letter-spacing:1px;    
+        font-size: 26px;
+        font-weight: 800;
+      }
+    }
+    .hosting-image{
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      border-bottom-left-radius: 0;
+      width: 100%;
+      img{
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.164);
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 0;
+        filter: brightness(92%);
+        margin: 15px auto;
+      }
+    }
+    .hosting-longp{
+      margin: auto;
+      transform: translateY(15px);
+      color: #183B56;
+      opacity: 0.9;
+      font-size: 16px;
+    }
+  }
+}
+// HOSTING BENEFITS
+.hosting-benefits{
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  padding: 0px 25px;
+  .content{
+    text-align: left;
+    .flex{
+      width: 100%;
+      display: flex;
+      margin: 27px 0;
+      .icon{
+        border-radius: 50%;
+        padding: 3px 7px;
+        background: rgba(28, 211, 28, 0.15);
+        i{
+          color: rgba(28, 211, 28, 0.534);
+          font-size: 16px;
+        }
+      }
+      p{
+        font-size: 17px;
+        color: black;
+        margin: 0 15px;
+        opacity: 0.8;
+        transform: translateY(3px);
+      }
+    }
+  }
+}
+// edit
+.edit{
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: 60px;
+  padding: 25px;
+  .content{
+    .text{
+      text-align: left;
+      .edit-headingp{
+        color: #183B56;
+        opacity: 0.7;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transform: translateX(2px) translateY(2px);
+      }
+      h1{
+        transform: translateY(5px);
+        color: #183B56;
+        text-shadow: 1px 0 #183B56;
+        letter-spacing:1px;    
+        font-size: 26px;
+        font-weight: 800;
+      }
+    }
+    .edit-longp{
+      margin: auto;
+      transform: translateY(15px);
+      color: #183B56;
+      opacity: 0.9;
+      font-size: 16px;
+    }
+  }
+}
 
 
 

@@ -196,7 +196,7 @@
   font-size: 15px;
 }
 
-.benefits {
+.website-benefits {
   background: white;
   width: 100%;
   height: auto;
@@ -206,11 +206,11 @@
   padding: 0px 25px;
 }
 
-.benefits .content {
+.website-benefits .content {
   text-align: left;
 }
 
-.benefits .content .flex {
+.website-benefits .content .flex {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -218,18 +218,18 @@
   margin: 27px 0;
 }
 
-.benefits .content .flex .icon {
+.website-benefits .content .flex .icon {
   border-radius: 50%;
   padding: 3px 7px;
   background: rgba(28, 211, 28, 0.15);
 }
 
-.benefits .content .flex .icon i {
+.website-benefits .content .flex .icon i {
   color: rgba(28, 211, 28, 0.534);
   font-size: 16px;
 }
 
-.benefits .content .flex p {
+.website-benefits .content .flex p {
   font-size: 17px;
   color: black;
   margin: 0 15px;
@@ -244,16 +244,6 @@
   height: auto;
   margin-top: 60px;
   padding: 25px;
-}
-
-.proccess .content i {
-  font-size: 50px;
-  margin: 50px auto;
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  color: #0088F9;
 }
 
 .proccess .content .text {
@@ -302,7 +292,7 @@
 .proccess .content .proccess-image .ribbon-number {
   position: absolute;
   right: 30px;
-  top: -12px;
+  top: -5px;
   width: 40px;
   height: 40px;
   padding: 10px;
@@ -348,9 +338,160 @@
 .proccess .content .proccess-image-text p {
   -webkit-transform: translateX(20px) translateY(-3px);
           transform: translateX(20px) translateY(-3px);
-  font-size: 16.3px;
-  letter-spacing: 0.5px;
+  font-size: 15.3px;
+  letter-spacing: 0.2px;
   opacity: 0.8;
+}
+
+.hosting {
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: -30px;
+  padding: 25px;
+}
+
+.hosting .content .text {
+  text-align: left;
+}
+
+.hosting .content .text .hosting-headingp {
+  color: #183B56;
+  opacity: 0.7;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-transform: translateX(2px) translateY(2px);
+          transform: translateX(2px) translateY(2px);
+}
+
+.hosting .content .text h1 {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  color: #183B56;
+  text-shadow: 1px 0 #183B56;
+  letter-spacing: 1px;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.hosting .content .hosting-image {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 0;
+  width: 100%;
+}
+
+.hosting .content .hosting-image img {
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.164);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.164);
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 0;
+  -webkit-filter: brightness(92%);
+          filter: brightness(92%);
+  margin: 15px auto;
+}
+
+.hosting .content .hosting-longp {
+  margin: auto;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+  color: #183B56;
+  opacity: 0.9;
+  font-size: 16px;
+}
+
+.hosting-benefits {
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  padding: 0px 25px;
+}
+
+.hosting-benefits .content {
+  text-align: left;
+}
+
+.hosting-benefits .content .flex {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 27px 0;
+}
+
+.hosting-benefits .content .flex .icon {
+  border-radius: 50%;
+  padding: 3px 7px;
+  background: rgba(28, 211, 28, 0.15);
+}
+
+.hosting-benefits .content .flex .icon i {
+  color: rgba(28, 211, 28, 0.534);
+  font-size: 16px;
+}
+
+.hosting-benefits .content .flex p {
+  font-size: 17px;
+  color: black;
+  margin: 0 15px;
+  opacity: 0.8;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.edit {
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: 60px;
+  padding: 25px;
+}
+
+.edit .content .text {
+  text-align: left;
+}
+
+.edit .content .text .edit-headingp {
+  color: #183B56;
+  opacity: 0.7;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-transform: translateX(2px) translateY(2px);
+          transform: translateX(2px) translateY(2px);
+}
+
+.edit .content .text h1 {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  color: #183B56;
+  text-shadow: 1px 0 #183B56;
+  letter-spacing: 1px;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.edit .content .edit-longp {
+  margin: auto;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+  color: #183B56;
+  opacity: 0.9;
+  font-size: 16px;
 }
 
 .sites {
