@@ -185,7 +185,7 @@ $loader: rgb(80, 104, 180);
   width: 100%;
   height: auto;
   margin-top: 0px;
-  transform: translateY(-10px);
+  transform: translateY(-30px);
   padding: 0px 25px;
   .content{
     text-align: left;
@@ -217,7 +217,7 @@ $loader: rgb(80, 104, 180);
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 60px;
+  margin-top: 70px;
   padding: 25px;
   .content{
     .text{
@@ -229,6 +229,7 @@ $loader: rgb(80, 104, 180);
         font-weight: 800;
         text-shadow: 1px 0 #183B56;
         letter-spacing:1px; 
+        transform: translateY(12px);
       }
     }
     .proccess-card{
@@ -302,7 +303,7 @@ $loader: rgb(80, 104, 180);
   background: white;
   width: 100%;
   height: auto;
-  margin-top: -30px;
+  margin-top: 5px;
   padding: 25px;
   .content{
     .text{
@@ -388,14 +389,16 @@ $loader: rgb(80, 104, 180);
     }
   }
 }
-// edit
+// EDIT
 .edit{
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 60px;
+  margin-top: 110px;
   padding: 25px;
+  position: relative;
   .content{
+    width: 100%;
     .text{
       text-align: left;
       .edit-headingp{
@@ -422,6 +425,97 @@ $loader: rgb(80, 104, 180);
       color: #183B56;
       opacity: 0.9;
       font-size: 16px;
+    }
+  }
+    .webiste-edit-action{
+      transform: translateY(45px);
+      a{
+        background: #007be0;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 4px;
+        text-align: center;
+    }
+  }
+  img{
+    transform: translateY(90px) translateX(-30px);
+    width: 120%;
+    max-width: 400px;
+    object-fit: contain;
+    height: auto;
+  }
+}
+// PRICES
+.prices{
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  padding: 25px;
+  position: relative;
+  .content{
+    width: 100%;
+    .product-section{
+      width: 100%;
+      transform: translateY(40px);
+      .card{
+        text-align: center;
+        margin: 25px auto;
+        height: auto;
+        width: 85%;
+        max-width: 415px;
+        border: none;
+        outline: none;
+        border-radius: 12px;
+        padding-bottom: 20px;
+        border: 2px solid #007be056;
+        .product-name{
+          font-size: 26px;
+          transform: translateY(20px);
+          position: relative;
+          color: #183B56;
+          text-shadow: 1px 0 #183B56;
+          letter-spacing:1px;    
+          font-weight: 800;
+        }
+        .product-price{
+          font-size: 13px;
+          transform: translateY(30px);
+        }
+        .included{
+          width: 50%;
+          position: relative;
+          left: 50%;
+          transform: translateY(40px) translateX(-50%);
+          padding: 10px;
+          ul{
+            overflow: hidden; 
+            overflow-y: scroll;
+            height: 100px;
+            -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+            li{
+              opacity: 0.7;
+              margin: 0;
+              list-style: none;
+              font-size: 14px;
+              &::before{
+                content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                color: rgb(28, 211, 28); /* Change the color */
+                font-weight: bold; /* If you want it to be bold */
+                display: inline-block; /* Needed to add space between the bullet and the text */
+                width: 1em; /* Also needed for space (tweak if needed) */
+              }
+            }
+          }
+        }
+        .product-actions{
+          transform: translateY(10px) translateX(120px);
+          a{
+            color: rgb(28, 211, 28);
+            font-size: 25px;
+          }
+        }
+      }
     }
   }
 }

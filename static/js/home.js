@@ -56,37 +56,9 @@ $.ajax({
 
 window.addEventListener("scroll", function(){
     const backToTop = document.getElementById('backToTop');
-    backToTop.classList.toggle("active", window.scrollY > 2000)
+    backToTop.classList.toggle("active", window.scrollY > 4000)
 })
 
 function backToTop(){
   window.scrollTo({ top: 0, behavior: 'smooth'});
 }
-
-
-window.addEventListener("scroll", function(){
-    const bottomNav = document.getElementById('bottomNav');
-    bottomNav.classList.toggle("active", window.scrollY > 1200)
-})
-
-
-
-window.addEventListener("scroll", function(){
-    const coverContent = document.getElementById('coverContent');
-    coverContent.classList.toggle("hide", window.scrollY > 200)
-})
-
-
-    
-
-
-
-$(window).scroll(function() {
-    const benefits = document.getElementById('benefits');
-    var hT = $('#benefits').offset().top,
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT+80-wH)){
-        benefits.classList.add('active');
-    }
- });

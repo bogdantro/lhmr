@@ -201,8 +201,8 @@
   width: 100%;
   height: auto;
   margin-top: 0px;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
   padding: 0px 25px;
 }
 
@@ -242,7 +242,7 @@
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 60px;
+  margin-top: 70px;
   padding: 25px;
 }
 
@@ -257,6 +257,8 @@
   font-weight: 800;
   text-shadow: 1px 0 #183B56;
   letter-spacing: 1px;
+  -webkit-transform: translateY(12px);
+          transform: translateY(12px);
 }
 
 .proccess .content .proccess-card {
@@ -347,7 +349,7 @@
   background: white;
   width: 100%;
   height: auto;
-  margin-top: -30px;
+  margin-top: 5px;
   padding: 25px;
 }
 
@@ -456,8 +458,13 @@
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 60px;
+  margin-top: 110px;
   padding: 25px;
+  position: relative;
+}
+
+.edit .content {
+  width: 100%;
 }
 
 .edit .content .text {
@@ -492,6 +499,125 @@
   color: #183B56;
   opacity: 0.9;
   font-size: 16px;
+}
+
+.edit .webiste-edit-action {
+  -webkit-transform: translateY(45px);
+          transform: translateY(45px);
+}
+
+.edit .webiste-edit-action a {
+  background: #007be0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.edit img {
+  -webkit-transform: translateY(90px) translateX(-30px);
+          transform: translateY(90px) translateX(-30px);
+  width: 120%;
+  max-width: 400px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: auto;
+}
+
+.prices {
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  padding: 25px;
+  position: relative;
+}
+
+.prices .content {
+  width: 100%;
+}
+
+.prices .content .product-section {
+  width: 100%;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
+.prices .content .product-section .card {
+  text-align: center;
+  margin: 25px auto;
+  height: auto;
+  width: 85%;
+  max-width: 415px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  padding-bottom: 20px;
+  border: 2px solid #007be056;
+}
+
+.prices .content .product-section .card .product-name {
+  font-size: 26px;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  position: relative;
+  color: #183B56;
+  text-shadow: 1px 0 #183B56;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+.prices .content .product-section .card .product-price {
+  font-size: 13px;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+.prices .content .product-section .card .included {
+  width: 50%;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateY(40px) translateX(-50%);
+          transform: translateY(40px) translateX(-50%);
+  padding: 10px;
+}
+
+.prices .content .product-section .card .included ul {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 100px;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #000), to(transparent));
+  -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+}
+
+.prices .content .product-section .card .included ul li {
+  opacity: 0.7;
+  margin: 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+.prices .content .product-section .card .included ul li::before {
+  content: "\2022";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #1cd31c;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+}
+
+.prices .content .product-section .card .product-actions {
+  -webkit-transform: translateY(10px) translateX(120px);
+          transform: translateY(10px) translateX(120px);
+}
+
+.prices .content .product-section .card .product-actions a {
+  color: #1cd31c;
+  font-size: 25px;
 }
 
 .sites {
