@@ -1,24 +1,5 @@
-.bottom-nav {
-  display: none !important;
-}
-
-#footer {
-  padding-bottom: 0 !important;
-}
-
 .cover {
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
-.cover img {
-  width: 100%;
-  height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-filter: brightness(50%);
-          filter: brightness(50%);
+  height: 55vh;
 }
 
 .make-order {
@@ -59,7 +40,6 @@
   margin-bottom: 15px;
   margin-top: 10px;
   width: 100%;
-  font-family: 'Sniglet', cursive;
   color: black;
   font-weight: bold;
   font-size: 26px;
@@ -128,7 +108,7 @@
   display: flex;
   width: 100%;
   position: relative;
-  border: 2px solid #3c54a0;
+  border: 2px solid #007be0;
   border-radius: 4px;
 }
 
@@ -188,8 +168,8 @@
 .make-order form .order-form-step1 .product-price {
   position: absolute;
   right: 40px;
-  -webkit-transform: translateY(-32px);
-          transform: translateY(-32px);
+  -webkit-transform: translateY(-38px) translateX(-10px);
+          transform: translateY(-38px) translateX(-10px);
   font-size: 14px;
   color: #3c54a0;
   opacity: 0.7;
@@ -198,8 +178,8 @@
 .make-order form .order-form-step1 .hosting-price {
   position: absolute;
   right: 40px;
-  -webkit-transform: translateY(-32px);
-          transform: translateY(-32px);
+  -webkit-transform: translateY(-38px) translateX(-10px);
+          transform: translateY(-38px) translateX(-10px);
   font-size: 14px;
   color: #3c54a0;
   opacity: 0.7;
@@ -243,7 +223,6 @@
   margin-bottom: 20px;
   margin-top: 20px;
   width: 230px;
-  font-family: 'Sniglet', cursive;
   color: black;
   font-size: 24px;
   border: 0.5px solid rgba(209, 209, 209, 0.397);
@@ -284,7 +263,6 @@
   margin-bottom: 20px;
   margin-top: 20px;
   width: 230px;
-  font-family: 'Sniglet', cursive;
   color: black;
   font-size: 24px;
   border: 0.5px solid rgba(209, 209, 209, 0.397);
@@ -325,7 +303,6 @@
   margin-bottom: 20px;
   margin-top: 20px;
   width: 230px;
-  font-family: 'Sniglet', cursive;
   color: black;
   font-size: 24px;
   border: 0.5px solid rgba(209, 209, 209, 0.397);
@@ -341,10 +318,10 @@
 .make-order form .order-form-step1 .arrow-down {
   position: absolute;
   right: 2px;
-  background: #3c54a0;
-  padding: 7px;
-  -webkit-transform: translateY(-39px);
-          transform: translateY(-39px);
+  background: #007be0;
+  padding: 12px;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
   border-radius: 0;
 }
 
@@ -360,9 +337,9 @@
 
 .make-order form .order-form-step1 .input {
   width: 100%;
-  border: 2px solid #3c54a0;
+  border: 2px solid #007be0;
   border-radius: 4px;
-  padding: 7px;
+  padding: 12px;
   outline: none;
   font-size: 15px;
   background: white;
@@ -373,7 +350,7 @@
 }
 
 .make-order form .order-form-step1 .input.order-products {
-  padding: 7px;
+  padding: 17px;
 }
 
 .make-order form .order-form-step1 .input.order-hosting {
@@ -396,7 +373,6 @@
   margin-bottom: 15px;
   margin-top: 10px;
   width: 100%;
-  font-family: 'Sniglet', cursive;
   color: black;
   font-weight: bold;
   font-size: 26px;
@@ -471,7 +447,7 @@
 
 .make-order form .order-form-step2 .input {
   width: 100%;
-  border: 2px solid #3c54a0;
+  border: 2px solid #007be0;
   border-radius: 4px;
   padding: 7px;
   outline: none;

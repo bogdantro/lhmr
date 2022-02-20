@@ -18,15 +18,17 @@
 
 <!-- COVER -->
 <div class="cover" id="cover">
-   <img src="{% static '/images/covers/cover4.jpg' %}" alt="cover-1">
-   <div class="content" id="coverContent">
-      <div class="text">
-         <h1><span class="moderne">Kom</span> i gang <br>med<br> <div class="background-overlay"></div> <span class="lave priser">bestillingen</span></h1>
-         <p>--</p>
+   <!-- ALL COVER CONENT -->
+   <div class="content">
+      <!-- COVER SECTION 1 -->
+      <div class="cover-section1">
+         <!-- ALL COVER TEXT -->
+         <div class="text">
+            <h1 class="cover-h1">Kom I Gang Med Bestillingen</h1>
+         </div>
       </div>
    </div>
 </div>
-<br>
 
 <!-- MAKE ORDER -->
 <div class="make-order">
@@ -50,10 +52,69 @@
                   <h1 onclick="custom()">Lag din egen</h1>
                </div>
             </div>
+
+
+
+
+
+
+
+
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
            <br>
            <br>
            <!-- HOSTING -->
-           <label for="hosting" class="form-tag-hosting tag">Vil du ha våres hosting tjeneste?</label>
+           <!-- <label for="hosting" class="form-tag-hosting tag">Vil du ha våres hosting tjeneste?</label> -->
            <br>
            <input type="text" name="hosting" class="hosting input" id="hosting" readonly required oninvalid="this.setCustomValidity('Værsåsnill, velg ja eller nei')" oninput="this.setCustomValidity('')" onclick="orderhostingDropdown()"><div class="hosting-price" id="hostingPrice" onclick="orderhostingDropdown()">0kr</div><div onclick="orderhostingDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
            <div class="hosting-dropdown" id="hostingDropdown">
@@ -66,13 +127,13 @@
            <br>
            <br>
            <!-- IMAGE -->
-           <label for="image" class="form-tag-image tag">Har du allerede en logo?</label>
+           <!-- <label for="image" class="form-tag-image tag">Har du allerede en logo?</label> -->
            <br>
            {{form.image}}
            <br>
            <br>
            <!-- COLOR -->
-           <label for="color" class="form-tag-color tag">Velg en farge som du vil ha med</label>
+           <!-- <label for="color" class="form-tag-color tag">Velg en farge som du vil ha med</label> -->
            <br>
            <div class="color-inputs">
               <input type="text" name="color_hex" class="color-hex input" id="color_hex" value="#ffff">
@@ -83,7 +144,7 @@
             <br>
             <!-- EXTRA PAGES -->
             <h1 class="info">Alle priser har inkludert en Om oss side og en Kontakt oss side. En ekstra side koster 399kr</h1>
-            <label for="num_pages" class="form-tag-num_pages tag">Velg antall ekstra sider</label>
+            <!-- <label for="num_pages" class="form-tag-num_pages tag">Velg antall ekstra sider</label> -->
             <br>
             <input type="number" id="num_pages" name="num_pages" class="input" readonly onclick="orderNumPagesDropdown()"><div class="num-pages-price" id="numPagesPrice" onclick="orderNumPagesDropdown()">0kr</div><div onclick="orderNumPagesDropdown()" class="arrow-down"><i class="fas fa-angle-down"></i></div>
             <div class="num-pages-dropdown" id="numPagesDropdown">
