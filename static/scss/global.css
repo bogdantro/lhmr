@@ -235,6 +235,7 @@ body.menu {
 .cover .content .cover-image-div img {
   height: auto;
   width: 110%;
+  max-width: 600px;
 }
 
 .load-wrapp {
@@ -783,6 +784,36 @@ body.menu {
             transform: translate(80px, 0);
     background-color: #f5634a;
     width: 25px;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  .cover {
+    height: 80vh;
+  }
+  .cover .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .cover .content .cover-section1 {
+    width: 50%;
+  }
+  .cover .content .cover-section2 {
+    width: 50%;
+  }
+  .cover .content .cover-section2 .cover-image-div {
+    bottom: unset;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  .cover .content .cover-section2 .cover-image-div img {
+    height: auto;
+    width: 110%;
+    max-width: 520px;
   }
 }
 /*# sourceMappingURL=global.css.map */

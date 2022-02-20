@@ -303,7 +303,7 @@ $loader: rgb(80, 104, 180);
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 5px;
+  margin-top: 8px;
   padding: 25px;
   .content{
     .text{
@@ -433,12 +433,32 @@ $loader: rgb(80, 104, 180);
         background: #007be0;
         color: white;
         padding: 10px 20px;
-        border-radius: 4px;
         text-align: center;
+        right: 16px;
+        cursor: pointer;
+        color: black;
+        text-align: center;
+        border-radius: 15px;
+        transition: .2s;
+        font-size: 14px;
+        border-radius: 4px;
+        text-decoration: none;
+        background: white;
+        border: 2px solid black;
+        font-weight: 600;
+        &:hover{
+            filter: brightness(85%);
+        }
+        &:focus{
+            filter: brightness(85%);
+        }
+        &:active{
+            filter: brightness(85%);
+        }
     }
   }
   img{
-    transform: translateY(90px) translateX(-30px);
+    transform: translateY(105px) translateX(-30px);
     width: 120%;
     max-width: 400px;
     object-fit: contain;
@@ -450,7 +470,7 @@ $loader: rgb(80, 104, 180);
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 100px;
+  margin-top: 120px;
   padding: 25px;
   position: relative;
   .content{
@@ -467,7 +487,7 @@ $loader: rgb(80, 104, 180);
         border: none;
         outline: none;
         border-radius: 12px;
-        padding-bottom: 20px;
+        padding-bottom: 50px;
         border: 2px solid #007be056;
         .product-name{
           font-size: 26px;
@@ -481,6 +501,7 @@ $loader: rgb(80, 104, 180);
         .product-price{
           font-size: 13px;
           transform: translateY(30px);
+          font-weight: 800;
         }
         .included{
           width: 50%;
@@ -500,7 +521,7 @@ $loader: rgb(80, 104, 180);
               font-size: 14px;
               &::before{
                 content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-                color: rgb(28, 211, 28); /* Change the color */
+                color: #007be0; /* Change the color */
                 font-weight: bold; /* If you want it to be bold */
                 display: inline-block; /* Needed to add space between the bullet and the text */
                 width: 1em; /* Also needed for space (tweak if needed) */
@@ -509,161 +530,53 @@ $loader: rgb(80, 104, 180);
           }
         }
         .product-actions{
-          transform: translateY(10px) translateX(120px);
+          transform: translateY(30px) translateX(0);
           a{
-            color: rgb(28, 211, 28);
-            font-size: 25px;
-          }
-        }
-      }
-    }
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// SITES
-.sites{
-  background: transparent;
-  width: 100%;
-  height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: left;
-  h1{
-    &.heading{
-      padding-left: 8px;
-      margin-bottom: 15px;
-      margin-top: 10px;
-      width: 100%;
-      font-family: 'Lato', sans-serif;
-      color: black;
-      font-size: 24px;
-    }
-  }
-  .product-flex-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    .card{
-      margin: 5px 5px;
-      height: auto;
-      width: 45%;
-      max-width: 415px;
-      border: none;
-      outline: none;
-      border-radius: 7px;
-      padding-bottom: 20px;
-      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.082);
-      .product-name{
-        font-size: 18px;
-        transform: translateY(20px) translateX(10px);
-        position: relative;
-        &::after{
-          content: '';
-          display: block;
-          transform: translateY(45px);
-          width: 80%;
-          height: 3px;
-          background: rgb(28, 211, 28);
-        }
-      }
-      .product-price{
-        font-size: 13px;
-        transform: translateY(30px) translateX(10px);
-        position: relative;
-      }
-      .included{
-        width: 100%;
-        transform: translateY(40px);
-        padding: 10px;
-        ul{
-          overflow: hidden; 
-          overflow-y: scroll;
-          height: 100px;
-          -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
-          li{
-            opacity: 0.7;
-            margin: 0;
-            list-style: none;
+            border-radius: 4px;
+            padding: 13px 10px;
             font-size: 14px;
-            &::before{
-              content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-              color: rgb(28, 211, 28); /* Change the color */
-              font-weight: bold; /* If you want it to be bold */
-              display: inline-block; /* Needed to add space between the bullet and the text */
-              width: 1em; /* Also needed for space (tweak if needed) */
+            color: white;
+            font-weight: 600;
+            margin: 2px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: .4s;
+            border: 2px solid transparent;
+            text-decoration: none;
+            background: rgb(7, 37, 70);
+            width: 55%;
+            max-width: 250px;
+            i{
+              transform: translateX(18px) translateY(2px);
             }
           }
         }
       }
-      .product-actions{
-        transform: translateY(10px) translateX(120px);
-        a{
-          color: rgb(28, 211, 28);
-          font-size: 25px;
-        }
-      }
     }
   }
 }
-// CONTACT US
-.contact-us-home{
-  background: rgba(0, 0, 0, 0.89);
+// OUR STORY
+.our-story{
+  background: #007be0;
   width: 100%;
-  height: 500px;
-  text-align: left;
-  h1{
-    color: white;
-    font-size: 18px;
-    padding-left: 10px;
-    &.heading{
-      font-size: 26px;
-    }
-  }
-  a{
-    padding-left: 15px;
-    i{
-      transform: translateY(10px) translateX(20px);
-      font-size: 18px;
-      color: white;
+  height: auto;
+  margin-top: 50px;
+  padding: 45px 25px;
+  position: relative;
+  .content{
+    .text{
+      h1{
+        color: white;
+        font-weight: 600;
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+      p{
+        color: white;
+        font-weight: 600;
+      }
     }
   }
 }

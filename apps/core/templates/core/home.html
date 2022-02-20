@@ -28,20 +28,26 @@
 <div class="cover" id="cover">
    <!-- ALL COVER CONENT -->
    <div class="content">
-      <!-- ALL COVER TEXT -->
-      <div class="text">
-         <h1 class="cover-h1">Enkleste Måten å Starte En Nettbutikk</h1>
-         <p class="cover-p">Enten om du selger digitale produkter eller nettjenester, er Webiser den enkleste måten å komme i gang med en nettbutikk</p>
+      <!-- COVER SECTION 1 -->
+      <div class="cover-section1">
+         <!-- ALL COVER TEXT -->
+         <div class="text">
+            <h1 class="cover-h1">Enkleste Måten å Starte En Nettbutikk</h1>
+            <p class="cover-p">Enten om du selger digitale produkter eller nettjenester, er Webiser den enkleste måten å komme i gang med en nettbutikk</p>
+         </div>
+         <!-- ALL COVER ACTIONS -->
+         <div class="cover-actions">
+            <a href="/bestill">Kom i Gang<i class="fad fa-arrow-alt-from-left"></i></a>
+            <br>
+            <a href="">Les Om Oss<i class="fad fa-arrow-alt-from-left"></i></a>
+         </div>
       </div>
-      <!-- ALL COVER ACTIONS -->
-      <div class="cover-actions">
-         <a href="/bestill">Kom i Gang<i class="fad fa-arrow-alt-from-left"></i></a>
-         <br>
-         <a href="">Les Om Oss<i class="fad fa-arrow-alt-from-left"></i></a>
-      </div>
-      <!-- COVER BOTTOM IMAGE -->
-      <div class="cover-image-div">
-         <img class="cover-image" src="{% static '/images/covers/cover-image2.png' %}" alt="image main cover web design webiser">
+      <!-- COVER SECTION 2 -->
+      <div class="cover-section2">
+         <!-- COVER BOTTOM IMAGE -->
+         <div class="cover-image-div">
+            <img class="cover-image" src="{% static '/images/covers/cover-image2.png' %}" alt="image main cover web design webiser">
+         </div>
       </div>
    </div>
 </div>
@@ -416,176 +422,22 @@
                </div>
             <br>
             <div class="product-actions">
-               <a href="{% url 'product_detail' product.slug %}"><i class="fas fa-arrow-right"></i></a>
+               <a href="{% url 'product_detail' product.slug %}">Les Mer<i class="fad fa-arrow-alt-from-left"></i></a>
             </div>
          </div>
          {% endfor %}   
       </div>
    </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<!-- SITES -->
-<div class="sites" id="sites">
-   <h1 class="heading">Priser</h1>
-   <!-- PRODUCT FLEX SECTION -->
-   <div class="product-flex-section">
-   {% for product in products %}
-      <!-- PRODUCT CARD -->
-      <div class="card">
-         <!-- PRODUCT NAME -->
-         <h1 class="product-name">{{ product.name }}</h1>
-         <!-- PRODUCT PRICE -->
-         <h1 class="product-price">{{ product.price | floatformat }}kr</h1>
-         <!-- PRODUCT INCLUDED -->
-         <div class="included">
-            <!-- ECOMMERCE -->
-            <ul>
-               {% if product.is_ecommerce %}
-               <li>ecommerce</li>
-               <li>ecommerce</li>
-               <li>ecommerce</li>
-               <li>ecommerce</li>
-               <li>ecommerce</li>
-               <li>ecommerce</li>
-               <li>ecommerce</li>
-               <li>ecommerce</li>
-               <li>ecommerce</li>
-               <li>ecommerce</li>
-               <li>ecommerce</li>
-               <li>ecommerce</li>
-               <li>ecommerce</li>
-               <li>ecommerce</li>
-               {% endif %}
-               <!-- BLOG -->
-               {% if product.is_blog %}
-               <li>blog</li>
-               <li>blog</li>
-               <li>blog</li>
-               <li>blog</li>
-               <li>blog</li>
-               <li>blog</li>
-               <li>blog</li>
-               <li>blog</li>
-               <li>blog</li>
-               <li>blog</li>
-               <li>blog</li>
-               <li>blog</li>
-               <li>blog</li>
-               <li>blog</li>
-               {% endif %}
-            </ul>
-         </div>
-      <br>
-      <div class="product-actions">
-         <a href="{% url 'product_detail' product.slug %}"><i class="fas fa-arrow-right"></i></a>
+<div class="our-story">
+   <div class="content">
+      <div class="text">
+         <h1>Vår Historie</h1>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores culpa magnam, harum et dolorum assumenda vitae tenetur iure dicta, velit 
+            libero molestias necessitatibus, suscipit numquam sunt ratione minima aspernatur dolorem? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum voluptate saepe 
+            corrupti quasi enim! Accusantium totam explicabo fugiat magnam, in repellendus possimus praesentium ducimus quisquam aliquid qui nihil, eaque enim.
+         </p>
       </div>
    </div>
-   {% endfor %}   
 </div>
-</div>
-
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
-<!-- CONTACT US -->
-<div class="contact-us-home" id="contactUs">
-<br>
-<br>
-   <h1 class="heading">Trenger du hjelp?</h1>
-<br>
-<br>
-<!-- CONTACT TEXT -->
-<h1 class="contact-text">Kontakter oss</h1>
-<a href="/kontakter-oss"><i class="fas fa-arrow-right"></i></a>
-<br>
-<br>
-<br>
-<br>
-<!-- FORUM TEXT -->
-<h1 class="forum-text">Forum</h1>
-<a href="/webiser-forum"><i class="fas fa-arrow-right"></i></a>
-<br>
-<br>
-<br>
-<br>
-<!-- INSTAGRAM TEXT -->
-<h1 class="instagram-text">Dm oss på InstaGram</h1>
-<a href="https://www.instagram.com/webiser.no/"><i class="fas fa-arrow-right"></i></a>
-</div> 
 {% endblock %}
