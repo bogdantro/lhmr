@@ -1,5 +1,13 @@
 .cover {
-  height: 55vh;
+  height: 38vh;
+}
+
+.cover .content .text {
+  text-align: left;
+}
+
+.cover .content .text .cover-h1 {
+  font-size: 38px;
 }
 
 .make-order {
@@ -40,15 +48,16 @@
   margin-bottom: 15px;
   margin-top: 10px;
   width: 100%;
-  color: black;
+  color: #183B56;
   font-weight: bold;
   font-size: 26px;
 }
 
 .make-order form .order-form-step1 .form-tag-products {
   font-size: 15px;
-  color: #304792;
+  color: #183B56;
   background: white;
+  font-weight: 600;
   border-radius: 5px;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -56,13 +65,20 @@
   padding: 0 2px;
   position: absolute;
   left: 25px;
-  top: 60px;
+  top: 84px;
+}
+
+.make-order form .order-form-step1 .form-tag-products.click {
+  left: 25px;
+  top: 61px;
+  font-size: 13.7px;
 }
 
 .make-order form .order-form-step1 .form-tag-hosting {
   font-size: 15px;
-  color: #304792;
+  color: #183B56;
   background: white;
+  font-weight: 600;
   border-radius: 5px;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -70,7 +86,13 @@
   padding: 0 2px;
   position: absolute;
   left: 25px;
-  top: 149px;
+  top: 185px;
+}
+
+.make-order form .order-form-step1 .form-tag-hosting.click {
+  left: 25px;
+  top: 160px;
+  font-size: 13.7px;
 }
 
 .make-order form .order-form-step1 .form-tag-image {
@@ -89,8 +111,9 @@
 
 .make-order form .order-form-step1 .form-tag-color {
   font-size: 15px;
-  color: #304792;
+  color: #183B56;
   background: white;
+  font-weight: 600;
   border-radius: 5px;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -98,101 +121,75 @@
   padding: 0 2px;
   position: absolute;
   left: 25px;
-  top: 357px;
-  z-index: 1;
+  top: 287px;
 }
 
-.make-order form .order-form-step1 .color-inputs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  position: relative;
-  border: 2px solid #007be0;
-  border-radius: 4px;
-}
-
-.make-order form .order-form-step1 .color-inputs .or {
-  font-size: 15px;
-  color: #3c54a0;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.make-order form .order-form-step1 .color-inputs .input {
-  height: 55px;
-  padding-top: 10px;
-}
-
-.make-order form .order-form-step1 .color-inputs .input.color {
-  padding: 15px 60px 5px 65px;
-  background: white;
-  border: none;
-}
-
-.make-order form .order-form-step1 .color-inputs .input.color-hex {
-  border: none;
+.make-order form .order-form-step1 .form-tag-color.click {
+  left: 25px;
+  top: 262px;
+  font-size: 13.7px;
 }
 
 .make-order form .order-form-step1 .info {
   text-align: left;
-  color: black;
+  color: #183B56;
   margin-bottom: -5px;
   margin-top: 15px;
-  font-size: 15px;
-  font-family: 'Sniglet', cursive;
+  font-size: 14px;
+  font-weight: 600;
   opacity: 0.8;
   line-height: 130%;
 }
 
 .make-order form .order-form-step1 .form-tag-num_pages {
   font-size: 15px;
-  color: #304792;
-  border-radius: 5px;
+  color: #183B56;
   background: white;
+  font-weight: 600;
+  border-radius: 5px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   padding: 0 2px;
   position: absolute;
   left: 25px;
-  top: 536px;
-  z-index: 1;
+  top: 432px;
+}
+
+.make-order form .order-form-step1 .form-tag-num_pages.click {
+  left: 25px;
+  top: 408px;
+  font-size: 13.7px;
 }
 
 .make-order form .order-form-step1 .product-price {
   position: absolute;
   right: 40px;
-  -webkit-transform: translateY(-38px) translateX(-10px);
-          transform: translateY(-38px) translateX(-10px);
+  -webkit-transform: translateY(-37.3px) translateX(-10px);
+          transform: translateY(-37.3px) translateX(-10px);
   font-size: 14px;
-  color: #3c54a0;
-  opacity: 0.7;
+  color: #183B56;
+  opacity: 0.9;
 }
 
 .make-order form .order-form-step1 .hosting-price {
   position: absolute;
   right: 40px;
-  -webkit-transform: translateY(-38px) translateX(-10px);
-          transform: translateY(-38px) translateX(-10px);
+  -webkit-transform: translateY(-37.3px) translateX(-10px);
+          transform: translateY(-37.3px) translateX(-10px);
   font-size: 14px;
-  color: #3c54a0;
-  opacity: 0.7;
+  color: #183B56;
+  opacity: 0.9;
 }
 
 .make-order form .order-form-step1 .num-pages-price {
   position: absolute;
   right: 40px;
-  -webkit-transform: translateY(-32px);
-          transform: translateY(-32px);
+  -webkit-transform: translateY(-37.3px) translateX(-10px);
+          transform: translateY(-37.3px) translateX(-10px);
   font-size: 14px;
-  color: #3c54a0;
-  opacity: 0.7;
+  color: #183B56;
+  opacity: 0.9;
 }
 
 .make-order form .order-form-step1 .products-dropdown {
@@ -318,7 +315,6 @@
 .make-order form .order-form-step1 .arrow-down {
   position: absolute;
   right: 2px;
-  background: #007be0;
   padding: 12px;
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
@@ -327,7 +323,7 @@
 
 .make-order form .order-form-step1 .arrow-down i {
   font-size: 20px;
-  color: white;
+  color: #183B56;
 }
 
 .make-order form .order-form-step1 .num-pages-extra-pages {
@@ -337,9 +333,9 @@
 
 .make-order form .order-form-step1 .input {
   width: 100%;
-  border: 2px solid #007be0;
+  border: 1px solid lightgray;
   border-radius: 4px;
-  padding: 12px;
+  padding: 14px;
   outline: none;
   font-size: 15px;
   background: white;
@@ -373,120 +369,58 @@
   margin-bottom: 15px;
   margin-top: 10px;
   width: 100%;
-  color: black;
+  color: #183B56;
   font-weight: bold;
   font-size: 26px;
 }
 
-.make-order form .order-form-step2 .info {
-  text-align: left;
-  color: black;
-  margin-bottom: -5px;
-  margin-top: 15px;
+.make-order form .order-form-step2 .form-tag-name {
   font-size: 15px;
-  font-family: 'Sniglet', cursive;
-  opacity: 0.8;
-  line-height: 130%;
-}
-
-.make-order form .order-form-step2 .form-tag-css {
-  font-size: 15px;
-  color: #304792;
-  border-radius: 5px;
+  color: #183B56;
   background: white;
+  font-weight: 600;
+  border-radius: 5px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   padding: 0 2px;
   position: absolute;
   left: 25px;
-  top: 93px;
+  top: 84px;
 }
 
-.make-order form .order-form-step2 .form-tag-html {
-  font-size: 15px;
-  color: #304792;
-  border-radius: 5px;
-  background: white;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  position: absolute;
-  left: 25px;
-  top: 158px;
-}
-
-.make-order form .order-form-step2 .form-tag-javascript {
-  font-size: 15px;
-  color: #304792;
-  border-radius: 5px;
-  background: white;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  position: absolute;
-  left: 25px;
-  top: 223px;
-}
-
-.make-order form .order-form-step2 .form-tag-python_django {
-  font-size: 15px;
-  color: #304792;
-  border-radius: 5px;
-  background: white;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  position: absolute;
-  left: 25px;
-  top: 288px;
-}
-
-.make-order form .order-form-step2 .input {
-  width: 100%;
-  border: 2px solid #007be0;
-  border-radius: 4px;
-  padding: 7px;
-  outline: none;
-  font-size: 15px;
-  background: white;
-}
-
-.make-order form .order-form-step3 {
-  position: relative;
-  padding-top: 20px;
-}
-
-.make-order form .order-form-step3 h1.heading {
-  margin-bottom: 15px;
-  margin-top: 10px;
-  width: 100%;
-  font-family: 'Sniglet', cursive;
-  color: black;
-  font-weight: bold;
-  font-size: 26px;
-}
-
-.make-order form .order-form-step3 .form-tag-name {
-  font-size: 15px;
-  color: #304792;
-  border-radius: 5px;
-  background: white;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  position: absolute;
+.make-order form .order-form-step2 .form-tag-name.click {
   left: 25px;
   top: 61px;
+  font-size: 13.7px;
 }
 
-.make-order form .order-form-step3 .form-tag-email {
+.make-order form .order-form-step2 .form-tag-email {
   font-size: 15px;
-  color: #304792;
+  color: #183B56;
+  background: white;
+  font-weight: 600;
+  border-radius: 5px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 2px;
+  position: absolute;
+  left: 25px;
+  top: 161px;
+}
+
+.make-order form .order-form-step2 .form-tag-email.click {
+  left: 25px;
+  top: 135px;
+  font-size: 13.7px;
+}
+
+.make-order form .order-form-step2 .form-tag-message {
+  font-size: 15px;
+  color: #183B56;
+  background: white;
+  font-weight: 600;
   border-radius: 5px;
   background: white;
   width: -webkit-max-content;
@@ -495,35 +429,28 @@
   padding: 0 2px;
   position: absolute;
   left: 25px;
-  top: 125px;
+  top: 235px;
 }
 
-.make-order form .order-form-step3 .form-tag-message {
-  font-size: 15px;
-  color: #304792;
-  border-radius: 5px;
-  background: white;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  position: absolute;
+.make-order form .order-form-step2 .form-tag-message.click {
   left: 25px;
-  top: 190px;
+  top: 214px;
+  font-size: 13.7px;
 }
 
-.make-order form .order-form-step3 input {
+.make-order form .order-form-step2 input {
   width: 100%;
-  border: 2px solid #3c54a0;
+  border: 1px solid lightgray;
   border-radius: 4px;
-  padding: 7px;
+  padding: 14px;
   outline: none;
   font-size: 15px;
+  background: white;
 }
 
-.make-order form .order-form-step3 textarea {
+.make-order form .order-form-step2 textarea {
   width: 100%;
-  border: 2px solid #3c54a0;
+  border: 1px solid lightgray;
   border-radius: 4px;
   padding: 3px;
   padding-top: 5px;
@@ -532,18 +459,8 @@
   font-size: 15px;
 }
 
-.make-order form .order-products {
-  width: 150px;
-  padding: 3px;
-}
-
-.make-order form .order-hosting {
-  width: 150px;
-  padding: 3px;
-}
-
 .make-order form .form-actions {
-  margin-top: 15px;
+  margin-top: 23px;
 }
 
 .make-order form .form-actions button {
@@ -553,11 +470,9 @@
   padding: 10px;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  color: white;
+  color: black;
   outline: none;
-  background: linear-gradient(135deg, #5a7ef5, #607bd3);
-  -webkit-box-shadow: 1.5px 3px 2px #3c54a0;
-          box-shadow: 1.5px 3px 2px #3c54a0;
-  border: 2px solid transparent;
+  border: 2px solid black;
+  background: white;
 }
 /*# sourceMappingURL=order.css.map */

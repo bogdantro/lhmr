@@ -14,9 +14,11 @@ $.ajax({
 // NUM PAGES
 function orderNumPagesDropdown(){
   const numPagesDropdown = document.getElementById('numPagesDropdown');
+  const numPagesLabel = document.getElementById('numPagesLabel');
 
   if (window.getComputedStyle(numPagesDropdown,null).getPropertyValue("pointer-events") == 'none'){  
     numPagesDropdown.classList.add('active');
+    numPagesLabel.classList.add('click');
 
   } else{
     numPagesDropdown.classList.remove('active');
@@ -228,12 +230,23 @@ function a10(){
   numPagesDropdown.classList.remove('active');
 }
 
+// COLOR
+function colorInput(){
+  const colorLabel = document.getElementById('colorLabel');
+
+    document.getElementById("color_hex").value = "#";
+
+    colorLabel.classList.add('click');
+}
+
 // HOSTING
 function orderhostingDropdown(){
   const hostingDropdown = document.getElementById('hostingDropdown');
+  const hostingLabel = document.getElementById('hostingLabel');
 
   if (window.getComputedStyle(hostingDropdown,null).getPropertyValue("pointer-events") == 'none'){  
     hostingDropdown.classList.add('active');
+    hostingLabel.classList.add('click');
 
   } else{
     hostingDropdown.classList.remove('active');
@@ -270,9 +283,11 @@ function nei(){
 // SITES
 function orderProductDropdown(){
   const productDropdown = document.getElementById('productDropdown');
+  const productLabel = document.getElementById('productLabel');
 
   if (window.getComputedStyle(productDropdown,null).getPropertyValue("pointer-events") == 'none'){  
     productDropdown.classList.add('active');
+    productLabel.classList.add('click');
 
   } else{
     productDropdown.classList.remove('active');
@@ -291,8 +306,8 @@ function noneProducts(){
 function ecommerce(){
   const productDropdown = document.getElementById('productDropdown');
 
-  document.getElementById("products").value = "Ecommerce";
-  document.getElementById('productPrice').innerHTML = '4399kr';
+  document.getElementById("products").value = "Nettbutikk/eCommerce";
+  document.getElementById('productPrice').innerHTML = '3500kr';
 
   productDropdown.classList.remove('active');
 }
@@ -301,43 +316,20 @@ function blog(){
   const productDropdown = document.getElementById('productDropdown');
 
   document.getElementById("products").value = "Blogg";
-  document.getElementById('productPrice').innerHTML = '3699kr';
+  document.getElementById('productPrice').innerHTML = '2700kr';
 
   productDropdown.classList.remove('active');
 }
 
-function portofolio(){
-  const productDropdown = document.getElementById('productDropdown');
-
-  document.getElementById("products").value = "Portofolio";
-  document.getElementById('productPrice').innerHTML = '2999kr';
-
-  productDropdown.classList.remove('active');
+// NAME
+function orderName(){
+  document.getElementById('nameLabel').classList.add('click');
 }
-
-function bedrift(){
-  const productDropdown = document.getElementById('productDropdown');
-
-  document.getElementById("products").value = "Bedrift";
-  document.getElementById('productPrice').innerHTML = '2999kr';
-
-  productDropdown.classList.remove('active');
+// EMAIL
+function orderEmail(){
+  document.getElementById('emailLabel').classList.add('click');
 }
-
-function personal(){
-  const productDropdown = document.getElementById('productDropdown');
-
-  document.getElementById("products").value = "Personal";
-  document.getElementById('productPrice').innerHTML = '1699kr';
-
-  productDropdown.classList.remove('active');
-}
-
-function custom(){
-  const productDropdown = document.getElementById('productDropdown');
-
-  document.getElementById("products").value = "Custom";
-  document.getElementById('productPrice').innerHTML = '599kr-9999kr';
-
-  productDropdown.classList.remove('active');
+// MESSAGE
+function orderMessage(){
+  document.getElementById('messageLabel').classList.add('click');
 }

@@ -19,8 +19,6 @@ def send_order(request):
             message = form.cleaned_data['message']
             products = form.cleaned_data['products']
             hosting = form.cleaned_data['hosting']
-            image = form.cleaned_data['image']
-            color = form.cleaned_data['color']
             color_hex = form.cleaned_data['color_hex']
             num_pages = form.cleaned_data['num_pages']
             page1 = form.cleaned_data['page1']
@@ -33,10 +31,6 @@ def send_order(request):
             page8 = form.cleaned_data['page8']
             page9 = form.cleaned_data['page9']
             page10 = form.cleaned_data['page10']
-            css = form.cleaned_data['css']
-            html = form.cleaned_data['html']
-            javascript = form.cleaned_data['javascript']
-            python_django = form.cleaned_data['python_django']
             
             form.save()
             
@@ -47,7 +41,6 @@ def send_order(request):
                 'message':message,
                 'num_pages':num_pages,
                 'hosting':hosting,
-                'color':color,
                 'color_hex':color_hex,
                 'text':text,
                 'name':name,
@@ -61,10 +54,6 @@ def send_order(request):
                 'page8':page8,
                 'page9':page9,
                 'page10':page10,
-                'css':css,
-                'html':html,
-                'javascript':javascript,
-                'python_django':python_django,
             }
             message = dedent('''
             {}
@@ -76,18 +65,11 @@ def send_order(request):
             Antall Sider: {}
 
             Farge: {}    
-            Farge(Hex): {}
 
-            Erfaring:
-            -----------------
-            Css {}
-            Html {}
-            JavaScript {}
-            Python/Django {}
-            -----------------
+         
 
-            Om Bedrift: {}
-            ''').format(data['text'], data['name'], data['email'], data['products'], data['hosting'], data['num_pages'], data['color'], data['color_hex'], data['css'], data['html'], data['javascript'], data['python_django'], data['message'])
+            Noe kunden vil fortelle oss: {}
+            ''').format(data['text'], data['name'], data['email'], data['products'], data['hosting'], data['num_pages'], data['color_hex'], data['message'])
             send_mail('Du har motatt en bestiling', message, '', ['sabertoothtri@gmail.com'])
             return redirect('/bestilling-utfort/webiser/bestilling')
     else:
