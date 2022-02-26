@@ -513,7 +513,6 @@
   text-align: center;
   right: 16px;
   cursor: pointer;
-  color: black;
   text-align: center;
   border-radius: 15px;
   -webkit-transition: .2s;
@@ -521,8 +520,10 @@
   font-size: 14px;
   border-radius: 4px;
   text-decoration: none;
-  background: white;
-  border: 2px solid black;
+  color: white;
+  outline: none;
+  border: none;
+  background: #0088F9;
   font-weight: 600;
 }
 
@@ -549,6 +550,8 @@
   -o-object-fit: contain;
      object-fit: contain;
   height: auto;
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
 }
 
 .prices {

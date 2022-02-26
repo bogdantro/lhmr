@@ -1,136 +1,68 @@
+$loader: rgb(80, 104, 180);
+
 // STANDARD PHONE
-
-// COVER
-.cover{
-    img{
-      height: 100vh;
-    }
-    .content{
-      transition: .8s ease-in;
-      position: absolute;
-      top: 60px;
-      width: 100%;
-      padding-left: 15px;
-      opacity: 1;
-      right: 0;
-      transform: scale(1);    
-    }
-}
-   // CONTACT US
-   .contact-page{
+.contact-us{
     width: 100%;
-    height: 500px;
-    text-align: left;
-    position: absolute;
-    top: 260px;
-    left: 0;
-
+    height: auto;
+    background: transparent;
+    transform: translateY(113px);
+    margin-bottom: 170px;
+    // CONTACT FORM
     form{
-    text-align: left;
-    padding: 10px;
-    margin-top: 0;
-    opacity: 1;
-    transition: all ease-in .5s;
-    position: relative;
-    border-radius: 4px;
-    max-width: 400px;
-    background: rgba(0, 0, 0, 0.1);
-    .form-tag-navn{
-        font-size: 15px;
-        color: white;
-        width: max-content;
-        padding: 0 2px;
-        position: absolute;
-        left: 35px;
-        top: 45px;
-        border-radius: 5px;
-        transition: .4s, background-color 0s, color 0s;
-        &.click{
-            left: 20px;
-            top: 24px;
-            background-color: white;
-            color: black;
+      margin: 0 auto;
+      text-align: left;
+      background: transparent;
+      width: 93%;
+      max-width: 700px;
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
+      padding: 20px;
+      border-radius: 7px;
+        // CONTACT HEADING
+        .heading{
+          color: #183B56;
+          font-size: 22px;
+          font-weight: 800;
+          text-shadow: 1px 0 #183B56;
+          letter-spacing:1px; 
         }
-    }
-    .form-tag-email{
-        font-size: 15px;
-        color: white;
-        border-radius: 5px;
-        width: max-content;
-        padding: 0 2px;
-        position: absolute;
-        left: 35px;
-        top: 113px;
-        transition: .4s, background-color 0s, color 0s;
-        &.click{
-            left: 20px;
-            top: 90px;
-            background-color: white;
-            color: black;
-        }
-    }
-    .form-tag-message{
-        font-size: 15px;
-        color: white;
-        width: max-content;
-        padding: 0 2px;
-        position: absolute;
-        left: 35px;
-        top: 190px;
-        border-radius: 5px;
-        transition: .4s, background-color 0s, color 0s;
-        &.click{
-            left: 20px;
-            top: 161px;
-            background-color: white;
-            color: black;
-        }
-    }
-    textarea{
-        width: 100%;
-        border: none;
-        border-radius: 4px;
-        padding: 3px;
-        padding-top: 5px;
-        height: 100px;
-        outline: none;
-        font-size: 15px;
-        background: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.678);
-        color: white;
-        padding-top: 20px;
-    }
-    input{
-        border: none;
-        width: 100%;
-        height: 45px;
-        border-radius: 4px;
-        padding: 7px;
-        outline: none;
-        font-size: 15px;      
-        background: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.678);
-        color: white;
-        padding-top: 10px;
-    }
-    .form-actions{
-        margin-top: 25px;
-        button{
-            width: 160px;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.25);
-            border-radius: 7px;
-            border: 2px solid white;
+        .contact-form-inputs{
+          label{
+            color: #183B56;
+            font-size: 15px;
+            font-weight: 800;
+          }
+            input, textarea{
+            padding: 5px;
+            border-radius: 4px;
+            border: 2px solid #0089f91f;
             outline: none;
+            color: #183B56;
+            font-size: 13px;
+            width: 82%;
+            max-width: 500px;
+            font-weight: 600;
+          }
+          input{
+            height: 45px;
+          }
+          textarea{
+            min-height: 75px;
+          }
+        }
+        // CONTACT FORM ACTIONS
+        .form-actions{
+          margin-top: 23px;
+          button{
+            border-radius: 4px;
+            width: 200px;
+            font-size: 16px;
+            padding: 10px;
+            transition: all .2s ease-in-out;
             color: white;
-            text-align: center;
-            text-decoration: underline;
-        &:hover{
-            background: white;
-            color: black;
+            outline: none;
+            border: none;
+            background: #0088F9;      
+          }
         }
-        }
-    }
-    }
+      }
 }
-

@@ -1,0 +1,27 @@
+// STANDARD PHONE
+.myaccount{
+    width: 100%;
+    height: auto;
+    background: transparent;
+    transform: translateY(113px);
+    margin-bottom: 170px;
+    // LOGIN FORM
+    .account-card{
+      margin: 0 auto;
+      text-align: left;
+      background: transparent;
+      width: 93%;
+      max-width: 700px;
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
+      padding: 20px;
+      border-radius: 7px;
+        // ACCOUNT HEADING
+        .heading{
+        color: #183B56;
+        font-size: 22px;
+        font-weight: 800;
+        text-shadow: 1px 0 #183B56;
+        letter-spacing:1px; 
+        }
+    }
+}

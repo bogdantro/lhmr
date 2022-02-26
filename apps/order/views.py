@@ -17,43 +17,17 @@ def send_order(request):
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
-            products = form.cleaned_data['products']
-            hosting = form.cleaned_data['hosting']
-            color_hex = form.cleaned_data['color_hex']
-            num_pages = form.cleaned_data['num_pages']
-            page1 = form.cleaned_data['page1']
-            page2 = form.cleaned_data['page2']
-            page3 = form.cleaned_data['page3']
-            page4 = form.cleaned_data['page4']
-            page5 = form.cleaned_data['page5']
-            page6 = form.cleaned_data['page6']
-            page7 = form.cleaned_data['page7']
-            page8 = form.cleaned_data['page8']
-            page9 = form.cleaned_data['page9']
-            page10 = form.cleaned_data['page10']
-            
+            product = form.cleaned_data['product']
+
             form.save()
             
             text = 'Du har motatt en bestiling. Sjekk under hva bestillingen handler om, og send en mail til klienten med info om hva som skal skje videre'
             data = {
                 'email':email,
-                'products':products,
                 'message':message,
-                'num_pages':num_pages,
-                'hosting':hosting,
-                'color_hex':color_hex,
-                'text':text,
                 'name':name,
-                'page1':page1,
-                'page2':page2,
-                'page3':page3,
-                'page4':page4,
-                'page5':page5,
-                'page6':page6,
-                'page7':page7,
-                'page8':page8,
-                'page9':page9,
-                'page10':page10,
+                'text':text,
+                'product':product,
             }
             message = dedent('''
             {}
@@ -61,15 +35,9 @@ def send_order(request):
             Fra: {} {}
 
             Produkt: {}
-            Hosting: {}
-            Antall Sider: {}
-
-            Farge: {}    
-
-         
 
             Noe kunden vil fortelle oss: {}
-            ''').format(data['text'], data['name'], data['email'], data['products'], data['hosting'], data['num_pages'], data['color_hex'], data['message'])
+            ''').format(data['text'], data['name'], data['email'], data['product'], data['message'])
             send_mail('Du har motatt en bestiling', message, '', ['sabertoothtri@gmail.com'])
             return redirect('/bestilling-utfort/webiser/bestilling')
     else:

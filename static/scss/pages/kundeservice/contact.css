@@ -1,155 +1,72 @@
-.cover img {
-  height: 100vh;
-}
-
-.cover .content {
-  -webkit-transition: .8s ease-in;
-  transition: .8s ease-in;
-  position: absolute;
-  top: 60px;
+.contact-us {
   width: 100%;
-  padding-left: 15px;
-  opacity: 1;
-  right: 0;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.contact-page {
-  width: 100%;
-  height: 500px;
-  text-align: left;
-  position: absolute;
-  top: 260px;
-  left: 0;
-}
-
-.contact-page form {
-  text-align: left;
-  padding: 10px;
-  margin-top: 0;
-  opacity: 1;
-  -webkit-transition: all ease-in .5s;
-  transition: all ease-in .5s;
-  position: relative;
-  border-radius: 4px;
-  max-width: 400px;
-  background: rgba(0, 0, 0, 0.1);
-}
-
-.contact-page form .form-tag-navn {
-  font-size: 15px;
-  color: white;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  position: absolute;
-  left: 35px;
-  top: 45px;
-  border-radius: 5px;
-  -webkit-transition: .4s, background-color 0s, color 0s;
-  transition: .4s, background-color 0s, color 0s;
-}
-
-.contact-page form .form-tag-navn.click {
-  left: 20px;
-  top: 24px;
-  background-color: white;
-  color: black;
-}
-
-.contact-page form .form-tag-email {
-  font-size: 15px;
-  color: white;
-  border-radius: 5px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  position: absolute;
-  left: 35px;
-  top: 113px;
-  -webkit-transition: .4s, background-color 0s, color 0s;
-  transition: .4s, background-color 0s, color 0s;
-}
-
-.contact-page form .form-tag-email.click {
-  left: 20px;
-  top: 90px;
-  background-color: white;
-  color: black;
-}
-
-.contact-page form .form-tag-message {
-  font-size: 15px;
-  color: white;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  position: absolute;
-  left: 35px;
-  top: 190px;
-  border-radius: 5px;
-  -webkit-transition: .4s, background-color 0s, color 0s;
-  transition: .4s, background-color 0s, color 0s;
-}
-
-.contact-page form .form-tag-message.click {
-  left: 20px;
-  top: 161px;
-  background-color: white;
-  color: black;
-}
-
-.contact-page form textarea {
-  width: 100%;
-  border: none;
-  border-radius: 4px;
-  padding: 3px;
-  padding-top: 5px;
-  height: 100px;
-  outline: none;
-  font-size: 15px;
+  height: auto;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.678);
-  color: white;
-  padding-top: 20px;
+  -webkit-transform: translateY(113px);
+          transform: translateY(113px);
+  margin-bottom: 170px;
 }
 
-.contact-page form input {
-  border: none;
-  width: 100%;
-  height: 45px;
-  border-radius: 4px;
-  padding: 7px;
-  outline: none;
-  font-size: 15px;
+.contact-us form {
+  margin: 0 auto;
+  text-align: left;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.678);
-  color: white;
-  padding-top: 10px;
-}
-
-.contact-page form .form-actions {
-  margin-top: 25px;
-}
-
-.contact-page form .form-actions button {
-  width: 160px;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.25);
+  width: 93%;
+  max-width: 700px;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
+          box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
+  padding: 20px;
   border-radius: 7px;
-  border: 2px solid white;
-  outline: none;
-  color: white;
-  text-align: center;
-  text-decoration: underline;
 }
 
-.contact-page form .form-actions button:hover {
-  background: white;
-  color: black;
+.contact-us form .heading {
+  color: #183B56;
+  font-size: 22px;
+  font-weight: 800;
+  text-shadow: 1px 0 #183B56;
+  letter-spacing: 1px;
+}
+
+.contact-us form .contact-form-inputs label {
+  color: #183B56;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.contact-us form .contact-form-inputs input, .contact-us form .contact-form-inputs textarea {
+  padding: 5px;
+  border-radius: 4px;
+  border: 2px solid #0089f91f;
+  outline: none;
+  color: #183B56;
+  font-size: 13px;
+  width: 82%;
+  max-width: 500px;
+  font-weight: 600;
+}
+
+.contact-us form .contact-form-inputs input {
+  height: 45px;
+}
+
+.contact-us form .contact-form-inputs textarea {
+  min-height: 75px;
+}
+
+.contact-us form .form-actions {
+  margin-top: 23px;
+}
+
+.contact-us form .form-actions button {
+  border-radius: 4px;
+  width: 200px;
+  font-size: 16px;
+  padding: 10px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  color: white;
+  outline: none;
+  border: none;
+  background: #0088F9;
 }
 /*# sourceMappingURL=contact.css.map */

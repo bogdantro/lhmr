@@ -1,462 +1,141 @@
-.cover {
-  height: 38vh;
-}
-
-.cover .content .text {
-  text-align: left;
-}
-
-.cover .content .text .cover-h1 {
-  font-size: 38px;
-}
-
 .make-order {
   width: 100%;
   height: auto;
-  padding: 10px 0;
   background: transparent;
+  -webkit-transform: translateY(113px);
+          transform: translateY(113px);
+  margin-bottom: 170px;
 }
 
 .make-order form {
+  margin: 0 auto;
   text-align: left;
-  margin: 15px;
-  margin-top: 0;
   background: transparent;
-}
-
-.make-order form label {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.make-order form textarea {
-  width: 100%;
-  border: 1px solid #787878;
-  border-radius: 3px;
-  padding: 3px;
-  height: 100px;
-}
-
-.make-order form .order-form-step1 {
-  position: relative;
-  padding-top: 20px;
-  background: transparent;
-}
-
-.make-order form .order-form-step1 h1.heading {
-  margin-bottom: 15px;
-  margin-top: 10px;
-  width: 100%;
-  color: #183B56;
-  font-weight: bold;
-  font-size: 26px;
-}
-
-.make-order form .order-form-step1 .form-tag-products {
-  font-size: 15px;
-  color: #183B56;
-  background: white;
-  font-weight: 600;
-  border-radius: 5px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  position: absolute;
-  left: 25px;
-  top: 84px;
-}
-
-.make-order form .order-form-step1 .form-tag-products.click {
-  left: 25px;
-  top: 61px;
-  font-size: 13.7px;
-}
-
-.make-order form .order-form-step1 .form-tag-hosting {
-  font-size: 15px;
-  color: #183B56;
-  background: white;
-  font-weight: 600;
-  border-radius: 5px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  position: absolute;
-  left: 25px;
-  top: 185px;
-}
-
-.make-order form .order-form-step1 .form-tag-hosting.click {
-  left: 25px;
-  top: 160px;
-  font-size: 13.7px;
-}
-
-.make-order form .order-form-step1 .form-tag-image {
-  font-size: 15px;
-  color: #304792;
-  background: white;
-  border-radius: 5px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  position: absolute;
-  left: 25px;
-  top: 237px;
-}
-
-.make-order form .order-form-step1 .form-tag-color {
-  font-size: 15px;
-  color: #183B56;
-  background: white;
-  font-weight: 600;
-  border-radius: 5px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  position: absolute;
-  left: 25px;
-  top: 287px;
-}
-
-.make-order form .order-form-step1 .form-tag-color.click {
-  left: 25px;
-  top: 262px;
-  font-size: 13.7px;
-}
-
-.make-order form .order-form-step1 .info {
-  text-align: left;
-  color: #183B56;
-  margin-bottom: -5px;
-  margin-top: 15px;
-  font-size: 14px;
-  font-weight: 600;
-  opacity: 0.8;
-  line-height: 130%;
-}
-
-.make-order form .order-form-step1 .form-tag-num_pages {
-  font-size: 15px;
-  color: #183B56;
-  background: white;
-  font-weight: 600;
-  border-radius: 5px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  position: absolute;
-  left: 25px;
-  top: 432px;
-}
-
-.make-order form .order-form-step1 .form-tag-num_pages.click {
-  left: 25px;
-  top: 408px;
-  font-size: 13.7px;
-}
-
-.make-order form .order-form-step1 .product-price {
-  position: absolute;
-  right: 40px;
-  -webkit-transform: translateY(-37.3px) translateX(-10px);
-          transform: translateY(-37.3px) translateX(-10px);
-  font-size: 14px;
-  color: #183B56;
-  opacity: 0.9;
-}
-
-.make-order form .order-form-step1 .hosting-price {
-  position: absolute;
-  right: 40px;
-  -webkit-transform: translateY(-37.3px) translateX(-10px);
-          transform: translateY(-37.3px) translateX(-10px);
-  font-size: 14px;
-  color: #183B56;
-  opacity: 0.9;
-}
-
-.make-order form .order-form-step1 .num-pages-price {
-  position: absolute;
-  right: 40px;
-  -webkit-transform: translateY(-37.3px) translateX(-10px);
-          transform: translateY(-37.3px) translateX(-10px);
-  font-size: 14px;
-  color: #183B56;
-  opacity: 0.9;
-}
-
-.make-order form .order-form-step1 .products-dropdown {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  z-index: 1000;
-  text-align: center;
+  width: 93%;
+  max-width: 700px;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
+          box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
   padding: 20px;
-  opacity: 0;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  pointer-events: none;
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
-  background: white;
+  border-radius: 7px;
 }
 
-.make-order form .order-form-step1 .products-dropdown.active {
-  opacity: 1;
-  pointer-events: visible;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-.make-order form .order-form-step1 .products-dropdown h1 {
-  margin: auto;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  width: 230px;
-  color: black;
-  font-size: 24px;
-  border: 0.5px solid rgba(209, 209, 209, 0.397);
-  padding: 10px;
-  border-radius: 15px;
-}
-
-.make-order form .order-form-step1 .products-dropdown .choices h1 {
-  width: 210px;
-  font-size: 16px;
-}
-
-.make-order form .order-form-step1 .hosting-dropdown {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  z-index: 1000;
-  text-align: center;
-  padding: 20px;
-  opacity: 0;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  pointer-events: none;
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
-  background: white;
-}
-
-.make-order form .order-form-step1 .hosting-dropdown.active {
-  opacity: 1;
-  pointer-events: visible;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-.make-order form .order-form-step1 .hosting-dropdown h1 {
-  margin: auto;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  width: 230px;
-  color: black;
-  font-size: 24px;
-  border: 0.5px solid rgba(209, 209, 209, 0.397);
-  padding: 10px;
-  border-radius: 15px;
-}
-
-.make-order form .order-form-step1 .hosting-dropdown .choices h1 {
-  width: 210px;
-  font-size: 16px;
-}
-
-.make-order form .order-form-step1 .num-pages-dropdown {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  z-index: 1000;
-  text-align: center;
-  padding: 20px;
-  opacity: 0;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  pointer-events: none;
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
-  background: white;
-}
-
-.make-order form .order-form-step1 .num-pages-dropdown.active {
-  opacity: 1;
-  pointer-events: visible;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-.make-order form .order-form-step1 .num-pages-dropdown h1 {
-  margin: auto;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  width: 230px;
-  color: black;
-  font-size: 24px;
-  border: 0.5px solid rgba(209, 209, 209, 0.397);
-  padding: 10px;
-  border-radius: 15px;
-}
-
-.make-order form .order-form-step1 .num-pages-dropdown .choices h1 {
-  width: 210px;
-  font-size: 16px;
-}
-
-.make-order form .order-form-step1 .arrow-down {
-  position: absolute;
-  right: 2px;
-  padding: 12px;
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
-  border-radius: 0;
-}
-
-.make-order form .order-form-step1 .arrow-down i {
-  font-size: 20px;
+.make-order form h1 {
   color: #183B56;
+  font-size: 22px;
+  font-weight: 800;
+  text-shadow: 1px 0 #183B56;
+  letter-spacing: 1px;
 }
 
-.make-order form .order-form-step1 .num-pages-extra-pages {
-  width: 100%;
-  text-align: center;
+.make-order form .order-form-inputs label {
+  color: #183B56;
+  font-size: 15px;
+  font-weight: 800;
 }
 
-.make-order form .order-form-step1 .input {
-  width: 100%;
-  border: 1px solid lightgray;
+.make-order form .order-form-inputs input, .make-order form .order-form-inputs textarea {
+  padding: 5px;
   border-radius: 4px;
-  padding: 14px;
+  border: 2px solid #0089f91f;
   outline: none;
-  font-size: 15px;
+  color: #183B56;
+  font-size: 13px;
+  width: 82%;
+  max-width: 500px;
+  font-weight: 600;
+}
+
+.make-order form .order-form-inputs input {
+  height: 45px;
+}
+
+.make-order form .order-form-inputs textarea {
+  min-height: 75px;
+}
+
+.make-order form .order-form-inputs .product-input.active {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.make-order form .order-form-inputs .product-input:active {
+  background: #d5edff9a;
+}
+
+.make-order form .order-form-inputs .product-arrow {
+  -webkit-transform: translateX(-25px) translateY(-2px);
+          transform: translateX(-25px) translateY(-2px);
+  font-size: 16px;
+  -webkit-transition: .2s !important;
+  transition: .2s !important;
+}
+
+.make-order form .order-form-inputs .product-arrow.active {
+  -webkit-transform: rotateX(180deg) translateX(-25px) translateY(-4px);
+          transform: rotateX(180deg) translateX(-25px) translateY(-4px);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  color: #4287f5;
+}
+
+.make-order form .order-form-inputs .product-dropdown {
+  position: relative;
+  width: 82%;
+  height: auto;
   background: white;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  display: none;
+  border: 2px solid #0089f915;
+  border-top: none;
 }
 
-.make-order form .order-form-step1 .input.order-image {
-  padding: 20px;
+.make-order form .order-form-inputs .product-dropdown a {
+  color: #082133;
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 19px 0;
+  padding-left: 5px;
+  cursor: pointer;
 }
 
-.make-order form .order-form-step1 .input.order-products {
-  padding: 17px;
+.make-order form .order-form-inputs .product-dropdown a span {
+  color: #0088F9;
+  float: right;
+  font-size: 12px;
+  -webkit-transform: translateY(2px) translateX(-10px);
+          transform: translateY(2px) translateX(-10px);
 }
 
-.make-order form .order-form-step1 .input.order-hosting {
-  padding: 7px;
+.make-order form .order-form-inputs .product-dropdown a:active {
+  background: #d5edff9a;
 }
 
-.make-order form .order-form-step1 .input.num-pages-extra {
-  width: 80%;
-  margin: 7px auto;
-  padding: 6px;
+.make-order form .order-form-inputs .product-dropdown a::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.17);
+  -webkit-transform: translateY(19px) translateX(0);
+          transform: translateY(19px) translateX(0);
+  position: absolute;
+  left: 0;
+}
+
+.make-order form .order-form-inputs .product-dropdown a:nth-child(3) {
+  border-radius: 4px;
+}
+
+.make-order form .order-form-inputs .product-dropdown a:nth-child(3)::after {
   display: none;
 }
 
-.make-order form .order-form-step2 {
-  position: relative;
-  padding-top: 20px;
-}
-
-.make-order form .order-form-step2 h1.heading {
-  margin-bottom: 15px;
-  margin-top: 10px;
-  width: 100%;
-  color: #183B56;
-  font-weight: bold;
-  font-size: 26px;
-}
-
-.make-order form .order-form-step2 .form-tag-name {
-  font-size: 15px;
-  color: #183B56;
-  background: white;
-  font-weight: 600;
-  border-radius: 5px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  position: absolute;
-  left: 25px;
-  top: 84px;
-}
-
-.make-order form .order-form-step2 .form-tag-name.click {
-  left: 25px;
-  top: 61px;
-  font-size: 13.7px;
-}
-
-.make-order form .order-form-step2 .form-tag-email {
-  font-size: 15px;
-  color: #183B56;
-  background: white;
-  font-weight: 600;
-  border-radius: 5px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  position: absolute;
-  left: 25px;
-  top: 161px;
-}
-
-.make-order form .order-form-step2 .form-tag-email.click {
-  left: 25px;
-  top: 135px;
-  font-size: 13.7px;
-}
-
-.make-order form .order-form-step2 .form-tag-message {
-  font-size: 15px;
-  color: #183B56;
-  background: white;
-  font-weight: 600;
-  border-radius: 5px;
-  background: white;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 2px;
-  position: absolute;
-  left: 25px;
-  top: 235px;
-}
-
-.make-order form .order-form-step2 .form-tag-message.click {
-  left: 25px;
-  top: 214px;
-  font-size: 13.7px;
-}
-
-.make-order form .order-form-step2 input {
-  width: 100%;
-  border: 1px solid lightgray;
-  border-radius: 4px;
-  padding: 14px;
-  outline: none;
-  font-size: 15px;
-  background: white;
-}
-
-.make-order form .order-form-step2 textarea {
-  width: 100%;
-  border: 1px solid lightgray;
-  border-radius: 4px;
-  padding: 3px;
-  padding-top: 5px;
-  height: 100px;
-  outline: none;
-  font-size: 15px;
+.make-order form .order-form-inputs .product-dropdown.active {
+  display: block;
 }
 
 .make-order form .form-actions {
@@ -470,9 +149,9 @@
   padding: 10px;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  color: black;
+  color: white;
   outline: none;
-  border: 2px solid black;
-  background: white;
+  border: none;
+  background: #0088F9;
 }
 /*# sourceMappingURL=order.css.map */

@@ -7,118 +7,53 @@
 <script rel="stylesheet" src="{% static '/js/order.js' %}" type="text/javascript"></script>
 
 
-<!-- LOADER -->
+<!-- LOADER
 <div class="load-wrapp" id="orderLoader">
     <div class="load-2">
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
     </div>
-</div>
+</div> -->
 
-<!-- COVER -->
-<div class="cover" id="cover">
-   <!-- ALL COVER CONENT -->
-   <div class="content">
-      <!-- COVER SECTION 1 -->
-      <div class="cover-section1">
-         <!-- ALL COVER TEXT -->
-         <div class="text">
-            <h1 class="cover-h1">Kom I Gang Med Bestillingen</h1>
-         </div>
-      </div>
-   </div>
-</div>
 
 <!-- MAKE ORDER -->
 <div class="make-order">
     <form method='post' id="makeOrder" enctype="multipart/form-data">
+       <h1 class="heading">Start Bestilling</h1>
         {% csrf_token %}
         {{form.errors}}
-        <!-- STEP ONE -->
-        <div class="order-form-step1">
-           <h1 class="heading">Steg 1</h1>
-           <!-- SITES -->
-           <label for="products" class="form-tag-products tag" id="productLabel">Velg nettside</label>
-           <br>
-           <input type="text" name="products" class="products input" id="products" readonly required oninvalid="this.setCustomValidity('Værsåsnill, velg et produkt')" oninput="this.setCustomValidity('')" onclick="orderProductDropdown()"><div class="product-price" id="productPrice" onclick="orderProductDropdown()">0kr</div><div onclick="orderProductDropdown()" class="arrow-down"><i class="fa-solid fa-caret-down"></i></div>
-           <div class="products-dropdown" id="productDropdown">
-               <h1 class="dropdown-none" onclick="noneProducts()">---------</h1>
-               <div class="choices">
-                  <h1 onclick="ecommerce()">Nettbutikk/eCommerce</h1>
-                  <h1 onclick="blog()">Blogg</h1>
-               </div>
-            </div>
-            <br>
-            <br>
-           <!-- HOSTING -->
-           <label for="hosting" class="form-tag-hosting tag" id="hostingLabel">Vil du ha våres hosting tjeneste?</label>
-           <br>
-           <input type="text" name="hosting" class="hosting input" id="hosting" readonly required oninvalid="this.setCustomValidity('Værsåsnill, velg ja eller nei')" oninput="this.setCustomValidity('')" onclick="orderhostingDropdown()"><div class="hosting-price" id="hostingPrice" onclick="orderhostingDropdown()">0kr</div><div onclick="orderhostingDropdown()" class="arrow-down"><i class="fa-solid fa-caret-down"></i></div>
-           <div class="hosting-dropdown" id="hostingDropdown">
-              <h1 class="dropdown-none" onclick="noneHosting()">---------</h1>
-            <div class="choices">
-               <h1 onclick="ja()">Ja</h1>
-               <h1 onclick="nei()">Nei</h1>
-             </div>
-          </div>
-          <br>
-          <br>
-           <!-- COLOR -->
-           <label for="color" class="form-tag-color tag" id="colorLabel" onclick="colorInput()">Velg en farge som du vil ha med</label>
-           <br>
-            <input type="text" name="color_hex" class="color-hex input" id="color_hex" onclick="colorInput()">
-
-           <br>
-           <br>
-
-            <!-- EXTRA PAGES -->
-            <h1 class="info">Alle priser har inkludert en Om oss side og en Kontakt oss side. En ekstra side koster 399kr</h1>
-            <label for="num_pages" class="form-tag-num_pages tag" id="numPagesLabel">Velg antall ekstra sider</label>
-            <br>
-            <input type="number" id="num_pages" name="num_pages" class="input" readonly onclick="orderNumPagesDropdown()"><div class="num-pages-price" id="numPagesPrice" onclick="orderNumPagesDropdown()">0kr</div><div onclick="orderNumPagesDropdown()" class="arrow-down"><i class="fa-solid fa-caret-down"></i></div>
-            <div class="num-pages-dropdown" id="numPagesDropdown">
-                  <h1 class="dropdown-none" onclick="noneNumPages()">---------</h1>
-                  <div class="choices">
-                     <h1 onclick="a1()">1</h1>
-                     <h1 onclick="a2()">2</h1>
-                     <h1 onclick="a3()">3</h1>
-                     <h1 onclick="a4()">4</h1>
-                     <h1 onclick="a5()">5</h1>
-                     <h1 onclick="a6()">6</h1>
-                     <h1 onclick="a7()">7</h1>
-                     <h1 onclick="a8()">8</h1>
-                     <h1 onclick="a9()">9</h1>
-                     <h1 onclick="a10()">10</h1>
-                  </div>
-               </div>
-             <div class="num-pages-extra-pages">
-                <input type="text" name="page1" class="input num-pages-extra" value="Side 1:" id="page1">
-                <input type="text" name="page2" class="input num-pages-extra" value="Side 2:" id="page2">
-                <input type="text" name="page3"  class="input num-pages-extra" value="Side 3:" id="page3">
-                <input type="text" name="page4"  class="input num-pages-extra" value="Side 4:" id="page4">
-                <input type="text" name="page5"  class="input num-pages-extra" value="Side 5:" id="page5">
-                <input type="text" name="page6"  class="input num-pages-extra" value="Side 6:" id="page6">
-                <input type="text" name="page7"  class="input num-pages-extra" value="Side 7:" id="page7">
-                <input type="text" name="page8"  class="input num-pages-extra" value="Side 8:" id="page8">
-                <input type="text" name="page9"  class="input num-pages-extra" value="Side 9:" id="page9">
-                <input type="text" name="page10"  class="input num-pages-extra" value="Side 10:" id="page10">
-            </div>
-         </div>
         <br>
-        <div class="order-form-step2">
-           <h1 class="heading">Steg 2</h1>
-           <label for="name" class="form-tag-name tag" id="nameLabel">Navn</label>
+        <!-- ORDER FORM INPUTS -->
+        <div class="order-form-inputs">
+           <!-- PRODUCT -->
+           <label for="product">Velg nettside</label>
            <br>
-           <input type="text" id="name" name="name" onclick="orderName()" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
+           <input type="text" name="product" class="product-input" id="product" readonly onclick="productDropdown()" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')"><i class="fas fa-sort-down product-arrow" id="productArrow"></i>
+           <!-- PRODUCT DROPDOWN -->
+           <div class="product-dropdown" id="productDrop">
+              <a onclick="smallPack()">Nettbutikk/eCommerce <span>LITEN</span></a>
+              <a onclick="middlePack()">Nettbutikk/eCommerce <span>MIDDELS</span></a>
+              <a onclick="bigPack()">Nettbutikk/eCommerce <span>STOR</span></a>
+           </div>
            <br>
-           <label for="email" class="form-tag-email tag" id="emailLabel">Epost</label>
            <br>
-           <input type="email" id="email" name="email" onclick="orderEmail()" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
+           <!-- NAME -->
+           <label for="name">Navn</label>
            <br>
-           <label for="message" class="form-tag-message tag" id="messageLabel">Har du noe å fortelle oss?</label>
+           <input type="text" id="name" name="name" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
            <br>
-           <textarea id="message" name="message" onclick="orderMessage()"></textarea>
+           <br>
+           <!-- EMAIL -->
+           <label for="email">Epost</label>
+           <br>
+           <input type="email" id="email" name="email" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
+           <br>
+           <br>
+           <!-- MESSAGE -->
+           <label for="message">Har du noe å fortelle oss?</label>
+           <br>
+           <textarea id="message" name="message"></textarea>
            <br>
          </div> 
         <div class="form-actions">

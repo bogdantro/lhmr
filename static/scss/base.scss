@@ -436,15 +436,16 @@ $loader: rgb(80, 104, 180);
         text-align: center;
         right: 16px;
         cursor: pointer;
-        color: black;
         text-align: center;
         border-radius: 15px;
         transition: .2s;
         font-size: 14px;
         border-radius: 4px;
         text-decoration: none;
-        background: white;
-        border: 2px solid black;
+        color: white;
+        outline: none;
+        border: none;
+        background: #0088F9; 
         font-weight: 600;
         &:hover{
             filter: brightness(85%);
@@ -463,6 +464,7 @@ $loader: rgb(80, 104, 180);
     max-width: 400px;
     object-fit: contain;
     height: auto;
+    filter: brightness(95%);
   }
 }
 // PRICES

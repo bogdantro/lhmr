@@ -35,17 +35,6 @@
             </div>
             <ul class="sidebar-ul">
                 <li class="sidebar-li" id="sidebarLi">
-                    <div class="prices-dropdown">
-                        <a onclick="prices()" id="pricesToggle">Priser<i class="fas fa-sort-down"></i></a>
-                        <div class="prices-dropdown-links" id="pricesDropdown">
-                            <div class="nav-link-parent">
-                                <a href="">Nettbutikk/eCommerce</a>
-                            </div>
-                            <div class="nav-link-parent">
-                                <a href="">Blogg</a>
-                            </div>
-                        </div>
-                    </div>
                     <div class="help-dropdown">
                         <a onclick="help()" id="helpToggle">Kundeservice<i class="fas fa-sort-down"></i></a>
                         <div class="help-dropdown-links" id="helpDropdown">
@@ -68,7 +57,7 @@
                         <div class="account-dropdown-links" id="accountDropdown">
                             {% if request.user.is_authenticated %}
                             <div class="nav-link-parent">
-                                <a onclick="myaccount()">Min bruker</a>
+                                <a href="/min-bruker">Min bruker</a>
                             </div>
                             <div class="nav-link-parent">
                                 <a id="logOut" href="{% url 'logout' %}">Logg ut</a>
@@ -83,7 +72,6 @@
                             {% endif %}
                         </div>
                     </div>
-                    <a onclick="">Vårt arbeid</a>
                     <div class="about-dropdown">
                         <a onclick="about()" id="aboutToggle">Hvem vi er<i class="fas fa-sort-down"></i></a>
                         <div class="about-dropdown-links" id="aboutDropdown">
@@ -104,7 +92,19 @@
                             </div>
                         </div>
                     </div>
-                    <a>Kontakt oss</a>
+                    <div class="prices-dropdown">
+                        <a onclick="prices()" id="pricesToggle">Priser<i class="fas fa-sort-down"></i></a>
+                        <div class="prices-dropdown-links" id="pricesDropdown">
+                            <div class="nav-link-parent">
+                                <a href="">Nettbutikk/eCommerce</a>
+                            </div>
+                            <div class="nav-link-parent">
+                                <a href="">Blogg</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a onclick="">Vårt arbeid</a>
+                    <a href="/kontakter-oss">Kontakt oss</a>
                 </li>   
             </ul>
         </div>
