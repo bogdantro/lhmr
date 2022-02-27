@@ -427,39 +427,23 @@ $loader: rgb(80, 104, 180);
       font-size: 16px;
     }
   }
-    .webiste-edit-action{
-      transform: translateY(45px);
-      a{
-        background: #007be0;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        right: 16px;
-        cursor: pointer;
-        text-align: center;
-        border-radius: 15px;
-        transition: .2s;
-        font-size: 14px;
-        border-radius: 4px;
-        text-decoration: none;
-        color: white;
-        outline: none;
-        border: none;
-        background: #0088F9; 
-        font-weight: 600;
-        &:hover{
-            filter: brightness(85%);
-        }
-        &:focus{
-            filter: brightness(85%);
-        }
-        &:active{
-            filter: brightness(85%);
-        }
-    }
+  .edit-image{
+    width: 80%;
+    height: auto;
+    object-fit: scale-down;
+    max-width: 420px;
+    filter: brightness(100%);
+    transform: translateX(-50%) translateY(40px);
+    position: relative;
+    left: 50%;
   }
   img{
-    transform: translateY(105px) translateX(-30px);
+    image-rendering:-moz-crisp-edges;          /* Firefox        */
+    image-rendering:-o-crisp-edges;            /* Opera          */
+    image-rendering:-webkit-optimize-contrast; /* Safari         */
+    image-rendering:optimize-contrast;         /* CSS3 Proposed  */
+    -ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
+    transform: translateY(75px) translateX(-30px);
     width: 120%;
     max-width: 400px;
     object-fit: contain;
@@ -472,7 +456,7 @@ $loader: rgb(80, 104, 180);
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 120px;
+  margin-top: 60px;
   padding: 25px;
   position: relative;
   .content{
