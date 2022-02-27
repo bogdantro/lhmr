@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from apps.core.views import hjemme, about, email_success, proccess, forum, edit, frontend, contact
+from apps.core.views import hjemme, about, email_success, proccess, forum, edit, frontend, contact, request_edit
 from apps.store.views import product_detail
 from django.conf import settings
 from django.contrib.sitemaps.views import sitemap
@@ -23,7 +23,7 @@ urlpatterns = [
     # KUNDESERVICE PAGES
         path('prossesen-av-bestillinger/', proccess, name='proccess'),
         path('webiser-forum/', forum, name='forum'),
-        path('sporr-om-endringer/', edit, name='edit'),
+        path('sds/', edit, name='edit'),
         path('de-tre-frontend-spraakene/', frontend, name='frontend'),
         path('kontakter-oss/', contact, name='contact'),
 
@@ -32,6 +32,7 @@ urlpatterns = [
     path('bestill/', send_order, name='send-order'),
     path('bestilling-utfort/webiser/bestilling/', order_success, name='order_success'),
     path('email-success/', email_success, name='email_success'),
+    path('sporr-om-endringer/', request_edit, name='request_edit'),
 
 
     #AUTH

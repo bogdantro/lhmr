@@ -80,7 +80,7 @@
   transition: all .2s ease-in-out;
   color: white;
   outline: none;
-  border: none;
-  background: #0088F9;
+  background: #008cff;
+  border: 2px solid #0082ec;
 }
 /*# sourceMappingURL=myaccount.css.map */

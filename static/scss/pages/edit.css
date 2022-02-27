@@ -1,4 +1,4 @@
-.login {
+.request-edit {
   width: 100%;
   height: auto;
   background: transparent;
@@ -7,7 +7,7 @@
   margin-bottom: 170px;
 }
 
-.login form {
+.request-edit form {
   margin: 0 auto;
   text-align: left;
   background: transparent;
@@ -19,7 +19,7 @@
   border-radius: 7px;
 }
 
-.login form .heading {
+.request-edit form .heading {
   color: #183B56;
   font-size: 22px;
   font-weight: 800;
@@ -27,13 +27,13 @@
   letter-spacing: 1px;
 }
 
-.login form .login-form-inputs label {
+.request-edit form .edit-form-inputs label {
   color: #183B56;
   font-size: 15px;
   font-weight: 800;
 }
 
-.login form .login-form-inputs input {
+.request-edit form .edit-form-inputs input, .request-edit form .edit-form-inputs textarea {
   padding: 5px;
   border-radius: 4px;
   border: 2px solid #0089f91f;
@@ -43,14 +43,21 @@
   width: 82%;
   max-width: 500px;
   font-weight: 600;
+}
+
+.request-edit form .edit-form-inputs input {
   height: 45px;
 }
 
-.login form .form-actions {
+.request-edit form .edit-form-inputs textarea {
+  min-height: 75px;
+}
+
+.request-edit form .form-actions {
   margin-top: 23px;
 }
 
-.login form .form-actions button {
+.request-edit form .form-actions button {
   border-radius: 4px;
   width: 200px;
   font-size: 16px;
@@ -59,14 +66,7 @@
   transition: all .2s ease-in-out;
   color: white;
   outline: none;
-  border: none;
   background: #008cff;
   border: 2px solid #0082ec;
 }
-
-.login form .or-signup {
-  font-size: 13px;
-  color: #183B56;
-  font-weight: 800;
-}
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=edit.css.map */

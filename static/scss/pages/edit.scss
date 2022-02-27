@@ -1,13 +1,14 @@
+// STANDARD PHONE
 $loader: rgb(80, 104, 180);
 
 // STANDARD PHONE
-.contact-us{
+.request-edit{
     width: 100%;
     height: auto;
     background: transparent;
     transform: translateY(113px);
     margin-bottom: 170px;
-    // CONTACT FORM
+    // EDIT FORM
     form{
       margin: 0 auto;
       text-align: left;
@@ -17,7 +18,7 @@ $loader: rgb(80, 104, 180);
       box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
       padding: 20px;
       border-radius: 7px;
-        // CONTACT HEADING
+        // EDIT HEADING
         .heading{
           color: #183B56;
           font-size: 22px;
@@ -25,7 +26,7 @@ $loader: rgb(80, 104, 180);
           text-shadow: 1px 0 #183B56;
           letter-spacing:1px; 
         }
-        .contact-form-inputs{
+        .edit-form-inputs{
           label{
             color: #183B56;
             font-size: 15px;
@@ -49,7 +50,7 @@ $loader: rgb(80, 104, 180);
             min-height: 75px;
           }
         }
-        // CONTACT FORM ACTIONS
+        // EDIT FORM ACTIONS
         .form-actions{
           margin-top: 23px;
           button{

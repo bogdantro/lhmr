@@ -63,6 +63,9 @@ def about(request):
 def email_success(request):
     return render(request, 'pages/email.html')
 
+def request_edit(request):
+    return render(request, 'pages/edit.html')
+
 # KUNDESERVICE PAGES
 def contact(request):
 
