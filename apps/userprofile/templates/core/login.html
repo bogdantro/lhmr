@@ -11,12 +11,17 @@
     <form id="loginForm" method="post">
         <h1 class="heading">Logg inn</h1>
         {% csrf_token %}
-        {{form.errors}}
+
         <br>
         <!-- USER LOGIN FORM INPUTS -->
         <div class="login-form-inputs">
+            {% if form.errors %}
+                <div class="alert alert-danger">
+                    <strong>Brukernavn eller passord er feil</strong>
+                </div>
+            {% endif %}
             <!-- NAME -->
-            <label for="username">Navn</label>
+            <label for="username">Brukernavn</label>
             <br>
             <input type="text" id="username" name="username" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
             <br>
@@ -28,7 +33,7 @@
             <br>
         </div> 
         <div class="form-actions">
-            <button onclick="orderLoading()" name="order" value="order" type='submit'>Logg inn</button>
+            <button type='submit'>Logg inn</button>
         </div>
         <br>
         <br>

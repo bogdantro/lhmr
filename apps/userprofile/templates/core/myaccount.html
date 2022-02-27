@@ -7,30 +7,50 @@
 <div class="myaccount">
     <div class="account-card">
         <h1 class="heading">Min bruker</h1>
+        <hr>
+        <div class="your-info">
+            <p><span>Brukernavn:</span> &nbsp; {{ request.user.username }}</p>
+            <p><span>Navn:</span> &nbsp; {{ request.user.get_full_name }}</p>
+            <p><span>Epost:</span> &nbsp; {{ request.user.email }}</p>
+            <a class="myaccount-logout" href="{% url 'logout' %}">Logg ut</a>
+        </div>
+        
+        <!-- <p>Zip and place: {{ request.user.userprofile.zipcode }} {{ request.user.userprofile.place }}</p> -->
 
-        <a href="{% url 'logout' %}">Logg ut</a>
-    
         <hr>
     
-        <h2 class="heading">Dine opplysninger</h2>
+        <h1 class="heading">Mine bestillinger</h1>
     
-        <p><strong>Name: </strong>{{ request.user.get_full_name }}</p>
-        <p><strong>E-mail: </strong>{{ request.user.email }}</p>
-        <p><strong>Address: </strong>{{ request.user.userprofile.address }}</p>
-        <p><strong>Zip and place: </strong>{{ request.user.userprofile.zipcode }} {{ request.user.userprofile.place }}</p>
-        <p><strong>Phone: </strong>{{ request.user.userprofile.phone }}</p>
-    
-        <hr>
-    
-        <h2 class="heading">Mine bestillinger</h2>
-    
-        {% for order in request.user.orders.all %}
-        du har en <br>
-        betalt: <br>
-           {{ order.paid }}
-        {% empty %}
-            <p>You don't have any order yet...</p>
-        {% endfor %}
+        <div class="my-orders">
+            {% for order in request.user.orders.all %}
+                <div class="you-got-orders">
+                    <p><span>Status:</span> &nbsp; {{order.status}}</p> 
+                    <p><span>Bestillt:</span> &nbsp; {{order.created_at}}</p> 
+                    <p><span>Bestilling ID:</span> &nbsp; {{order.id}}</p> 
+                    <p><span>Betalt: &nbsp; </span> 
+                        {% if order.paid %}
+                           Du har betalt
+                        {% else %}
+                            Du har ikke betalt
+                        {% endif %}  
+                        <hr>
+                        {% if order.is_finished %}
+                            <div style="text-align: left; padding: 15px 7px;" class="alert alert-info">Ønsker du å endre noe på nettsiden din? Vi er her for å hjelpe deg! Trykk på knappen under for å spørre om endringer</div>
+                            {% if order.after_14_days %}
+                            <div class="alert alert-danger">Gratis perioden for endringer har utløpt!</div> 
+                            {% else %}
+                            <div class="alert alert-warning">Husk at du har gratis endringer kunn i 14 dager etter bestillingen har blitt fullført</div> 
+                            {% endif %}
+                            <button>Spørr om endringer</button>
+                        {% else %}
+                            <div style="text-align: left; padding: 15px 7px;" class="alert alert-info">Du kan spørre om endringer på nettsiden her da bestillingen er fullført</div>   
+                        {% endif %}
+                    </p>
+                </div>            
+            {% empty %}
+                <p class="no-orders-yet">Du har ingen bestillinger enda...</p>
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -21,9 +21,66 @@
 
 .myaccount .account-card .heading {
   color: #183B56;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   text-shadow: 1px 0 #183B56;
   letter-spacing: 1px;
+}
+
+.myaccount .account-card .myaccount-logout {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.myaccount .account-card .your-info {
+  margin: 14px 0;
+}
+
+.myaccount .account-card .your-info p {
+  color: #183B56;
+  font-size: 15px;
+}
+
+.myaccount .account-card .your-info p span {
+  font-weight: 800;
+}
+
+.myaccount .account-card .my-orders {
+  margin: 30px 0;
+}
+
+.myaccount .account-card .my-orders .you-got-orders {
+  margin: 20px 0;
+  text-align: left;
+  background: transparent;
+  width: 93%;
+  max-width: 300px;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
+          box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
+  padding: 20px;
+  border-radius: 7px;
+}
+
+.myaccount .account-card .my-orders .you-got-orders p {
+  color: #183B56;
+  font-size: 15px;
+  width: 100%;
+}
+
+.myaccount .account-card .my-orders .you-got-orders p span {
+  font-weight: 800;
+}
+
+.myaccount .account-card .my-orders .you-got-orders button {
+  border-radius: 4px;
+  width: 200px;
+  font-size: 16px;
+  padding: 10px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  color: white;
+  outline: none;
+  border: none;
+  background: #0088F9;
 }
 /*# sourceMappingURL=myaccount.css.map */

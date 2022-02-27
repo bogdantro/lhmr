@@ -30,9 +30,8 @@ ALLOWED_HOSTS = []
 # Cart
 
 SESSION_COOKIE_AGE = 86400
-CART_SESSION_ID = 'cart'
 LOGOUT_REDIRECT_URL = 'hjemme'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/min-bruker'
 CRISPY_TEMPLATE_PACK = 'uni_form'
 
 # Email
@@ -44,6 +43,7 @@ EMAIL_HOST_USER = 'sabertoothtri@gmail.com'
 EMAIL_HOST_PASSWORD = 'xhjtvvrgkncwvfmq'
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 
 
 AUTHENTICATION_BACKENDS = [
