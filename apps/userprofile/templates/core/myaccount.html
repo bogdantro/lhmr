@@ -35,7 +35,7 @@
                         {% endif %}  
                         <hr>
                         {% if order.is_finished %}
-                            <div style="text-align: left; padding: 15px 7px;" class="alert alert-info">Ønsker du å endre noe på nettsiden din? Vi er her for å hjelpe deg! Trykk på knappen under for å spørre om endringer</div>
+                            <div class="alert alert-info">Ønsker du å endre noe på nettsiden din? Vi er her for å hjelpe deg! Trykk på knappen under for å spørre om endringer</div>
                             {% if order.after_14_days %}
                             <div class="alert alert-danger">Gratis perioden for endringer har utløpt!</div> 
                             {% else %}
@@ -43,7 +43,7 @@
                             {% endif %}
                             <button>Spørr om endringer</button>
                         {% else %}
-                            <div style="text-align: left; padding: 15px 7px;" class="alert alert-info">Du kan spørre om endringer på nettsiden her da bestillingen er fullført</div>   
+                            <div class="alert alert-info">Du kan spørre om endringer på nettsiden her da bestillingen er fullført</div>   
                         {% endif %}
                     </p>
                 </div>            
