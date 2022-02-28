@@ -93,80 +93,19 @@
         opacity: 0;
         pointer-events: none;
         display: unset;
-        .sidebar-myaccount{
-            width: 100%;
-            height: 50px;
-            position: fixed;
+        .sidebar-bottom-img{
+            position: absolute;
             bottom: 0;
             left: 0;
-            border-top: 1px solid lightgray;
-            z-index: 100;
-            display: flex;
-            opacity: 1;
-            transition: .4s;
-            .user-is-login{
-                z-index: 10;
-                display: flex;
-                width: 100%;
-                .part1{
-                    display: flex;
-                    width: 50%;
-                    border-right: 1px solid lightgray;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 10px;
-                    p{
-                        color: #082133;
-                        font-weight: 800;
-                        font-size: 14.6px;
-                        cursor: pointer;
-                        transform: translateY(8.5px) translateX(3px);
-                    }
-                }
-                .part2{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 50%;
-                    a{
-                        width: auto;
-                        font-size: 14px;
-                        font-weight: 800;
-                        margin: 0 10px;
-                    }
-                }
-            }
-            .user-is-not-login{
-                z-index: 10;
-                display: flex;
-                width: 100%;
-                .part1{
-                    display: flex;
-                    width: 50%;
-                    border-right: 1px solid lightgray;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 10px;
-                    p{
-                        color: #082133;
-                        font-weight: 800;
-                        font-size: 14.6px;
-                        cursor: pointer;
-                        transform: translateY(8.5px) translateX(3px);
-                    }
-                }
-                .part2{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 50%;
-                    a{
-                        width: auto;
-                        font-size: 14px;
-                        font-weight: 800;
-                        margin: 0 10px;
-                    }
-                }
+            width: 100%;
+            height: auto;
+            img{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%) translateY(-48px);
+                bottom: 0;
+                width: 100px;
+                height: auto;
             }
         }
         .sidebar-ul{
@@ -177,6 +116,88 @@
             .sidebar-li{
                 list-style: none;
                 width: 100%;
+                .sidebar-myaccount{
+                    width: 100%;
+                    height: max-content;
+                    z-index: 100;
+                    display: flex;
+                    opacity: 1;
+                    transition: .4s;
+                    .user-is-login{
+                        z-index: 10;
+                        display: flex;
+                        width: 100%;
+                        .part1{
+                            width: 50%;
+                            display: flex;
+                            border-right: 1px solid lightgray;
+                            p{
+                                color: #082133;
+                                display: inline-block;
+                                text-decoration: none;
+                                font-weight: 800;
+                                font-size: 14.6px;
+                                transform:  translateX(60px);
+                                position: absolute;
+                                padding: 19px 0;
+                            }
+                            i{
+                                font-size: 22px;
+                                align-self: center;
+                                transform: translateY(0) translateX(25px);
+                            }
+                        }
+                        .part2{
+                            width: 50%;
+                            a{
+                                width: auto;
+                                font-size: 14px;
+                                font-weight: normal;
+                                text-decoration: underline;
+                                &:active{
+                                    background: none;
+                                }
+                            }
+                        }
+                    }
+                    .user-is-not-login{
+                        z-index: 10;
+                        display: flex;
+                        width: 100%;
+                        .part1{
+                            width: 50%;
+                            display: flex;
+                            border-right: 1px solid lightgray;
+                            p{
+                                color: #082133;
+                                display: inline-block;
+                                text-decoration: none;
+                                font-weight: 800;
+                                font-size: 14.6px;
+                                transform:  translateX(60px);
+                                position: absolute;
+                                padding: 19px 0;
+                            }
+                            i{
+                                font-size: 22px;
+                                align-self: center;
+                                transform: translateY(0) translateX(25px);
+                            }
+                        }
+                        .part2{
+                            width: 50%;
+                            a{
+                                width: auto;
+                                font-size: 14px;
+                                font-weight: normal;
+                                text-decoration: underline;
+                                &:active{
+                                    background: none;
+                                }
+                            }
+                        }
+                    }
+                }
                 a{
                     color: #082133;
                     display: inline-block;

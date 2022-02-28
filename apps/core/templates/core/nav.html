@@ -30,28 +30,9 @@
         </div>
         <!-- SIDEBAR -->
         <div class="sidebar" id="sidebar">
-            <div class="sidebar-myaccount">
-                {% if request.user.is_authenticated %}
-                <div class="user-is-login">
-                    <div class="part1">
-                        <p>Hei&nbsp; - &nbsp;{{ request.user.first_name }}</p>
-                    </div>
-                    <div class="part2">
-                        <a href="/min-bruker">Min bruker</a>
-                        <a id="logOut" href="{% url 'logout' %}">Logg ut</a>
-                    </div>
-                </div>
-                {% else %}
-                <div class="user-is-not-login">
-                    <div class="part1">
-                        <p>Velkommen!</p>
-                    </div>
-                    <div class="part2">
-                        <a href="/logg-inn">Logg inn</a>
-                        <a href="/lag-bruker">Lag bruker</a>
-                    </div>
-                </div>
-                {% endif %}
+            <!-- DOG PEEKING -->
+            <div class="sidebar-bottom-img">
+                <img src="{% static '/images/other/dog-peeking.png' %}" alt="dog peeking">
             </div>
             <ul class="sidebar-ul">
                 <li class="sidebar-li" id="sidebarLi">
@@ -105,6 +86,29 @@
                     </div>
                     <a onclick="">Vårt arbeid</a>
                     <a href="/kontakter-oss">Kontakt oss</a>
+                    <div class="sidebar-myaccount">
+                        {% if request.user.is_authenticated %}
+                        <div class="user-is-login">
+                            <div class="part1">
+                                <i class="fa-regular fa-user"></i><p>Hei&nbsp; - &nbsp;{{ request.user.first_name }}</p>
+                            </div>
+                            <div class="part2">
+                                <a href="/min-bruker">Min bruker</a>
+                                <a id="logOut" href="{% url 'logout' %}">Logg ut</a>
+                            </div>
+                        </div>
+                        {% else %}
+                        <div class="user-is-not-login">
+                            <div class="part1">
+                                <i class="fa-regular fa-user"></i><p>Velkommen!</p>
+                            </div>
+                            <div class="part2">
+                                <a href="/logg-inn">Logg inn</a>
+                                <a href="/lag-bruker">Lag bruker</a>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
                 </li>   
             </ul>
         </div>

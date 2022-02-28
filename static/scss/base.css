@@ -504,18 +504,13 @@
 .edit .edit-image {
   width: 80%;
   height: auto;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
   max-width: 420px;
   -webkit-filter: brightness(100%);
           filter: brightness(100%);
-  -webkit-transform: translateX(-50%) translateY(40px);
-          transform: translateX(-50%) translateY(40px);
+  -webkit-transform: translateX(-50%) translateY(55px);
+          transform: translateX(-50%) translateY(55px);
   position: relative;
   left: 50%;
-}
-
-.edit img {
   image-rendering: -moz-crisp-edges;
   /* Firefox        */
   image-rendering: -o-crisp-edges;
@@ -526,6 +521,9 @@
   /* CSS3 Proposed  */
   -ms-interpolation-mode: nearest-neighbor;
   /* IE8+           */
+}
+
+.edit img {
   -webkit-transform: translateY(75px) translateX(-30px);
           transform: translateY(75px) translateX(-30px);
   width: 120%;
@@ -602,11 +600,18 @@
 }
 
 .prices .content .product-section .card .included {
-  width: 50%;
+  width: 100%;
   padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.prices .content .product-section .card .included ul {
+.prices .content .product-section .card .included .part1 {
+  width: 50%;
+}
+
+.prices .content .product-section .card .included .part1 ul {
   overflow: hidden;
   overflow-y: scroll;
   height: 103px;
@@ -614,7 +619,7 @@
   -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
 }
 
-.prices .content .product-section .card .included ul li {
+.prices .content .product-section .card .included .part1 ul li {
   opacity: 0.7;
   margin: 0;
   list-style: none;
@@ -622,7 +627,7 @@
   font-weight: 800;
 }
 
-.prices .content .product-section .card .included ul li::before {
+.prices .content .product-section .card .included .part1 ul li::before {
   content: "\2022";
   /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: #007be0;
@@ -633,6 +638,23 @@
   /* Needed to add space between the bullet and the text */
   width: 1em;
   /* Also needed for space (tweak if needed) */
+}
+
+.prices .content .product-section .card .included .part2 {
+  width: 50%;
+}
+
+.prices .content .product-section .card .included .part2 button {
+  border-radius: 4px;
+  width: auto;
+  font-size: 15px;
+  padding: 6px 16px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  color: white;
+  outline: none;
+  border: none;
+  background: #0082ec;
 }
 
 .our-story {

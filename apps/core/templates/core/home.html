@@ -395,38 +395,42 @@
                <!-- PRODUCT INCLUDED -->
                <div class="included">
                   <!-- ECOMMERCE -->
-                  <ul>
-                     {% if product.is_small %}
-                     <li>Konverter</li>
-                     <li>Modern</li>
-                     <li>Responsiv</li>
-                     <li>Lav pris</li>
-                     <li>Selg alt</li>
-                     <li>Bedrift</li>
-                     <li>Rask levering</li>
-                     {% endif %}
-                     {% if product.is_middle %}
-                     <li>Konverter</li>
-                     <li>Modern</li>
-                     <li>Responsiv</li>
-                     <li>Lav pris</li>
-                     <li>Selg alt</li>
-                     <li>Bedrift</li>
-                     <li>Rask levering</li>
-                     {% endif %}
-                     {% if product.is_big %}
-                     <li>Konverter</li>
-                     <li>Modern</li>
-                     <li>Responsiv</li>
-                     <li>Lav pris</li>
-                     <li>Selg alt</li>
-                     <li>Bedrift</li>
-                     <li>Rask levering</li>
-                     {% endif %}
-                  </ul>
+                  <div class="part1">
+                     <ul>
+                        {% if product.is_small %}
+                        <li>Konverter</li>
+                        <li>Modern</li>
+                        <li>Responsiv</li>
+                        <li>Lav pris</li>
+                        <li>Selg alt</li>
+                        <li>Bedrift</li>
+                        <li>Rask levering</li>
+                        {% endif %}
+                        {% if product.is_middle %}
+                        <li>Konverter</li>
+                        <li>Modern</li>
+                        <li>Responsiv</li>
+                        <li>Lav pris</li>
+                        <li>Selg alt</li>
+                        <li>Bedrift</li>
+                        <li>Rask levering</li>
+                        {% endif %}
+                        {% if product.is_big %}
+                        <li>Konverter</li>
+                        <li>Modern</li>
+                        <li>Responsiv</li>
+                        <li>Lav pris</li>
+                        <li>Selg alt</li>
+                        <li>Bedrift</li>
+                        <li>Rask levering</li>
+                        {% endif %}
+                     </ul>
+                  </div>
+                  <div class="part2">
+                     <button onclick="window.location.href='{% url 'product_detail' product.slug %}'">Les mer</button>
+                  </div>
                </div>
             <br>
-               <!-- <a href="{% url 'product_detail' product.slug %}">Les Mer<i class="fad fa-arrow-alt-from-left"></i></a> -->
          </div>
          {% endfor %}   
       </div>
