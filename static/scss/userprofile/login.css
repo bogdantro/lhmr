@@ -60,8 +60,8 @@
   color: white;
   outline: none;
   border: none;
-  background: #008cff;
-  border: 2px solid #0082ec;
+  border: none;
+  background: #0082ec;
 }
 
 .login form .or-signup {

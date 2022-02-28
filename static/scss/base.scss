@@ -473,7 +473,7 @@ $loader: rgb(80, 104, 180);
         border: none;
         outline: none;
         border-radius: 12px;
-        padding-bottom: 50px;
+        padding-bottom: 0;
         border: 2px solid #007be056;
         .product-name{
           font-size: 26px;
@@ -484,27 +484,36 @@ $loader: rgb(80, 104, 180);
           letter-spacing:1px;    
           font-weight: 800;
         }
+        .product-type{
+          font-weight: 800;
+          color: white;
+          background: linear-gradient(to right, #007be0, purple);
+          width: 100px;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%) translateY(25px);
+          font-size: 12px;
+          border-radius: 20px;
+        }
         .product-price{
-          font-size: 13px;
-          transform: translateY(30px);
+          font-size: 14px;
+          transform: translateY(40px);
           font-weight: 800;
         }
         .included{
           width: 50%;
-          position: relative;
-          left: 50%;
-          transform: translateY(40px) translateX(-50%);
           padding: 10px;
           ul{
             overflow: hidden; 
             overflow-y: scroll;
-            height: 100px;
+            height: 103px;
             -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
             li{
               opacity: 0.7;
               margin: 0;
               list-style: none;
-              font-size: 14px;
+              font-size: 15px;
+              font-weight: 800;
               &::before{
                 content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
                 color: #007be0; /* Change the color */
@@ -512,30 +521,6 @@ $loader: rgb(80, 104, 180);
                 display: inline-block; /* Needed to add space between the bullet and the text */
                 width: 1em; /* Also needed for space (tweak if needed) */
               }
-            }
-          }
-        }
-        .product-actions{
-          transform: translateY(30px) translateX(0);
-          a{
-            border-radius: 4px;
-            padding: 13px 10px;
-            font-size: 14px;
-            color: white;
-            font-weight: 600;
-            margin: 2px auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: .4s;
-            border: 2px solid transparent;
-            text-decoration: none;
-            background: rgb(7, 37, 70);
-            width: 55%;
-            max-width: 250px;
-            i{
-              transform: translateX(18px) translateY(2px);
             }
           }
         }

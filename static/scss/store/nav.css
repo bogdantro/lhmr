@@ -104,14 +104,55 @@
   display: unset;
 }
 
-#navbar .sidebar .sidebar-cta {
+#navbar .sidebar .sidebar-myaccount {
   width: 100%;
   height: 50px;
   position: fixed;
   bottom: 0;
   left: 0;
-  background: #4287f5;
+  border-top: 1px solid lightgray;
   z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#navbar .sidebar .sidebar-myaccount .user-is-login {
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+#navbar .sidebar .sidebar-myaccount .user-is-login .part1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  border-right: 1px solid lightgray;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+#navbar .sidebar .sidebar-myaccount .user-is-login .part1 p {
+  color: #082133;
+  font-weight: 800;
+  font-size: 14.6px;
+  cursor: pointer;
+  -webkit-transform: translateY(8.5px) translateX(3px);
+          transform: translateY(8.5px) translateX(3px);
+}
+
+#navbar .sidebar .sidebar-myaccount .user-is-login .part2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,14 +162,66 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  opacity: 1;
-  -webkit-transition: .4s;
-  transition: .4s;
+  width: 50%;
 }
 
-#navbar .sidebar .sidebar-cta a {
-  color: white !important;
-  font-size: 16px;
+#navbar .sidebar .sidebar-myaccount .user-is-login .part2 a {
+  width: auto;
+  font-size: 14px;
+  font-weight: 800;
+  margin: 0 10px;
+}
+
+#navbar .sidebar .sidebar-myaccount .user-is-not-login {
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+#navbar .sidebar .sidebar-myaccount .user-is-not-login .part1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  border-right: 1px solid lightgray;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+#navbar .sidebar .sidebar-myaccount .user-is-not-login .part1 p {
+  color: #082133;
+  font-weight: 800;
+  font-size: 14.6px;
+  cursor: pointer;
+  -webkit-transform: translateY(8.5px) translateX(3px);
+          transform: translateY(8.5px) translateX(3px);
+}
+
+#navbar .sidebar .sidebar-myaccount .user-is-not-login .part2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+#navbar .sidebar .sidebar-myaccount .user-is-not-login .part2 a {
+  width: auto;
+  font-size: 14px;
+  font-weight: 800;
+  margin: 0 10px;
 }
 
 #navbar .sidebar .sidebar-ul {
@@ -325,8 +418,8 @@
 #navbar .sidebar.active {
   opacity: 1;
   pointer-events: visible;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 #navbar .order {

@@ -64,6 +64,26 @@ def email_success(request):
     return render(request, 'pages/email.html')
 
 def request_edit(request):
+    if request.method=='POST' and 'edit' in request.POST:
+        order_id = request.POST.get('order_id')
+        email = request.POST.get('email')
+
+        data = {
+            'order_id': order_id,
+            'email': email,
+        }
+        message = dedent('''
+        Fra: {}
+
+        ---------------------------------
+        Bestilling ID: {}
+        ---------------------------------
+        SJEKK BESTILLING ID I BACKEND
+
+        ''').format(data['email'], data['order_id'] )
+        send_mail('Spørr om endringer', message, '', ['sabertoothtri@gmail.com'])
+        return redirect('/email-success')
+
     return render(request, 'pages/edit.html')
 
 # KUNDESERVICE PAGES

@@ -93,22 +93,80 @@
         opacity: 0;
         pointer-events: none;
         display: unset;
-        .sidebar-cta{
+        .sidebar-myaccount{
             width: 100%;
             height: 50px;
             position: fixed;
             bottom: 0;
             left: 0;
-            background: #4287f5;
+            border-top: 1px solid lightgray;
             z-index: 100;
             display: flex;
-            justify-content: center;
-            align-items: center;
             opacity: 1;
             transition: .4s;
-            a{
-              color: white !important;
-              font-size: 16px;
+            .user-is-login{
+                z-index: 10;
+                display: flex;
+                width: 100%;
+                .part1{
+                    display: flex;
+                    width: 50%;
+                    border-right: 1px solid lightgray;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+                    p{
+                        color: #082133;
+                        font-weight: 800;
+                        font-size: 14.6px;
+                        cursor: pointer;
+                        transform: translateY(8.5px) translateX(3px);
+                    }
+                }
+                .part2{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
+                    a{
+                        width: auto;
+                        font-size: 14px;
+                        font-weight: 800;
+                        margin: 0 10px;
+                    }
+                }
+            }
+            .user-is-not-login{
+                z-index: 10;
+                display: flex;
+                width: 100%;
+                .part1{
+                    display: flex;
+                    width: 50%;
+                    border-right: 1px solid lightgray;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+                    p{
+                        color: #082133;
+                        font-weight: 800;
+                        font-size: 14.6px;
+                        cursor: pointer;
+                        transform: translateY(8.5px) translateX(3px);
+                    }
+                }
+                .part2{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
+                    a{
+                        width: auto;
+                        font-size: 14px;
+                        font-weight: 800;
+                        margin: 0 10px;
+                    }
+                }
             }
         }
         .sidebar-ul{
@@ -271,7 +329,7 @@
         &.active{
             opacity: 1;
             pointer-events: visible;
-            transition: .3s;
+            transition: .2s;
         }
     }    
     // ORDER CSS

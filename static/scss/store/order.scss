@@ -26,6 +26,12 @@ $loader: rgb(80, 104, 180);
           text-shadow: 1px 0 #183B56;
           letter-spacing:1px; 
         }
+        .order-not-login{
+          a{
+            font-size: 13px;
+            font-weight: 800;
+          }
+        }
         .order-form-inputs{
           label{
             color: #183B56;
@@ -130,8 +136,8 @@ $loader: rgb(80, 104, 180);
             transition: all .2s ease-in-out;
             color: white;
             outline: none;
-            background: #008cff;  
-            border: 2px solid #0082ec;     
+            border: none;    
+            background: #0082ec;     
           }
         }
       }

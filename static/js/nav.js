@@ -14,8 +14,6 @@ function menu(){
   const sidebarLi = document.getElementById('sidebarLi');
   const background = document.getElementById('sidebarCircleBackground');
   const backToTop = document.getElementById('backToTop');
-  const html = document.querySelector("html");
-  const body = document.body;
 
   if (window.getComputedStyle(sidebar,null).getPropertyValue("opacity") == '0'){
     navbar.classList.add('menu')  
@@ -45,7 +43,6 @@ function prices(){
   const pricesToggle = document.getElementById('pricesToggle');
   const prices = document.getElementById('pricesDropdown');
   const about = document.getElementById('aboutDropdown');
-  const account = document.getElementById('accountDropdown');
   const help = document.getElementById('helpDropdown');
 
   const aboutToggle = document.getElementById('aboutToggle');
@@ -56,7 +53,6 @@ function prices(){
   if (window.getComputedStyle(prices,null).getPropertyValue("display") == 'none'){
     prices.classList.add('active')
     about.classList.remove('active')
-    account.classList.remove('active')
     help.classList.remove('active')
     pricesToggle.classList.add('click')
     aboutToggle.classList.remove('click')
@@ -71,7 +67,6 @@ function prices(){
 function about(){
   const aboutToggle = document.getElementById('aboutToggle');
   const about = document.getElementById('aboutDropdown');
-  const account = document.getElementById('accountDropdown');
   const prices = document.getElementById('pricesDropdown');
   const help = document.getElementById('helpDropdown');
 
@@ -81,7 +76,6 @@ function about(){
 
   if (window.getComputedStyle(about,null).getPropertyValue("display") == 'none'){
     about.classList.add('active')
-    account.classList.remove('active')
     help.classList.remove('active')
     prices.classList.remove('active')
     aboutToggle.classList.add('click')
@@ -98,7 +92,6 @@ function help(){
   const helpToggle = document.getElementById('helpToggle');
   const help = document.getElementById('helpDropdown');
   const about = document.getElementById('aboutDropdown');
-  const account = document.getElementById('accountDropdown');
   const prices = document.getElementById('pricesDropdown');
 
   const aboutToggle = document.getElementById('aboutToggle');
@@ -109,7 +102,6 @@ function help(){
     help.classList.add('active')
     about.classList.remove('active')
     prices.classList.remove('active')
-    account.classList.remove('active')
     helpToggle.classList.add('click')
     accountToggle.classList.remove('click')
     pricesToggle.classList.remove('click')
@@ -118,32 +110,6 @@ function help(){
     help.classList.remove('active')
     helpToggle.classList.remove('click')
 
-  }
-}
-// ACCOUNT DROPDOWN
-function account(){
-  const accountToggle = document.getElementById('accountToggle');
-  const account = document.getElementById('accountDropdown');
-  const about = document.getElementById('aboutDropdown');
-  const prices = document.getElementById('pricesDropdown');
-  const help = document.getElementById('helpDropdown');
-
-  const aboutToggle = document.getElementById('aboutToggle');
-  const pricesToggle = document.getElementById('pricesToggle');
-  const helpToggle = document.getElementById('helpToggle');
-
-  if (window.getComputedStyle(account,null).getPropertyValue("display") == 'none'){
-    account.classList.add('active')
-    about.classList.remove('active')
-    prices.classList.remove('active')
-    help.classList.remove('active')
-    accountToggle.classList.add('click')
-    pricesToggle.classList.remove('click')
-    aboutToggle.classList.remove('click')
-    helpToggle.classList.remove('click')
-  } else{
-    account.classList.remove('active')
-    accountToggle.classList.remove('click')
   }
 }
 

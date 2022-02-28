@@ -30,8 +30,28 @@
         </div>
         <!-- SIDEBAR -->
         <div class="sidebar" id="sidebar">
-            <div class="sidebar-cta">
-                <a href="">Kom i gang</a>
+            <div class="sidebar-myaccount">
+                {% if request.user.is_authenticated %}
+                <div class="user-is-login">
+                    <div class="part1">
+                        <p>Hei&nbsp; - &nbsp;{{ request.user.first_name }}</p>
+                    </div>
+                    <div class="part2">
+                        <a href="/min-bruker">Min bruker</a>
+                        <a id="logOut" href="{% url 'logout' %}">Logg ut</a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="user-is-not-login">
+                    <div class="part1">
+                        <p>Velkommen!</p>
+                    </div>
+                    <div class="part2">
+                        <a href="/logg-inn">Logg inn</a>
+                        <a href="/lag-bruker">Lag bruker</a>
+                    </div>
+                </div>
+                {% endif %}
             </div>
             <ul class="sidebar-ul">
                 <li class="sidebar-li" id="sidebarLi">
@@ -50,26 +70,6 @@
                             <div class="nav-link-parent">
                                 <a href="/de-tre-frontend-språkene">Programering språkene</a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="account-dropdown">
-                        <a onclick="account()" id="accountToggle">Min bruker<i class="fas fa-sort-down"></i></a>
-                        <div class="account-dropdown-links" id="accountDropdown">
-                            {% if request.user.is_authenticated %}
-                            <div class="nav-link-parent">
-                                <a href="/min-bruker">Min bruker</a>
-                            </div>
-                            <div class="nav-link-parent">
-                                <a id="logOut" href="{% url 'logout' %}">Logg ut</a>
-                            </div>
-                            {% else %}
-                            <div class="nav-link-parent">
-                                <a href="/logg-inn">Logg inn</a>
-                            </div>
-                            <div class="nav-link-parent">
-                                <a href="/lag-bruker">Lag bruker</a>
-                            </div>
-                            {% endif %}
                         </div>
                     </div>
                     <div class="about-dropdown">

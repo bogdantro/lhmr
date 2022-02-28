@@ -21,9 +21,18 @@
 <div class="make-order">
     <form method='post' id="makeOrder" enctype="multipart/form-data">
        <h1 class="heading">Start Bestilling</h1>
+        {% if request.user.is_authenticated %}
+        <br>
+        {% else %}
+            <div class="order-not-login">
+                <div class="alert alert-warning">
+                    <p>Vi anbefaller at du logger inn før du sender inn bestillingen</p>
+                    <a href="/logg-inn">Logg inn</a> &nbsp;&nbsp; <a href="/lag-bruker">Lag bruker</a>
+                </div>
+            </div>
+        {% endif %}
         {% csrf_token %}
         {{form.errors}}
-        <br>
         <!-- ORDER FORM INPUTS -->
         <div class="order-form-inputs">
            <!-- PRODUCT -->

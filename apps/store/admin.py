@@ -6,5 +6,5 @@ from .models import Product
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['name', 'price', 'is_ecommerce','is_blog','is_portofolio','is_personal','is_business' ]
+    list_display = ['name', 'price', 'discount_price', 'is_small','is_middle','is_big' ]
 admin.site.register(Product, ProductAdmin)

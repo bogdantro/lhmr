@@ -379,13 +379,42 @@
             <div class="card">
                <!-- PRODUCT NAME -->
                <h1 class="product-name">{{ product.name }}</h1>
+               {% if product.is_small %}
+                  <div class="product-type">Liten</div>
+               {% endif %}
+               {% if product.is_middle %}
+                  <div class="product-type">Middels</div>
+               {% endif %}
+               {% if product.is_big %}
+                  <div class="product-type">Stor</div>
+               {% endif %}
                <!-- PRODUCT PRICE -->
                <h1 class="product-price">{{ product.price | floatformat }}kr</h1>
+               <br>
+               <hr>
                <!-- PRODUCT INCLUDED -->
                <div class="included">
                   <!-- ECOMMERCE -->
                   <ul>
-                     {% if product.is_ecommerce %}
+                     {% if product.is_small %}
+                     <li>Konverter</li>
+                     <li>Modern</li>
+                     <li>Responsiv</li>
+                     <li>Lav pris</li>
+                     <li>Selg alt</li>
+                     <li>Bedrift</li>
+                     <li>Rask levering</li>
+                     {% endif %}
+                     {% if product.is_middle %}
+                     <li>Konverter</li>
+                     <li>Modern</li>
+                     <li>Responsiv</li>
+                     <li>Lav pris</li>
+                     <li>Selg alt</li>
+                     <li>Bedrift</li>
+                     <li>Rask levering</li>
+                     {% endif %}
+                     {% if product.is_big %}
                      <li>Konverter</li>
                      <li>Modern</li>
                      <li>Responsiv</li>
@@ -397,9 +426,7 @@
                   </ul>
                </div>
             <br>
-            <div class="product-actions">
-               <a href="{% url 'product_detail' product.slug %}">Les Mer<i class="fad fa-arrow-alt-from-left"></i></a>
-            </div>
+               <!-- <a href="{% url 'product_detail' product.slug %}">Les Mer<i class="fad fa-arrow-alt-from-left"></i></a> -->
          </div>
          {% endfor %}   
       </div>
