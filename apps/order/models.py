@@ -10,12 +10,19 @@ class Order(models.Model):
     name = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
     message = models.CharField(max_length=700, blank=True)
-    status = models.CharField(max_length=700, blank=True)
     product = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add=True)
     paid = models.BooleanField(default=False)
     is_finished = models.BooleanField(default=False)
     after_14_days = models.BooleanField(default=False)
+    status_1 = models.BooleanField(default=False)
+    status_2 = models.BooleanField(default=False)
+    status_3 = models.BooleanField(default=False)
+    status_4 = models.BooleanField(default=False)
+    status_5 = models.BooleanField(default=False)
+    status_6 = models.BooleanField(default=False)
+    status_7 = models.BooleanField(default=False)
+    status_8 = models.BooleanField(default=False)
     
     
 

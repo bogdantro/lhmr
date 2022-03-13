@@ -12,7 +12,6 @@
             <p><span>Brukernavn:</span> &nbsp; {{ request.user.username }}</p>
             <p><span>Navn:</span> &nbsp; {{ request.user.get_full_name }}</p>
             <p><span>Epost:</span> &nbsp; {{ request.user.email }}</p>
-            <a class="myaccount-logout" href="{% url 'logout' %}">Logg ut</a>
         </div>
         
         <!-- <p>Zip and place: {{ request.user.userprofile.zipcode }} {{ request.user.userprofile.place }}</p> -->
@@ -24,15 +23,39 @@
         <div class="my-orders">
             {% for order in request.user.orders.all %}
                 <div class="you-got-orders">
-                    <p><span>Status:</span> &nbsp; {{order.status}}</p> 
+                    <p><span>Status:</span> &nbsp;</p> 
+                    <div class="order-status">
+                            {% if order.status_1 %}
+                                <div class="inner one"></div>
+                            {% endif %}
+                            {% if order.status_2 %}
+                                <div class="inner two"></div>
+                            {% endif %}
+                            {% if order.status_3 %}
+                                <div class="inner three"></div>
+                            {% endif %}
+                            {% if order.status_4 %}
+                                <div class="inner four"></div>
+                            {% endif %}
+                            {% if order.status_5 %}
+                                <div class="inner five"></div>
+                            {% endif %}
+                    </div>
+                    <br>
+                    <div class="order-is-payed">
+                        <p><span>Betalt: &nbsp; </span></p>
+                        {% if order.paid %}
+                            <div class="icon">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        {% else %}
+                            <div class="icon-x">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        {% endif %}  
+                    </div>
                     <p><span>Bestillt:</span> &nbsp; {{order.created_at}}</p> 
                     <p><span>Bestilling ID:</span> &nbsp; {{order.id}}</p> 
-                    <p><span>Betalt: &nbsp; </span> 
-                        {% if order.paid %}
-                           Du har betalt
-                        {% else %}
-                            Du har ikke betalt
-                        {% endif %}  
                         <hr>
                         {% if order.is_finished %}
                             <div class="alert alert-info">Ønsker du å endre noe på nettsiden din? Vi er her for å hjelpe deg! Trykk på knappen under for å spørre om endringer</div>
@@ -45,7 +68,6 @@
                         {% else %}
                             <div class="alert alert-info">Du kan spørre om endringer på nettsiden her, da nettsiden er fullført</div>   
                         {% endif %}
-                    </p>
                 </div>            
             {% empty %}
                 <p class="no-orders-yet">Du har ingen bestillinger enda...</p>
