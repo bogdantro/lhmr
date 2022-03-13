@@ -74,14 +74,14 @@
         width: 100%;
         height: auto;
         text-align: center;
-        background: #007be0;
+        background: rgb(247, 247, 247);
         padding: 6px;
         p{
             padding: auto;
             margin: auto;
-            color: white;
-            font-size: 14px;
-            font-weight: 600;
+            color: black;
+            font-size: 13px;
+            opacity: 0.8;
         }
     }
 }

@@ -23,7 +23,7 @@
 }
 
 #navbar.sticky {
-  background: #fffffff6;
+  background: #ffffffec;
 }
 
 #navbar.menu {
@@ -451,7 +451,7 @@
   -webkit-transition: .2s;
   transition: .2s;
   font-size: 13px;
-  border-radius: 4px;
+  border-radius: 6px;
   text-decoration: none;
   background: white;
   border: 2px solid black;
