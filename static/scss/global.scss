@@ -115,36 +115,39 @@ body{
         &:nth-child(1){
           background: rgb(7, 37, 70);
           &:hover{
-            background: white;
-            border: 2px solid rgb(11, 46, 87);
-            color: rgb(11, 46, 87);  
+            background: #0088F9;
+            border: 2px solid #0088F9;
+            color: white;  
           }
           &:focus{
-            background: white;
-            border: 2px solid rgb(11, 46, 87);
-            color: rgb(11, 46, 87);  
+            background: #0088F9;
+            border: 2px solid #0088F9;
+            color: white; ;  
           }
           &:active{
-            background: white;
-            border: 2px solid rgb(11, 46, 87);
-            color: rgb(11, 46, 87);  
+            background: #0088F9;
+            border: 2px solid #0088F9;
+            color: white;  
           }
         }
         &:nth-child(3){
           border: 2px solid rgb(11, 46, 87);
           color: rgb(11, 46, 87);
-            &:hover{
-              background: rgb(7, 37, 70);
-              color: white;
-            }
-            &:focus{
-              background: rgb(7, 37, 70);
-              color: white;
-            }
-            &:active{
-              background: rgb(7, 37, 70);
-              color: white;
-            }
+          &:hover{
+            background: #0088F9;
+            border: 2px solid #0088F9;
+            color: white;  
+          }
+          &:focus{
+            background: #0088F9;
+            border: 2px solid #0088F9;
+            color: white; ;  
+          }
+          &:active{
+            background: #0088F9;
+            border: 2px solid #0088F9;
+            color: white;  
+          }
         }
       }
     }

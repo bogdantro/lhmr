@@ -18,6 +18,8 @@ def send_order(request):
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             product = form.cleaned_data['product']
+            product_price = form.cleaned_data['product_price']
+            tag = form.cleaned_data['tag']
 
             form.save()
             

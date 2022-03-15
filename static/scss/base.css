@@ -154,13 +154,10 @@
 }
 
 .info .content .card {
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   margin: 34px 0;
   height: auto;
   padding: 30px;
+  width: 100%;
   max-width: 400px;
   border-radius: 14px;
   border: none;
@@ -398,7 +395,7 @@
   color: #183B56;
   text-shadow: 1px 0 #183B56;
   letter-spacing: 1px;
-  font-size: 28px;
+  font-size: 36px;
   font-weight: 800;
 }
 
@@ -498,7 +495,7 @@
   color: #183B56;
   text-shadow: 1px 0 #183B56;
   letter-spacing: 1px;
-  font-size: 28px;
+  font-size: 36px;
   font-weight: 800;
   line-height: 130%;
 }
@@ -603,18 +600,15 @@
   color: #183B56;
   text-shadow: 1px 0 #183B56;
   letter-spacing: 1px;
-  font-size: 28px;
+  font-size: 36px;
   font-weight: 800;
 }
 
 .prices .content .product-section .product-card {
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   margin: 34px 0;
   height: auto;
   padding: 30px;
+  width: 100%;
   max-width: 400px;
   border-radius: 14px;
   border: none;
@@ -655,6 +649,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 .prices .content .product-section .product-card .card-content .icon i {
@@ -662,6 +657,16 @@
   font-size: 42px;
   -webkit-transform: translateX(-15px);
           transform: translateX(-15px);
+}
+
+.prices .content .product-section .product-card .card-content .icon p {
+  position: absolute;
+  top: 45px;
+  left: -9px;
+  width: 100%;
+  font-size: 14px;
+  color: #0088F9;
+  font-weight: bold;
 }
 
 .prices .content .product-section .product-card .card-content .card-text {
@@ -688,10 +693,10 @@
 }
 
 .prices .content .product-section .product-card .card-content .card-text .product-name h1 {
-  color: black;
+  color: #183B56;
   font-size: 18px;
   font-weight: 800;
-  text-shadow: 0.3px 0 black;
+  text-shadow: 0.3px 0 #183B56;
   letter-spacing: 0.3px;
 }
 

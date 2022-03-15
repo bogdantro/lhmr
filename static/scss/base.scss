@@ -147,12 +147,10 @@ $loader: rgb(80, 104, 180);
       }
     }
     .card{
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
       margin: 34px 0;
       height: auto;
       padding: 30px;
+      width: 100%;
       max-width: 400px;
       border-radius: 14px;
       border: none;
@@ -341,7 +339,7 @@ $loader: rgb(80, 104, 180);
         color: #183B56;
         text-shadow: 1px 0 #183B56;
         letter-spacing:1px;    
-        font-size: 28px;
+        font-size: 36px;
         font-weight: 800;
       }
       .boost-longp{
@@ -423,7 +421,7 @@ $loader: rgb(80, 104, 180);
         color: #183B56;
         text-shadow: 1px 0 #183B56;
         letter-spacing:1px;    
-        font-size: 28px;
+        font-size: 36px;
         font-weight: 800;
         line-height: 130%;
       }
@@ -508,18 +506,16 @@ $loader: rgb(80, 104, 180);
         color: #183B56;
         text-shadow: 1px 0 #183B56;
         letter-spacing:1px;    
-        font-size: 28px;
+        font-size: 36px;
         font-weight: 800;
       }
     }
     .product-section{
       .product-card{
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
         margin: 34px 0;
         height: auto;
         padding: 30px;
+        width: 100%;
         max-width: 400px;
         border-radius: 14px;
         border: none;
@@ -542,10 +538,20 @@ $loader: rgb(80, 104, 180);
             height: auto;
             display: flex;
             justify-content: center;
+            position: relative;
             i{
               color: #0088F9;
               font-size: 42px;
               transform: translateX(-15px);
+            }
+            p{
+              position: absolute;
+              top: 45px;
+              left: -9px;
+              width: 100%;
+              font-size: 14px;
+              color: #0088F9;
+              font-weight: bold;
             }
           }
           .card-text{
@@ -563,10 +569,10 @@ $loader: rgb(80, 104, 180);
                 font-size: 14px;
               }
               h1{
-                color: black;
+                color: #183B56;
                 font-size: 18px;
                 font-weight: 800;
-                text-shadow: 0.3px 0 black;
+                text-shadow: 0.3px 0 #183B56;
                 letter-spacing: 0.3px; 
               }
             }

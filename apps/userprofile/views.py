@@ -2,10 +2,19 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .forms import SignUpForm, UserprofileForm
 from django.contrib.auth import login
+from apps.order.models import Order
 
 @login_required
 def myaccount(request):
-    return render(request, 'core/myaccount.html')
+    orderFinished = Order.objects.filter(is_finished=True) 
+    orderStarted = Order.objects.filter(is_finished=False) 
+
+    context = {
+        'orderFinished':orderFinished,
+        'orderStarted':orderStarted,
+     }
+
+    return render(request, 'core/myaccount.html', context)
 
 
 def signup(request):

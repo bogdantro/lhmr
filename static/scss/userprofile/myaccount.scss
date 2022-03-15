@@ -10,15 +10,14 @@
       margin: 0 auto;
       text-align: left;
       background: transparent;
-      width: 93%;
+      width: 100%;
       max-width: 700px;
-      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
       padding: 20px;
       border-radius: 7px;
         // ACCOUNT HEADING
         .heading{
           color: #183B56;
-          font-size: 20px;
+          font-size: 30px;
           font-weight: 800;
           text-shadow: 1px 0 #183B56;
           letter-spacing:1px; 
@@ -37,15 +36,162 @@
         // MY ORDERS
         .my-orders{
           margin: 30px 0;
+          position: relative;
+          .check-type-of-order-flex{
+            width: 100%;
+            display: flex;
+            p{
+              opacity: 0.6;
+              margin: 0 18px;
+              border-radius: 28px;
+              width: 80px;
+              padding: 7px;
+              text-align: center;
+              font-size: 15px;
+              &#completedOrdersP{
+                &.active{
+                  background: #0088F9;
+                  color: white;
+                  opacity: 1;
+                }
+                &.unactive{
+                  background: transparent;
+                  opacity: 0.6;
+                  color: black;
+                }
+              }
+              &#startedOrdersP{
+                margin-left: 0;
+                background: #0088F9;
+                color: white;
+                opacity: 1;
+                &.active{
+                  background: #0088F9;
+                  color: white;
+                  opacity: 1;
+                }
+                &.unactive{
+                  background: transparent;
+                  opacity: 0.6;
+                  color: black;
+                }
+              }
+            }
+          }
+          .if-order-finished{
+            width: 100%;
+            display: block;
+            padding: 20px;
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 0;
+            .no-finished{
+              transform: translateX(13px) translateY(45px);
+              &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                left: -13px;
+                height: 28px;
+                width: 4px;
+                background: #0088F9;
+                border-radius: 12px;
+              }
+            }
+            &.hide{
+              display: none;
+            }
+          }
+          .if-order-started{
+            display: block;
+            width: 100%;
+            .no-started{
+              transform: translateX(13px) translateY(45px);
+              &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                left: -13px;
+                height: 28px;
+                width: 4px;
+                background: #0088F9;
+                border-radius: 12px;
+              }
+            }
+            &.hide{
+              display: none;
+            }
+          }
           .you-got-orders{
-            margin: 20px 0;
+            margin: 40px 0;
             text-align: left;
             background: transparent;
             width: 100%;
             max-width: 340px;
-            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.224);
             padding: 20px;
-            border-radius: 7px;
+            border-radius: 10px;
+            position: relative;
+            .order-row-one{
+              width: 100%;
+              display: flex;
+              position: relative;
+              .order-product{                
+                width: 88%;
+                font-size: 23px;
+                color: #183B56;
+                font-weight: 800;
+                text-shadow: 1px 0 #183B56;
+                letter-spacing:1px; 
+              }
+              .product-tag{
+                color: #0088F9;
+                font-size: 13px;
+                transform: translateY(10px) translateX(10px);
+              }
+              .order-price{
+                color: black;
+                opacity: 0.5;
+                font-size: 15px;
+                width: 12%;
+                transform: translateY(6px) translateX(-18px);
+              }
+            }
+            .order-row-two{
+              display: flex;
+              width: 100%;
+              transform: translateY(16px);
+              .smalltext{
+                opacity: 0.7;
+                text-align: left;
+                font-size: 13px;
+              }
+              .row-one{
+                width: 45%;
+                position: relative;
+                &::before{
+                  content: '';
+                  position: absolute;
+                  right: 0;
+                  display: block;
+                  width: 2px;
+                  height: 50px;
+                  background: lightgray;
+                }
+                h1{
+                  font-size: 15px;
+                  transform: translateY(-5px);
+                }
+              }
+              .row-two{
+                width: 55%;
+                transform: translateX(19px);
+                h1{
+                  font-size: 15px;
+                  transform: translateY(-5px);
+                }
+              }
+            }
             p{
               color: #183B56;
               font-size: 15px;

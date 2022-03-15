@@ -33,6 +33,8 @@ function smallPack(){
   const productArrow =  document.getElementById('productArrow');
 
   document.getElementById("product").value = "Nettbutikk/eCommerce - LITEN";
+  document.getElementById("product_price").value = "3500";
+  document.getElementById("tag").value = "LITEN";
   product.classList.remove('active');
   dropdown.classList.remove('active');
   productArrow.classList.remove('active');
@@ -44,6 +46,8 @@ function middlePack(){
   const productArrow =  document.getElementById('productArrow');
 
   document.getElementById("product").value = "Nettbutikk/eCommerce - MIDDELS";
+  document.getElementById("product_price").value = "4200";
+  document.getElementById("tag").value = "MIDDELS";
   product.classList.remove('active');
   dropdown.classList.remove('active');
   productArrow.classList.remove('active');
@@ -55,6 +59,8 @@ function bigPack(){
   const productArrow =  document.getElementById('productArrow');
 
   document.getElementById("product").value = "Nettbutikk/eCommerce - STOR";
+  document.getElementById("product_price").value = "5000";
+  document.getElementById("tag").value = "STOR";
   product.classList.remove('active');
   dropdown.classList.remove('active');
   productArrow.classList.remove('active');

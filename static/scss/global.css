@@ -148,21 +148,21 @@ body.menu {
 }
 
 .cover .content .cover-actions a:nth-child(1):hover {
-  background: white;
-  border: 2px solid #0b2e57;
-  color: #0b2e57;
+  background: #0088F9;
+  border: 2px solid #0088F9;
+  color: white;
 }
 
 .cover .content .cover-actions a:nth-child(1):focus {
-  background: white;
-  border: 2px solid #0b2e57;
-  color: #0b2e57;
+  background: #0088F9;
+  border: 2px solid #0088F9;
+  color: white;
 }
 
 .cover .content .cover-actions a:nth-child(1):active {
-  background: white;
-  border: 2px solid #0b2e57;
-  color: #0b2e57;
+  background: #0088F9;
+  border: 2px solid #0088F9;
+  color: white;
 }
 
 .cover .content .cover-actions a:nth-child(3) {
@@ -171,17 +171,20 @@ body.menu {
 }
 
 .cover .content .cover-actions a:nth-child(3):hover {
-  background: #072546;
+  background: #0088F9;
+  border: 2px solid #0088F9;
   color: white;
 }
 
 .cover .content .cover-actions a:nth-child(3):focus {
-  background: #072546;
+  background: #0088F9;
+  border: 2px solid #0088F9;
   color: white;
 }
 
 .cover .content .cover-actions a:nth-child(3):active {
-  background: #072546;
+  background: #0088F9;
+  border: 2px solid #0088F9;
   color: white;
 }
 
