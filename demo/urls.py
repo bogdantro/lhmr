@@ -7,7 +7,7 @@ from django.contrib.sitemaps.views import sitemap
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.auth import views
-from apps.userprofile.views import myaccount, signup
+from apps.userprofile.views import myaccount, signup, orderinfo
 from apps.order.views import send_order, order_success
 
 
@@ -40,5 +40,6 @@ urlpatterns = [
     path('lag-bruker/', signup, name='signup'),
     path('logg-ut/', views.LogoutView.as_view(), name='logout'),
     path('min-bruker/', myaccount, name='myaccount'),
+    path('bestilling-info/<int:id>/', orderinfo, name='orderinfo'),
 
 ]

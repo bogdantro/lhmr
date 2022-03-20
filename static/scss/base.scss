@@ -228,6 +228,7 @@ $loader: rgb(80, 104, 180);
   width: 100%;
   height: auto;
   margin-top: 70px;
+  margin-bottom: -210px;
   padding: 25px;
   .content{
     .text{
@@ -318,16 +319,16 @@ $loader: rgb(80, 104, 180);
 }
 // BOOST CONVERSIONS
 .boost-conversions{
-  background: white;
+  background: #028cfd;
   width: 100%;
   height: auto;
-  margin-top: 10px;
+  margin-top: 0;
   padding: 25px;
   .content{
     .text{
       text-align: left;
       .boost-headingp{
-        color: #183B56;
+        color: rgb(236, 246, 255);
         opacity: 0.7;
         font-size: 13px;
         font-weight: 800;
@@ -336,8 +337,8 @@ $loader: rgb(80, 104, 180);
       }
       h1{
         transform: translateY(7px);
-        color: #183B56;
-        text-shadow: 1px 0 #183B56;
+        color: rgb(236, 246, 255);
+        text-shadow: 1px 0 rgb(236, 246, 255);
         letter-spacing:1px;    
         font-size: 36px;
         font-weight: 800;
@@ -345,7 +346,7 @@ $loader: rgb(80, 104, 180);
       .boost-longp{
         transform: translateY(30px);
         box-sizing: border-box;
-        color: rgb(90, 115, 134);
+        color: rgba(236, 246, 255, 0.781);
         display: block;
         font-family: Inter, sans-serif;
         font-size: 18px;
@@ -367,11 +368,9 @@ $loader: rgb(80, 104, 180);
 }
 // BOOST BENEFITS
 .boost-benefits{
-  background: white;
   width: 100%;
   height: auto;
-  margin-top: 33px;
-  padding: 0px 25px;
+  margin-top: 70px;
   .content{
     text-align: left;
     .flex{
@@ -381,17 +380,17 @@ $loader: rgb(80, 104, 180);
       .icon{
         border-radius: 50%;
         padding: 3px 7px;
-        background: rgba(28, 211, 28, 0.15);
+        background: rgba(255, 255, 255, 0.192);
         i{
-          color: rgba(28, 211, 28, 0.534);
+          color: rgba(28, 211, 28, 0.849);
           font-size: 16px;
         }
       }
       p{
         font-size: 17px;
-        color: black;
+        color: rgb(236, 246, 255);
         margin: 0 15px;
-        opacity: 0.8;
+        opacity: 0.9;
         transform: translateY(3px);
       }
     }
@@ -453,7 +452,8 @@ $loader: rgb(80, 104, 180);
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: -90px;
   padding: 0px 25px;
   .content{
     text-align: left;
@@ -482,19 +482,20 @@ $loader: rgb(80, 104, 180);
 }
 // PRICES
 .prices{
-  background: white;
+  background: #028cfd;
   width: 100%;
   height: auto;
-  margin-top: 100px;
+  margin-top: 0;
   padding: 25px;
   position: relative;
+  margin-bottom: 0;
   .content{
     width: 100%;
     .text{
       text-align: left;
       margin-bottom: 45px;
       .price-headingp{
-        color: #183B56;
+        color: white;
         opacity: 0.7;
         font-size: 13px;
         font-weight: 800;
@@ -503,8 +504,8 @@ $loader: rgb(80, 104, 180);
       }
       h1{
         transform: translateY(7px);
-        color: #183B56;
-        text-shadow: 1px 0 #183B56;
+        color: rgb(236, 246, 255);
+        text-shadow: 1px 0 rgb(244, 250, 255);
         letter-spacing:1px;    
         font-size: 36px;
         font-weight: 800;
@@ -520,8 +521,9 @@ $loader: rgb(80, 104, 180);
         border-radius: 14px;
         border: none;
         border: 1px solid rgba(0, 0, 0, 0.065);
-        box-shadow: 0 0 2px rgba(0, 0, 0, 0.094);
+        box-shadow: 0 0 2px white;
         transition: .3s;
+        background: rgb(244, 250, 255);
         &:active{
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
         }
@@ -588,10 +590,10 @@ $loader: rgb(80, 104, 180);
 }
 // OUR STORY
 .our-story{
-  background: #007be0;
+  background: #028cfd;
   width: 100%;
   height: auto;
-  margin-top: 50px;
+  margin-top: 0px;
   padding: 45px 25px;
   position: relative;
   .content{

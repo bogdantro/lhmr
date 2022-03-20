@@ -16,96 +16,49 @@
             <p><span>Epost:</span> &nbsp; {{ request.user.email }}</p>
         </div>
         
-        <!-- <p>Zip and place: {{ request.user.userprofile.zipcode }} {{ request.user.userprofile.place }}</p> -->
 
         <hr>
+
+           
     
         <h1 class="heading">Mine Bestillinger</h1>
 
-        <div class="my-orders">
-            <div class="check-type-of-order-flex">
-                <p id="startedOrdersP" onclick="startedOrders()">I gang</p>
-                <p id="completedOrdersP" onclick="completedOrders()">Fullførte</p>
-            </div>  
-                <div class="if-order-finished hide" id="ifOrderFinished">
-                    {% if orderFinished %}  
-                        there is
-                    {% else %}
-                        <p class="no-finished">Du har ingen fullførte bestillinger enda...</p>
-                    {% endif %}
+    <div class="my-orders">
+        <div class="check-type-of-order-flex">
+            <p id="startedOrdersP" onclick="startedOrders()">I gang</p>
+            <p id="completedOrdersP" onclick="completedOrders()">Fullførte</p>
+        </div>  
+            <div class="if-order-finished hide" id="ifOrderFinished">
+                {% if orderFinished %}  
+                    there is
+                {% else %}
+                    <p class="no-finished">Du har ingen fullførte bestillinger enda...</p>
+                {% endif %}
+            </div>
+            <div class="if-order-started" id="ifOrderStarted">
+                {% for order in request.user.orders.all %}
+                    <div class="you-got-orders" onclick="window.location.href='{% url 'orderinfo' order.id %}'">
+                        <div class="order-row-one">
+                            <h1 class="order-product">{{order.short_name}}</h1><p class="product-tag">{{order.tag}}</p>
+                            <p class="order-price">{{ order.product_price | floatformat }}kr</p>
+                        </div>
+                        <div class="order-row-two">
+                            <div class="row-one">
+                                <p class="smalltext">Navn</p>
+                                <h1>{{order.name}}</h1>
+                            </div>
+                            <div class="row-two">
+                                <p class="smalltext">Bestillt</p>
+                                <h1>{{order.created_at | date:"d F Y"}}</h1>
+                            </div>
+                        </div>
+                    </div>    
+                    {% endfor %}         
                 </div>
-                <div class="if-order-started" id="ifOrderStarted">
-                    {% if orderStarted %}  
-                        {% for order in request.user.orders.all %}
-                        <div class="you-got-orders">
-                            <div class="order-row-one">
-                                <h1 class="order-product">{{order.short_name}}</h1><p class="product-tag">{{order.tag}}</p>
-                                <p class="order-price">{{ order.product_price | floatformat }}kr</p>
-                            </div>
-                            <div class="order-row-two">
-                                <div class="row-one">
-                                    <p class="smalltext">Navn</p>
-                                    <h1>{{order.name}}</h1>
-                                </div>
-                                <div class="row-two">
-                                    <p class="smalltext">Bestillt</p>
-                                    <h1>30.06.2005</h1>
-                                </div>
-                            </div>
-
-                            <!-- <p><span>Status:</span> &nbsp;</p> 
-                            <div class="order-status">
-                                    {% if order.status_1 %}
-                                        <div class="inner one"></div>
-                                    {% endif %}
-                                    {% if order.status_2 %}
-                                        <div class="inner two"></div>
-                                    {% endif %}
-                                    {% if order.status_3 %}
-                                        <div class="inner three"></div>
-                                    {% endif %}
-                                    {% if order.status_4 %}
-                                        <div class="inner four"></div>
-                                    {% endif %}
-                                    {% if order.status_5 %}
-                                        <div class="inner five"></div>
-                                    {% endif %}
-                            </div>
-                            <br>
-                            <div class="order-is-payed">
-                                <p><span>Betalt: &nbsp; </span></p>
-                                {% if order.paid %}
-                                    <div class="icon">
-                                        <i class="fa-solid fa-check"></i>
-                                    </div>
-                                {% else %}
-                                    <div class="icon-x">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </div>
-                                {% endif %}  
-                            </div>
-                            <p><span>Hosting:</span> &nbsp; </p> 
-                            <p><span>Bestillt:</span> &nbsp; {{order.created_at}}</p> 
-                            <p><span>Bestilling ID:</span> &nbsp; {{order.id}}</p> 
-                                <hr>
-                                {% if order.is_finished %}
-                                    <div class="alert alert-info">Ønsker du å endre noe på nettsiden din? Vi er her for å hjelpe deg! Trykk på knappen under for å spørre om endringer</div>
-                                    {% if order.after_14_days %}
-                                    <div class="alert alert-danger">Gratis perioden for endringer har utløpt!</div> 
-                                    {% else %}
-                                    <div class="alert alert-warning">Husk at du har gratis endringer kunn i 14 dager etter bestillingen har blitt fullført</div> 
-                                    {% endif %}
-                                    <button onclick="window.location.href='/sporr-om-endringer'">Spørr om endringer</button>
-                                {% else %}
-                                    <div class="alert alert-info">Du kan spørre om endringer på nettsiden her, da nettsiden er fullført</div>   
-                                {% endif %} -->
-                        </div>    
-                        {% endfor %}          
-                    {% else %}
-                        <p class="no-orders">Du har ingen bestillinger enda...</p>
-                    {% endif %}
-                </div>
+                <br>
+                <br>
+                <br>
+            </div>
         </div>
-    </div>
 </div>
 {% endblock %}
