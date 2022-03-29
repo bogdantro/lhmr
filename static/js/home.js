@@ -70,6 +70,13 @@ function smallFunc(){
     const middle = document.getElementById('middle');
     const big = document.getElementById('big');
     
+    setTimeout(() => {
+        small.classList.add('click')
+    }, 70);
+    setTimeout(() => {
+        small.classList.remove('click')
+    }, 180);
+    
     small.classList.add('active')
     small.classList.remove('unactive')
 
@@ -83,6 +90,13 @@ function middleFunc(){
     const small = document.getElementById('small');
     const middle = document.getElementById('middle');
     const big = document.getElementById('big');
+
+    setTimeout(() => {
+        middle.classList.add('click')
+    }, 70);
+    setTimeout(() => {
+        middle.classList.remove('click')
+    }, 180);
     
     middle.classList.add('active')
     middle.classList.remove('unactive')
@@ -98,6 +112,13 @@ function bigFunc(){
     const small = document.getElementById('small');
     const middle = document.getElementById('middle');
     const big = document.getElementById('big');
+
+    setTimeout(() => {
+        big.classList.add('click')
+    }, 70);
+    setTimeout(() => {
+        big.classList.remove('click')
+    }, 180);
     
     big.classList.add('active')
     big.classList.remove('unactive')

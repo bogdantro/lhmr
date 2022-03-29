@@ -640,49 +640,47 @@ $loader: rgb(80, 104, 180);
         padding: 7px;
         text-align: center;
         font-size: 15px;
-        transition: padding .2s;
-        &:active{
-          padding: 12px;
-        }
-        &:focus{
+        transition: .2s;
+        transition: background-color 0;
+        &.click{
           padding: 18px;
         }
         &#big{
           &.active{
-            background: #0088F9;
+            background-color: #0088F9;
             color: white;
             opacity: 1;
           }
           &.unactive{
-            background: transparent;
+            background-color: transparent;
             opacity: 0.6;
             color: black;
           }
         }
         &#middle{
           &.active{
-            background: #0088F9;
+            background-color: #0088F9;
             color: white;
             opacity: 1;
           }
           &.unactive{
-            background: transparent;
+            background-color: transparent;
             opacity: 0.6;
             color: black;
           }
         }
         &#small{
           margin-left: 0;
-          background: #0088F9;
+          background-color: #0088F9;
           color: white;
           opacity: 1;
           &.active{
-            background: #0088F9;
+            background-color: #0088F9;
             color: white;
             opacity: 1;
           }
           &.unactive{
-            background: transparent;
+            background-color: transparent;
             opacity: 0.6;
             color: black;
           }
