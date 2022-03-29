@@ -75,8 +75,6 @@
 <!-- WHY WEBISER -->
 <div class="why-webiser">
    <!-- HALF SQUARE -->
-   <div class="square"></div>
-   <!-- WHY WEBISER CONTENT -->
    <div class="content">
       <!-- WHY WEBISER TEXT -->
       <div class="text">
@@ -87,16 +85,18 @@
             Uansett produktet du selger trenger du en high-end nettside for å konvertere.
             Det er ikke nok med en pen nettside, 
             du trenger en nettside som gjør det enkelt å få flere salg, maksimere konverteringer og drive bedriften din.
-            <!-- <span>Webiser gjør alt det her for deg</span> -->
          </p>
       </div>
    </div>
 </div>
-<!-- INFO -->
-<div class="info">
-   <!-- INFO CONTENT -->
+<div class="border-div why-sell">
+   <div class="line"></div>
+</div>
+<!-- SELL -->
+<div class="sell-anything">
+   <!-- SELL CONTENT -->
    <div class="content">
-      <!-- INFO TEXT -->
+      <!-- SELL TEXT -->
       <div class="text">
          <h1>Selg (nesten) alt du kan tenke deg om...</h1>
       </div>
@@ -161,51 +161,46 @@
          </div>
       </div>
    </div>
-</div>
-<!-- WEBSITE BENEFITS -->
-<div class="website-benefits">
-   <!-- WEBSITE BENEFITS CONTENT -->
-   <div class="content">
-      <!-- WEBSITE BENEFITS FLEX -->
-      <div class="flex">
-         <!-- WEBSITE BENEFITS ICON -->
-         <div class="icon">
-            <i class="fa-solid fa-check"></i>
+   <!-- WEBSITE BENEFITS -->
+   <div class="website-benefits">
+      <!-- WEBSITE BENEFITS CONTENT -->
+      <div class="content">
+         <!-- WEBSITE BENEFITS FLEX -->
+         <div class="flex">
+            <!-- WEBSITE BENEFITS ICON -->
+            <div class="icon">
+               <i class="fa-solid fa-check"></i>
+            </div>
+            <p>Handlekurv & Checkout</p>
          </div>
-         <p>100% responsiv</p>
-      </div>
-      <!-- WEBSITE BENEFITS FLEX -->
-      <div class="flex">
-         <!-- WEBSITE BENEFITS ICON -->
-         <div class="icon">
-            <i class="fa-solid fa-check"></i>
+         <!-- WEBSITE BENEFITS FLEX -->
+         <div class="flex">
+            <!-- WEBSITE BENEFITS ICON -->
+            <div class="icon">
+               <i class="fa-solid fa-check"></i>
+            </div>
+            <p>Responsiv og Modern design</p>
          </div>
-         <p>Enkelere måte å selge</p>
-      </div>
-      <!-- WEBSITE BENEFITS FLEX -->
-      <div class="flex">
-         <!-- WEBSITE BENEFITS ICON -->
-         <div class="icon">
-            <i class="fa-solid fa-check"></i>
+         <!-- WEBSITE BENEFITS FLEX -->
+         <div class="flex">
+            <!-- WEBSITE BENEFITS ICON -->
+            <div class="icon">
+               <i class="fa-solid fa-check"></i>
+            </div>
+            <p>Enkelt å mota betalinger</p>
          </div>
-         <p>Konverter salg</p>
-      </div>
-      <div class="flex">
-         <!-- WEBSITE BENEFITS ICON -->
-         <div class="icon">
-            <i class="fa-solid fa-check"></i>
+         <div class="flex">
+            <!-- WEBSITE BENEFITS ICON -->
+            <div class="icon">
+               <i class="fa-solid fa-check"></i>
+            </div>
+            <p>Admin dashboard</p>
          </div>
-         <p>Bli synlig på nettet</p>
-      </div>
-      <!-- WEBSITE BENEFITS FLEX -->
-      <div class="flex">
-         <!-- WEBSITE BENEFITS ICON -->
-         <div class="icon">
-            <i class="fa-solid fa-check"></i>
-         </div>
-         <p>Trygg bestilling</p>
       </div>
    </div>
+</div>
+<div class="border-div sell-proccess">
+   <div class="line"></div>
 </div>
 <!-- PROCCESS -->
 <div class="proccess">
@@ -263,16 +258,20 @@
 
    </div>
 </div>
-<img src="{% static '/images/other/wave.png' %}" alt="webiser">
+<div class="border-div proccess-conversions">
+   <div class="line"></div>
+</div>
 <!-- BOOST CONVERSIONS -->
 <div class="boost-conversions">
    <!-- BOOST CONTENT -->
    <div class="content">
+      <!-- BOOST IMAGE -->
+      <img src="{% static '/images/covers/conversions.png' %}" alt="webiser">
       <!-- BOOST TEXT -->
       <div class="text">
          <p class="boost-headingp">fordeler og sider</p>
          <h1>Øk konverteringer med en unik nettside</h1>
-         <!-- HOSTING LONG PARAGRAPH -->
+         <!-- BOOST LONG PARAGRAPH -->
          <p class="boost-longp">
             Kom i gang på noen få klikk, og du er klar til å akseptere bestillinger
          </p>
@@ -317,8 +316,188 @@
       </div>
    </div>
 </div>
-<img src="{% static '/images/other/wave-down.png' %}" alt="webiser">
-<div class="-margin" style="margin: -145px;">a</div>
+<div class="border-div conversions-quote">
+   <div class="line"></div>
+</div>
+<!-- CUSTOMER QUOTE -->
+<div class="customer-quote">
+   <!-- SLIDER -->
+   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="transition: .3s;">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+         <!-- ITEM -->
+        <div class="carousel-item active">
+             <!-- QUOTE CONTENT -->
+            <div class="content">
+               <h1>Beste valget jeg kunne ha tatt for <span>nettbutikken</span> min!</h1>
+               <!-- IMG -->
+               <div class="img">
+                  <img src="{% static '/images/other/man-hat.jpg' %}" alt="webiser">
+                  <p>Daglig leder, Eforie NORD</p>
+               </div>
+            </div>
+        </div>
+        <!-- ITEM -->
+        <div class="carousel-item">
+            <!-- QUOTE CONTENT -->
+            <div class="content">
+               <h1>Endelig kan jeg selge <span>treningskurset</span> mitt online</h1>
+               <!-- IMG -->
+               <div class="img">
+                  <img src="{% static '/images/other/woman-workout.jpg' %}" alt="webiser">
+                  <p>Emma</p>
+               </div>
+            </div>
+        </div>
+        <!-- ITEM -->
+        <div class="carousel-item">
+            <!-- QUOTE CONTENT -->
+            <div class="content">
+               <h1>Takker <span>webiser</span> kan jeg selge produktene mine online</h1>
+               <!-- IMG -->
+               <div class="img">
+                  <img src="{% static '/images/other/man-pc.jpg' %}" alt="webiser">
+                  <p>Sott</p>
+               </div>
+            </div>
+        </div>
+      </div>
+      <!-- PREV -->
+      <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a> -->
+      <!-- NEXT -->
+      <!-- <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a> -->
+    </div>
+</div>
+<div class="border-div quote-prices">
+   <div class="line"></div>
+</div>
+<!-- PRICES -->
+<div class="prices">
+   <!-- PRICES CONTENT -->
+   <div class="content">
+      <!-- PRICES IMAGE -->
+      <img src="{% static '/images/covers/products.png' %}" alt="webiser">
+      <!-- PRICES TEXT -->
+      <div class="text">
+         <p class="price-headingp">priser</p>
+         <h1>Profesjonelle nettsider, rett foran deg</h1>
+      </div>
+      <div class="choose-type-of-product-flex">
+         <p id="small" onclick="smallFunc()">Liten</p>
+         <p id="middle" onclick="middleFunc()">Middel</p>
+         <p id="big" onclick="bigFunc()">Stor</p>
+     </div>  
+
+
+
+
+
+
+
+
+
+
+
+
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+      <!-- PRODUCT FLEX SECTION -->
+      <div class="product-section">
+         {% for product in products %}
+         <!-- PRODUCT CARD -->
+         <div class="product-card" onclick="window.location.href='{% url 'product_detail' product.slug %}'">
+              <!-- RECOMMEND -->
+              {% if product.is_middle %}
+                  <div class="recommended">anbefalt</div>
+               {% endif %}
+            <div class="card-content">
+               <div class="card-text">
+                  <!-- PRODUCT NAME -->
+                  <div class="product-name">
+                     <h1>{{ product.name }}</h1>{% if product.is_small %}<div class="product-type">LITEN</div>{% endif %}{% if product.is_middle %}<div class="product-type">MIDDELS</div>{% endif %}{% if product.is_big %}<div class="product-type">STOR</div>{% endif %}
+                  </div>
+      
+               
+                  <!-- <strong>Kunn: {{ product.price | floatformat }}kr</strong> -->
+               </div>
+            </div>
+         </div>
+         {% endfor %} 
+      </div>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <!-- HOSTING AND DATA -->
 <div class="hosting">
    <!-- HOSTING CONTENT -->
@@ -381,50 +560,23 @@
       </div>
    </div>
 </div>
-<img class="our-story-wave" src="{% static '/images/other/wave.png' %}" alt="webiser">
-<!-- PRICES -->
-<div class="prices">
-   <!-- PRICES CONTENT -->
-   <div class="content">
-      <!-- PRICES TEXT -->
-      <div class="text">
-         <p class="price-headingp">priser</p>
-         <h1>Profesjonelle nettsider, rett foran deg</h1>
-      </div>
-      <!-- PRODUCT FLEX SECTION -->
-      <div class="product-section">
-         {% for product in products %}
-            <!-- PRODUCT CARD -->
-            <div class="product-card" onclick="window.location.href='{% url 'product_detail' product.slug %}'">
-               <div class="card-content">
-                  <div class="icon">
-                     <i class="fad fa-arrow-alt-from-left"></i>
-                     <p>Les mer</p>
-                  </div>
-                  <div class="card-text">
-                     <!-- PRODUCT NAME -->
-                     <div class="product-name">
-                        <h1>{{ product.name }}</h1>{% if product.is_small %}<div class="product-type">LITEN</div>{% endif %}{% if product.is_middle %}<div class="product-type">MIDDELS</div>{% endif %}{% if product.is_big %}<div class="product-type">STOR</div>{% endif %}
-                     </div>
-                     <p>
-                        <!-- SMALL WEBSITE -->
-                        {% if product.is_small %}En vanlig nettbutikk, selg hva som helst. Om oss side, Kontakt oss side, handlekurv og checkout er inkludert{% endif %}
-                        <!-- MEDIUM WEBSITE -->
-                        {% if product.is_middle %}En større nettside, flere funksjoner og inkludert en Blogg side{% endif %}
-                        <!-- BIG WEBSITE -->
-                        {% if product.is_big %}Største nettsiden. Få 4 ekstra sider som du bestemmer hva de skal være{% endif %}
-                        <br><br>
-                        <strong>Kunn: {{ product.price | floatformat }}kr</strong>
-                     </p>
-                  </div>
-               </div>
-            </div>
-         {% endfor %}   
-      </div>
-   </div>
-</div>
-<img class="our-story-wave" src="{% static '/images/other/wave-down.png' %}" alt="webiser">
-<div class="-margin" style="margin: -162px;">a</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="our-story">
    <div class="content">
       <div class="text">
@@ -437,3 +589,4 @@
    </div>
 </div>
 {% endblock %}
+ 

@@ -89,25 +89,25 @@ def request_edit(request):
 # KUNDESERVICE PAGES
 def contact(request):
 
-    if request.method=='POST' and 'contact' in request.POST:
-        navn = request.POST.get('navn')
-        email = request.POST.get('email')
-        message = request.POST.get('message')
+    # if request.method=='POST' and 'contact' in request.POST:
+    #     navn = request.POST.get('navn')
+    #     email = request.POST.get('email')
+    #     message = request.POST.get('message')
 
-        data = {
-            'navn': navn,
-            'email': email,
-            'message': message,
-        }
-        message = dedent('''
-        Fra: {}
+    #     data = {
+    #         'navn': navn,
+    #         'email': email,
+    #         'message': message,
+    #     }
+    #     message = dedent('''
+    #     Fra: {}
 
-        Navn: {}
+    #     Navn: {}
 
-        Beskjed: {}
-        ''').format(data['email'], data['navn'], data['message'], )
-        send_mail('Webiser Contact Form', message, '', ['sabertoothtri@gmail.com'])
-        return redirect('/email-success')
+    #     Beskjed: {}
+    #     ''').format(data['email'], data['navn'], data['message'], )
+    #     send_mail('Webiser Contact Form', message, '', ['sabertoothtri@gmail.com'])
+    #     return redirect('/email-success')
 
     return render(request, 'pages/kundeservice/contact.html')   
 

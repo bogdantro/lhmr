@@ -100,11 +100,30 @@ body.menu {
 }
 
 .cover .content .text .cover-p {
-  color: #183B56;
-  opacity: 0.7;
+  opacity: 0.8;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #5a7386;
+  display: block;
+  font-family: Inter, sans-serif;
   font-size: 16px;
-  -webkit-transform: translateY(25px);
-          transform: translateY(25px);
+  font-weight: 400;
+  height: auto;
+  line-height: 27px;
+  -webkit-margin-after: 32px;
+          margin-block-end: 32px;
+  -webkit-margin-before: 0px;
+          margin-block-start: 0px;
+  margin-bottom: 0;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
 }
 
 .cover .content .cover-actions {
@@ -132,8 +151,8 @@ body.menu {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .2s;
+  transition: .2s;
   border: 2px solid transparent;
   text-decoration: none;
 }
@@ -147,45 +166,25 @@ body.menu {
   background: #072546;
 }
 
-.cover .content .cover-actions a:nth-child(1):hover {
-  background: #0088F9;
-  border: 2px solid #0088F9;
-  color: white;
-}
-
-.cover .content .cover-actions a:nth-child(1):focus {
-  background: #0088F9;
-  border: 2px solid #0088F9;
-  color: white;
-}
-
-.cover .content .cover-actions a:nth-child(1):active {
-  background: #0088F9;
-  border: 2px solid #0088F9;
-  color: white;
-}
-
 .cover .content .cover-actions a:nth-child(3) {
   border: 2px solid #0b2e57;
   color: #0b2e57;
+  background: white;
 }
 
-.cover .content .cover-actions a:nth-child(3):hover {
-  background: #0088F9;
-  border: 2px solid #0088F9;
-  color: white;
+.cover .content .cover-actions a:hover {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
 }
 
-.cover .content .cover-actions a:nth-child(3):focus {
-  background: #0088F9;
-  border: 2px solid #0088F9;
-  color: white;
+.cover .content .cover-actions a:focus {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
 }
 
-.cover .content .cover-actions a:nth-child(3):active {
-  background: #0088F9;
-  border: 2px solid #0088F9;
-  color: white;
+.cover .content .cover-actions a:active {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
 }
 
 .cover .content .cover-image-div {

@@ -5,12 +5,47 @@ $loader: rgb(80, 104, 180);
 
 
 // // // STANDARD PHONE
+.border-div{
+  width: 100%;
+  padding: 25px;
+  .line{
+    width: 100%;
+    height: 1.2px;
+    background-color: #e5eaf4;    
+    border-radius: 20px;
+  }
+  &.why-sell{
+    margin-block: 40px;
+    margin-block-end: 30px;
+  }
+  &.sell-proccess{
+    margin-block: 10px;
+    .line{
+      height: 1.1px;
+    }
+  }
+  &.proccess-conversions{
+    margin-block: 5px;
+    margin-block-end: 15px;
+  }
+  &.conversions-quote{
+    margin-block: 5px;
+    .line{
+      width: 0;
+      height: 0;
+    }
+  }
+  &.quote-prices{
+    margin-top: 60px;
+    margin-bottom: -20px;
+  }
+}
 // INTRO
 .intro{
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 70px;
+  margin-top: 60px;
   padding: 5px;
   .content{
     width: 90%;
@@ -63,25 +98,17 @@ $loader: rgb(80, 104, 180);
   margin-top: 80px;
   padding: 17px;
   position: relative;
-  .square{
-    width: 0;
-    height: 0;
-    border-bottom: 220px solid rgba(0, 0, 0, 0.04);
-    border-left: 220px solid transparent;
-    position: absolute;
-    right: 0;
-    bottom: -70px;
-  }
   .content{
     .text{
       text-align: center;
       .why-webiser-headingp{
-        color: #183B56;
-        opacity: 0.7;
-        font-size: 13px;
+        font-size: 14px;
+        line-height: 15.75px;
         font-weight: 800;
-        letter-spacing: 1px;
         text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #5a7386;
+        margin-bottom: 1rem;
       }
       h1{
         transform: translateY(7px);
@@ -90,6 +117,12 @@ $loader: rgb(80, 104, 180);
         letter-spacing:1px;    
         font-size: 26px;
         font-weight: 800;
+        font-size: 36px;
+        font-size: 2.25rem;
+        line-height: 45px;
+        line-height: 2.8125rem;
+        letter-spacing: -1px;
+        margin-bottom: 32px;
       }
       .why-webiser-long-ptext{
         transform: translateY(30px);
@@ -109,53 +142,39 @@ $loader: rgb(80, 104, 180);
         margin-left: 0px;
         margin-right: 0px;
         margin-top: 0px;
-        // span{
-        //   position: relative;
-        //   top: 17px;
-        //   &::after{
-        //     content: '';
-        //     display: block;
-        //     position: relative;
-        //     left: 50%;
-        //     transform: translateX(-50%) translateY(10px);
-        //     width: 70%;
-        //     height: 3px;
-        //     background: #183b5665;
-        //   }
-        // }
       }
     }
   }
 }
-// INFO
-.info{
+// SELL
+.sell-anything{
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 150px;
   padding: 25px;
   .content{
     .text{
       text-align: left;
       margin-bottom: 45px;
+      position: relative;
       h1{
         color: #183B56;
-        font-size: 28px;
+        font-size: 24px;
         font-weight: 800;
         text-shadow: 1px 0 #183B56;
         letter-spacing:1px; 
       }
     }
     .card{
-      margin: 34px 0;
+      margin-block: 34px;
       height: auto;
-      padding: 30px;
+      padding: 25px;
       width: 100%;
       max-width: 400px;
       border-radius: 14px;
       border: none;
-      border: 1px solid rgba(0, 0, 0, 0.065);
-      box-shadow: 0 0 2px rgba(0, 0, 0, 0.094);
+      background: rgba(255, 255, 255, 0.918);
+      box-shadow: 0 0 2px 0.5px rgba(130, 130, 130, 0.2);
       .card-content{
         display: flex;
         .icon{
@@ -165,7 +184,7 @@ $loader: rgb(80, 104, 180);
           justify-content: center;
           i{
             color: #0088F9;
-            font-size: 42px;
+            font-size: 32px;
             transform: translateX(-15px);
           }
         }
@@ -174,50 +193,59 @@ $loader: rgb(80, 104, 180);
           text-align: left;
           transform: translateX(7px);
           h1{
-            color: black;
+            color: rgb(44, 44, 44);
             font-size: 18px;
             font-weight: 800;
-            text-shadow: 0.3px 0 black;
             letter-spacing: 0.3px; 
           }
           p{
-            opacity: 0.9;
-            font-size: 15px;
+            box-sizing: border-box;
+            color: rgb(90, 115, 134);
+            display: block;
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            height: auto;
+            line-height: 27px;
+            margin-block-end: 32px;
+            margin-block-start: 0px;
+            margin-bottom: 0;
+            margin-inline-end: 0px;
+            margin-inline-start: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
           }
         }
       }
     }
   }
-}
-// WEBSITE BENEFITS
-.website-benefits{
-  background: white;
-  width: 100%;
-  height: auto;
-  margin-top: 0px;
-  transform: translateY(-30px);
-  padding: 0px 25px;
-  .content{
-    text-align: left;
-    .flex{
-      width: 100%;
-      display: flex;
-      margin: 27px 0;
-      .icon{
-        border-radius: 50%;
-        padding: 3px 7px;
-        background: rgba(28, 211, 28, 0.15);
-        i{
-          color: rgba(28, 211, 28, 0.534);
-          font-size: 16px;
+  // WEBSITE BENEFITS
+  .website-benefits{
+    width: 100%;
+    height: auto;
+    .content{
+      text-align: left;
+      .flex{
+        width: 100%;
+        display: flex;
+        margin-block: 27px;
+        .icon{
+          border-radius: 50%;
+          padding: 1.5px 6px;
+          background: rgba(16, 180, 38, 0.15);
+          i{
+            color: rgb(28, 211, 28);
+            font-size: 15px;
+          }
         }
-      }
-      p{
-        font-size: 17px;
-        color: black;
-        margin: 0 15px;
-        opacity: 0.8;
-        transform: translateY(3px);
+        p{
+          font-size: 16px;
+          color: #1B1B1B;
+          margin: 0 15px;
+          opacity: 0.8;
+          transform: translateY(1px);
+        }
       }
     }
   }
@@ -227,13 +255,14 @@ $loader: rgb(80, 104, 180);
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 70px;
-  margin-bottom: -210px;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 25px;
   .content{
     .text{
       text-align: left;
       margin-bottom: 45px;
+      position: relative;
       h1{
         color: #183B56;
         font-size: 36px;
@@ -244,7 +273,7 @@ $loader: rgb(80, 104, 180);
       }
     }
     .proccess-card{
-      margin: 60px auto;
+      margin-block: 25px;
     }
     .proccess-image{
       position: relative;
@@ -253,7 +282,7 @@ $loader: rgb(80, 104, 180);
       border-top-left-radius: 25px;
       border-top-right-radius: 25px;
       border-bottom-right-radius: 25px;
-      border-bottom-left-radius: 0;
+      border-bottom-left-radius: 6px;
       width: 100%;
       img{
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.164);
@@ -262,7 +291,7 @@ $loader: rgb(80, 104, 180);
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
-        border-bottom-left-radius: 0;
+        border-bottom-left-radius: 6px;
         filter: brightness(90%);
         margin: 15px auto;
       }
@@ -319,37 +348,47 @@ $loader: rgb(80, 104, 180);
 }
 // BOOST CONVERSIONS
 .boost-conversions{
-  background: #028cfd;
+  background: white;
   width: 100%;
   height: auto;
   margin-top: 0;
   padding: 25px;
   .content{
+    img{
+      margin-block: 15px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      height: auto;
+      width: 110%;
+      max-width: 400px;
+    }
     .text{
       text-align: left;
       .boost-headingp{
-        color: rgb(236, 246, 255);
-        opacity: 0.7;
-        font-size: 13px;
+        font-size: 14px;
+        line-height: 15.75px;
         font-weight: 800;
-        letter-spacing: 1px;
         text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #5a7386;
+        margin-bottom: 1rem;
       }
       h1{
         transform: translateY(7px);
-        color: rgb(236, 246, 255);
-        text-shadow: 1px 0 rgb(236, 246, 255);
+        color: #183B56;
+        text-shadow: 1px 0 #183B56;
         letter-spacing:1px;    
-        font-size: 36px;
+        font-size: 30px;
         font-weight: 800;
       }
       .boost-longp{
-        transform: translateY(30px);
+        transform: translateY(21px);
         box-sizing: border-box;
-        color: rgba(236, 246, 255, 0.781);
+        color: rgb(90, 115, 134);
         display: block;
         font-family: Inter, sans-serif;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 400;
         height: auto;
         line-height: 27px;
@@ -361,37 +400,108 @@ $loader: rgb(80, 104, 180);
         margin-left: 0px;
         margin-right: 0px;
         margin-top: 0px;
-        width: 315px;
+      }
+    }
+  }
+  // BOOST BENEFITS
+  .boost-benefits{
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    .content{
+      text-align: left;
+      margin-top: 42px;
+      .flex{
+        width: 100%;
+        display: flex;
+        margin-block: 27px;
+        .icon{
+          border-radius: 50%;
+          padding: 1.5px 6px;
+          background: rgba(16, 180, 38, 0.15);
+          i{
+            color: rgb(28, 211, 28);
+            font-size: 15px;
+          }
+        }
+        p{
+          font-size: 16px;
+          color: #1B1B1B;
+          margin: 0 15px;
+          opacity: 0.8;
+          transform: translateY(1px);
+        }
       }
     }
   }
 }
-// BOOST BENEFITS
-.boost-benefits{
+// CUSTOMER QUOUTE
+.customer-quote{
   width: 100%;
   height: auto;
-  margin-top: 70px;
+  margin-top: 0;
+  padding: 25px;
+  transition: .2s;
+  position: relative;
+  &::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: #EDF3F8;
+    z-index: -1;
+  }
+  .carousel-indicators{
+    position: absolute;
+    bottom: -65px;
+    border-radius: 20px;
+    li{
+      background-color: #008cff;
+      transition: .2s;
+      &.active{
+        width: 15px;
+      }
+    }
+  }
+  a{
+    color: white;
+    background: rgba(0, 0, 0, 0.473);
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+  }
   .content{
-    text-align: left;
-    .flex{
-      width: 100%;
-      display: flex;
-      margin: 27px 0;
-      .icon{
-        border-radius: 50%;
-        padding: 3px 7px;
-        background: rgba(255, 255, 255, 0.192);
-        i{
-          color: rgba(28, 211, 28, 0.849);
-          font-size: 16px;
-        }
+    transition: .2s;
+    h1{
+      font-weight: 800;
+      font-size: 42px;
+      padding-bottom: 5px;
+      font-style: italic;
+      span{
+        border-bottom: 3px solid #0088F9;
+      }
+    }
+    .img{
+      position: relative;
+      img{
+        width: 100%;
+        max-width: 420px;
+        height: auto;
       }
       p{
-        font-size: 17px;
-        color: rgb(236, 246, 255);
-        margin: 0 15px;
-        opacity: 0.9;
-        transform: translateY(3px);
+        background: rgba(0, 0, 0, 0.612);
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 100%;
+        padding: 8px;
+        color: white;
       }
     }
   }
@@ -401,7 +511,7 @@ $loader: rgb(80, 104, 180);
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 95px;
+  margin-top: 0;
   padding: 25px;
   .content{
     .text{
@@ -452,8 +562,8 @@ $loader: rgb(80, 104, 180);
   background: white;
   width: 100%;
   height: auto;
-  margin-top: 40px;
-  margin-bottom: -90px;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 0px 25px;
   .content{
     text-align: left;
@@ -482,48 +592,120 @@ $loader: rgb(80, 104, 180);
 }
 // PRICES
 .prices{
-  background: #028cfd;
+  background: white;
   width: 100%;
   height: auto;
   margin-top: 0;
   padding: 25px;
-  position: relative;
-  margin-bottom: 0;
   .content{
     width: 100%;
+    img{
+      margin-block: 15px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-52%);
+      height: auto;
+      width: 110%;
+      max-width: 400px;
+    }
     .text{
       text-align: left;
-      margin-bottom: 45px;
       .price-headingp{
-        color: white;
-        opacity: 0.7;
-        font-size: 13px;
+        font-size: 14px;
+        line-height: 15.75px;
         font-weight: 800;
-        letter-spacing: 1px;
         text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #5a7386;
+        margin-bottom: 1rem;
       }
       h1{
         transform: translateY(7px);
-        color: rgb(236, 246, 255);
-        text-shadow: 1px 0 rgb(244, 250, 255);
+        color: #183B56;
+        text-shadow: 1px 0 #183B56;
         letter-spacing:1px;    
-        font-size: 36px;
+        font-size: 30px;
         font-weight: 800;
+      }
+    }
+    .choose-type-of-product-flex{
+      width: 100%;
+      display: flex;
+      transform: translateY(25px);
+      p{
+        opacity: 0.6;
+        margin-inline: 18px;
+        border-radius: 28px;
+        width: 80px;
+        padding: 7px;
+        text-align: center;
+        font-size: 15px;
+        transition: padding .2s;
+        &:active{
+          padding: 12px;
+        }
+        &:focus{
+          padding: 18px;
+        }
+        &#big{
+          &.active{
+            background: #0088F9;
+            color: white;
+            opacity: 1;
+          }
+          &.unactive{
+            background: transparent;
+            opacity: 0.6;
+            color: black;
+          }
+        }
+        &#middle{
+          &.active{
+            background: #0088F9;
+            color: white;
+            opacity: 1;
+          }
+          &.unactive{
+            background: transparent;
+            opacity: 0.6;
+            color: black;
+          }
+        }
+        &#small{
+          margin-left: 0;
+          background: #0088F9;
+          color: white;
+          opacity: 1;
+          &.active{
+            background: #0088F9;
+            color: white;
+            opacity: 1;
+          }
+          &.unactive{
+            background: transparent;
+            opacity: 0.6;
+            color: black;
+          }
+        }
       }
     }
     .product-section{
       .product-card{
-        margin: 34px 0;
-        height: auto;
+        margin-block: 48px;
+        height: 400px;
         padding: 30px;
         width: 100%;
         max-width: 400px;
-        border-radius: 14px;
+        border-radius: 7px;
         border: none;
         border: 1px solid rgba(0, 0, 0, 0.065);
         box-shadow: 0 0 2px white;
         transition: .3s;
-        background: rgb(244, 250, 255);
+        background: white;
+        position: relative;
+        &:nth-child(2){
+          margin-block: 80px auto;
+        }
         &:active{
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
         }
@@ -533,54 +715,41 @@ $loader: rgb(80, 104, 180);
         &:hover{
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
         }
+        .recommended{
+          width: 150px;
+          background: #007be0;
+          padding: 7px;
+          text-align: center;
+          text-transform: uppercase;
+          margin-top: 15px;
+          position: absolute;
+          left: 0;
+          top: -45px;
+          color: white;
+          font-weight: 800;
+        }
         .card-content{
-          display: flex;
-          .icon{
-            width: 25%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            position: relative;
-            i{
-              color: #0088F9;
-              font-size: 42px;
-              transform: translateX(-15px);
-            }
-            p{
-              position: absolute;
-              top: 45px;
-              left: -9px;
-              width: 100%;
-              font-size: 14px;
-              color: #0088F9;
-              font-weight: bold;
-            }
-          }
           .card-text{
-            width: 75%;
-            text-align: left;
-            transform: translateX(7px);
+            width: 100%;
             .product-name{
               display: flex;
+              width: 100%;
+              justify-content: center;
+              align-items: center;
               .product-type{
                 color: #0088F9;
                 font-size: 14px;
-                transform: translateY(2px) translateX(15px);
                 text-decoration: none;
                 font-weight: 600;
                 font-size: 14px;
+                transform: translateX(7px) translateY(2px);
               }
               h1{
                 color: #183B56;
-                font-size: 18px;
+                font-size: 30px;
                 font-weight: 800;
-                text-shadow: 0.3px 0 #183B56;
                 letter-spacing: 0.3px; 
               }
-            }
-            p{
-              opacity: 0.9;
-              font-size: 15px;
             }
           }
         }

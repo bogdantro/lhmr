@@ -84,10 +84,24 @@ body{
         font-weight: 800;
       }
       .cover-p{
-        color: #183B56;
-        opacity: 0.7;
+        opacity: 0.8;
+        transform: translateY(20px);
+        box-sizing: border-box;
+        color: rgb(90, 115, 134);
+        display: block;
+        font-family: Inter, sans-serif;
         font-size: 16px;
-        transform: translateY(25px);
+        font-weight: 400;
+        height: auto;
+        line-height: 27px;
+        margin-block-end: 32px;
+        margin-block-start: 0px;
+        margin-bottom: 0;
+        margin-inline-end: 0px;
+        margin-inline-start: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
       }
     }
     .cover-actions{
@@ -106,7 +120,7 @@ body{
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        transition: .4s;
+        transition: .2s;
         border: 2px solid transparent;
         text-decoration: none;
         i{
@@ -114,40 +128,20 @@ body{
         }
         &:nth-child(1){
           background: rgb(7, 37, 70);
-          &:hover{
-            background: #0088F9;
-            border: 2px solid #0088F9;
-            color: white;  
-          }
-          &:focus{
-            background: #0088F9;
-            border: 2px solid #0088F9;
-            color: white; ;  
-          }
-          &:active{
-            background: #0088F9;
-            border: 2px solid #0088F9;
-            color: white;  
-          }
         }
         &:nth-child(3){
           border: 2px solid rgb(11, 46, 87);
           color: rgb(11, 46, 87);
-          &:hover{
-            background: #0088F9;
-            border: 2px solid #0088F9;
-            color: white;  
-          }
-          &:focus{
-            background: #0088F9;
-            border: 2px solid #0088F9;
-            color: white; ;  
-          }
-          &:active{
-            background: #0088F9;
-            border: 2px solid #0088F9;
-            color: white;  
-          }
+          background: white;
+        }
+        &:hover{
+          filter: brightness(80%); 
+        }
+        &:focus{
+          filter: brightness(80%); 
+        }
+        &:active{
+          filter: brightness(80%);  
         }
       }
     }

@@ -62,3 +62,49 @@ window.addEventListener("scroll", function(){
 function backToTop(){
   window.scrollTo({ top: 0, behavior: 'smooth'});
 }
+
+
+// PRODUCTS
+function smallFunc(){
+    const small = document.getElementById('small');
+    const middle = document.getElementById('middle');
+    const big = document.getElementById('big');
+    
+    small.classList.add('active')
+    small.classList.remove('unactive')
+
+    middle.classList.remove('active')
+    middle.classList.add('unactive')
+
+    big.classList.remove('active')
+    big.classList.add('unactive')
+}
+function middleFunc(){
+    const small = document.getElementById('small');
+    const middle = document.getElementById('middle');
+    const big = document.getElementById('big');
+    
+    middle.classList.add('active')
+    middle.classList.remove('unactive')
+
+    small.classList.remove('active')
+    small.classList.add('unactive')
+
+
+    big.classList.remove('active')
+    big.classList.add('unactive')
+}
+function bigFunc(){
+    const small = document.getElementById('small');
+    const middle = document.getElementById('middle');
+    const big = document.getElementById('big');
+    
+    big.classList.add('active')
+    big.classList.remove('unactive')
+
+    middle.classList.remove('active')
+    middle.classList.add('unactive')
+
+    small.classList.remove('active')
+    small.classList.add('unactive')
+}
