@@ -45,6 +45,10 @@ function prices(){
   const about = document.getElementById('aboutDropdown');
   const help = document.getElementById('helpDropdown');
 
+  const pricesToggleExtra = document.getElementById('pricesToggleExtra');
+  const pricesExtraDiv = document.getElementById('pricesExtraDiv');
+
+
   const aboutToggle = document.getElementById('aboutToggle');
   const helpToggle = document.getElementById('helpToggle');
   const accountToggle = document.getElementById('accountToggle');
@@ -61,6 +65,21 @@ function prices(){
   } else{
     prices.classList.remove('active')
     pricesToggle.classList.remove('click')
+    pricesExtraDiv.classList.remove('active')
+    pricesToggleExtra.classList.remove('click')
+  }
+}
+function pricesExtra(){
+  const pricesToggleExtra = document.getElementById('pricesToggleExtra');
+  const pricesExtraDiv = document.getElementById('pricesExtraDiv');
+
+
+  if (window.getComputedStyle(pricesExtraDiv,null).getPropertyValue("display") == 'none'){
+    pricesExtraDiv.classList.add('active')
+    pricesToggleExtra.classList.add('click')
+  } else{
+    pricesExtraDiv.classList.remove('active')
+    pricesToggleExtra.classList.remove('click')
   }
 }
 // ABOUT DROPDOWN

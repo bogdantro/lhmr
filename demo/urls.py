@@ -9,6 +9,7 @@ from django.contrib import admin
 from django.contrib.auth import views
 from apps.userprofile.views import myaccount, signup, orderinfo
 from apps.order.views import send_order, order_success
+from apps.newsletter.api import api_add_subscriber
 
 
 
@@ -41,5 +42,8 @@ urlpatterns = [
     path('logg-ut/', views.LogoutView.as_view(), name='logout'),
     path('min-bruker/', myaccount, name='myaccount'),
     path('bestilling-info/<int:id>/', orderinfo, name='orderinfo'),
+
+    # API
+    path('api/add_subscriber/', api_add_subscriber, name='api_add_subscriber'),
 
 ]

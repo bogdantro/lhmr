@@ -315,11 +315,34 @@
           transform: translateY(19px) translateX(0);
 }
 
+#navbar .sidebar .sidebar-ul .sidebar-li .prices-dropdown .prices-dropdown-links .extras {
+  display: none;
+}
+
+#navbar .sidebar .sidebar-ul .sidebar-li .prices-dropdown .prices-dropdown-links .extras.active {
+  display: block;
+}
+
+#navbar .sidebar .sidebar-ul .sidebar-li .prices-dropdown .prices-dropdown-links .extras .nav-link-parent a {
+  padding-left: 70px;
+}
+
 #navbar .sidebar .sidebar-ul .sidebar-li .prices-dropdown #pricesToggle.click {
   color: #4287f5;
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .prices-dropdown #pricesToggle.click i {
+  -webkit-transform: rotateX(180deg) translateX(-50px) translateY(-11px);
+          transform: rotateX(180deg) translateX(-50px) translateY(-11px);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+#navbar .sidebar .sidebar-ul .sidebar-li .prices-dropdown #pricesToggleExtra.click {
+  color: #4287f5;
+}
+
+#navbar .sidebar .sidebar-ul .sidebar-li .prices-dropdown #pricesToggleExtra.click i {
   -webkit-transform: rotateX(180deg) translateX(-50px) translateY(-11px);
           transform: rotateX(180deg) translateX(-50px) translateY(-11px);
   -webkit-transform-origin: center center;

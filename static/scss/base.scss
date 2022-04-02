@@ -173,8 +173,8 @@ $loader: rgb(80, 104, 180);
       max-width: 400px;
       border-radius: 14px;
       border: none;
-      background: rgba(255, 255, 255, 0.918);
-      box-shadow: 0 0 2px 0.5px rgba(130, 130, 130, 0.2);
+      background-color: rgba(255, 255, 255, 0.918);
+      box-shadow: 0 0 6px 2px rgba(130, 130, 130, 0.2);
       .card-content{
         display: flex;
         .icon{
@@ -451,7 +451,7 @@ $loader: rgb(80, 104, 180);
     left: 0;
     width: 100%;
     height: 300px;
-    background: #EDF3F8;
+    background: #daeeff;
     z-index: -1;
   }
   .carousel-indicators{
@@ -502,90 +502,6 @@ $loader: rgb(80, 104, 180);
         width: 100%;
         padding: 8px;
         color: white;
-      }
-    }
-  }
-}
-// HOSTING
-.hosting{
-  background: white;
-  width: 100%;
-  height: auto;
-  margin-top: 0;
-  padding: 25px;
-  .content{
-    .text{
-      text-align: left;
-      .hosting-headingp{
-        color: #183B56;
-        opacity: 0.7;
-        font-size: 13px;
-        font-weight: 800;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        transform: translateX(2px) translateY(2px);
-      }
-      h1{
-        transform: translateY(5px);
-        color: #183B56;
-        text-shadow: 1px 0 #183B56;
-        letter-spacing:1px;    
-        font-size: 36px;
-        font-weight: 800;
-        line-height: 130%;
-      }
-    }
-    .hosting-longp{
-      transform: translateY(30px);
-      box-sizing: border-box;
-      color: rgb(90, 115, 134);
-      display: block;
-      font-family: Inter, sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-      height: auto;
-      line-height: 27px;
-      margin-block-end: 32px;
-      margin-block-start: 0px;
-      margin-bottom: 0;
-      margin-inline-end: 0px;
-      margin-inline-start: 0px;
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-top: 0px;
-      width: 315px;
-    }
-  }
-}
-// HOSTING BENEFITS
-.hosting-benefits{
-  background: white;
-  width: 100%;
-  height: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0px 25px;
-  .content{
-    text-align: left;
-    .flex{
-      width: 100%;
-      display: flex;
-      margin: 27px 0;
-      .icon{
-        border-radius: 50%;
-        padding: 3px 7px;
-        background: rgba(28, 211, 28, 0.15);
-        i{
-          color: rgba(28, 211, 28, 0.534);
-          font-size: 16px;
-        }
-      }
-      p{
-        font-size: 17px;
-        color: black;
-        margin: 0 15px;
-        opacity: 0.8;
-        transform: translateY(3px);
       }
     }
   }
@@ -688,67 +604,169 @@ $loader: rgb(80, 104, 180);
       }
     }
     .product-section{
-      .product-card{
-        margin-block: 48px;
-        height: 400px;
-        padding: 30px;
+      margin-top:20px;
+      .product{
+        margin: 40px 0;
+        text-align: left;
+        background: transparent;
         width: 100%;
-        max-width: 400px;
-        border-radius: 7px;
-        border: none;
-        border: 1px solid rgba(0, 0, 0, 0.065);
-        box-shadow: 0 0 2px white;
-        transition: .3s;
-        background: white;
-        position: relative;
-        &:nth-child(2){
-          margin-block: 80px auto;
+        max-width: 340px;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.224);
+        padding: 28px;
+        border-radius: 10px;
+        .product-row-one{
+          width: 100%;
+          display: flex;
+          position: relative;
+          .product-name{                
+            width: 88%;
+            font-size: 23px;
+            color: #183B56;
+            font-weight: 800;
+            text-shadow: 1px 0 #183B56;
+            letter-spacing:1px; 
+          }
+          .product-tag{
+            color: #0088F9;
+            font-size: 13px;
+            transform: translateY(10px) translateX(10px);
+          }
+          .product-price{
+            color: black;
+            opacity: 0.5;
+            font-size: 15px;
+            width: 12%;
+            transform: translateY(3px) translateX(-18px);
+            border-bottom: 2px solid #0088F9;
+          }
         }
-        &:active{
-          box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
-        }
-        &:focus{
-          box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
-        }
-        &:hover{
-          box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
-        }
-        .recommended{
-          width: 150px;
-          background: #007be0;
-          padding: 7px;
-          text-align: center;
-          text-transform: uppercase;
-          margin-top: 15px;
-          position: absolute;
-          left: 0;
-          top: -45px;
-          color: white;
-          font-weight: 800;
-        }
-        .card-content{
-          .card-text{
+        .product-row-two{
+          width: 100%;
+          transform: translateY(0);
+          .flex{
             width: 100%;
-            .product-name{
-              display: flex;
-              width: 100%;
-              justify-content: center;
-              align-items: center;
-              .product-type{
-                color: #0088F9;
-                font-size: 14px;
-                text-decoration: none;
-                font-weight: 600;
-                font-size: 14px;
-                transform: translateX(7px) translateY(2px);
-              }
-              h1{
-                color: #183B56;
-                font-size: 30px;
-                font-weight: 800;
-                letter-spacing: 0.3px; 
+            display: flex;
+            margin-block: 16px;
+            transform: translateX(-6px);
+            .icon{
+              i{
+                color: rgb(28, 211, 28);
+                font-size: 13px;
               }
             }
+            .icon-x{
+              margin-right: 15px;
+              i{
+                color: rgba(211, 28, 28, 0.534);
+                font-size: 15px;
+                transform: translateY(3px) translateX(8px);
+              }
+            }
+            .icon-same{
+              margin-right: 15px;
+              background: rgba(0, 0, 0, 0.834);
+              transform: translateY(10px) translateX(8px);
+              height: 2px;
+              width: 12px;
+            }
+            
+            p{
+              font-size: 14px;
+              color: #1B1B1B;
+              margin: 0 15px;
+              opacity: 0.8;
+              transform: translateY(1px);
+            }
+          }
+        }
+        p{
+          color: #183B56;
+          font-size: 15px;
+          width: 100%;
+          span{
+            font-weight: 800;
+          }
+      }
+        &.small{
+          display: block;
+          transition: .2s;
+          transform: scale(1);
+          .flex{
+            .icon{
+              padding: 0 5.5px;
+              padding-bottom: 0;
+              i{
+                transform: translateY(3px);
+              }
+            }
+            p{
+              transform: translateX(-7px);
+            }
+          }
+          &.active{
+            display: none;
+          }
+          &.scale{
+            transform: scale(1);
+          }
+          &.scale-{
+            transform: scale(0.9);
+          }
+        }
+        &.middle{
+          display: none;
+          transform: scale(0.9);
+          transition: .2s;
+          .flex{
+            .icon{
+              padding: 0 5.5px;
+              padding-bottom: 0;
+              i{
+                transform: translateY(0px);
+              }
+            }
+            .icon-x{
+              i{
+                transform: translateY(-2px) translateX(8px);
+              }
+            }
+            p{
+              transform: translateX(-7px);
+            }
+          }
+          &.active{
+            display: block;
+          }
+          &.scale{
+            transform: scale(1);
+          }
+        }
+        &.big{
+          display: none;
+          transform: scale(0.9);
+          transition: .2s;
+          .flex{
+            .icon{
+              padding: 0 5.5px;
+              padding-bottom: 0;
+              i{
+                transform: translateY(0px);
+              }
+            }
+            .icon-x{
+              i{
+                transform: translateY(-2px) translateX(8px);
+              }
+            }
+            p{
+              transform: translateX(-7px);
+            }
+          }
+          &.active{
+            display: block;
+          }
+          &.scale{
+            transform: scale(1);
           }
         }
       }

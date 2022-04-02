@@ -381,6 +381,8 @@
 <div class="border-div quote-prices">
    <div class="line"></div>
 </div>
+
+
 <!-- PRICES -->
 <div class="prices">
    <!-- PRICES CONTENT -->
@@ -397,187 +399,244 @@
          <p id="middle" onclick="middleFunc()">Middel</p>
          <p id="big" onclick="bigFunc()">Stor</p>
      </div>  
-
-
-
-
-
-
-
-
-
-
-
-
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-      <!-- PRODUCT FLEX SECTION -->
-      <div class="product-section">
-         {% for product in products %}
-         <!-- PRODUCT CARD -->
-         <div class="product-card" onclick="window.location.href='{% url 'product_detail' product.slug %}'">
-              <!-- RECOMMEND -->
-              {% if product.is_middle %}
-                  <div class="recommended">anbefalt</div>
-               {% endif %}
-            <div class="card-content">
-               <div class="card-text">
-                  <!-- PRODUCT NAME -->
-                  <div class="product-name">
-                     <h1>{{ product.name }}</h1>{% if product.is_small %}<div class="product-type">LITEN</div>{% endif %}{% if product.is_middle %}<div class="product-type">MIDDELS</div>{% endif %}{% if product.is_big %}<div class="product-type">STOR</div>{% endif %}
+     <div class="product-section">
+        <div class="product small" id="productIsSmall">
+           {% for product in products %}
+               {% if product.is_small %}
+                     <div class="product-row-one">
+                           <h1 class="product-name">Nettbutikk</h1><p class="product-tag">LITEN</p>
+                           <p class="product-price">{{ product.price | floatformat }}kr</p>
+                     </div>
+                     <div class="product-row-two">
+                        <!-- PRODUCT BENEFITS -->
+                        <div class="flex">
+                           <!-- PRODUCT BENEFITS ICON -->
+                           <div class="icon">
+                              <i class="fa-solid fa-check"></i>
+                           </div>
+                           <p>100% tilgang</p>
+                        </div>
+                        <!-- PRODUCT BENEFITS -->
+                        <div class="flex">
+                           <!-- PRODUCT BENEFITS ICON -->
+                           <div class="icon">
+                              <i class="fa-solid fa-check"></i>
+                           </div>
+                           <p>Source code - via GitHub</p>
+                        </div>
+                        <!-- PRODUCT BENEFITS -->
+                        <div class="flex">
+                           <!-- PRODUCT BENEFITS ICON -->
+                           <div class="icon">
+                              <i class="fa-solid fa-check"></i>
+                           </div>
+                           <p>Gratis hjelp innen 14 dager</p>
+                        </div>
+                        <!-- PRODUCT BENEFITS -->
+                        <div class="flex">
+                           <!-- PRODUCT BENEFITS ICON -->
+                           <div class="icon-same">
+                              <span></span>
+                           </div>
+                           <p>2 ekstra sider</p>
+                        </div>
+                        <!-- PRODUCT BENEFITS -->
+                        <div class="flex">
+                           <!-- PRODUCT BENEFITS ICON -->
+                           <div class="icon-x">
+                              <i class="fa-solid fa-xmark"></i>
+                           </div>
+                           <p>Logo & Bilder</p>
+                        </div>
+                        <!-- PRODUCT BENEFITS -->
+                        <div class="flex">
+                           <!-- PRODUCT BENEFITS ICON -->
+                           <div class="icon-same">
+                              <span></span>
+                           </div>
+                           <p>5-10 dager levering</p>
+                        </div>
+                        <!-- PRODUCT BENEFITS -->
+                        <div class="flex">
+                           <!-- PRODUCT BENEFITS ICON -->
+                           <div class="icon-x">
+                              <i class="fa-solid fa-xmark"></i>
+                           </div>
+                           <p>Blogg</p>
+                        </div>
+                        <!-- PRODUCT BENEFITS -->
+                        <div class="flex">
+                           <!-- PRODUCT BENEFITS ICON -->
+                           <div class="icon-x">
+                              <i class="fa-solid fa-xmark"></i>
+                           </div>
+                           <p>Bli medlem funksjon</p>
+                        </div>
+                     </div>
+                     <br>
+                     <a href="{% url  'product_detail' product.slug  %}">Se en demo</a>    
+                  {% endif %}     
+               {% endfor %}   
+         </div>
+         <div class="product middle" id="productIsMiddle">
+            {% for product in products %}
+            {% if product.is_middle %}
+                  <div class="product-row-one">
+                        <h1 class="product-name">Nettbutikk</h1><p class="product-tag">MIDDEL</p>
+                        <p class="product-price">{{ product.price | floatformat }}kr</p>
                   </div>
-      
-               
-                  <!-- <strong>Kunn: {{ product.price | floatformat }}kr</strong> -->
-               </div>
-            </div>
-         </div>
+                  <div class="product-row-two">
+                    <!-- PRODUCT BENEFITS -->
+                    <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon">
+                        <i class="fa-solid fa-check"></i>
+                     </div>
+                     <p>100% tilgang</p>
+                  </div>
+                  <!-- PRODUCT BENEFITS -->
+                  <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon">
+                        <i class="fa-solid fa-check"></i>
+                     </div>
+                     <p>Source code - via GitHub</p>
+                  </div>
+                  <!-- PRODUCT BENEFITS -->
+                  <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon">
+                        <i class="fa-solid fa-check"></i>
+                     </div>
+                     <p>Gratis hjelp innen 14 dager</p>
+                  </div>
+                  <!-- PRODUCT BENEFITS -->
+                  <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon-same">
+                        <span></span>
+                     </div>
+                     <p>5 ekstra sider</p>
+                  </div>
+                  <!-- PRODUCT BENEFITS -->
+                  <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon">
+                        <i class="fa-solid fa-check"></i>
+                     </div>
+                     <p>Logo & Bilder</p>
+                  </div>
+                  <!-- PRODUCT BENEFITS -->
+                  <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon-same">
+                        <span></span>
+                     </div>
+                     <p>5-10 dager levering</p>
+                  </div>
+                  <!-- PRODUCT BENEFITS -->
+                  <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon">
+                        <i class="fa-solid fa-check"></i>
+                     </div>
+                     <p>Blogg</p>
+                  </div>
+                  <!-- PRODUCT BENEFITS -->
+                  <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon-x">
+                        <i class="fa-solid fa-xmark"></i>
+                     </div>
+                     <p>Bli medlem funksjon</p>
+                  </div>
+                  </div>
+                  <a href="{% url  'product_detail' product.slug  %}">Se en demo</a>
+               {% endif %}         
          {% endfor %} 
+         </div>
+         <div class="product big" id="productIsBig">
+            {% for product in products %}
+            {% if product.is_big %}
+                  <div class="product-row-one">
+                        <h1 class="product-name">Nettbutikk</h1><p class="product-tag">STOR</p>
+                        <p class="product-price">{{ product.price | floatformat }}kr</p>
+                  </div>
+                  <div class="product-row-two">
+                   <!-- PRODUCT BENEFITS -->
+                   <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon">
+                        <i class="fa-solid fa-check"></i>
+                     </div>
+                     <p>100% tilgang</p>
+                  </div>
+                  <!-- PRODUCT BENEFITS -->
+                  <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon">
+                        <i class="fa-solid fa-check"></i>
+                     </div>
+                     <p>Source code - via GitHub</p>
+                  </div>
+                  <!-- PRODUCT BENEFITS -->
+                  <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon">
+                        <i class="fa-solid fa-check"></i>
+                     </div>
+                     <p>Gratis hjelp innen 14 dager</p>
+                  </div>
+                  <!-- PRODUCT BENEFITS -->
+                  <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon-same">
+                        <span></span>
+                     </div>
+                     <p>2 ekstra sider</p>
+                  </div>
+                  <!-- PRODUCT BENEFITS -->
+                  <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon-x">
+                        <i class="fa-solid fa-xmark"></i>
+                     </div>
+                     <p>Logo & Bilder</p>
+                  </div>
+                  <!-- PRODUCT BENEFITS -->
+                  <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon-same">
+                        <span></span>
+                     </div>
+                     <p>5-10 dager levering</p>
+                  </div>
+                  <!-- PRODUCT BENEFITS -->
+                  <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon-x">
+                        <i class="fa-solid fa-xmark"></i>
+                     </div>
+                     <p>Blogg</p>
+                  </div>
+                  <!-- PRODUCT BENEFITS -->
+                  <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon-x">
+                        <i class="fa-solid fa-xmark"></i>
+                     </div>
+                     <p>Bli medlem funksjon</p>
+                  </div>
+                  </div>
+                  <a href="{% url  'product_detail' product.slug  %}">Se en demo</a>
+               {% endif %}         
+         {% endfor %} 
+         </div>
       </div>
    </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<!-- HOSTING AND DATA -->
-<div class="hosting">
-   <!-- HOSTING CONTENT -->
-   <div class="content">
-      <!-- HOSTING TEXT -->
-      <div class="text">
-         <p class="hosting-headingp">data og hosting</p>
-         <h1>Billig hosting med høy sikkerthet av dataen din</h1>
-      </div>
-      <!-- HOSTING LONG PARAGRAPH -->
-      <p class="hosting-longp">
-         Hostingen er gjort via en sikker server, og alle dataene dine vil bli tatt vare på.
-         Vi sørger at ved bruk av hosting tjenesten våres, så garanterer vi 99% oppetid på nettisiden, for kunn 60kr/m
-      </p>
-   </div>
-</div>
-<!-- HOSTING BENEFITS -->
-<div class="hosting-benefits">
-   <!-- HOSTING BENEFITS CONTENT -->
-   <div class="content">
-      <!-- HOSTING BENEFITS FLEX -->
-      <div class="flex">
-         <!-- HOSTING BENEFITS ICON -->
-         <div class="icon">
-            <i class="fa-solid fa-check"></i>
-         </div>
-         <p>99% oppetid</p>
-      </div>
-      <!-- HOSTING BENEFITS FLEX -->
-      <div class="flex">
-         <!-- HOSTING BENEFITS ICON -->
-         <div class="icon">
-            <i class="fa-solid fa-check"></i>
-         </div>
-         <p>Rask og trygg hosting</p>
-      </div>
-      <!-- HOSTING BENEFITS FLEX -->
-      <div class="flex">
-         <!-- HOSTING BENEFITS ICON -->
-         <div class="icon">
-            <i class="fa-solid fa-check"></i>
-         </div>
-         <p>SSL inkludert i prisen</p>
-      </div>
-      <!-- HOSTING BENEFITS FLEX -->
-      <div class="flex">
-         <!-- HOSTING BENEFITS ICON -->
-         <div class="icon">
-            <i class="fa-solid fa-check"></i>
-         </div>
-         <p>Enklere for deg</p>
-      </div>
-      <!-- HOSTING BENEFITS FLEX -->
-      <div class="flex">
-         <!-- HOSTING BENEFITS ICON -->
-         <div class="icon">
-            <i class="fa-solid fa-check"></i>
-         </div>
-         <p>Kunn 60kr/m</p>
-      </div>
-   </div>
-</div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="our-story">
+<!-- <div class="our-story">
    <div class="content">
       <div class="text">
          <h1>Vår Historie</h1>
@@ -587,6 +646,6 @@
          </p>
       </div>
    </div>
-</div>
+</div> -->
 {% endblock %}
  

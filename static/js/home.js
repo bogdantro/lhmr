@@ -20,16 +20,14 @@ const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 window.onload = () => {
     const consentPopup = document.getElementById('popup');
     const acceptBtn = document.getElementById('accept');
+    const blackOverlay = document.getElementById('blackOverlay');
 
-    const coverContent = document.getElementById('coverContent');
-
-    coverContent.classList.add('active')
     
     
     const acceptFn = event => {
         saveToStorage(storageType);
         consentPopup.classList.add('hidden')
-        document.getElementById('popupCircleBackground').classList.remove('active');
+        blackOverlay.classList.remove('show');
     };
     
     acceptBtn.addEventListener('click', acceptFn);
@@ -37,8 +35,8 @@ window.onload = () => {
     if (shouldShowPopup(storageType)) {
         setTimeout(() => {
             consentPopup.classList.remove('hidden');
-            document.getElementById('popupCircleBackground').classList.add('active');
-        }, 6000);
+            blackOverlay.classList.add('show');
+        }, 700);
     }
 };
 
@@ -69,6 +67,10 @@ function smallFunc(){
     const small = document.getElementById('small');
     const middle = document.getElementById('middle');
     const big = document.getElementById('big');
+
+    const productIsSmall = document.getElementById('productIsSmall');
+    const productIsMiddle = document.getElementById('productIsMiddle');
+    const productIsBig = document.getElementById('productIsBig');
     
     setTimeout(() => {
         small.classList.add('click')
@@ -76,6 +78,11 @@ function smallFunc(){
     setTimeout(() => {
         small.classList.remove('click')
     }, 180);
+
+    setTimeout(() => {
+        productIsSmall.classList.remove('scale-')
+    }, 100);
+
     
     small.classList.add('active')
     small.classList.remove('unactive')
@@ -85,11 +92,22 @@ function smallFunc(){
 
     big.classList.remove('active')
     big.classList.add('unactive')
+
+    productIsSmall.classList.remove('active')
+    productIsMiddle.classList.remove('active')
+    productIsBig.classList.remove('active')
+
+    productIsMiddle.classList.remove('scale')
+    productIsBig.classList.remove('scale')
 }
 function middleFunc(){
     const small = document.getElementById('small');
     const middle = document.getElementById('middle');
     const big = document.getElementById('big');
+
+    const productIsSmall = document.getElementById('productIsSmall');
+    const productIsMiddle = document.getElementById('productIsMiddle');
+    const productIsBig = document.getElementById('productIsBig');
 
     setTimeout(() => {
         middle.classList.add('click')
@@ -98,6 +116,10 @@ function middleFunc(){
         middle.classList.remove('click')
     }, 180);
     
+    setTimeout(() => {
+        productIsMiddle.classList.add('scale')
+    }, 100);
+
     middle.classList.add('active')
     middle.classList.remove('unactive')
 
@@ -107,11 +129,23 @@ function middleFunc(){
 
     big.classList.remove('active')
     big.classList.add('unactive')
+
+    productIsSmall.classList.add('active')
+    productIsMiddle.classList.add('active')
+    productIsBig.classList.remove('active')
+
+    productIsSmall.classList.remove('scale')
+    productIsSmall.classList.add('scale-')
+    productIsBig.classList.remove('scale')
 }
 function bigFunc(){
     const small = document.getElementById('small');
     const middle = document.getElementById('middle');
     const big = document.getElementById('big');
+
+    const productIsSmall = document.getElementById('productIsSmall');
+    const productIsMiddle = document.getElementById('productIsMiddle');
+    const productIsBig = document.getElementById('productIsBig');
 
     setTimeout(() => {
         big.classList.add('click')
@@ -119,6 +153,10 @@ function bigFunc(){
     setTimeout(() => {
         big.classList.remove('click')
     }, 180);
+
+    setTimeout(() => {
+        productIsBig.classList.add('scale')
+    }, 100);
     
     big.classList.add('active')
     big.classList.remove('unactive')
@@ -128,4 +166,12 @@ function bigFunc(){
 
     small.classList.remove('active')
     small.classList.add('unactive')
+
+    productIsSmall.classList.add('active')
+    productIsMiddle.classList.remove('active')
+    productIsBig.classList.add('active')
+
+    productIsSmall.classList.remove('scale')
+    productIsSmall.classList.add('scale-')
+    productIsMiddle.classList.remove('scale')
 }

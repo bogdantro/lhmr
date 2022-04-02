@@ -11,7 +11,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
 
+<br>
+<br>
+<br>
+<br>
 <div id="footer">
+    <div id="newsletter">
+        <h1>Bli medlem</h1>
+        <form v-on:submit.prevent="onSubmit">
+            <div class="content">
+                <label for="email">Din epost</label>
+                <input type="email" v-model="email" name="email" class="input">
+                <button>Send</button>
+            </div>
+        </form>
+        <div id="footerNewsLetterAlert" v-if="showSuccess">
+            <div class="alert alert-success">Epost er lagret, tusen takk!</div>
+        </div>
+    </div>
     <div class="footer-section">
         <ul class="footer-ul">
             <h1>Raske Linker</h1>
@@ -39,6 +56,53 @@
     <div class="copyright">
         <p>Copyright &#169; 2020-2021 Webiser</p>
     </div>
+</div>
+
+
+
+    <script>
+    function RefreshPage(){
+        // setTimeout(function(){
+        //     location.reload();
+        // },1500);
+    }
+
+        var newsletterapp = new Vue({
+            el: '#newsletter',
+            data () {
+                return {
+                    email: '',
+                    showSuccess: false
+                }
+            },
+            methods: {                
+                onSubmit() {
+                    console.log('onSubmit')
+                    fetch('/api/add_subscriber/', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRFToken': '{{ csrf_token }}'
+                            },
+                            body: JSON.stringify({'email': this.email}),
+                        })
+                        .then((response) => {
+                            return response.json()
+                        })
+                        .then((data) => {
+                            console.log(data)
+    
+                            this.showSuccess = true
+                            this.email = ''
+                        })
+                        .catch(function(error) {
+                            this.showSuccess = false
+                            console.log('Error:', error);
+                        });
+                },
+            }
+        })
+    </script>
 </div>
 
 

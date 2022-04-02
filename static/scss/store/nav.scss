@@ -247,8 +247,28 @@
                                 transform: translateY(19px) translateX(0);
                             }
                         }
+                        .extras{
+                            display: none;
+                            &.active{
+                                display: block;
+                            }
+                            .nav-link-parent{
+                                a{
+                                    padding-left: 70px;
+                                }
+                            }
+                        }
                     }
                     #pricesToggle{
+                        &.click{
+                            color: #4287f5;
+                            i{
+                                transform: rotateX(180deg) translateX(-50px) translateY(-11px);
+                                transform-origin: center center;                            
+                            }
+                        }
+                    }
+                    #pricesToggleExtra{
                         &.click{
                             color: #4287f5;
                             i{
