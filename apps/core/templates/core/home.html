@@ -327,6 +327,7 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
       </ol>
       <div class="carousel-inner">
          <!-- ITEM -->
@@ -361,7 +362,19 @@
                <!-- IMG -->
                <div class="img">
                   <img src="{% static '/images/other/man-pc.jpg' %}" alt="webiser">
-                  <p>Sott</p>
+                  <p>Sander</p>
+               </div>
+            </div>
+        </div>
+        <!-- ITEM -->
+        <div class="carousel-item">
+            <!-- QUOTE CONTENT -->
+            <div class="content">
+               <h1>Søkte lenge for en nettbutikk, til slutt fant jeg <span>webiser</span></h1>
+               <!-- IMG -->
+               <div class="img">
+                  <img src="{% static '/images/other/man-green-jacket.jpg' %}" alt="webiser">
+                  <p>Hans</p>
                </div>
             </div>
         </div>
@@ -435,18 +448,26 @@
                         <!-- PRODUCT BENEFITS -->
                         <div class="flex">
                            <!-- PRODUCT BENEFITS ICON -->
-                           <div class="icon-same">
-                              <span></span>
+                           <div class="icon">
+                              <i class="fa-solid fa-check"></i>
                            </div>
                            <p>2 ekstra sider</p>
                         </div>
                         <!-- PRODUCT BENEFITS -->
                         <div class="flex">
                            <!-- PRODUCT BENEFITS ICON -->
-                           <div class="icon-x">
-                              <i class="fa-solid fa-xmark"></i>
+                           <div class="icon-same">
+                              <span></span>
                            </div>
                            <p>Logo & Bilder</p>
+                        </div>
+                        <!-- PRODUCT BENEFITS -->
+                        <div class="flex">
+                           <!-- PRODUCT BENEFITS ICON -->
+                           <div class="icon">
+                              <i class="fa-solid fa-check"></i>
+                           </div>
+                           <p>5-10 dager levering</p>
                         </div>
                         <!-- PRODUCT BENEFITS -->
                         <div class="flex">
@@ -454,23 +475,31 @@
                            <div class="icon-same">
                               <span></span>
                            </div>
-                           <p>5-10 dager levering</p>
-                        </div>
-                        <!-- PRODUCT BENEFITS -->
-                        <div class="flex">
-                           <!-- PRODUCT BENEFITS ICON -->
-                           <div class="icon-x">
-                              <i class="fa-solid fa-xmark"></i>
-                           </div>
                            <p>Blogg</p>
                         </div>
                         <!-- PRODUCT BENEFITS -->
                         <div class="flex">
                            <!-- PRODUCT BENEFITS ICON -->
-                           <div class="icon-x">
-                              <i class="fa-solid fa-xmark"></i>
+                           <div class="icon-same">
+                              <span></span>
                            </div>
                            <p>Bli medlem funksjon</p>
+                        </div>
+                         <!-- PRODUCT BENEFITS -->
+                        <div class="flex">
+                           <!-- PRODUCT BENEFITS ICON -->
+                           <div class="icon">
+                              <i class="fa-solid fa-check"></i>
+                           </div>
+                           <p>Profesjonell design</p>
+                        </div>
+                        <!-- PRODUCT BENEFITS -->
+                        <div class="flex">
+                           <!-- PRODUCT BENEFITS ICON -->
+                           <div class="icon">
+                              <i class="fa-solid fa-check"></i>
+                           </div>
+                           <p>Hosting til 60kr/m</p>
                         </div>
                      </div>
                      <br>
@@ -481,76 +510,96 @@
          <div class="product middle" id="productIsMiddle">
             {% for product in products %}
             {% if product.is_middle %}
-                  <div class="product-row-one">
+                  <div class="product-row-one" style="margin-bottom: 65px;">
                         <h1 class="product-name">Nettbutikk</h1><p class="product-tag">MIDDEL</p>
                         <p class="product-price">{{ product.price | floatformat }}kr</p>
+                        <div class="popular">
+                           <h1>Popular</h1>
+                        </div>
                   </div>
                   <div class="product-row-two">
-                    <!-- PRODUCT BENEFITS -->
-                    <div class="flex">
-                     <!-- PRODUCT BENEFITS ICON -->
-                     <div class="icon">
-                        <i class="fa-solid fa-check"></i>
+                     <!-- PRODUCT BENEFITS -->
+                     <div class="flex">
+                        <!-- PRODUCT BENEFITS ICON -->
+                        <div class="icon">
+                           <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>100% tilgang</p>
                      </div>
-                     <p>100% tilgang</p>
-                  </div>
-                  <!-- PRODUCT BENEFITS -->
-                  <div class="flex">
-                     <!-- PRODUCT BENEFITS ICON -->
-                     <div class="icon">
-                        <i class="fa-solid fa-check"></i>
+                     <!-- PRODUCT BENEFITS -->
+                     <div class="flex">
+                        <!-- PRODUCT BENEFITS ICON -->
+                        <div class="icon">
+                           <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Source code - via GitHub</p>
                      </div>
-                     <p>Source code - via GitHub</p>
-                  </div>
-                  <!-- PRODUCT BENEFITS -->
-                  <div class="flex">
-                     <!-- PRODUCT BENEFITS ICON -->
-                     <div class="icon">
-                        <i class="fa-solid fa-check"></i>
+                     <!-- PRODUCT BENEFITS -->
+                     <div class="flex">
+                        <!-- PRODUCT BENEFITS ICON -->
+                        <div class="icon">
+                           <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Gratis hjelp innen 14 dager</p>
                      </div>
-                     <p>Gratis hjelp innen 14 dager</p>
-                  </div>
-                  <!-- PRODUCT BENEFITS -->
-                  <div class="flex">
-                     <!-- PRODUCT BENEFITS ICON -->
-                     <div class="icon-same">
-                        <span></span>
+                     <!-- PRODUCT BENEFITS -->
+                     <div class="flex">
+                        <!-- PRODUCT BENEFITS ICON -->
+                        <div class="icon">
+                           <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>5 ekstra sider</p>
                      </div>
-                     <p>5 ekstra sider</p>
-                  </div>
-                  <!-- PRODUCT BENEFITS -->
-                  <div class="flex">
-                     <!-- PRODUCT BENEFITS ICON -->
-                     <div class="icon">
-                        <i class="fa-solid fa-check"></i>
+                     <!-- PRODUCT BENEFITS -->
+                     <div class="flex">
+                        <!-- PRODUCT BENEFITS ICON -->
+                        <div class="icon">
+                           <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Logo & Bilder</p>
                      </div>
-                     <p>Logo & Bilder</p>
-                  </div>
-                  <!-- PRODUCT BENEFITS -->
-                  <div class="flex">
-                     <!-- PRODUCT BENEFITS ICON -->
-                     <div class="icon-same">
-                        <span></span>
+                     <!-- PRODUCT BENEFITS -->
+                     <div class="flex">
+                        <!-- PRODUCT BENEFITS ICON -->
+                        <div class="icon">
+                           <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>5-10 dager levering</p>
                      </div>
-                     <p>5-10 dager levering</p>
-                  </div>
-                  <!-- PRODUCT BENEFITS -->
-                  <div class="flex">
-                     <!-- PRODUCT BENEFITS ICON -->
-                     <div class="icon">
-                        <i class="fa-solid fa-check"></i>
+                     <!-- PRODUCT BENEFITS -->
+                     <div class="flex">
+                        <!-- PRODUCT BENEFITS ICON -->
+                        <div class="icon-same">
+                           <span></span>
+                        </div>
+                        <p>Blogg</p>
                      </div>
-                     <p>Blogg</p>
-                  </div>
-                  <!-- PRODUCT BENEFITS -->
-                  <div class="flex">
-                     <!-- PRODUCT BENEFITS ICON -->
-                     <div class="icon-x">
-                        <i class="fa-solid fa-xmark"></i>
+                     <!-- PRODUCT BENEFITS -->
+                     <div class="flex">
+                        <!-- PRODUCT BENEFITS ICON -->
+                        <div class="icon">
+                           <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Bli medlem funksjon</p>
                      </div>
-                     <p>Bli medlem funksjon</p>
+                     <!-- PRODUCT BENEFITS -->
+                     <div class="flex">
+                        <!-- PRODUCT BENEFITS ICON -->
+                        <div class="icon">
+                           <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Profesjonell design</p>
+                     </div>
+                     <!-- PRODUCT BENEFITS -->
+                     <div class="flex">
+                        <!-- PRODUCT BENEFITS ICON -->
+                        <div class="icon">
+                           <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Hosting til 60kr/m</p>
+                     </div>
                   </div>
-                  </div>
+                  <br>
                   <a href="{% url  'product_detail' product.slug  %}">Se en demo</a>
                {% endif %}         
          {% endfor %} 
@@ -585,49 +634,66 @@
                      <div class="icon">
                         <i class="fa-solid fa-check"></i>
                      </div>
-                     <p>Gratis hjelp innen 14 dager</p>
+                     <p>Gratis hjelp innen 30 dager</p>
                   </div>
                   <!-- PRODUCT BENEFITS -->
                   <div class="flex">
                      <!-- PRODUCT BENEFITS ICON -->
-                     <div class="icon-same">
-                        <span></span>
+                     <div class="icon">
+                        <i class="fa-solid fa-check"></i>
                      </div>
-                     <p>2 ekstra sider</p>
+                     <p>10 ekstra sider</p>
                   </div>
                   <!-- PRODUCT BENEFITS -->
                   <div class="flex">
                      <!-- PRODUCT BENEFITS ICON -->
-                     <div class="icon-x">
-                        <i class="fa-solid fa-xmark"></i>
+                     <div class="icon">
+                        <i class="fa-solid fa-check"></i>
                      </div>
                      <p>Logo & Bilder</p>
                   </div>
                   <!-- PRODUCT BENEFITS -->
                   <div class="flex">
                      <!-- PRODUCT BENEFITS ICON -->
-                     <div class="icon-same">
-                        <span></span>
+                     <div class="icon">
+                        <i class="fa-solid fa-check"></i>
                      </div>
-                     <p>5-10 dager levering</p>
+                     <p>10-14 dager levering</p>
                   </div>
                   <!-- PRODUCT BENEFITS -->
                   <div class="flex">
                      <!-- PRODUCT BENEFITS ICON -->
-                     <div class="icon-x">
-                        <i class="fa-solid fa-xmark"></i>
+                     <div class="icon">
+                        <i class="fa-solid fa-check"></i>
                      </div>
                      <p>Blogg</p>
                   </div>
                   <!-- PRODUCT BENEFITS -->
                   <div class="flex">
                      <!-- PRODUCT BENEFITS ICON -->
-                     <div class="icon-x">
-                        <i class="fa-solid fa-xmark"></i>
+                     <div class="icon">
+                        <i class="fa-solid fa-check"></i>
                      </div>
                      <p>Bli medlem funksjon</p>
                   </div>
+                  <!-- PRODUCT BENEFITS -->
+                  <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon">
+                        <i class="fa-solid fa-check"></i>
+                     </div>
+                     <p>Profesjonell design</p>
                   </div>
+                  <!-- PRODUCT BENEFITS -->
+                  <div class="flex">
+                     <!-- PRODUCT BENEFITS ICON -->
+                     <div class="icon">
+                        <i class="fa-solid fa-check"></i>
+                     </div>
+                     <p>Hosting til 60kr/m</p>
+                  </div>
+                  </div>
+                  <br>
                   <a href="{% url  'product_detail' product.slug  %}">Se en demo</a>
                {% endif %}         
          {% endfor %} 

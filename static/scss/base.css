@@ -241,7 +241,9 @@
 }
 
 .sell-anything .content .card .card-content .card-text h1 {
-  color: #2c2c2c;
+  color: #183B56;
+  text-shadow: 1px 0 #183B56;
+  letter-spacing: 1px;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.3px;
@@ -765,6 +767,24 @@
   position: relative;
 }
 
+.prices .content .product-section .product .product-row-one .popular {
+  position: absolute;
+  top: 50px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#0088F9), to(#005091));
+  background: linear-gradient(to bottom right, #0088F9, #005091);
+  border-radius: 4px;
+}
+
+.prices .content .product-section .product .product-row-one .popular h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 5px;
+  padding-inline: 12px;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
 .prices .content .product-section .product .product-row-one .product-name {
   width: 88%;
   font-size: 23px;
@@ -810,17 +830,6 @@
 .prices .content .product-section .product .product-row-two .flex .icon i {
   color: #1cd31c;
   font-size: 13px;
-}
-
-.prices .content .product-section .product .product-row-two .flex .icon-x {
-  margin-right: 15px;
-}
-
-.prices .content .product-section .product .product-row-two .flex .icon-x i {
-  color: rgba(211, 28, 28, 0.534);
-  font-size: 15px;
-  -webkit-transform: translateY(3px) translateX(8px);
-          transform: translateY(3px) translateX(8px);
 }
 
 .prices .content .product-section .product .product-row-two .flex .icon-same {
@@ -906,11 +915,6 @@
           transform: translateY(0px);
 }
 
-.prices .content .product-section .product.middle .flex .icon-x i {
-  -webkit-transform: translateY(-2px) translateX(8px);
-          transform: translateY(-2px) translateX(8px);
-}
-
 .prices .content .product-section .product.middle .flex p {
   -webkit-transform: translateX(-7px);
           transform: translateX(-7px);
@@ -941,11 +945,6 @@
 .prices .content .product-section .product.big .flex .icon i {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
-}
-
-.prices .content .product-section .product.big .flex .icon-x i {
-  -webkit-transform: translateY(-2px) translateX(8px);
-          transform: translateY(-2px) translateX(8px);
 }
 
 .prices .content .product-section .product.big .flex p {

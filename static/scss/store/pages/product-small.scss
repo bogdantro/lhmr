@@ -1,0 +1,38 @@
+// STANDARD PHONE
+#footer{
+    display: none;
+}
+#navbar{
+    display: none;
+}
+.intro{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #d1ecf1;
+    a{
+        font-size: 14px;
+        color: rgb(34, 34, 34);
+        span{
+            color: #0088F9;
+        }
+    }
+}
+// NAVBAR CSS
+.navbar-small{
+      width: 100%;
+      height: 70px;
+      position: fixed;
+      top: 40px;
+      display: flex;
+      align-items: center;
+      transition: .2s ease-in-out;
+      box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.08);
+      background: white;
+}

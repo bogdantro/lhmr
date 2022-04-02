@@ -193,7 +193,9 @@ $loader: rgb(80, 104, 180);
           text-align: left;
           transform: translateX(7px);
           h1{
-            color: rgb(44, 44, 44);
+            color: #183B56;
+            text-shadow: 1px 0 #183B56;
+            letter-spacing:1px;    
             font-size: 18px;
             font-weight: 800;
             letter-spacing: 0.3px; 
@@ -618,6 +620,20 @@ $loader: rgb(80, 104, 180);
           width: 100%;
           display: flex;
           position: relative;
+          .popular{
+            position: absolute;
+            top: 50px;
+            background: linear-gradient(to bottom right, #0088F9, #005091);
+            border-radius: 4px;
+            h1{
+              color: white;
+              font-weight: bold;
+              font-size: 13px;
+              padding: 5px;
+              padding-inline: 12px;
+              transform: translateY(3px);
+            }
+          }
           .product-name{                
             width: 88%;
             font-size: 23px;
@@ -652,14 +668,6 @@ $loader: rgb(80, 104, 180);
               i{
                 color: rgb(28, 211, 28);
                 font-size: 13px;
-              }
-            }
-            .icon-x{
-              margin-right: 15px;
-              i{
-                color: rgba(211, 28, 28, 0.534);
-                font-size: 15px;
-                transform: translateY(3px) translateX(8px);
               }
             }
             .icon-same{
@@ -725,11 +733,6 @@ $loader: rgb(80, 104, 180);
                 transform: translateY(0px);
               }
             }
-            .icon-x{
-              i{
-                transform: translateY(-2px) translateX(8px);
-              }
-            }
             p{
               transform: translateX(-7px);
             }
@@ -751,11 +754,6 @@ $loader: rgb(80, 104, 180);
               padding-bottom: 0;
               i{
                 transform: translateY(0px);
-              }
-            }
-            .icon-x{
-              i{
-                transform: translateY(-2px) translateX(8px);
               }
             }
             p{
