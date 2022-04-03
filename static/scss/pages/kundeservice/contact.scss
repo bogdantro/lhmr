@@ -2,11 +2,10 @@ $loader: rgb(80, 104, 180);
 
 // STANDARD PHONE
 .contact-us{
-    width: 100%;
-    height: auto;
-    background: transparent;
-    transform: translateY(113px);
-    margin-bottom: 170px;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  background: #f7f7f7;
     // CONTACT FORM
     form{
       margin: 0 auto;
@@ -17,6 +16,8 @@ $loader: rgb(80, 104, 180);
       box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
       padding: 20px;
       border-radius: 7px;
+      transform: translateY(110px);
+      background: white;
         // CONTACT HEADING
         .heading{
           color: #183B56;

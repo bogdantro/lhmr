@@ -397,7 +397,7 @@
 
 
 <!-- PRICES -->
-<div class="prices">
+<div class="prices" id="prices">
    <!-- PRICES CONTENT -->
    <div class="content">
       <!-- PRICES IMAGE -->
@@ -502,8 +502,6 @@
                            <p>Hosting til 60kr/m</p>
                         </div>
                      </div>
-                     <br>
-                     <a href="{% url  'product_detail' product.slug  %}">Se en demo</a>    
                   {% endif %}     
                {% endfor %}   
          </div>
@@ -599,8 +597,6 @@
                         <p>Hosting til 60kr/m</p>
                      </div>
                   </div>
-                  <br>
-                  <a href="{% url  'product_detail' product.slug  %}">Se en demo</a>
                {% endif %}         
          {% endfor %} 
          </div>
@@ -693,8 +689,6 @@
                      <p>Hosting til 60kr/m</p>
                   </div>
                   </div>
-                  <br>
-                  <a href="{% url  'product_detail' product.slug  %}">Se en demo</a>
                {% endif %}         
          {% endfor %} 
          </div>

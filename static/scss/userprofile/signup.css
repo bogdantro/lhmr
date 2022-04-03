@@ -1,10 +1,9 @@
 .signup {
   width: 100%;
-  height: auto;
+  height: 100%;
   background: transparent;
-  -webkit-transform: translateY(113px);
-          transform: translateY(113px);
-  margin-bottom: 170px;
+  background: #f7f7f7;
+  padding-bottom: 140px;
 }
 
 .signup form {
@@ -12,11 +11,14 @@
   text-align: left;
   background: transparent;
   width: 93%;
-  max-width: 400px;
+  max-width: 700px;
   -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
           box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
   padding: 20px;
   border-radius: 7px;
+  -webkit-transform: translateY(110px);
+          transform: translateY(110px);
+  background: white;
 }
 
 .signup form .heading {
