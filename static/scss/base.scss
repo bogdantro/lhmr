@@ -39,6 +39,9 @@ $loader: rgb(80, 104, 180);
     margin-top: 60px;
     margin-bottom: -20px;
   }
+  &.prices-secure-payments{
+    margin-block: 5px;
+  }
 }
 // INTRO
 .intro{
@@ -344,6 +347,7 @@ $loader: rgb(80, 104, 180);
         height: auto;
         line-height: 27px;
         width: auto;
+        padding-right: 10px;
       }
     }
   }
@@ -485,6 +489,7 @@ $loader: rgb(80, 104, 180);
       font-size: 42px;
       padding-bottom: 5px;
       font-style: italic;
+      height: 220px;
       span{
         border-bottom: 3px solid #0088F9;
       }
@@ -767,6 +772,34 @@ $loader: rgb(80, 104, 180);
             transform: scale(1);
           }
         }
+      }
+    }
+  }
+}
+.secure-payments{
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+  padding: 25px;
+  img{
+    margin-block: 15px;
+    height: auto;
+    width: 70%;
+    max-width: 370px;
+  }
+  .text{
+    text-align: left;
+    h1{
+      transform: translateY(7px);
+      color: #183B56;
+      text-shadow: 1px 0 #183B56;
+      letter-spacing:1px;    
+      font-size: 22px;
+      font-weight: 800;
+      span{
+        color: #FF5B24;
+        text-shadow: 1px 0 #FF5B24;
       }
     }
   }

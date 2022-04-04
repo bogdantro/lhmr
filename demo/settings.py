@@ -116,7 +116,7 @@ WSGI_APPLICATION = 'demo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'webiser',
+        'NAME': 'webiserr',
         'USER': 'root',
         'PASSWORD': 'bogdan2005lfk',
         'PORT': 3306,

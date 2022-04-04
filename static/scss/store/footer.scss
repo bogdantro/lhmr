@@ -2,18 +2,18 @@
 #footer{
     width: 100%;
     height: 100%;
-    padding: 15px;
-    // background: #028cfd;
+    padding: 15px 30px;
     background-color: white;
     position: relative;
     padding-bottom: 35px;
     .footer-section{
-        display: flex;
+        margin-bottom: 30px;
         .footer-ul{
             width: 50%;
-            text-align: center;
+            text-align: left;
             h1{
-                color: rgb(37, 35, 35);
+                color: #183B56;
+                text-shadow: 1px 0 #183B56;
                 letter-spacing:1px;    
                 font-size: 22px;
                 font-weight: 800;
@@ -22,6 +22,7 @@
             .footer-li{
                 list-style: none;
                 a{
+                    text-align: left;
                     display: inline-block;
                     width: 100%;
                     color: rgb(37, 35, 35);
@@ -38,22 +39,34 @@
         }
     }
     .social-icons{
-        display: flex;
         width: 100%;
         height: auto;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0;
-        margin-bottom: 10px;
-        transition: .3s ease-in-out;
-        i{
-            border-radius: 15px;
-            margin: 13px;
+        margin-bottom: 42px;
+        h1{
+            color: #183B56;
+            text-shadow: 1px 0 #183B56;
+            letter-spacing:1px;    
             font-size: 22px;
-            padding: 7px;
-            color: rgb(37, 35, 35);
-            &:hover{
-                background: rgba(150, 150, 150, 0.6);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        .icons{
+            display: flex;
+            i{
+                transition: .3s ease-in-out;
+                border-radius: 15px;
+                font-size: 22px;
+                padding: 7px;
+                color: rgb(37, 35, 35);
+                &:nth-child(1){
+                    transform: translateX(-7px);
+                }
+                &:nth-child(2){
+                    transform: translateX(15px);
+                }
+                &:hover{
+                    background: rgba(150, 150, 150, 0.6);
+                }
             }
         }
     }
@@ -64,12 +77,14 @@
         width: 100%;
         height: auto;
         text-align: center;
-        background: #0079db;
         padding: 6px;
+        padding-top: 12px;
+        border-top: 1px solid #0079db;
+        border-radius: 50%;
         p{
             padding: auto;
             margin: auto;
-            color: white;
+            color: #183B56;
             font-size: 13px;
             opacity: 0.8;
         }
@@ -79,7 +94,7 @@
         width: 100%;
         height: auto;
         border-radius: 4px;
-        padding: 32px 15px;
+        padding: 32px 0;
         h1{
             transform: translateY(-10px);
             color: #183B56;

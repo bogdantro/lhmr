@@ -7,6 +7,8 @@ from base64 import b64encode
 from django.core.mail import send_mail, BadHeaderError
 from django.conf import settings
 from textwrap import dedent
+from apps.userprofile.forms import UserprofileForm
+
 
 
 
@@ -20,26 +22,40 @@ def send_order(request):
             product = form.cleaned_data['product']
             product_price = form.cleaned_data['product_price']
             tag = form.cleaned_data['tag']
+            user = request.user
 
             form.save()
             
-            text = 'Du har motatt en bestiling. Sjekk under hva bestillingen handler om, og send en mail til klienten med info om hva som skal skje videre'
+            text1 = 'Du har motatt en bestiling. Sjekk under hva bestillingen handler om, og send en mail til klienten med info om hva som skal skje videre'
+            text2 = 'Husk å gå til bestillingen i backend, for å endre bruker til den som står over!!'
             data = {
                 'email':email,
                 'message':message,
                 'name':name,
-                'text':text,
+                'text1':text1,
+                'text2':text2,
                 'product':product,
+                'user':user,
             }
             message = dedent('''
             {}
 
-            Fra: {} {}
+            Navn: {}
+
+
+            Epost: {} 
+            
+            ---------------------------
+            Brukernavn: {}
+
+            {}
+            ---------------------------
+
 
             Produkt: {}
 
             Noe kunden vil fortelle oss: {}
-            ''').format(data['text'], data['name'], data['email'], data['product'], data['message'])
+            ''').format(data['text1'], data['name'], data['email'], data['user'], data['text2'], data['product'], data['message'])
             send_mail('Du har motatt en bestiling', message, '', ['sabertoothtri@gmail.com'])
             return redirect('/bestilling-utfort/webiser/bestilling')
     else:

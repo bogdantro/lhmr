@@ -1,25 +1,24 @@
 #footer {
   width: 100%;
   height: 100%;
-  padding: 15px;
+  padding: 15px 30px;
   background-color: white;
   position: relative;
   padding-bottom: 35px;
 }
 
 #footer .footer-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-bottom: 30px;
 }
 
 #footer .footer-section .footer-ul {
   width: 50%;
-  text-align: center;
+  text-align: left;
 }
 
 #footer .footer-section .footer-ul h1 {
-  color: #252323;
+  color: #183B56;
+  text-shadow: 1px 0 #183B56;
   letter-spacing: 1px;
   font-size: 22px;
   font-weight: 800;
@@ -31,6 +30,7 @@
 }
 
 #footer .footer-section .footer-ul .footer-li a {
+  text-align: left;
   display: inline-block;
   width: 100%;
   color: #252323;
@@ -47,32 +47,46 @@
 }
 
 #footer .social-icons {
+  width: 100%;
+  height: auto;
+  margin-bottom: 42px;
+}
+
+#footer .social-icons h1 {
+  color: #183B56;
+  text-shadow: 1px 0 #183B56;
+  letter-spacing: 1px;
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+#footer .social-icons .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  height: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 0;
-  margin-bottom: 10px;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
 }
 
-#footer .social-icons i {
+#footer .social-icons .icons i {
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
   border-radius: 15px;
-  margin: 13px;
   font-size: 22px;
   padding: 7px;
   color: #252323;
 }
 
-#footer .social-icons i:hover {
+#footer .social-icons .icons i:nth-child(1) {
+  -webkit-transform: translateX(-7px);
+          transform: translateX(-7px);
+}
+
+#footer .social-icons .icons i:nth-child(2) {
+  -webkit-transform: translateX(15px);
+          transform: translateX(15px);
+}
+
+#footer .social-icons .icons i:hover {
   background: rgba(150, 150, 150, 0.6);
 }
 
@@ -83,14 +97,16 @@
   width: 100%;
   height: auto;
   text-align: center;
-  background: #0079db;
   padding: 6px;
+  padding-top: 12px;
+  border-top: 1px solid #0079db;
+  border-radius: 50%;
 }
 
 #footer .copyright p {
   padding: auto;
   margin: auto;
-  color: white;
+  color: #183B56;
   font-size: 13px;
   opacity: 0.8;
 }
@@ -100,7 +116,7 @@
   width: 100%;
   height: auto;
   border-radius: 4px;
-  padding: 32px 15px;
+  padding: 32px 0;
 }
 
 #footer #newsletter h1 {
