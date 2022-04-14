@@ -1,7 +1,7 @@
 #footer {
   width: 100%;
   height: 100%;
-  padding: 15px 30px;
+  padding-block: 15px;
   background-color: white;
   position: relative;
   padding-bottom: 35px;
@@ -9,11 +9,21 @@
 
 #footer .footer-section {
   margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #footer .footer-section .footer-ul {
-  width: 50%;
-  text-align: left;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
 }
 
 #footer .footer-section .footer-ul h1 {
@@ -30,7 +40,6 @@
 }
 
 #footer .footer-section .footer-ul .footer-li a {
-  text-align: left;
   display: inline-block;
   width: 100%;
   color: #252323;
@@ -50,6 +59,8 @@
   width: 100%;
   height: auto;
   margin-bottom: 42px;
+  padding-inline: 30px;
+  text-align: center;
 }
 
 #footer .social-icons h1 {
@@ -65,25 +76,23 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #footer .social-icons .icons i {
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
-  border-radius: 15px;
+  border-radius: 4px;
   font-size: 22px;
-  padding: 7px;
-  color: #252323;
-}
-
-#footer .social-icons .icons i:nth-child(1) {
-  -webkit-transform: translateX(-7px);
-          transform: translateX(-7px);
-}
-
-#footer .social-icons .icons i:nth-child(2) {
-  -webkit-transform: translateX(15px);
-          transform: translateX(15px);
+  padding: 10px;
+  color: white;
+  background: #0082ec;
+  margin-inline: 8px;
 }
 
 #footer .social-icons .icons i:hover {
@@ -99,8 +108,7 @@
   text-align: center;
   padding: 6px;
   padding-top: 12px;
-  border-top: 1px solid #0079db;
-  border-radius: 50%;
+  border-top: 1px solid #0088F9;
 }
 
 #footer .copyright p {
@@ -116,7 +124,9 @@
   width: 100%;
   height: auto;
   border-radius: 4px;
-  padding: 32px 0;
+  padding: 32px 30px;
+  background-color: white;
+  text-align: center;
 }
 
 #footer #newsletter h1 {
@@ -142,12 +152,6 @@
   height: 45px;
 }
 
-#footer #newsletter .content label {
-  color: #183B56;
-  font-size: 15px;
-  font-weight: 800;
-}
-
 #footer #newsletter .content button {
   border-radius: 4px;
   width: 180px;
@@ -158,7 +162,7 @@
   color: white;
   outline: none;
   border: none;
-  background: #0082ec;
+  background: #0088F9;
   margin-top: 20px;
 }
 

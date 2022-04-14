@@ -44,10 +44,6 @@
   margin-bottom: -20px;
 }
 
-.border-div.prices-secure-payments {
-  margin-block: 5px;
-}
-
 .intro {
   background: white;
   width: 100%;
@@ -965,61 +961,6 @@
 .prices .content .product-section .product.big.scale {
   -webkit-transform: scale(1);
           transform: scale(1);
-}
-
-.secure-payments {
-  background: white;
-  width: 100%;
-  height: auto;
-  margin-top: 0;
-  padding: 25px;
-}
-
-.secure-payments img {
-  margin-block: 15px;
-  height: auto;
-  width: 70%;
-  max-width: 370px;
-}
-
-.secure-payments .text {
-  text-align: left;
-}
-
-.secure-payments .text h1 {
-  -webkit-transform: translateY(7px);
-          transform: translateY(7px);
-  color: #183B56;
-  text-shadow: 1px 0 #183B56;
-  letter-spacing: 1px;
-  font-size: 22px;
-  font-weight: 800;
-}
-
-.secure-payments .text h1 span {
-  color: #FF5B24;
-  text-shadow: 1px 0 #FF5B24;
-}
-
-.our-story {
-  background: #028cfd;
-  width: 100%;
-  height: auto;
-  margin-top: 0px;
-  padding: 45px 25px;
-  position: relative;
-}
-
-.our-story .content .text h1 {
-  color: white;
-  font-weight: 600;
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-
-.our-story .content .text p {
-  color: white;
-  font-weight: 600;
 }
 
 @media only screen and (min-device-width: 768px) {

@@ -20,8 +20,7 @@
         <h1>Bli medlem</h1>
         <form v-on:submit.prevent="onSubmit">
             <div class="content">
-                <label for="email">Din epost</label>
-                <input type="email" v-model="email" name="email" class="input">
+                <input type="email" v-model="email" name="email" class="input" placeholder="Din epost">
                 <button>Send</button>
             </div>
         </form>
@@ -42,16 +41,31 @@
                 <a href="/">Forum</a>
             </li>
         </ul>
+        <ul class="footer-ul">
+            <h1>Raske Linker</h1>
+            <li class="footer-li">
+                <a href="/">Sektorer</a>
+                <a href="/">Blogg</a>
+                <a href="/">Om oss</a>
+                <a href="/">Prosjekter</a>
+                <a href="/">Forum</a>
+                <a href="/">Forum</a>
+                <a href="/">Forum</a>
+            </li>
+        </ul>
     </div>
     <div class="social-icons">
         <h1>Finn oss her</h1>
         <div class="icons">
             <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-instagram"></i>
             <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-tiktok"></i>
+            <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-facebook"></i>
+            <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fa-solid fa-blog"></i>
+            <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fa-brands fa-twitter"></i>
         </div>
     </div>
     <div class="copyright">
-        <p>Copyright &#169; 2020-2021 Webiser</p>
+        <p>Copyright &#169; 2022 Webiser</p>
     </div>
 </div>
 

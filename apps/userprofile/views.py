@@ -7,12 +7,10 @@ from apps.order.models import Order
 @login_required
 def myaccount(request):
     orderFinished = Order.objects.filter(is_finished=True) 
-    orderStarted = Order.objects.filter(is_finished=False) 
     orderConfirmed = Order.objects.filter(is_confirmed=True) 
 
     context = {
         'orderFinished':orderFinished,
-        'orderStarted':orderStarted,
         'orderConfirmed':orderConfirmed,
      }
 
@@ -29,7 +27,7 @@ def orderinfo(request, id):
     return render(request, 'core/orderinfo.html', context)
 
 
-def signup(request):
+def signup(request, backend='django.contrib.auth.backends.ModelBackend'):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         userprofileform = UserprofileForm(request.POST)

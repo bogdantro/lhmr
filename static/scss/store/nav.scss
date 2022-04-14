@@ -93,6 +93,8 @@
         opacity: 0;
         pointer-events: none;
         display: unset;
+        overflow-y: scroll;
+
         .sidebar-bottom-img{
             position: absolute;
             bottom: 0;

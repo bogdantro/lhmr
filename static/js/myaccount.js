@@ -3,6 +3,14 @@ function completedOrders(){
     const startedOrdersP = document.getElementById('startedOrdersP');
     const ifOrderFinished = document.getElementById('ifOrderFinished');
     const ifOrderStarted = document.getElementById('ifOrderStarted');
+
+    setTimeout(() => {
+        completedOrdersP.classList.add('click')
+    }, 70);
+    setTimeout(() => {
+        completedOrdersP.classList.remove('click')
+    }, 180);
+
     
     completedOrdersP.classList.add('active')
     completedOrdersP.classList.remove('unactive')
@@ -19,6 +27,13 @@ function startedOrders(){
     const completedOrdersP = document.getElementById('completedOrdersP');
     const ifOrderFinished = document.getElementById('ifOrderFinished');
     const ifOrderStarted = document.getElementById('ifOrderStarted');
+
+    setTimeout(() => {
+        startedOrdersP.classList.add('click')
+    }, 70);
+    setTimeout(() => {
+        startedOrdersP.classList.remove('click')
+    }, 180);
 
     startedOrdersP.classList.add('active')
     startedOrdersP.classList.remove('unactive')

@@ -52,12 +52,20 @@
 
 .myaccount .account-card .my-orders .check-type-of-order-flex p {
   opacity: 0.6;
-  margin: 0 18px;
+  margin-inline: 18px;
   border-radius: 28px;
   width: 80px;
   padding: 7px;
   text-align: center;
   font-size: 15px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-transition: background-color 0;
+  transition: background-color 0;
+}
+
+.myaccount .account-card .my-orders .check-type-of-order-flex p.click {
+  padding-block: 18px;
 }
 
 .myaccount .account-card .my-orders .check-type-of-order-flex p#completedOrdersP.active {
@@ -94,15 +102,20 @@
 .myaccount .account-card .my-orders .if-order-finished {
   width: 100%;
   display: block;
-  padding: 20px;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
 }
 
 .myaccount .account-card .my-orders .if-order-finished .no-finished {
   -webkit-transform: translateX(13px) translateY(45px);
           transform: translateX(13px) translateY(45px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #5a7386;
+  display: block;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  height: auto;
+  margin-bottom: 45px;
 }
 
 .myaccount .account-card .my-orders .if-order-finished .no-finished::before {
@@ -125,12 +138,20 @@
   width: 100%;
 }
 
-.myaccount .account-card .my-orders .if-order-started .no-started {
+.myaccount .account-card .my-orders .if-order-started .no-finished {
   -webkit-transform: translateX(13px) translateY(45px);
           transform: translateX(13px) translateY(45px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #5a7386;
+  display: block;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  height: auto;
 }
 
-.myaccount .account-card .my-orders .if-order-started .no-started::before {
+.myaccount .account-card .my-orders .if-order-started .no-finished::before {
   content: '';
   display: block;
   position: absolute;
@@ -139,6 +160,10 @@
   width: 4px;
   background: #0088F9;
   border-radius: 12px;
+}
+
+.myaccount .account-card .my-orders .if-order-started .no-finished.no-line::before {
+  display: none;
 }
 
 .myaccount .account-card .my-orders .if-order-started.hide {

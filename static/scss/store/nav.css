@@ -102,6 +102,7 @@
   opacity: 0;
   pointer-events: none;
   display: unset;
+  overflow-y: scroll;
 }
 
 #navbar .sidebar .sidebar-bottom-img {

@@ -42,12 +42,17 @@
             display: flex;
             p{
               opacity: 0.6;
-              margin: 0 18px;
+              margin-inline: 18px;
               border-radius: 28px;
               width: 80px;
               padding: 7px;
               text-align: center;
               font-size: 15px;
+              transition: .2s;
+              transition: background-color 0;
+              &.click{
+                padding-block: 18px;
+              }
               &#completedOrdersP{
                 &.active{
                   background: #0088F9;
@@ -81,12 +86,16 @@
           .if-order-finished{
             width: 100%;
             display: block;
-            padding: 20px;
-            padding-left: 0;
-            padding-right: 0;
-            padding-top: 0;
             .no-finished{
               transform: translateX(13px) translateY(45px);
+              box-sizing: border-box;
+              color: rgb(90, 115, 134);
+              display: block;
+              font-family: Inter, sans-serif;
+              font-size: 16px;
+              font-weight: 400;
+              height: auto;
+              margin-bottom: 45px;
               &::before{
                 content: '';
                 display: block;
@@ -105,8 +114,15 @@
           .if-order-started{
             display: block;
             width: 100%;
-            .no-started{
+            .no-finished{
               transform: translateX(13px) translateY(45px);
+              box-sizing: border-box;
+              color: rgb(90, 115, 134);
+              display: block;
+              font-family: Inter, sans-serif;
+              font-size: 16px;
+              font-weight: 400;
+              height: auto;
               &::before{
                 content: '';
                 display: block;
@@ -116,6 +132,11 @@
                 width: 4px;
                 background: #0088F9;
                 border-radius: 12px;
+              }
+              &.no-line{
+                &::before{
+                  display: none;
+                }
               }
             }
             &.hide{
