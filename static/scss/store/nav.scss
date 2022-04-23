@@ -115,6 +115,7 @@
             width: 100%;
             text-align: left;
             transform: translateY(35px);
+            height: 110vh;
             .sidebar-li{
                 list-style: none;
                 width: 100%;
@@ -125,6 +126,7 @@
                     display: flex;
                     opacity: 1;
                     transition: .4s;
+                    position: relative;
                     .user-is-login{
                         z-index: 10;
                         display: flex;
@@ -138,10 +140,13 @@
                                 display: inline-block;
                                 text-decoration: none;
                                 font-weight: 800;
-                                font-size: 14.6px;
-                                transform:  translateX(60px);
+                                font-size: 14.5px;
+                                transform:  translateX(53px);
                                 position: absolute;
                                 padding: 19px 0;
+                                span{
+                                    font-weight: normal;
+                                }
                             }
                             i{
                                 font-size: 22px;
@@ -263,7 +268,7 @@
                     }
                     #pricesToggle{
                         &.click{
-                            color: #4287f5;
+                            color: #0088F9;
                             i{
                                 transform: rotateX(180deg) translateX(-50px) translateY(-11px);
                                 transform-origin: center center;                            
@@ -272,7 +277,7 @@
                     }
                     #pricesToggleExtra{
                         &.click{
-                            color: #4287f5;
+                            color: #0088F9;
                             i{
                                 transform: rotateX(180deg) translateX(-50px) translateY(-11px);
                                 transform-origin: center center;                            
@@ -301,7 +306,7 @@
                     }
                     #aboutToggle{
                         &.click{
-                            color: #4287f5;
+                            color: #0088F9;
                             i{
                                 transform: rotateX(180deg) translateX(-50px) translateY(-11px);
                                 transform-origin: center center;                            
@@ -330,7 +335,7 @@
                     }
                     #helpToggle{
                         &.click{
-                            color: #4287f5;
+                            color: #0088F9;
                             i{
                                 transform: rotateX(180deg) translateX(-50px) translateY(-11px);
                                 transform-origin: center center;                            
@@ -357,22 +362,13 @@
                             }
                         }
                     }
-                    #accountToggle{
-                        &.click{
-                            color: #4287f5;
-                            i{
-                                transform: rotateX(180deg) translateX(-50px) translateY(-11px);
-                                transform-origin: center center;                            
-                            }
-                        }
-                    }
                 }
             }
         }
         &.active{
             opacity: 1;
             pointer-events: visible;
-            transition: .2s;
+            transition: .4s;
         }
     }    
     // ORDER CSS

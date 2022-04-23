@@ -74,14 +74,14 @@ body.menu {
 
 .cover {
   width: 100%;
-  height: 133vh;
+  height: 900px;
   background: -webkit-gradient(linear, left bottom, right top, from(white), color-stop(white), color-stop(85%, #EDF3F8), color-stop(85%, #EDF3F8), to(white));
   background: linear-gradient(to top right, white, white, #EDF3F8 85%, #EDF3F8 85%, white);
 }
 
 .cover .content {
   width: 100%;
-  height: 133vh;
+  height: auto;
   text-align: center;
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
@@ -195,8 +195,8 @@ body.menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  bottom: 115px;
+  position: relative;
+  top: 90px;
 }
 
 .cover .content .cover-image-div img {

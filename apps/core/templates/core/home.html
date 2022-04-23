@@ -102,7 +102,7 @@
       </div>
       <!-- EBOOKS -->
       <div class="card">
-         <div class="card-content">
+         <div class="card-content" onclick="pricesScroll()">
             <div class="icon">
                <i class="fa-solid fa-book"></i>
             </div>
@@ -114,7 +114,7 @@
       </div>
       <!-- ONLINE COURSE -->
       <div class="card">
-         <div class="card-content">
+         <div class="card-content" onclick="pricesScroll()">
             <div class="icon">
                <i class="fa-solid fa-chalkboard-user"></i>
             </div>
@@ -126,7 +126,7 @@
       </div>
       <!-- ECOMMERCE -->
       <div class="card">
-         <div class="card-content">
+         <div class="card-content" onclick="pricesScroll()">
             <div class="icon">
                <i class="fa-solid fa-shop"></i>
             </div>
@@ -138,7 +138,7 @@
       </div>
       <!-- COACHING -->
       <div class="card">
-         <div class="card-content">
+         <div class="card-content" onclick="pricesScroll()">
             <div class="icon">
                <i class="fa-solid fa-headset"></i>
             </div>
@@ -150,7 +150,7 @@
       </div>
       <!-- AND MUCH MORE -->
       <div class="card">
-         <div class="card-content">
+         <div class="card-content" onclick="pricesScroll()">
             <div class="icon">
                <i class="fa-solid fa-shuttle-space"></i>
             </div>
@@ -295,14 +295,6 @@
             <div class="icon">
                <i class="fa-solid fa-check"></i>
             </div>
-            <p>Gratis & Betalte Prøveversjoner</p>
-         </div>
-         <!-- BOOST BENEFITS FLEX -->
-         <div class="flex">
-            <!-- BOOST BENEFITS ICON -->
-            <div class="icon">
-               <i class="fa-solid fa-check"></i>
-            </div>
             <p>Krever lite progamering</p>
          </div>
          <!-- BOOST BENEFITS FLEX -->
@@ -409,17 +401,171 @@
          <p class="price-headingp">priser</p>
          <h1>Profesjonelle nettsider, rett foran deg</h1>
       </div>
-      <div class="choose-type-of-product-flex">
+      <div class="choose-type-of-product-flex" id="chooseTypeOfProductFlex">
+         <p id="eco" onclick="ecoShowFunc()">Nettbutikk</p>
+         <p id="blog" onclick="blogShowFunc()">Blogg</p>
+         <p id="pers" onclick="persShowFunc()">Personlig</p>
+     </div>  
+      <div class="choose-type-of-productblog-flex" id="chooseTypeOfProductBlogFlex">
+         <i onclick="blogShowFuncClose()" class="fad fa-arrow-alt-from-right" style="--fa-secondary-color: dimgray;"></i>
+         <p id="blogTypeOf">Blogg</p>
+     </div>  
+      <div class="choose-type-of-productblog-flex" id="chooseTypeOfProductPersFlex">
+         <i onclick="persShowFuncClose()" class="fad fa-arrow-alt-from-right" style="--fa-secondary-color: dimgray;"></i>
+         <p id="persTypeOf">Personlig</p>
+     </div>  
+      <div class="choose-type-of-producteco-flex" id="chooseTypeOfProductEcoFlex">
+         <i onclick="ecoShowFuncClose()" class="fad fa-arrow-alt-from-right" style="--fa-secondary-color: dimgray;"></i>
          <p id="small" onclick="smallFunc()">Liten</p>
          <p id="middle" onclick="middleFunc()">Middel</p>
          <p id="big" onclick="bigFunc()">Stor</p>
      </div>  
      <div class="product-section">
-        <div class="product small" id="productIsSmall">
+        <!-- BLOG PRODUCT -->
+        <div class="productblog blog" id="productIsBlog">
+         {% for product in products %}
+             {% if product.is_blog %}
+                   <div class="product-row-one">
+                         <h1 class="product-name">{{product.name}}</h1>
+                         <p class="product-price">{{ product.price | floatformat }}kr</p>
+                   </div>
+                   <div class="product-row-two">
+                      <!-- PRODUCT BENEFITS -->
+                      <div class="flex">
+                         <!-- PRODUCT BENEFITS ICON -->
+                         <div class="icon">
+                            <i class="fa-solid fa-check"></i>
+                         </div>
+                         <p>100% tilgang</p>
+                      </div>
+                      <!-- PRODUCT BENEFITS -->
+                      <div class="flex">
+                         <!-- PRODUCT BENEFITS ICON -->
+                         <div class="icon">
+                            <i class="fa-solid fa-check"></i>
+                         </div>
+                         <p>Source code - via GitHub</p>
+                      </div>
+                      <!-- PRODUCT BENEFITS -->
+                      <div class="flex">
+                         <!-- PRODUCT BENEFITS ICON -->
+                         <div class="icon">
+                            <i class="fa-solid fa-check"></i>
+                         </div>
+                         <p>Gratis hjelp innen 14 dager</p>
+                      </div>
+                      <!-- PRODUCT BENEFITS -->
+                      <div class="flex">
+                         <!-- PRODUCT BENEFITS ICON -->
+                         <div class="icon">
+                            <i class="fa-solid fa-check"></i>
+                         </div>
+                         <p>2 ekstra sider</p>
+                      </div>
+                      <!-- PRODUCT BENEFITS -->
+                      <div class="flex">
+                         <!-- PRODUCT BENEFITS ICON -->
+                         <div class="icon">
+                            <i class="fa-solid fa-check"></i>
+                         </div>
+                         <p>10-18 dager levering</p>
+                      </div>
+                       <!-- PRODUCT BENEFITS -->
+                      <div class="flex">
+                         <!-- PRODUCT BENEFITS ICON -->
+                         <div class="icon">
+                            <i class="fa-solid fa-check"></i>
+                         </div>
+                         <p>Profesjonell design</p>
+                      </div>
+                      <!-- PRODUCT BENEFITS -->
+                      <div class="flex">
+                         <!-- PRODUCT BENEFITS ICON -->
+                         <div class="icon">
+                            <i class="fa-solid fa-check"></i>
+                         </div>
+                         <p>Hosting til 60kr/m</p>
+                      </div>
+                   </div>
+                {% endif %}     
+             {% endfor %}   
+       </div>
+        <!-- PERS PRODUCT -->
+        <div class="productpers pers" id="productIsPers">
+         {% for product in products %}
+             {% if product.is_pers %}
+                   <div class="product-row-one">
+                         <h1 class="product-name">{{product.name}}</h1>
+                         <p class="product-price">{{ product.price | floatformat }}kr</p>
+                   </div>
+                   <div class="product-row-two">
+                      <!-- PRODUCT BENEFITS -->
+                      <div class="flex">
+                         <!-- PRODUCT BENEFITS ICON -->
+                         <div class="icon">
+                            <i class="fa-solid fa-check"></i>
+                         </div>
+                         <p>100% tilgang</p>
+                      </div>
+                      <!-- PRODUCT BENEFITS -->
+                      <div class="flex">
+                         <!-- PRODUCT BENEFITS ICON -->
+                         <div class="icon">
+                            <i class="fa-solid fa-check"></i>
+                         </div>
+                         <p>Source code - via GitHub</p>
+                      </div>
+                      <!-- PRODUCT BENEFITS -->
+                      <div class="flex">
+                         <!-- PRODUCT BENEFITS ICON -->
+                         <div class="icon">
+                            <i class="fa-solid fa-check"></i>
+                         </div>
+                         <p>Gratis hjelp innen 14 dager</p>
+                      </div>
+                      <!-- PRODUCT BENEFITS -->
+                      <div class="flex">
+                         <!-- PRODUCT BENEFITS ICON -->
+                         <div class="icon">
+                            <i class="fa-solid fa-check"></i>
+                         </div>
+                         <p>4 ekstra sider</p>
+                      </div>
+                      <!-- PRODUCT BENEFITS -->
+                      <div class="flex">
+                         <!-- PRODUCT BENEFITS ICON -->
+                         <div class="icon">
+                            <i class="fa-solid fa-check"></i>
+                         </div>
+                         <p>10-18 dager levering</p>
+                      </div>
+                       <!-- PRODUCT BENEFITS -->
+                      <div class="flex">
+                         <!-- PRODUCT BENEFITS ICON -->
+                         <div class="icon">
+                            <i class="fa-solid fa-check"></i>
+                         </div>
+                         <p>Profesjonell design</p>
+                      </div>
+                      <!-- PRODUCT BENEFITS -->
+                      <div class="flex">
+                         <!-- PRODUCT BENEFITS ICON -->
+                         <div class="icon">
+                            <i class="fa-solid fa-check"></i>
+                         </div>
+                         <p>Hosting til 60kr/m</p>
+                      </div>
+                   </div>
+                {% endif %}     
+             {% endfor %}   
+       </div>
+        <!-- ECOMMERCE PRODUCT -->
+         <!-- -----SMALL -->
+        <div class="producteco small" id="productIsSmall">
            {% for product in products %}
                {% if product.is_small %}
                      <div class="product-row-one">
-                           <h1 class="product-name">Nettbutikk</h1><p class="product-tag">LITEN</p>
+                           <h1 class="product-name">{{product.name}}</h1><p class="product-tag">LITEN</p>
                            <p class="product-price">{{ product.price | floatformat }}kr</p>
                      </div>
                      <div class="product-row-two">
@@ -469,7 +615,7 @@
                            <div class="icon">
                               <i class="fa-solid fa-check"></i>
                            </div>
-                           <p>5-14 dager levering</p>
+                           <p>10-18 dager levering</p>
                         </div>
                         <!-- PRODUCT BENEFITS -->
                         <div class="flex">
@@ -523,11 +669,12 @@
                   {% endif %}     
                {% endfor %}   
          </div>
-         <div class="product middle" id="productIsMiddle">
+         <!-- -----MIDDLE -->
+         <div class="producteco middle" id="productIsMiddle">
             {% for product in products %}
             {% if product.is_middle %}
                   <div class="product-row-one" style="margin-bottom: 65px;">
-                        <h1 class="product-name">Nettbutikk</h1><p class="product-tag">MIDDEL</p>
+                        <h1 class="product-name">{{product.name}}</h1><p class="product-tag">MIDDEL</p>
                         <p class="product-price">{{ product.price | floatformat }}kr</p>
                         <div class="popular">
                            <h1>Popular</h1>
@@ -580,7 +727,7 @@
                         <div class="icon">
                            <i class="fa-solid fa-check"></i>
                         </div>
-                        <p>5-14 dager levering</p>
+                        <p>10-18 dager levering</p>
                      </div>
                      <!-- PRODUCT BENEFITS -->
                      <div class="flex">
@@ -634,11 +781,12 @@
                {% endif %}         
          {% endfor %} 
          </div>
-         <div class="product big" id="productIsBig">
+         <!-- -----BIG -->
+         <div class="producteco big" id="productIsBig">
             {% for product in products %}
             {% if product.is_big %}
                   <div class="product-row-one">
-                        <h1 class="product-name">Nettbutikk</h1><p class="product-tag">STOR</p>
+                        <h1 class="product-name">{{product.name}}</h1><p class="product-tag">STOR</p>
                         <p class="product-price">{{ product.price | floatformat }}kr</p>
                   </div>
                   <div class="product-row-two">
@@ -664,7 +812,7 @@
                      <div class="icon">
                         <i class="fa-solid fa-check"></i>
                      </div>
-                     <p>Gratis hjelp innen 14 dager</p>
+                     <p>Gratis hjelp innen 30 dager</p>
                   </div>
                   <!-- PRODUCT BENEFITS -->
                   <div class="flex">
@@ -688,7 +836,7 @@
                      <div class="icon">
                         <i class="fa-solid fa-check"></i>
                      </div>
-                     <p>10-20 dager levering</p>
+                     <p>10-26 dager levering</p>
                   </div>
                   <!-- PRODUCT BENEFITS -->
                   <div class="flex">

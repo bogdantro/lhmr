@@ -69,4 +69,198 @@
   color: #183B56;
   font-weight: 800;
 }
+
+.login form .forgot-pass {
+  font-size: 13px;
+  color: #183B56;
+  font-weight: 800;
+}
+
+.login form {
+  margin: 0 auto;
+  text-align: left;
+  background: transparent;
+  width: 93%;
+  max-width: 700px;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
+          box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
+  padding: 20px;
+  border-radius: 7px;
+  -webkit-transform: translateY(110px);
+          transform: translateY(110px);
+  background: white;
+}
+
+.login form .heading {
+  color: #183B56;
+  font-size: 22px;
+  font-weight: 800;
+  text-shadow: 1px 0 #183B56;
+  letter-spacing: 1px;
+}
+
+.login form .login-form-inputs label {
+  color: #183B56;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.login form .login-form-inputs input {
+  padding: 5px;
+  border-radius: 4px;
+  border: 2px solid #0089f91f;
+  outline: none;
+  color: #183B56;
+  font-size: 13px;
+  width: 82%;
+  max-width: 500px;
+  font-weight: 600;
+  height: 45px;
+}
+
+.login form .form-actions {
+  margin-top: 23px;
+}
+
+.login form .form-actions button {
+  border-radius: 4px;
+  width: 200px;
+  font-size: 16px;
+  padding: 10px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  color: white;
+  outline: none;
+  border: none;
+  border: none;
+  background: #0082ec;
+}
+
+.login form .or-signup {
+  font-size: 13px;
+  color: #183B56;
+  font-weight: 800;
+}
+
+.login form .forgot-pass {
+  font-size: 13px;
+  color: #183B56;
+  font-weight: 800;
+}
+
+.login .forgot-pass {
+  z-index: 100000000000000000000;
+  position: relative;
+}
+
+.login .forgot-pass form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-70%) scale(0.9);
+          transform: translateX(-50%) translateY(-70%) scale(0.9);
+  margin: 0 auto;
+  text-align: left;
+  background: transparent;
+  width: 93%;
+  max-width: 700px;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
+          box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
+  padding: 20px;
+  border-radius: 7px;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.login .forgot-pass form.active {
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+          transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+.login .forgot-pass form .heading {
+  color: #183B56;
+  font-size: 22px;
+  font-weight: 800;
+  text-shadow: 1px 0 #183B56;
+  letter-spacing: 1px;
+}
+
+.login .forgot-pass form p {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #5a7386;
+  display: block;
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+}
+
+.login .forgot-pass form i {
+  position: absolute;
+  right: 20px;
+  top: 24px;
+  font-size: 24px;
+  color: #183B56;
+  font-weight: 800;
+}
+
+.login .forgot-pass form .forgot-pass-form-inputs label {
+  color: #183B56;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.login .forgot-pass form .forgot-pass-form-inputs input {
+  padding: 5px;
+  border-radius: 4px;
+  border: 2px solid #0089f91f;
+  outline: none;
+  color: #183B56;
+  font-size: 13px;
+  width: 82%;
+  max-width: 500px;
+  font-weight: 600;
+  height: 45px;
+}
+
+.login .forgot-pass form .form-actions {
+  margin-top: 23px;
+}
+
+.login .forgot-pass form .form-actions button {
+  border-radius: 4px;
+  width: 200px;
+  font-size: 16px;
+  padding: 10px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  color: white;
+  outline: none;
+  border: none;
+  border: none;
+  background: #0082ec;
+}
+
+.black-overlay {
+  background: rgba(0, 0, 0, 0.562);
+  width: 100%;
+  height: 10000000000000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 100;
+}
+
+.black-overlay.show {
+  display: block;
+}
 /*# sourceMappingURL=login.css.map */

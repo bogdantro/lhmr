@@ -4,10 +4,11 @@ from .forms import SignUpForm, UserprofileForm
 from django.contrib.auth import login
 from apps.order.models import Order
 
+
 @login_required
 def myaccount(request):
-    orderFinished = Order.objects.filter(is_finished=True) 
-    orderConfirmed = Order.objects.filter(is_confirmed=True) 
+    orderFinished = Order.objects.filter(user=request.user, is_finished=True).first()
+    orderConfirmed = Order.objects.filter(user=request.user, is_confirmed=True).first()
 
     context = {
         'orderFinished':orderFinished,

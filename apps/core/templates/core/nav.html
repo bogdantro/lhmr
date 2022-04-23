@@ -77,17 +77,20 @@
                         <a onclick="prices()" id="pricesToggle">Priser<i class="fas fa-sort-down"></i></a>
                         <div class="prices-dropdown-links" id="pricesDropdown">
                             <div class="nav-link-parent">
-                                <a onclick="pricesScroll()">Nettbutikk/eCommerce</a>
+                                <a onclick="ecoScroll()">Nettbutikk/eCommerce</a>
                             </div>
                             <div class="nav-link-parent">
-                                <a href="">Personlig nettside</a>
+                                <a onclick="persScroll()">Personlig nettside</a>
+                            </div>
+                            <div class="nav-link-parent">
+                                <a onclick="blogScroll()">Blogg</a>
                             </div>
                             <div class="nav-link-parent">
                                 <a onclick="pricesExtra()" id="pricesToggleExtra">Tilleg<i class="fas fa-sort-down"></i></a>
                             </div>
                             <div class="extras" id="pricesExtraDiv">
                                 <div class="nav-link-parent">
-                                    <a href="">Blogg</a>
+                                    <a href="">Hosting</a>
                                     <a href="">Ekstra sider</a>
                                 </div>
                             </div>
@@ -99,7 +102,7 @@
                         {% if request.user.is_authenticated %}
                         <div class="user-is-login">
                             <div class="part1">
-                                <i class="fa-regular fa-user"></i><p>Hei&nbsp; - &nbsp;{{ request.user.first_name }}</p>
+                                <i class="fa-regular fa-user"></i><p>Hei&nbsp; - &nbsp;<span>{{ request.user.first_name }}</span></p>
                             </div>
                             <div class="part2">
                                 <a href="/min-bruker">Min bruker</a>

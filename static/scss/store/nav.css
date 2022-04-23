@@ -129,6 +129,7 @@
   text-align: left;
   -webkit-transform: translateY(35px);
           transform: translateY(35px);
+  height: 110vh;
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li {
@@ -148,6 +149,7 @@
   opacity: 1;
   -webkit-transition: .4s;
   transition: .4s;
+  position: relative;
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .sidebar-myaccount .user-is-login {
@@ -171,11 +173,15 @@
   display: inline-block;
   text-decoration: none;
   font-weight: 800;
-  font-size: 14.6px;
-  -webkit-transform: translateX(60px);
-          transform: translateX(60px);
+  font-size: 14.5px;
+  -webkit-transform: translateX(53px);
+          transform: translateX(53px);
   position: absolute;
   padding: 19px 0;
+}
+
+#navbar .sidebar .sidebar-ul .sidebar-li .sidebar-myaccount .user-is-login .part1 p span {
+  font-weight: normal;
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .sidebar-myaccount .user-is-login .part1 i {
@@ -329,7 +335,7 @@
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .prices-dropdown #pricesToggle.click {
-  color: #4287f5;
+  color: #0088F9;
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .prices-dropdown #pricesToggle.click i {
@@ -340,7 +346,7 @@
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .prices-dropdown #pricesToggleExtra.click {
-  color: #4287f5;
+  color: #0088F9;
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .prices-dropdown #pricesToggleExtra.click i {
@@ -375,7 +381,7 @@
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .about-dropdown #aboutToggle.click {
-  color: #4287f5;
+  color: #0088F9;
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .about-dropdown #aboutToggle.click i {
@@ -410,7 +416,7 @@
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .help-dropdown #helpToggle.click {
-  color: #4287f5;
+  color: #0088F9;
 }
 
 #navbar .sidebar .sidebar-ul .sidebar-li .help-dropdown #helpToggle.click i {
@@ -444,22 +450,11 @@
           transform: translateY(19px) translateX(0);
 }
 
-#navbar .sidebar .sidebar-ul .sidebar-li .account-dropdown #accountToggle.click {
-  color: #4287f5;
-}
-
-#navbar .sidebar .sidebar-ul .sidebar-li .account-dropdown #accountToggle.click i {
-  -webkit-transform: rotateX(180deg) translateX(-50px) translateY(-11px);
-          transform: rotateX(180deg) translateX(-50px) translateY(-11px);
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-}
-
 #navbar .sidebar.active {
   opacity: 1;
   pointer-events: visible;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 #navbar .order {
