@@ -22,7 +22,7 @@ def send_order(request):
             product = form.cleaned_data['product']
             product_price = form.cleaned_data['product_price']
             tag = form.cleaned_data['tag']
-            user = request.user
+            user = form.cleaned_data['user_html']
 
             form.save()
             

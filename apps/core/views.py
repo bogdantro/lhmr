@@ -117,9 +117,6 @@ def proccess(request):
 def forum(request):
     return render(request, 'pages/kundeservice/forum.html')
 
-def edit(request):
-    return render(request, 'pages/kundeservice/edit.html')   
-
 def frontend(request):
     return render(request, 'pages/kundeservice/frontend.html')   
 

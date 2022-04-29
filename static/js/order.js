@@ -65,6 +65,32 @@ function bigPack(){
   dropdown.classList.remove('active');
   productArrow.classList.remove('active');
 }
+// BLOG
+function blogPrPack(){
+  const product =  document.getElementById('product');
+  const dropdown =  document.getElementById('productDrop');
+  const productArrow =  document.getElementById('productArrow');
+
+  document.getElementById("product").value = "Blogg";
+  document.getElementById("product_price").value = "1999";
+  document.getElementById("tag").value = "--INGEN--";
+  product.classList.remove('active');
+  dropdown.classList.remove('active');
+  productArrow.classList.remove('active');
+}
+// PERS
+function persPrPack(){
+  const product =  document.getElementById('product');
+  const dropdown =  document.getElementById('productDrop');
+  const productArrow =  document.getElementById('productArrow');
+
+  document.getElementById("product").value = "Personlig nettside";
+  document.getElementById("product_price").value = "2999";
+  document.getElementById("tag").value = "--INGEN--";
+  product.classList.remove('active');
+  dropdown.classList.remove('active');
+  productArrow.classList.remove('active');
+}
 
 
 // document.getElementById('productPrice').innerHTML = '3500kr';

@@ -1,0 +1,18 @@
+    {% block content %}
+    <div class="forgot-pass">
+        <form action="" method="POST" id="forgotPassForm">
+            <h1 class="heading">Glemt passord</h1>
+            {% csrf_token %}
+            <p>Skriv din epost under, så skal vi hjelpe deg</p>
+            <i onclick="forgotPassClose()" class="fa-solid fa-xmark"></i>
+            <div class="forgot-pass-form-inputs">
+                <label for="forgot_pass_email">Epost</label>
+                <br>
+                <input type="text" id="forgot_pass_email" name="forgot_pass_email" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
+            </div>
+            <div class="form-actions">
+                <button type='submit'name="forgot_pass_email" value="forgot_pass_email">Send</button>
+            </div>
+        </form>
+    </div>
+    {% endblock %}

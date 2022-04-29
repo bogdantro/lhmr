@@ -133,11 +133,11 @@
   left: 0;
 }
 
-.make-order form .order-form-inputs .product-dropdown a:nth-child(3) {
+.make-order form .order-form-inputs .product-dropdown a:nth-child(5) {
   border-radius: 4px;
 }
 
-.make-order form .order-form-inputs .product-dropdown a:nth-child(3)::after {
+.make-order form .order-form-inputs .product-dropdown a:nth-child(5)::after {
   display: none;
 }
 

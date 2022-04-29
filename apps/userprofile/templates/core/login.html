@@ -41,22 +41,7 @@
         <br>
         <h1 class="or-signup">Eller <a href="/lag-bruker">lag bruker</a></h1>
     </form>
-    <div class="forgot-pass">
-        <form action="" method="POST" id="forgotPassForm">
-            <h1 class="heading">Glemt passord</h1>
-            <p>Skriv din epost under, så skal vi hjelpe deg</p>
-            <i onclick="forgotPassClose()" class="fa-solid fa-xmark"></i>
-            {% csrf_token %}
-            <div class="forgot-pass-form-inputs">
-                <label for="email2">Epost</label>
-                <br>
-                <input type="text" id="email2" name="email2" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
-            </div>
-            <div class="form-actions">
-                <button type='submit'>Send</button>
-            </div>
-        </form>
-    </div>
+    {% include 'core/forgot_pass.html' %}
 </div>
 <div class="black-overlay" id="blackOverlay"></div>
 

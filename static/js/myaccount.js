@@ -45,3 +45,9 @@ function startedOrders(){
 
     ifOrderStarted.classList.remove('hide')
 }
+
+
+
+
+
+// onclick="window.location.href='{% url 'orderinfo' order.id %}'"

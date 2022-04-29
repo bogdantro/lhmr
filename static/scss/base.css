@@ -661,6 +661,18 @@
   font-weight: 800;
 }
 
+.prices .content .text .prices-longp {
+  -webkit-transform: translateY(21px);
+          transform: translateY(21px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #5a7386;
+  display: block;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .prices .content .choose-type-of-product-flex {
   -webkit-transform: translateY(25px);
           transform: translateY(25px);
@@ -683,63 +695,30 @@
   height: 0;
 }
 
+.prices .content .choose-type-of-product-flex.hide p {
+  border: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
 .prices .content .choose-type-of-product-flex p {
-  opacity: 0.6;
+  opacity: 1;
   margin-inline: 18px;
   margin-block: 0;
   width: 80px;
   padding: 7px;
   text-align: center;
-  font-size: 15px;
-  -webkit-transition: .2s;
-  transition: .2s;
+  font-size: 16px;
+  -webkit-transition: 0;
+  transition: 0;
   -webkit-transition: background-color 0;
   transition: background-color 0;
-  border-radius: 28px;
-}
-
-.prices .content .choose-type-of-product-flex p.click {
-  padding: 18px;
-}
-
-.prices .content .choose-type-of-product-flex p#pers.active {
-  background-color: #0088F9;
-  color: white;
-  opacity: 1;
-}
-
-.prices .content .choose-type-of-product-flex p#pers.unactive {
-  background-color: transparent;
-  opacity: 0.6;
-  color: black;
-}
-
-.prices .content .choose-type-of-product-flex p#blog.active {
-  background-color: #0088F9;
-  color: white;
-  opacity: 1;
-}
-
-.prices .content .choose-type-of-product-flex p#blog.unactive {
-  background-color: transparent;
-  opacity: 0.6;
-  color: black;
+  border-radius: 0;
+  border-bottom: 3px solid #0088F9;
 }
 
 .prices .content .choose-type-of-product-flex p#eco {
   margin-left: 0;
-}
-
-.prices .content .choose-type-of-product-flex p#eco.active {
-  background-color: #0088F9;
-  color: white;
-  opacity: 1;
-}
-
-.prices .content .choose-type-of-product-flex p#eco.unactive {
-  background-color: transparent;
-  opacity: 0.6;
-  color: black;
 }
 
 .prices .content .choose-type-of-productblog-flex {

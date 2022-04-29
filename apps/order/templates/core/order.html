@@ -29,7 +29,7 @@
              <div class="order-form-inputs">
                 <input type="text" name="product_price" id="product_price" style="display:none;">
                 <input type="text" name="tag" id="tag" style="display:none;">
-                <input type="user" name="user" id="user" style="display:none;">
+                <input type="text" name="user_html" id="user_html" value="{{request.user}}" style="display: none;">
                <!-- PRODUCT -->
                <label for="product">Velg nettside</label>
                <br>
@@ -39,6 +39,8 @@
                   <a onclick="smallPack()">Nettbutikk/eCommerce <span>LITEN</span></a>
                   <a onclick="middlePack()">Nettbutikk/eCommerce <span>MIDDELS</span></a>
                   <a onclick="bigPack()">Nettbutikk/eCommerce <span>STOR</span></a>
+                  <a onclick="blogPrPack()">Blogg</a>
+                  <a onclick="persPrPack()">Personlig nettside</a>
                </div>
                <br>
                <br>

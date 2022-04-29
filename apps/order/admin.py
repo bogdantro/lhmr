@@ -13,7 +13,7 @@ from .models import Order
 class OrderAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'created_at']
     list_filter = ['created_at']
-    search_fields = ['name', 'id']
+    search_fields = ['name', 'id', 'user']
 
 admin.site.register(Order, OrderAdmin)
 

@@ -29,8 +29,8 @@
             <p id="completedOrdersP" onclick="completedOrders()">Fullførte</p>
         </div>  
             <div class="if-order-finished hide" id="ifOrderFinished">
-                {% for order in request.user.orders.all %}
-                {% if orderFinished %}  
+                {% for order in request.user.orders.all %}  
+                {% if order.is_finished %}  
                 <div class="you-got-orders" onclick="window.location.href='{% url 'orderinfo' order.id %}'">
                     <div class="order-row-one">
                         <h1 class="order-product">{{order.short_name}}</h1><p class="product-tag">{{order.tag}}</p>
@@ -47,44 +47,38 @@
                         </div>
                     </div>
                 </div> 
-                {% else %}
-                    <p class="no-finished">Du har ingen fullførte bestillinger enda...</p>
+                    {% if order.is_notconfirmed %}
+                        <p class="no-finished no-line">Du har ingen fullførte bestillinger enda...</p>
+                    {% endif %}
                 {% endif %}
                 {% empty %}
-                        <p class="no-finished no-line">Du har ingen fullførte bestillinger enda...</p>
+                    <p class="no-finished no-line">Du har ingen fullførte bestillinger enda...</p>
                 {% endfor %}
             </div>
             <div class="if-order-started" id="ifOrderStarted">
-                {% for order in request.user.orders.all %}
-                {% if orderConfirmed %}  
-                <div class="you-got-orders" onclick="window.location.href='{% url 'orderinfo' order.id %}'">
-                    <div class="order-row-one">
-                        <h1 class="order-product">{{order.short_name}}</h1><p class="product-tag">{{order.tag}}</p>
-                        <p class="order-price">{{ order.product_price | floatformat }}kr</p>
-                    </div>
-                    <div class="order-row-two">
-                        <div class="row-one">
-                            <p class="smalltext">Navn</p>
-                            <h1>{{order.name}}</h1>
+                {% for order in request.user.orders.all %}  
+                    {% if order.is_confirmed %}
+                    <div class="you-got-orders" onclick="window.location.href='{% url 'orderinfo' order.id %}'">
+                        <div class="order-row-one">
+                            <h1 class="order-product">{{order.short_name}}</h1><p class="product-tag">{{order.tag}}</p>
+                            <p class="order-price">{{ order.product_price | floatformat }}kr</p>
                         </div>
-                        <div class="row-two">
-                            <p class="smalltext">Bestillt</p>
-                            <h1>{{order.created_at | date:"d F Y"}}</h1>
+                        <div class="order-row-two">
+                            <div class="row-one">
+                                <p class="smalltext">Navn</p>
+                                <h1>{{order.name}}</h1>
+                            </div>
+                            <div class="row-two">
+                                <p class="smalltext">Bestillt</p>
+                                <h1>{{order.created_at | date:"d F Y"}}</h1>
+                            </div>
                         </div>
-                    </div>
-                </div>   
-                {% else %}
-                    {% if orderFinished %}  
-                    <p class="no-finished">Du har noen fullførte bestillinger</p>
-                    {% else %}
-                        <p class="no-finished">Bestillingene vil vises her</p>
-                        <p class="no-finished no-line">Hvis du har sendt in bestillingen, vil det ta litt tid før bestillingen vises her</p>
+                    </div>   
                     {% endif %} 
-                {% endif %} 
                     {% empty %}
                         <p class="no-finished">Bestillingene vil vises her</p>
-                        <p class="no-finished no-line">Hvis du har sendt in bestillingen, vil det ta litt tid før bestillingen vises her</p>
-                    {% endfor %}         
+                        <p class="no-finished no-line">Hvis du har sendt in bestillingen, vil det ta litt tid før bestillingen vises her</p>    
+                {% endfor %} 
                 </div>
                 <br>
                 <br>

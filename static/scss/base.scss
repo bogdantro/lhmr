@@ -537,6 +537,15 @@ $loader: rgb(80, 104, 180);
         font-size: 30px;
         font-weight: 800;
       }
+      .prices-longp{
+        transform: translateY(21px);
+        box-sizing: border-box;
+        color: rgb(90, 115, 134);
+        display: block;
+        font-family: Inter, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+      }
     }
     // CHOOSE PRODUCT
     .choose-type-of-product-flex{
@@ -551,57 +560,25 @@ $loader: rgb(80, 104, 180);
         pointer-events: none;
         opacity: 0;
         height: 0;
+        p{
+          border: none;
+          transition: .2s;
+        }
       }
       p{
-        opacity: 0.6;
+        opacity: 1;
         margin-inline: 18px;
         margin-block: 0;
         width: 80px;
         padding: 7px;
         text-align: center;
-        font-size: 15px;
-        transition: .2s;
+        font-size: 16px;
+        transition: 0;
         transition: background-color 0;
-        border-radius: 28px;
-        &.click{
-          padding: 18px;
-        }
-        &#pers{
-          &.active{
-            background-color: #0088F9;
-            color: white;
-            opacity: 1;
-          }
-          &.unactive{
-            background-color: transparent;
-            opacity: 0.6;
-            color: black;
-          }
-        }
-        &#blog{
-          &.active{
-            background-color: #0088F9;
-            color: white;
-            opacity: 1;
-          }
-          &.unactive{
-            background-color: transparent;
-            opacity: 0.6;
-            color: black;
-          }
-        }
+        border-radius: 0;
+        border-bottom: 3px solid #0088F9;
         &#eco{
           margin-left: 0;
-          &.active{
-            background-color: #0088F9;
-            color: white;
-            opacity: 1;
-          }
-          &.unactive{
-            background-color: transparent;
-            opacity: 0.6;
-            color: black;
-          }
         }
       }
     }
