@@ -1,0 +1,91 @@
+$loader: rgb(80, 104, 180);
+
+// STANDARD PHONE
+// ORDER
+.make-order{
+    // ORDER FORM
+    #makeOrder{
+        // ORDER HEADING
+        .order-not-login{
+          a{
+            font-size: 13px;
+            font-weight: 800;
+          }
+        }
+        .inputs-labels{
+          .product-input{
+            &.active{
+              border-bottom-left-radius: 0px;
+              border-bottom-right-radius: 0px;
+            }
+            &:active{
+              background: #d5edff9a;
+            }
+          }
+          .product-arrow{
+            transform: translateX(-25px) translateY(-2px);
+            font-size: 16px;
+            transition: .2s !important;
+            &.active{
+              transform: rotateX(180deg) translateX(-25px) translateY(-4px);
+              transform-origin: center center; 
+              color: #4287f5;
+            }
+          }
+          .product-dropdown{
+            position: relative;
+            width: 82%;
+            max-width: 500px;
+            height: auto;
+            background: white;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            display: none;
+            border: 2px solid #0089f915;
+            border-top: none;
+            a{
+              color: #082133;
+              display: inline-block;
+              text-decoration: none;
+              width: 100%;
+              font-weight: 600;
+              font-size: 14px;
+              padding: 19px 0;
+              padding-left: 5px;
+              cursor: pointer;
+              span{
+                color: #0088F9;
+                float: right;
+                font-size: 12px;
+                transform: translateY(2px) translateX(-10px);
+              }
+              &:hover{
+                background: #d5edff4b;
+              }
+              &:active{
+                background: #d5edff9a;
+              }
+              &::after{
+                  content: '';
+                  display: block;
+                  height: 1px;
+                  width: 100%;
+                  background: rgba(0, 0, 0, 0.17);
+                  transform: translateY(19px) translateX(0);
+                  position: absolute;
+                  left: 0;
+              }
+              &:nth-child(5){
+                border-radius: 4px;
+                &::after{
+                  display: none;
+                }
+              }
+            }
+            &.active{
+              display: block;
+            }
+          }
+        }
+      }
+}

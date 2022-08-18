@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/scss/pages/edit.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/scss/forms/form.css' %}" type="text/css">
+
+<div class="request-edit page-for-form">
+    <form action="" method="POST">
+       <h1 class="heading">Spørr om endringer</h1>
+        {% csrf_token %}
+        <br>
+        <div class="inputs-labels">
+           <label for="email">Epost</label>
+           <br>
+           <input type="email" name="email" value="{{ request.user.email }}" required oninvalid="this.setCustomValidity('Værsåsnill, skirv inn epost')" oninput="this.setCustomValidity('')">      
+           <br>
+           <br>
+           <label for="order_id">Bestilling ID</label>
+           <br>
+           <input type="number" name="order_id" min="0" value="0" required oninvalid="this.setCustomValidity('Værsåsnill, skirv inn bestilling ID')" oninput="this.setCustomValidity('')">      
+           <br>
+           <br>
+          </div>
+        <div class="form-actions">
+          <button type="submit" name="edit" value="edit">Send</button>
+        </div>
+      </form>
+   </div>
+{% endblock %}

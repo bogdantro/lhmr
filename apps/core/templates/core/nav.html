@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
-<div id="navbar">
+<div id="mobileNav">
     <!-- LOGO -->
     <div class="logo" id="logo" onclick="window.location.href='/'">
         <img class="logo1" src="{% static '/images/logo/logo1.png' %}" alt="logo1">
@@ -46,7 +46,7 @@
                                 <a href="/webiser-forum">Forum</a>
                             </div>
                             <div class="nav-link-parent">
-                                <a href="/sporr-om-endringer">Spørr om redigeringer på nettsiden</a>
+                                <a href="/sporr-om-endringer">Spørr om endringer på nettsiden</a>
                             </div>
                             <div class="nav-link-parent">
                                 <a href="/progammering-spraakene">Programering språkene</a>
@@ -63,13 +63,13 @@
                                 <a href="/blogg">Blogg</a>
                             </div>
                             <div class="nav-link-parent">
-                                <a href="">Sosiale medier</a>
+                                <a href="/sosiale-medier">Sosiale medier</a>
                             </div>
                             <div class="nav-link-parent">
-                                <a href="">Sektorer</a>
+                                <a href="/sektorer">Sektorer</a>
                             </div>
                             <div class="nav-link-parent">
-                                <a href="">Vår historie</a>
+                                <a href="vår-historie/">Vår historie</a>
                             </div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                             </div>
                         </div>
                     </div>
-                    <a onclick="">Vårt arbeid</a>
+                    <a href="/vårt-arbeid">Vårt arbeid</a>
                     <a href="/kontakter-oss">Kontakt oss</a>
                     <div class="sidebar-myaccount">
                         {% if request.user.is_authenticated %}
@@ -126,61 +126,69 @@
         </div>
     <!-- ORDER -->
     <a href="/bestill" class="order" id="makeOrder">Bestill</a>
-
-
-    <!-- DESKTOP MENU AND NAVBAR STARTR -->
-    <div class="desktop-menu" id="desktopMenu">
-        <ul class="desktop-menu-ul">
-            <li class="desktop-menu-li" id="desktopMenuLi">
-                    <div class="desktop-menu-prices">
-                        <a id="pricesToggle">Priser<i class="fas fa-chevron-down"></i>
-                            <div class="desktop-prices-dropdown-links" id="pricesDropdown">
-                                <a href="">Nettbutikk/eCommerce</a>
-                                <a href="">Blogg</a>
-                                <a href="">Personlig nettside</a>
-                                <a href="">Nettsider for firmaer</a>
-                                <a href="">Lag din egen</a>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="desktop-menu-help">
-                        <a id="helpToggle">Kundeservice<i class="fas fa-chevron-down"></i>
-                            <div class="desktop-help-dropdown-links" id="helpDropdown">
-                                <a href="/prossesen-av-bestillinger">Prossesen av bestillinger</a>
-                                <a href="/forum">Forum</a>
-                                <a href="/spørr-om-endringer">Spørr om redigeringer på nettsiden</a>
-                                <a href="/de-tre-frontend-språkene">Programering språkene</a>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="desktop-menu-account">
-                        <a id="accountToggle">Min bruker<i class="fas fa-chevron-down"></i>
-                            <div class="desktop-account-dropdown-links" id="accountDropdown">
-                                {% if request.user.is_authenticated %}
-                                <a onclick="myaccount()">Min bruker</a>
-                                <a id="logOut" href="{% url 'logout' %}">Logg ut</a>
-                                {% else %}
-                                <a href="/logg-inn">Logg inn</a>
-                                <a href="/lag-bruker">Lag bruker</a>
-                                {% endif %}
-                            </div>
-                        </a>
-                    </div>
-                <a onclick="">Vårt arbeid</a>          
-                    <div class="desktop-menu-about">
-                        <a id="aboutToggle">Hvem vi er<i class="fas fa-chevron-down"></i>
-                            <div class="desktop-about-dropdown-links" id="aboutDropdown">
-                                <a href="">Om oss</a>
-                                <a href="">Blogg</a>
-                                <a href="">Sosiale medier</a>
-                                <a href="">Sektorer</a>
-                                <a href="">Vår historie</a>
-                            </div>
-                        </a>
-                    </div>
-                <a>Kontakt oss</a>
-            </li>   
-        </ul>
-    </div>
 </div>
-  
+
+
+<div id="desNav">
+    <!-- MAKE THE NAV 90% WIDTH -->
+    <div class="desktop-nav-content">
+            <!-- LOGO -->
+        <div class="logo" id="logo" onclick="window.location.href='/'">
+            <img class="logo1" src="{% static '/images/logo/logo1.png' %}" alt="logo1">
+        </div>
+        <!-- MENU -->
+        <div class="menu">
+            <!-- hvem vi er -->
+            <div class="des-menu-about">
+                <a class="menu-main-links" id="aboutToggle">Hvem vi er<i class="fas fa-sort-down"></i></a>
+                <div id="aboutDrop" style="background: white;">
+                    <li class="drop-link"><a href="/om-webiser">Om oss</a></li>
+                    <li class="drop-link"><a href="/blogg">Blogg</a></li>
+                    <li class="drop-link"><a href="/sosiale-medier">Sosiale medier</a></li>
+                    <li class="drop-link"><a href="/sektorer">Sektorer</a></li>
+                    <li class="drop-link"><a href="/vår-historie" class="last">Vår historie</a></li>
+                </div>
+            </div>
+            <!-- kundeservice -->
+            <div class="des-menu-help">
+                <a class="menu-main-links" id="helpToggle">Kundeservice<i class="fas fa-sort-down"></i></a>
+                <div id="helpDrop" style="background: white;">
+                    <li class="drop-link"><a href="/prosessen-av-bestillinger">Prossesen av bestillinger</a></li>
+                    <li class="drop-link"><a href="/webiser-forum">Forum</a></li>
+                    <li class="drop-link"><a href="/sporr-om-endringer">Spørr om endringer på nettsiden</a></li>
+                    <li class="drop-link"><a href="/progammering-spraakene" class="last">Programering språkene</a></li>
+                </div>
+            </div>
+            <!-- priser -->
+            <div class="des-menu-prices">
+                <a class="menu-main-links" id="pricesToggle">Priser<i class="fas fa-sort-down"></i></a>
+                <div id="pricesDrop" style="background: white;">
+                    <li class="drop-link"><a onclick="ecoScroll()">Nettbutikk/eCommerce</a></li>
+                    <li class="drop-link"><a onclick="persScroll()">Personlig nettside</a></li>
+                    <li class="drop-link"><a onclick="blogScroll()">Blogg</a></li>
+                    <li class="drop-link"><a href="/ekstra---hosting">Hosting</a></li>
+                    <li class="drop-link"><a href="/ekstra---ekstra-sider" class="last">Ekstra sider</a></li>
+                </div>
+            </div>
+            <!-- vår arbeid -->
+            <a class="menu-main-links" href="/vårt-arbeid" style="cursor: pointer; text-decoration: none;">Vårt arbeid</a>
+            <!-- min bruker -->
+            <div class="des-menu-account">
+                <a class="menu-main-links">Min bruker<i class="fas fa-sort-down"></i></a>
+                <div id="accountDrop" style="background: white;">
+                    {% if request.user.is_authenticated %}
+                    <li class="drop-link"><a href="/min-bruker">Min bruker</a></li>
+                    <li class="drop-link"><a class="last" id="logOut" href="{% url 'logout' %}">Logg ut</a></li>
+                    {% else %}
+                    <li class="drop-link"><a href="/logg-inn">Logg inn</a></li>
+                    <li class="drop-link"><a href="/lag-bruker" class="last">Lag bruker</a></li>
+                    {% endif %}
+                </div>
+            </div>
+            <!-- kontakt oss -->
+            <a href="/kontakter-oss" class="menu-main-links" style="cursor: pointer; text-decoration: none;">Kontakt oss</a>
+            <!-- bestill -->
+            <a href="/bestill" class="menu-main-links order">Bestill</a>
+        </div>
+    </div>    
+</div>

@@ -1,0 +1,81 @@
+.page-for-form {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f786), color-stop(#f7f7f786), to(white));
+  background: linear-gradient(to bottom, #f7f7f786, #f7f7f786, white);
+  height: auto;
+  padding-top: 100px;
+  padding-bottom: 0;
+}
+
+.page-for-form form {
+  margin: 0 auto;
+  text-align: left;
+  width: 100%;
+  max-width: 700px;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  padding: 20px;
+  position: relative;
+}
+
+.page-for-form form .heading {
+  color: #183B56;
+  font-size: 24px;
+  font-weight: 600px;
+  margin-bottom: 25px;
+}
+
+.page-for-form form .inputs-labels label {
+  color: #183b56ad;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.page-for-form form .inputs-labels input, .page-for-form form .inputs-labels textarea {
+  border-radius: 4px;
+  padding: 5px;
+  border: 2px solid rgba(211, 211, 211, 0.411);
+  outline: none;
+  color: #183B56;
+  font-size: 13px;
+  width: 82%;
+  max-width: 500px;
+  font-weight: 600;
+  height: 45px;
+  cursor: pointer;
+}
+
+.page-for-form form .inputs-labels input:hover, .page-for-form form .inputs-labels textarea:hover {
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+}
+
+.page-for-form form .inputs-labels input:focus, .page-for-form form .inputs-labels textarea:focus {
+  cursor: unset;
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.page-for-form form .inputs-labels textarea {
+  height: 100px;
+  min-height: 70px;
+  max-height: 300px;
+}
+
+.page-for-form form .form-actions {
+  margin-top: 55px;
+}
+
+.page-for-form form .form-actions button {
+  border-radius: 4px;
+  width: 180px;
+  font-size: 16px;
+  padding: 12px 10px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  color: white;
+  outline: none;
+  border: none;
+  border: none;
+  background: #0082ec;
+}
+/*# sourceMappingURL=form.css.map */

@@ -1,0 +1,77 @@
+// standard phone
+.page-for-form{
+    background: linear-gradient(to bottom, #f7f7f786, #f7f7f786, white);
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 0;
+    // form
+    form{
+        margin: 0 auto;
+        text-align: left;
+        width: 100%;
+        max-width: 700px;
+        box-shadow: unset;
+        padding: 20px;
+        position: relative;
+        // heading
+        .heading{
+            color: #183B56;
+            font-size: 24px;
+            font-weight: 600px;
+            margin-bottom: 25px;
+        }
+        // inputs and labels
+        .inputs-labels{
+            // label
+            label{
+                color: #183b56ad;
+                font-size: 14px;
+                font-weight: 800;
+            }
+            // input
+            input, textarea{
+                border-radius: 4px;
+                padding: 5px;
+                border: 2px solid rgba(211, 211, 211, 0.411);
+                outline: none;
+                color: #183B56;
+                font-size: 13px;
+                width: 82%;
+                max-width: 500px;
+                font-weight: 600;
+                height: 45px;
+                cursor: pointer;
+                &:hover{
+                    filter: brightness(95%);
+                }
+                &:focus{
+                    cursor: unset;
+                    filter: brightness(100%);
+                }
+            }
+            // textarea
+            textarea{
+                height: 100px;
+                min-height: 70px;
+                max-height: 300px;
+            }
+        }
+        // form actions
+        .form-actions{
+            margin-top: 55px;
+            // button
+            button{
+              border-radius: 4px;
+              width: 180px;
+              font-size: 16px;
+              padding: 12px 10px;
+              transition: all .2s ease-in-out;
+              color: white;
+              outline: none;
+              border: none;
+              border: none;    
+              background: #0082ec;  
+            }
+        }
+    }
+}

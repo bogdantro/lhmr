@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/scss/pages/page.css' %}" type="text/css">
+
+<!-- COVER -->
+<div class="cover" id="cover">
+    <!-- ALL COVER CONENT -->
+    <div class="content">
+       <!-- COVER SECTION 1 -->
+       <div class="cover-section1">
+          <!-- ALL COVER TEXT -->
+          <div class="text">
+             <h1 class="cover-h1">Ønsker du en ekstra side?</h1>
+             <p class="cover-p">Alle prisene har inkl minst 3 sider: Om oss, Kontakt oss og handlekurv/checkout (forskjellige priser har forskjellige antall sider). Dersom du ønsker noen ekstra sider, så kan du skrive det under <i><strong>Har du noe å fortelle oss?</strong></i> når du skal sende inn bestillingen. Der må du skrive hvor mange ekstra sider du vil ha, og hva de skal være. Eks: Side 1 = Herre klær / Side 2 = Gaming utstyr</p>
+          </div>
+       </div>
+    </div>
+ </div>
+{% endblock %}

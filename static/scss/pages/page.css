@@ -1,0 +1,35 @@
+.cover {
+  padding-top: 34px;
+  height: auto;
+  padding-block: 100px;
+  text-align: center;
+}
+
+.cover .content {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+@media only screen and (min-device-width: 1145px) {
+  .cover {
+    height: auto;
+  }
+  .cover .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    padding-block: 80px;
+  }
+  .cover .content .text .cover-h1 {
+    font-size: 46px;
+  }
+  .cover .content .text .cover-p {
+    font-size: 18px;
+  }
+  .cover .content .cover-section1 {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=page.css.map */

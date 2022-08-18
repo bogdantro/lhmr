@@ -1,0 +1,32 @@
+// standard phone
+.cover{
+    padding-top: 34px;
+    height: auto;
+    padding-block: 100px;
+    text-align: center;
+    .content{
+        transform: translateY(0);
+    }
+}
+// desktop
+@media only screen and (min-device-width: 1145px) {
+    .cover{
+        height: auto;
+        .content{
+            display: flex;
+            transform: translateY(0);
+            padding-block: 80px;
+            .text{
+                .cover-h1{
+                  font-size: 46px;
+                }
+                .cover-p{
+                    font-size: 18px;
+                }
+            }
+            .cover-section1{
+            width: 100%;
+            }
+        }
+    }
+}

@@ -57,36 +57,22 @@ def hjemme(request,  backend='django.contrib.auth.backends.ModelBackend'):
 
     return render(request, 'core/home.html', context)
 
+# Pages
+    # About
+        # About
 def about(request):
-    return render(request, 'pages/about.html')
+    return render(request, 'pages/about/about.html')
+        # Socials
+def socials(request):
+    return render(request, 'pages/about/socials.html')
+        # Sectors
+def sectors(request):
+    return render(request, 'pages/about/sectors.html')
+        # Our story
+def our_story(request):
+    return render(request, 'pages/about/our-story.html')
 
-def email_success(request):
-    return render(request, 'pages/email.html')
-
-def request_edit(request):
-    if request.method=='POST' and 'edit' in request.POST:
-        order_id = request.POST.get('order_id')
-        email = request.POST.get('email')
-
-        data = {
-            'order_id': order_id,
-            'email': email,
-        }
-        message = dedent('''
-        Fra: {}
-
-        ---------------------------------
-        Bestilling ID: {}
-        ---------------------------------
-        SJEKK BESTILLING ID I BACKEND
-
-        ''').format(data['email'], data['order_id'] )
-        send_mail('Spørr om endringer', message, '', ['sabertoothtri@gmail.com'])
-        return redirect('/email-success')
-
-    return render(request, 'pages/edit.html')
-
-# KUNDESERVICE PAGES
+    # Kundeservice
 def contact(request):
 
     # if request.method=='POST' and 'contact' in request.POST:
@@ -110,13 +96,53 @@ def contact(request):
     #     return redirect('/email-success')
 
     return render(request, 'pages/kundeservice/contact.html')   
-
+        # Process
 def proccess(request):
     return render(request, 'pages/kundeservice/proccess.html')   
-     
+        # Forum
 def forum(request):
     return render(request, 'pages/kundeservice/forum.html')
-
+    # Frontend
 def frontend(request):
     return render(request, 'pages/kundeservice/frontend.html')   
+    # Request edit
+def request_edit(request):
+    if request.method=='POST' and 'edit' in request.POST:
+        order_id = request.POST.get('order_id')
+        email = request.POST.get('email')
 
+        data = {
+            'order_id': order_id,
+            'email': email,
+        }
+        message = dedent('''
+        Fra: {}
+
+        ---------------------------------
+        Bestilling ID: {}
+        ---------------------------------
+        SJEKK BESTILLING ID I BACKEND
+
+        ''').format(data['email'], data['order_id'] )
+        send_mail('Spørr om endringer', message, '', ['sabertoothtri@gmail.com'])
+        return redirect('/email-success')
+
+    return render(request, 'pages/kundeservice/edit.html')
+
+    # Our work
+        # Our work
+def our_work(request):
+    return render(request, 'pages/our work/our-work.html')   
+
+    # Emai
+        # Contact email sucess
+def email_success(request):
+    return render(request, 'pages/email.html')
+
+    # Prices
+        # Hosting
+def hosting(request):
+    return render(request, 'pages/prices/hosting/hosting.html')
+        # Extra page
+def extra_page(request):
+    return render(request, 'pages/prices/extra page/extra-page.html')

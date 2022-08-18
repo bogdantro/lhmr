@@ -2,45 +2,20 @@
 {% load static %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static '/scss/store/success.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/scss/store/order/success.css' %}" type="text/css">
 <script rel="stylesheet" src="{% static '/js/success.js' %}" type="text/javascript"></script>
 
-
-
-<div class="load-wrapp" id="orderSentLoader">
-  <div class="load-2">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
-</div>
-
-<div class="cover">
-    <div class="cover-desktop">
-       <div class="cover-text">
-         <h1>Takk for din bestilling!</h1>
-         <p id="coverText2">Vi har motat bestillingen din, og våres designere vil svare deg så fort som mulig</p>
-       </div>
-       <div class="img">
-          <img src="{% static '/images/covers/cover-2.png' %}" alt="cover-img">
-      </div>
-    </div>
-    <div class="cover-mobile">
-       <div class="cover-text">
-         <h1>Takk for din bestilling!</h1>
-         <p id="coverText2">Vi har motat bestillingen din, og våres designere vil svare deg så fort som mulig</p>
-       </div>
-       <div class="img">
-          <img src="{% static '/images/covers/cover-2.png' %}" alt="cover-img">
-      </div>
-    </div>
-  </div>
-
-
-
+<!-- order succes -->
 <div class="order-success">
-    <h1 class="heading">Viktig informasjon</h1>
-    <p class="info">Betalingen vil foregå når designen er ferdig plannlagt, og da du har bekrefta bestillingen. Betaling foregår via vipps eller paypal. Du vil mota en mail fra oss med informasjon om hva som skal skje videre</p>
-    <a href="/">Tilbake til hjemmesiden</a>
+  <!-- content -->
+  <div class="content">
+    <!-- text -->
+    <div class="text">
+      <h1>Tusen takk for bestillingen!</h1>
+      <p>Vi har motatt den, og hvis bestillingen har blitt konfirmert, så kan du se den under <a href="/min-bruker">min bruker</a></p>
+      <button onclick="window.location.href='/'" class="primary">Til hjemmesiden</button>
+    </div>
+  </div>
 </div>
+
 {% endblock %}

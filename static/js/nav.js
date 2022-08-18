@@ -1,5 +1,5 @@
 window.addEventListener("scroll", function(){
-  const navbar = document.getElementById('navbar');
+  const navbar = document.getElementById('mobileNav');
   navbar.classList.toggle("sticky", window.scrollY > 1)
 })
 
@@ -8,7 +8,7 @@ window.addEventListener("scroll", function(){
 // MENU
 function menu(){
   const sidebar = document.getElementById('sidebar');
-  const navbar = document.getElementById('navbar');
+  const navbar = document.getElementById('mobileNav');
   const hamburger = document.getElementById('hamburger');
   const backToTop = document.getElementById('backToTop');
 
@@ -38,7 +38,7 @@ function menu(){
     prices.classList.remove('active')
     about.classList.remove('active')
     help.classList.remove('active')
-    pricesToggle.classList.add('click')
+    pricesToggle.classList.remove('click')
     aboutToggle.classList.remove('click')
     helpToggle.classList.remove('click')
     accountToggle.classList.remove('click')
@@ -141,10 +141,11 @@ function help(){
 
   }
 }
+// price scroll for mobile
 function pricesScroll(){
   const sidebar = document.getElementById('sidebar');
   const logo = document.getElementById('logo');
-  const navbar = document.getElementById('navbar');
+  const navbar = document.getElementById('mobileNav');
   const hamburger = document.getElementById('hamburger');
   const sidebarLi = document.getElementById('sidebarLi');
 
@@ -160,5 +161,12 @@ function pricesScroll(){
 
 
 }
+// price scroll for desktop
+function desPricesScroll(){
+  setTimeout(function(){
+    window.location.href='#prices';
+  }, 50);
 
-/////// DESKTOP JAVASCRIPT
+
+}
+

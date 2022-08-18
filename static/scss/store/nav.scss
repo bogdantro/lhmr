@@ -1,8 +1,8 @@
 // STANDARD PHONE
-.desktop-menu{
+#desNav{
     display: none;
   }
-#navbar{
+#mobileNav{
     // NAVBAR CSS
     background: transparent;
     z-index: 100;
@@ -377,17 +377,17 @@
         position: absolute;
         right: 16px;
         cursor: pointer;
-        color: black;
-        padding: 7px 2px;
-        width: 70px;
+        padding: 13px 9px;
+        width: 75px;
         text-align: center;
         border-radius: 15px;
         transition: .2s;
         font-size: 13px;
-        border-radius: 6px;
         text-decoration: none;
-        background: white;
-        border: 2px solid black;
+        background: #0088F9;
+        color: white;
+        letter-spacing: .3px;
+        border-radius: .4em;
         &:hover{
             filter: brightness(85%);
         }
@@ -401,176 +401,197 @@
 }
 
 // // SMALL DESKTOP
-@media only screen and (min-device-width: 1024px) {
+@media only screen and (min-device-width: 1140px) {
     // DESKTOP NAVBAR START
-    #navbar{
-        // NAVBAR DESKTOP STICKY
-        &.sticky{
-            .desktop-menu{
-                .desktop-menu-ul{
-                    .desktop-menu-li{
-                        a{
-                            color: black;
-                        }
-                    }
+    #mobileNav{
+        display: none;
+    }
+    #desNav{
+        display: unset;
+        background: transparent;
+        z-index: 100;
+        width: 100%;
+        max-width: 1150px;
+        height: 65px;
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0px;
+        transition: .2s ease-in-out;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.08);
+        background: #ffffffec;
+        .desktop-nav-content{
+            position: relative;
+            width: 87%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            left: 50%;
+            transform: translateX(-50%);    
+            // LOGO
+            .logo{
+                margin-right: auto;
+                transition: .8s;
+                transform: translateY(2px);
+                cursor: pointer;
+                img{
+                    height: auto;
+                    width: 120px;
                 }
             }
-        }
-        // SIDEBAR DISPLAY NONE ON DESKTOP
-        .sidebar{
-            display: none;
-        }
-        // HAMBURGER MENU DISPLAY NONE ON DESKTOP
-        .hamburger{
-            display: none;
-            background: red;
-        }
-        // ORDER BUTTON DESKTOP
-        .order{
-            right: 700px;
-            font-size: 12px;
-        }
-        // LOGO DESKTOP
-        .logo{
-            h1{
-                font-size: 30px;
-            }
-        }
-        // DESKTOP MENU
-        .desktop-menu{
-            display: block;
-            background: transparent;
-            height: auto;
-            width: 100%;
-            position: absolute;
-            right: 20px;
-            top: 16px;
-            transition: .7s;
-            text-align: right;
-            .desktop-menu-ul{
-                position: relative;
-                width: 100%;
-                .desktop-menu-li{
-                    list-style: none;
-                    a{
-                        display: inline-block;
-                        color: black;
-                        text-decoration: none;
-                        width: auto;
-                        font-size: 14px;
-                        padding: 5px;
-                        transition: .2s;
-                        margin: auto 10px;
+            .menu{
+                width: max-content;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .menu-main-links{
+                    color: #183b56;
+                    font-size: 16px;
+                    padding-inline: 23px;
+                    padding-block: 26px;
+                    cursor: default;
+                    transition: .1s;
+                    &:hover{
+                        color: #0088F9;
+                    }
+                    &.order{
+                        margin-right: 0;
                         cursor: pointer;
-                        i{
-                            transform: translateX(10px);
-                            font-size: 14px;
-                            transition: .2s !important;
+                        background: #0088F9;
+                        color: white;
+                        border-radius: .5em;
+                        padding-block: 18px;
+                        text-decoration: none;
+                        &:hover{
+                            filter: brightness(80%);
                         }
                     }
-                    // DESKTOP PRICES MENU HOVER
-                    .desktop-menu-prices{
-                        display: inline-block;
-                        .desktop-prices-dropdown-links{
-                            display: none;
-                            width: 250px;
-                            position: absolute;
-                            transform: translateX(-60px);
-                            background: rgb(247, 247, 247);
-                            border-radius: 7px;
-                            text-align: left;
-                            a{
-                                color: black;
-                                font-size: 13px;
-                                opacity: 0.7;
-                                width: 100%;
-                                display: inline-block;
-                                text-decoration: underline;
-                            }
-                        }
+                    i{
+                        transform: translateX(8px) translateY(-1px);
+                    }
+                }
+                .drop-link{
+                    list-style: none;
+                    cursor: pointer;
+                    // background: #d5edff9a;
+                    width: max-content;
+                    padding: 14px;
+                    a{
+                        margin: 0;
+                        text-decoration: none;
+                        color: #183b56;
+                        font-size: 16px;
+                        border-bottom: 1px solid lightgray;
+                        padding-top: 14px;
+                        padding-bottom: 15px;
                         &:hover{
-                            .desktop-prices-dropdown-links{
-                                display: block;
-                            }
+                            color: #0088F9;
+                        }
+                        &.last{
+                            border: none;
+                        }
+
+                    }
+                }
+                // prices dropdown
+                .des-menu-prices{
+                    position: relative;
+                    width: auto;
+                    &:hover{
+                        #pricesDrop{
+                            opacity: 1;
+                            pointer-events: visible;
                         }
                     }
-                    // DESKTOP HELP MENU HOVER
-                    .desktop-menu-help{
+                    #pricesDrop{
+                        width: max-content;
+                        height: auto;
+                        position: absolute;
+                        top: 45px;
+                        left: 50%;
+                        transform: translateX(-50%);
                         display: inline-block;
-                        .desktop-help-dropdown-links{
-                            display: none;
-                            width: 250px;
-                            position: absolute;
-                            transform: translateX(-60px);
-                            background: rgb(247, 247, 247);
-                            border-radius: 7px;
-                            text-align: left;
-                            a{
-                                color: black;
-                                font-size: 13px;
-                                opacity: 0.7;
-                                width: 100%;
-                                display: inline-block;
-                                text-decoration: underline;
-                            }
-                        }
-                        &:hover{
-                            .desktop-help-dropdown-links{
-                                display: block;
-                            }
+                        border: 2px solid rgb(228, 228, 228);
+                        border-top: none;
+                        transition: .3s;
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                }
+                // about dropdown
+                .des-menu-about{
+                    position: relative;
+                    width: auto;
+                    &:hover{
+                        #aboutDrop{
+                            opacity: 1;
+                            pointer-events: visible;
                         }
                     }
-                    // DESKTOP ACCOUNT MENU HOVER
-                    .desktop-menu-account{
+                    #aboutDrop{
+                        width: max-content;
+                        height: auto;
+                        position: absolute;
+                        top: 45px;
+                        left: 50%;
+                        transform: translateX(-50%);
                         display: inline-block;
-                        .desktop-account-dropdown-links{
-                            display: none;
-                            width: 250px;
-                            position: absolute;
-                            transform: translateX(-60px);
-                            background: rgb(247, 247, 247);
-                            border-radius: 7px;
-                            text-align: left;
-                            a{
-                                color: black;
-                                font-size: 13px;
-                                opacity: 0.7;
-                                width: 100%;
-                                display: inline-block;
-                                text-decoration: underline;
-                            }
-                        }
-                        &:hover{
-                            .desktop-account-dropdown-links{
-                                display: block;
-                            }
+                        border: 2px solid rgb(228, 228, 228);
+                        border-top: none;
+                        transition: .3s;
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                }
+                // account dropdown
+                .des-menu-account{
+                    position: relative;
+                    width: auto;
+                    &:hover{
+                        #accountDrop{
+                            opacity: 1;
+                            pointer-events: visible;
                         }
                     }
-                    // DESKTOP ABOUT MENU HOVER
-                    .desktop-menu-about{
+                    #accountDrop{
+                        width: max-content;
+                        height: auto;
+                        position: absolute;
+                        top: 45px;
+                        left: 50%;
+                        transform: translateX(-50%);
                         display: inline-block;
-                        .desktop-about-dropdown-links{
-                            display: none;
-                            width: 250px;
-                            position: absolute;
-                            transform: translateX(-60px);
-                            background: rgb(247, 247, 247);
-                            border-radius: 7px;
-                            text-align: left;
-                            a{
-                                color: black;
-                                font-size: 13px;
-                                opacity: 0.7;
-                                width: 100%;
-                                display: inline-block;
-                                text-decoration: underline;
-                            }
+                        border: 2px solid rgb(228, 228, 228);
+                        border-top: none;
+                        transition: .3s;
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                }
+                // help dropdown
+                .des-menu-help{
+                    position: relative;
+                    width: auto;
+                    &:hover{
+                        #helpDrop{
+                            opacity: 1;
+                            pointer-events: visible;
                         }
-                        &:hover{
-                            .desktop-about-dropdown-links{
-                                display: block;
-                            }
-                        }
+                    }
+                    #helpDrop{
+                        width: max-content;
+                        height: auto;
+                        position: absolute;
+                        top: 45px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: inline-block;
+                        border: 2px solid rgb(228, 228, 228);
+                        border-top: none;
+                        transition: .3s;
+                        opacity: 0;
+                        pointer-events: none;
                     }
                 }
             }

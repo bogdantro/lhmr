@@ -3,7 +3,7 @@
 
 
 {% block content %}
-<link rel="stylesheet" href="{% static '/scss/base.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/scss/store/base.css' %}" type="text/css">
 <script rel="stylesheet" src="{% static '/js/home.js' %}" type="text/javascript"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,8 +49,10 @@
       </div>
    </div>
 </div>
+<br>
+<br>
 <!-- INTRO -->
-<div class="intro">
+<div class="intro section">
    <div class="content">
       <div class="card">
          <h1>15+</h1>
@@ -71,7 +73,7 @@
    </div>
 </div>
 <!-- WHY WEBISER -->
-<div class="why-webiser">
+<div class="why-webiser section">
    <!-- HALF SQUARE -->
    <div class="content">
       <!-- WHY WEBISER TEXT -->
@@ -87,74 +89,73 @@
       </div>
    </div>
 </div>
-<div class="border-div why-sell">
-   <div class="line"></div>
-</div>
 <!-- SELL -->
-<div class="sell-anything">
+<div class="sell-anything section">
    <!-- SELL CONTENT -->
    <div class="content">
       <!-- SELL TEXT -->
       <div class="text">
          <h1>Selg (nesten) alt du kan tenke deg om...</h1>
       </div>
-      <!-- EBOOKS -->
-      <div class="card">
-         <div class="card-content" onclick="pricesScroll()">
-            <div class="icon">
-               <i class="fa-solid fa-book"></i>
-            </div>
-            <div class="card-text">
-               <h1>eBøker</h1>
-               <p>Se de digitale og fysiske bøkene dine fly fra hyllene som aldri før!</p>
-            </div>
-         </div>
-      </div>
-      <!-- ONLINE COURSE -->
-      <div class="card">
-         <div class="card-content" onclick="pricesScroll()">
-            <div class="icon">
-               <i class="fa-solid fa-chalkboard-user"></i>
-            </div>
-            <div class="card-text">
-               <h1>Nettkurs</h1>
-               <p>Tiltrekk flere studenter med en enklere måte å kjøpe, oppgradere og få tilgang til innholdet ditt på</p>
+      <div class="flex">
+         <!-- EBOOKS -->
+         <div class="card">
+            <div class="card-content" onclick="desPricesScroll()">
+               <div class="icon">
+                  <i class="fa-solid fa-book"></i>
+               </div>
+               <div class="card-text">
+                  <h1>eBøker</h1>
+                  <p>Se de digitale og fysiske bøkene dine fly fra hyllene som aldri før!</p>
+               </div>
             </div>
          </div>
-      </div>
-      <!-- ECOMMERCE -->
-      <div class="card">
-         <div class="card-content" onclick="pricesScroll()">
-            <div class="icon">
-               <i class="fa-solid fa-shop"></i>
-            </div>
-            <div class="card-text">
-               <h1>eCommerce</h1>
-               <p>Selg produkter på en enklere måte, og få inn flere salg</p>
-            </div>
-         </div>
-      </div>
-      <!-- COACHING -->
-      <div class="card">
-         <div class="card-content" onclick="pricesScroll()">
-            <div class="icon">
-               <i class="fa-solid fa-headset"></i>
-            </div>
-            <div class="card-text">
-               <h1>Coaching</h1>
-               <p>Alt du trenger for å bli #1 coach i din bransje</p>
+         <!-- ONLINE COURSE -->
+         <div class="card">
+            <div class="card-content" onclick="desPricesScroll()">
+               <div class="icon">
+                  <i class="fa-solid fa-chalkboard-user"></i>
+               </div>
+               <div class="card-text">
+                  <h1>Nettkurs</h1>
+                  <p>Tiltrekk flere studenter med en enklere måte å kjøpe, oppgradere og få tilgang til innholdet ditt på</p>
+               </div>
             </div>
          </div>
-      </div>
-      <!-- AND MUCH MORE -->
-      <div class="card">
-         <div class="card-content" onclick="pricesScroll()">
-            <div class="icon">
-               <i class="fa-solid fa-shuttle-space"></i>
+         <!-- ECOMMERCE -->
+         <div class="card">
+            <div class="card-content" onclick="desPricesScroll()">
+               <div class="icon">
+                  <i class="fa-solid fa-shop"></i>
+               </div>
+               <div class="card-text">
+                  <h1>eCommerce</h1>
+                  <p>Selg produkter på en enklere måte, og få inn flere salg</p>
+               </div>
             </div>
-            <div class="card-text">
-               <h1>... og mye mer</h1>
-               <p>Selg nesten alle typer produkter du kan tenke deg.</p>
+         </div>
+         <!-- COACHING -->
+         <div class="card">
+            <div class="card-content" onclick="desPricesScroll()">
+               <div class="icon">
+                  <i class="fa-solid fa-headset"></i>
+               </div>
+               <div class="card-text">
+                  <h1>Coaching</h1>
+                  <p>Alt du trenger for å bli #1 coach i din bransje</p>
+               </div>
+            </div>
+         </div>
+         <!-- AND MUCH MORE -->
+         <div class="card">
+            <div class="card-content" onclick="desPricesScroll()">
+               <div class="icon">
+                  <i class="fa-solid fa-shuttle-space"></i>
+               </div>
+               <div class="card-text">
+                  <h1>... og mye mer</h1>
+                  <p>Selg nesten alle typer produkter du kan tenke deg.</p>
+               </div>
             </div>
          </div>
       </div>
@@ -197,11 +198,8 @@
       </div>
    </div>
 </div>
-<div class="border-div sell-proccess">
-   <div class="line"></div>
-</div>
 <!-- PROCCESS -->
-<div class="proccess">
+<div class="proccess section">
    <!-- PROCCESS CONTENT -->
    <div class="content">
       <!-- PROCCESS MAIN TEXTS -->
@@ -256,11 +254,8 @@
 
    </div>
 </div>
-<div class="border-div proccess-conversions">
-   <div class="line"></div>
-</div>
 <!-- BOOST CONVERSIONS -->
-<div class="boost-conversions">
+<div class="boost-conversions section">
    <!-- BOOST CONTENT -->
    <div class="content">
       <!-- BOOST IMAGE -->
@@ -306,11 +301,10 @@
       </div>
    </div>
 </div>
-<div class="border-div conversions-quote">
-   <div class="line"></div>
-</div>
 <!-- CUSTOMER QUOTE -->
-<div class="customer-quote">
+<div class="customer-quote section">
+   <!-- logo -->
+   <img class="logo1" src="{% static '/images/logo/logo1.png' %}" alt="logo1">
    <!-- SLIDER -->
    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="transition: .3s;">
       <ol class="carousel-indicators">
@@ -381,15 +375,8 @@
       </a> -->
     </div>
 </div>
-
-
-<div class="border-div quote-prices">
-   <div class="line"></div>
-</div>
-
-
 <!-- PRICES -->
-<div class="prices" id="prices">
+<div class="prices section" id="prices">
    <!-- PRICES CONTENT -->
    <div class="content">
       <!-- PRICES IMAGE -->
@@ -459,7 +446,7 @@
                          <div class="icon">
                             <i class="fa-solid fa-check"></i>
                          </div>
-                         <p>2 ekstra sider</p>
+                         <p>3 sider</p>
                       </div>
                       <!-- PRODUCT BENEFITS -->
                       <div class="flex">
@@ -483,7 +470,7 @@
                          <div class="icon">
                             <i class="fa-solid fa-check"></i>
                          </div>
-                         <p>Hosting til 60kr/m</p>
+                         <p>Hosting til 240kr/m</p>
                       </div>
                    </div>
                 {% endif %}     
@@ -528,7 +515,7 @@
                          <div class="icon">
                             <i class="fa-solid fa-check"></i>
                          </div>
-                         <p>4 ekstra sider</p>
+                         <p>4 sider</p>
                       </div>
                       <!-- PRODUCT BENEFITS -->
                       <div class="flex">
@@ -552,7 +539,7 @@
                          <div class="icon">
                             <i class="fa-solid fa-check"></i>
                          </div>
-                         <p>Hosting til 60kr/m</p>
+                         <p>Hosting til 240kr/m</p>
                       </div>
                    </div>
                 {% endif %}     
@@ -598,7 +585,7 @@
                            <div class="icon">
                               <i class="fa-solid fa-check"></i>
                            </div>
-                           <p>2 ekstra sider</p>
+                           <p>5 sider</p>
                         </div>
                         <!-- PRODUCT BENEFITS -->
                         <div class="flex">
@@ -614,7 +601,7 @@
                            <div class="icon">
                               <i class="fa-solid fa-check"></i>
                            </div>
-                           <p>10-18 dager levering</p>
+                           <p>30-65 dager levering</p>
                         </div>
                         <!-- PRODUCT BENEFITS -->
                         <div class="flex">
@@ -646,7 +633,7 @@
                            <div class="icon">
                               <i class="fa-solid fa-check"></i>
                            </div>
-                           <p>Hosting til 60kr/m</p>
+                           <p>Hosting til 240kr/m</p>
                         </div>
                         <!-- PRODUCT BENEFITS -->
                         <div class="flex">
@@ -710,7 +697,7 @@
                         <div class="icon">
                            <i class="fa-solid fa-check"></i>
                         </div>
-                        <p>4 ekstra sider</p>
+                        <p>6 sider</p>
                      </div>
                      <!-- PRODUCT BENEFITS -->
                      <div class="flex">
@@ -726,7 +713,7 @@
                         <div class="icon">
                            <i class="fa-solid fa-check"></i>
                         </div>
-                        <p>10-18 dager levering</p>
+                        <p>35-70 dager levering</p>
                      </div>
                      <!-- PRODUCT BENEFITS -->
                      <div class="flex">
@@ -758,7 +745,7 @@
                         <div class="icon">
                            <i class="fa-solid fa-check"></i>
                         </div>
-                        <p>Hosting til 60kr/m</p>
+                        <p>Hosting til 240kr/m</p>
                      </div>
                      <!-- PRODUCT BENEFITS -->
                      <div class="flex">
@@ -819,7 +806,7 @@
                      <div class="icon">
                         <i class="fa-solid fa-check"></i>
                      </div>
-                     <p>7 ekstra sider</p>
+                     <p>7 sider</p>
                   </div>
                   <!-- PRODUCT BENEFITS -->
                   <div class="flex">
@@ -835,7 +822,7 @@
                      <div class="icon">
                         <i class="fa-solid fa-check"></i>
                      </div>
-                     <p>10-26 dager levering</p>
+                     <p>45-80 dager levering</p>
                   </div>
                   <!-- PRODUCT BENEFITS -->
                   <div class="flex">
@@ -867,7 +854,7 @@
                      <div class="icon">
                         <i class="fa-solid fa-check"></i>
                      </div>
-                     <p>Hosting til 60kr/m</p>
+                     <p>Hosting til 240kr/m</p>
                   </div>
                   <!-- PRODUCT BENEFITS -->
                   <div class="flex">

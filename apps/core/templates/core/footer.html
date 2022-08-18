@@ -18,10 +18,11 @@
 <div id="footer">
     <div id="newsletter">
         <h1>Bli medlem</h1>
+        <p class="paragraph">Få nyheter om kampanjer, rabatter og mye mer! Hmmmm vi spammer ikke altså</p>
         <form v-on:submit.prevent="onSubmit">
             <div class="content">
                 <input type="email" v-model="email" name="email" class="input" placeholder="Din epost">
-                <button>Send</button>
+                <button class="primary">Bli medlem</button>
             </div>
         </form>
         <div id="footerNewsLetterAlert" v-if="showSuccess">
@@ -29,6 +30,30 @@
         </div>
     </div>
     <div class="footer-section">
+        <ul class="footer-ul">
+            <h1>Kundeservice</h1>
+            <li class="footer-li">
+                <a href="/">Sektorer</a>
+                <a href="/">Blogg</a>
+                <a href="/">Om oss</a>
+                <a href="/">Prosjekter</a>
+                <a href="/">Forum</a>
+                <a href="/">Forum</a>
+                <a href="/">Forum</a>
+            </li>
+        </ul>
+        <ul class="footer-ul">
+            <h1>Raske Linker</h1>
+            <li class="footer-li">
+                <a href="/">Sektorer</a>
+                <a href="/">Blogg</a>
+                <a href="/">Om oss</a>
+                <a href="/">Prosjekter</a>
+                <a href="/">Forum</a>
+                <a href="/">Forum</a>
+                <a href="/">Forum</a>
+            </li>
+        </ul>
         <ul class="footer-ul">
             <h1>Raske Linker</h1>
             <li class="footer-li">
@@ -55,13 +80,13 @@
         </ul>
     </div>
     <div class="social-icons">
-        <h1>Finn oss her</h1>
+        <div class="logo" id="logo" onclick="window.location.href='/'">
+            <img class="logo1" src="{% static '/images/logo/logo1.png' %}" alt="logo1">
+        </div>    
         <div class="icons">
             <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-instagram"></i>
             <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-tiktok"></i>
             <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-facebook"></i>
-            <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fa-solid fa-blog"></i>
-            <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fa-brands fa-twitter"></i>
         </div>
     </div>
     <div class="copyright">

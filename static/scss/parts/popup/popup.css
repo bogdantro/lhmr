@@ -1,0 +1,211 @@
+.black-overlay {
+  background: rgba(0, 0, 0, 0.562);
+  width: 100%;
+  height: 10000000000000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+}
+
+.black-overlay.show {
+  display: block;
+}
+
+#popup {
+  opacity: 1;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  height: auto;
+  padding-block: 25px;
+  background: #fafafa;
+  -webkit-transition: .5s;
+  transition: .5s;
+  pointer-events: visible;
+  z-index: 100000000000000000000;
+  margin: 0 auto;
+  max-width: 1150px;
+}
+
+#popup.hidden {
+  bottom: -200px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#popup .content {
+  width: 100%;
+  padding: 30px;
+}
+
+#popup .content .logo {
+  -webkit-transition: .8s;
+  transition: .8s;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  z-index: 1000;
+}
+
+#popup .content .logo img {
+  height: auto;
+  width: 60px;
+}
+
+#popup .content .text {
+  margin-top: 20px;
+  text-align: left;
+}
+
+#popup .content .text h1 {
+  color: #183B56;
+  text-shadow: 1px 0 #183B56;
+  letter-spacing: 1px;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+#popup .content .text p {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #5a7386;
+  display: block;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  height: auto;
+  line-height: 27px;
+  -webkit-margin-after: 32px;
+          margin-block-end: 32px;
+  -webkit-margin-before: 0px;
+          margin-block-start: 0px;
+  margin-bottom: 0;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+}
+
+#popup .content .popup-actions {
+  margin-top: 25px;
+}
+
+#popup .content .popup-actions a {
+  border-radius: 4px;
+  width: 80px;
+  padding: 7px;
+  text-align: center;
+  font-size: 15px;
+  background-color: #0088F9;
+  color: white;
+  cursor: pointer;
+}
+
+#popup .content .popup-actions a:hover {
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+}
+
+@media only screen and (min-device-width: 1145px) {
+  #popup {
+    opacity: 1;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    padding-block: 25px;
+    background: #fafafa;
+    -webkit-transition: .5s;
+    transition: .5s;
+    pointer-events: visible;
+    z-index: 100000000000000000000;
+    margin: 0 auto;
+    max-width: 1150px;
+  }
+  #popup.hidden {
+    bottom: -200px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #popup .content {
+    width: 100%;
+    padding: 30px;
+  }
+  #popup .content .logo {
+    -webkit-transition: .8s;
+    transition: .8s;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    z-index: 1000;
+  }
+  #popup .content .logo img {
+    height: auto;
+    width: 80px;
+  }
+  #popup .content .text {
+    margin-top: 20px;
+    text-align: left;
+  }
+  #popup .content .text h1 {
+    color: #183B56;
+    text-shadow: 1px 0 #183B56;
+    letter-spacing: 1px;
+    font-size: 30px;
+    font-weight: 800;
+  }
+  #popup .content .text p {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: #5a7386;
+    display: block;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: auto;
+    line-height: 27px;
+    -webkit-margin-after: 32px;
+            margin-block-end: 32px;
+    -webkit-margin-before: 0px;
+            margin-block-start: 0px;
+    margin-bottom: 0;
+    -webkit-margin-end: 0px;
+            margin-inline-end: 0px;
+    -webkit-margin-start: 0px;
+            margin-inline-start: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 20px;
+  }
+  #popup .content .popup-actions {
+    margin-top: 40px;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  #popup .content .popup-actions a {
+    border-radius: 4px;
+    width: 80px;
+    padding: 15px;
+    text-align: center;
+    font-size: 17px;
+    background-color: #0088F9;
+    color: white;
+    cursor: pointer;
+  }
+  #popup .content .popup-actions a:hover {
+    -webkit-filter: brightness(80%);
+            filter: brightness(80%);
+  }
+}
+/*# sourceMappingURL=popup.css.map */

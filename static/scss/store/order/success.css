@@ -1,0 +1,36 @@
+.order-success {
+  margin-top: 110px;
+  position: relative;
+  width: 100%;
+}
+
+.order-success .content {
+  width: 100%;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+}
+
+.order-success .content h1 {
+  margin-block: 30px;
+  color: #183B56;
+  text-shadow: 1px 0 #183B56;
+  font-weight: 800;
+  font-size: 2.25rem;
+  line-height: 2.8125rem;
+  letter-spacing: -1px;
+}
+
+.order-success .content p {
+  margin-block: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #5a7386;
+  display: block;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+/*# sourceMappingURL=success.css.map */
