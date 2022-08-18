@@ -1,256 +1,49 @@
 .order-full-info{
-    background: #f7f7f7;
-    height: 100vh;
+    height: auto;
     width: 100%;
+    margin-top: 0;
     .content{
-      margin: 10px auto;
       text-align: left;
-      background: white;
-      width: 93%;
-      height: auto;
-      padding: 20px;
-      border-radius: 10px;
-      transform: translateY(98px);
-      margin-bottom: 140px;
-      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.224);
+      width: 100%;
+      padding-top: 0;
       position: relative;
-      .heading{
-        color: #183B56;
-        font-size: 30px;
-        font-weight: 800;
-        text-shadow: 1px 0 #183B56;
-        letter-spacing:1px; 
-    }
-  }
-  .order-info-progress{ 
-    height: max-content;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    .row-one{
-      width: 100%;
-    }
-    .row-two{
-      width: 100%;
-      margin-top: 20px;
-      p{
-        box-sizing: border-box;
-        color: rgb(90, 115, 134);
-        display: block;
-        font-family: Inter, sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        height: auto;
-        padding-left: 3px;
+      .rows{
+        width: 100%;
       }
-    }
-  }
-  .order-rest-info{
-    .content-rest-info{
       .row-one{
-        h1{
-          color: #183B56;
-          font-size: 16px;
-          margin-block: 20px;
-          font-weight: 800;
-          span{
-            font-weight: normal;
-          }
-        }
+        background: rgba(200,200,200,0.1);  
+        width: 100%;
+        padding: 8px;
+        padding-block: 12px;  
+        display: flex;
+        align-items: center;
+        justify-content: space-between;  
       }
       .row-two{
-        h1{
-          color: #183B56;
-          font-size: 16px;
-          margin-block: 10px;
-          font-weight: 800;
-        }
-        .is-payed{
-          display: flex;
-          align-items: center;
+        width: 100%;
+        padding: 8px;
+        padding-block: 12px;  
+        p{
           width: 100%;
-          .icon{
-            padding-inline: 8px;
-            i{
-              color: rgb(28, 211, 28);
-              font-size: 15px;
-            }
+          margin-bottom: 15px;
+          i{
+            transform: translateX(3px) translateY(1.4px);
+            font-size: 14px;
           }
-          .icon-x{
-            padding-inline: 8px;
-            i{
-              color: red;
-              font-size: 15px;
-            }
-          }
-        }
-        .is-hosting{
-          display: flex;
-          align-items: center;
-          width: 100%;
-          .icon{
-            padding-inline: 8px;
-            i{
-              color: rgb(28, 211, 28);
-              font-size: 15px;
-            }
-          }
-          .icon-x{
-            padding-inline: 8px;
-            i{
-              color: red;
-              font-size: 15px;
-            }
+          &:last-child{
+            margin: 0;
           }
         }
       }
       .row-three{
-        h1{
-          color: #183B56;
-          font-size: 16px;
-          margin-block: 20px;
-          font-weight: 800;
-        }
-        .after-14-days{
-          align-items: center;
-          width: 100%;
-          .flex{
-            align-items: center;
-            width: 100%;
-            display: flex;
-            margin-bottom: 10px;
-          }
-          .icon{
-            padding-inline: 8px;
-            i{
-              color: rgb(28, 211, 28);
-              font-size: 15px;
-            }
-          }
-          .icon-x{
-            padding-inline: 8px;
-            i{
-              color: red;
-              font-size: 15px;
-            }
-          }
-          button{
-            border-radius: 4px;
-            width: 180px;
-            font-size: 16px;
-            padding: 10px;
-            transition: all .2s ease-in-out;
-            color: white;
-            outline: none;
-            border: none;    
-            background: #0088F9;
-          }
-        }
+        width: 100%;
+        padding: 8px;
+        padding-block: 12px; 
+        padding-top: 2px; 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;  
       }
-    }
   }
 }
   
-
-
-  /////////// DONT WRITE UNDER
-  // PROGRESS BAR
-  ul.progress_bar{
-    transform: rotate(180deg);
-    max-width: 29em;
-    width: 100%;
-    padding: 0 18px;
-    height: 2em;
-    margin: 0;
-    padding: 0;
-    font-size: 7px; /* change font size only to scale*/
-    position: relative;
-    left: 18px;
-    .last-child-afterone{
-      width: 100%;
-      height: 100%;
-      li{
-        &:last-child:after{
-          box-shadow: none;
-        }   
-      }
-      &.two{
-        li.current{
-            &::before{
-              box-shadow: 0 0 2px 6.5px rgba(211, 211, 211, 0.566);
-          }   
-        }
-      }
-      &.three{
-        li.current{
-            &::before{
-              box-shadow: 0 0 2px 6.5px rgba(211, 211, 211, 0.566);
-          }   
-        }
-      }
-      &.four{
-        li.current{
-            &::before{
-              box-shadow: 0 0 2px 6.5px rgba(211, 211, 211, 0.566);
-          }   
-        }
-      }
-      &.five{
-        li.current{
-            &::before{
-              box-shadow: 0 0 2px 6.5px rgba(211, 211, 211, 0.566);
-          }   
-        }
-      }
-    }
-  }
-    ul.progress_bar li:before{
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      background: #008cff;
-      width: 2em;
-      height: 2em;
-      border-radius: 2em;
-      z-index: 2;
-    }
-    ul.progress_bar li:last-child:after{
-      content: '';
-      display: block;
-      position: absolute;
-      right: -2em;
-      top: 0;
-      background: #008cff;
-      width: 2em;
-      height: 2em;
-      border-radius: 2em;
-      z-index: 2;
-      box-shadow: 0 0 2px 6.5px rgba(211, 211, 211, 0.566);
-  }   
-  ul.progress_bar li{
-    width: 25%;
-    float: left;
-    height: 100%;
-    list-style: none;
-    position: relative;
-    margin: 0;
-    padding: 0;
-  }
-  ul.progress_bar li span{
-    position: absolute;
-    display: block;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background: #006ac048;
-    height: .4em;
-    z-index: 1;
-  }
-  ul.progress_bar li.activated:before{
-    background: white;
-    border: 0.3em solid #006ac048;
-    box-sizing: border-box;
-  }       

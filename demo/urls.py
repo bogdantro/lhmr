@@ -26,8 +26,16 @@ urlpatterns = [
     # Kundeservice 
         path('prosessen-av-bestillinger/', proccess, name='proccess'),
         path('webiser-forum/', forum, name='forum'),
+        # Søk for forum
+        path('sok/', forum_search_post, name='forum_search_post'),
+        # Forum legg til innlegg
+        path('forum/legg-ut-et-innlegg/', forum_add, name='forum_add'),
+        # Forum innleg detaljer
+        path('innlegg/:<pk>/', forum_post_detail, name='forum_post_detail'),
+
+        path('kontakt-oss/', contact, name='contact'),
         path('progammering-spraakene/', frontend, name='frontend'),
-        path('kontakter-oss/', contact, name='contact'),
+        path('tilbakebetalinger/', refunds, name='refunds'),
     # Our work
         path('vårt-arbeid/', our_work, name='our_work'),
     # Prices 
@@ -38,7 +46,7 @@ urlpatterns = [
     path('produkt/:<slug>/', product_detail, name='product_detail'),
     path('bestill/', send_order, name='send-order'),
     path('bestilling-utfort/webiser/bestilling/', order_success, name='order_success'),
-    path('email-success/', email_success, name='email_success'),
+    path('kontakt-utfort/webiser/email-kundeservice/', contact_sucess, name='contact_sucess'),
     path('sporr-om-endringer/', request_edit, name='request_edit'),
     path('blogg/', blog, name='blog'),
     path('blog_post/<int:id>/', blog_post, name='blog_post'),

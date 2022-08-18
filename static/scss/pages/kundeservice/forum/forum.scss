@@ -1,4 +1,53 @@
-// STANDARD PHONE
-.cover{
-    height: 300px;
+// standard phone
+.page{
+    min-height: 88vh;
+}
+  // search bar
+  #searchBar{
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    form{
+        button{
+            background: none;
+            padding: 0px;
+            border: none;
+            width: 0;
+            height: 0;
+        }
+        i{
+            position: relative;
+            right: 36px;
+            top: 3px;
+            z-index: 10;
+            font-size: 22px;
+            color: #183B56;
+            cursor: pointer;
+            transition: .2s;
+            &:hover{
+                filter: brightness(95%);
+                transform: scale(1.2);
+            }
+        }
+        input{
+            border-radius: 4px;
+            padding: 5px;
+            border: 2px solid rgba(211, 211, 211, 0.411);
+            outline: none;
+            color: #183B56;
+            font-size: 13px;
+            width: 82%;
+            max-width: 500px;
+            font-weight: 600;
+            height: 45px;
+            cursor: pointer;
+            &:hover{
+                filter: brightness(95%);
+            }
+            &:focus{
+                cursor: unset;
+                filter: brightness(100%);
+            }
+        }
+    }
 }

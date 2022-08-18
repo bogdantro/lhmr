@@ -1,0 +1,44 @@
+// standard phone
+.forum-post-detail{
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 15px;
+    padding-top: 100px;
+    .content{
+        width: 100%;
+        padding: 8px;
+        // border: 1px solid rgba(0,0,0,0.1);
+        .post-detail{
+            width: 100%;
+            position: relative;
+            .row-one{
+                margin-bottom: 10px;
+                .forum-post-detail-author{
+                    letter-spacing: 0.2px;
+                    opacity: 0.8;
+                    box-sizing: border-box;
+                    display: block;
+                    font-size: 13px;
+                    font-weight: 400;
+                    height: auto;
+                    width: auto;
+                }
+            }
+            .row-two{
+                margin-top: 10px;
+            }
+            .actions{
+                display: flex;
+                width: 100%;
+                a{
+                    margin-inline: 10px;
+                    &:first-child{
+                        margin-left: 0;
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

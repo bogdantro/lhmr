@@ -1,9 +1,9 @@
 // standard phone
 .page-for-form{
     background: linear-gradient(to bottom, #f7f7f786, #f7f7f786, white);
-    height: auto;
+    min-height: 88vh;
     padding-top: 100px;
-    padding-bottom: 0;
+    padding-bottom: 20px;
     // form
     form{
         margin: 0 auto;
@@ -28,7 +28,7 @@
                 font-size: 14px;
                 font-weight: 800;
             }
-            // input
+            // input & textarea
             input, textarea{
                 border-radius: 4px;
                 padding: 5px;

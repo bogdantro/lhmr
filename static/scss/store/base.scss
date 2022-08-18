@@ -17,7 +17,8 @@ $loader: rgb(80, 104, 180);
 }
 .section{
   padding: 25px;
-  @media only screen and (min-device-width: 1024px) {
+  margin-block: 15px;
+  @media only screen and (min-device-width: 1124px) {
     margin-block: 95px;
   }
 }
@@ -1563,9 +1564,10 @@ $loader: rgb(80, 104, 180);
   .prices{
     width: 100%;
     height: auto;
-    margin-top: 0;
-    padding: 25px 75px;
+    margin-top: -96px;
+    padding-inline: 75px;
     padding-bottom: 95px;
+    padding-top: 120px;
     border-right: 90px solid #0082ec;
     i{
       cursor: pointer;

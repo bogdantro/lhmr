@@ -2,20 +2,27 @@
 {% load static %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static '/scss/store/blog.css' %}" type="text/css">
+ <link rel="stylesheet" href="{% static '/scss/pages/page.css' %}" type="text/css">
 
-<!-- COVER -->
-<div class="cover" id="cover">
-    <!-- ALL COVER CONENT -->
+<div class="page">
+   <!-- COVER -->
+   <div class="cover" id="cover" style="border-bottom: none;">
+      <!-- ALL COVER CONENT -->
     <div class="content">
        <!-- COVER SECTION 1 -->
        <div class="cover-section1">
           <!-- ALL COVER TEXT -->
           <div class="text">
-             <h1 class="cover-h1">{{ post_info.title }}</h1>
-          </div>
-       </div>
+             <h1 style="font-size: 30px;" class="cover-h1">{{ post_info.title }}</h1>
+             <p class="cover-p">{{ post_info.text }}</p>
+             <br>
+             <p style="font-size: 13px;" class="cover-p">Skrevet av <strong>{{ post_info.author }}</strong> {{ post_info.created_at }}</p>
+             <br>
+             <button onclick="window.location.href='javascript:history.back()'" style="margin-top: 27px;" class="secondary">Tilbake</button>
+            </div>
+         </div>
     </div>
- </div>
+   </div>
+</div>
 
 {% endblock %}

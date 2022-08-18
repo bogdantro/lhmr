@@ -3,16 +3,13 @@
   position: relative;
   width: 100%;
 }
-
 .order-success .content {
   width: 100%;
   position: relative;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   text-align: center;
 }
-
 .order-success .content h1 {
   margin-block: 30px;
   color: #183B56;
@@ -22,15 +19,12 @@
   line-height: 2.8125rem;
   letter-spacing: -1px;
 }
-
 .order-success .content p {
   margin-block: 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: #5a7386;
+  box-sizing: border-box;
+  color: rgb(90, 115, 134);
   display: block;
   font-family: Inter, sans-serif;
   font-size: 16px;
   font-weight: 400;
-}
-/*# sourceMappingURL=success.css.map */
+}/*# sourceMappingURL=success.css.map */

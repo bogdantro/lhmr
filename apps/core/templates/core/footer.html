@@ -12,133 +12,89 @@
 <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
 
 <br>
-<br>
-<br>
-<br>
+<!-- footer -->
 <div id="footer">
-    <div id="newsletter">
+    <!-- newsletter -->
+    <!-- <div id="newsletter">
         <h1>Bli medlem</h1>
-        <p class="paragraph">Få nyheter om kampanjer, rabatter og mye mer! Hmmmm vi spammer ikke altså</p>
+        <p class="paragraph" style="font-size: 14.5px;">Få nyheter om kampanjer, rabatter og mye mer! Hmmmm vi spammer ikke altså</p>
         <form v-on:submit.prevent="onSubmit">
             <div class="content">
                 <input type="email" v-model="email" name="email" class="input" placeholder="Din epost">
-                <button class="primary">Bli medlem</button>
+                <button onclick="RefreshPage()"><i class="fad fa-arrow-alt-from-left"></i></button>
             </div>
         </form>
         <div id="footerNewsLetterAlert" v-if="showSuccess">
             <div class="alert alert-success">Epost er lagret, tusen takk!</div>
         </div>
+    </div> -->
+    <!-- footer links -->
+    <div class="footer-links">
+        <a href="">Vilkår & betingelser<i class="fa-solid fa-caret-right"></i></a>
+        <a href="">Policy<i class="fa-solid fa-caret-right"></i></a>
+        <a href="">Tilbakebetaling<i class="fa-solid fa-caret-right"></i></a>
     </div>
-    <div class="footer-section">
-        <ul class="footer-ul">
-            <h1>Kundeservice</h1>
-            <li class="footer-li">
-                <a href="/">Sektorer</a>
-                <a href="/">Blogg</a>
-                <a href="/">Om oss</a>
-                <a href="/">Prosjekter</a>
-                <a href="/">Forum</a>
-                <a href="/">Forum</a>
-                <a href="/">Forum</a>
-            </li>
-        </ul>
-        <ul class="footer-ul">
-            <h1>Raske Linker</h1>
-            <li class="footer-li">
-                <a href="/">Sektorer</a>
-                <a href="/">Blogg</a>
-                <a href="/">Om oss</a>
-                <a href="/">Prosjekter</a>
-                <a href="/">Forum</a>
-                <a href="/">Forum</a>
-                <a href="/">Forum</a>
-            </li>
-        </ul>
-        <ul class="footer-ul">
-            <h1>Raske Linker</h1>
-            <li class="footer-li">
-                <a href="/">Sektorer</a>
-                <a href="/">Blogg</a>
-                <a href="/">Om oss</a>
-                <a href="/">Prosjekter</a>
-                <a href="/">Forum</a>
-                <a href="/">Forum</a>
-                <a href="/">Forum</a>
-            </li>
-        </ul>
-        <ul class="footer-ul">
-            <h1>Raske Linker</h1>
-            <li class="footer-li">
-                <a href="/">Sektorer</a>
-                <a href="/">Blogg</a>
-                <a href="/">Om oss</a>
-                <a href="/">Prosjekter</a>
-                <a href="/">Forum</a>
-                <a href="/">Forum</a>
-                <a href="/">Forum</a>
-            </li>
-        </ul>
-    </div>
-    <div class="social-icons">
-        <div class="logo" id="logo" onclick="window.location.href='/'">
-            <img class="logo1" src="{% static '/images/logo/logo1.png' %}" alt="logo1">
-        </div>    
-        <div class="icons">
-            <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-instagram"></i>
-            <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-tiktok"></i>
-            <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-facebook"></i>
+    <hr>
+    <!-- footer bottom -->
+    <div class="footerbottom">
+         <!-- copyright -->
+        <div class="copyright">
+            <p>Copyright &#169; 2022 Webiser</p>
+        </div>
+        <!-- social icons -->
+        <div class="social-icons">
+            <!-- icons -->
+            <div class="icons">
+                <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-instagram"></i>
+                <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-tiktok"></i>
+                <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-facebook"></i>
+            </div>
         </div>
     </div>
-    <div class="copyright">
-        <p>Copyright &#169; 2022 Webiser</p>
-    </div>
 </div>
+<script>
+function RefreshPage(){
+    setTimeout(function(){
+        location.reload();
+    },1500);
+}
 
-
-
-    <script>
-    function RefreshPage(){
-        // setTimeout(function(){
-        //     location.reload();
-        // },1500);
-    }
-
-        var newsletterapp = new Vue({
-            el: '#newsletter',
-            data () {
-                return {
-                    email: '',
-                    showSuccess: false
-                }
-            },
-            methods: {                
-                onSubmit() {
-                    console.log('onSubmit')
-                    fetch('/api/add_subscriber/', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                                'X-CSRFToken': '{{ csrf_token }}'
-                            },
-                            body: JSON.stringify({'email': this.email}),
-                        })
-                        .then((response) => {
-                            return response.json()
-                        })
-                        .then((data) => {
-                            console.log(data)
-    
-                            this.showSuccess = true
-                            this.email = ''
-                        })
-                        .catch(function(error) {
-                            this.showSuccess = false
-                            console.log('Error:', error);
-                        });
-                },
+    var newsletterapp = new Vue({
+        el: '#newsletter',
+        data () {
+            return {
+                email: '',
+                showSuccess: false
             }
-        })
-    </script>
-</div>
+        },
+        methods: {                
+            onSubmit() {
+                console.log('onSubmit')
+                fetch('/api/add_subscriber/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRFToken': '{{ csrf_token }}'
+                        },
+                        body: JSON.stringify({'email': this.email}),
+                    })
+                    .then((response) => {
+                        return response.json()
+                    })
+                    .then((data) => {
+                        console.log(data)
+
+                        this.showSuccess = true
+                        this.email = ''
+                    })
+                    .catch(function(error) {
+                        this.showSuccess = false
+                        console.log('Error:', error);
+                    });
+            },
+        }
+    })
+</script>
+    
 
 

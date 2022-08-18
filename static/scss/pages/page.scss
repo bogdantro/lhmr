@@ -1,11 +1,38 @@
 // standard phone
+.page{
+    min-height: 88vh;
+}
+// cover
 .cover{
-    padding-top: 34px;
     height: auto;
-    padding-block: 100px;
+    padding-top: 140px;
+    padding-bottom: 40px;
     text-align: center;
+    background: linear-gradient(to top right, white, white, #EDF3F8 85%, #EDF3F8 85%, white);
     .content{
         transform: translateY(0);
+        .text{
+            .cover-h1{
+                i{
+                    transition: .2s;
+                    margin-right: 25px;
+                    cursor: pointer;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}
+// page content
+.page-content{
+    text-align: center;
+    .text{
+        padding-inline: 18px;
+    }
+    p{
+        font-size: 15.5px;
     }
 }
 // desktop
@@ -14,11 +41,13 @@
         height: auto;
         .content{
             display: flex;
-            transform: translateY(0);
-            padding-block: 80px;
             .text{
+                padding-inline: 95px;
                 .cover-h1{
                   font-size: 46px;
+                  i{
+                    margin-right: 25px;
+                  }
                 }
                 .cover-p{
                     font-size: 18px;

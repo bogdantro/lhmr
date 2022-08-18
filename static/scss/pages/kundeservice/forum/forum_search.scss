@@ -1,0 +1,136 @@
+// standard phone
+// no results
+.forum-not-found{
+    width: 100%;
+    margin-block: 20px;
+    text-align: center;
+    p{
+        font-size: 16px;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.4);
+        margin-bottom: 20px;
+    }
+}
+.forum-search{
+    // header
+    .header{
+        width: 100%;
+        padding-block: 5px;
+        // user
+        .user{ 
+            width: 100%;
+            height: auto;
+            max-width: 380px;
+            display: flex;
+            justify-content: space-between;   
+            align-items: center;
+            padding-inline: 15px;
+            span{
+                color: rgb(90, 115, 134);
+                font-family: Inter, sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                cursor: text;
+            }
+            a{
+                color: rgb(90, 115, 134);
+                font-family: Inter, sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                cursor: pointer;
+                text-decoration: underline;
+                transition: .3s;
+                &:hover{
+                    color: black;
+                }
+            }
+        }
+    }
+    // if results
+    .forum-search-result{
+        width: 100%;
+        margin-block: 10px;
+        padding-inline: 15px;
+        .result{
+            margin-bottom:0;
+            position: relative;
+            .post-title{
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                max-width: 100%;
+                font-size: 20px;
+                color: rgb(26, 13, 171);
+                font-weight: 400;
+                cursor: pointer;
+                padding: 5px;
+                padding-left: 0;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            .post-text{
+                transform: translateY(-16px);
+                font-size: 14px;
+                color: rgb(77, 81, 86);
+                position: relative;
+                display: inline-block;
+                word-wrap: break-word;
+                overflow: hidden;
+                max-height: 3.6em; /* (Number of lines you want visible) * (line-height) */
+                line-height: 1.2em;
+            }
+            .bottom{
+                position: absolute;
+                bottom: -7px;
+                p{
+                    font-size: 15.3px;
+                    letter-spacing: 0.2px;
+                    opacity: 0.8;
+                    box-sizing: border-box;
+                    display: block;
+                    font-size: 13px;
+                    font-weight: 400;
+                    height: auto;
+                    width: auto;
+                }
+            }
+        }
+    }
+    // need more help
+    .need-more-help{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        padding-inline: 15px;
+        background: white;
+        padding: 10px;
+        margin-top: 40px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        border-top: 1px solid rgba(0,0,0,.1);
+        position: relative;
+        h1{
+            color: #183B56;
+            text-shadow: 1px 0 #183B56;
+            font-weight: 800;
+            font-size: 26px;
+            letter-spacing: -1px;
+            margin-block: 10px;
+        }
+        a{
+            margin-block: 20px;
+            color: rgb(90, 115, 134);
+            font-family: Inter, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            cursor: pointer;
+            text-decoration: underline;
+            transition: .3s;
+            margin-inline: 12px;
+            &:hover{
+                color: black;
+            }
+        }
+    }
+}

@@ -141,32 +141,3 @@ function help(){
 
   }
 }
-// price scroll for mobile
-function pricesScroll(){
-  const sidebar = document.getElementById('sidebar');
-  const logo = document.getElementById('logo');
-  const navbar = document.getElementById('mobileNav');
-  const hamburger = document.getElementById('hamburger');
-  const sidebarLi = document.getElementById('sidebarLi');
-
-  navbar.classList.remove('menu') 
-  hamburger.classList.remove('click')  
-  sidebar.classList.remove('active')
-  sidebarLi.classList.remove('active')
-  logo.classList.remove('menu-click')
-
-  setTimeout(function(){
-    window.location.href='#prices';
-  }, 50);
-
-
-}
-// price scroll for desktop
-function desPricesScroll(){
-  setTimeout(function(){
-    window.location.href='#prices';
-  }, 50);
-
-
-}
-

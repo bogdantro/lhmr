@@ -11,7 +11,11 @@ $loader: rgb(80, 104, 180);
 html{
   margin:    0 auto;
   max-width: 1150px;
-  background: rgba(211, 211, 211, 0.163);
+  background: white;
+}
+body{
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 html, body {
   overflow-x: hidden;
@@ -20,6 +24,7 @@ html, body {
 }
 // global buttons
 button{
+  outline: none !important;
   &.primary{
     border-radius: 4px;
     width: 180px;
@@ -27,13 +32,31 @@ button{
     padding: 12px 10px;
     transition: all .2s ease-in-out;
     color: white;
-    outline: none;
-    border: none;
     background: #0082ec; 
+    border: 1px solid transparent;
+  }
+  &.secondary{
+    border-radius: 4px;
+    width: 180px;
+    font-size: 16px;
+    padding: 12px 10px;
+    transition: all .2s ease-in-out;
+    color: #0082ec;
+    outline: none;
+    border: 1px solid #0082ec;
+    background: white; 
   }
   cursor: pointer;
   &:hover{
-    filter: brightness(80%);
+    filter: brightness(85%);
+  }
+  &:focus{
+    transition: 0;
+    filter: brightness(70%);
+  }
+  &:active{
+    transition: 0;
+    filter: brightness(60%);
   }
 }
 // global text
@@ -43,11 +66,74 @@ p{
     color: rgb(90, 115, 134);
     display: block;
     font-family: Inter, sans-serif;
-    font-size: 16px;
+    font-size: 15.5px;
     font-weight: 400;
+    margin-bottom: 0;
+  }
+  &.small-paragraph{
+    box-sizing: border-box;
+    color: rgb(90, 115, 134);
+    display: block;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  &.heading{
+    color: #183B56;
+    font-size: 6px;
+    font-weight: 800;
+    text-shadow: 1px 0 #183B56;
+    letter-spacing:1px; 
+    margin-block: 10px;
+    font-size: 23px;
   }
 }
-
+// global links
+a{
+  cursor: pointer;
+  transition: .3s;
+  padding: 5px;
+  &:hover{
+    text-decoration: underline;
+  }
+  &.link{
+    color: rgb(26, 13, 171) !important;
+  }
+  &.modern-link{
+    box-sizing: border-box;
+    color: rgb(90, 115, 134);
+    display: block;
+    font-family: Inter, sans-serif;
+    font-size: 15.5px;
+    font-weight: 400;
+    text-decoration: underline !important;
+    &:hover{
+      color: rgb(59, 67, 73)!important;
+    }
+  }
+  &.small-mmodern-link{
+    box-sizing: border-box;
+    color: rgb(90, 115, 134);
+    display: block;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline !important;
+    &:hover{
+      color: rgb(59, 67, 73)!important;
+    }
+  }
+}
+p{
+  &.link{
+    cursor: pointer;
+    color: rgb(26, 13, 171) !important;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
 
 .light-overlay{
   width: max-content;
@@ -529,6 +615,9 @@ p{
 
 // // SMALL DESKTOP
 @media only screen and (min-device-width: 1140px) {
+  html{
+    background: rgba(200,200,200,0.1);
+  }
   .cover{
     height: 80vh;
     .content{

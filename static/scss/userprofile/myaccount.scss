@@ -1,17 +1,17 @@
 // STANDARD PHONE
 .myaccount{
     width: 100%;
-    height: auto;
+    min-height: 88vh;
     background: transparent;
-    transform: translateY(103px);
     margin-bottom: 0;
+    padding-top: 90px;
     // LOGIN FORM
     .account-card{
       margin: 0 auto;
       text-align: left;
       background: transparent;
       width: 100%;
-      max-width: 700px;
+      max-width: 900px;
       padding: 20px;
       border-radius: 7px;
         // ACCOUNT HEADING
@@ -21,21 +21,68 @@
           font-weight: 800;
           text-shadow: 1px 0 #183B56;
           letter-spacing:1px; 
+          margin-bottom: 15px;
         }
         // YOUR INFO
         .your-info{
-          margin: 14px 0;
-          p{
-            color: #183B56;
-            font-size: 15px;
-            span{
-              font-weight: 800;
+          display: inline-block;
+          margin-block: 12px;
+          margin-left: 0;
+          text-align: left;
+          background: white;
+          width: 100%;
+          height: 180px;
+          max-width: 340px;
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.224);
+          padding: 28px;
+          border-radius: 10px;
+          position: relative;
+          display: flex;
+          .row-one{
+            width: 100%;
+            height: max-content;
+            position: relative;
+            white-space: nowrap;
+            padding-bottom: 15px;
+            &::before{
+              content: '';
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              display: block;
+              width: 100%;
+              height: 2px;
+              background: lightgray;
+            }
+            p{
+              display: inline-block;
+              font-size: 14px;
+              transform: translateX(15px);
+            }
+            a{
+              display: inline-block;
+              font-size: 14px;
+              transform: translateX(20px);
+            }
+            img{
+              display: inline-block;
+              width: 40px;
+              height: auto;
+            }
+          }
+          .row-two{
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            p{
+              font-size: 14px;
             }
           }
         }
         // MY ORDERS
         .my-orders{
-          margin: 30px 0;
+          padding: 25px 0;
+          padding-top: 0;
           position: relative;
           .check-type-of-order-flex{
             width: 100%;
@@ -50,8 +97,9 @@
               font-size: 15px;
               transition: .2s;
               transition: background-color 0;
-              &.click{
-                padding-block: 18px;
+              cursor: pointer;
+              &:hover{
+                text-decoration: underline;
               }
               &#completedOrdersP{
                 &.active{
@@ -144,15 +192,24 @@
             }
           }
           .you-got-orders{
-            margin: 40px 0;
+            display: inline-block;
+            margin-block: 12px;
+            margin-right: 25px;
+            margin-left: 0;
             text-align: left;
-            background: transparent;
+            background: white;
             width: 100%;
             max-width: 340px;
             box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.224);
             padding: 28px;
             border-radius: 10px;
             position: relative;
+            cursor: pointer;
+            transition: .3s;
+            &:hover{
+              filter: brightness(98%);
+              transform: scale(1.2);
+            }
             .order-row-one{
               width: 100%;
               display: flex;

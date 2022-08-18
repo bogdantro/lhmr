@@ -1,55 +1,93 @@
 .myaccount {
   width: 100%;
-  height: auto;
+  min-height: 88vh;
   background: transparent;
-  -webkit-transform: translateY(103px);
-          transform: translateY(103px);
   margin-bottom: 0;
+  padding-top: 90px;
 }
-
 .myaccount .account-card {
   margin: 0 auto;
   text-align: left;
   background: transparent;
   width: 100%;
-  max-width: 700px;
+  max-width: 900px;
   padding: 20px;
   border-radius: 7px;
 }
-
 .myaccount .account-card .heading {
   color: #183B56;
   font-size: 30px;
   font-weight: 800;
   text-shadow: 1px 0 #183B56;
   letter-spacing: 1px;
+  margin-bottom: 15px;
 }
-
 .myaccount .account-card .your-info {
-  margin: 14px 0;
-}
-
-.myaccount .account-card .your-info p {
-  color: #183B56;
-  font-size: 15px;
-}
-
-.myaccount .account-card .your-info p span {
-  font-weight: 800;
-}
-
-.myaccount .account-card .my-orders {
-  margin: 30px 0;
-  position: relative;
-}
-
-.myaccount .account-card .my-orders .check-type-of-order-flex {
+  display: inline-block;
+  margin-block: 12px;
+  margin-left: 0;
+  text-align: left;
+  background: white;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  height: 180px;
+  max-width: 340px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.224);
+  padding: 28px;
+  border-radius: 10px;
+  position: relative;
   display: flex;
 }
-
+.myaccount .account-card .your-info .row-one {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: relative;
+  white-space: nowrap;
+  padding-bottom: 15px;
+}
+.myaccount .account-card .your-info .row-one::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: lightgray;
+}
+.myaccount .account-card .your-info .row-one p {
+  display: inline-block;
+  font-size: 14px;
+  transform: translateX(15px);
+}
+.myaccount .account-card .your-info .row-one a {
+  display: inline-block;
+  font-size: 14px;
+  transform: translateX(20px);
+}
+.myaccount .account-card .your-info .row-one img {
+  display: inline-block;
+  width: 40px;
+  height: auto;
+}
+.myaccount .account-card .your-info .row-two {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.myaccount .account-card .your-info .row-two p {
+  font-size: 14px;
+}
+.myaccount .account-card .my-orders {
+  padding: 25px 0;
+  padding-top: 0;
+  position: relative;
+}
+.myaccount .account-card .my-orders .check-type-of-order-flex {
+  width: 100%;
+  display: flex;
+}
 .myaccount .account-card .my-orders .check-type-of-order-flex p {
   opacity: 0.6;
   margin-inline: 18px;
@@ -58,58 +96,47 @@
   padding: 7px;
   text-align: center;
   font-size: 15px;
-  -webkit-transition: .2s;
-  transition: .2s;
-  -webkit-transition: background-color 0;
+  transition: 0.2s;
   transition: background-color 0;
+  cursor: pointer;
 }
-
-.myaccount .account-card .my-orders .check-type-of-order-flex p.click {
-  padding-block: 18px;
+.myaccount .account-card .my-orders .check-type-of-order-flex p:hover {
+  text-decoration: underline;
 }
-
 .myaccount .account-card .my-orders .check-type-of-order-flex p#completedOrdersP.active {
   background: #0088F9;
   color: white;
   opacity: 1;
 }
-
 .myaccount .account-card .my-orders .check-type-of-order-flex p#completedOrdersP.unactive {
   background: transparent;
   opacity: 0.6;
   color: black;
 }
-
 .myaccount .account-card .my-orders .check-type-of-order-flex p#startedOrdersP {
   margin-left: 0;
   background: #0088F9;
   color: white;
   opacity: 1;
 }
-
 .myaccount .account-card .my-orders .check-type-of-order-flex p#startedOrdersP.active {
   background: #0088F9;
   color: white;
   opacity: 1;
 }
-
 .myaccount .account-card .my-orders .check-type-of-order-flex p#startedOrdersP.unactive {
   background: transparent;
   opacity: 0.6;
   color: black;
 }
-
 .myaccount .account-card .my-orders .if-order-finished {
   width: 100%;
   display: block;
 }
-
 .myaccount .account-card .my-orders .if-order-finished .no-finished {
-  -webkit-transform: translateX(13px) translateY(45px);
-          transform: translateX(13px) translateY(45px);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: #5a7386;
+  transform: translateX(13px) translateY(45px);
+  box-sizing: border-box;
+  color: rgb(90, 115, 134);
   display: block;
   font-family: Inter, sans-serif;
   font-size: 16px;
@@ -117,9 +144,8 @@
   height: auto;
   margin-bottom: 45px;
 }
-
 .myaccount .account-card .my-orders .if-order-finished .no-finished::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: -13px;
@@ -128,31 +154,25 @@
   background: #0088F9;
   border-radius: 12px;
 }
-
 .myaccount .account-card .my-orders .if-order-finished.hide {
   display: none;
 }
-
 .myaccount .account-card .my-orders .if-order-started {
   display: block;
   width: 100%;
 }
-
 .myaccount .account-card .my-orders .if-order-started .no-finished {
-  -webkit-transform: translateX(13px) translateY(45px);
-          transform: translateX(13px) translateY(45px);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: #5a7386;
+  transform: translateX(13px) translateY(45px);
+  box-sizing: border-box;
+  color: rgb(90, 115, 134);
   display: block;
   font-family: Inter, sans-serif;
   font-size: 16px;
   font-weight: 400;
   height: auto;
 }
-
 .myaccount .account-card .my-orders .if-order-started .no-finished::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: -13px;
@@ -161,36 +181,37 @@
   background: #0088F9;
   border-radius: 12px;
 }
-
 .myaccount .account-card .my-orders .if-order-started .no-finished.no-line::before {
   display: none;
 }
-
 .myaccount .account-card .my-orders .if-order-started.hide {
   display: none;
 }
-
 .myaccount .account-card .my-orders .you-got-orders {
-  margin: 40px 0;
+  display: inline-block;
+  margin-block: 12px;
+  margin-right: 25px;
+  margin-left: 0;
   text-align: left;
-  background: transparent;
+  background: white;
   width: 100%;
   max-width: 340px;
-  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.224);
-          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.224);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.224);
   padding: 28px;
   border-radius: 10px;
   position: relative;
+  cursor: pointer;
+  transition: 0.3s;
 }
-
+.myaccount .account-card .my-orders .you-got-orders:hover {
+  filter: brightness(98%);
+  transform: scale(1.2);
+}
 .myaccount .account-card .my-orders .you-got-orders .order-row-one {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
 }
-
 .myaccount .account-card .my-orders .you-got-orders .order-row-one .order-product {
   width: 88%;
   font-size: 23px;
@@ -199,45 +220,34 @@
   text-shadow: 1px 0 #183B56;
   letter-spacing: 1px;
 }
-
 .myaccount .account-card .my-orders .you-got-orders .order-row-one .product-tag {
   color: #0088F9;
   font-size: 13px;
-  -webkit-transform: translateY(10px) translateX(10px);
-          transform: translateY(10px) translateX(10px);
+  transform: translateY(10px) translateX(10px);
 }
-
 .myaccount .account-card .my-orders .you-got-orders .order-row-one .order-price {
   color: black;
   opacity: 0.5;
   font-size: 15px;
   width: 12%;
-  -webkit-transform: translateY(6px) translateX(-18px);
-          transform: translateY(6px) translateX(-18px);
+  transform: translateY(6px) translateX(-18px);
 }
-
 .myaccount .account-card .my-orders .you-got-orders .order-row-two {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-transform: translateY(16px);
-          transform: translateY(16px);
+  transform: translateY(16px);
 }
-
 .myaccount .account-card .my-orders .you-got-orders .order-row-two .smalltext {
   opacity: 0.7;
   text-align: left;
   font-size: 13px;
 }
-
 .myaccount .account-card .my-orders .you-got-orders .order-row-two .row-one {
   width: 45%;
   position: relative;
 }
-
 .myaccount .account-card .my-orders .you-got-orders .order-row-two .row-one::before {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   display: block;
@@ -245,32 +255,23 @@
   height: 48px;
   background: lightgray;
 }
-
 .myaccount .account-card .my-orders .you-got-orders .order-row-two .row-one h1 {
   font-size: 15px;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
-
 .myaccount .account-card .my-orders .you-got-orders .order-row-two .row-two {
   width: 55%;
-  -webkit-transform: translateX(19px);
-          transform: translateX(19px);
+  transform: translateX(19px);
 }
-
 .myaccount .account-card .my-orders .you-got-orders .order-row-two .row-two h1 {
   font-size: 15px;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
-
 .myaccount .account-card .my-orders .you-got-orders p {
   color: #183B56;
   font-size: 15px;
   width: 100%;
 }
-
 .myaccount .account-card .my-orders .you-got-orders p span {
   font-weight: 800;
-}
-/*# sourceMappingURL=myaccount.css.map */
+}/*# sourceMappingURL=myaccount.css.map */

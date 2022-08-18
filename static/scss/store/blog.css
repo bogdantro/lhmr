@@ -1,7 +1,3 @@
-.cover {
-  height: 230px;
-}
-
 .blog-posts {
   background: white;
   width: 100%;
@@ -10,72 +6,59 @@
   margin-bottom: 0;
   padding: 25px;
 }
-
 .blog-posts .post {
   border-bottom: 1px solid lightgray;
 }
-
+.blog-posts .post:last-child {
+  border-bottom: none;
+}
 .blog-posts .blog-card {
   margin-block: 35px;
 }
-
 .blog-posts .blog-image {
   position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 6px;
   width: 100%;
+  max-width: 390px;
 }
-
 .blog-posts .blog-image img {
-  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.164);
-          box-shadow: 0 0 3px rgba(0, 0, 0, 0.164);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.164);
   width: 100%;
   height: auto;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 6px;
-  -webkit-filter: brightness(90%);
-          filter: brightness(90%);
+  filter: brightness(90%);
   margin: 15px auto;
 }
-
 .blog-posts .blog-image-text {
   width: 100%;
-  -webkit-transform: translateY(3px);
-          transform: translateY(3px);
+  transform: translateY(3px);
 }
-
 .blog-posts .blog-image-text::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   height: 28px;
   width: 4px;
-  background: #183b56bd;
+  background: rgba(24, 59, 86, 0.7411764706);
   border-radius: 12px;
 }
-
 .blog-posts .blog-image-text h1 {
-  -webkit-transform: translateX(20px);
-          transform: translateX(20px);
+  transform: translateX(20px);
   font-size: 20px;
   font-weight: 600;
 }
-
 .blog-posts .blog-image-text p {
-  -webkit-transform: translateX(20px);
-          transform: translateX(20px);
+  transform: translateX(20px);
   font-size: 15.3px;
   letter-spacing: 0.2px;
   opacity: 0.8;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
   font-family: Inter, sans-serif;
   font-size: 15.5px;
@@ -85,10 +68,90 @@
   width: auto;
   padding-right: 10px;
 }
-
 .blog-posts .blog-image-text p:nth-child(3) {
   font-size: 13px;
-  -webkit-transform: translateY(-12px) translateX(20px);
-          transform: translateY(-12px) translateX(20px);
+  transform: translateY(-12px) translateX(20px);
 }
-/*# sourceMappingURL=blog.css.map */
+
+@media only screen and (min-device-width: 1145px) {
+  .blog-posts {
+    background: white;
+    width: 100%;
+    height: auto;
+    margin-top: -15px;
+    margin-bottom: 0;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .blog-posts .post {
+    border-bottom: none;
+    flex: 1 0 33%; /* explanation below */
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .blog-posts .post:hover {
+    transform: scale(1.2);
+  }
+  .blog-posts .blog-card {
+    margin-block: 35px;
+    margin-inline: 30px;
+    flex: 1 0 33%; /* explanation below */
+  }
+  .blog-posts .blog-image {
+    position: relative;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 6px;
+    width: 100%;
+  }
+  .blog-posts .blog-image img {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.164);
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 6px;
+    filter: brightness(90%);
+    margin: 15px auto;
+  }
+  .blog-posts .blog-image-text {
+    width: 100%;
+    transform: translateY(3px);
+  }
+  .blog-posts .blog-image-text::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 28px;
+    width: 4px;
+    background: rgba(24, 59, 86, 0.7411764706);
+    border-radius: 12px;
+  }
+  .blog-posts .blog-image-text h1 {
+    transform: translateX(20px);
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .blog-posts .blog-image-text p {
+    transform: translateX(20px);
+    font-size: 15.3px;
+    letter-spacing: 0.2px;
+    opacity: 0.8;
+    box-sizing: border-box;
+    display: block;
+    font-family: Inter, sans-serif;
+    font-size: 15.5px;
+    font-weight: 400;
+    height: auto;
+    line-height: 27px;
+    width: auto;
+    padding-right: 10px;
+  }
+  .blog-posts .blog-image-text p:nth-child(3) {
+    font-size: 13px;
+    transform: translateY(-12px) translateX(20px);
+  }
+}/*# sourceMappingURL=blog.css.map */

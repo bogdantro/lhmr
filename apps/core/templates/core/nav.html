@@ -46,6 +46,9 @@
                                 <a href="/webiser-forum">Forum</a>
                             </div>
                             <div class="nav-link-parent">
+                                <a href="/tilbakebetalinger">Tilbakebetalinger</a>
+                            </div>
+                            <div class="nav-link-parent">
                                 <a href="/sporr-om-endringer">Spørr om endringer på nettsiden</a>
                             </div>
                             <div class="nav-link-parent">
@@ -77,27 +80,27 @@
                         <a onclick="prices()" id="pricesToggle">Priser<i class="fas fa-sort-down"></i></a>
                         <div class="prices-dropdown-links" id="pricesDropdown">
                             <div class="nav-link-parent">
-                                <a onclick="ecoScroll()">Nettbutikk/eCommerce</a>
+                                <a onclick="pricesScroll()">Nettbutikk/eCommerce</a>
                             </div>
                             <div class="nav-link-parent">
-                                <a onclick="persScroll()">Personlig nettside</a>
+                                <a onclick="pricesScroll()">Personlig nettside</a>
                             </div>
                             <div class="nav-link-parent">
-                                <a onclick="blogScroll()">Blogg</a>
+                                <a onclick="pricesScroll()">Blogg</a>
                             </div>
                             <div class="nav-link-parent">
                                 <a onclick="pricesExtra()" id="pricesToggleExtra">Tilleg<i class="fas fa-sort-down"></i></a>
                             </div>
                             <div class="extras" id="pricesExtraDiv">
                                 <div class="nav-link-parent">
-                                    <a href="">Hosting</a>
-                                    <a href="">Ekstra sider</a>
+                                    <a href="/ekstra---hosting">Hosting</a>
+                                    <a href="/ekstra---ekstra-sider">Ekstra sider</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <a href="/vårt-arbeid">Vårt arbeid</a>
-                    <a href="/kontakter-oss">Kontakt oss</a>
+                    <a href="/kontakt-oss">Kontakt oss</a>
                     <div class="sidebar-myaccount">
                         {% if request.user.is_authenticated %}
                         <div class="user-is-login">
@@ -163,9 +166,9 @@
             <div class="des-menu-prices">
                 <a class="menu-main-links" id="pricesToggle">Priser<i class="fas fa-sort-down"></i></a>
                 <div id="pricesDrop" style="background: white;">
-                    <li class="drop-link"><a onclick="ecoScroll()">Nettbutikk/eCommerce</a></li>
-                    <li class="drop-link"><a onclick="persScroll()">Personlig nettside</a></li>
-                    <li class="drop-link"><a onclick="blogScroll()">Blogg</a></li>
+                    <li class="drop-link"><a onclick="pricesScroll()">Nettbutikk/eCommerce</a></li>
+                    <li class="drop-link"><a onclick="pricesScroll()">Personlig nettside</a></li>
+                    <li class="drop-link"><a onclick="pricesScroll()">Blogg</a></li>
                     <li class="drop-link"><a href="/ekstra---hosting">Hosting</a></li>
                     <li class="drop-link"><a href="/ekstra---ekstra-sider" class="last">Ekstra sider</a></li>
                 </div>

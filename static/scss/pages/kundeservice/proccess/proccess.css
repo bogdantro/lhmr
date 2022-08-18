@@ -1,26 +1,17 @@
 .cover {
   height: 480px;
 }
-
 .cover .content .cover-image-div {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: relative;
   top: 50px;
 }
-
 .cover .content .cover-image-div img {
   margin-block: 15px;
   height: auto;
   width: 98%;
   max-width: 400px;
-}
-/*# sourceMappingURL=proccess.css.map */
+}/*# sourceMappingURL=proccess.css.map */

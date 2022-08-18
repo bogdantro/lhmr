@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/scss/pages/page.css' %}" type="text/css">
+
+<div class="page">
+    <link rel="stylesheet" href="{% static '/scss/pages/edit.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '/scss/forms/form.css' %}" type="text/css">
+
+    <div class="forum-add-post page-for-form">
+        <form action="{% url 'forum_add' %}" method="POST">
+           <h1 class="heading">Skriv et innlegg i forum</h1>
+           {% csrf_token %}
+           <br>
+           {{ form.errors }}
+            <div class="inputs-labels">
+               <label for="email">Tittel</label>
+               <br>
+               <input type="title" name="title" required oninvalid="this.setCustomValidity('Værsåsnill, skirv inn tittel')" oninput="this.setCustomValidity('')">      
+               <br>
+               <br>
+               <label for="order_id">Beskrivelse</label>
+               <br>
+               <textarea type="text" name="text" required oninvalid="this.setCustomValidity('Værsåsnill, skirv inn beskrivelse')" oninput="this.setCustomValidity('')"></textarea>      
+               <br>
+               <br>
+               <label for="order_id">Skrevet av</label>
+               <br>
+               <input type="author" name="author" value="{{request.user.username}}"  required oninvalid="this.setCustomValidity('Værsåsnill, skriv hvem som skrev dette innleget')" oninput="this.setCustomValidity('')">      
+               <br>
+               <br>
+              </div>
+            <div class="form-actions">
+              <button type="submit" name="edit" value="edit">Legg ut</button>
+            </div>
+          </form>
+       </div>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+.forum-post-detail {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 15px;
+  padding-top: 100px;
+}
+.forum-post-detail .content {
+  width: 100%;
+  padding: 8px;
+}
+.forum-post-detail .content .post-detail {
+  width: 100%;
+  position: relative;
+}
+.forum-post-detail .content .post-detail .row-one {
+  margin-bottom: 10px;
+}
+.forum-post-detail .content .post-detail .row-one .forum-post-detail-author {
+  letter-spacing: 0.2px;
+  opacity: 0.8;
+  box-sizing: border-box;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  height: auto;
+  width: auto;
+}
+.forum-post-detail .content .post-detail .row-two {
+  margin-top: 10px;
+}
+.forum-post-detail .content .post-detail .actions {
+  display: flex;
+  width: 100%;
+}
+.forum-post-detail .content .post-detail .actions a {
+  margin-inline: 10px;
+}
+.forum-post-detail .content .post-detail .actions a:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}/*# sourceMappingURL=forum_detail.css.map */

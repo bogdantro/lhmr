@@ -62,19 +62,149 @@ function backToTop(){
 }
 
 
-function ecoScroll(){
+// function ecoScroll(){
+//     const sidebar = document.getElementById('sidebar');
+//     const logo = document.getElementById('logo');
+//     const mobileNav = document.getElementById('mobileNav ');
+//     const hamburger = document.getElementById('hamburger');
+//     const sidebarLi = document.getElementById('sidebarLi');
+
+//     const productChoose = document.getElementById('chooseTypeOfProductFlex');
+//     const ecoChoose = document.getElementById('chooseTypeOfProductEcoFlex');
+//     const persChoose = document.getElementById('chooseTypeOfProductPersFlex');
+//     const blogChoose = document.getElementById('chooseTypeOfProductBlogFlex');
+
+//     const productIsSmall = document.getElementById('productIsSmall');
+
+//     const pricesToggle = document.getElementById('pricesToggle');
+//     const prices = document.getElementById('pricesDropdown');
+//     const about = document.getElementById('aboutDropdown');
+//     const help = document.getElementById('helpDropdown');
+  
+//     const pricesToggleExtra = document.getElementById('pricesToggleExtra');
+//     const pricesExtraDiv = document.getElementById('pricesExtraDiv');
+  
+//     const aboutToggle = document.getElementById('aboutToggle');
+//     const helpToggle = document.getElementById('helpToggle');
+//     const accountToggle = document.getElementById('accountToggle');
+
+//     if(location.pathname=="/"){
+//         productChoose.classList.add('hide')
+//         ecoChoose.classList.add('show')
+//         blogChoose.classList.remove('show')
+//         persChoose.classList.remove('show')
+    
+//         productIsSmall.classList.add('active')
+//         setTimeout(() => {
+//             productIsSmall.classList.add('scale')
+//         }, 40);
+      
+//         hamburger.classList.remove('click')  
+//         sidebar.classList.remove('active')
+//         sidebarLi.classList.remove('active')
+//         logo.classList.remove('menu-click')
+
+//         prices.classList.remove('active')
+//         about.classList.remove('active')
+//         help.classList.remove('active')
+//         pricesToggle.classList.add('click')
+//         aboutToggle.classList.remove('click')
+//         helpToggle.classList.remove('click')
+//         accountToggle.classList.remove('click')
+//         prices.classList.remove('active')
+//         pricesToggle.classList.remove('click')
+//         pricesExtraDiv.classList.remove('active')
+//         pricesToggleExtra.classList.remove('click')
+      
+//         setTimeout(function(){
+//           window.location.href='#prices';
+//         }, 50);
+//     }else{
+//         mobileNav.classList.remove('menu') 
+//         hamburger.classList.remove('click')  
+//         sidebar.classList.remove('active')
+//         sidebarLi.classList.remove('active')
+//         logo.classList.remove('menu-click')
+      
+//         setTimeout(function(){
+//           window.location.href='#prices';
+//         }, 50);
+//     }
+//   }
+// function blogScroll(){
+//     const sidebar = document.getElementById('sidebar');
+//     const logo = document.getElementById('logo');
+//     const mobileNav = document.getElementById('mobileNav ');
+//     const hamburger = document.getElementById('hamburger');
+//     const sidebarLi = document.getElementById('sidebarLi');
+
+//     const productChoose = document.getElementById('chooseTypeOfProductFlex');
+//     const blogChoose = document.getElementById('chooseTypeOfProductBlogFlex');
+//     const ecoChoose = document.getElementById('chooseTypeOfProductEcoFlex');
+//     const persChoose = document.getElementById('chooseTypeOfProductPersFlex');
+
+//     const pricesToggle = document.getElementById('pricesToggle');
+//     const prices = document.getElementById('pricesDropdown');
+//     const about = document.getElementById('aboutDropdown');
+//     const help = document.getElementById('helpDropdown');
+  
+//     const pricesToggleExtra = document.getElementById('pricesToggleExtra');
+//     const pricesExtraDiv = document.getElementById('pricesExtraDiv');
+  
+//     const aboutToggle = document.getElementById('aboutToggle');
+//     const helpToggle = document.getElementById('helpToggle');
+//     const accountToggle = document.getElementById('accountToggle');
+
+//     if(location.pathname=="/"){
+//         productChoose.classList.add('hide')
+//         ecoChoose.classList.add('show')
+//         blogChoose.classList.remove('show')
+//         persChoose.classList.remove('show')
+    
+//         productIsSmall.classList.add('active')
+//         setTimeout(() => {
+//             productIsSmall.classList.add('scale')
+//         }, 40);
+      
+//         mobileNav.classList.remove('menu') 
+//         hamburger.classList.remove('click')  
+//         sidebar.classList.remove('active')
+//         sidebarLi.classList.remove('active')
+//         logo.classList.remove('menu-click')
+
+//         prices.classList.remove('active')
+//         about.classList.remove('active')
+//         help.classList.remove('active')
+//         pricesToggle.classList.add('click')
+//         aboutToggle.classList.remove('click')
+//         helpToggle.classList.remove('click')
+//         accountToggle.classList.remove('click')
+//         prices.classList.remove('active')
+//         pricesToggle.classList.remove('click')
+//         pricesExtraDiv.classList.remove('active')
+//         pricesToggleExtra.classList.remove('click')
+      
+//         setTimeout(function(){
+//           window.location.href='#prices';
+//         }, 50);
+//     }else{
+//         mobileNav.classList.remove('menu') 
+//         hamburger.classList.remove('click')  
+//         sidebar.classList.remove('active')
+//         sidebarLi.classList.remove('active')
+//         logo.classList.remove('menu-click')
+      
+//         setTimeout(function(){
+//           window.location.href='#prices';
+//         }, 50);
+//     }
+//   }
+function pricesScroll(){
     const sidebar = document.getElementById('sidebar');
     const logo = document.getElementById('logo');
-    const navbar = document.getElementById('navbar');
+    const mobileNav = document.getElementById('mobileNav');
     const hamburger = document.getElementById('hamburger');
     const sidebarLi = document.getElementById('sidebarLi');
-
-    const productChoose = document.getElementById('chooseTypeOfProductFlex');
-    const ecoChoose = document.getElementById('chooseTypeOfProductEcoFlex');
-    const persChoose = document.getElementById('chooseTypeOfProductPersFlex');
-    const blogChoose = document.getElementById('chooseTypeOfProductBlogFlex');
-
-    const productIsSmall = document.getElementById('productIsSmall');
 
     const pricesToggle = document.getElementById('pricesToggle');
     const prices = document.getElementById('pricesDropdown');
@@ -84,22 +214,10 @@ function ecoScroll(){
     const pricesToggleExtra = document.getElementById('pricesToggleExtra');
     const pricesExtraDiv = document.getElementById('pricesExtraDiv');
   
-    const aboutToggle = document.getElementById('aboutToggle');
-    const helpToggle = document.getElementById('helpToggle');
-    const accountToggle = document.getElementById('accountToggle');
 
     if(location.pathname=="/"){
-        productChoose.classList.add('hide')
-        ecoChoose.classList.add('show')
-        blogChoose.classList.remove('show')
-        persChoose.classList.remove('show')
-    
-        productIsSmall.classList.add('active')
-        setTimeout(() => {
-            productIsSmall.classList.add('scale')
-        }, 40);
       
-        navbar.classList.remove('menu') 
+        mobileNav.classList.remove('menu') 
         hamburger.classList.remove('click')  
         sidebar.classList.remove('active')
         sidebarLi.classList.remove('active')
@@ -109,9 +227,6 @@ function ecoScroll(){
         about.classList.remove('active')
         help.classList.remove('active')
         pricesToggle.classList.add('click')
-        aboutToggle.classList.remove('click')
-        helpToggle.classList.remove('click')
-        accountToggle.classList.remove('click')
         prices.classList.remove('active')
         pricesToggle.classList.remove('click')
         pricesExtraDiv.classList.remove('active')
@@ -121,143 +236,7 @@ function ecoScroll(){
           window.location.href='#prices';
         }, 50);
     }else{
-        navbar.classList.remove('menu') 
-        hamburger.classList.remove('click')  
-        sidebar.classList.remove('active')
-        sidebarLi.classList.remove('active')
-        logo.classList.remove('menu-click')
-      
-        setTimeout(function(){
-          window.location.href='#prices';
-        }, 50);
-    }
-  }
-function blogScroll(){
-    const sidebar = document.getElementById('sidebar');
-    const logo = document.getElementById('logo');
-    const navbar = document.getElementById('navbar');
-    const hamburger = document.getElementById('hamburger');
-    const sidebarLi = document.getElementById('sidebarLi');
-
-    const productChoose = document.getElementById('chooseTypeOfProductFlex');
-    const blogChoose = document.getElementById('chooseTypeOfProductBlogFlex');
-    const ecoChoose = document.getElementById('chooseTypeOfProductEcoFlex');
-    const persChoose = document.getElementById('chooseTypeOfProductPersFlex');
-
-    const pricesToggle = document.getElementById('pricesToggle');
-    const prices = document.getElementById('pricesDropdown');
-    const about = document.getElementById('aboutDropdown');
-    const help = document.getElementById('helpDropdown');
-  
-    const pricesToggleExtra = document.getElementById('pricesToggleExtra');
-    const pricesExtraDiv = document.getElementById('pricesExtraDiv');
-  
-    const aboutToggle = document.getElementById('aboutToggle');
-    const helpToggle = document.getElementById('helpToggle');
-    const accountToggle = document.getElementById('accountToggle');
-
-    if(location.pathname=="/"){
-        productChoose.classList.add('hide')
-        ecoChoose.classList.add('show')
-        blogChoose.classList.remove('show')
-        persChoose.classList.remove('show')
-    
-        productIsSmall.classList.add('active')
-        setTimeout(() => {
-            productIsSmall.classList.add('scale')
-        }, 40);
-      
-        navbar.classList.remove('menu') 
-        hamburger.classList.remove('click')  
-        sidebar.classList.remove('active')
-        sidebarLi.classList.remove('active')
-        logo.classList.remove('menu-click')
-
-        prices.classList.remove('active')
-        about.classList.remove('active')
-        help.classList.remove('active')
-        pricesToggle.classList.add('click')
-        aboutToggle.classList.remove('click')
-        helpToggle.classList.remove('click')
-        accountToggle.classList.remove('click')
-        prices.classList.remove('active')
-        pricesToggle.classList.remove('click')
-        pricesExtraDiv.classList.remove('active')
-        pricesToggleExtra.classList.remove('click')
-      
-        setTimeout(function(){
-          window.location.href='#prices';
-        }, 50);
-    }else{
-        navbar.classList.remove('menu') 
-        hamburger.classList.remove('click')  
-        sidebar.classList.remove('active')
-        sidebarLi.classList.remove('active')
-        logo.classList.remove('menu-click')
-      
-        setTimeout(function(){
-          window.location.href='#prices';
-        }, 50);
-    }
-  }
-function persScroll(){
-    const sidebar = document.getElementById('sidebar');
-    const logo = document.getElementById('logo');
-    const navbar = document.getElementById('navbar');
-    const hamburger = document.getElementById('hamburger');
-    const sidebarLi = document.getElementById('sidebarLi');
-
-    const productChoose = document.getElementById('chooseTypeOfProductFlex');
-    const persChoose = document.getElementById('chooseTypeOfProductPersFlex');
-    const blogChoose = document.getElementById('chooseTypeOfProductBlogFlex');
-    const ecoChoose = document.getElementById('chooseTypeOfProductEcoFlex');
-
-    const pricesToggle = document.getElementById('pricesToggle');
-    const prices = document.getElementById('pricesDropdown');
-    const about = document.getElementById('aboutDropdown');
-    const help = document.getElementById('helpDropdown');
-  
-    const pricesToggleExtra = document.getElementById('pricesToggleExtra');
-    const pricesExtraDiv = document.getElementById('pricesExtraDiv');
-  
-    const aboutToggle = document.getElementById('aboutToggle');
-    const helpToggle = document.getElementById('helpToggle');
-    const accountToggle = document.getElementById('accountToggle');
-
-    if(location.pathname=="/"){
-        productChoose.classList.add('hide')
-        ecoChoose.classList.add('show')
-        blogChoose.classList.remove('show')
-        persChoose.classList.remove('show')
-    
-        productIsSmall.classList.add('active')
-        setTimeout(() => {
-            productIsSmall.classList.add('scale')
-        }, 40);
-      
-        navbar.classList.remove('menu') 
-        hamburger.classList.remove('click')  
-        sidebar.classList.remove('active')
-        sidebarLi.classList.remove('active')
-        logo.classList.remove('menu-click')
-
-        prices.classList.remove('active')
-        about.classList.remove('active')
-        help.classList.remove('active')
-        pricesToggle.classList.add('click')
-        aboutToggle.classList.remove('click')
-        helpToggle.classList.remove('click')
-        accountToggle.classList.remove('click')
-        prices.classList.remove('active')
-        pricesToggle.classList.remove('click')
-        pricesExtraDiv.classList.remove('active')
-        pricesToggleExtra.classList.remove('click')
-      
-        setTimeout(function(){
-          window.location.href='#prices';
-        }, 50);
-    }else{
-        navbar.classList.remove('menu') 
+        mobileNav.classList.remove('menu') 
         hamburger.classList.remove('click')  
         sidebar.classList.remove('active')
         sidebarLi.classList.remove('active')

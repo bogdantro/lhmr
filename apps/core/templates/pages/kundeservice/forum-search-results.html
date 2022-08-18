@@ -1,0 +1,110 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/scss/pages/page.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/scss/pages/kundeservice/forum/forum_search.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/scss/pages/kundeservice/forum/forum.css' %}" type="text/css">
+
+<div class="page">
+   <!-- COVER -->
+   <div class="cover" id="cover">
+      <!-- ALL COVER CONENT -->
+      <div class="content">
+         <!-- COVER SECTION 1 -->
+         <div class="cover-section1">
+            <!-- ALL COVER TEXT -->
+            <div class="text">
+                {% if query %} 
+                {% if results %}
+                <p class="cover-p" style="margin-top: -50px;">Søkeresultat for "{{query}}"</p>
+               {% else %}
+               <h1 class="cover-h1" style="font-size: 40px;">Vi fant desverre ingenting...</h1>
+               <div id="searchBar">
+                    <form id="searchForm" action="{% url 'forum_search_post' %}" method="GET">
+                        {% csrf_token %}
+                        <input
+                        type="text"
+                        placeholder="Prøv å endre på søket ditt"
+                        name="q"
+                        />
+                        <button type="submit" id="btn">
+                        <i class="fad fa-arrow-alt-from-left"></i>            
+                        </button>
+                    </form>
+                </div>  
+                <div class="forum-not-found">
+                    <p>Eller</p>
+                    <!-- if user is logged in -->
+                    {% if request.user.is_authenticated %}
+                    <button onclick="window.location.href='forum/legg-ut-et-innlegg'" class="secondary">Legg ut et innlegg</button>
+                    <!-- if user is not logged in -->
+                    {% else %}
+                    <p>Du må <a class="link" href="/logg-inn"> logge inn</a> for å skrive et innlegg</p>
+                    {% endif %}
+                </div>
+               {% endif %}
+               {% else %}
+               <h1 class="cover-h1" style="font-size: 40px;">Har du huska å skrive?</h1>
+               <div id="searchBar">
+                <form id="searchForm" action="{% url 'forum_search_post' %}" method="GET">
+                    {% csrf_token %}
+                    <input
+                    type="text"
+                    placeholder="Prøv å endre på søket ditt"
+                    name="q"
+                    />
+                    <button type="submit" id="btn">
+                    <i class="fad fa-arrow-alt-from-left"></i>            
+                    </button>
+                </form>
+            </div> 
+               {% endif %}
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="forum-search">
+        {% if query %} 
+            {% if results %}
+                    <!-- header -->
+                    <div class="header">
+                    <!-- user -->
+                    <div class="user">
+                    <!-- if user is logged in -->
+                    {% if request.user.is_authenticated %}
+                    <span>Logget inn som <strong>{{ request.user.username }}</strong></span>
+                    <a href="/forum/legg-ut-et-innlegg">Skriv et innlegg</a>
+                    {% else %}
+                    <!-- if user is not logged in -->
+                    <span>Logg inn for å skrive i forum</span>
+                    <a href="/logg-inn">Logg inn</a>
+                    {% endif %}
+                    </div>
+                </div>
+                <hr>
+                {% for forum_post in results %}
+                <div class="forum-search-result">
+                    <div class="result">
+                        <p class="post-title" onclick="window.location.href='{% url  'forum_post_detail' forum_post.pk  %}'">{{forum_post.title}}</p>
+                        <p class="post-text">{{forum_post.text}}</p>
+                        <div class="bottom">
+                            <p>Skrevet av <strong>{{ forum_post.author }}</strong> {{ forum_post.created_at | date:"d F Y" }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="need-more-help">
+                    <h1>Ikke det du leter etter?</h1>
+                    {% if request.user.is_authenticated %}
+                    <a href="/forum/legg-ut-et-innlegg">Skriv et innlegg</a>
+                    {% else %}
+                    <a href="/logg-inn">Logg inn for å skrive et innlegg</a>
+                    {% endif %}
+                    <a href="/kontakt-oss">Kontakt oss</a>
+                </div>
+            {% endif %}
+        {% endif %}
+   </div>
+</div>
+{% endblock %}

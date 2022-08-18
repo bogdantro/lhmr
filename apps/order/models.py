@@ -14,7 +14,7 @@ class Order(models.Model):
     product = models.CharField(max_length=50)
     short_name = models.CharField(max_length=50, blank=True)
     product_price = models.FloatField(max_length=300, default=0)
-    tag = models.CharField(max_length=150)
+    tag = models.CharField(max_length=150, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     paid = models.BooleanField(default=False)
     hosting = models.BooleanField(default=False)

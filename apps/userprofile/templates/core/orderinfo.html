@@ -4,131 +4,60 @@
 {% block content %}
 <link rel="stylesheet" href="{% static '/scss/userprofile/orderinfo.css' %}" type="text/css">
 <script rel="stylesheet" src="{% static '/js/orderinfo.js' %}" type="text/javascript"></script>
+<link rel="stylesheet" href="{% static '/scss/pages/page.css' %}" type="text/css">
 
-<div class="order-full-info" id="orderFullInfo">
-    <div class="content">       
-        <h1 class="heading"><i class="fa-solid fa-angle-left" onclick="window.location.href='/min-bruker'"></i>&nbsp;&nbsp;&nbsp;Bestilling Info</h1>
-        <div class="order-info-progress">
-            <div class="row-one">
-                <ul class="progress_bar">
-                    {% if order.status_5 %}
-                    <div class="last-child-afterone five">
-                        <li class="current"><span></span></li>
-                        <li><span></span></li>
-                        <li><span></span></li>
-                        <li><span></span></li>
-                    </div>
-                    {% endif %}
-                    {% if order.status_4 %}
-                    <div class="last-child-afterone four">
-                        <li class='activated'><span></span></li>
-                        <li class="current"><span></span></li>
-                        <li><span></span></li>
-                        <li><span></span></li>
-                    </div>
-                    {% endif %}
-                    {% if order.status_3 %}
-                    <div class="last-child-afterone three">
-                        <li class='activated'><span></span></li>
-                        <li class='activated'><span></span></li>
-                        <li class="current"><span></span></li>
-                        <li><span></span></li>
-                    </div>
-                    {% endif %}
-                    {% if order.status_2 %}
-                    <div class="last-child-afterone two">
-                        <li class='activated'><span></span></li>
-                        <li class='activated'><span></span></li>
-                        <li class='activated'><span></span></li>
-                        <li class="current"><span></span></li> 
-                    </div>
-                    {% endif %}
-                    {% if order.status_1 %}
-                        <li class='activated'><span></span></li>
-                        <li class='activated'><span></span></li>
-                        <li class='activated'><span></span></li>
-                        <li class='activated'><span></span></li>
-                    {% endif %}
-                </ul>
-            </div>
-            <div class="row-two">
-                {% if order.status_1 %}
-                    <p class="one">Vi har motatt bestillingen...</p>
-                {% endif %}    
-                {% if order.status_2 %}
-                    <p class="two">Vi har starta designen</p>
-                {% endif %}    
-                {% if order.status_3 %}
-                    <p class="three">Designen er fullført</p>
-                    <p class="three">Venter på betaling...</p>
-                {% endif %}    
-                {% if order.status_4 %}
-                    <p class="four">Du har betalt!</p>
-                    <p class="four">Vi har starta å lage nettsiden</p>
-                {% endif %}    
-                {% if order.status_5 %}
-                    <p class="five">Alt er fullført!</p>
-                {% endif %}    
-            </div>
-        </div>
-        <hr>
-        <div class="order-rest-info">
-            <div class="content-rest-info">
-                <div class="row-one">
-                    <h1>Bestilling ID: &nbsp;<span>{{order.id}}</span></h1>
-                    <h1>Bestillt: &nbsp;<span>{{order.created_at | date:"d F Y"}}</span></h1>
-                </div>
-                <hr>
-                <div class="row-two">
-                    <div class="is-payed">
-                        <h1>Betalt: &nbsp;</h1>
-                        {% if order.paid %}
-                        <div class="icon">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                        {% else %}
-                        <div class="icon-x">
-                            <i class="fa-solid fa-xmark"></i>
-                        </div>
-                        {% endif %}  
-                    </div>
-                    <div class="is-hosting">
-                        <h1>Hosting: &nbsp;</h1>
-                        {% if order.hosting %}
-                        <div class="icon">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                        {% else %}
-                            <div class="icon-x">
-                                <i class="fa-solid fa-xmark"></i>
-                            </div>
-                            {% endif %}  
-                    </div>
-                </div>
-                <hr>
-                <div class="row-three">
-                    <div class="after-14-days">
-                        <div class="flex">
-                            <h1>Gratis endringer: &nbsp;</h1>
-                            {% if order.after_14_days %}
-                            <div class="icon-x">
-                                <i class="fa-solid fa-xmark"></i>
-                            </div>
-                            {% else %}
-                            <div class="icon">
-                                <i class="fa-solid fa-check"></i>
-                            </div>
-                            {% endif %} 
-                        </div>
-                        {% if order.is_finished %}
-                            <button onclick="window.location.href='/sporr-om-endringer'">Spørr om endringer</button>
-                        {% else %}
-                            <div class="alert alert-info">Du kan spørre om endringer på nettsiden her, da alt er fullført</div>   
-                        {% endif %}
-                    </div>
-                </div>
+<div class="page">
+    <!-- COVER -->
+    <div class="cover" id="cover" style="margin-block: 0; margin-bottom: 0;">
+    <!-- ALL COVER CONENT -->
+    <div class="content">
+       <!-- COVER SECTION 1 -->
+       <div class="cover-section1">
+          <!-- ALL COVER TEXT -->
+          <div class="text">
+             <h1 class="cover-h1"><i class="fa-solid fa-angle-left" onclick="window.location.href='/min-bruker'"></i>Bestilling Status</h1>
             </div>
         </div>
     </div>
+ </div>
+ 
+ <div class="order-full-info" id="orderFullInfo">
+     <div class="content">       
+        <div class="rows">
+            <div class="row-one">
+                <p class="small-paragraph">Bestillt: <strong>{{order.created_at | date:"d F Y"}}</strong></p>
+                {% if order.status_1 %}
+                <p class="small-paragraph">Status: <strong>Behandler</strong></p>
+                {% endif %}
+            </div>
+            <div class="row-two">
+                <p class="small-paragraph">Bestilling ID: <strong>{{order.id}}</strong></p>
+                {% if order.paid %}
+                    <p class="small-paragraph">Betalt: <i class="fa-solid fa-check"></i></p>
+                {% else %}
+                    <p class="small-paragraph">Betalt: <i class="fa-solid fa-xmark"></i></p>
+                {% endif %}  
+                {% if order.hosting %}
+                    <p class="small-paragraph">Hosting: <i class="fa-solid fa-check"></i></p>
+                {% else %}
+                    <p class="small-paragraph">Hosting: <i class="fa-solid fa-xmark"></i></p>
+                {% endif %}   
+                {% if order.after_14_days %}
+                <p class="small-paragraph">Gratis endringer: <i class="fa-solid fa-check"></i></p>
+                {% else %}
+                <p class="small-paragraph">Gratis endringer: <i class="fa-solid fa-xmark"></i></p>
+                {% endif %} 
+            </div>
+            <div class="row-three">
+                {% if order.is_finished %}
+                    <p class="small-paragraph">Bestillingen er fullført</p>
+                    <a href="" class="small-mmodern-link">Spørr om endringer</a>
+                {% else %}
+                    <p class="small-paragraph">Bestillingen er ikke fullført</p>
+                {% endif %}
+            </div>
+    </div>
+</div>
+</div>
 </div>
 {% endblock %}

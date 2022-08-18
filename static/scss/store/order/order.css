@@ -2,32 +2,23 @@
   font-size: 13px;
   font-weight: 800;
 }
-
 .make-order #makeOrder .inputs-labels .product-input.active {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-
 .make-order #makeOrder .inputs-labels .product-input:active {
-  background: #d5edff9a;
+  background: rgba(213, 237, 255, 0.6039215686);
 }
-
 .make-order #makeOrder .inputs-labels .product-arrow {
-  -webkit-transform: translateX(-25px) translateY(-2px);
-          transform: translateX(-25px) translateY(-2px);
+  transform: translateX(-25px) translateY(-2px);
   font-size: 16px;
-  -webkit-transition: .2s !important;
-  transition: .2s !important;
+  transition: 0.2s !important;
 }
-
 .make-order #makeOrder .inputs-labels .product-arrow.active {
-  -webkit-transform: rotateX(180deg) translateX(-25px) translateY(-4px);
-          transform: rotateX(180deg) translateX(-25px) translateY(-4px);
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
+  transform: rotateX(180deg) translateX(-25px) translateY(-4px);
+  transform-origin: center center;
   color: #4287f5;
 }
-
 .make-order #makeOrder .inputs-labels .product-dropdown {
   position: relative;
   width: 82%;
@@ -37,10 +28,9 @@
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   display: none;
-  border: 2px solid #0089f915;
+  border: 2px solid rgba(0, 137, 249, 0.0823529412);
   border-top: none;
 }
-
 .make-order #makeOrder .inputs-labels .product-dropdown a {
   color: #082133;
   display: inline-block;
@@ -52,44 +42,34 @@
   padding-left: 5px;
   cursor: pointer;
 }
-
 .make-order #makeOrder .inputs-labels .product-dropdown a span {
   color: #0088F9;
   float: right;
   font-size: 12px;
-  -webkit-transform: translateY(2px) translateX(-10px);
-          transform: translateY(2px) translateX(-10px);
+  transform: translateY(2px) translateX(-10px);
 }
-
 .make-order #makeOrder .inputs-labels .product-dropdown a:hover {
-  background: #d5edff4b;
+  background: rgba(213, 237, 255, 0.2941176471);
 }
-
 .make-order #makeOrder .inputs-labels .product-dropdown a:active {
-  background: #d5edff9a;
+  background: rgba(213, 237, 255, 0.6039215686);
 }
-
 .make-order #makeOrder .inputs-labels .product-dropdown a::after {
-  content: '';
+  content: "";
   display: block;
   height: 1px;
   width: 100%;
   background: rgba(0, 0, 0, 0.17);
-  -webkit-transform: translateY(19px) translateX(0);
-          transform: translateY(19px) translateX(0);
+  transform: translateY(19px) translateX(0);
   position: absolute;
   left: 0;
 }
-
 .make-order #makeOrder .inputs-labels .product-dropdown a:nth-child(5) {
   border-radius: 4px;
 }
-
 .make-order #makeOrder .inputs-labels .product-dropdown a:nth-child(5)::after {
   display: none;
 }
-
 .make-order #makeOrder .inputs-labels .product-dropdown.active {
   display: block;
-}
-/*# sourceMappingURL=order.css.map */
+}/*# sourceMappingURL=order.css.map */
