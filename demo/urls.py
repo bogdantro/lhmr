@@ -9,7 +9,6 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.auth import views
 from apps.userprofile.views import *
-from apps.order.views import *
 from apps.newsletter.api import api_add_subscriber
 
 
