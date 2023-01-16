@@ -1,0 +1,35 @@
+// standard phone
+.email-success{
+    padding-top: 110px;
+    position: relative;
+    width: 100%;
+    .content{
+      width: 100%;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      padding-inline: 10px;
+      button{
+        margin: 10px;
+      }
+      h1{
+        margin-block: 30px;
+        color: #183B56;
+        text-shadow: 1px 0 #183B56;
+        font-weight: 800;
+        font-size: 2.25rem;
+        line-height: 2.8125rem;
+        letter-spacing: -1px;
+      }
+      p{
+        margin-block: 30px;
+        box-sizing: border-box;
+        color: rgb(90, 115, 134);
+        display: block;
+        font-family: Inter, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }

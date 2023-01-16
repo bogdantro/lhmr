@@ -4,77 +4,102 @@
 
 {% block content %}
 <link rel="stylesheet" href="{% static '/scss/store/order/order.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/scss/pages/page.css' %}" type="text/css">
 <link rel="stylesheet" href="{% static '/scss/forms/form.css' %}" type="text/css">
 <script rel="stylesheet" src="{% static '/js/order.js' %}" type="text/javascript"></script>
 
-
-<!-- LOADER
-<div class="load-wrapp" id="orderLoader">
-    <div class="load-2">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-</div> -->
-
-
-<!-- MAKE ORDER -->
-<div class="make-order page-for-form">
-    <form method='post' id="makeOrder" enctype="multipart/form-data">
-       <h1 class="heading">Start Bestilling</h1>
-        {% if request.user.is_authenticated %}
-        {% csrf_token %}
-        {{form.errors}}
-        <br>
-             <!-- ORDER FORM INPUTS -->
-             <div class="inputs-labels">
-                <input type="text" name="product_price" id="product_price" style="display:none;">
-                <input type="text" name="tag" id="tag" style="display:none;">
-                <input type="text" name="user_html" id="user_html" value="{{request.user}}" style="display: none;">
-               <!-- PRODUCT -->
-               <label for="product">Velg nettside</label>
-               <br>
-               <input type="text" name="product" class="product-input" id="product" readonly onclick="productDropdown()" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')"><i class="fas fa-sort-down product-arrow" id="productArrow"></i>
-               <!-- PRODUCT DROPDOWN -->
-               <div class="product-dropdown" id="productDrop">
-                  <a onclick="smallPack()">Nettbutikk/eCommerce <span>LITEN</span></a>
-                  <a onclick="middlePack()">Nettbutikk/eCommerce <span>MIDDELS</span></a>
-                  <a onclick="bigPack()">Nettbutikk/eCommerce <span>STOR</span></a>
-                  <a onclick="blogPrPack()">Blogg</a>
-                  <a onclick="persPrPack()">Personlig nettside</a>
-               </div>
-               <br>
-               <br>
-               <!-- NAME -->
-               <label for="name">Navn</label>
-               <br>
-               <input type="text" id="name" name="name" value="{{ request.user.first_name }}" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
-               <br>
-               <br>
-               <!-- EMAIL -->
-               <label for="email">Epost</label>
-               <br>
-               <input type="email" id="email" name="email" value="{{ request.user.email }}" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
-               <br>
-               <br>
-               <!-- MESSAGE -->
-               <label for="message">Har du noe å fortelle oss?</label>
-               <br>
-               <textarea id="message" name="message"></textarea>
-               <br>
-             </div> 
-            <div class="form-actions">
-                <button onclick="orderLoading()" class="primary" name="order" value="order" type='submit'>Send bestillingen</button>
-            </div>
-        {% else %}
-        <br>
-            <div class="order-not-login">
-                <div class="alert alert-warning">
-                    <p>Vi anbefaller at du logger inn før du sender inn bestillingen</p>
-                    <a href="/logg-inn">Logg inn</a> &nbsp;&nbsp; <a href="/lag-bruker">Lag bruker</a>
+<div class="page">
+    <div class="order-page">
+        <div class="width" style="position: relative;">
+            <div class="content" style="position: relative;">
+                <!-- MAKE ORDER -->
+                <div class="make-order page-for-form">
+                    <form method='post' id="makeOrder" enctype="multipart/form-data">
+                    <h1 class="heading">Start Bestilling</h1>
+                        {% if request.user.is_authenticated %}
+                        {% csrf_token %}
+                        {{form.errors}}
+                        <br>
+                            <!-- ORDER FORM INPUTS -->
+                            <div class="inputs-labels">
+                                <input type="text" name="product_price" id="product_price" style="display:none;">
+                                <input type="text" name="tag" id="tag" style="display:none;">
+                                <input type="text" name="user_html" id="user_html" value="{{request.user}}" style="display: none;">
+                            <!-- PRODUCT -->
+                            <label for="product">Velg nettside</label>
+                            <br>
+                            <input type="text" name="product" class="product-input" id="product" readonly onclick="productDropdown()" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')"><i class="fas fa-sort-down product-arrow" id="productArrow"></i>
+                            <!-- PRODUCT DROPDOWN -->
+                            <div class="product-dropdown" id="productDrop">
+                                <a onclick="smallPack()">Nettbutikk/eCommerce <span>LITEN</span></a>
+                                <a onclick="middlePack()">Nettbutikk/eCommerce <span>MIDDELS</span></a>
+                                <a onclick="bigPack()">Nettbutikk/eCommerce <span>STOR</span></a>
+                                <a onclick="blogPrPack()">Blogg</a>
+                                <a onclick="persPrPack()">Personlig nettside</a>
+                                <a onclick="portPrPack()">Portfolio</a>
+                                <a onclick="customPrPack()">Custom</a>
+                            </div>
+                            <br>
+                            <br>
+                            <!-- NAME -->
+                            <label for="name">Navn</label>
+                            <br>
+                            <input type="text" id="name" name="name" value="{{ request.user.first_name }}" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
+                            <br>
+                            <br>
+                            <!-- EMAIL -->
+                            <label for="email">Epost</label>
+                            <br>
+                            <input type="email" id="email" name="email" value="{{ request.user.email }}" required oninvalid="this.setCustomValidity('Kan ikke være tom')" oninput="this.setCustomValidity('')">
+                            <br>
+                            <br>
+                            <!-- MESSAGE -->
+                            <label for="message">Har du noe å fortelle oss?</label>
+                            <br>
+                            <textarea id="message" name="message"></textarea>
+                            <br>
+                            </div> 
+                            <div class="form-actions">
+                                <button onclick="orderLoading()" class="primary" name="order" value="order" type='submit'>Send bestillingen</button>
+                            </div>
+                        {% else %}
+                            <div class="order-not-login">
+                                <p>Vi anbefaller at du logger inn før du sender inn bestillingen</p>
+                                <br>
+                                <a href="/logg-inn">Logg inn</a> &nbsp;&nbsp; <a href="/lag-bruker">Lag bruker</a>
+                            </div>
+                        {% endif %}
+                    </form>
                 </div>
+                {% if request.user.is_authenticated %}
+                <div class="order-guarantee">
+                    <h1>Før du bestiller...</h1>
+                    <p>
+                        Etter bestillingen har blitt motatt så skal du bli kontaktet av våres designere. Der skal dere sammen komme frem til en design som du elsker!
+                        <br>
+                        <br>
+                        Som kunde hos oss, sørger vi at du har den beste kjøpsopplevelse. Vi skal guide deg gjennom hele prossesen.
+                        <br>
+                        <br>
+                        <span style="opacity: 0.7;">
+                        OBS: Vi har mange bestillinger for tiden. Det kan hende svar tiden er litt saktere enn vanlig. 
+                        <br>
+                        <br>
+                        Beklager for det!
+                        </span>
+                    </p>
+                </div>
+                {% else %}
+                {% endif %}
             </div>
-        {% endif %}
-    </form>
+        </div>
+    </div>
 </div>
+
+
+
+
+
+
+
 {% endblock %}

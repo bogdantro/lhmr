@@ -11,43 +11,44 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
 
-<br>
 <!-- footer -->
 <div id="footer">
-    <!-- newsletter -->
-    <!-- <div id="newsletter">
-        <h1>Bli medlem</h1>
-        <p class="paragraph" style="font-size: 14.5px;">Få nyheter om kampanjer, rabatter og mye mer! Hmmmm vi spammer ikke altså</p>
-        <form v-on:submit.prevent="onSubmit">
-            <div class="content">
-                <input type="email" v-model="email" name="email" class="input" placeholder="Din epost">
-                <button onclick="RefreshPage()"><i class="fad fa-arrow-alt-from-left"></i></button>
+    <div class="width">
+        <!-- newsletter -->
+        <!-- <div id="newsletter">
+            <h1>Bli medlem</h1>
+            <p class="paragraph" style="font-size: 14.5px;">Få nyheter om kampanjer, rabatter og mye mer! Hmmmm vi spammer ikke altså</p>
+            <form v-on:submit.prevent="onSubmit">
+                <div class="content">
+                    <input type="email" v-model="email" name="email" class="input" placeholder="Din epost">
+                    <button onclick="RefreshPage()"><i class="fad fa-arrow-alt-from-left"></i></button>
+                </div>
+            </form>
+            <div id="footerNewsLetterAlert" v-if="showSuccess">
+                <div class="alert alert-success">Epost er lagret, tusen takk!</div>
             </div>
-        </form>
-        <div id="footerNewsLetterAlert" v-if="showSuccess">
-            <div class="alert alert-success">Epost er lagret, tusen takk!</div>
+        </div> -->
+        <!-- footer links -->
+        <div class="footer-links">
+            <a href="/vilkaar-og-betingelser">Vilkår & betingelser<i class="fa-solid fa-caret-right"></i></a>
+            <a href="/policy">Policy<i class="fa-solid fa-caret-right"></i></a>
+            <a href="/tilbakebetalinger">Tilbakebetaling<i class="fa-solid fa-caret-right"></i></a>
         </div>
-    </div> -->
-    <!-- footer links -->
-    <div class="footer-links">
-        <a href="">Vilkår & betingelser<i class="fa-solid fa-caret-right"></i></a>
-        <a href="">Policy<i class="fa-solid fa-caret-right"></i></a>
-        <a href="">Tilbakebetaling<i class="fa-solid fa-caret-right"></i></a>
-    </div>
-    <hr>
-    <!-- footer bottom -->
-    <div class="footerbottom">
-         <!-- copyright -->
-        <div class="copyright">
-            <p>Copyright &#169; 2022 Webiser</p>
-        </div>
-        <!-- social icons -->
-        <div class="social-icons">
-            <!-- icons -->
-            <div class="icons">
-                <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-instagram"></i>
-                <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-tiktok"></i>
-                <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-facebook"></i>
+        <hr style="background: rgba(255, 255, 255, 0.664);">
+        <!-- footer bottom -->
+        <div class="footerbottom">
+            <!-- copyright -->
+            <div class="copyright">
+                <p>Copyright &#169; 2022 Webiser</p>
+            </div>
+            <!-- social icons -->
+            <div class="social-icons">
+                <!-- icons -->
+                <div class="icons">
+                    <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-instagram"></i>
+                    <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-tiktok"></i>
+                    <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-facebook"></i>
+                </div>
             </div>
         </div>
     </div>

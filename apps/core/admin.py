@@ -3,4 +3,5 @@ from .models import *
 
 # Register your models here.
 admin.site.register(Forum_post)
-admin.site.register(Discussion)
+admin.site.register(Comment)
+

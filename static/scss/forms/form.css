@@ -1,7 +1,7 @@
 .page-for-form {
   background: linear-gradient(to bottom, rgba(247, 247, 247, 0.5254901961), rgba(247, 247, 247, 0.5254901961), white);
   min-height: 88vh;
-  padding-top: 100px;
+  padding-top: 85px;
   padding-bottom: 20px;
 }
 .page-for-form form {
@@ -10,8 +10,9 @@
   width: 100%;
   max-width: 700px;
   box-shadow: unset;
-  padding: 20px;
+  padding: 20px 15px;
   position: relative;
+  height: auto;
 }
 .page-for-form form .heading {
   color: #183B56;
@@ -21,7 +22,7 @@
 }
 .page-for-form form .inputs-labels label {
   color: rgba(24, 59, 86, 0.6784313725);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 800;
 }
 .page-for-form form .inputs-labels input, .page-for-form form .inputs-labels textarea {
@@ -54,13 +55,26 @@
 }
 .page-for-form form .form-actions button {
   border-radius: 4px;
-  width: 180px;
-  font-size: 16px;
-  padding: 12px 10px;
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+  padding: 15px;
   transition: all 0.2s ease-in-out;
   color: white;
-  outline: none;
-  border: none;
-  border: none;
   background: #0082ec;
+  border: 2px solid transparent;
+}
+
+@media only screen and (min-device-width: 1145px) {
+  .form {
+    margin: unset;
+    text-align: left;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: unset;
+    padding: 20px 15px;
+    position: relative;
+    height: auto;
+    transform: translateX(90px);
+  }
 }/*# sourceMappingURL=form.css.map */

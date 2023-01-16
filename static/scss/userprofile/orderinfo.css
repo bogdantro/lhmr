@@ -1,3 +1,7 @@
+.order-info {
+  padding-top: 90px;
+}
+
 .order-full-info {
   height: auto;
   width: 100%;
@@ -6,43 +10,24 @@
 .order-full-info .content {
   text-align: left;
   width: 100%;
-  padding-top: 0;
+  padding-top: 15px;
   position: relative;
 }
-.order-full-info .content .rows {
+.order-full-info .content .order-info {
   width: 100%;
-}
-.order-full-info .content .row-one {
-  background: rgba(200, 200, 200, 0.1);
-  width: 100%;
-  padding: 8px;
-  padding-block: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.order-full-info .content .row-two {
-  width: 100%;
-  padding: 8px;
+  padding: 20px;
   padding-block: 12px;
 }
-.order-full-info .content .row-two p {
+.order-full-info .content .order-info a {
+  margin-top: -5px;
+}
+.order-full-info .content .order-info p, .order-full-info .content .order-info a {
   width: 100%;
   margin-bottom: 15px;
+  margin-left: 0;
+  padding-left: 0;
 }
-.order-full-info .content .row-two p i {
+.order-full-info .content .order-info p i, .order-full-info .content .order-info a i {
   transform: translateX(3px) translateY(1.4px);
   font-size: 14px;
-}
-.order-full-info .content .row-two p:last-child {
-  margin: 0;
-}
-.order-full-info .content .row-three {
-  width: 100%;
-  padding: 8px;
-  padding-block: 12px;
-  padding-top: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }/*# sourceMappingURL=orderinfo.css.map */

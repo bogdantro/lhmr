@@ -1,3 +1,4 @@
+from tkinter import CASCADE
 from django.db import models
 from datetime import date
 from django.forms import ModelForm
@@ -17,11 +18,22 @@ class Forum_post(models.Model):
     confirmed = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.title
+        return self.title    
 
-class Discussion(models.Model):
-    forum = models.ForeignKey(Forum_post,blank=True,on_delete=models.CASCADE)
-    discuss = models.CharField(max_length=1500)
- 
+class Comment(models.Model):
+    post = models.ForeignKey(Forum_post, related_name='comments', on_delete=models.CASCADE)
+    name = models.CharField(max_length=80)
+    email = models.EmailField(max_length=200, blank=True)
+    body = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+    # manually deactivate inappropriate comments from admin site
+    active = models.BooleanField(default=True)
+    parent = models.ForeignKey('self', null=True, blank=True, related_name='replies', on_delete=models.CASCADE)
+
+    class Meta:
+        # sort comments in chronological order by default
+        ordering = ('created',)
+
     def __str__(self):
-        return str(self.forum)    
+        return 'Comment by {}'.format(self.name)

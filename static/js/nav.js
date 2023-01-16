@@ -1,7 +1,14 @@
-window.addEventListener("scroll", function(){
-  const navbar = document.getElementById('mobileNav');
-  navbar.classList.toggle("sticky", window.scrollY > 1)
-})
+  
+  window.addEventListener("scroll", function(){
+    const navbar = document.getElementById('mobileNav');
+    navbar.classList.toggle("sticky", window.scrollY > 1)
+  })
+
+  window.addEventListener("scroll", function(){
+    const navbar = document.getElementById('desNav');
+    navbar.classList.toggle("sticky", window.scrollY > 1)
+  })
+
 
 
 /////////// MOBILE JAVASCRIPT
@@ -24,12 +31,14 @@ function menu(){
   const aboutToggle = document.getElementById('aboutToggle');
   const helpToggle = document.getElementById('helpToggle');
   const accountToggle = document.getElementById('accountToggle');
+  const body = document.getElementsByTagName('body')[0];
 
   if (window.getComputedStyle(sidebar,null).getPropertyValue("opacity") == '0'){
     navbar.classList.add('menu')  
     hamburger.classList.add('click')  
     sidebar.classList.add('active')
     backToTop.classList.add('menu-active')
+    body.style.overflowY = 'hidden';
   } else{
     backToTop.classList.remove('menu-active')
     navbar.classList.remove('menu') 
@@ -61,7 +70,6 @@ function prices(){
 
   const aboutToggle = document.getElementById('aboutToggle');
   const helpToggle = document.getElementById('helpToggle');
-  const accountToggle = document.getElementById('accountToggle');
 
 
   if (window.getComputedStyle(prices,null).getPropertyValue("display") == 'none'){
@@ -71,7 +79,6 @@ function prices(){
     pricesToggle.classList.add('click')
     aboutToggle.classList.remove('click')
     helpToggle.classList.remove('click')
-    accountToggle.classList.remove('click')
   } else{
     prices.classList.remove('active')
     pricesToggle.classList.remove('click')
@@ -101,7 +108,6 @@ function about(){
 
   const pricesToggle = document.getElementById('pricesToggle');
   const helpToggle = document.getElementById('helpToggle');
-  const accountToggle = document.getElementById('accountToggle');
 
   if (window.getComputedStyle(about,null).getPropertyValue("display") == 'none'){
     about.classList.add('active')
@@ -110,7 +116,6 @@ function about(){
     aboutToggle.classList.add('click')
     pricesToggle.classList.remove('click')
     helpToggle.classList.remove('click')
-    accountToggle.classList.remove('click')
   } else{
     about.classList.remove('active')
     aboutToggle.classList.remove('click')
@@ -125,14 +130,12 @@ function help(){
 
   const aboutToggle = document.getElementById('aboutToggle');
   const pricesToggle = document.getElementById('pricesToggle');
-  const accountToggle = document.getElementById('accountToggle');
 
   if (window.getComputedStyle(help,null).getPropertyValue("display") == 'none'){
     help.classList.add('active')
     about.classList.remove('active')
     prices.classList.remove('active')
     helpToggle.classList.add('click')
-    accountToggle.classList.remove('click')
     pricesToggle.classList.remove('click')
     aboutToggle.classList.remove('click')
   } else{

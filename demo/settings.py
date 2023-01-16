@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 
 SESSION_COOKIE_AGE = 86400
 LOGOUT_REDIRECT_URL = '/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/min-bruker'
 LOGIN_URL = '/logg-inn'
 CRISPY_TEMPLATE_PACK = 'uni_form'
 
@@ -117,12 +117,8 @@ WSGI_APPLICATION = 'demo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'webiserr',
-        'USER': 'root',
-        'PASSWORD': 'bogdan2005lfk',
-        'PORT': 3306,
-        'HOST': '127.0.0.1',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

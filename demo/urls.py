@@ -14,42 +14,16 @@ from apps.newsletter.api import api_add_subscriber
 
 
 urlpatterns = [
-    path('webiser-admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
 
     # Pages
     path('', hjemme, name="hjemme"),
     # Om oss
         path('om-webiser/', about, name='about'),
-        path('sosiale-medier/', socials, name='socials'),
-        path('sektorer/', sectors, name='sectors'),
-        path('vår-historie/', our_story, name='our_story'),
-    # Kundeservice 
-        path('prosessen-av-bestillinger/', proccess, name='proccess'),
-        path('webiser-forum/', forum, name='forum'),
-        # Søk for forum
-        path('sok/', forum_search_post, name='forum_search_post'),
-        # Forum legg til innlegg
-        path('forum/legg-ut-et-innlegg/', forum_add, name='forum_add'),
-        # Forum innleg detaljer
-        path('innlegg/:<pk>/', forum_post_detail, name='forum_post_detail'),
-
-        path('kontakt-oss/', contact, name='contact'),
-        path('progammering-spraakene/', frontend, name='frontend'),
-        path('tilbakebetalinger/', refunds, name='refunds'),
-    # Our work
-        path('vårt-arbeid/', our_work, name='our_work'),
-    # Prices 
-        path('ekstra---hosting/', hosting, name='hosting'),
-        path('ekstra---ekstra-sider/', extra_page, name='extra_page'),
-
-    # Store
-    path('produkt/:<slug>/', product_detail, name='product_detail'),
-    path('bestill/', send_order, name='send-order'),
-    path('bestilling-utfort/webiser/bestilling/', order_success, name='order_success'),
-    path('kontakt-utfort/webiser/email-kundeservice/', contact_sucess, name='contact_sucess'),
-    path('sporr-om-endringer/', request_edit, name='request_edit'),
     path('blogg/', blog, name='blog'),
     path('blog_post/<int:id>/', blog_post, name='blog_post'),
+
+    path('søke-resultater/', home_page_search, name='home_page_search'),
 
 
     # Auth
