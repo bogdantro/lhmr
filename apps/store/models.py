@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 # Create your models here.
 
@@ -31,4 +32,8 @@ class Product(models.Model):
     
     def __str__(self):
         return self.name
+
+    @property
+    def image_url(self):
+        return '%s%s' % (settings.HOST, self.image.url) if self.image else ''    
     
