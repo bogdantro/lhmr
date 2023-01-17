@@ -76,7 +76,7 @@ $txt: #183b56;
       }
       button{
         font-size: 14.5px;
-        background: red    ;
+        background: $primBtn;
         color: $white;
         text-align: center;
         width: 100%;
@@ -119,7 +119,6 @@ $txt: #183b56;
         margin: 0 25px;
         padding: 7px;
         position: relative;
-        background: white;
         .service-image{
           width: 100%;
           height: 95px;

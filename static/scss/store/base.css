@@ -84,7 +84,7 @@
 }
 .mobile-cover .content .cover-search button {
   font-size: 14.5px;
-  background: red;
+  background: #06c484;
   color: rgb(246, 246, 246);
   text-align: center;
   width: 100%;
@@ -126,7 +126,6 @@
   margin: 0 25px;
   padding: 7px;
   position: relative;
-  background: white;
 }
 .services .content .services-cards .service .service-image {
   width: 100%;
