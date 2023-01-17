@@ -26,7 +26,7 @@ class Product(models.Model):
     slug = models.SlugField(max_length=150)
     address = models.CharField(max_length=500)
     short_description = models.TextField()
-    image = models.ImageField(blank=False, default='none', upload_to='')
+    image = models.ImageField(blank=False, default='none', upload_to='other/')
     description = models.TextField()
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     
@@ -35,5 +35,5 @@ class Product(models.Model):
 
     @property
     def image_url(self):
-        return '%s%s' % (settings.HOST, self.image.url) if self.image else ''    
+        return '%s%s' % (settings.ALLOWED_HOSTS, self.image.url) if self.image else ''    
     
