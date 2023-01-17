@@ -19,42 +19,20 @@ function menu(){
   const hamburger = document.getElementById('hamburger');
   const backToTop = document.getElementById('backToTop');
 
-  const pricesToggle = document.getElementById('pricesToggle');
-  const prices = document.getElementById('pricesDropdown');
-  const about = document.getElementById('aboutDropdown');
-  const help = document.getElementById('helpDropdown');
-
-  const pricesToggleExtra = document.getElementById('pricesToggleExtra');
-  const pricesExtraDiv = document.getElementById('pricesExtraDiv');
-
-
-  const aboutToggle = document.getElementById('aboutToggle');
-  const helpToggle = document.getElementById('helpToggle');
-  const accountToggle = document.getElementById('accountToggle');
-  const body = document.getElementsByTagName('body')[0];
-
   if (window.getComputedStyle(sidebar,null).getPropertyValue("opacity") == '0'){
     navbar.classList.add('menu')  
     hamburger.classList.add('click')  
     sidebar.classList.add('active')
     backToTop.classList.add('menu-active')
-    body.style.overflowY = 'hidden';
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
   } else{
     backToTop.classList.remove('menu-active')
     navbar.classList.remove('menu') 
     hamburger.classList.remove('click')  
     sidebar.classList.remove('active')
-    prices.classList.remove('active')
-    about.classList.remove('active')
-    help.classList.remove('active')
-    pricesToggle.classList.remove('click')
-    aboutToggle.classList.remove('click')
-    helpToggle.classList.remove('click')
-    accountToggle.classList.remove('click')
-    prices.classList.remove('active')
-    pricesToggle.classList.remove('click')
-    pricesExtraDiv.classList.remove('active')
-    pricesToggleExtra.classList.remove('click')
+    document.body.style.overflow = "scroll";
+    document.documentElement.style.overflow = "scroll";
   }  
 };
 // PRICES DROPDOWN

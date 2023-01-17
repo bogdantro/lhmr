@@ -68,6 +68,19 @@ $txt: #183b56;
     // NAVBAR MENU
     &.menu{
       background: $white;
+      .logo{
+        h1{
+            color: $black;
+            span{
+                border-bottom: 1px solid $primBtn;
+            }
+        }
+    }
+    .hamburger{
+        span{
+          background: #183b56;
+        }
+    }
     }
     // right img
     .nav-hamburger-img{
@@ -88,10 +101,10 @@ $txt: #183b56;
         z-index: 1000;
         h1{
             font-size: 22px;
-            color: $black;
+            color: $white;
             font-family: 'Gamja Flower', cursive;
             span{
-                border-bottom: 1px solid $primBtn;
+                border-bottom: 1px solid $white;
                 margin-left: 4px;
                 padding-bottom: 3px;
                 font-size: 15px;
@@ -112,7 +125,7 @@ $txt: #183b56;
         span{
             height: 2px;
             width: 26px;
-            background: $txt;
+            background: $white;
             border-radius: 3px;
             display: block;
             transition: .2s;

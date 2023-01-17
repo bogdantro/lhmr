@@ -25,6 +25,7 @@ class Product(models.Model):
     slug = models.SlugField(max_length=150)
     address = models.CharField(max_length=500)
     short_description = models.TextField()
+    image = models.ImageField(blank=False, default='none', upload_to='images/product')
     description = models.TextField()
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     

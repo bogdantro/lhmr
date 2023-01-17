@@ -8,6 +8,7 @@ $txt: #183b56;
   width: 100%;
   height: max-content;
   position: relative;
+  padding-bottom: 40px;
   .cover-img-lillehammer{
     position: absolute;
     top: 0;
@@ -19,7 +20,7 @@ $txt: #183b56;
   }
   .content{
     padding-inline: 25px;
-    padding-top: 120px;
+    padding-top: 110px;
     padding-bottom: 45px;
     height: max-content;
     opacity: 0;
@@ -32,22 +33,21 @@ $txt: #183b56;
     .text{
       text-align: center;
       .cover-heading{
-        color: $black;
-        font-size: 28px;
+        color: $white;
+        font-size: 27px;
         margin-bottom: 15px;
-        font-weight: bold;
       }
       .paragraph{
         margin-top: 0;
-        color: $black;
+        color: $white;
         font-size: 16.5px;
       }
     }
     .cover-search{
       position: relative;
-      margin-top: 30px;
+      margin-top: 35px;
       padding: 25px 15px;
-      background: rgba(155, 155, 155, 0.2);
+      background: rgba(185, 185, 185, 0.15);
       i{
         position: absolute;
         font-size: 15px;
@@ -56,7 +56,7 @@ $txt: #183b56;
         top: 43px;
         padding: 7px;
         margin: -7px;
-        background: rgba(160, 160, 160, 0.2);
+        background: rgba(140, 140, 140, 0.2);
         border-radius: 100%;
       }
       input{
@@ -66,12 +66,12 @@ $txt: #183b56;
         outline: none;
         padding: 7px 17px;
         background: $white;
-        color: $black;
+        color: $txt;
         border-radius: 4px;
         font-size: 15px;
         &::placeholder{
           color: $txt;
-          opacity: 0.7;
+          opacity: 0.8;
         }
       }
       button{
@@ -102,37 +102,43 @@ $txt: #183b56;
       margin-top: 20px;
       display: flex;
       overflow-x: scroll;
-      padding-bottom: 15px;
+      padding-bottom: 30px;
       &::-webkit-scrollbar{
           height: 3px;
       }
       &::-webkit-scrollbar-thumb{
           border-radius: 10px;
-          background-color: rgba(180, 180, 180, 0.25);
+          background-color: rgba(190, 190, 190, 0.2);
       }
       .service{
-        min-width: 195px;
-        max-width: 195px;
-        height: 270px;
-        background: rgba(128, 128, 128, 0.055);
+        min-width: 220px;
+        max-width: 220px;
+        height: 285px;
         margin: 0 25px;
-        padding: 8px;
+        padding: 7px;
         position: relative;
+        background: white;
+        .service-image{
+          width: 100%;
+          height: 95px;
+          object-fit: cover;
+          filter: brightness(90%);
+        }
         .name{
           font-size: 18px;
           color: $txt;
           margin-bottom: 3px;
         }
         .address{
-          font-size: 14px;
+          font-size: 13px;
           color: $txt;
-          opacity: 0.7;
+          opacity: 0.68;
         }
         .short-des{
           margin-top: 8px;
           color: $txt;
-          font-size: 16px;
-          opacity: 0.95;
+          font-size: 15px;
+          opacity: 0.9;
         }
         button{
           margin-top: 15px;
@@ -141,10 +147,13 @@ $txt: #183b56;
           border: none;
           text-align: center;
           border-radius: 4px;
-          i{
-            color: $primBtn;
-            transform: translateX(10px) translateY(2px);
-          }
+          background: transparent;
+          width: 95%;
+          background: rgba(190,190,190,0.2);
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
           &:hover{
             filter: brightness(100%);
           }

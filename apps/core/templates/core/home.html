@@ -16,12 +16,12 @@
 <!-- Cover -->
 <div class="mobile-cover">
    <div class="width">
-      <!-- <img src="{% static 'images/covers/cover-main.jpg' %}" alt="" class="cover-img-lillehammer"> -->
+      <img src="{% static 'images/covers/cover-main.jpg' %}" alt="" class="cover-img-lillehammer">
       <div class="content" id="coverContent">
          <div class="text">
-            <h1 class="cover-heading">Den tjenenesten du leter etter, rett foran deg</h1>
+            <h1 class="cover-heading">Finn den tjenesten du trenger i Lillehammer</h1>
             <p class="paragraph">
-              Finn tjenesten som møter dine behov her i <span style="color: #00a16c;">Lillehammer</span>, enkelt og greit
+               Enkel og grei løsning til å finne de tjenestene du trenger
             </p>
          </div>
          <div class="cover-search">
@@ -45,10 +45,11 @@
       <div class="services-cards">
          {% for product in products %}
          <div class="service">
+            <img src="{{product.image.url}}" alt="" class="service-image">
             <div class="name">{{product.name}}</div>
             <div class="address">{{product.address}}</div>
             <div class="short-des">{{product.short_description}}</div>
-            <button>Les mer<i class="fa-solid fa-arrow-right"></i></button>
+            <button>Les mer</button>
          </div>
          {% endfor %}
       </div>
