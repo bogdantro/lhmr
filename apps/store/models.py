@@ -25,8 +25,10 @@ class Product(models.Model):
     price = models.FloatField(max_length=300, default=0)
     slug = models.SlugField(max_length=150)
     address = models.CharField(max_length=500)
+    business_name = models.CharField(max_length=300)
     short_description = models.TextField()
     image = models.ImageField(blank=False, default='none', upload_to='other/')
+    is_home_page = models.BooleanField(default=False)
     description = models.TextField()
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     

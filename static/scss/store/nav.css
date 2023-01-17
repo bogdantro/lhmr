@@ -22,7 +22,7 @@
   position: absolute;
   left: 0;
   top: -60px;
-  background: rgb(246, 246, 246);
+  background: white;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -45,23 +45,23 @@
 #mobileNav.sticky .nav-hamburger-img {
   opacity: 0;
 }
-#mobileNav.sticky .logo h1 {
-  color: #1F1F1F;
+#mobileNav.sticky .logo .logo1 {
+  display: none;
 }
-#mobileNav.sticky .logo h1 span {
-  border-bottom: 1px solid #06c484;
+#mobileNav.sticky .logo .logo2 {
+  display: block;
 }
 #mobileNav.sticky .hamburger span {
   background: #183b56;
 }
 #mobileNav.menu {
-  background: rgb(246, 246, 246);
+  background: white;
 }
-#mobileNav.menu .logo h1 {
-  color: #1F1F1F;
+#mobileNav.menu .logo .logo1 {
+  display: none;
 }
-#mobileNav.menu .logo h1 span {
-  border-bottom: 1px solid #06c484;
+#mobileNav.menu .logo .logo2 {
+  display: block;
 }
 #mobileNav.menu .hamburger span {
   background: #183b56;
@@ -82,17 +82,16 @@
   height: auto;
   z-index: 1000;
 }
-#mobileNav .logo h1 {
-  font-size: 22px;
-  color: rgb(246, 246, 246);
-  font-family: "Gamja Flower", cursive;
+#mobileNav .logo img {
+  width: 105px;
+  height: auto;
+  transition: 0.3s;
 }
-#mobileNav .logo h1 span {
-  border-bottom: 1px solid rgb(246, 246, 246);
-  margin-left: 4px;
-  padding-bottom: 3px;
-  font-size: 15px;
-  font-family: "Gamja Flower", cursive;
+#mobileNav .logo img:hover {
+  transform: scale(1.05);
+}
+#mobileNav .logo .logo2 {
+  display: none;
 }
 #mobileNav .hamburger {
   padding: 10px;
@@ -104,7 +103,7 @@
   transform: translateY(2px);
 }
 #mobileNav .hamburger span {
-  height: 2px;
+  height: 3px;
   width: 26px;
   background: rgb(246, 246, 246);
   border-radius: 3px;
@@ -127,7 +126,7 @@
   transform: rotate(-45deg);
 }
 #mobileNav .sidebar {
-  background: rgb(246, 246, 246);
+  background: white;
   height: 100vh;
   position: absolute;
   top: 68px;

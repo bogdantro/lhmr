@@ -18,7 +18,7 @@ from django.conf import settings
 
 
 def hjemme(request,  backend='django.contrib.auth.backends.ModelBackend'):
-    products = Product.objects.all()
+    products = Product.objects.filter(is_home_page=True)
     category = Category.objects.filter(is_home_page=True)
         
     context = {

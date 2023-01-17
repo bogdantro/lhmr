@@ -46,11 +46,28 @@
          {% for product in products %}
          <div class="service">
             <img src="{{product.image.url}}" alt="" class="service-image">
+            <div class="reviews">
+               <p><i class="fa-solid fa-star"></i>3</p><span>(40)</span>
+            </div>
             <div class="name">{{product.name}}</div>
-            <div class="address">{{product.address}}</div>
-            <div class="short-des">{{product.short_description}}</div>
+            <div class="business-name">{{product.business_name}}</div>
             <button>Les mer</button>
          </div>
+         {% endfor %}
+      </div>
+   </div>
+</div>
+
+<!-- Categories -->
+<div class="categories">
+   <div class="content">
+      <div class="text">
+         <p class="headingp">Kategorier</p>
+         <h1 class="section-heading">Topp Kategorier</h1>
+      </div>
+      <div class="services-cards">
+         {% for categories in categories %}
+        
          {% endfor %}
       </div>
    </div>
