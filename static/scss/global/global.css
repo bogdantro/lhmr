@@ -9,7 +9,7 @@
 html, body {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background: rgb(249, 249, 249);
+  background: rgb(249, 249, 249) !important;
 }
 
 button {
