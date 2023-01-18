@@ -61,7 +61,7 @@ def home_page_search(request):
     query = request.GET.get('q','')
     #The empty string handles an empty "request"
     if query:
-            queryset = (Q(title__icontains=query))|(Q(text__icontains=query))
+            queryset = (Q(name__icontains=query))
             #I assume "text" is a field in your model
             #i.e., text = model.TextField()
             #Use | if searching multiple fields, i.e., 

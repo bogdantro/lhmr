@@ -1,0 +1,41 @@
+#mobileNav {
+  display: none;
+}
+#mobileNav .logo .logo1 {
+  display: none;
+}
+#mobileNav .logo .logo2 {
+  display: block;
+}
+#mobileNav .hamburger span {
+  background: #183b56;
+}
+
+.page {
+  min-height: 88vh !important;
+  padding-inline: 25px;
+}
+.page .backtohome {
+  position: absolute;
+  left: 25px;
+  top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.page .backtohome span {
+  width: 55px;
+  height: 2px;
+  background: #183b56;
+  border-radius: 8px;
+  opacity: 0.85;
+}
+.page .backtohome h1 {
+  color: #183b56;
+  font-size: 15px;
+  margin-left: 8px;
+  margin-bottom: 0;
+}/*# sourceMappingURL=pages.css.map */

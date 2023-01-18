@@ -1,0 +1,85 @@
+.page .search-results .text {
+  text-align: left;
+}
+.page .search-results .text h1 {
+  margin-bottom: 2px;
+}
+.page .search-results .services {
+  margin-top: 20px;
+}
+.page .search-results .service {
+  min-width: 190px;
+  max-width: 190px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin: 0 25px;
+  padding: 0;
+  position: relative;
+}
+.page .search-results .service .service-image {
+  width: 100%;
+  height: 105px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(90%);
+  border-radius: 4px;
+}
+.page .search-results .service .reviews {
+  display: flex;
+  margin-block: 3px;
+}
+.page .search-results .service .reviews p {
+  margin-bottom: 0;
+  color: #FFBC55;
+  font-size: 12px;
+  margin-top: 1px;
+}
+.page .search-results .service .reviews p i {
+  transform: translateY(-0.9px);
+  margin-right: 3px;
+  font-size: 11px;
+}
+.page .search-results .service .reviews span {
+  color: rgb(170, 170, 170);
+  font-size: 11px;
+  transform: translateX(4px) translateY(2px);
+}
+.page .search-results .service .name {
+  font-size: 16px;
+  color: #183b56;
+  margin-bottom: 3px;
+}
+.page .search-results .service .business-name {
+  font-size: 12px;
+  color: #183b56;
+  opacity: 0.7;
+}
+.page .search-results .service .short-des {
+  margin-top: 8px;
+  color: #183b56;
+  font-size: 15px;
+  opacity: 0.9;
+}
+.page .search-results .service button {
+  margin-top: 15px;
+  height: 38px;
+  color: #183b56;
+  border: none;
+  text-align: center;
+  border-radius: 4px;
+  background: transparent;
+  width: 95%;
+  background: rgba(190, 190, 190, 0.2);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.page .search-results .service button:hover {
+  filter: brightness(100%);
+}
+.page .search-results .service:first-child {
+  margin-left: 0;
+}/*# sourceMappingURL=search.css.map */

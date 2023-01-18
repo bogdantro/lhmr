@@ -27,7 +27,7 @@
          <div class="cover-search">
             <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
                {% csrf_token %}
-               <input type="text" placeholder="Søk blant 500 tjenester"><i class="fa-solid fa-magnifying-glass"></i>
+               <input name="q" type="text" placeholder="Søk blant 500 tjenester"><i class="fa-solid fa-magnifying-glass"></i>
                <button type="submit">Søk etter tjeneste</button>
            </form>
          </div>
