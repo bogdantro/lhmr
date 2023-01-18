@@ -67,7 +67,8 @@ $txt: #183b56;
     }
     // NAVBAR MENU
     &.menu{
-      background: white;
+      background: #ffffff;
+      border-bottom: 1px solid rgba(160,160,160,0.1);
       .logo{
         .logo1{
             display: none;
@@ -176,12 +177,12 @@ $txt: #183b56;
         a{
             display: block;
             color: $txt;
-            font-size: 17px;
+            font-size: 16px;
             opacity: 0.95;
-            padding: 13px 0;
+            padding: 12px 0;
             width: max-content;
             &.nav_order_btn{
-                padding: 8px 17px;
+                padding: 8px 24px;
                 background: $primBtn;
                 border-radius: 4px;
                 color: $white;
@@ -190,8 +191,14 @@ $txt: #183b56;
             &.mailto{
                 padding: 0;
                 margin: 0;
-                border-bottom: 1px solid rgba(32, 32, 32, 0.438);
+                border-bottom: 1px solid rgba(50, 50, 50, 0.4);
                 padding-bottom: 1px;
+                text-decoration: none;
+                font-size: 15px;
+                cursor: pointer;
+                &:hover{
+                    border-bottom: 1px solid transparent;
+                }
             }
         }
         .sidebar-divider{
@@ -202,13 +209,13 @@ $txt: #183b56;
         }
         i{
             color: $txt;
-            font-size: 26px;
-            padding: 8px;
-            margin: 4px;
+            font-size: 22px;
+            padding: 8px 7px;
+            margin: 3px 1px;
             opacity: 0.9;
             margin-bottom: 0;
             padding-bottom: 0;
-            &.fa-facebook{
+            &.fa-instagram{
                 margin-left: 0;
                 padding-left: 0;
             }

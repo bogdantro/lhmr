@@ -55,7 +55,8 @@
   background: #183b56;
 }
 #mobileNav.menu {
-  background: white;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(160, 160, 160, 0.1);
 }
 #mobileNav.menu .logo .logo1 {
   display: none;
@@ -150,15 +151,15 @@
 #mobileNav .sidebar a {
   display: block;
   color: #183b56;
-  font-size: 17px;
+  font-size: 16px;
   opacity: 0.95;
-  padding: 13px 0;
+  padding: 12px 0;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
 #mobileNav .sidebar a.nav_order_btn {
-  padding: 8px 17px;
+  padding: 8px 24px;
   background: #06c484;
   border-radius: 4px;
   color: rgb(246, 246, 246);
@@ -167,8 +168,14 @@
 #mobileNav .sidebar a.mailto {
   padding: 0;
   margin: 0;
-  border-bottom: 1px solid rgba(32, 32, 32, 0.438);
+  border-bottom: 1px solid rgba(50, 50, 50, 0.4);
   padding-bottom: 1px;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+#mobileNav .sidebar a.mailto:hover {
+  border-bottom: 1px solid transparent;
 }
 #mobileNav .sidebar .sidebar-divider {
   color: #183b56;
@@ -178,14 +185,14 @@
 }
 #mobileNav .sidebar i {
   color: #183b56;
-  font-size: 26px;
-  padding: 8px;
-  margin: 4px;
+  font-size: 22px;
+  padding: 8px 7px;
+  margin: 3px 1px;
   opacity: 0.9;
   margin-bottom: 0;
   padding-bottom: 0;
 }
-#mobileNav .sidebar i.fa-facebook {
+#mobileNav .sidebar i.fa-instagram {
   margin-left: 0;
   padding-left: 0;
 }
