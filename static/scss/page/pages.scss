@@ -23,6 +23,13 @@ $txt: #183b56;
 .page{
     min-height: 88vh !important;
     padding-inline: 25px;
+    .logo2{
+        width: 85px;
+        height: auto;
+        position: absolute;
+        top: 33px;
+        right: 30px;
+    }
     .backtohome{
         position: absolute;
         left: 25px;
