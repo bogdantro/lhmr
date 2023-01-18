@@ -9,7 +9,7 @@
 html, body {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background: rgb(249, 249, 249) !important;
+  background: rgb(248, 248, 248) !important;
 }
 
 button {
@@ -45,7 +45,7 @@ button:hover {
 
 h1.section-heading {
   color: #183b56;
-  font-size: 28px;
+  font-size: 27px;
 }
 
 p {

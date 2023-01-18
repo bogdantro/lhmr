@@ -65,10 +65,16 @@
          <p class="headingp">Kategorier</p>
          <h1 class="section-heading">Topp Kategorier</h1>
       </div>
-      <div class="services-cards">
-         {% for categories in categories %}
-        
-         {% endfor %}
+      <div class="cat-cards">
+         {% for category in category %}
+            <div class="cat">
+               <div class="icon"><i class="{{category.icon}}"></i></div>
+               <div class="text">
+                  <h1>{{category.name}}</h1>
+                  <p>{{category.short_des}}</p>
+               </div>
+            </div>
+            {% endfor %}
       </div>
    </div>
 </div>

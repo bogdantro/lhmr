@@ -15,7 +15,7 @@ $txt: #183b56;
 html, body {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background:  rgb(249,249,249) !important;
+  background:  rgb(248,248,248) !important;
 }
 // global divs
 button{
@@ -51,7 +51,7 @@ button{
 h1{
   &.section-heading{
     color: $txt;
-    font-size: 28px;
+    font-size: 27px;
   }
 }
 // global text

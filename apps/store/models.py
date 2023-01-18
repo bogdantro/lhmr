@@ -6,7 +6,8 @@ from django.conf import settings
 class Category(models.Model):
     name = models.CharField(max_length=60)
     slug = models.SlugField(max_length=150)
-    image = models.ImageField(blank=False, default='none')
+    short_des = models.CharField(max_length=500)
+    icon = models.CharField(max_length=1000)
     is_home_page = models.BooleanField(default=False)
 
 

@@ -204,4 +204,47 @@ $txt: #183b56;
       text-align: left;
     }
   }
+  .cat-cards{
+    padding-block: 25px;
+    .cat{
+      width: 100%;
+      max-width: 380px;
+      display: flex;
+      justify-content: space-between;
+      margin-block: 20px;
+      padding: 14px;
+      background: white;
+      border-radius: 4px;
+      &:first-child{
+        margin-top: 0;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+      .icon{
+        width: 17%;
+        transform: translateX(4px) translateY(4px);
+        i{
+          font-size: 20px;
+          color: $txt;
+          border-radius: 100%;
+          color: $primBtn;
+        }
+      }
+      .text{
+        width: 84%;
+        h1{
+          margin-top: 0;
+          margin-bottom: 4px;
+          font-size: 18px;
+          color: $txt;
+        }
+        p{
+          color: $txt;
+          font-size: 13px;
+          opacity: 0.9;
+        }
+      }
+    }
+  }
 }
