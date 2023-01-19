@@ -50,13 +50,6 @@
 
         <a class="mailto" href="mailto:">support@lillehammertjenester.no</a>
     </div>
-    <!-- Only on some pages -->
-    <div class="nav-search">
-        <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
-           {% csrf_token %}
-           <input name="q" type="text" placeholder="Søk blant 500 tjenester"><i class="fa-solid fa-magnifying-glass"></i>
-       </form>
-     </div>
 </div>
 
 <div id="desNav">

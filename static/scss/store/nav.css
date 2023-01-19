@@ -123,11 +123,8 @@
   display: block;
   transition: 0.2s;
   margin: 6px auto;
-  transform-origin: 23%;
+  transform-origin: 25%;
   opacity: 0.83;
-}
-#mobileNav .hamburger .center-span {
-  width: 18px;
 }
 #mobileNav .hamburger.click .upper-span {
   transform: rotate(45deg);
@@ -207,59 +204,6 @@
 #mobileNav .sidebar i.fa-instagram {
   margin-left: 0;
   padding-left: 0;
-}
-#mobileNav .nav-search {
-  position: absolute;
-  top: 60px;
-  width: calc(100% - 50px);
-  display: none;
-}
-#mobileNav .nav-search i {
-  position: absolute;
-  font-size: 14px;
-  color: rgba(24, 59, 86, 0.662745098);
-  right: 25px;
-  top: 13px;
-  padding: 5px;
-  margin: -5px;
-  background: rgba(155, 155, 155, 0.22);
-  border-radius: 100%;
-}
-#mobileNav .nav-search input {
-  width: 100%;
-  height: 40px;
-  border: none;
-  outline: none;
-  padding: 7px;
-  background: rgb(246, 246, 246);
-  color: #183b56;
-  border-radius: 4px;
-  font-size: 15px;
-}
-#mobileNav .nav-search input::-moz-placeholder {
-  color: #183b56;
-  opacity: 0.8;
-}
-#mobileNav .nav-search input:-ms-input-placeholder {
-  color: #183b56;
-  opacity: 0.8;
-}
-#mobileNav .nav-search input::placeholder {
-  color: #183b56;
-  opacity: 0.8;
-}
-#mobileNav .nav-search button {
-  font-size: 14.5px;
-  background: #06c484;
-  color: rgb(246, 246, 246);
-  text-align: center;
-  width: 100%;
-  height: 45px;
-  margin-top: 15px;
-  border-radius: 4px;
-  outline: none;
-  border: none;
-  font-weight: normal;
 }
 
 @media only screen and (min-device-width: 1140px) {

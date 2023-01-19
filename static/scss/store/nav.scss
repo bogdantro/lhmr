@@ -149,13 +149,12 @@ $txt: #183b56;
             display: block;
             transition: .2s;
             margin: 6px auto;
-            transform-origin: 23%; 
+            transform-origin: 25%; 
             opacity: 0.83;
         }
         .upper-span{
         }
         .center-span{
-            width: 18px;
         }
         .lower-span{
         }
@@ -240,51 +239,6 @@ $txt: #183b56;
             }
         }
     }
-    .nav-search{
-        position: absolute;
-        top: 60px;
-        width: calc(100% - 50px);
-        display: none;
-        i{
-          position: absolute;
-          font-size: 14px;
-          color: #183b56a9;
-          right: 25px;
-          top: 13px;
-          padding: 5px;
-          margin: -5px;
-          background: rgba(155, 155, 155, 0.22);
-          border-radius: 100%;
-        }
-        input{
-          width: 100%;
-          height: 40px;
-          border: none;
-          outline: none;
-          padding: 7px;
-          background: $white;
-          color: $txt;
-          border-radius: 4px;
-          font-size: 15px;
-          &::placeholder{
-            color: $txt;
-            opacity: 0.8;
-          }
-        }
-        button{
-          font-size: 14.5px;
-          background: $primBtn;
-          color: $white;
-          text-align: center;
-          width: 100%;
-          height: 45px;
-          margin-top: 15px;
-          border-radius: 4px;
-          outline: none;
-          border: none;
-          font-weight: normal;
-        }
-      }
 }
 
 // // SMALL DESKTOP

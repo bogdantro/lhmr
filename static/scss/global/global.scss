@@ -13,6 +13,7 @@ $txt: #183b56;
   box-sizing: border-box;
 }
 html, body {
+  position: relative;
   overflow-x: hidden;
   scroll-behavior: smooth;
   background:  rgb(249,249,249) !important;
