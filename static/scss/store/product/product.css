@@ -10,11 +10,11 @@
   display: none;
 }
 
-.nav-search {
+.product-search {
   position: absolute;
   top: 55px;
   width: 100%;
-  padding-inline: 25px;
+  padding-inline: 18px;
   padding-bottom: 15px;
   padding-top: 15px;
   text-align: center;
@@ -22,23 +22,28 @@
   z-index: 10000;
   background: white;
 }
-.nav-search.sticky {
+.product-search.sticky {
   position: fixed;
   top: 0;
   box-shadow: 0 0 4px rgba(5, 5, 5, 0.12);
 }
-.nav-search i {
+.product-search button {
+  width: 0;
+  height: 0;
+  border: none;
   position: absolute;
+  right: 58px;
+  top: 30px;
+}
+.product-search button i {
   font-size: 15px;
   color: rgba(24, 59, 86, 0.662745098);
-  right: 40px;
-  top: 31px;
   padding: 5px;
   margin: -5px;
   background: rgba(155, 155, 155, 0.22);
   border-radius: 100%;
 }
-.nav-search input {
+.product-search input {
   width: 100%;
   height: 50px;
   border: none;
@@ -50,30 +55,17 @@
   border-radius: 4px;
   font-size: 15px;
 }
-.nav-search input::-moz-placeholder {
+.product-search input::-moz-placeholder {
   color: #183b56;
   opacity: 0.8;
 }
-.nav-search input:-ms-input-placeholder {
+.product-search input:-ms-input-placeholder {
   color: #183b56;
   opacity: 0.8;
 }
-.nav-search input::placeholder {
+.product-search input::placeholder {
   color: #183b56;
   opacity: 0.8;
-}
-.nav-search button {
-  font-size: 14.5px;
-  background: #06c484;
-  color: rgb(246, 246, 246);
-  text-align: center;
-  width: 100%;
-  height: 45px;
-  margin-top: 15px;
-  border-radius: 4px;
-  outline: none;
-  border: none;
-  font-weight: normal;
 }
 
 .page .mapouter {
@@ -83,8 +75,7 @@
 
 .product-section {
   position: relative;
-  padding-top: 162px;
-  padding-inline: 25px;
+  padding-top: 39px;
 }
 .product-section .carousel-control-prev {
   opacity: 1;
@@ -98,9 +89,9 @@
   top: calc(50% + 5px);
   transform: translateY(-50%);
   left: 8px;
-  padding: 6px 13px;
-  background: rgb(246, 246, 246);
-  color: #183b56;
+  padding: 6px 15px;
+  background: rgba(160, 160, 160, 0.25);
+  color: rgb(246, 246, 246);
   border-radius: 100%;
   font-size: 18px;
   transition: 0.3s;
@@ -121,9 +112,9 @@
   top: calc(50% + 5px);
   transform: translateY(-50%);
   right: 8px;
-  padding: 6px 13px;
-  background: rgb(246, 246, 246);
-  color: #183b56;
+  padding: 6px 15px;
+  background: rgba(160, 160, 160, 0.25);
+  color: rgb(246, 246, 246);
   border-radius: 100%;
   font-size: 18px;
   transition: 0.3s;
@@ -137,10 +128,39 @@
   height: 280px;
   -o-object-fit: cover;
      object-fit: cover;
-  filter: brightness(85%);
+  filter: brightness(75%);
+}
+.product-section .quick-links {
+  background: #0cb37b;
+  height: 52px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-inline: 18px;
+}
+.product-section .quick-links a {
+  padding-inline: 5px;
+  margin-inline: 3px;
+  font-size: 16px;
+  color: rgb(246, 246, 246);
+  text-decoration: none;
+  opacity: 0.64;
+  font-weight: 500;
+}
+.product-section .quick-links a.active {
+  opacity: 1;
+}
+.product-section .quick-links a:first-child {
+  padding-left: 0;
+  margin-left: 0;
+}
+.product-section .quick-links a:last-child {
+  padding-right: 0;
+  margin-right: 0;
 }
 .product-section .text {
   margin-top: 10px;
+  padding-inline: 18px;
 }
 .product-section .text .reviews {
   display: flex;
@@ -163,11 +183,55 @@
   transform: translateX(4px) translateY(2px);
 }
 .product-section .text .name {
-  font-size: 25px;
+  font-size: 28px;
   color: #183b56;
+  font-weight: 500;
 }
 .product-section .text .business-name {
   font-size: 13px;
   color: #183b56;
   opacity: 0.7;
+  font-weight: 500;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 5px;
+  margin: -2px;
+  transform: translateY(4px);
+  background: rgba(110, 110, 110, 0.1);
+  border-radius: 4px;
+}
+.product-section .text .business-name i {
+  font-size: 12px;
+  margin-right: 6px;
+}
+.product-section .info {
+  margin-top: 32px;
+}
+.product-section .info h1 {
+  font-size: 22.5px;
+  color: #183b56;
+  font-weight: 500;
+}
+.product-section .info p {
+  color: #183b56;
+  font-size: 15px;
+  opacity: 0.8;
+}
+.product-section .location {
+  margin-top: 0;
+  padding-inline: 18px;
+}
+.product-section .location h1 {
+  font-size: 22.5px;
+  color: #183b56;
+  font-weight: 500;
+}
+.product-section .location p {
+  color: #183b56;
+  font-size: 15px;
+  opacity: 0.8;
+}
+.product-section .location #map {
+  margin-top: 18px;
 }/*# sourceMappingURL=product.css.map */

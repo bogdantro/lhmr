@@ -17,11 +17,11 @@ $txt: #183b56;
     }
 }
 
-.nav-search{
+.product-search{
     position: absolute;
     top: 55px;
     width: 100%;
-    padding-inline: 25px;
+    padding-inline: 18px;
     padding-bottom: 15px;
     padding-top: 15px;
     text-align: center;
@@ -33,16 +33,21 @@ $txt: #183b56;
         top: 0;
         box-shadow: 0 0 4px rgba(5,5,5,0.12);
     }
-    i{
-      position: absolute;
-      font-size: 15px;
-      color: #183b56a9;
-      right: 40px;
-      top: 31px;
-      padding: 5px;
-      margin: -5px;
-      background: rgba(155, 155, 155, 0.22);
-      border-radius: 100%;
+    button{
+        width: 0;
+        height: 0;
+        border: none;
+        position: absolute;
+        right: 58px;
+        top: 30px;
+        i{
+            font-size: 15px;
+            color: #183b56a9;
+            padding: 5px;
+            margin: -5px;
+            background: rgba(155, 155, 155, 0.22);
+            border-radius: 100%;
+        }
     }
     input{
       width: 100%;
@@ -60,19 +65,6 @@ $txt: #183b56;
         opacity: 0.8;
       }
     }
-    button{
-      font-size: 14.5px;
-      background: $primBtn;
-      color: $white;
-      text-align: center;
-      width: 100%;
-      height: 45px;
-      margin-top: 15px;
-      border-radius: 4px;
-      outline: none;
-      border: none;
-      font-weight: normal;
-    }
 }
 
 .page{
@@ -83,8 +75,7 @@ $txt: #183b56;
 }
 .product-section{
     position: relative;
-    padding-top: 162px;
-    padding-inline: 25px;
+    padding-top: 39px;
     .carousel-control-prev{
         opacity: 1;
         width: max-content;
@@ -93,9 +84,9 @@ $txt: #183b56;
         top: calc(50% + 5px);
         transform: translateY(-50%);
         left: 8px;
-        padding: 6px 13px;
-        background: $white;
-        color: $txt;
+        padding: 6px 15px;
+        background: rgba(160,160,160,0.25);
+        color: $white;
         border-radius: 100%;
         font-size: 18px;
         transition: .3s;
@@ -112,9 +103,9 @@ $txt: #183b56;
         top: calc(50% + 5px);
         transform: translateY(-50%);
         right: 8px;
-        padding: 6px 13px;
-        background: $white;
-        color: $txt;
+        padding: 6px 15px;
+        background: rgba(160,160,160,0.25);
+        color: $white;
         border-radius: 100%;
         font-size: 18px;
         transition: .3s;
@@ -127,10 +118,39 @@ $txt: #183b56;
         width: 100%;
         height: 280px;
         object-fit: cover;
-        filter: brightness(85%);
+        filter: brightness(75%);
+    }
+    .quick-links{
+        background: #0cb37b;
+        height: 52px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-inline: 18px;
+        a{
+            padding-inline: 5px;
+            margin-inline: 3px;
+            font-size: 16px;
+            color: $white;
+            text-decoration: none;
+            opacity: 0.64;
+            font-weight: 500;
+            &.active{
+                opacity: 1;
+            }
+            &:first-child{
+                padding-left: 0;
+                margin-left: 0;
+            }
+            &:last-child{
+                padding-right: 0;
+                margin-right: 0;
+            }
+        }
     }
     .text{
         margin-top: 10px;
+        padding-inline: 18px;
         .reviews{
             display: flex;
             margin-block: 3px;
@@ -152,13 +172,55 @@ $txt: #183b56;
             }
           }
         .name{
-            font-size: 25px;
+            font-size: 28px;
             color: $txt;
+            font-weight: 500;
         }
         .business-name{
             font-size: 13px;
             color: $txt;
             opacity: 0.7;
+            font-weight: 500;
+            width: max-content;
+            padding: 5px;
+            margin: -2px;
+            transform: translateY(4px);
+            background: rgba(110,110,110,0.1);
+            border-radius: 4px;
+            i{
+                font-size: 12px;
+                margin-right: 6px;
+            }
+        }
+    }
+    .info{
+        margin-top: 32px;
+        h1{
+            font-size: 22.5px;
+            color: $txt;
+            font-weight: 500;
+        }
+        p{
+            color: $txt;
+            font-size: 15px;
+            opacity: 0.8;
+        }
+    }
+    .location{
+        margin-top: 0;
+        padding-inline: 18px;
+        h1{
+            font-size: 22.5px;
+            color: $txt;
+            font-weight: 500;
+        }
+        p{
+            color: $txt;
+            font-size: 15px;
+            opacity: 0.8;
+        }
+        #map{
+            margin-top: 18px;
         }
     }
 }
