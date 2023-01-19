@@ -61,65 +61,18 @@
 
 <div id="desNav">
     <div class="desktop-nav-content">
-            <!-- LOGO -->
-        <div class="logo" id="logo" onclick="window.location.href='/'">
-            <img class="logo1" src="{% static '/images/logo/logo-white.png' %}" alt="logo1">
-            <img class="logo2" src="{% static '/images/logo/logo-black.png' %}" alt="logo2">
-        </div>
-        <!-- MENU -->
-        <div class="menu">
-            <!-- hvem vi er -->
-            <div class="des-menu-about">
-                <a class="menu-main-links" id="aboutToggle">Hvem vi er</a>
-                <div id="aboutDrop">
-                    <li class="drop-link"><a href="/om-webiser">Om oss</a></li>
-                    <li class="drop-link"><a href="/blogg">Blogg</a></li>
-                    <li class="drop-link"><a href="/sosiale-medier">Sosiale medier</a></li>
-                    <li class="drop-link"><a href="/vår-historie" class="last">Vår historie</a></li>
-                </div>
-            </div>
-            <!-- kundeservice -->
-            <div class="des-menu-help">
-                <a class="menu-main-links" id="helpToggle">Kundeservice</a>
-                <div id="helpDrop">
-                    <li class="drop-link"><a href="/prosessen-av-bestillinger">Prossesen av bestillinger</a></li>
-                    <li class="drop-link"><a href="/webiser-forum">Forum</a></li>
-                    <li class="drop-link"><a href="/sporr-om-endringer">Spørr om endringer på nettsiden</a></li>
-                    <li class="drop-link"><a href="/progammering-spraakene" class="last">Programering språkene</a></li>
-                </div>
-            </div>
-            <!-- priser -->
-            <div class="des-menu-prices">
-                <a class="menu-main-links" id="pricesToggle">Priser</a>
-                <div id="pricesDrop">
-                    <li class="drop-link"><a onclick="pricesScroll()">Nettbutikk/eCommerce</a></li>
-                    <li class="drop-link"><a onclick="pricesScroll()">Personlig nettside</a></li>
-                    <li class="drop-link"><a onclick="pricesScroll()">Blogg</a></li>
-                    <li class="drop-link"><a href="/ekstra---hosting">Hosting</a></li>
-                    <li class="drop-link"><a href="/ekstra---ekstra-sider" class="last">Ekstra sider</a></li>
-                </div>
-            </div>
-            <!-- vår arbeid -->
-            <a class="menu-main-links no-drop" href="/vårt-arbeid" style="cursor: pointer; text-decoration: none;">Vårt arbeid</a>
-            <!-- min bruker -->
-            <div class="des-menu-account">
-                <a class="menu-main-links">Min bruker</a>
-                <div id="accountDrop">
-                    {% if request.user.is_authenticated %}
-                    <li class="drop-link"><a href="/min-bruker">Min bruker</a></li>
-                    <li class="drop-link"><a class="last" id="logOut" href="{% url 'logout' %}">Logg ut</a></li>
-                    {% else %}
-                    <li class="drop-link"><a href="/logg-inn">Logg inn</a></li>
-                    <li class="drop-link"><a href="/lag-bruker" class="last">Lag bruker</a></li>
-                    {% endif %}
-                </div>
-            </div>
-            <!-- kontakt oss -->
-            <a href="/kontakt-oss" class="menu-main-links no-drop" style="cursor: pointer; text-decoration: none;">Kontakt oss</a>
-            <!-- bestill -->
-            <div class="order">
-                <a href="/bestill">Kom i gang</a>
-            </div>
-        </div>
+    <!-- LOGO -->
+    <div class="logo" id="logo" onclick="window.location.href='/'">
+        <!-- <img class="logo1" src="{% static '/images/logo/logo-white.png' %}" alt="logo1">
+        <img class="logo2" src="{% static '/images/logo/logo-black.png' %}" alt="logo2"> -->
+        <h1>Lillehammer <span>Tjenester</span></h1>
+    </div>
+    <!-- MENU -->
+    <div class="menu">
+        <a href="">Om oss</a>
+        <a href="">Alle tjenester</a>
+        <a href="">Kundeservice</a>
+        <a class="nav_order_btn" href="">For bedrifter</a>
     </div>    
+    </div>
 </div>

@@ -295,7 +295,7 @@ $txt: #183b56;
     }
     #desNav{
         width: 100%;
-        height: 68px;
+        height: 65px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -314,11 +314,12 @@ $txt: #183b56;
             position: absolute;
             left: 0;
             top: -60px;
-            background: #ffffffec;
+            background: white;
             width: 100%;
             height: 100%;
             opacity: 0;
-            transition: .5s;
+            transition: .3s;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
         }
         &.sticky{
             position: fixed;
@@ -329,12 +330,31 @@ $txt: #183b56;
                 position: absolute;
                 left: 0;
                 top: 0;
-                background: #ffffffec;
+                background: white;
                 width: 100%;
                 height: 100%;
                 opacity: 1;
                 transition: .5s;
                 box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            }
+            .desktop-nav-content{
+
+                .logo{
+                    h1{
+                    color: $txt;
+                    span{
+                        border-color: $primBtn;
+                    }
+                }
+            }
+            .menu{
+                a{
+                    color: $txt;
+                    &.nav_order_btn{
+                        color: $white;
+                    }
+                }
+                }
             }
         }
         .desktop-nav-content{
@@ -348,21 +368,32 @@ $txt: #183b56;
             transform: translateX(-50%);  
             // LOGO
             .logo{
-                transition: .3s;
+                transition: .8s;
                 cursor: pointer;
-                img{
-                    height: auto;
-                    width: 117px;
-                    &.logo1{
-                        display: none;
-                    }
-                    &.logo2{
-                        display: block;
+                transform: translateY(4px);
+                width: auto;
+                height: auto;
+                z-index: 1000;
+                h1{
+                    color: $white;
+                    font-size: 18px;
+                    span{
+                        font-size: 13px;
+                        border-bottom: 1px solid $white;
+                        padding-bottom: 3px;
                     }
                 }
-                &:hover{
-                    transform: scale(1.05);
-                }
+                //   img{
+                //     width: 105px;
+                //     height: auto;
+                //     transition: .3s;
+                //     &:hover{
+                //         transform: scale(1.05);
+                //     }
+                //   }
+              .logo2{
+                display: none;
+              }
             }
             .menu{
                 padding-inline: 10px;
@@ -371,183 +402,33 @@ $txt: #183b56;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                .order{
-                    margin-right: 0;
+                a{
+                    color: $white;
+                    font-size: 16px;
                     text-decoration: none;
-                    transform: translateX(10px);
-                    a{
-                        cursor: pointer;
-                        text-decoration: none;
-                        font-size: 16px;
-                        border-radius: 4px;
-                        background: #0088F9;
-                        color: #F9F6EE;
-                        padding: 12px 14px;
-                        &:hover{
-                            background: #249cff;
-                        }
-                    }
-                }
-                .menu-main-links{
-                    color: #183b56;
-                    font-size: 17px;
-                    padding-inline: 7px;
-                    margin-inline: 16px;
-                    text-decoration: none;
+                    padding: 0 8px;
+                    margin-inline: 8px;
+                    padding-bottom: 5px;
+                    padding-top: 7px;
                     transition: .2s;
-                    cursor: default;
-                    padding-block: 23px;
-                    opacity: 0.9;
-                    &.no-drop{
-                        padding-bottom: 10px;
-                        margin-bottom: 13px;
-                        border-bottom: 2px solid transparent;
+                    border-bottom: 1px solid transparent;
+                    &:hover{
+                        border-bottom: 1px solid $white;
+                    }
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    &.nav_order_btn{
+                        background: $primBtn;
+                        border-radius: 4px;
+                        padding: 8px 17px;
                         &:hover{
-                            border-bottom: 2px solid #183b56;
+                            filter: brightness(85%);
+                            border-bottom: 1px solid transparent;
                         }
-                    }
-                }
-                .drop-link{
-                    list-style: none;
-                    cursor: pointer;
-                    // background: #d5edff9a;
-                    width: 100%;
-                    padding: 14px;
-                    text-align: center !important;
-                    a{
-                        text-decoration: none;
-                        color: #183b56;
-                        font-size: 16px;
-                        padding-top: 14px;
-                        padding-bottom: 15px;
-                        text-align: center !important;
-                        &:hover{
-                            text-decoration: underline;
-                        }
-                        &.last{
-                            border: none;
-                        }
-    
-                    }
-                }
-                .des-menu-account{
-                    position: relative;
-                    width: auto;
-                    &:hover{
-                        #accountDrop{
-                            opacity: 1;
-                            pointer-events: visible;
-                        }
-                    }
-                    #accountDrop{
-                        background: #ffffffec;
-                        width: max-content;
-                        height: auto;
-                        position: absolute;
-                        top: 47px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        display: inline-block;
-                        border: 2px solid rgb(228, 228, 228);
-                        border-top: none;
-                        transition: .3s;
-                        opacity: 0;
-                        pointer-events: none;
-                        text-align: center;
-                        border-radius: 20px;
-                        border-top-left-radius: 0;
-                        border-top-right-radius: 0;
-                        text-align: center !important;
-                    }
-                }
-                .des-menu-prices{
-                    position: relative;
-                    width: auto;
-                    &:hover{
-                        #pricesDrop{
-                            opacity: 1;
-                            pointer-events: visible;
-                        }
-                    }
-                    #pricesDrop{
-                        background: #ffffffec;
-                        width: max-content;
-                        height: auto;
-                        position: absolute;
-                        top: 47px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        display: inline-block;
-                        border: 2px solid rgb(228, 228, 228);
-                        border-top: none;
-                        transition: .3s;
-                        opacity: 0;
-                        pointer-events: none;
-                        text-align: center;
-                        border-radius: 20px;
-                        border-top-left-radius: 0;
-                        border-top-right-radius: 0;
-                        text-align: center !important;
-                    }
-                }
-                .des-menu-about{
-                    position: relative;
-                    width: auto;
-                    &:hover{
-                        #aboutDrop{
-                            opacity: 1;
-                            pointer-events: visible;
-                        }
-                    }
-                    #aboutDrop{
-                        background: #ffffffec;
-                        width: max-content;
-                        height: auto;
-                        position: absolute;
-                        top: 47px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        display: inline-block;
-                        border: 2px solid rgb(228, 228, 228);
-                        border-top: none;
-                        transition: .3s;
-                        opacity: 0;
-                        pointer-events: none;
-                        text-align: center;
-                        border-radius: 20px;
-                        border-top-left-radius: 0;
-                        border-top-right-radius: 0;
-                        text-align: center !important;
-                    }
-                }
-                .des-menu-help{
-                    position: relative;
-                    width: auto;
-                    &:hover{
-                        #helpDrop{
-                            opacity: 1;
-                            pointer-events: visible;
-                        }
-                    }
-                    #helpDrop{
-                        background: #ffffffec;
-                        width: max-content;
-                        height: auto;
-                        position: absolute;
-                        top: 47px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        display: inline-block;
-                        border: 2px solid rgb(228, 228, 228);
-                        border-top: none;
-                        transition: .3s;
-                        opacity: 0;
-                        pointer-events: none;
-                        text-align: center;
-                        border-radius: 20px;
-                        border-top-left-radius: 0;
-                        border-top-right-radius: 0;
-                        text-align: center !important;
                     }
                 }
             }

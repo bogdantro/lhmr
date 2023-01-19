@@ -7,7 +7,7 @@
 }
 #footer .footer-links {
   width: 100%;
-  padding-inline: 20px;
+  padding-inline: 25px;
   margin-top: 7px;
 }
 #footer .footer-links a {
@@ -155,16 +155,16 @@
   #footer .footerbottom {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 50px;
     position: relative;
-    padding-block: 20px;
+    padding: 20px 35px;
   }
   #footer .footerbottom .social-icons {
     width: auto;
     height: auto;
-    position: absolute;
-    right: 64px;
+    position: unset;
   }
   #footer .footerbottom .social-icons .icons {
     display: flex;
@@ -184,8 +184,7 @@
   }
   #footer .footerbottom .copyright {
     width: auto;
-    position: absolute;
-    left: 75px;
+    position: unset;
   }
   #footer .footerbottom .copyright p {
     padding: auto;
@@ -193,62 +192,5 @@
     color: #183B56;
     font-size: 13px;
     opacity: 0.8;
-  }
-  #footer #newsletter {
-    margin-bottom: 15px;
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    padding: 32px 30px;
-    background-color: white;
-    text-align: center;
-  }
-  #footer #newsletter h1 {
-    transform: translateY(-10px);
-    color: #183B56;
-    text-shadow: 1px 0 #183B56;
-    letter-spacing: 1px;
-    font-size: 26.5px;
-    font-weight: 800;
-  }
-  #footer #newsletter .content input {
-    border-radius: 0;
-    padding: 5px;
-    border: none;
-    border-bottom: 2px solid rgba(211, 211, 211, 0.611);
-    outline: none;
-    color: #183B56;
-    font-size: 13px;
-    width: 82%;
-    max-width: 500px;
-    font-weight: 600;
-    height: 45px;
-    cursor: pointer;
-  }
-  #footer #newsletter .content input:hover {
-    filter: brightness(95%);
-  }
-  #footer #newsletter .content button {
-    border: none;
-    outline: none;
-    background: transparent;
-  }
-  #footer #newsletter .content button i {
-    transform: translateX(-20px) translateY(2px);
-    z-index: 1000;
-    font-size: 22px;
-    color: #183B56;
-    cursor: pointer;
-    transition: 0.2s;
-  }
-  #footer #newsletter .content button i:hover {
-    filter: brightness(95%);
-  }
-  #footer #newsletter .content button i:focus {
-    cursor: unset;
-    filter: brightness(100%);
-  }
-  #footer #newsletter #footerNewsLetterAlert {
-    margin-top: 15px;
   }
 }/*# sourceMappingURL=footer.css.map */

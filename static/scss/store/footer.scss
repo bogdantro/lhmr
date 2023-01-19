@@ -12,7 +12,7 @@ $txt: #183b56;
     background: white;
     .footer-links{
         width: 100%;
-        padding-inline: 20px;
+        padding-inline: 25px;
         margin-top: 7px;
         a{
             margin-block: 6px;
@@ -169,16 +169,16 @@ $txt: #183b56;
         .footerbottom{
             display: flex;
             align-items: center;
+            justify-content: space-between;
             width: 100%;
             height: 50px;
             position: relative;
-            padding-block: 20px;
+            padding: 20px 35px;
             // social icons
             .social-icons{
                 width: auto;
                 height: auto;
-                position: absolute;
-                right: 64px;
+                position: unset;
                 .icons{
                     display: flex;
                     i{
@@ -199,8 +199,7 @@ $txt: #183b56;
             // copyright
             .copyright{
                 width: auto;
-                position: absolute;
-                left: 75px;
+                position: unset;
                 p{
                     padding: auto;
                     margin: auto;
@@ -211,66 +210,5 @@ $txt: #183b56;
             }
         }
         // newsletter
-        #newsletter{
-            margin-bottom: 15px;
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-            padding: 32px 30px;
-            background-color: white;
-            text-align: center;
-            h1{
-                transform: translateY(-10px);
-                color: #183B56;
-                text-shadow: 1px 0 #183B56;
-                letter-spacing:1px;    
-                font-size: 26.5px;
-                font-weight: 800;
-            }
-            .content{
-                 // input
-                input{
-                    border-radius: 0;
-                    padding: 5px;
-                    border: none;
-                    border-bottom: 2px solid rgba(211, 211, 211, 0.611);
-                    outline: none;
-                    color: #183B56;
-                    font-size: 13px;
-                    width: 82%;
-                    max-width: 500px;
-                    font-weight: 600;
-                    height: 45px;
-                    cursor: pointer;
-                    &:hover{
-                        filter: brightness(95%);
-                    }
-                }
-                // button
-                button{
-                    border: none;
-                    outline: none;
-                    background: transparent;
-                    i{
-                        transform: translateX(-20px) translateY(2px);
-                        z-index: 1000;
-                        font-size: 22px;
-                        color: #183B56;
-                        cursor: pointer;
-                        transition: .2s;
-                        &:hover{
-                            filter: brightness(95%);
-                        }
-                        &:focus{
-                            cursor: unset;
-                            filter: brightness(100%);
-                        }
-                    }
-                }
-            }
-            #footerNewsLetterAlert{
-                margin-top: 15px;
-            }
-        }
     }
 }
