@@ -20,8 +20,9 @@
     <!-- <img src="{% static 'images/other/nav-hamburger.png' %}" alt="" class="nav-hamburger-img">  -->
     <!-- LOGO -->
     <div class="logo" id="logo" onclick="window.location.href='/'">
-        <img class="logo1" src="{% static '/images/logo/logo-white.png' %}" alt="logo1">
-        <img class="logo2" src="{% static '/images/logo/logo-black.png' %}" alt="logo2">
+        <!-- <img class="logo1" src="{% static '/images/logo/logo-white.png' %}" alt="logo1">
+        <img class="logo2" src="{% static '/images/logo/logo-black.png' %}" alt="logo2"> -->
+        <h1>Lillehammer <span>Tjenester</span></h1>
     </div>
     <!-- HAMBURGER -->
     <div class="hamburger" id="hamburger" onclick="menu()">
@@ -49,6 +50,13 @@
 
         <a class="mailto" href="mailto:">support@lillehammertjenester.no</a>
     </div>
+    <!-- Only on some pages -->
+    <div class="nav-search">
+        <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
+           {% csrf_token %}
+           <input name="q" type="text" placeholder="Søk blant 500 tjenester"><i class="fa-solid fa-magnifying-glass"></i>
+       </form>
+     </div>
 </div>
 
 <div id="desNav">

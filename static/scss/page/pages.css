@@ -1,5 +1,11 @@
 #mobileNav {
-  display: none;
+  border-bottom: 1px solid #E4E5E7;
+}
+#mobileNav .logo h1 {
+  color: #183b56;
+}
+#mobileNav .logo h1 span {
+  border-color: #06c484;
 }
 #mobileNav .logo .logo1 {
   display: none;
@@ -13,7 +19,6 @@
 
 .page {
   min-height: 88vh !important;
-  padding-inline: 25px;
 }
 .page .logo2 {
   width: 85px;

@@ -34,7 +34,7 @@
 }
 .mobile-cover .content .text .cover-heading {
   color: rgb(246, 246, 246);
-  font-size: 28px;
+  font-size: 27px;
   margin-bottom: 15px;
   font-weight: 800;
 }
@@ -103,7 +103,7 @@
 }
 .services .content {
   padding: 35px 25px;
-  padding-bottom: 25px;
+  padding-bottom: 22px;
 }
 .services .content .text {
   text-align: left;
@@ -131,6 +131,8 @@
   margin: 0 25px;
   padding: 0;
   position: relative;
+  transition: 0.2s;
+  cursor: pointer;
 }
 .services .content .services-cards .service .service-image {
   width: 100%;
@@ -198,6 +200,13 @@
 .services .content .services-cards .service:first-child {
   margin-left: 0;
 }
+.services .content .services-cards .service:hover .name {
+  text-decoration: underline;
+}
+.services .content .services-cards .service:hover .service-image {
+  transition: 0.2s;
+  filter: brightness(85%);
+}
 
 .categories {
   width: 100%;
@@ -223,6 +232,8 @@
   padding: 14px;
   background: white;
   border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 .categories .cat-cards .cat:first-child {
   margin-top: 0;
@@ -253,4 +264,12 @@
   color: #183b56;
   font-size: 13px;
   opacity: 0.9;
+}
+.categories .cat-cards .cat:hover {
+  transform: scale(1.05);
+  filter: brightness(95%);
+}
+.categories .cat-cards .cat:focus, .categories .cat-cards .cat:active {
+  transform: scale(1.08);
+  filter: brightness(93%);
 }/*# sourceMappingURL=base.css.map */

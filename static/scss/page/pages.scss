@@ -4,8 +4,14 @@ $primBtn: #06c484;
 $txt: #183b56;
 
 #mobileNav{
-    display: none;
+    border-bottom: 1px solid #E4E5E7;
     .logo{
+        h1{
+            color: $txt;
+            span{
+                border-color: $primBtn;
+            }
+        }
         .logo1{
         display: none;
         }
@@ -22,7 +28,6 @@ $txt: #183b56;
 
 .page{
     min-height: 88vh !important;
-    padding-inline: 25px;
     .logo2{
         width: 85px;
         height: auto;

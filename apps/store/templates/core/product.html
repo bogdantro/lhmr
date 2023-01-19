@@ -5,16 +5,49 @@
 
 
 {% block content %}
-<link rel="stylesheet" href="{% static '/scss/store/product.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/scss/page/pages.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/scss/store/product/product.css' %}" type="text/css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+      <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+ integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+ crossorigin=""></script>
 
-{% if product.is_small %}
-    {% include 'pages/product-small.html' %}
-{% endif %}
-{% if product.is_middle %}
-    {% include 'pages/product-middle.html' %}
-{% endif %}
-{% if product.is_big %}
-    {% include 'pages/product-big.html' %}
-{% endif %}
+<div class="page">
+    <div class="product-section">
+        <img class="product-image" src="{{product.image}}" alt="product image">
+        <div class="text">
+            <div class="reviews">
+                <p><i class="fa-solid fa-star"></i>3</p><span>(40)</span>
+             </div>
+            <div class="name">{{product.name}}</div>
+            <div class="business-name">{{product.business_name}}</div>
+        </div>
+        <br>
+        <div id="map" style="height: 400px;"></div>
+    </div>
+</div>
+
+<script>
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+}).addTo(map);
+var marker = L.marker([51.5, -0.09]).addTo(map);
+var circle = L.circle([51.508, -0.11], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(map);
+var polygon = L.polygon([
+    [51.509, -0.08],
+    [51.503, -0.06],
+    [51.51, -0.047]
+]).addTo(map);
+</script>
 
 {% endblock %}

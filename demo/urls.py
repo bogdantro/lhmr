@@ -24,6 +24,8 @@ urlpatterns = [
 
     path('søke-resultater/', home_page_search, name='home_page_search'),
 
+    path('produkt/:<slug>/', product_detail, name='product_detail'),
+
 
     # Auth
     path('logg-inn/', views.LoginView.as_view(template_name='core/login.html'), name='login'),
