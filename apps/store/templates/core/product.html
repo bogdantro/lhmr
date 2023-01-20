@@ -121,13 +121,11 @@
                 <p class="conf"><i class="fa-solid fa-circle-check"></i>Vurderingen har blitt bekrefta</p>
                 {% endif %}
               </div>
-              <button class="add-review-btn">Skriv en vurdering</button>
-              <p class="add-review-txt">For å kunne publisere vurderingen, må vi bekrefte den. Dette tar ca 1-10 timer etter du har skrevet vurderingen</p>
               {% empty %}
                <p class="no-reviews">Ingen vurderinger enda</p>
+               {% endfor %}
                <button class="add-review-btn">Skriv en vurdering</button>
                <p class="add-review-txt">For å kunne publisere vurderingen, må vi bekrefte den. Dette tar ca 1-10 timer etter du har skrevet vurderingen</p>
-              {% endfor %}
             </div>
           </div>
 
