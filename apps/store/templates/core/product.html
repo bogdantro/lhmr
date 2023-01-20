@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="{% static '/scss/page/pages.css' %}" type="text/css">
 <link rel="stylesheet" href="{% static '/scss/store/product/product.css' %}" type="text/css">
 <script rel="stylesheet" src="{% static '/js/product.js' %}" type="text/javascript"></script>
-link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.css' type='text/css' />
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js'></script>
@@ -38,30 +37,99 @@ link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-g
             <a data-slide="prev" role="button" class="carousel-control-prev" href="#carouselExampleControls">&#10094;</a>
             <a data-slide="next" role="button" class="carousel-control-next" href="#carouselExampleControls">&#10095;</a>
           </div>
-          <div class="quick-links">
-            <a class="active">Beskrivelse</a>
-            <a>Vurderinger</a>
+          <div class="quick-links" id="quickLinks">
+            <a id="infoQucikLink" onclick="info()" class="active">Info</a>
+            <a id="reviewsQucikLink" onclick="reviews()">Vurderinger</a>
             <a>Kontakt</a>
           </div>
-         <div class="text">
+         <div class="text main">
              <div class="reviews">
-                 <p><i class="fa-solid fa-star"></i>3</p><span>(40)</span>
+                 <p><i class="fa-solid fa-star"></i>{% for review in product.reviews.all %}{{ review.all.count }}{% endfor %}</p><span>(40)</span>
                 </div>
                 <div class="name">{{product.name}}</div>
                 <div class="business-name"><i class="fa-solid fa-circle-user"></i>{{product.business_name}}</div>
           </div>
 
-          <div class="text info" id="info">
-            <h1>Beskrivelse</h1>
-            <p class="">{{product.description}}</p>
+          <div id="infoSec">            
+            <div class="text info" id="infoAbtServ">
+                <h1>Beskrivelse</h1>
+              <p class="">{{product.description}}</p>
+            </div>
+            
+            <hr style="margin-block: 38px;">
+            
+            <div class="text location" id="location">
+              <h1>Plassering</h1>
+              <p>{{product.address}}</p>
+              <div id='map' style="width: 100%; height: 330px;"></div>
+            </div>
+
+            <hr style="margin-block: 38px;">
+            
+            <div class="text opening-hours" id="openingHours">
+              <h1>Åpningstider</h1>
+              <div class="card">
+                <div class="day monday">
+                  <p class="act-day">Mandag</p>
+                  <p class="time">{{product.monday}}</p>
+                </div>
+                <hr style="margin-block: 11px; background: rgba(194, 194, 194, 0.45);">
+                <div class="day tuesday">
+                  <p class="act-day">Tirsdag</p>
+                  <p class="time">12:00 - 20:00</p>
+                </div>
+                <hr style="margin-block: 11px; background: rgba(194, 194, 194, 0.45);">
+                <div class="day wednesday">
+                  <p class="act-day">Ondsdag</p>
+                  <p class="time">12:00 - 20:00</p>
+                </div>
+                <hr style="margin-block: 11px; background: rgba(194, 194, 194, 0.45);">
+                <div class="day thursday">
+                  <p class="act-day">Torsdag</p>
+                  <p class="time">12:00 - 20:00</p>
+                </div>
+                <hr style="margin-block: 11px; background: rgba(194, 194, 194, 0.45);">
+                <div class="day friday">
+                  <p class="act-day">Fredag</p>
+                  <p class="time">12:00 - 20:00</p>
+                </div>
+                <hr style="margin-block: 11px; background: rgba(194, 194, 194, 0.45);">
+                <div class="day saturday">
+                  <p class="act-day">Lørdag</p>
+                  <p class="time">12:00 - 20:00</p>
+                </div>
+                <hr style="margin-block: 11px; background: rgba(194, 194, 194, 0.45);">
+                <div class="day sunday">
+                  <p class="act-day">Søndag</p>
+                  <p class="time">12:00 - 20:00</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <hr style="margin-block: 38px;">
-
-          <div class="text location" id="location">
-            <h1>Plassering</h1>
-            <div id='map' style="width: 100%; height: 400px;"></div>
+          <div id="reviewsSec">
+            <div class="text reviews" id="reviewsServ">
+              <h1>Vurderinger</h1>
+              {% for review in product.reviews.all %}
+            <div id="reviewCard">
+               <div>
+                  <p>
+                     Dato: {{ review.date_added|date:"Y-m-d" }},
+                     Stjerner:{{ review.stars }}
+                  </p>
+                  <div id="reviewText">  
+                     {{ review.content }}
+                  </div>
+               </div>
+            </div>
+            {% empty %}
+            <div class="notification space-below">
+               <h1>Ingen vurderinger enda</h1>
+            </div>
+               {% endfor %}
+            </div>
           </div>
+
         </div>
       </div>
 

@@ -3,7 +3,7 @@
   height: 100%;
   padding-block: 8px;
   position: relative;
-  background: white;
+  background: #06c484;
 }
 #footer .footer-links {
   width: 100%;
@@ -14,7 +14,7 @@
   margin-block: 6px;
   width: 100%;
   display: inline-block;
-  color: #183b56;
+  color: rgb(246, 246, 246);
   font-size: 16px;
   cursor: pointer;
 }
@@ -45,12 +45,9 @@
   border-radius: 4px;
   font-size: 21px;
   padding: 10px;
-  color: #183b56;
+  color: rgb(246, 246, 246);
   margin-inline: 3px;
   cursor: pointer;
-}
-#footer .footerbottom .social-icons .icons i:hover {
-  color: #0082ec;
 }
 #footer .footerbottom .copyright {
   width: auto;
@@ -60,7 +57,7 @@
 #footer .footerbottom .copyright p {
   padding: auto;
   margin: auto;
-  color: #183b56;
+  color: rgb(246, 246, 246);
   font-size: 13px;
 }
 #footer #newsletter {

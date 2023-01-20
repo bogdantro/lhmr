@@ -34,6 +34,15 @@ class Product(models.Model):
     image = models.ImageField(blank=False, default='none', upload_to='other/')
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     is_home_page = models.BooleanField(default=False)
+    # Openin hours
+    monday = models.CharField(max_length=500)
+    tirsdag = models.CharField(max_length=500)
+    ondsdag = models.CharField(max_length=500)
+    torsdag = models.CharField(max_length=500)
+    fredag = models.CharField(max_length=500)
+    lørdag = models.CharField(max_length=500)
+    søndag = models.CharField(max_length=500)
+
     
     def __str__(self):
         return self.name
@@ -42,3 +51,12 @@ class Product(models.Model):
     def image_url(self):
         return '%s%s' % (settings.ALLOWED_HOSTS, self.image.url) if self.image else ''    
     
+class ProductReview(models.Model):
+    product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
+    content = models.TextField(blank=True, max_length=1500)
+    stars = models.IntegerField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    
+    def __str__(self):
+        return self.content

@@ -12,6 +12,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js'></script>
+<script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
 
 <!-- Cover -->
 <div class="cover">
@@ -63,7 +67,7 @@
    <div class="content">
       <div class="text">
          <p class="headingp">Kategorier</p>
-         <h1 class="section-heading">Topp Kategorier</h1>
+         <h1 class="section-heading">Topp kategorier</h1>
       </div>
       <div class="cat-cards">
          {% for category in category %}
@@ -78,4 +82,53 @@
       </div>
    </div>
 </div>
+
+<!-- Map -->
+<div class="map">
+   <div class="content">
+      <div class="text">
+         <p class="headingp">Kart</p>
+         <h1 class="section-heading">Utforsk med kart</h1>
+      </div>
+     <div id="map" style="width: 100%; height: 450px; margin-top: 13px;"></div>
+   </div>
+</div>
+
+<script type="text/javascript">
+   mapboxgl.accessToken = '{{mapbox_access_token}}';
+    const map = new mapboxgl.Map({
+      container: 'map', // Specify the container ID
+      style: 'mapbox://styles/bogdantro/cld3lse3v000301lidywd9qfs',
+      center: [ 10.462281, 61.113568], // Specify the starting position
+      zoom: 11, // Specify the starting zoom
+    });
+  
+    /* 
+  Add an event listener that runs
+    when a user clicks on the map element.
+  */
+  map.on('click', (event) => {
+    // If the user clicked on one of your markers, get its information.
+    const features = map.queryRenderedFeatures(event.point, {
+      layers: ['lillehammer'] // replace with your layer name
+    });
+    if (!features.length) {
+      return;
+    }
+    const feature = features[0];
+  
+    // Code from the next step will go here.
+    /* 
+      Create a popup, specify its options 
+      and properties, and add it to the map.
+    */
+  const popup = new mapboxgl.Popup({ offset: [0, -15] })
+    .setLngLat(feature.geometry.coordinates)
+    .setHTML(
+      `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+    )
+    .addTo(map);
+  });
+  </script>
+  
 {% endblock %}

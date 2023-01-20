@@ -36,7 +36,7 @@
   color: rgb(246, 246, 246);
   font-size: 26px;
   margin-bottom: 15px;
-  font-weight: 800;
+  font-weight: 600;
 }
 .cover .content .text .paragraph {
   margin-top: 0;
@@ -272,6 +272,19 @@
 .categories .cat-cards .cat:focus, .categories .cat-cards .cat:active {
   transform: scale(1.08);
   filter: brightness(93%);
+}
+
+.map {
+  width: 100%;
+  height: auto;
+}
+.map .content {
+  padding: 0 18px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+.map .content .text {
+  text-align: left;
 }
 
 @media only screen and (min-device-width: 1140px) {

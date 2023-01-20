@@ -11,6 +11,8 @@ html, body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   background: rgb(249, 249, 249) !important;
+  max-width: 1180px;
+  margin: auto;
 }
 
 button {

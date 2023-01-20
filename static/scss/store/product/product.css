@@ -14,7 +14,7 @@
   position: absolute;
   top: 55px;
   width: 100%;
-  padding-inline: 18px;
+  padding-inline: 15px;
   padding-bottom: 15px;
   padding-top: 15px;
   text-align: center;
@@ -50,7 +50,7 @@
   outline: none;
   padding: 7px;
   background: white;
-  border: 1px solid rgb(240, 240, 240);
+  border: 1px solid rgb(234, 234, 234);
   color: #183b56;
   border-radius: 4px;
   font-size: 15px;
@@ -75,7 +75,7 @@
 
 .product-section {
   position: relative;
-  padding-top: 39px;
+  padding-top: 133px;
 }
 .product-section .carousel-control-prev {
   opacity: 1;
@@ -131,12 +131,18 @@
   filter: brightness(75%);
 }
 .product-section .quick-links {
-  background: #0cb37b;
+  background: #06c484;
   height: 52px;
   width: 100%;
   display: flex;
   align-items: center;
   padding-inline: 18px;
+  position: absolute;
+}
+.product-section .quick-links.sticky {
+  position: fixed;
+  top: 78px;
+  z-index: 10000;
 }
 .product-section .quick-links a {
   padding-inline: 5px;
@@ -150,6 +156,9 @@
 .product-section .quick-links a.active {
   opacity: 1;
 }
+.product-section .quick-links a:hover {
+  color: rgb(246, 246, 246);
+}
 .product-section .quick-links a:first-child {
   padding-left: 0;
   margin-left: 0;
@@ -161,6 +170,9 @@
 .product-section .text {
   margin-top: 10px;
   padding-inline: 18px;
+}
+.product-section .text.main {
+  padding-top: 58px;
 }
 .product-section .text .reviews {
   display: flex;
@@ -205,33 +217,104 @@
   font-size: 12px;
   margin-right: 6px;
 }
-.product-section .info {
-  margin-top: 32px;
+.product-section #infoSec {
+  display: none;
 }
-.product-section .info h1 {
+.product-section #infoSec.hidden {
+  display: none;
+}
+.product-section #infoSec.active {
+  display: block;
+}
+.product-section #infoSec .info {
+  margin-top: 38px;
+}
+.product-section #infoSec .info h1 {
   font-size: 22.5px;
   color: #183b56;
   font-weight: 500;
 }
-.product-section .info p {
+.product-section #infoSec .info p {
   color: #183b56;
   font-size: 15px;
   opacity: 0.8;
 }
-.product-section .location {
+.product-section #infoSec .location {
   margin-top: 0;
   padding-inline: 18px;
 }
-.product-section .location h1 {
+.product-section #infoSec .location h1 {
+  font-size: 22.5px;
+  color: #183b56;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.product-section #infoSec .location p {
+  margin-left: 1px;
+  color: #183b56;
+  font-size: 13px;
+  opacity: 0.8;
+}
+.product-section #infoSec .location #map {
+  margin-top: 18px;
+}
+.product-section #infoSec .opening-hours {
+  margin-top: 0;
+  padding-inline: 18px;
+}
+.product-section #infoSec .opening-hours h1 {
   font-size: 22.5px;
   color: #183b56;
   font-weight: 500;
 }
-.product-section .location p {
+.product-section #infoSec .opening-hours .card {
+  background: rgba(241, 241, 241, 0.98);
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  padding: 13px 33px;
+  border: none;
+  margin-top: 15px;
+}
+.product-section #infoSec .opening-hours .card .day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-section #infoSec .opening-hours .card .day p {
+  color: #183b56;
+  font-size: 14px;
+  opacity: 0.9;
+  margin: 0;
+}
+.product-section #infoSec .opening-hours .card .day:first-child {
+  margin-top: 0;
+}
+.product-section #infoSec .opening-hours .card .day:last-child {
+  margin-bottom: 0;
+}
+.product-section #infoSec .opening-hours .card .day:first-child {
+  margin-top: 0;
+}
+.product-section #reviewsSec {
+  display: block;
+}
+.product-section #reviewsSec.active {
+  display: block;
+}
+.product-section #reviewsSec.hidden {
+  display: none;
+}
+.product-section #reviewsSec .reviews {
+  margin-top: 38px;
+}
+.product-section #reviewsSec .reviews h1 {
+  font-size: 22.5px;
+  color: #183b56;
+  font-weight: 500;
+}
+.product-section #reviewsSec .reviews p {
   color: #183b56;
   font-size: 15px;
   opacity: 0.8;
-}
-.product-section .location #map {
-  margin-top: 18px;
 }/*# sourceMappingURL=product.css.map */

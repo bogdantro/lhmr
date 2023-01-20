@@ -21,7 +21,7 @@ $txt: #183b56;
     position: absolute;
     top: 55px;
     width: 100%;
-    padding-inline: 18px;
+    padding-inline: 15px;
     padding-bottom: 15px;
     padding-top: 15px;
     text-align: center;
@@ -56,7 +56,7 @@ $txt: #183b56;
       outline: none;
       padding: 7px;
       background: white;
-      border: 1px solid rgb(240,240,240);
+      border: 1px solid rgb(234,234,234);
       color: $txt;
       border-radius: 4px;
       font-size: 15px;
@@ -75,7 +75,7 @@ $txt: #183b56;
 }
 .product-section{
     position: relative;
-    padding-top: 39px;
+    padding-top: 133px;
     .carousel-control-prev{
         opacity: 1;
         width: max-content;
@@ -121,12 +121,18 @@ $txt: #183b56;
         filter: brightness(75%);
     }
     .quick-links{
-        background: #0cb37b;
+        background: $primBtn;
         height: 52px;
         width: 100%;
         display: flex;
         align-items: center;
         padding-inline: 18px;
+        position: absolute;
+        &.sticky{
+            position: fixed;
+            top: 78px;
+            z-index: 10000;
+        }
         a{
             padding-inline: 5px;
             margin-inline: 3px;
@@ -137,6 +143,9 @@ $txt: #183b56;
             font-weight: 500;
             &.active{
                 opacity: 1;
+            }
+            &:hover{
+                color: $white;
             }
             &:first-child{
                 padding-left: 0;
@@ -151,6 +160,9 @@ $txt: #183b56;
     .text{
         margin-top: 10px;
         padding-inline: 18px;
+        &.main{
+            padding-top: 58px;
+        }
         .reviews{
             display: flex;
             margin-block: 3px;
@@ -193,34 +205,105 @@ $txt: #183b56;
             }
         }
     }
-    .info{
-        margin-top: 32px;
-        h1{
-            font-size: 22.5px;
-            color: $txt;
-            font-weight: 500;
+    #infoSec{ 
+        display: none;
+        &.hidden{
+            display: none;
         }
-        p{
-            color: $txt;
-            font-size: 15px;
-            opacity: 0.8;
+        &.active{
+            display: block;
+        }
+        .info{
+                margin-top: 38px;
+                h1{
+                    font-size: 22.5px;
+                    color: $txt;
+                font-weight: 500;
+            }
+            p{
+                color: $txt;
+                font-size: 15px;
+                opacity: 0.8;
+            }
+        }
+        .location{
+            margin-top: 0;
+            padding-inline: 18px;
+            h1{
+                font-size: 22.5px;
+                color: $txt;
+                font-weight: 500;
+                margin-bottom: 3px;
+            }
+            p{
+                margin-left: 1px;
+                color: $txt;
+                font-size: 13px;
+                opacity: 0.8;
+            }
+            #map{
+                margin-top: 18px;
+            }
+        }
+        .opening-hours{
+            margin-top: 0;
+            padding-inline: 18px;
+            h1{
+                font-size: 22.5px;
+                color: $txt;
+                font-weight: 500;
+            }
+            .card{
+                background: rgba(241,241,241,0.98);
+                width: 100%;
+                height: auto;
+                border-radius: 4px;
+                padding: 13px 33px;
+                border: none;
+                margin-top: 15px;
+                .day{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    p{
+                        color: $txt;
+                        font-size: 14px;
+                        opacity: 0.9;
+                        margin: 0;
+                    }
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                }
+            }
         }
     }
-    .location{
-        margin-top: 0;
-        padding-inline: 18px;
-        h1{
-            font-size: 22.5px;
-            color: $txt;
-            font-weight: 500;
+    #reviewsSec{
+        display: block;
+        &.active{
+            display: block;
         }
-        p{
-            color: $txt;
-            font-size: 15px;
-            opacity: 0.8;
+        &.hidden{
+            display: none;
         }
-        #map{
-            margin-top: 18px;
+        .reviews{
+            margin-top: 38px;
+            h1{
+                font-size: 22.5px;
+                color: $txt;
+                font-weight: 500;
+            }
+            p{
+                color: $txt;
+                font-size: 15px;
+                opacity: 0.8;
+            }
         }
     }
 }
