@@ -3,7 +3,7 @@
   height: 100%;
   padding-block: 8px;
   position: relative;
-  background: #06c484;
+  background: white;
 }
 #footer .footer-links {
   width: 100%;
@@ -14,7 +14,7 @@
   margin-block: 6px;
   width: 100%;
   display: inline-block;
-  color: rgb(246, 246, 246);
+  color: #183b56;
   font-size: 16px;
   cursor: pointer;
 }
@@ -45,7 +45,7 @@
   border-radius: 4px;
   font-size: 21px;
   padding: 10px;
-  color: rgb(246, 246, 246);
+  color: #183b56;
   margin-inline: 3px;
   cursor: pointer;
 }
@@ -57,7 +57,7 @@
 #footer .footerbottom .copyright p {
   padding: auto;
   margin: auto;
-  color: rgb(246, 246, 246);
+  color: #183b56;
   font-size: 13px;
 }
 #footer #newsletter {

@@ -53,10 +53,11 @@ class Product(models.Model):
     
 class ProductReview(models.Model):
     product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
+    title = models.CharField(max_length=800)
     content = models.TextField(blank=True, max_length=1500)
     stars = models.IntegerField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
-
+    is_conf = models.BooleanField()
     
     def __str__(self):
-        return self.content
+        return str(self.product)

@@ -40,11 +40,11 @@
           <div class="quick-links" id="quickLinks">
             <a id="infoQucikLink" onclick="info()" class="active">Info</a>
             <a id="reviewsQucikLink" onclick="reviews()">Vurderinger</a>
-            <a>Kontakt</a>
+            <a id="contactQucikLink" onclick="contact()">Kontakt</a>
           </div>
          <div class="text main">
              <div class="reviews">
-                 <p><i class="fa-solid fa-star"></i>{% for review in product.reviews.all %}{{ review.all.count }}{% endfor %}</p><span>(40)</span>
+                 <p><i class="fa-solid fa-star"></i>{% for review in product.reviews.all %}{{review.stars}}{% endfor %}</p><span>(40)</span>
                 </div>
                 <div class="name">{{product.name}}</div>
                 <div class="business-name"><i class="fa-solid fa-circle-user"></i>{{product.business_name}}</div>
@@ -111,25 +111,36 @@
             <div class="text reviews" id="reviewsServ">
               <h1>Vurderinger</h1>
               {% for review in product.reviews.all %}
-            <div id="reviewCard">
-               <div>
-                  <p>
-                     Dato: {{ review.date_added|date:"Y-m-d" }},
-                     Stjerner:{{ review.stars }}
-                  </p>
-                  <div id="reviewText">  
-                     {{ review.content }}
-                  </div>
-               </div>
-            </div>
-            {% empty %}
-            <div class="notification space-below">
-               <h1>Ingen vurderinger enda</h1>
-            </div>
-               {% endfor %}
+              <div id="reviewCard">
+                <div class="stars"><p><i class="fa-solid fa-star"></i>{{ review.stars }} av 6</p></div>
+                <h1 class="title">{{ review.title }}</h1>
+                <p class="date">Skrevet: {{ review.created_at|date:"d-m-Y" }} - Anonymt</p>
+                <p class="content">{{ review.content }}</p>
+                <br>
+                {% if review.is_conf %}
+                <p class="conf"><i class="fa-solid fa-circle-check"></i>Vurderingen har blitt bekrefta</p>
+                {% endif %}
+              </div>
+              <button class="add-review-btn">Skriv en vurdering</button>
+              <p class="add-review-txt">For å kunne publisere vurderingen, må vi bekrefte den. Dette tar ca 1-10 timer etter du har skrevet vurderingen</p>
+              {% empty %}
+               <p class="no-reviews">Ingen vurderinger enda</p>
+               <button class="add-review-btn">Skriv en vurdering</button>
+               <p class="add-review-txt">For å kunne publisere vurderingen, må vi bekrefte den. Dette tar ca 1-10 timer etter du har skrevet vurderingen</p>
+              {% endfor %}
             </div>
           </div>
 
+          <div id="contactSec">
+            <div class="text contact" id="contactServ">
+              <h1>Kontakt</h1>
+              <a href="">www.domain.no</a>
+              <br>
+              <a href="">Facebook</a>
+              <br>
+              <a href="">Instagram</a>
+            </div>
+          </div>
         </div>
       </div>
 
