@@ -14,31 +14,17 @@
 <!-- footer -->
 <div id="footer">
     <div class="width">
-        <!-- newsletter -->
-        <!-- <div id="newsletter">
-            <h1>Bli medlem</h1>
-            <p class="paragraph" style="font-size: 14.5px;">Få nyheter om kampanjer, rabatter og mye mer! Hmmmm vi spammer ikke altså</p>
-            <form v-on:submit.prevent="onSubmit">
-                <div class="content">
-                    <input type="email" v-model="email" name="email" class="input" placeholder="Din epost">
-                    <button onclick="RefreshPage()"><i class="fad fa-arrow-alt-from-left"></i></button>
-                </div>
-            </form>
-            <div id="footerNewsLetterAlert" v-if="showSuccess">
-                <div class="alert alert-success">Epost er lagret, tusen takk!</div>
-            </div>
-        </div> -->
         <!-- footer links -->
         <div class="footer-links">
-            <a href="/vilkaar-og-betingelser">Vilkår & betingelser<i class="fa-solid fa-caret-right"></i></a>
-            <a href="/policy">Policy<i class="fa-solid fa-caret-right"></i></a>
+            <a href="/vilkaar-og-betingelser">Vilkår</a>
+            <a href="/policy">Policy</a>
         </div>
         <hr style="background: rgba(255, 255, 255, 0.664);">
         <!-- footer bottom -->
         <div class="footerbottom">
             <!-- copyright -->
             <div class="copyright">
-                <p> &#169; Lillehammer Tjenester</p>
+                <p>&#169; Copyright 2023 LT </p>
             </div>
             <!-- social icons -->
             <div class="social-icons">
@@ -51,49 +37,3 @@
         </div>
     </div>
 </div>
-<script>
-function RefreshPage(){
-    setTimeout(function(){
-        location.reload();
-    },1500);
-}
-
-    var newsletterapp = new Vue({
-        el: '#newsletter',
-        data () {
-            return {
-                email: '',
-                showSuccess: false
-            }
-        },
-        methods: {                
-            onSubmit() {
-                console.log('onSubmit')
-                fetch('/api/add_subscriber/', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'X-CSRFToken': '{{ csrf_token }}'
-                        },
-                        body: JSON.stringify({'email': this.email}),
-                    })
-                    .then((response) => {
-                        return response.json()
-                    })
-                    .then((data) => {
-                        console.log(data)
-
-                        this.showSuccess = true
-                        this.email = ''
-                    })
-                    .catch(function(error) {
-                        this.showSuccess = false
-                        console.log('Error:', error);
-                    });
-            },
-        }
-    })
-</script>
-    
-
-

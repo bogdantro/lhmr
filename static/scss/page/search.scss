@@ -3,30 +3,109 @@ $white: rgb(246,246,246);
 $primBtn: #06c484;
 $txt: #183b56;
 
+
+#footer{
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+#mobileNav{
+  position: absolute;
+  background: white;
+  &.sticky{
+      &::before{
+          display: none;
+      }
+  }
+}
+
+.search-search{
+  position: absolute;
+  top: 55px;
+  width: 100%;
+  padding-inline: 15px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-align: center;
+  border-bottom: 1px solid rgba(40,40,40,0.1);
+  z-index: 10000;
+  background: white;
+  &.sticky{
+      position: fixed;
+      top: 0;
+  }
+  button{
+      width: 0;
+      height: 0;
+      border: none;
+      position: absolute;
+      right: 58px;
+      top: 30px;
+      i{
+          font-size: 15px;
+          color: #183b56a9;
+          padding: 5px;
+          margin: -5px;
+          background: rgba(155, 155, 155, 0.22);
+          border-radius: 100%;
+      }
+  }
+  input{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 7px;
+    background: white;
+    border: 1px solid rgb(234,234,234);
+    color: $txt;
+    border-radius: 4px;
+    font-size: 15px;
+    &::placeholder{
+      color: $txt;
+      opacity: 0.8;
+    }
+  }
+}
 .page{
+  .search-q{
+    position: absolute;
+    top: 136px;
+    width: 100%;
+    height: auto;
+    background: $primBtn;
+    color: $white;
+    font-size: 14px;
+    padding: 10px 18px;
+    font-weight: 500;
+    z-index: 10000;
+    &.sticky{
+      position: fixed;
+      top: calc(136px - 55px);
+      box-shadow: 0 0 4px rgba(5,5,5,0.12);
+    }
+   }
     .search-results{
-        .text{
-            text-align: left;
-            h1{
-                margin-bottom: 2px;
-            }
-        }
+      padding-inline: 18px;
+      padding-top: 95px;
         .services{
-            margin-top: 20px;
+            padding-block: 12px;
+            margin-block: 20px;
         }
         .service{
-            min-width: 190px;
-            max-width: 190px;
-            height: min-content;
-            margin: 0 25px;
-            padding: 0;
-            position: relative;
+          width: 93%;
+          max-width: 400px;
+          height: min-content;
+          margin: 0 25px;
+          padding: 0;
+          position: relative;
+          margin: auto;
+          left: 50%;
+          transform: translateX(-50%);
             .service-image{
               width: 100%;
-              height: 105px;
+              height: 155px;
               object-fit: cover;
               filter: brightness(90%);
-              border-radius: 4px
+              border-radius: 4px;
             }
             .reviews{
               display: flex;
@@ -34,12 +113,12 @@ $txt: #183b56;
               p{
                 margin-bottom: 0;
                 color: #FFBC55;
-                font-size: 12px;
+                font-size: 13px;
                 margin-top: 1px;
                 i{
                   transform: translateY(-0.9px);
                   margin-right: 3px;
-                  font-size: 11px;
+                  font-size: 12px;
                 }
               }
               span{
@@ -49,12 +128,13 @@ $txt: #183b56;
               }
             }
             .name{
-              font-size: 16px;
+              font-size: 18px;
               color: $txt;
+              font-weight: 500;
               margin-bottom: 3px;
             }
             .business-name{
-              font-size: 12px;
+              font-size: 14px;
               color: $txt;
               opacity: 0.7;
             }
@@ -63,25 +143,6 @@ $txt: #183b56;
               color: $txt;
               font-size: 15px;
               opacity: 0.9;
-            }
-            button{
-              margin-top: 15px;
-              height: 38px;
-              color: $txt;
-              border: none;
-              text-align: center;
-              border-radius: 4px;
-              background: transparent;
-              width: 95%;
-              background: rgba(190,190,190,0.2);
-              position: absolute;
-              bottom: 0;
-              left: 50%;
-              transform: translateX(-50%);
-              display: none;
-              &:hover{
-                filter: brightness(100%);
-              }
             }
             &:first-child{
               margin-left: 0;

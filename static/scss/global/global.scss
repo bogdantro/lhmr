@@ -17,7 +17,7 @@ html, body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   background:  rgb(248,248,248) !important;
-  max-width: 1180px;
+  max-width: 1350px;
   margin: auto;
 }
 // global divs
@@ -54,7 +54,7 @@ button{
 h1{
   &.section-heading{
     color: $txt;
-    font-size: 27px;
+    font-size: 24px;
   }
 }
 // global text
@@ -65,10 +65,11 @@ p{
     opacity: 0.8;
   }
   &.headingp{
-    font-size: 16.5px;
+    font-size: 14px;
     color: $txt;
     opacity: 0.8;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+    font-weight: 500;
   }
 }
 // global links

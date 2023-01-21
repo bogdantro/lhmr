@@ -5,26 +5,27 @@
 {% block content %}
 <link rel="stylesheet" href="{% static '/scss/page/pages.css' %}" type="text/css">
 <link rel="stylesheet" href="{% static '/scss/page/search.css' %}" type="text/css">
-<script rel="stylesheet" src="{% static '/js/home.js' %}" type="text/javascript"></script>
+<script rel="stylesheet" src="{% static '/js/search.js' %}" type="text/javascript"></script>
 
+
+<!-- Only on some pages -->
+<div class="search-search" id="searchSearch">
+    <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
+       {% csrf_token %}
+       <input name="q" type="text" placeholder="Søk blant 500 tjenester"><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+   </form>
+ </div>
 <div class="page">
-    <div class="backtohome" onclick="history.back()">
-        <span></span><h1>Tilbake</h1>
-    </div>
-    <img class="logo2" src="{% static '/images/logo/logo-black.png' %}" alt="logo2">
     <br>
     <br>
     <br>
     <br>
     {% if query %} 
+    <p class="search-q" id="searchQ">Du søkte for <strong>{{query}}</strong><br>Og fant {{results.all.count}} tjeneste(r)</p>
         {% if results %}
         <div class="search-results">
-            <div class="text">
-                <h1 class="section-heading">Søkeresultater</h1>
-                <p class="headingp">Du søkte for " {{query}} "</p>
-            </div>
-                {% for product in results %}
-            <div class="services">
+            {% for product in results %}
+            <div class="services" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
                 <div class="service">
                     <img src="{{product.image.url}}" alt="" class="service-image">
                     <div class="reviews">
@@ -32,7 +33,6 @@
                     </div>
                     <div class="name">{{product.name}}</div>
                     <div class="business-name">{{product.business_name}}</div>
-                    <button>Les mer</button>
                  </div>
             </div>
             {% endfor %}
