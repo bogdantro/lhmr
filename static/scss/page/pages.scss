@@ -27,35 +27,6 @@ $txt: #183b56;
 
 .page{
     min-height: 88vh !important;
-    .logo2{
-        width: 85px;
-        height: auto;
-        position: absolute;
-        top: 33px;
-        right: 30px;
-    }
-    .backtohome{
-        position: absolute;
-        left: 25px;
-        top: 35px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: max-content;
-        span{
-            width: 55px;
-            height: 2px;
-            background: $txt;
-            border-radius: 8px;
-            opacity: 0.85;
-        }
-        h1{
-            color: $txt;
-            font-size: 15px;
-            margin-left: 8px;
-            margin-bottom: 0;
-        }
-    }
 }
 
 

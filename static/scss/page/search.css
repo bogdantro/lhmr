@@ -93,7 +93,7 @@
   margin-block: 20px;
 }
 .page .search-results .service {
-  width: 93%;
+  width: 89%;
   max-width: 400px;
   height: -webkit-min-content;
   height: -moz-min-content;
@@ -107,7 +107,7 @@
 }
 .page .search-results .service .service-image {
   width: 100%;
-  height: 170px;
+  height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
   filter: brightness(90%);
@@ -115,7 +115,8 @@
 }
 .page .search-results .service .reviews {
   display: flex;
-  margin-block: 3px;
+  margin-block: 1px;
+  margin-top: 6px;
 }
 .page .search-results .service .reviews p {
   margin-bottom: 0;
