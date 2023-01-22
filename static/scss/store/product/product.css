@@ -66,6 +66,10 @@
   color: #183b56;
   opacity: 0.8;
 }
+.product-search input:focus, .product-search input:active {
+  border-width: 2px;
+  border-color: rgb(212, 212, 212);
+}
 
 .page .mapouter {
   width: 100%;
@@ -146,7 +150,7 @@
 .product-section .quick-links a {
   padding-inline: 5px;
   margin-inline: 3px;
-  font-size: 16px;
+  font-size: 15px;
   color: rgb(246, 246, 246);
   text-decoration: none;
   opacity: 0.64;

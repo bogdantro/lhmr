@@ -65,6 +65,10 @@
   color: #183b56;
   opacity: 0.8;
 }
+.search-search input:focus, .search-search input:active {
+  border-width: 2px;
+  border-color: rgb(212, 212, 212);
+}
 
 .page .search-q {
   position: absolute;
@@ -85,11 +89,11 @@
 }
 .page .search-results {
   padding-inline: 18px;
-  padding-top: 95px;
+  padding-top: 100px;
 }
 .page .search-results .services {
-  padding-block: 12px;
-  margin-block: 20px;
+  padding-block: 16px;
+  margin-block: 26px;
 }
 .page .search-results .service {
   width: 89%;
@@ -97,7 +101,6 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  margin: 0 25px;
   padding: 0;
   position: relative;
   margin: auto;
@@ -140,9 +143,22 @@
   margin-bottom: 3px;
 }
 .page .search-results .service .business-name {
-  font-size: 14px;
+  font-size: 12px;
   color: #183b56;
   opacity: 0.7;
+  font-weight: 500;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 3px;
+  margin: -2px;
+  transform: translateY(4px);
+  background: rgba(110, 110, 110, 0.1);
+  border-radius: 4px;
+}
+.page .search-results .service .business-name i {
+  font-size: 11px;
+  margin-right: 6px;
 }
 .page .search-results .service .short-des {
   margin-top: 8px;
@@ -152,4 +168,11 @@
 }
 .page .search-results .service:first-child {
   margin-left: 0;
+}
+.page .search-results .service:hover .name {
+  text-decoration: underline;
+}
+.page .search-results .service:hover .service-image {
+  transition: 0.2s;
+  filter: brightness(85%);
 }/*# sourceMappingURL=search.css.map */

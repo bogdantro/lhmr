@@ -63,6 +63,10 @@ $txt: #183b56;
         color: $txt;
         opacity: 0.8;
       }
+      &:focus, &:active{
+        border-width: 2px;
+        border-color: rgb(212, 212, 212);
+      }
     }
 }
 
@@ -135,7 +139,7 @@ $txt: #183b56;
         a{
             padding-inline: 5px;
             margin-inline: 3px;
-            font-size: 16px;
+            font-size: 15px;
             color: $white;
             text-decoration: none;
             opacity: 0.64;
