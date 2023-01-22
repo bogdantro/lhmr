@@ -38,13 +38,13 @@ $txt: #183b56;
       position: absolute;
       right: 42px;
       top: 29px;
+      padding: 3px 7px;
+      margin: -3px -7px;
+      border-radius: 100%;
+      background: rgba(155, 155, 155, 0.22);
       i{
           font-size: 15px;
           color: #183b56a9;
-          padding: 7px;
-          margin: -7px;
-          background: rgba(155, 155, 155, 0.22);
-          border-radius: 100%;
       }
   }
   input{
