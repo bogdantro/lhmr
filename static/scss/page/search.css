@@ -26,16 +26,11 @@
   position: fixed;
   top: 0;
 }
-.search-search button {
-  width: 0;
-  height: 0;
-  border: none;
+.search-search i {
   position: absolute;
-  right: 88px;
-  top: 10px;
-}
-.search-search button i {
-  font-size: 22px;
+  right: 58px;
+  top: 30px;
+  font-size: 15px;
   color: rgba(24, 59, 86, 0.662745098);
   padding: 5px;
   margin: -5px;
