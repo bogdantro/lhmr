@@ -26,14 +26,19 @@
   position: fixed;
   top: 0;
 }
-.search-search i {
+.search-search button {
+  border: none;
+  background: transparent;
+  padding: 0;
   position: absolute;
-  right: 58px;
-  top: 30px;
+  right: 42px;
+  top: 29px;
+}
+.search-search button i {
   font-size: 15px;
   color: rgba(24, 59, 86, 0.662745098);
-  padding: 5px;
-  margin: -5px;
+  padding: 7px;
+  margin: -7px;
   background: rgba(155, 155, 155, 0.22);
   border-radius: 100%;
 }
