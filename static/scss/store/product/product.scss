@@ -10,6 +10,9 @@ $txt: #183b56;
 #mobileNav{
     position: absolute;
     background: white;
+    &::before{
+        display: none;
+    }
     &.sticky{
         &::before{
             display: none;

@@ -6,6 +6,9 @@
   position: absolute;
   background: white;
 }
+#mobileNav::before {
+  display: none;
+}
 #mobileNav.sticky::before {
   display: none;
 }

@@ -21,15 +21,15 @@
     <br>
     <br>
     {% if query %} 
-    <p class="search-q" id="searchQ">Du søkte for <strong>{{query}}</strong><br>Og fant {{results.all.count}} tjeneste(r)</p>
-        {% if results %}
+    <p class="search-q" id="searchQ">Du søkte for <strong>{{query}}</strong><br>{% if results.all.count == 1 %}Og fant {{results.all.count}} tjeneste{% else %}Og fant {{results.all.count}} tjenester{% endif %}</p>
+    {% if results %}
         <div class="search-results">
             {% for product in results %}
             <div class="services" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
                 <div class="service">
                     <img src="{{product.image.url}}" alt="" class="service-image">
                     <div class="reviews">
-                       <p><i class="fa-solid fa-star"></i>3</p><span>(40)</span>
+                        <p><i class="fa-solid fa-star"></i>3</p><span>(40)</span>
                     </div>
                     <div class="name">{{product.name}}</div>
                     <div class="business-name"><i class="fa-solid fa-circle-user"></i>{{product.business_name}}</div>
@@ -38,7 +38,20 @@
             {% endfor %}
         </div>
         {% else %}
-        ingen finn
+        <div class="search-results" style="padding-top: 130px;">
+            <div class="no-results">
+                <i class="fa-regular fa-face-sad-tear"></i>
+                <h1>Søket ditt ga 0 resultater</h1>
+                <p>Prøv å endre søket ditt, og prøv igjen</p>
+                <div class="no-results-search">
+                    <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
+                       {% csrf_token %}
+                       <input name="q" type="text" placeholder="Prøv på nytt"><i class="fa-solid fa-magnifying-glass"></i>
+                       <button type="submit">Søk etter tjeneste</button>
+                   </form>
+                 </div>
+            </div>
+        </div>
         {% endif %}
         {% else %}
         ingen søk

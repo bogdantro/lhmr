@@ -10,6 +10,9 @@ $txt: #183b56;
 #mobileNav{
   position: absolute;
   background: white;
+  &::before{
+      display: none;
+  }
   &.sticky{
       &::before{
           display: none;
@@ -34,17 +37,22 @@ $txt: #183b56;
   }
   button{
       border: none;
-      background: transparent;
       position: absolute;
       right: 42px;
-      top: 29px;
-      padding: 3px 8px;
-      margin: -3px -8px;
-      border-radius: 100%;
-      background: rgba(155, 155, 155, 0.22);
+      top: 28px;
+      background: white !important;
+      padding: 11px 18px;
+      margin: -11px -18px;
       i{
-          font-size: 15px;
-          color: #183b56a9;
+        border-radius: 100%;
+        font-size: 15px;
+        color: #183b56a9;
+        &::before{
+            border-radius: 100%;
+            background: rgba(155, 155, 155, 0.22);
+            padding: 8px;
+            margin: -8px;
+          }
       }
   }
   input{
@@ -91,9 +99,76 @@ $txt: #183b56;
     .search-results{
       padding-inline: 18px;
       padding-top: 100px;
-        .services{
-            padding-block: 16px;
-            margin-block: 26px;
+      .no-results{
+        i{
+          color: $primBtn;
+          font-size: 40px;
+          margin-bottom: 10px;
+        }
+        h1{
+          font-size: 22.5px;
+          color: $txt;
+          font-weight: 500;
+        }
+        p{
+            color: $txt;
+            font-size: 15px;
+            opacity: 0.8;
+          }
+          .no-results-search{
+            position: relative;
+            margin-top: 22px;
+            padding: 25px 15px;
+            background: rgba(185, 185, 185, 0.15);
+            i{
+              position: absolute;
+              font-size: 15px;
+              color: #183b56a9;
+              right: 35px;
+              top: 43px;
+              background: $white;
+              padding: 16px;
+              margin: -16px;
+              &::before{
+                padding: 7px;
+                margin: -7px;
+                background: rgba(155, 155, 155, 0.22);
+                border-radius: 100%;
+              }
+            }
+            input{
+              width: 100%;
+              height: 50px;
+              border: none;
+              outline: none;
+              padding: 7px 17px;
+              background: $white;
+              color: $txt;
+              border-radius: 4px;
+              font-size: 15px;
+              &::placeholder{
+                color: $txt;
+                opacity: 0.8;
+              }
+            }
+            button{
+              font-size: 14.5px;
+              background: $primBtn;
+              color: $white;
+              text-align: center;
+              width: 100%;
+              height: 45px;
+              margin-top: 15px;
+              border-radius: 4px;
+              outline: none;
+              border: none;
+              font-weight: normal;
+            }
+          }
+        }
+          .services{
+          padding-block: 16px;
+          margin-block: 26px;
         }
         .service{
           width: 89%;
