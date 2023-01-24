@@ -36,6 +36,11 @@ $txt: #183b56;
         top: 0;
         box-shadow: 0 0 4px rgba(5,5,5,0.12);
     }
+    form{
+        border: 1px solid rgb(234,234,234);
+        border-radius: 4px;
+        display: flex;
+    }
     button{
         border: none;
         background: transparent;
@@ -52,23 +57,18 @@ $txt: #183b56;
         }
     }
     input{
-      width: 100%;
+      width: 85%;
       height: 50px;
       border: none;
       outline: none;
       padding: 7px;
       background: white;
-      border: 1px solid rgb(234,234,234);
       color: $txt;
       border-radius: 4px;
       font-size: 15px;
       &::placeholder{
         color: $txt;
         opacity: 0.8;
-      }
-      &:focus, &:active{
-        border-width: 2px;
-        border-color: rgb(212, 212, 212);
       }
     }
 }

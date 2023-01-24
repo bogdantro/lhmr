@@ -30,6 +30,11 @@
   top: 0;
   box-shadow: 0 0 4px rgba(5, 5, 5, 0.12);
 }
+.product-search form {
+  border: 1px solid rgb(234, 234, 234);
+  border-radius: 4px;
+  display: flex;
+}
 .product-search button {
   border: none;
   background: transparent;
@@ -46,13 +51,12 @@
   color: rgba(24, 59, 86, 0.662745098);
 }
 .product-search input {
-  width: 100%;
+  width: 85%;
   height: 50px;
   border: none;
   outline: none;
   padding: 7px;
   background: white;
-  border: 1px solid rgb(234, 234, 234);
   color: #183b56;
   border-radius: 4px;
   font-size: 15px;
@@ -68,10 +72,6 @@
 .product-search input::placeholder {
   color: #183b56;
   opacity: 0.8;
-}
-.product-search input:focus, .product-search input:active {
-  border-width: 2px;
-  border-color: rgb(212, 212, 212);
 }
 
 .page .mapouter {

@@ -8,53 +8,67 @@
 <script rel="stylesheet" src="{% static '/js/search.js' %}" type="text/javascript"></script>
 
 
-<!-- Only on some pages -->
-<div class="search-search" id="searchSearch">
-    <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
-       {% csrf_token %}
-       <input name="q" type="text" placeholder="Søk blant 500 tjenester"><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-   </form>
- </div>
 <div class="page">
-    <br>
-    <br>
-    <br>
-    <br>
     {% if query %} 
-    <p class="search-q" id="searchQ">Du søkte for <strong>{{query}}</strong><br>{% if results.all.count == 1 %}Og fant {{results.all.count}} tjeneste{% else %}Og fant {{results.all.count}} tjenester{% endif %}</p>
     {% if results %}
-        <div class="search-results">
-            {% for product in results %}
-            <div class="services" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
-                <div class="service">
+    <!-- Only on some pages -->
+   <div class="search-search" id="searchSearch">
+        <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
+        {% csrf_token %}
+        <input name="q" type="text" placeholder="Søk blant 500 tjenester"><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+   </div>
+    <div class="search-results" style="padding-inline: 6px;">
+            <p class="search-q" id="searchQYes">Du søkte for <strong>{{query}}</strong><br>{% if results.all.count == 1 %}Og fant {{results.all.count}} tjeneste{% else %}Og fant {{results.all.count}} tjenester{% endif %}</p>
+            <div class="services">
+                {% for product in results %}
+                <div class="service" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
                     <img src="{{product.image.url}}" alt="" class="service-image">
                     <div class="reviews">
                         <p><i class="fa-solid fa-star"></i>3</p><span>(40)</span>
                     </div>
                     <div class="name">{{product.name}}</div>
-                    <div class="business-name"><i class="fa-solid fa-circle-user"></i>{{product.business_name}}</div>
+                    <div class="business-name">{{product.business_name}}</div>
                  </div>
+                 {% endfor %}
             </div>
-            {% endfor %}
         </div>
         {% else %}
-        <div class="search-results" style="padding-top: 130px;">
+        <div class="search-results" style="padding-top: 175px; padding-inline: 18px;">
             <div class="no-results">
+                <p class="search-q" id="searchQNo">Du søkte for <strong>{{query}}</strong><br>{% if results.all.count == 1 %}Og fant {{results.all.count}} tjeneste{% else %}Og fant {{results.all.count}} tjenester{% endif %}</p>
                 <i class="fa-regular fa-face-sad-tear"></i>
                 <h1>Søket ditt ga 0 resultater</h1>
-                <p>Prøv å endre søket ditt, og prøv igjen</p>
+                <p>Endre søket ditt, og prøv igjen</p>
                 <div class="no-results-search">
                     <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
                        {% csrf_token %}
-                       <input name="q" type="text" placeholder="Prøv på nytt"><i class="fa-solid fa-magnifying-glass"></i>
+                       <div style="display: flex;"><input name="q" type="text" placeholder="Søk blant 500 tjenester"><i class="fa-solid fa-magnifying-glass"></i></div>
                        <button type="submit">Søk etter tjeneste</button>
                    </form>
                  </div>
             </div>
         </div>
         {% endif %}
+        <br>
         {% else %}
         ingen søk
     {% endif %}
 </div>
+
+<script type="text/javascript">
+    '{% if results %}'
+        window.addEventListener("scroll", function(){
+            const productSearch = document.getElementById('searchSearch');
+            const searchQYes = document.getElementById('searchQYes');
+            productSearch.classList.toggle("sticky", window.scrollY > 53) 
+            searchQYes.classList.toggle("sticky", window.scrollY > 53) 
+        })
+    '{% else %}'
+        window.addEventListener("scroll", function(){
+            const searchQNo = document.getElementById('searchQNo');
+            searchQNo.classList.toggle("sticky", window.scrollY > 68) 
+        })
+    '{% endif %}'
+</script>
 {% endblock %}

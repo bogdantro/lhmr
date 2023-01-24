@@ -18,7 +18,7 @@ class Category(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return '/%s/' % (self.slug)
+        return '/%s/' % (self.slug)   
 
 class Product(models.Model):
     # GLOBAL
@@ -42,6 +42,8 @@ class Product(models.Model):
     fredag = models.CharField(max_length=500)
     lørdag = models.CharField(max_length=500)
     søndag = models.CharField(max_length=500)
+    # Reviews
+    stars = models.IntegerField(blank=True, null=True)
 
     
     def __str__(self):
@@ -60,4 +62,5 @@ class ProductReview(models.Model):
     is_conf = models.BooleanField()
     
     def __str__(self):
-        return str(self.product)
+        return str(self.product)    
+

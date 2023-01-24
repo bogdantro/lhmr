@@ -55,13 +55,21 @@ $txt: #183b56;
         color: #183b56a9;
         right: 35px;
         top: 43px;
-        padding: 7px;
-        margin: -7px;
-        background: rgba(155, 155, 155, 0.22);
-        border-radius: 100%;
+        background: $white;
+        padding: 17px 16px;
+        margin: -17px -16px;
+        padding-top: 18px;
+        margin-top: -18px;
+        border-radius: 4px;
+        &::before{
+          padding: 7px;
+          margin: -7px;
+          background: rgba(155, 155, 155, 0.22);
+          border-radius: 100%;
+        }
       }
       input{
-        width: 100%;
+        width: 88%;
         height: 50px;
         border: none;
         outline: none;

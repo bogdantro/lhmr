@@ -13,7 +13,7 @@
   display: none;
 }
 
-.search-search {
+.page .search-search {
   position: absolute;
   top: 55px;
   width: 100%;
@@ -25,62 +25,65 @@
   z-index: 10000;
   background: white;
 }
-.search-search.sticky {
+.page .search-search form {
+  display: flex;
+  border: 1px solid rgb(234, 234, 234);
+  border-radius: 4px;
+}
+.page .search-search.sticky {
   position: fixed;
   top: 0;
+  box-shadow: 0 0 4px rgba(5, 5, 5, 0.12);
 }
-.search-search button {
+.page .search-search button {
   border: none;
+  background: transparent;
   position: absolute;
   right: 42px;
-  top: 28px;
-  background: white !important;
-  padding: 11px 18px;
-  margin: -11px -18px;
-}
-.search-search button i {
+  top: 29px;
+  padding: 3px 8px;
+  margin: -3px -8px;
   border-radius: 100%;
+  background: rgba(155, 155, 155, 0.22);
+}
+.page .search-search button i {
   font-size: 15px;
   color: rgba(24, 59, 86, 0.662745098);
 }
-.search-search button i::before {
-  border-radius: 100%;
-  background: rgba(155, 155, 155, 0.22);
-  padding: 8px;
-  margin: -8px;
-}
-.search-search input {
-  width: 100%;
+.page .search-search input {
+  width: 85%;
   height: 50px;
   border: none;
   outline: none;
   padding: 7px;
   background: white;
-  border: 1px solid rgb(234, 234, 234);
   color: #183b56;
   border-radius: 4px;
   font-size: 15px;
 }
-.search-search input::-moz-placeholder {
+.page .search-search input::-moz-placeholder {
   color: #183b56;
   opacity: 0.8;
 }
-.search-search input:-ms-input-placeholder {
+.page .search-search input:-ms-input-placeholder {
   color: #183b56;
   opacity: 0.8;
 }
-.search-search input::placeholder {
+.page .search-search input::placeholder {
   color: #183b56;
   opacity: 0.8;
 }
-.search-search input:focus, .search-search input:active {
+.page .search-search input:focus, .page .search-search input:active {
   border-width: 2px;
   border-color: rgb(212, 212, 212);
 }
-
-.page .search-q {
+.page .search-results {
+  padding-top: 245px;
+}
+.page .search-results #searchQYes {
   position: absolute;
-  top: 136px;
+  top: 135px;
+  left: 0;
   width: 100%;
   height: auto;
   background: #06c484;
@@ -89,15 +92,31 @@
   padding: 10px 18px;
   font-weight: 500;
   z-index: 10000;
+  text-align: left;
 }
-.page .search-q.sticky {
+.page .search-results #searchQYes.sticky {
   position: fixed;
   top: 81px;
   box-shadow: 0 0 4px rgba(5, 5, 5, 0.12);
 }
-.page .search-results {
-  padding-inline: 18px;
-  padding-top: 100px;
+.page .search-results .no-results #searchQNo {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: #06c484;
+  color: rgb(246, 246, 246);
+  font-size: 14px;
+  padding: 10px 18px;
+  font-weight: 500;
+  z-index: 10000;
+  opacity: 1 !important;
+}
+.page .search-results .no-results #searchQNo.sticky {
+  position: fixed;
+  top: 0px;
+  box-shadow: 0 0 4px rgba(5, 5, 5, 0.12);
 }
 .page .search-results .no-results i {
   color: #06c484;
@@ -118,7 +137,7 @@
   position: relative;
   margin-top: 22px;
   padding: 25px 15px;
-  background: rgba(185, 185, 185, 0.15);
+  background: rgba(185, 185, 185, 0.18);
 }
 .page .search-results .no-results .no-results-search i {
   position: absolute;
@@ -127,8 +146,11 @@
   right: 35px;
   top: 43px;
   background: rgb(246, 246, 246);
-  padding: 16px;
-  margin: -16px;
+  padding: 17px 16px;
+  margin: -17px -16px;
+  padding-top: 18px;
+  margin-top: -18px;
+  border-radius: 4px;
 }
 .page .search-results .no-results .no-results-search i::before {
   padding: 7px;
@@ -137,7 +159,7 @@
   border-radius: 100%;
 }
 .page .search-results .no-results .no-results-search input {
-  width: 100%;
+  width: 88%;
   height: 50px;
   border: none;
   outline: none;
@@ -173,24 +195,22 @@
   font-weight: normal;
 }
 .page .search-results .services {
-  padding-block: 16px;
-  margin-block: 26px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .page .search-results .service {
-  width: 89%;
-  max-width: 400px;
+  flex: 1 auto;
+  flex: 44%;
+  max-width: 167px;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
   padding: 0;
-  position: relative;
-  margin: auto;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 18px 10px;
 }
 .page .search-results .service .service-image {
   width: 100%;
-  height: 180px;
+  height: 105px;
   -o-object-fit: cover;
      object-fit: cover;
   filter: brightness(90%);
@@ -204,51 +224,30 @@
 .page .search-results .service .reviews p {
   margin-bottom: 0;
   color: #FFBC55;
-  font-size: 13px;
+  font-size: 11px;
   margin-top: 1px;
 }
 .page .search-results .service .reviews p i {
   transform: translateY(-0.9px);
   margin-right: 3px;
-  font-size: 12px;
+  font-size: 9px;
 }
 .page .search-results .service .reviews span {
   color: rgb(170, 170, 170);
-  font-size: 11px;
+  font-size: 10px;
   transform: translateX(4px) translateY(2px);
 }
 .page .search-results .service .name {
-  font-size: 18px;
+  font-size: 14px;
   color: #183b56;
   font-weight: 500;
-  margin-bottom: 3px;
+  margin-bottom: 1px;
 }
 .page .search-results .service .business-name {
-  font-size: 12px;
+  font-size: 11px;
   color: #183b56;
   opacity: 0.7;
   font-weight: 500;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 3px;
-  margin: -2px;
-  transform: translateY(4px);
-  background: rgba(110, 110, 110, 0.1);
-  border-radius: 4px;
-}
-.page .search-results .service .business-name i {
-  font-size: 11px;
-  margin-right: 6px;
-}
-.page .search-results .service .short-des {
-  margin-top: 8px;
-  color: #183b56;
-  font-size: 15px;
-  opacity: 0.9;
-}
-.page .search-results .service:first-child {
-  margin-left: 0;
 }
 .page .search-results .service:hover .name {
   text-decoration: underline;

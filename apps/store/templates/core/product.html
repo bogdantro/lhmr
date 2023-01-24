@@ -44,7 +44,7 @@
           </div>
          <div class="text main">
              <div class="reviews">
-                 <p><i class="fa-solid fa-star"></i>{% for review in product.reviews.all %}{{review.stars}}{% endfor %}</p><span>(40)</span>
+                 <p><i class="fa-solid fa-star"></i><p id="productStars"></p></p><span>({{product.reviews.all.count}})</span>
                 </div>
                 <div class="name">{{product.name}}</div>
                 <div class="business-name"><i class="fa-solid fa-circle-user"></i>{{product.business_name}}</div>
@@ -143,6 +143,20 @@
       </div>
 
 <script type="text/javascript">
+
+const productStars = document.getElementById('productStars')
+let productStarsAvrg = '{{product.stars | floatformat:"-5"}}';
+
+async function getAvrgProductStars(){
+  productStarsAvrg = parseInt('{{product.stars}}')
+
+  productStarsAvrg = productStarsAvrg / parseInt('{{product.reviews.all.count}}') 
+
+  productStars.innerHTML = Math.trunc( productStarsAvrg );
+}
+
+getAvrgProductStars();
+
  mapboxgl.accessToken = '{{mapbox_access_token}}';
   const map = new mapboxgl.Map({
     container: 'map', // Specify the container ID
