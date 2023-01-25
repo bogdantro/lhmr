@@ -37,6 +37,7 @@
             <a data-slide="prev" role="button" class="carousel-control-prev" href="#carouselExampleControls">&#10094;</a>
             <a data-slide="next" role="button" class="carousel-control-next" href="#carouselExampleControls">&#10095;</a>
           </div>
+
           <div class="quick-links" id="quickLinks">
             <a id="infoQucikLink" onclick="info()" class="active">Info</a>
             <a id="reviewsQucikLink" onclick="reviews()">Vurderinger</a>
@@ -44,7 +45,7 @@
           </div>
          <div class="text main">
              <div class="reviews">
-                 <p><i class="fa-solid fa-star"></i><p id="productStars"></p></p><span>({{product.reviews.all.count}})</span>
+                 <p><i class="fa-solid fa-star"></i>{{product.get_rating|floatformat:0}}</p><span>({{product.reviews.all.count}})</span>
                 </div>
                 <div class="name">{{product.name}}</div>
                 <div class="business-name"><i class="fa-solid fa-circle-user"></i>{{product.business_name}}</div>
@@ -112,7 +113,7 @@
               <h1>Vurderinger</h1>
               {% for review in product.reviews.all %}
               <div id="reviewCard">
-                <div class="stars"><p><i class="fa-solid fa-star"></i>{{ review.stars }} av 6</p></div>
+                <div class="stars"><p><i class="fa-solid fa-star"></i>{{ review.stars }} av 5</p></div>
                 <h1 class="title">{{ review.title }}</h1>
                 <p class="date">Skrevet: {{ review.created_at|date:"d-m-Y" }} - Anonymt</p>
                 <p class="content">{{ review.content }}</p>
@@ -124,10 +125,41 @@
               {% empty %}
                <p class="no-reviews">Ingen vurderinger enda</p>
                {% endfor %}
-               <button class="add-review-btn">Skriv en vurdering</button>
-               <p class="add-review-txt">For å kunne publisere vurderingen, må vi bekrefte den. Dette tar ca 1-10 timer etter du har skrevet vurderingen</p>
+               <div id="hide_when_form_shows">
+                 <button onclick="productReviewAdd()" class="add-review-btn">Skriv en vurdering</button>
+                 <p class="add-review-txt">For å kunne publisere vurderingen, må vi bekrefte den. Dette tar ca 1-10 timer etter du har skrevet vurderingen</p>
+                </div>
+               <form action="" method="POST" id="productMakeReview">
+                {% csrf_token %}
+                {{form.errors}}
+                <label for="title">Gi vurderingen en kort tittel</label>
+                <br>
+                <input type="text" name="title" id="title" placeholder="Ekstrem bra service">
+                <br>
+                <br>
+                <label for="content">Beskriv opplevelsen din</label>
+                <br>
+                <textarea type="text" name="content" id="content" placeholder="Jeg hadde kunn positive opplevelser med de. De gjorde ..."></textarea>
+                <br>
+                <br>
+                <label for="stars">Gi den stjerner</label>
+                <br>
+                <input type="number" name="stars" id="stars" style="display: none;">
+                <div class="review-stars">
+                  <i onclick="reviewStar1()" id="star1" class="fa-solid fa-star"></i>
+                  <i onclick="reviewStar2()" id="star2" class="fa-regular fa-star"></i>
+                  <i onclick="reviewStar3()" id="star3" class="fa-regular fa-star"></i>
+                  <i onclick="reviewStar4()" id="star4" class="fa-regular fa-star"></i>
+                  <i onclick="reviewStar5()" id="star5" class="fa-regular fa-star"></i>
+                </div>
+                <br>
+                <br>
+                <button type="submit">Publiser vurdering</button>
+              </form>
             </div>
           </div>
+
+          
 
           <div id="contactSec">
             <div class="text contact" id="contactServ">
@@ -141,21 +173,111 @@
           </div>
         </div>
       </div>
-
 <script type="text/javascript">
 
-const productStars = document.getElementById('productStars')
-let productStarsAvrg = '{{product.stars | floatformat:"-5"}}';
+  function reviewStar1(){
+    let input = document.getElementById('stars')
+    let star2 = document.getElementById('star2');
+    let star3 = document.getElementById('star3');
+    let star4 = document.getElementById('star4');
+    let star5 = document.getElementById('star5');
 
-async function getAvrgProductStars(){
-  productStarsAvrg = parseInt('{{product.stars}}')
+    star2.className = 'fa-regular fa-star';
+    star3.className = 'fa-regular fa-star';
+    star4.className = 'fa-regular fa-star';
+    star5.className = 'fa-regular fa-star';
 
-  productStarsAvrg = productStarsAvrg / parseInt('{{product.reviews.all.count}}') 
+    input.value = '1'
+  }
 
-  productStars.innerHTML = Math.trunc( productStarsAvrg );
+  function reviewStar2(){
+    let input = document.getElementById('stars')
+    let star1 = document.getElementById('star1');
+    let star2 = document.getElementById('star2');
+    let star3 = document.getElementById('star3');
+    let star4 = document.getElementById('star4');
+    let star5 = document.getElementById('star5');
+
+    star1.className = 'fa-solid fa-star';
+    star2.className = 'fa-solid fa-star';
+    star3.className = 'fa-regular fa-star';
+    star4.className = 'fa-regular fa-star';
+    star5.className = 'fa-regular fa-star';
+
+    input.value = '2'
+  }
+
+  function reviewStar3(){
+    let input = document.getElementById('stars')
+    let star1 = document.getElementById('star1');
+    let star2 = document.getElementById('star2');
+    let star3 = document.getElementById('star3');
+    let star4 = document.getElementById('star4');
+    let star5 = document.getElementById('star5');
+
+    star1.className = 'fa-solid fa-star';
+    star2.className = 'fa-solid fa-star';
+    star3.className = 'fa-solid fa-star';
+    star4.className = 'fa-regular fa-star';
+    star5.className = 'fa-regular fa-star';
+
+    input.value = '3'
+  }
+
+  function reviewStar4(){
+    let input = document.getElementById('stars')
+    let star1 = document.getElementById('star1');
+    let star2 = document.getElementById('star2');
+    let star3 = document.getElementById('star3');
+    let star4 = document.getElementById('star4');
+    let star5 = document.getElementById('star5');
+
+    star1.className = 'fa-solid fa-star';
+    star2.className = 'fa-solid fa-star';
+    star3.className = 'fa-solid fa-star';
+    star4.className = 'fa-solid fa-star';
+    star5.className = 'fa-regular fa-star';
+
+    input.value = '4'
+  }
+
+  function reviewStar5(){
+    let input = document.getElementById('stars')
+    let star1 = document.getElementById('star1');
+    let star2 = document.getElementById('star2');
+    let star3 = document.getElementById('star3');
+    let star4 = document.getElementById('star4');
+    let star5 = document.getElementById('star5');
+
+    star1.className = 'fa-solid fa-star';
+    star2.className = 'fa-solid fa-star';
+    star3.className = 'fa-solid fa-star';
+    star4.className = 'fa-solid fa-star';
+    star5.className = 'fa-solid fa-star';
+
+    input.value = '5'
+  }
+
+function productReviewAdd() {
+  const productMakeReview = document.getElementById('productMakeReview');
+  const hide_when_form_shows = document.getElementById('hide_when_form_shows');
+
+  productMakeReview.style.display = 'block';
+  hide_when_form_shows.style.display = 'none';
 }
 
-getAvrgProductStars();
+async function test(){
+  const product = document.getElementById('product');
+  if (product.value){
+    console.log('value')
+  }else{
+    console.log('no value')
+  }
+}
+// setInterval(() => {
+//   test();
+// }, 32200);
+
 
  mapboxgl.accessToken = '{{mapbox_access_token}}';
   const map = new mapboxgl.Map({
