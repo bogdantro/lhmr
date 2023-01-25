@@ -51,7 +51,7 @@
          <div class="service" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
             <img src="{{product.image.url}}" alt="" class="service-image">
             <div class="reviews">
-               <p><i class="fa-solid fa-star"></i>{{product.get_rating|floatformat:0}}</p><span>({{product.reviews.all.count}})</span>
+               <p><i class="fa-solid fa-star"></i>7</p><span>({{product.reviews.all.count}})</span>
             </div>
             <div class="name">{{product.name}}</div>
             <div class="business-name">{{product.business_name}}</div>
