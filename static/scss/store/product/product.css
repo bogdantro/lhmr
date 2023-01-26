@@ -405,7 +405,7 @@
   margin-block: 15px;
   margin-top: 20px;
   text-align: left;
-  background: rgba(205, 205, 205, 0.16);
+  background: rgba(205, 205, 205, 0.12);
   padding: 10px 15px;
   display: none;
 }
@@ -476,6 +476,7 @@
   outline: none;
   border: none;
   border-radius: 4px;
+  font-weight: 400;
 }
 .product-section #reviewsSec #productMakeReview i {
   margin: 5px 6px;

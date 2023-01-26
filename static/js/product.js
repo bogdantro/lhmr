@@ -5,7 +5,7 @@ window.addEventListener("scroll", function(){
 
 window.addEventListener("scroll", function(){
     const quickLinks = document.getElementById('quickLinks');
-    quickLinks.classList.toggle("sticky", window.scrollY > 333)
+    quickLinks.classList.toggle("sticky", window.scrollY > 332)
   })
 
 
@@ -19,7 +19,7 @@ function info(){
   const reviewsQucikLink =  document.getElementById('reviewsQucikLink');
   const contactQucikLink =  document.getElementById('contactQucikLink');
 
-  window.scrollTo({ top: 150, behavior: 'smooth'});
+  window.scrollTo({ top: 150, behavior: 'instant'});
 
   infoQucikLink.classList.add('active')
   reviewsQucikLink.classList.remove('active')
@@ -41,7 +41,7 @@ function reviews(){
   const reviewsQucikLink =  document.getElementById('reviewsQucikLink');
   const contactQucikLink =  document.getElementById('contactQucikLink');
 
-  window.scrollTo({ top: 150, behavior: 'smooth'});
+  window.scrollTo({ top: 150, behavior: 'instant'});
 
   infoQucikLink.classList.remove('active')
   contactQucikLink.classList.remove('active')
@@ -67,7 +67,7 @@ function contact(){
   const reviewsQucikLink =  document.getElementById('reviewsQucikLink');
   const contactQucikLink =  document.getElementById('contactQucikLink');
 
-  window.scrollTo({ top: 150, behavior: 'smooth'});
+  window.scrollTo({ top: 150, behavior: 'instant'});
 
   infoQucikLink.classList.remove('active')
   reviewsQucikLink.classList.remove('active')

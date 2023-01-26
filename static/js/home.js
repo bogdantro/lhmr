@@ -52,12 +52,3 @@ $.ajax({
     },
 })
 
-window.addEventListener("scroll", function(){
-    const backToTop = document.getElementById('backToTop');
-    backToTop.classList.toggle("active", window.scrollY > 500)
-})
-
-function backToTop(){
-  window.scrollTo({ top: 0, behavior: 'smooth'});
-}
-

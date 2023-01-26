@@ -49,7 +49,7 @@ class Product(models.Model):
 
     def get_rating(self):
         total = sum(int(review['stars']) for review in self.reviews.values())   
-        return total / self.reviews.count()    
+        return total  
 
     @property
     def image_url(self):
@@ -64,5 +64,7 @@ class ProductReview(models.Model):
     is_conf = models.BooleanField(null=True, blank=True, default=False)
     
     def __str__(self):
-        return str(self.product)    
+        return str(self.product)   
 
+
+# / self.reviews.count()  

@@ -31,7 +31,7 @@
          <div class="cover-search">
             <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
                {% csrf_token %}
-               <input name="q" type="text" placeholder="Søk blant 500 tjenester"><i class="fa-solid fa-magnifying-glass"></i>
+               <input name="q" type="text" placeholder="Søk blant 500 tjenester"><i onclick="searchIconSubmit()" class="fa-solid fa-magnifying-glass"></i>
                <button type="submit">Søk etter tjeneste</button>
            </form>
          </div>
@@ -51,7 +51,11 @@
          <div class="service" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
             <img src="{{product.image.url}}" alt="" class="service-image">
             <div class="reviews">
-               <p><i class="fa-solid fa-star"></i>7</p><span>({{product.reviews.all.count}})</span>
+               {% if product.get_rating %}
+               <p><i class="fa-solid fa-star"></i><p id="reviewsAvrg"></p></p><span>({{product.reviews.all.count}})</span>
+               {% else %}
+               <p><i class="fa-solid fa-star"></i>0</p><span>(0)</span>
+               {% endif %}
             </div>
             <div class="name">{{product.name}}</div>
             <div class="business-name">{{product.business_name}}</div>
@@ -71,7 +75,7 @@
       </div>
       <div class="cat-cards">
          {% for category in category %}
-            <div class="cat">
+            <div class="cat" onclick="window.location.href='{% url  'category_detail' category.slug  %}'">
                <div class="icon"><i class="{{category.icon}}"></i></div>
                <div class="text">
                   <h1>{{category.name}}</h1>
@@ -94,7 +98,26 @@
    </div>
 </div>
 
+{% for product in products %}
 <script type="text/javascript">
+
+   let avrg = '{{product.get_rating|floatformat:0}}'
+   let text = document.getElementById('reviewsAvrg')
+   
+   async function getRating(){
+      avrg = parseInt(avrg) / parseInt('{{product.reviews.all.count}}')
+      
+      text.innerHTML = Math.trunc(avrg)
+   }
+
+
+   getRating();
+
+   function searchIconSubmit(){
+      document.getElementById("searchForm").submit();
+   }
+
+
    mapboxgl.accessToken = '{{mapbox_access_token}}';
     const map = new mapboxgl.Map({
       container: 'map', // Specify the container ID
@@ -130,5 +153,5 @@
     .addTo(map);
   });
   </script>
-  
+{% endfor %}
 {% endblock %}

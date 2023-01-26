@@ -44,3 +44,15 @@ def product_detail(request, slug):
     }
 
     return render(request, 'core/product.html', context)
+
+
+def category_detail(request, slug):
+    category = get_object_or_404(Category, slug=slug)  
+    product = Product.objects.filter(category=category)
+
+    context = {
+        'category': category,
+        'product': product,
+    }
+
+    return render(request, 'core/category.html', context)

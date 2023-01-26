@@ -82,7 +82,7 @@ p.link:hover {
   transition: 0.3s;
   opacity: 0;
   pointer-events: none;
-  background: #007be0;
+  background: #06c484;
   border-radius: 4px;
   text-decoration: none;
   display: flex;
@@ -90,6 +90,7 @@ p.link:hover {
   align-items: center;
   border-radius: 4px;
   padding: 10px 13px;
+  box-shadow: 0 0 7px rgb(200, 200, 200);
 }
 #backToTop i {
   font-size: 19px;

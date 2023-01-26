@@ -25,6 +25,7 @@ urlpatterns = [
     path('søke-resultater/', home_page_search, name='home_page_search'),
 
     path('produkt/:<slug>/', product_detail, name='product_detail'),
+    path('kategori/:<slug>/', category_detail, name='category_detail'),
 
 
     # Auth

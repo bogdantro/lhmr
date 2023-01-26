@@ -25,7 +25,11 @@
                 <div class="service" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
                     <img src="{{product.image.url}}" alt="" class="service-image">
                     <div class="reviews">
-                        <p><i class="fa-solid fa-star"></i>3</p><span>(40)</span>
+                        {% if product.get_rating %}
+                        <p><i class="fa-solid fa-star"></i><p id="reviewsAvrg"></p></p><span>({{product.reviews.all.count}})</span>
+                        {% else %}
+                        <p><i class="fa-solid fa-star"></i>0</p><span>(0)</span>
+                        {% endif %}
                     </div>
                     <div class="name">{{product.name}}</div>
                     <div class="business-name">{{product.business_name}}</div>
@@ -41,22 +45,54 @@
                 <h1>Søket ditt ga 0 resultater</h1>
                 <p>Endre søket ditt, og prøv igjen</p>
                 <div class="no-results-search">
-                    <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
+                    <form id="searchFormNoResults" action="{% url 'home_page_search' %}" method="GET">
                        {% csrf_token %}
-                       <div style="display: flex;"><input name="q" type="text" placeholder="Søk blant 500 tjenester"><i class="fa-solid fa-magnifying-glass"></i></div>
+                       <div style="display: flex;"><input name="q" type="text" placeholder="Søk blant 500 tjenester"><i onclick="searchIconSubmit1()" class="fa-solid fa-magnifying-glass"></i></div>
                        <button type="submit">Søk etter tjeneste</button>
                    </form>
                  </div>
             </div>
         </div>
         {% endif %}
-        <br>
         {% else %}
-        ingen søk
+        <div class="no-query" style="padding-top: 175px; padding-inline: 18px;">
+            <p class="search-q" id="searchQNo">Ser ut som du har glemt å skrive</p>
+            <i class="fa-regular fa-face-sad-tear"></i>
+            <h1>Du har glemt å skrive</h1>
+            <p>Endre søket ditt, og prøv igjen</p>
+            <div class="no-query-search">
+                <form id="searchFormNoQ" action="{% url 'home_page_search' %}" method="GET">
+                   {% csrf_token %}
+                   <div style="display: flex;"><input name="q" type="text" placeholder="Søk blant 500 tjenester"><i onclick="searchIconSubmit2()" class="fa-solid fa-magnifying-glass"></i></div>
+                   <button type="submit">Søk etter tjeneste</button>
+               </form>
+             </div>
+        </div>
     {% endif %}
 </div>
 
+<script  type="text/javascript">
+    function searchIconSubmit1(){
+      document.getElementById("searchFormNoResults").submit();
+   }
+   function searchIconSubmit2(){
+      document.getElementById("searchFormNoQ").submit();
+   }
+</script>
+
+{% for product in results %}
 <script type="text/javascript">
+
+   let avrg = '{{product.get_rating|floatformat:0}}'
+   let text = document.getElementById('reviewsAvrg')
+   
+   async function getRating(){
+      avrg = parseInt(avrg) / parseInt('{{product.reviews.all.count}}')
+      
+      text.innerHTML = Math.trunc(avrg)
+   }
+   getRating();
+
     '{% if results %}'
         window.addEventListener("scroll", function(){
             const productSearch = document.getElementById('searchSearch');
@@ -71,4 +107,5 @@
         })
     '{% endif %}'
 </script>
+{% endfor %}
 {% endblock %}

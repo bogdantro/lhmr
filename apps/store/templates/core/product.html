@@ -45,7 +45,11 @@
           </div>
          <div class="text main">
              <div class="reviews">
-                 <p><i class="fa-solid fa-star"></i>{{product.get_rating|floatformat:0}}</p><span>({{product.reviews.all.count}})</span>
+              {% if product.get_rating %}
+              <p><i class="fa-solid fa-star"></i><p id="reviewsAvrg"></p></p><span>({{product.reviews.all.count}})</span>
+              {% else %}
+              <p><i class="fa-solid fa-star"></i>Ingen vurderinger enda</p><span></span>
+              {% endif %}
                 </div>
                 <div class="name">{{product.name}}</div>
                 <div class="business-name"><i class="fa-solid fa-circle-user"></i>{{product.business_name}}</div>
@@ -112,8 +116,46 @@
             <div class="text reviews" id="reviewsServ">
               <h1>Vurderinger</h1>
               {% for review in product.reviews.all %}
+              {% if review.is_conf %}
               <div id="reviewCard">
-                <div class="stars"><p><i class="fa-solid fa-star"></i>{{ review.stars }} av 5</p></div>
+                <div class="stars"><p>
+                  {% if review.stars == 1 %}
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  {% endif %}
+                  {% if review.stars == 2 %}
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  {% endif %}
+                  {% if review.stars == 3 %}
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  {% endif %}
+                  {% if review.stars == 4 %}
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  {% endif %}
+                  {% if review.stars == 5 %}
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  {% endif %}
+                
+                </div>
                 <h1 class="title">{{ review.title }}</h1>
                 <p class="date">Skrevet: {{ review.created_at|date:"d-m-Y" }} - Anonymt</p>
                 <p class="content">{{ review.content }}</p>
@@ -122,6 +164,7 @@
                 <p class="conf"><i class="fa-solid fa-circle-check"></i>Vurderingen har blitt bekrefta</p>
                 {% endif %}
               </div>
+              {% endif %}
               {% empty %}
                <p class="no-reviews">Ingen vurderinger enda</p>
                {% endfor %}
@@ -139,12 +182,12 @@
                 <br>
                 <label for="content">Beskriv opplevelsen din</label>
                 <br>
-                <textarea type="text" name="content" id="content" placeholder="Jeg hadde kunn positive opplevelser med de. De gjorde ..."></textarea>
+                <textarea type="text" name="content" id="content" placeholder="Jeg hadde kunn positive opplevelser. De gjorde ..."></textarea>
                 <br>
                 <br>
                 <label for="stars">Gi den stjerner</label>
                 <br>
-                <input type="number" name="stars" id="stars" style="display: none;">
+                <input type="number" name="stars" id="stars" value="1" style="display: none;">
                 <div class="review-stars">
                   <i onclick="reviewStar1()" id="star1" class="fa-solid fa-star"></i>
                   <i onclick="reviewStar2()" id="star2" class="fa-regular fa-star"></i>
@@ -174,6 +217,17 @@
         </div>
       </div>
 <script type="text/javascript">
+
+  let avrg = '{{product.get_rating|floatformat:0}}'
+  let text = document.getElementById('reviewsAvrg')
+
+  async function getRating(){
+    avrg = parseInt(avrg) / parseInt('{{product.reviews.all.count}}')
+
+    text.innerHTML = Math.trunc(avrg)
+  }
+
+  getRating();
 
   function reviewStar1(){
     let input = document.getElementById('stars')

@@ -41,6 +41,20 @@
     {% include 'core/footer.html' %}
     
 </body>
+<script type="text/javascript">
+    
+    window.addEventListener("scroll", function(){
+    const backToTop = document.getElementById('backToTop');
+    backToTop.classList.toggle("active", window.scrollY > 220)
+})
+
+function backToTop(){
+  window.scrollTo({ top: 0, behavior: 'smooth'});
+}
+
+
+
+</script>
 <script src="https://unpkg.com/vuex@3.5.1/dist/vuex.js"></script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
