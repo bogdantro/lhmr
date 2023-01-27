@@ -35,6 +35,16 @@ def hjemme(request,  backend='django.contrib.auth.backends.ModelBackend'):
 def about(request):
     return render(request, 'pages/about/about.html')
 
+def allProducts(request):
+    products = Product.objects.all()
+    category = Category.objects.all()
+
+    context = {
+        'products': products,
+        'category': category,
+    }
+    return render(request, 'pages/all-pr/all-pr.html', context)
+
     # Kundeservice
 def contact(request):
     if request.method=='POST' and 'contact' in request.POST:

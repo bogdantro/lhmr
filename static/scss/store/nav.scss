@@ -19,36 +19,24 @@ $txt: #183b56;
     top: 0;
     z-index: 10000000000000000000;
     transition: .0s;
-    background: transparent;
-    &::before{
-        content: '';
-        display: block;
-        position: absolute;
-        left: 0;
-        top: -60px;
-        background: white;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: .3s;
-        box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    }
+    background: white;
+    // &::before{
+    //     content: '';
+    //     display: block;
+    //     position: absolute;
+    //     left: 0;
+    //     top: -60px;
+    //     background: white;
+    //     width: 100%;
+    //     height: 100%;
+    //     opacity: 0;
+    //     transition: .3s;
+    //     box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    // }
     // NAVBAR STICKY
     &.sticky{
+        box-shadow: 0 0 5px rgba(15,15,15,0.2);
         transition: 0s;
-        &::before{
-            content: '';
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 1;
-        }
-        .nav-hamburger-img{
-            opacity: 0;
-        }
         .logo{
             h1{
                 color: $txt;
@@ -111,11 +99,11 @@ $txt: #183b56;
         height: auto;
         z-index: 1000;
         h1{
-            color: $white;
+            color: $txt;
             font-size: 16px;
             span{
                 font-size: 12px;
-                border-bottom: 1px solid $white;
+                border-bottom: 1px solid $primBtn;
                 padding-bottom: 3px;
             }
         }
@@ -144,7 +132,7 @@ $txt: #183b56;
         span{
             height: 2px;
             width: 26px;
-            background: $white;
+            background: $txt;
             border-radius: 3px;
             display: block;
             transition: .2s;
@@ -159,6 +147,9 @@ $txt: #183b56;
         .lower-span{
         }
         &.click{
+            background: rgb(240, 240, 240);
+            padding-right: 6px;
+            border-radius: 50%;
             .upper-span{
                 transform: rotate(45deg);
             }
@@ -166,7 +157,7 @@ $txt: #183b56;
               display: none;
             }
             .lower-span{
-                transform: rotate(-45deg);
+                transform: rotate(-45deg) translateX(-1px);
             }
         }
     }

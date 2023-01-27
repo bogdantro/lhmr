@@ -48,7 +48,7 @@
               {% if product.get_rating %}
               <p><i class="fa-solid fa-star"></i><p id="reviewsAvrg"></p></p><span>({{product.reviews.all.count}})</span>
               {% else %}
-              <p><i class="fa-solid fa-star"></i>Ingen vurderinger enda</p><span></span>
+              <p><i class="fa-solid fa-star"></i>0</p><span>({{product.reviews.all.count}})</span>
               {% endif %}
                 </div>
                 <div class="name">{{product.name}}</div>
@@ -76,37 +76,37 @@
               <div class="card">
                 <div class="day monday">
                   <p class="act-day">Mandag</p>
-                  <p class="time">{{product.monday}}</p>
+                  <p class="time">{{product.mandag}}</p>
                 </div>
                 <hr style="margin-block: 11px; background: rgba(194, 194, 194, 0.45);">
                 <div class="day tuesday">
                   <p class="act-day">Tirsdag</p>
-                  <p class="time">12:00 - 20:00</p>
+                  <p class="time">{{product.tirsdag}}</p>
                 </div>
                 <hr style="margin-block: 11px; background: rgba(194, 194, 194, 0.45);">
                 <div class="day wednesday">
                   <p class="act-day">Ondsdag</p>
-                  <p class="time">12:00 - 20:00</p>
+                  <p class="time">{{product.ondsdag}}</p>
                 </div>
                 <hr style="margin-block: 11px; background: rgba(194, 194, 194, 0.45);">
                 <div class="day thursday">
                   <p class="act-day">Torsdag</p>
-                  <p class="time">12:00 - 20:00</p>
+                  <p class="time">{{product.torsdag}}</p>
                 </div>
                 <hr style="margin-block: 11px; background: rgba(194, 194, 194, 0.45);">
                 <div class="day friday">
                   <p class="act-day">Fredag</p>
-                  <p class="time">12:00 - 20:00</p>
+                  <p class="time">{{product.fredag}}</p>
                 </div>
                 <hr style="margin-block: 11px; background: rgba(194, 194, 194, 0.45);">
                 <div class="day saturday">
                   <p class="act-day">Lørdag</p>
-                  <p class="time">12:00 - 20:00</p>
+                  <p class="time">{{product.lørdag}}</p>
                 </div>
                 <hr style="margin-block: 11px; background: rgba(194, 194, 194, 0.45);">
                 <div class="day sunday">
                   <p class="act-day">Søndag</p>
-                  <p class="time">12:00 - 20:00</p>
+                  <p class="time">{{product.søndag}}</p>
                 </div>
               </div>
             </div>
@@ -116,7 +116,6 @@
             <div class="text reviews" id="reviewsServ">
               <h1>Vurderinger</h1>
               {% for review in product.reviews.all %}
-              {% if review.is_conf %}
               <div id="reviewCard">
                 <div class="stars"><p>
                   {% if review.stars == 1 %}
@@ -164,13 +163,12 @@
                 <p class="conf"><i class="fa-solid fa-circle-check"></i>Vurderingen har blitt bekrefta</p>
                 {% endif %}
               </div>
-              {% endif %}
               {% empty %}
                <p class="no-reviews">Ingen vurderinger enda</p>
                {% endfor %}
                <div id="hide_when_form_shows">
                  <button onclick="productReviewAdd()" class="add-review-btn">Skriv en vurdering</button>
-                 <p class="add-review-txt">For å kunne publisere vurderingen, må vi bekrefte den. Dette tar ca 1-10 timer etter du har skrevet vurderingen</p>
+                 <p class="add-review-txt">Vi bekrefter at vurderingene er gjennomført og at resultatene er nøyaktige og pålitelige. Dette kan du se på vurderingene, hvis de har en grønn ikon</p>
                 </div>
                <form action="" method="POST" id="productMakeReview">
                 {% csrf_token %}
@@ -200,9 +198,7 @@
                 <button type="submit">Publiser vurdering</button>
               </form>
             </div>
-          </div>
-
-          
+          </div>       
 
           <div id="contactSec">
             <div class="text contact" id="contactServ">

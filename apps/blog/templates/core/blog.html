@@ -3,24 +3,9 @@
 
 {% block content %}
 <link rel="stylesheet" href="{% static '/scss/store/blog/blog.css' %}" type="text/css">
-<link rel="stylesheet" href="{% static '/scss/pages/page.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/scss/page/pages.css' %}" type="text/css">
 
 <div class="page">
-
-   <!-- COVER -->
-   <div class="cover" id="cover">
-      <!-- ALL COVER CONENT -->
-    <div class="content">
-       <!-- COVER SECTION 1 -->
-       <div class="cover-section1">
-          <!-- ALL COVER TEXT -->
-          <div class="text">
-             <h1 class="cover-h1">Webiser Blogg</h1>
-             <p class="cover-p"></p>
-          </div>
-       </div>
-    </div>
- </div>
 
  <div class="blog-posts">
    {% for post in post %}

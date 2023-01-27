@@ -1,0 +1,65 @@
+$black: #1F1F1F;
+$white: rgb(246,246,246);
+$primBtn: #06c484;
+$txt: #183b56;
+
+#footer{
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+  #mobileNav{
+    position: absolute;
+    background: white;
+    &::before{
+        display: none;
+    }
+    &.sticky{
+        &::before{
+            display: none;
+        }
+    }
+  }
+
+.page{
+    #aboutQ{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: $primBtn;
+        color: $white;
+        font-size: 14px;
+        padding: 10px 18px;
+        font-weight: 500;
+        z-index: 10000;
+        text-align: left;
+        &.sticky{
+          position: fixed;
+          top: calc(54px - 55px);
+          box-shadow: 0 0 4px rgba(5,5,5,0.12);
+        }
+    }
+    .about-us{
+        position: relative;
+        padding-top: 155px;
+        padding-bottom: 19px;
+        margin-bottom: 19px;
+        padding-inline: 18px;
+        h1{
+            font-size: 22.5px;
+            color: $txt;
+            font-weight: 500;
+    }
+        p{
+            color: $txt;
+            font-size: 15px;
+            opacity: 0.87;
+        }
+        a{
+            display: block;
+            font-size: 15px;
+            opacity: 0.9;
+            padding: 4px 0;
+        }
+    }
+}

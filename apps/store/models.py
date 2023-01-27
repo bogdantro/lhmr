@@ -35,7 +35,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     is_home_page = models.BooleanField(default=False)
     # Openin hours
-    monday = models.CharField(max_length=500)
+    mandag = models.CharField(max_length=500)
     tirsdag = models.CharField(max_length=500)
     ondsdag = models.CharField(max_length=500)
     torsdag = models.CharField(max_length=500)

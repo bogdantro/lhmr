@@ -13,36 +13,11 @@
   top: 0;
   z-index: 10000000000000000000;
   transition: 0s;
-  background: transparent;
-}
-#mobileNav::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: -60px;
   background: white;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: 0.3s;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 #mobileNav.sticky {
+  box-shadow: 0 0 5px rgba(15, 15, 15, 0.2);
   transition: 0s;
-}
-#mobileNav.sticky::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-}
-#mobileNav.sticky .nav-hamburger-img {
-  opacity: 0;
 }
 #mobileNav.sticky .logo h1 {
   color: #183b56;
@@ -95,12 +70,12 @@
   z-index: 1000;
 }
 #mobileNav .logo h1 {
-  color: rgb(246, 246, 246);
+  color: #183b56;
   font-size: 16px;
 }
 #mobileNav .logo h1 span {
   font-size: 12px;
-  border-bottom: 1px solid rgb(246, 246, 246);
+  border-bottom: 1px solid #06c484;
   padding-bottom: 3px;
 }
 #mobileNav .logo .logo2 {
@@ -118,13 +93,18 @@
 #mobileNav .hamburger span {
   height: 2px;
   width: 26px;
-  background: rgb(246, 246, 246);
+  background: #183b56;
   border-radius: 3px;
   display: block;
   transition: 0.2s;
   margin: 6px auto;
   transform-origin: 25%;
   opacity: 0.83;
+}
+#mobileNav .hamburger.click {
+  background: rgb(240, 240, 240);
+  padding-right: 6px;
+  border-radius: 50%;
 }
 #mobileNav .hamburger.click .upper-span {
   transform: rotate(45deg);
@@ -133,7 +113,7 @@
   display: none;
 }
 #mobileNav .hamburger.click .lower-span {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translateX(-1px);
 }
 #mobileNav .sidebar {
   background: white;

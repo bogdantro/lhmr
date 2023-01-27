@@ -18,7 +18,8 @@ urlpatterns = [
     # Pages
     path('', hjemme, name="hjemme"),
     # Om oss
-        path('om-webiser/', about, name='about'),
+    path('om-oss/', about, name='about'),
+    path('alle-tjenester/', allProducts, name='allProducts'),
     path('blogg/', blog, name='blog'),
     path('blog_post/<int:id>/', blog_post, name='blog_post'),
 
