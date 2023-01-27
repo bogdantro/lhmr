@@ -29,6 +29,9 @@ def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug)  
     mapbox_access_token = settings.MAP_BOX_ACCESS_TOKEN 
 
+    num_visits = request.session.get('num_visits', 0)
+    request.session['num_visits'] = num_visits + 1
+
     if request.method == 'POST':
         stars = request.POST.get('stars', )
         title = request.POST.get('title', '')
@@ -41,6 +44,7 @@ def product_detail(request, slug):
     context = {
         'product': product,
         'mapbox_access_token': mapbox_access_token,
+        'num_visits': num_visits,
     }
 
     return render(request, 'core/product.html', context)

@@ -13,6 +13,7 @@ $txt: #183b56;
         display: none;
     }
     &.sticky{
+        position: fixed;
         &::before{
             display: none;
         }
@@ -22,7 +23,7 @@ $txt: #183b56;
 .page{
     #aboutQ{
         position: absolute;
-        top: 70px;
+        top: 66px;
         left: 0;
         width: 100%;
         height: auto;
@@ -35,7 +36,7 @@ $txt: #183b56;
         text-align: left;
         &.sticky{
           position: fixed;
-          top: calc(54px - 55px);
+          top: 66px;
           box-shadow: 0 0 4px rgba(5,5,5,0.12);
         }
     }

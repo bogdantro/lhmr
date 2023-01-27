@@ -9,13 +9,16 @@
 #mobileNav::before {
   display: none;
 }
+#mobileNav.sticky {
+  position: fixed;
+}
 #mobileNav.sticky::before {
   display: none;
 }
 
 .page #aboutQ {
   position: absolute;
-  top: 70px;
+  top: 66px;
   left: 0;
   width: 100%;
   height: auto;
@@ -29,7 +32,7 @@
 }
 .page #aboutQ.sticky {
   position: fixed;
-  top: -1px;
+  top: 66px;
   box-shadow: 0 0 4px rgba(5, 5, 5, 0.12);
 }
 .page .about-us {

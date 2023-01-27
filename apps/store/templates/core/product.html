@@ -221,6 +221,9 @@
     avrg = parseInt(avrg) / parseInt('{{product.reviews.all.count}}')
 
     text.innerHTML = Math.trunc(avrg)
+
+    // Visitors
+    console.log('Antall visninger {{ num_visits }}')
   }
 
   getRating();
