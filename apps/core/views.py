@@ -22,18 +22,34 @@ def hjemme(request,  backend='django.contrib.auth.backends.ModelBackend'):
     category = Category.objects.filter(is_home_page=True)
     mapbox_access_token = settings.MAP_BOX_ACCESS_TOKEN 
 
+    num_visits = request.session.get('num_visits', 0)
+    request.session['num_visits'] = num_visits + 1
+
     context = {
     'products':products,
     'category':category,
     'mapbox_access_token':mapbox_access_token,
+    'num_visits':num_visits,
     }
     return render(request, 'core/home.html', context)
 
 # Pages
-    # About
-        # About
 def about(request):
     return render(request, 'pages/about/about.html')
+    
+def business(request):
+    return render(request, 'pages/business/business.html')
+
+def be_partner(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', )
+        contact_person = request.POST.get('contact_person', '')
+        email = request.POST.get('email', '')
+
+        partner = Partners.objects.create(name=name, contact_person=contact_person, email=email)
+
+        return redirect('/')
+    return render(request, 'pages/business/be-partner.html')
 
 def allProducts(request):
     products = Product.objects.all()
@@ -67,6 +83,16 @@ def contact(request):
         send_mail('Webiser Contact Form', message, '', ['sabertoothtri@gmail.com'])
         return redirect('/kontakt-utfort/webiser/email-kundeservice')
     return render(request, 'pages/kundeservice/contact.html')   
+
+
+def vilkår(request):
+    return render(request, 'pages/legal/vilkår.html')
+
+def policy(request):
+    return render(request, 'pages/legal/policy.html')
+
+
+
 
 @csrf_exempt
 def home_page_search(request):

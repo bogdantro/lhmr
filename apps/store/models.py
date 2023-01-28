@@ -31,7 +31,6 @@ class Product(models.Model):
     address = models.CharField(max_length=500)
     cords1 = models.CharField(max_length=500)
     cords2 = models.CharField(max_length=500)
-    image = models.ImageField(blank=False, default='none', upload_to='other/')
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     is_home_page = models.BooleanField(default=False)
     # Openin hours
@@ -42,6 +41,19 @@ class Product(models.Model):
     fredag = models.CharField(max_length=500)
     lørdag = models.CharField(max_length=500)
     søndag = models.CharField(max_length=500)
+    # Images
+    image1 = models.ImageField(blank=False, default='', upload_to='other/')
+    image2 = models.ImageField(blank=True, default='', upload_to='other/')
+    image3 = models.ImageField(blank=True, default='', upload_to='other/')
+    image4 = models.ImageField(blank=True, default='', upload_to='other/')
+    image5 = models.ImageField(blank=True, default='', upload_to='other/')
+    image6 = models.ImageField(blank=True, default='', upload_to='other/')
+    #Contact 
+    contact_by_phone = models.FloatField(max_length=400, blank=True, null=True)
+    contact_by_email = models.CharField(max_length=400, blank=True, null=True)
+    contact_by_instagram = models.CharField(max_length=400, blank=True, null=True)
+    contact_by_facebook = models.CharField(max_length=400, blank=True, null=True)
+    contact_by_website = models.CharField(max_length=400, blank=True, null=True)
 
     
     def __str__(self):

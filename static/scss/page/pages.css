@@ -1,3 +1,6 @@
+#mobileNav.sticky {
+  box-shadow: none;
+}
 #mobileNav .logo h1 {
   color: #183b56;
 }

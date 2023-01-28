@@ -4,6 +4,9 @@ $primBtn: #06c484;
 $txt: #183b56;
 
 #mobileNav{
+    &.sticky{
+        box-shadow: none;
+    }
     .logo{
         h1{
             color: $txt;

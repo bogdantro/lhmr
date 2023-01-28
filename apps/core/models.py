@@ -37,3 +37,12 @@ class Comment(models.Model):
 
     def __str__(self):
         return 'Comment by {}'.format(self.name)
+
+class Partners(models.Model):
+    name = models.CharField(max_length=400, blank=True)
+    contact_person = models.CharField(max_length=400, blank=True)
+    email = models.EmailField(max_length=400, blank=True)
+    org_nr = models.CharField(max_length=500, blank=False)
+
+    def __str__(self):
+        return self.name  

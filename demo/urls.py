@@ -22,11 +22,17 @@ urlpatterns = [
     path('alle-tjenester/', allProducts, name='allProducts'),
     path('blogg/', blog, name='blog'),
     path('blog_post/<int:id>/', blog_post, name='blog_post'),
+    path('for-bedrifter/', business, name='business'),
+    path('for-bedrifter/bli-partner/', be_partner, name='be_partner'),
 
     path('søke-resultater/', home_page_search, name='home_page_search'),
 
     path('produkt/:<slug>/', product_detail, name='product_detail'),
     path('kategori/:<slug>/', category_detail, name='category_detail'),
+
+    # Legal
+    path('vilkaar/', vilkår, name='vilkår'),
+    path('policy/', policy, name='policy'),
 
 
     # Auth

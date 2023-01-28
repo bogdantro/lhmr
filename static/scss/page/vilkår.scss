@@ -21,7 +21,7 @@ $txt: #183b56;
   }
 
 .page{
-    #aboutQ{
+    #vilkårQ{
         position: absolute;
         top: 66px;
         left: 0;
@@ -40,7 +40,7 @@ $txt: #183b56;
           box-shadow: 0 0 4px rgba(5,5,5,0.12);
         }
     }
-    .about-us{
+    .vilkår{
         position: relative;
         padding-top: 155px;
         padding-bottom: 19px;
@@ -50,6 +50,13 @@ $txt: #183b56;
             font-size: 22.5px;
             color: $txt;
             font-weight: 500;
+        }
+        h2{
+            font-size: 19px;
+            color: $txt;
+            font-weight: 500;
+            margin-bottom: 10px;
+            transform: translateX(-1px);
         }
         p{
             color: $txt;

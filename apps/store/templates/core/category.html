@@ -26,7 +26,7 @@
     <div class="categories" style="padding-inline: 6px;">
         {% for product in product %}
         <div class="service" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
-            <img src="{{product.image.url}}" alt="" class="service-image">
+            <img src="{{product.image1.url}}" alt="" class="service-image">
             <div class="reviews">
                 {% if product.get_rating %}
                 <p><i class="fa-solid fa-star"></i><p id="reviewsAvrg"></p></p><span>({{product.reviews.all.count}})</span>

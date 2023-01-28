@@ -25,14 +25,35 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="product-image" src="{{product.image.url}}" alt="product image">
+                <img class="product-image" src="{{product.image1.url}}" alt="product image1">
               </div>
+              {% if product.image2 %}
               <div class="carousel-item">
-                <img class="product-image" src="{{product.image.url}}" alt="product image">
+                <img class="product-image" src="{{product.image2.url}}" alt="product image2">
               </div>
+              {% endif %}
+              {% if product.image3 %}
               <div class="carousel-item">
-                <img class="product-image" src="{{product.image.url}}" alt="product image">
+                <img class="product-image" src="{{product.image3.url}}" alt="product image3">
               </div>
+              {% else %}
+              as
+              {% endif %}
+              {% if product.image4 %}
+              <div class="carousel-item">
+                <img class="product-image" src="{{product.image4.url}}" alt="product image4">
+              </div>
+              {% endif %}
+              {% if product.image5 %}
+              <div class="carousel-item">
+                <img class="product-image" src="{{product.image5.url}}" alt="product image5">
+              </div>
+              {% endif %}
+              {% if product.image6 %}
+              <div class="carousel-item">
+                <img class="product-image" src="{{product.image6.url}}" alt="product image6">
+              </div>
+              {% endif %}
             </div>
             <a data-slide="prev" role="button" class="carousel-control-prev" href="#carouselExampleControls">&#10094;</a>
             <a data-slide="next" role="button" class="carousel-control-next" href="#carouselExampleControls">&#10095;</a>
@@ -110,6 +131,17 @@
                 </div>
               </div>
             </div>
+<!-- 
+            <hr style="margin-block: 38px;">
+
+            <div class="text otherpr" id="otherPr">
+              <h1>Andre tjenester</h1>
+              <p>Utforsk andre tjenester fra {{product.business_name}}</p>
+              <div class="alert">
+                <div class="alert-one">Kommer snart</div>
+                <div class="alert-two">Bedrift bruker er i utvikling</div>
+              </div>
+          </div> -->
           </div>
 
           <div id="reviewsSec">
@@ -168,7 +200,7 @@
                {% endfor %}
                <div id="hide_when_form_shows">
                  <button onclick="productReviewAdd()" class="add-review-btn">Skriv en vurdering</button>
-                 <p class="add-review-txt">Vi bekrefter at vurderingene er gjennomført og at resultatene er nøyaktige og pålitelige. Dette kan du se på vurderingene, hvis de har en grønn ikon</p>
+                 <p class="add-review-txt">Alle vurderinger går gjennom vår bekreftelse prossess. Alle vurderinger som er bekrefta, har en grønn ikon</p>
                 </div>
                <form action="" method="POST" id="productMakeReview">
                 {% csrf_token %}
@@ -194,7 +226,6 @@
                   <i onclick="reviewStar5()" id="star5" class="fa-regular fa-star"></i>
                 </div>
                 <br>
-                <br>
                 <button type="submit">Publiser vurdering</button>
               </form>
             </div>
@@ -203,11 +234,26 @@
           <div id="contactSec">
             <div class="text contact" id="contactServ">
               <h1>Kontakt</h1>
-              <a href="">www.domain.no</a>
+              {% if product.contact_by_website %}
+              <a href="{{product.contact_by_website}}">{{product.contact_by_website}}</a>
               <br>
-              <a href="">Facebook</a>
+              {% endif %}
+              {% if product.contact_by_email %}
+              <a href="mailto:{{product.contact_by_email}}">{{product.contact_by_email}}</a>
+              <br> 
+              {% endif %}
+              {% if product.contact_by_phone %}
+              <a href="tel:{{product.contact_by_phone}}">+47 {{product.contact_by_phone|floatformat:0}}</a>
               <br>
-              <a href="">Instagram</a>
+              {% endif %}
+              {% if product.contact_by_facebook %}
+              <a href="{{product.contact_by_facebook}}">Facebook</a>
+              <br>
+              {% endif %}
+              {% if product.contact_by_instagram %}
+              <a href="{{product.contact_by_instagram}}">Instagram</a>
+              <br>
+              {% endif %}
             </div>
           </div>
         </div>

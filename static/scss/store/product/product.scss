@@ -97,8 +97,8 @@ $txt: #183b56;
         font-size: 18px;
         transition: .3s;
         &:focus{
-            transform: translateY(-50%) scale(1.07);
-            filter: brightness(92%);
+            transform: translateY(-50%) scale(1.08);
+            background: rgba(185,185,185,0.25);
         }
     }
     .carousel-control-next{
@@ -116,8 +116,8 @@ $txt: #183b56;
         font-size: 18px;
         transition: .3s;
         &:focus{
-            transform: translateY(-50%) scale(1.07);
-            filter: brightness(92%);
+            transform: translateY(-50%) scale(1.08);
+            background: rgba(185,185,185,0.25);
         }
     }
     .product-image{
@@ -289,6 +289,50 @@ $txt: #183b56;
                 }
             }
         }
+        .otherpr{
+            margin-top: 0;
+            padding-inline: 18px;
+            h1{
+                font-size: 22.5px;
+                color: $txt;
+                font-weight: 500;
+            }
+            p{
+                color: $txt;
+                font-size: 15px;
+                opacity: 0.8;
+            }
+            .alert{
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                max-width: 420px;
+                height: auto;
+                padding: 10px;
+                height: 75px;
+                background: $primBtn;
+                border-radius: 4px;
+                .alert-one{
+                    width: max-content;
+                    color: $white;
+                    background: #05a36e;
+                    font-size: 15px;
+                    padding: 12px;
+                    border-radius: 25px;
+                    position: absolute;
+                    left: 12px;
+                }
+                .alert-two{
+                    width: max-content;
+                    color: $white;
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding-left: 145px;
+                }
+            }
+        }
     }
     #reviewsSec{
         display: none;
@@ -313,6 +357,7 @@ $txt: #183b56;
             }
             .no-reviews{
                 margin-top: 3px;
+                margin-bottom: 10px;
                 opacity: 1;
                 font-size: 17px;
                 border-left: 10px solid $primBtn;
@@ -390,13 +435,13 @@ $txt: #183b56;
             margin-block: 15px;
             margin-top: 20px;
             text-align: left;
-            background: rgba(205, 205, 205, 0.12);
-            padding: 10px 15px;
             display: none;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            padding-top: 16px;
             label{
                 color: $txt;
                 font-size: 15px;
-                opacity: 0.9;
+                opacity: 0.95;
             }
             input{
                 width: 100%;
@@ -408,6 +453,7 @@ $txt: #183b56;
                 color: $txt;
                 font-size: 14px;
                 opacity: 0.95;
+                border: 1px solid rgba(100,100,100,0.1);
                 &::placeholder{
                     color: $txt;
                     font-size: 14px;
@@ -426,6 +472,7 @@ $txt: #183b56;
                 color: $txt;
                 font-size: 14px;
                 opacity: 0.95;
+                border: 1px solid rgba(100,100,100,0.1);
                 &::placeholder{
                     color: $txt;
                     font-size: 14px;
@@ -477,6 +524,7 @@ $txt: #183b56;
                 opacity: 0.8;
                 text-decoration: underline;
                 cursor: pointer;
+                color: #007bff;
             }
         }
     }

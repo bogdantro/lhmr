@@ -1,0 +1,163 @@
+#footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#mobileNav {
+  position: absolute;
+  background: white;
+}
+#mobileNav::before {
+  display: none;
+}
+#mobileNav.sticky {
+  position: fixed;
+}
+#mobileNav.sticky::before {
+  display: none;
+}
+
+.page #businessQ {
+  position: absolute;
+  top: 66px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: #06c484;
+  color: rgb(246, 246, 246);
+  font-size: 14px;
+  padding: 10px 18px;
+  font-weight: 500;
+  z-index: 10000;
+  text-align: left;
+}
+.page #businessQ.sticky {
+  position: fixed;
+  top: 66px;
+  box-shadow: 0 0 4px rgba(5, 5, 5, 0.12);
+}
+.page .business {
+  padding-top: 155px;
+  padding-inline: 18px;
+  padding-bottom: 19px;
+  margin-bottom: 19px;
+}
+.page .business .business-info {
+  text-align: left;
+}
+.page .business .business-info .alert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 12px;
+  max-width: 420px;
+  padding: 10px;
+  height: 68px;
+  background: #06c484;
+  border-radius: 4px;
+}
+.page .business .business-info .alert .alert-one {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: rgb(246, 246, 246);
+  background: #05a36e;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 11px 9px;
+  border-radius: 25px;
+  position: absolute;
+  left: 12px;
+}
+.page .business .business-info .alert .alert-two {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: rgb(246, 246, 246);
+  font-size: 15px;
+  font-weight: 500;
+  padding-left: 145px;
+}
+.page .business .business-info .text h1 {
+  font-size: 22.5px;
+  color: #183b56;
+  font-weight: 500;
+}
+.page .business .business-info .text p {
+  color: #183b56;
+  font-size: 15px;
+  opacity: 0.9;
+}
+.page .business .business-info .info-four button {
+  margin-top: 15px;
+  color: rgb(246, 246, 246);
+  background: #06c484;
+  text-align: center;
+  padding: 10px;
+  width: 70%;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+}
+.page .business .business-info form {
+  margin-block: 15px;
+  margin-top: 20px;
+  text-align: left;
+}
+.page .business .business-info form label {
+  color: #183b56;
+  font-size: 15px;
+  opacity: 0.95;
+}
+.page .business .business-info form input {
+  width: 100%;
+  height: 45px;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  padding: 10px;
+  color: #183b56;
+  font-size: 14px;
+  opacity: 0.95;
+  border: 1px solid rgba(100, 100, 100, 0.1);
+}
+.page .business .business-info form input::-moz-placeholder {
+  color: #183b56;
+  font-size: 14px;
+  opacity: 0.66;
+}
+.page .business .business-info form input:-ms-input-placeholder {
+  color: #183b56;
+  font-size: 14px;
+  opacity: 0.66;
+}
+.page .business .business-info form input::placeholder {
+  color: #183b56;
+  font-size: 14px;
+  opacity: 0.66;
+}
+.page .business .business-info form button {
+  width: 100%;
+  background: #06c484;
+  color: rgb(246, 246, 246);
+  height: 45px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-weight: 400;
+}
+.page .business .business-info form button.not-ready {
+  background: rgba(8, 172, 117, 0.6117647059);
+  cursor: not-allowed !important;
+  pointer-events: none;
+  text-decoration: line-through;
+}
+.page .business .business-info form button.not-ready:hover {
+  filter: brightness(100%);
+}
+.page .business .business-info form button.ready {
+  background: #06c484;
+  cursor: pointer;
+  pointer-events: visible;
+}/*# sourceMappingURL=business.css.map */

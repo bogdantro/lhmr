@@ -1,0 +1,60 @@
+#footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#mobileNav {
+  position: absolute;
+  background: white;
+}
+#mobileNav::before {
+  display: none;
+}
+#mobileNav.sticky {
+  position: fixed;
+}
+#mobileNav.sticky::before {
+  display: none;
+}
+
+.page #policyQ {
+  position: absolute;
+  top: 66px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: #06c484;
+  color: rgb(246, 246, 246);
+  font-size: 14px;
+  padding: 10px 18px;
+  font-weight: 500;
+  z-index: 10000;
+  text-align: left;
+}
+.page #policyQ.sticky {
+  position: fixed;
+  top: 66px;
+  box-shadow: 0 0 4px rgba(5, 5, 5, 0.12);
+}
+.page .policy {
+  position: relative;
+  padding-top: 155px;
+  padding-bottom: 19px;
+  margin-bottom: 19px;
+  padding-inline: 18px;
+}
+.page .policy h1 {
+  font-size: 22.5px;
+  color: #183b56;
+  font-weight: 500;
+}
+.page .policy p {
+  color: #183b56;
+  font-size: 15px;
+  opacity: 0.87;
+}
+.page .policy a {
+  display: block;
+  font-size: 15px;
+  opacity: 0.9;
+  padding: 4px 0;
+}/*# sourceMappingURL=policy.css.map */
