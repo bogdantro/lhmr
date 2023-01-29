@@ -24,6 +24,7 @@ urlpatterns = [
     path('blog_post/<int:id>/', blog_post, name='blog_post'),
     path('for-bedrifter/', business, name='business'),
     path('for-bedrifter/bli-partner/', be_partner, name='be_partner'),
+    path('for-bedrifter/bli-partner/partner-sukess', partner_success, name='partner_success'),
 
     path('søke-resultater/', home_page_search, name='home_page_search'),
 

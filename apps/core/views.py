@@ -47,9 +47,11 @@ def be_partner(request):
         email = request.POST.get('email', '')
 
         partner = Partners.objects.create(name=name, contact_person=contact_person, email=email)
-
-        return redirect('/')
+        return redirect('partner_success')
     return render(request, 'pages/business/be-partner.html')
+
+def partner_success(request):
+    return render(request, 'pages/business/partner-success.html')    
 
 def allProducts(request):
     products = Product.objects.all()
