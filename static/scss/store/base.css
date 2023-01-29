@@ -1,3 +1,21 @@
+#footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#mobileNav {
+  position: absolute;
+  background: white;
+}
+#mobileNav::before {
+  display: none;
+}
+#mobileNav.sticky {
+  position: fixed;
+}
+#mobileNav.sticky::before {
+  display: none;
+}
+
 .cover {
   width: 100%;
   height: -webkit-max-content;

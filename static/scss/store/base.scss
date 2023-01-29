@@ -3,6 +3,23 @@ $white: rgb(246,246,246);
 $primBtn: #06c484;
 $txt: #183b56;
 
+#footer{
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+#mobileNav{
+  position: absolute;
+  background: white;
+  &::before{
+      display: none;
+  }
+  &.sticky{
+      position: fixed;
+      &::before{
+          display: none;
+      }
+  }
+}
+
 // Cover
 .cover{
   width: 100%;
