@@ -50,8 +50,19 @@ def be_partner(request):
         return redirect('partner_success')
     return render(request, 'pages/business/be-partner.html')
 
+
 def partner_success(request):
     return render(request, 'pages/business/partner-success.html')    
+
+def make_serv(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', )
+        contact_person = request.POST.get('contact_person', '')
+        email = request.POST.get('email', '')
+
+        partner = Partners.objects.create(name=name, contact_person=contact_person, email=email)
+        return redirect('/')
+    return render(request, 'pages/business/make-serv.html')
 
 def allProducts(request):
     products = Product.objects.all()

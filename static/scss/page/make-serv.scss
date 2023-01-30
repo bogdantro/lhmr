@@ -1,0 +1,48 @@
+$black: #1F1F1F;
+$white: rgb(246,246,246);
+$primBtn: #06c484;
+$txt: #183b56;
+
+.page{
+    .business{
+        form{
+            #stepOne{
+                display: block;
+                button{
+                    width: 44%;
+                    float: right;
+                    max-width: 300px;
+                }
+            }
+            #stepTwo{
+                display: none;
+                .right{
+                    width: 44%;
+                    float: right;
+                    max-width: 300px;
+                }
+                .left{
+                    width: 44%;
+                    float: left;
+                    max-width: 300px;
+                }
+            }
+            #stepThree{
+                display: none;
+                .right{
+                    width: 44%;
+                    float: right;
+                    max-width: 300px;
+                }
+                .left{
+                    width: 44%;
+                    float: left;
+                    max-width: 300px;
+                }
+            }
+            #stepFour{
+                display: none;
+            }
+        }
+    }
+}

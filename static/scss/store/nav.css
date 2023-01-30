@@ -192,61 +192,33 @@
   }
   #desNav {
     width: 100%;
-    max-width: 1350px;
-    margin: auto;
     height: 65px;
     position: fixed;
     top: 0;
     z-index: 10000000000000000000;
     transition: 0s;
-    background: transparent;
-    padding-inline: 18px;
-    padding-block: 10px;
+    background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  #desNav::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: -60px;
-    background: white;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: 0.3s;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    left: 50%;
+    transform: translateX(-50%);
   }
   #desNav.sticky {
     position: fixed;
     top: 0;
   }
-  #desNav.sticky::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: white;
+  #desNav #desNavContent {
+    position: fixed;
+    padding-inline: 35px;
+    padding-block: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1350px;
     width: 100%;
-    height: 100%;
-    opacity: 1;
-    transition: 0.5s;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  }
-  #desNav.sticky .logo h1 {
-    color: #183b56;
-  }
-  #desNav.sticky .logo h1 span {
-    border-color: #06c484;
-  }
-  #desNav.sticky .menu a {
-    color: #183b56;
-  }
-  #desNav.sticky .menu a.nav_order_btn {
-    color: rgb(246, 246, 246);
   }
   #desNav .logo {
     transition: 0.8s;
@@ -255,18 +227,20 @@
     width: auto;
     height: auto;
     z-index: 1000;
+    transition: 0.2s;
   }
   #desNav .logo h1 {
-    color: rgb(246, 246, 246);
-    font-size: 18px;
+    color: #183b56;
+    font-size: 17px;
+    transition: 0.2s;
   }
   #desNav .logo h1 span {
     font-size: 13px;
-    border-bottom: 1px solid rgb(246, 246, 246);
+    border-bottom: 1px solid #06c484;
     padding-bottom: 3px;
   }
-  #desNav .logo .logo2 {
-    display: none;
+  #desNav .logo:hover h1 span {
+    border-color: #183b56;
   }
   #desNav .menu {
     padding-inline: 10px;
@@ -279,7 +253,7 @@
     align-items: center;
   }
   #desNav .menu a {
-    color: rgb(246, 246, 246);
+    color: #183b56;
     font-size: 16px;
     text-decoration: none;
     padding: 0 8px;
@@ -290,7 +264,7 @@
     border-bottom: 1px solid transparent;
   }
   #desNav .menu a:hover {
-    border-bottom: 1px solid rgb(246, 246, 246);
+    border-bottom: 1px solid #183b56;
   }
   #desNav .menu a:first-child {
     margin-left: 0;
@@ -302,6 +276,104 @@
     background: #06c484;
     border-radius: 4px;
     padding: 8px 17px;
+    color: rgb(246, 246, 246);
+  }
+  #desNav .menu a.nav_order_btn:hover {
+    filter: brightness(85%);
+    border-bottom: 1px solid transparent;
+  }
+}
+@media only screen and (min-device-width: 1600px) {
+  #mobileNav {
+    display: none;
+  }
+  #desNav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    z-index: 10000000000000000000;
+    transition: 0s;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #desNav.sticky {
+    position: fixed;
+    top: 0;
+  }
+  #desNav #desNavContent {
+    position: fixed;
+    padding-inline: 45px;
+    padding-block: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1350px;
+    width: 100%;
+  }
+  #desNav .logo {
+    transition: 0.8s;
+    cursor: pointer;
+    transform: translateY(4px);
+    width: auto;
+    height: auto;
+    z-index: 1000;
+    transition: 0.2s;
+  }
+  #desNav .logo h1 {
+    color: #183b56;
+    font-size: 17px;
+    transition: 0.2s;
+  }
+  #desNav .logo h1 span {
+    font-size: 13px;
+    border-bottom: 1px solid #06c484;
+    padding-bottom: 3px;
+  }
+  #desNav .logo:hover h1 span {
+    border-color: #183b56;
+  }
+  #desNav .menu {
+    padding-inline: 10px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #desNav .menu a {
+    color: #183b56;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0 8px;
+    margin-inline: 8px;
+    padding-bottom: 5px;
+    padding-top: 7px;
+    transition: 0.2s;
+    border-bottom: 1px solid transparent;
+  }
+  #desNav .menu a:hover {
+    border-bottom: 1px solid #183b56;
+  }
+  #desNav .menu a:first-child {
+    margin-left: 0;
+  }
+  #desNav .menu a:last-child {
+    margin-right: 0;
+  }
+  #desNav .menu a.nav_order_btn {
+    background: #06c484;
+    border-radius: 4px;
+    padding: 8px 17px;
+    color: rgb(246, 246, 246);
   }
   #desNav .menu a.nav_order_btn:hover {
     filter: brightness(85%);

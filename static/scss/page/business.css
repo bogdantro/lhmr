@@ -137,6 +137,35 @@
   font-size: 14px;
   opacity: 0.66;
 }
+.page .business .business-info form textarea {
+  margin-bottom: -7px;
+  width: 100%;
+  min-height: 105px;
+  max-height: 290px;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  padding: 10px;
+  color: #183b56;
+  font-size: 14px;
+  opacity: 0.95;
+  border: 1px solid rgba(100, 100, 100, 0.1);
+}
+.page .business .business-info form textarea::-moz-placeholder {
+  color: #183b56;
+  font-size: 14px;
+  opacity: 0.66;
+}
+.page .business .business-info form textarea:-ms-input-placeholder {
+  color: #183b56;
+  font-size: 14px;
+  opacity: 0.66;
+}
+.page .business .business-info form textarea::placeholder {
+  color: #183b56;
+  font-size: 14px;
+  opacity: 0.66;
+}
 .page .business .business-info form button {
   width: 100%;
   background: #06c484;

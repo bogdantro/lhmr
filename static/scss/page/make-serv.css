@@ -1,0 +1,37 @@
+.page .business form #stepOne {
+  display: block;
+}
+.page .business form #stepOne button {
+  width: 44%;
+  float: right;
+  max-width: 300px;
+}
+.page .business form #stepTwo {
+  display: none;
+}
+.page .business form #stepTwo .right {
+  width: 44%;
+  float: right;
+  max-width: 300px;
+}
+.page .business form #stepTwo .left {
+  width: 44%;
+  float: left;
+  max-width: 300px;
+}
+.page .business form #stepThree {
+  display: none;
+}
+.page .business form #stepThree .right {
+  width: 44%;
+  float: right;
+  max-width: 300px;
+}
+.page .business form #stepThree .left {
+  width: 44%;
+  float: left;
+  max-width: 300px;
+}
+.page .business form #stepFour {
+  display: none;
+}/*# sourceMappingURL=make-serv.css.map */

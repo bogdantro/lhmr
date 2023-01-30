@@ -17,8 +17,11 @@ html, body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   background:  rgb(248,248,248) !important;
-  max-width: 1350px;
   margin: auto;
+}
+.section, .page{
+  max-width: 1350px;
+  margin-inline: auto;
 }
 // global divs
 button{
@@ -54,7 +57,7 @@ button{
 h1{
   &.section-heading{
     color: $txt;
-    font-size: 24px;
+    font-size: 23px;
   }
 }
 // global text
