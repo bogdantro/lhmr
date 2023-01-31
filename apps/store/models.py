@@ -42,12 +42,12 @@ class Product(models.Model):
     lørdag = models.CharField(max_length=500)
     søndag = models.CharField(max_length=500)
     # Images
-    image1 = models.ImageField(blank=False, default='', upload_to='other/')
-    image2 = models.ImageField(blank=True, default='', upload_to='other/')
-    image3 = models.ImageField(blank=True, default='', upload_to='other/')
-    image4 = models.ImageField(blank=True, default='', upload_to='other/')
-    image5 = models.ImageField(blank=True, default='', upload_to='other/')
-    image6 = models.ImageField(blank=True, default='', upload_to='other/')
+    image1 = models.ImageField(blank=False, default='', upload_to='other/products/')
+    image2 = models.ImageField(blank=True, default='', upload_to='other/products/')
+    image3 = models.ImageField(blank=True, default='', upload_to='other/products/')
+    image4 = models.ImageField(blank=True, default='', upload_to='other/products/')
+    image5 = models.ImageField(blank=True, default='', upload_to='other/products/')
+    image6 = models.ImageField(blank=True, default='', upload_to='other/products/')
     #Contact 
     contact_by_phone = models.FloatField(max_length=400, blank=True, null=True)
     contact_by_email = models.CharField(max_length=400, blank=True, null=True)

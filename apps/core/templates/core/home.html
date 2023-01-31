@@ -54,7 +54,7 @@
             <img src="{{product.image1.url}}" alt="" class="service-image">
             <div class="reviews">
                {% if product.get_rating %}
-               <p><i class="fa-solid fa-star"></i><p id="reviewsAvrg"></p></p><span>({{product.reviews.all.count}})</span>
+               <p><i class="fa-solid fa-star"></i><p>{{product.get_rating|floatformat:0}}</p></p><span>({{product.reviews.all.count}})</span>
                {% else %}
                <p><i class="fa-solid fa-star"></i>0</p><span>(0)</span>
                {% endif %}
@@ -102,16 +102,8 @@
 
 {% for product in products %}
 <script type="text/javascript">
-
-   let avrg = '{{product.get_rating|floatformat:0}}'
-   let text = document.getElementById('reviewsAvrg')
    
    async function getRating(){
-      avrg = parseInt(avrg) / parseInt('{{product.reviews.all.count}}')
-      
-      text.innerHTML = Math.trunc(avrg)
-
-   // Visitors
     console.log('Antall visninger {{ num_visits }}')
    }
 
