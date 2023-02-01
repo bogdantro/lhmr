@@ -18,6 +18,10 @@ html, body {
   scroll-behavior: smooth;
   margin: auto;
 }
+body{
+  background:  rgb(248,248,248) !important;
+}
+
 .section, .page{
   max-width: 1350px;
   margin-inline: auto;
