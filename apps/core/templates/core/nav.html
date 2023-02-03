@@ -33,8 +33,14 @@
     <!-- SIDEBAR -->
     <div class="sidebar" id="sidebar">
         <a href="/om-oss/">Om oss</a>
-        <a href="/blogg/">Blogg</a>
+        <!-- <a href="/blogg/">Blogg</a> -->
         <a href="/alle-tjenester/">Alle tjenester</a>
+        <a onclick="categoriesDrop()">Kategorier<i id="categoryDropdownMobileIcon" class="fa-solid fa-caret-down"></i></a>
+        <div class="category-dropdown-mob" id="categoryDropdownMobile">
+            {% for nav_category in nav_category %}
+            <a onclick="window.location.href='{% url  'category_detail' nav_category.slug  %}'">{{nav_category.name}}</a>
+            {% endfor %}
+        </div>
         <a class="nav_order_btn" href="/for-bedrifter/">For bedrifter</a>
         &nbsp;
         <hr style="background: rgba(150,150,150,0.05);">

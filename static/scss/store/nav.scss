@@ -190,6 +190,9 @@ $txt: #183b56;
             opacity: 0.95;
             padding: 12px 0;
             width: max-content;
+            i{
+                font-size: 15px;
+            }
             &.nav_order_btn{
                 padding: 8px 24px;
                 background: $primBtn;
@@ -208,6 +211,24 @@ $txt: #183b56;
                 &:hover{
                     border-bottom: 1px solid transparent;
                 }
+            }
+        }
+        .category-dropdown-mob{
+            position: relative;
+            padding-inline: 10px;
+            margin-bottom: 20px;
+            display: none;
+            transition: .3s;
+            background: $white;
+            a{
+                border-bottom: 1px solid rgba(40,40,40,0.1);
+                width: 100%;
+                &:last-child{
+                    border-bottom: none;
+                }
+            }
+            &.active{
+                display: block;
             }
         }
         .sidebar-divider{

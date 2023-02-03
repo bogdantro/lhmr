@@ -60,8 +60,12 @@ class Product(models.Model):
         return self.name
 
     def get_rating(self):
-        total = sum(int(review['stars']) for review in self.reviews.values())   
-        return total  
+        if self.reviews.count() > 0:
+            total = sum(int(review['stars']) for review in self.reviews.values())   
+            return total / self.reviews.count()
+        else:
+            return 0 
+
 
     @property
     def image_url(self):
