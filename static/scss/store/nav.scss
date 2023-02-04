@@ -162,10 +162,10 @@ $txt: #183b56;
     // SIDEBAR
     .sidebar{
         background: white;
-        min-height: 100vh;
+        min-height: 120vh;
         position: absolute;
         top: 68px;
-        right: -250px;
+        right: 0;
         width: 100%;
         z-index: 120;
         opacity: 0;
@@ -173,7 +173,8 @@ $txt: #183b56;
         display: unset;
         transition: .2s;
         padding: 10px 0;
-        padding-bottom: 0 !important;
+        overflow-y: scroll;
+        padding-bottom: 20px;
         &.active{
             top: 68px;
             right: 0;
@@ -183,7 +184,7 @@ $txt: #183b56;
         }
         .sidebar-search{
             position: absolute;
-            top: -10px;
+            top: -7px;
             left: 0;
             width: 100%;
             padding-inline: 15px;
@@ -226,16 +227,17 @@ $txt: #183b56;
             }
         }
         .links{
-            padding-top: 83px;
-            padding-inline: 18px;
+            padding-top: 63px;
         }
         a{
             display: block;
             color: $txt;
             font-size: 16px;
             opacity: 0.95;
-            padding: 12px 0;
-            width: max-content;
+            padding: 18px;
+            width: 100%;
+            background: rgba(190,190,190,0.05);
+            border-bottom: 1px solid rgba(30,30,30,0.18);
             &.mailto{
                 margin: 0;
                 padding: 0;
@@ -249,7 +251,6 @@ $txt: #183b56;
                 }
             }
             &#categoryDropdownMobileLink{
-                padding-top: 7px;
                 i{
                     font-size: 15px;
                     transform: translateX(10px);
@@ -266,7 +267,7 @@ $txt: #183b56;
         }
         .category-dropdown-mob{
             position: relative;
-            padding-inline: 10px;
+            padding-inline: 0;
             margin-bottom: 20px;
             display: none;
             transition: .3s;
@@ -274,6 +275,7 @@ $txt: #183b56;
             a{
                 border-bottom: 1px solid rgba(40,40,40,0.1);
                 width: 100%;
+                padding-left: 10px;
                 &:last-child{
                     border-bottom: none;
                 }
@@ -283,62 +285,6 @@ $txt: #183b56;
             }
             &.active{
                 display: block;
-            }
-        }
-        .connect-with-us{
-            width: 100%;
-            height: auto;
-            padding: 15px 18px;
-            background: $primBtn;
-            margin-top: 15px;
-            position: relative;
-            top: calc(68px + 87px);
-            .first-row{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                border-bottom: 1px solid rgba(235, 235, 235, 0.33);
-                padding-bottom: 15px;
-                .social{
-                    padding-bottom: 3px;
-                }
-            }
-            .second-row{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding-top: 25px;
-                a{
-                    width: 100%;
-                    color: $white;
-                    cursor: pointer;
-                    text-align: center;
-                    &:hover{
-                        text-decoration: underline;
-                    }
-                    &:first-child{
-                        border-right: 1px solid rgba(235, 235, 235, 0.33);
-                    }
-                    &:last-child{
-                        border-left: 1px solid rgba(235,235,235,0.33);
-                    }
-                    i{
-                        transform: translateY(2px) translateX(10px);
-                    }
-                }
-            }
-            i{
-                color: $white;
-                font-size: 22px;
-                padding: 8px 7px;
-                margin: 3px 1px;
-                opacity: 0.9;
-                margin-bottom: 0;
-                padding-bottom: 0;
-                &.fa-instagram{
-                    margin-left: 0;
-                    padding-left: 0;
-                }
             }
         }
     }

@@ -115,10 +115,10 @@
 }
 #mobileNav .sidebar {
   background: white;
-  min-height: 100vh;
+  min-height: 120vh;
   position: absolute;
   top: 68px;
-  right: -250px;
+  right: 0;
   width: 100%;
   z-index: 120;
   opacity: 0;
@@ -126,7 +126,8 @@
   display: unset;
   transition: 0.2s;
   padding: 10px 0;
-  padding-bottom: 0 !important;
+  overflow-y: scroll;
+  padding-bottom: 20px;
 }
 #mobileNav .sidebar.active {
   top: 68px;
@@ -137,7 +138,7 @@
 }
 #mobileNav .sidebar .sidebar-search {
   position: absolute;
-  top: -10px;
+  top: -7px;
   left: 0;
   width: 100%;
   padding-inline: 15px;
@@ -188,18 +189,17 @@
   opacity: 0.8;
 }
 #mobileNav .sidebar .links {
-  padding-top: 83px;
-  padding-inline: 18px;
+  padding-top: 63px;
 }
 #mobileNav .sidebar a {
   display: block;
   color: #183b56;
   font-size: 16px;
   opacity: 0.95;
-  padding: 12px 0;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  padding: 18px;
+  width: 100%;
+  background: rgba(190, 190, 190, 0.05);
+  border-bottom: 1px solid rgba(30, 30, 30, 0.18);
 }
 #mobileNav .sidebar a.mailto {
   margin: 0;
@@ -212,9 +212,6 @@
 }
 #mobileNav .sidebar a.mailto:hover {
   opacity: 1;
-}
-#mobileNav .sidebar a#categoryDropdownMobileLink {
-  padding-top: 7px;
 }
 #mobileNav .sidebar a#categoryDropdownMobileLink i {
   font-size: 15px;
@@ -230,7 +227,7 @@
 }
 #mobileNav .sidebar .category-dropdown-mob {
   position: relative;
-  padding-inline: 10px;
+  padding-inline: 0;
   margin-bottom: 20px;
   display: none;
   transition: 0.3s;
@@ -239,6 +236,7 @@
 #mobileNav .sidebar .category-dropdown-mob a {
   border-bottom: 1px solid rgba(40, 40, 40, 0.1);
   width: 100%;
+  padding-left: 10px;
 }
 #mobileNav .sidebar .category-dropdown-mob a:last-child {
   border-bottom: none;
@@ -248,62 +246,6 @@
 }
 #mobileNav .sidebar .category-dropdown-mob.active {
   display: block;
-}
-#mobileNav .sidebar .connect-with-us {
-  width: 100%;
-  height: auto;
-  padding: 15px 18px;
-  background: #06c484;
-  margin-top: 15px;
-  position: relative;
-  top: 155px;
-}
-#mobileNav .sidebar .connect-with-us .first-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(235, 235, 235, 0.33);
-  padding-bottom: 15px;
-}
-#mobileNav .sidebar .connect-with-us .first-row .social {
-  padding-bottom: 3px;
-}
-#mobileNav .sidebar .connect-with-us .second-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 25px;
-}
-#mobileNav .sidebar .connect-with-us .second-row a {
-  width: 100%;
-  color: rgb(246, 246, 246);
-  cursor: pointer;
-  text-align: center;
-}
-#mobileNav .sidebar .connect-with-us .second-row a:hover {
-  text-decoration: underline;
-}
-#mobileNav .sidebar .connect-with-us .second-row a:first-child {
-  border-right: 1px solid rgba(235, 235, 235, 0.33);
-}
-#mobileNav .sidebar .connect-with-us .second-row a:last-child {
-  border-left: 1px solid rgba(235, 235, 235, 0.33);
-}
-#mobileNav .sidebar .connect-with-us .second-row a i {
-  transform: translateY(2px) translateX(10px);
-}
-#mobileNav .sidebar .connect-with-us i {
-  color: rgb(246, 246, 246);
-  font-size: 22px;
-  padding: 8px 7px;
-  margin: 3px 1px;
-  opacity: 0.9;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-#mobileNav .sidebar .connect-with-us i.fa-instagram {
-  margin-left: 0;
-  padding-left: 0;
 }
 
 @media only screen and (min-device-width: 1140px) {
