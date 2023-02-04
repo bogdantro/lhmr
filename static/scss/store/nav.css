@@ -124,7 +124,7 @@
   display: block;
   transition: 0.2s;
   padding: 10px 0;
-  overflow-y: visible !important;
+  overflow-y: scroll !important;
   padding-bottom: 20px;
   z-index: 100000000000000000;
 }
