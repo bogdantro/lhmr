@@ -40,16 +40,18 @@ function menu(){
 function categoriesDrop(){
   const a =  document.getElementById('categoryDropdownMobile');
   const b =  document.getElementById('categoryDropdownMobileIcon');
-
+  const c =  document.getElementById('categoryDropdownMobileLink');
+  
   if (window.getComputedStyle(a,null).getPropertyValue("display") == 'none'){
     a.classList.add('active')
     b.className = 'fa-solid fa-caret-up';
-    b.style.transform = "translateY(1px)";
+    b.style.transform = "translateY(1px) translateX(10px)";
+    c.classList.add('active');
   }else{
     a.classList.remove('active')
     b.className = 'fa-solid fa-caret-down';
-    b.style.transform = "translateY(0px)";
+    b.style.transform = "translateY(0px) translateX(10px)";
+    c.classList.remove('active');
   }
 };
-
 

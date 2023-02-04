@@ -147,8 +147,6 @@ $txt: #183b56;
         .lower-span{
         }
         &.click{
-            background: rgb(240, 240, 240);
-            padding-right: 6px;
             border-radius: 50%;
             .upper-span{
                 transform: rotate(45deg);
@@ -164,7 +162,7 @@ $txt: #183b56;
     // SIDEBAR
     .sidebar{
         background: white;
-        height: 100vh;
+        min-height: 100vh;
         position: absolute;
         top: 68px;
         right: -250px;
@@ -174,14 +172,62 @@ $txt: #183b56;
         pointer-events: none;
         display: unset;
         transition: .2s;
-        overflow-y: scroll;
-        padding: 10px 25px;
+        padding: 10px 0;
+        padding-bottom: 0 !important;
         &.active{
             top: 68px;
             right: 0;
             opacity: 1;
             pointer-events: visible;
             transition: .5s;
+        }
+        .sidebar-search{
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            padding-inline: 15px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            text-align: center;
+            z-index: 10000;
+            background: white;
+            border-bottom: 1px solid rgba(40,40,40,0.1);
+            form{
+                border: 1px solid rgb(234,234,234);
+                border-radius: 4px;
+                display: flex;
+            }
+                i{
+                    position: absolute;
+                    right: 39px;
+                    top: 33px;
+                    padding: 8px;
+                    margin: -8px;
+                    border-radius: 100%;
+                    background: rgba(155, 155, 155, 0.22);
+                    font-size: 15px;
+                    color: #183b56a9;
+                }
+            input{
+              width: 85%;
+              height: 50px;
+              border: none;
+              outline: none;
+              padding: 7px;
+              background: white;
+              color: $txt;
+              border-radius: 4px;
+              font-size: 15px;
+              &::placeholder{
+                color: $txt;
+                opacity: 0.8;
+              }
+            }
+        }
+        .links{
+            padding-top: 83px;
+            padding-inline: 18px;
         }
         a{
             display: block;
@@ -190,26 +236,31 @@ $txt: #183b56;
             opacity: 0.95;
             padding: 12px 0;
             width: max-content;
-            i{
-                font-size: 15px;
-            }
-            &.nav_order_btn{
-                padding: 8px 24px;
-                background: $primBtn;
-                border-radius: 4px;
-                color: $white;
-                margin-top: 14px;
-            }
             &.mailto{
-                padding: 0;
                 margin: 0;
-                border-bottom: 1px solid rgba(50, 50, 50, 0.4);
-                padding-bottom: 1px;
+                padding: 0;
                 text-decoration: none;
                 font-size: 15px;
+                color: $white;
                 cursor: pointer;
+                text-decoration: underline;
                 &:hover{
-                    border-bottom: 1px solid transparent;
+                    opacity: 1;
+                }
+            }
+            &#categoryDropdownMobileLink{
+                padding-top: 7px;
+                i{
+                    font-size: 15px;
+                    transform: translateX(10px);
+                }
+                &.active{
+                    color: $primBtn;
+                    &#categoryDropdownMobileIcon{
+                        color: $primBtn;
+                        font-size: 15px;
+                        transform: translateX(10px);    
+                    }
                 }
             }
         }
@@ -219,35 +270,75 @@ $txt: #183b56;
             margin-bottom: 20px;
             display: none;
             transition: .3s;
-            background: $white;
+            background: rgba(190,190,190,0.1);
             a{
                 border-bottom: 1px solid rgba(40,40,40,0.1);
                 width: 100%;
                 &:last-child{
                     border-bottom: none;
                 }
+                &:hover{
+                    text-decoration: underline;
+                }
             }
             &.active{
                 display: block;
             }
         }
-        .sidebar-divider{
-            color: $txt;
-            font-size: 17px;
-            opacity: 0.7;
-            margin-bottom: 6px;
-        }
-        i{
-            color: $txt;
-            font-size: 22px;
-            padding: 8px 7px;
-            margin: 3px 1px;
-            opacity: 0.9;
-            margin-bottom: 0;
-            padding-bottom: 0;
-            &.fa-instagram{
-                margin-left: 0;
-                padding-left: 0;
+        .connect-with-us{
+            width: 100%;
+            height: auto;
+            padding: 15px 18px;
+            background: $primBtn;
+            margin-top: 15px;
+            position: relative;
+            top: calc(68px + 87px);
+            .first-row{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid rgba(235, 235, 235, 0.33);
+                padding-bottom: 15px;
+                .social{
+                    padding-bottom: 3px;
+                }
+            }
+            .second-row{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 25px;
+                a{
+                    width: 100%;
+                    color: $white;
+                    cursor: pointer;
+                    text-align: center;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                    &:first-child{
+                        border-right: 1px solid rgba(235, 235, 235, 0.33);
+                    }
+                    &:last-child{
+                        border-left: 1px solid rgba(235,235,235,0.33);
+                    }
+                    i{
+                        transform: translateY(2px) translateX(10px);
+                    }
+                }
+            }
+            i{
+                color: $white;
+                font-size: 22px;
+                padding: 8px 7px;
+                margin: 3px 1px;
+                opacity: 0.9;
+                margin-bottom: 0;
+                padding-bottom: 0;
+                &.fa-instagram{
+                    margin-left: 0;
+                    padding-left: 0;
+                }
             }
         }
     }

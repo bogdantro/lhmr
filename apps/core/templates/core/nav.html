@@ -32,29 +32,40 @@
     </div>
     <!-- SIDEBAR -->
     <div class="sidebar" id="sidebar">
-        <a href="/om-oss/">Om oss</a>
-        <!-- <a href="/blogg/">Blogg</a> -->
-        <a href="/alle-tjenester/">Alle tjenester</a>
-        <a onclick="categoriesDrop()">Kategorier<i id="categoryDropdownMobileIcon" class="fa-solid fa-caret-down"></i></a>
-        <div class="category-dropdown-mob" id="categoryDropdownMobile">
-            {% for nav_category in nav_category %}
+        <!-- Only on some pages -->
+        <div class="sidebar-search" id="sidebarSearch">
+            <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
+                {% csrf_token %}
+                <input name="q" type="text" placeholder="Søk blant 500 tjenester"><i onclick="searchIconSubmit()" class="fa-solid fa-magnifying-glass"></i>
+            </form>
+        </div>
+        <div class="links">
+            <a href="/om-oss/">Om oss</a>
+            <a onclick="categoriesDrop()" id="categoryDropdownMobileLink">Kategorier<i id="categoryDropdownMobileIcon" class="fa-solid fa-caret-down"></i></a>
+            <div class="category-dropdown-mob" id="categoryDropdownMobile">
+                {% for nav_category in nav_category %}
             <a onclick="window.location.href='{% url  'category_detail' nav_category.slug  %}'">{{nav_category.name}}</a>
             {% endfor %}
+            </div>
+            <a href="/alle-tjenester/">Alle tjenester</a>
+            <a href="/blogg/">Blogg</a>
+            <a class="nav_order_btn" href="/for-bedrifter/">For bedrifter</a>
         </div>
-        <a class="nav_order_btn" href="/for-bedrifter/">For bedrifter</a>
-        &nbsp;
-        <hr style="background: rgba(150,150,150,0.05);">
-
-        <p class="sidebar-divider">Finn oss her</p>
-
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-facebook"></i>
-
-        <hr style="background: rgba(150,150,150,0.05);">
-
-        <p class="sidebar-divider">Lurer du på noe?</p>
-
-        <a class="mailto" href="mailto:">support@lillehammertjenester.no</a>
+        <div class="connect-with-us">
+            <div class="first-row">
+                <div class="social">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="email">
+                    <a class="mailto" href="mailto:">support@lillehammertjenester.no</a>
+                </div>
+            </div>
+            <div class="second-row">
+                <a href="/vilkaar/">Vilkår</a>
+                <a href="/policy/">Policy</a>    
+            </div>
+        </div>
     </div>
 </div>
 
@@ -75,3 +86,11 @@
     </div>    
 </div>
 </div>
+
+
+<script type="text/javascript">
+      function searchIconSubmit(){
+    document.getElementById("sidebarSearch").submit();
+  }
+
+</script>

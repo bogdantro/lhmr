@@ -13,7 +13,7 @@ from apps.newsletter.api import api_add_subscriber
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('lillehammertjenester/admin/login/', admin.site.urls),
 
     # Pages
     path('', hjemme, name="hjemme"),
