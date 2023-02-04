@@ -24,15 +24,11 @@ function menu(){
     hamburger.classList.add('click')  
     sidebar.classList.add('active')
     backToTop.classList.add('menu-active')
-    document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden";
   } else{
     backToTop.classList.remove('menu-active')
     navbar.classList.remove('menu') 
     hamburger.classList.remove('click')  
     sidebar.classList.remove('active')
-    document.body.style.overflow = "scroll";
-    document.documentElement.style.overflow = "scroll";
   }  
 };
 
