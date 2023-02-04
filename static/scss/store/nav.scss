@@ -173,7 +173,7 @@ $txt: #183b56;
         display: unset;
         transition: .2s;
         padding: 10px 0;
-        overflow-y: scroll;
+        overflow-y: scroll !important;
         padding-bottom: 20px;
         &.active{
             top: 68px;
