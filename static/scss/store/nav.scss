@@ -168,10 +168,10 @@ $txt: #183b56;
         width: 100%;
         opacity: 0;
         pointer-events: none;
-        display: unset;
+        display: block;
         transition: .2s;
         padding: 10px 0;
-        overflow-y: scroll !important;
+        overflow-y: visible !important;
         padding-bottom: 20px;
         z-index: 100000000000000000;
         &.active{
@@ -180,7 +180,6 @@ $txt: #183b56;
             opacity: 1;
             pointer-events: visible;
             transition: .5s;
-            display: block;
         }
         .sidebar-search{
             position: absolute;

@@ -121,10 +121,10 @@
   width: 100%;
   opacity: 0;
   pointer-events: none;
-  display: unset;
+  display: block;
   transition: 0.2s;
   padding: 10px 0;
-  overflow-y: scroll !important;
+  overflow-y: visible !important;
   padding-bottom: 20px;
   z-index: 100000000000000000;
 }
@@ -134,7 +134,6 @@
   opacity: 1;
   pointer-events: visible;
   transition: 0.5s;
-  display: block;
 }
 #mobileNav .sidebar .sidebar-search {
   position: absolute;
