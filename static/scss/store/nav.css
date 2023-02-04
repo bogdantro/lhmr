@@ -227,7 +227,7 @@
 #mobileNav .sidebar .category-dropdown-mob {
   position: relative;
   padding-inline: 0;
-  margin-bottom: 20px;
+  padding-bottom: 40px;
   display: none;
   transition: 0.3s;
   background: rgba(190, 190, 190, 0.1);
