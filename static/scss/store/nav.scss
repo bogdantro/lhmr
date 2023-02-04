@@ -161,12 +161,11 @@ $txt: #183b56;
     // SIDEBAR
     .sidebar{
         background: white;
-        height: 900px;
+        height: 110vh;
         position: absolute;
         top: 68px;
         right: 0;
         width: 100%;
-        z-index: 120;
         opacity: 0;
         pointer-events: none;
         display: unset;
@@ -181,6 +180,7 @@ $txt: #183b56;
             opacity: 1;
             pointer-events: visible;
             transition: .5s;
+            display: block;
         }
         .sidebar-search{
             position: absolute;
