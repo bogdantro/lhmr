@@ -43,7 +43,7 @@
             <a href="/om-oss/">Om oss</a>
             <a onclick="categoriesDrop()" id="categoryDropdownMobileLink">Kategorier<i id="categoryDropdownMobileIcon" class="fa-solid fa-caret-down"></i></a>
             <div class="category-dropdown-mob" id="categoryDropdownMobile">
-                {% for nav_category in nav_category %}
+            {% for nav_category in nav_category %}
             <a onclick="window.location.href='{% url  'category_detail' nav_category.slug  %}'">{{nav_category.name}}</a>
             {% endfor %}
             </div>
@@ -65,8 +65,16 @@
     <!-- MENU -->
     <div class="menu">
         <a href="/om-oss/">Om oss</a>
-        <a href="/blogg/">Blogg</a>
+        <a onclick="categoriesDropDes()" id="categoryDropdownMobileLinkDes">Kategorier<i id="categoryDropdownMobileIconDes" class="fa-solid fa-caret-down"></i></a>
+        <div class="category-dropdown-mob" id="categoryDropdownMobileDes">
+            <div id="categoryDropdownMobileWidthDes">
+                {% for nav_category in nav_category %}
+                <a  onclick="window.location.href='{% url  'category_detail' nav_category.slug  %}'">{{nav_category.name}}</a>
+                {% endfor %}
+            </div>
+        </div>
         <a href="/alle-tjenester/">Alle tjenester</a>
+        <a href="/blogg/">Blogg</a>
         <a class="nav_order_btn" href="/for-bedrifter/">For bedrifter</a>
     </div>    
 </div>

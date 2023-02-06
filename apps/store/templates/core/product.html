@@ -87,7 +87,7 @@
             <div class="text location" id="location">
               <h1>Plassering</h1>
               <p>{{product.address}}</p>
-              <div id='map' style="width: 100%; height: 330px;"></div>
+              <div id='map'></div>
             </div>
 
             <hr style="margin-block: 38px;">
@@ -147,57 +147,59 @@
           <div id="reviewsSec">
             <div class="text reviews" id="reviewsServ">
               <h1>Vurderinger</h1>
+              <div class="flex">
               {% for review in product.reviews.all %}
-              <div id="reviewCard">
-                <div class="stars"><p>
-                  {% if review.stars == 1 %}
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
+                <div id="reviewCard">
+                  <div class="stars"><p>
+                    {% if review.stars == 1 %}
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    {% endif %}
+                    {% if review.stars == 2 %}
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    {% endif %}
+                    {% if review.stars == 3 %}
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    {% endif %}
+                    {% if review.stars == 4 %}
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    {% endif %}
+                    {% if review.stars == 5 %}
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    {% endif %}
+                  
+                  </div>
+                  <h1 class="title">{{ review.title }}</h1>
+                  <p class="date">Skrevet: {{ review.created_at|date:"d-m-Y" }} - Anonymt</p>
+                  <p class="content">{{ review.content }}</p>
+                  <br>
+                  {% if review.is_conf %}
+                  <p class="conf"><i class="fa-solid fa-circle-check"></i>Vurderingen har blitt bekrefta</p>
                   {% endif %}
-                  {% if review.stars == 2 %}
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  {% endif %}
-                  {% if review.stars == 3 %}
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  {% endif %}
-                  {% if review.stars == 4 %}
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  {% endif %}
-                  {% if review.stars == 5 %}
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  {% endif %}
-                
                 </div>
-                <h1 class="title">{{ review.title }}</h1>
-                <p class="date">Skrevet: {{ review.created_at|date:"d-m-Y" }} - Anonymt</p>
-                <p class="content">{{ review.content }}</p>
-                <br>
-                {% if review.is_conf %}
-                <p class="conf"><i class="fa-solid fa-circle-check"></i>Vurderingen har blitt bekrefta</p>
-                {% endif %}
-              </div>
-              {% empty %}
+                {% empty %}
                <p class="no-reviews">Ingen vurderinger enda</p>
                {% endfor %}
+              </div>
                <div id="hide_when_form_shows">
                  <button onclick="productReviewAdd()" class="add-review-btn">Skriv en vurdering</button>
                  <p class="add-review-txt">Alle vurderinger går gjennom vår bekreftelse prossess. Alle vurderinger som er bekrefta, har en grønn ikon</p>

@@ -55,3 +55,23 @@ function categoriesDrop(){
   }
 };
 
+
+function categoriesDropDes(){
+  const a =  document.getElementById('categoryDropdownMobileDes');
+  const b =  document.getElementById('categoryDropdownMobileIconDes');
+  const c =  document.getElementById('categoryDropdownMobileLinkDes');
+  
+  if (window.getComputedStyle(a,null).getPropertyValue("display") == 'none'){
+    a.classList.add('active')
+    b.className = 'fa-solid fa-caret-up';
+    b.style.transform = "translateY(1px)";
+    c.classList.add('active');
+  }else{
+    a.classList.remove('active')
+    b.className = 'fa-solid fa-caret-down';
+    b.style.transform = "translateY(0px)";
+    c.classList.remove('active');
+  }
+};
+
+
