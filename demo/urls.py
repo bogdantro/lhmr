@@ -10,7 +10,9 @@ from django.contrib import admin
 from django.contrib.auth import views
 from apps.userprofile.views import *
 from apps.newsletter.api import api_add_subscriber
+from django.views.generic.base import RedirectView
 
+favicon_view = RedirectView.as_view(url='/favicon.ico', permanent=True)
 
 urlpatterns = [
     path('lillehammertjenester/admin/login/', admin.site.urls),
