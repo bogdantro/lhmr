@@ -14,10 +14,10 @@ admin.site.register(Product, ProductAdmin)
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['name', 'slug', 'short_des', 'is_home_page',]
+    list_display = ['name', 'slug', 'short_des', 'is_home_page', 'icon',]
     search_fields = ('name', 'slug')
     list_filter = ('is_home_page',)
-    list_editable = ('is_home_page', 'slug', 'short_des',)
+    list_editable = ('is_home_page', 'slug', 'short_des', 'icon',)
 admin.site.register(Category, CategoryAdmin)
 
 
