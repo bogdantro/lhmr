@@ -77,7 +77,7 @@ class ProductReview(models.Model):
     content = models.TextField(blank=True, max_length=1500)
     stars = models.IntegerField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    is_conf = models.BooleanField(null=True, blank=True, default=False)
+    is_conf = models.BooleanField(default=False)
     
     def __str__(self):
         return str(self.product)   

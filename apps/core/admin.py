@@ -9,6 +9,7 @@ class PartnersAdmin(admin.ModelAdmin):
     list_display = ['name', 'contact_person', 'email', 'org_nr', 'is_pro']
     search_fields = ('name', 'contact_person', 'email', 'org_nr')
     list_filter = ('is_pro',)
+    list_editable = ('is_pro', 'org_nr', 'contact_person', 'email',)
 
 admin.site.register(Partners, PartnersAdmin)
 
