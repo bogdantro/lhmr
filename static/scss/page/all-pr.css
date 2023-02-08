@@ -16,6 +16,10 @@
   display: none;
 }
 
+#desNav #desNavAllprLink {
+  color: #06c484;
+}
+
 .page .allpr-search {
   position: absolute;
   top: 55px;
@@ -68,10 +72,6 @@
   color: #183b56;
   opacity: 0.8;
 }
-.page .allpr-search input:-ms-input-placeholder {
-  color: #183b56;
-  opacity: 0.8;
-}
 .page .allpr-search input::placeholder {
   color: #183b56;
   opacity: 0.8;
@@ -109,7 +109,6 @@
   flex: 1 auto;
   flex: 44%;
   max-width: 167px;
-  height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
   padding: 0;
@@ -166,70 +165,11 @@
 
 @media only screen and (min-device-width: 1140px) {
   .page .allpr-search {
-    position: absolute;
-    top: 55px;
-    width: 100%;
-    padding-inline: 33px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    text-align: center;
-    border-bottom: 1px solid rgba(40, 40, 40, 0.1);
-    z-index: 10000;
-    background: white;
-  }
-  .page .allpr-search.sticky {
-    position: fixed;
-    top: 0;
-    box-shadow: 0 0 4px rgba(5, 5, 5, 0.12);
-  }
-  .page .allpr-search form {
-    border: 1px solid rgb(234, 234, 234);
-    border-radius: 4px;
-    display: flex;
-    max-width: 500px;
-    position: relative;
-  }
-  .page .allpr-search button {
-    border: none;
-    background: transparent;
-    position: absolute;
-    right: 20px;
-    top: 13px;
-    padding: 3px 8px;
-    margin: -3px -8px;
-    border-radius: 100%;
-    background: rgba(155, 155, 155, 0.22);
-  }
-  .page .allpr-search button i {
-    font-size: 15px;
-    color: rgba(24, 59, 86, 0.662745098);
-  }
-  .page .allpr-search input {
-    width: 85%;
-    height: 50px;
-    border: none;
-    outline: none;
-    padding: 7px;
-    background: white;
-    color: #183b56;
-    border-radius: 4px;
-    font-size: 15px;
-  }
-  .page .allpr-search input::-moz-placeholder {
-    color: #183b56;
-    opacity: 0.8;
-  }
-  .page .allpr-search input:-ms-input-placeholder {
-    color: #183b56;
-    opacity: 0.8;
-  }
-  .page .allpr-search input::placeholder {
-    color: #183b56;
-    opacity: 0.8;
+    display: none;
   }
   .page #allPrQ {
     position: absolute;
-    top: 135px;
+    top: 66px;
     left: 0;
     width: 100%;
     height: auto;
@@ -243,24 +183,24 @@
   }
   .page #allPrQ.sticky {
     position: fixed;
-    top: 81px;
+    top: 66px;
     box-shadow: 0 0 4px rgba(5, 5, 5, 0.12);
   }
   .page .services {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 195px;
+    padding-top: 128px;
     padding-inline: 6px;
   }
   .page .service {
     flex: 1 auto;
     flex: 60%;
     max-width: 197px;
-    height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
     padding: 10px;
-    margin: 20px 10px;
+    margin: 20px 18px;
+    cursor: pointer;
   }
   .page .service .service-image {
     width: 100%;

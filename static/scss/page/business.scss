@@ -19,6 +19,12 @@ $txt: #183b56;
         }
     }
   }
+  #desNav{
+    #desNavBusinessLink{
+        color: $primBtn;
+    }
+}
+
 
 .page{
     #businessQ{
@@ -45,6 +51,9 @@ $txt: #183b56;
         padding-inline: 18px;
         padding-bottom: 19px;
         margin-bottom: 19px;
+        a{
+            width: max-content;
+        }
         .business-info{
             text-align: left;
             .alert{
@@ -52,13 +61,13 @@ $txt: #183b56;
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
-                margin: auto;
                 margin-top: 12px;
                 max-width: 420px;
                 padding: 10px;
                 height: 68px;
                 background: $primBtn;
                 border-radius: 4px;
+                left: 0;
                 .alert-one{
                     width: max-content;
                     color: $white;
@@ -97,7 +106,7 @@ $txt: #183b56;
                     background: $primBtn;
                     text-align: center;
                     padding: 10px;
-                    width: 70%;
+                    width: 280px;
                     outline: none;
                     border: none;
                     border-radius: 4px;
@@ -114,6 +123,7 @@ $txt: #183b56;
                 }
                 input{
                     width: 100%;
+                    max-width: 420px;
                     height: 45px;
                     border: 0;
                     outline: 0;
@@ -132,7 +142,8 @@ $txt: #183b56;
                 textarea{
                     margin-bottom: -7px;
                     width: 100%;
-                    min-height: 105px;
+                    max-width: 420px;
+                    min-height: 185px;
                     max-height: 290px;
                     border: 0;
                     outline: 0;
@@ -150,6 +161,7 @@ $txt: #183b56;
                 }
                 button{
                     width: 100%;
+                    max-width: 420px;
                     background: $primBtn;
                     color: $white;
                     height: 45px;
@@ -176,3 +188,53 @@ $txt: #183b56;
         }
     }
 }
+
+
+
+@media only screen and (min-device-width: 1140px) {
+    .page{
+      #businessQ{
+          position: absolute;
+          top: 66px;
+          left: 0;
+          width: 100%;
+          height: auto;
+          background: $primBtn;
+          color: $white;
+          font-size: 15px;
+          padding: 10px 35px;
+          font-weight: 500;
+          z-index: 10000;
+          text-align: left;
+          &.sticky{
+            position: fixed;
+            top: 66px;
+            box-shadow: 0 0 4px rgba(5,5,5,0.12);
+          }
+      }
+      .business{
+        position: relative;
+        padding-top: 155px;
+        padding-bottom: 19px;
+        margin-bottom: 19px;
+        padding-inline: 35px;
+        h1{
+            font-size: 23px;
+            color: $txt;
+            font-weight: 500;
+        }
+        p{
+            max-width: 700px;
+            color: $txt;
+            font-size: 16px;
+            opacity: 0.87;
+        }
+        a{
+            display: block;
+            font-size: 16px;
+            opacity: 0.9;
+            padding: 4px 0;
+        }
+    }
+    }
+  }

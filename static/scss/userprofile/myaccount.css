@@ -42,10 +42,8 @@
 .myaccount .account-card .your-info .memoji {
   background: rgba(0, 137, 249, 0.5215686275);
   border-radius: 100%;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   margin: auto;
@@ -341,10 +339,8 @@
   .myaccount .account-card .your-info .memoji {
     background: rgba(0, 137, 249, 0.5215686275);
     border-radius: 100%;
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     margin: auto;

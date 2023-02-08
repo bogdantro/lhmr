@@ -65,10 +65,6 @@
   color: #183b56;
   opacity: 0.8;
 }
-.product-search input:-ms-input-placeholder {
-  color: #183b56;
-  opacity: 0.8;
-}
 .product-search input::placeholder {
   color: #183b56;
   opacity: 0.8;
@@ -85,10 +81,8 @@
 }
 .product-section .carousel-control-prev {
   opacity: 1;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   position: absolute;
@@ -108,10 +102,8 @@
 }
 .product-section .carousel-control-next {
   opacity: 1;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   position: absolute;
@@ -210,7 +202,6 @@
   color: #183b56;
   opacity: 0.7;
   font-weight: 500;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   padding: 5px;
@@ -334,7 +325,6 @@
   border-radius: 4px;
 }
 .product-section #infoSec .otherpr .alert .alert-one {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   color: rgb(246, 246, 246);
@@ -346,7 +336,6 @@
   left: 12px;
 }
 .product-section #infoSec .otherpr .alert .alert-two {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   color: rgb(246, 246, 246);
@@ -386,7 +375,6 @@
   padding-left: 10px;
   padding-right: 5px;
   background: rgba(190, 190, 190, 0.1);
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
@@ -485,11 +473,6 @@
   font-size: 14px;
   opacity: 0.66;
 }
-.product-section #reviewsSec #productMakeReview input:-ms-input-placeholder {
-  color: #183b56;
-  font-size: 14px;
-  opacity: 0.66;
-}
 .product-section #reviewsSec #productMakeReview input::placeholder {
   color: #183b56;
   font-size: 14px;
@@ -510,11 +493,6 @@
   border: 1px solid rgba(100, 100, 100, 0.1);
 }
 .product-section #reviewsSec #productMakeReview textarea::-moz-placeholder {
-  color: #183b56;
-  font-size: 14px;
-  opacity: 0.66;
-}
-.product-section #reviewsSec #productMakeReview textarea:-ms-input-placeholder {
   color: #183b56;
   font-size: 14px;
   opacity: 0.66;
@@ -627,10 +605,6 @@
     color: #183b56;
     opacity: 0.8;
   }
-  .product-search input:-ms-input-placeholder {
-    color: #183b56;
-    opacity: 0.8;
-  }
   .product-search input::placeholder {
     color: #183b56;
     opacity: 0.8;
@@ -718,7 +692,6 @@
     color: #183b56;
     opacity: 0.7;
     font-weight: 500;
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     padding: 5px;
@@ -839,7 +812,6 @@
     border-radius: 4px;
   }
   .product-section #infoSec .otherpr .alert .alert-one {
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     color: rgb(246, 246, 246);
@@ -851,7 +823,6 @@
     left: 12px;
   }
   .product-section #infoSec .otherpr .alert .alert-two {
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     color: rgb(246, 246, 246);
@@ -891,7 +862,6 @@
     padding-left: 10px;
     padding-right: 5px;
     background: rgba(190, 190, 190, 0.1);
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
@@ -923,7 +893,6 @@
   }
   .product-section #reviewsSec .reviews #reviewCard {
     width: 100%;
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     background: white;
@@ -1008,11 +977,6 @@
     font-size: 14px;
     opacity: 0.66;
   }
-  .product-section #reviewsSec #productMakeReview input:-ms-input-placeholder {
-    color: #183b56;
-    font-size: 14px;
-    opacity: 0.66;
-  }
   .product-section #reviewsSec #productMakeReview input::placeholder {
     color: #183b56;
     font-size: 14px;
@@ -1033,11 +997,6 @@
     border: 1px solid rgba(100, 100, 100, 0.1);
   }
   .product-section #reviewsSec #productMakeReview textarea::-moz-placeholder {
-    color: #183b56;
-    font-size: 14px;
-    opacity: 0.66;
-  }
-  .product-section #reviewsSec #productMakeReview textarea:-ms-input-placeholder {
     color: #183b56;
     font-size: 14px;
     opacity: 0.66;

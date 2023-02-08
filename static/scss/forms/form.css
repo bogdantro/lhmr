@@ -55,7 +55,6 @@
 }
 .page-for-form form .form-actions button {
   border-radius: 4px;
-  width: -webkit-max-content !important;
   width: -moz-max-content !important;
   width: max-content !important;
   padding: 15px;

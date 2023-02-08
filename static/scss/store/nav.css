@@ -179,10 +179,6 @@
   color: #183b56;
   opacity: 0.8;
 }
-#mobileNav .sidebar .sidebar-search input:-ms-input-placeholder {
-  color: #183b56;
-  opacity: 0.8;
-}
 #mobileNav .sidebar .sidebar-search input::placeholder {
   color: #183b56;
   opacity: 0.8;
@@ -310,7 +306,6 @@
   }
   #desNav .menu {
     padding-inline: 10px;
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     height: 100%;
@@ -321,13 +316,14 @@
   }
   #desNav .menu a {
     color: #183b56;
-    font-size: 16px;
+    font-size: 17px;
     text-decoration: none;
     padding: 0 8px;
     margin-inline: 8px;
     padding-bottom: 5px;
     padding-top: 7px;
     transition: 0.2s;
+    opacity: 0.9;
     cursor: pointer;
   }
   #desNav .menu a:hover {
@@ -370,7 +366,6 @@
     max-height: 350px;
   }
   #desNav .menu #categoryDropdownMobileDes #categoryDropdownMobileWidthDes a {
-    min-width: -webkit-max-content;
     min-width: -moz-max-content;
     min-width: max-content;
     cursor: pointer;

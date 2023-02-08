@@ -19,6 +19,13 @@ $txt: #183b56;
         }
     }
   }
+  #desNav{
+    #desNavBlogLink{
+        color: $primBtn;
+    }
+}
+
+
 
 
 .page{
@@ -98,7 +105,28 @@ $txt: #183b56;
 }
 }
 // desktop
-@media only screen and (min-device-width: 1145px) {
+@media only screen and (min-device-width: 1140px) {
+  .page{ 
+  #blogQ{
+    position: absolute;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: $primBtn;
+    color: $white;
+    font-size: 15px;
+    padding: 10px 35px;
+    font-weight: 500;
+    z-index: 10000;
+    text-align: left;
+    &.sticky{
+    position: fixed;
+    top: 66px;
+    box-shadow: 0 0 4px rgba(5,5,5,0.12);
+    }
+  }
+}
   .blog-posts{
     background: white;
     width: 100%;

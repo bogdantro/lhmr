@@ -20,6 +20,14 @@ $txt: #183b56;
     }
   }
 
+  #desNav{
+    #desNavAllprLink{
+        color: $primBtn;
+    }
+}
+
+
+
   .page{
     .allpr-search{
         position: absolute;
@@ -167,82 +175,31 @@ $txt: #183b56;
 @media only screen and (min-device-width: 1140px) {
   .page{
     .allpr-search{
-      position: absolute;
-      top: 55px;
-      width: 100%;
-      padding-inline: 33px;
-      padding-bottom: 15px;
-      padding-top: 15px;
-      text-align: center;
-      border-bottom: 1px solid rgba(40,40,40,0.1);
-      z-index: 10000;
-      background: white;
-      &.sticky{
-          position: fixed;
-          top: 0;
-          box-shadow: 0 0 4px rgba(5,5,5,0.12);
-      }
-      form{
-          border: 1px solid rgb(234,234,234);
-          border-radius: 4px;
-          display: flex;
-          max-width: 500px;
-          position: relative;
-      }
-      button{
-          border: none;
-          background: transparent;
-          position: absolute;
-          right: 20px;
-          top: 13px;
-          padding: 3px 8px;
-          margin: -3px -8px;
-          border-radius: 100%;
-          background: rgba(155, 155, 155, 0.22);
-          i{
-              font-size: 15px;
-              color: #183b56a9;
-          }
-      }
-      input{
-        width: 85%;
-        height: 50px;
-        border: none;
-        outline: none;
-        padding: 7px;
-        background: white;
-        color: $txt;
-        border-radius: 4px;
-        font-size: 15px;
-        &::placeholder{
-          color: $txt;
-          opacity: 0.8;
-        }
-      }
+      display: none;
     }
     #allPrQ{
-        position: absolute;
-        top: 135px;
-        left: 0;
-        width: 100%;
-        height: auto;
-        background: $primBtn;
-        color: $white;
-        font-size: 15px;
-        padding: 10px 35px;
-        font-weight: 500;
-        z-index: 10000;
-        text-align: left;
-        &.sticky{
-          position: fixed;
-          top: calc(136px - 55px);
-          box-shadow: 0 0 4px rgba(5,5,5,0.12);
-        }
+      position: absolute;
+      top: 66px;
+      left: 0;
+      width: 100%;
+      height: auto;
+      background: $primBtn;
+      color: $white;
+      font-size: 15px;
+      padding: 10px 35px;
+      font-weight: 500;
+      z-index: 10000;
+      text-align: left;
+      &.sticky{
+      position: fixed;
+      top: 66px;
+      box-shadow: 0 0 4px rgba(5,5,5,0.12);
+      }
     }
     .services{
         display: flex;
         flex-wrap: wrap;
-        padding-top: 195px;
+        padding-top: 128px;
         padding-inline: 6px;
       }
       .service{
@@ -251,7 +208,8 @@ $txt: #183b56;
         max-width: 197px;
         height: min-content;
         padding: 10px;            
-        margin: 20px 10px;
+        margin: 20px 18px;
+        cursor: pointer;
         .service-image{
             width: 100%;
             height: 105px;

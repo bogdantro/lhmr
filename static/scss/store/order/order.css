@@ -41,7 +41,6 @@
 .order-page .order-guarantee {
   position: relative;
   right: 0;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   width: 92%;
@@ -95,7 +94,6 @@
 }
 .make-order #makeOrder .form-actions button {
   border-radius: 4px;
-  width: -webkit-max-content !important;
   width: -moz-max-content !important;
   width: max-content !important;
   height: unset !important;
@@ -270,7 +268,6 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     width: 400px;
@@ -334,7 +331,6 @@
   }
   .make-order #makeOrder .form-actions button {
     border-radius: 4px;
-    width: -webkit-max-content !important;
     width: -moz-max-content !important;
     width: max-content !important;
     height: unset !important;

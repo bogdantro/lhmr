@@ -65,10 +65,6 @@
   color: #183b56;
   opacity: 0.8;
 }
-.page .search-search input:-ms-input-placeholder {
-  color: #183b56;
-  opacity: 0.8;
-}
 .page .search-search input::placeholder {
   color: #183b56;
   opacity: 0.8;
@@ -148,10 +144,6 @@
   font-size: 15px;
 }
 .page .no-query .no-query-search input::-moz-placeholder {
-  color: #183b56;
-  opacity: 0.8;
-}
-.page .no-query .no-query-search input:-ms-input-placeholder {
   color: #183b56;
   opacity: 0.8;
 }
@@ -268,10 +260,6 @@
   color: #183b56;
   opacity: 0.8;
 }
-.page .search-results .no-results .no-results-search input:-ms-input-placeholder {
-  color: #183b56;
-  opacity: 0.8;
-}
 .page .search-results .no-results .no-results-search input::placeholder {
   color: #183b56;
   opacity: 0.8;
@@ -297,7 +285,6 @@
   flex: 1 auto;
   flex: 44%;
   max-width: 167px;
-  height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
   padding: 0;
@@ -407,10 +394,6 @@
     color: #183b56;
     opacity: 0.8;
   }
-  .page .search-search input:-ms-input-placeholder {
-    color: #183b56;
-    opacity: 0.8;
-  }
   .page .search-search input::placeholder {
     color: #183b56;
     opacity: 0.8;
@@ -486,10 +469,6 @@
     font-size: 15px;
   }
   .page .no-query .no-query-search input::-moz-placeholder {
-    color: #183b56;
-    opacity: 0.8;
-  }
-  .page .no-query .no-query-search input:-ms-input-placeholder {
     color: #183b56;
     opacity: 0.8;
   }
@@ -606,10 +585,6 @@
     color: #183b56;
     opacity: 0.8;
   }
-  .page .search-results .no-results .no-results-search input:-ms-input-placeholder {
-    color: #183b56;
-    opacity: 0.8;
-  }
   .page .search-results .no-results .no-results-search input::placeholder {
     color: #183b56;
     opacity: 0.8;
@@ -635,7 +610,6 @@
     flex: 1 auto;
     flex: 60%;
     max-width: 197px;
-    height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
     padding: 10px;

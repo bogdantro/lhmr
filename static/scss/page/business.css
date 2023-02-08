@@ -16,6 +16,10 @@
   display: none;
 }
 
+#desNav #desNavBusinessLink {
+  color: #06c484;
+}
+
 .page #businessQ {
   position: absolute;
   top: 66px;
@@ -41,6 +45,10 @@
   padding-bottom: 19px;
   margin-bottom: 19px;
 }
+.page .business a {
+  width: -moz-max-content;
+  width: max-content;
+}
 .page .business .business-info {
   text-align: left;
 }
@@ -49,16 +57,15 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: auto;
   margin-top: 12px;
   max-width: 420px;
   padding: 10px;
   height: 68px;
   background: #06c484;
   border-radius: 4px;
+  left: 0;
 }
 .page .business .business-info .alert .alert-one {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   color: rgb(246, 246, 246);
@@ -71,7 +78,6 @@
   left: 12px;
 }
 .page .business .business-info .alert .alert-two {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   color: rgb(246, 246, 246);
@@ -95,7 +101,7 @@
   background: #06c484;
   text-align: center;
   padding: 10px;
-  width: 70%;
+  width: 280px;
   outline: none;
   border: none;
   border-radius: 4px;
@@ -112,6 +118,7 @@
 }
 .page .business .business-info form input {
   width: 100%;
+  max-width: 420px;
   height: 45px;
   border: 0;
   outline: 0;
@@ -127,11 +134,6 @@
   font-size: 14px;
   opacity: 0.66;
 }
-.page .business .business-info form input:-ms-input-placeholder {
-  color: #183b56;
-  font-size: 14px;
-  opacity: 0.66;
-}
 .page .business .business-info form input::placeholder {
   color: #183b56;
   font-size: 14px;
@@ -140,7 +142,8 @@
 .page .business .business-info form textarea {
   margin-bottom: -7px;
   width: 100%;
-  min-height: 105px;
+  max-width: 420px;
+  min-height: 185px;
   max-height: 290px;
   border: 0;
   outline: 0;
@@ -156,11 +159,6 @@
   font-size: 14px;
   opacity: 0.66;
 }
-.page .business .business-info form textarea:-ms-input-placeholder {
-  color: #183b56;
-  font-size: 14px;
-  opacity: 0.66;
-}
 .page .business .business-info form textarea::placeholder {
   color: #183b56;
   font-size: 14px;
@@ -168,6 +166,7 @@
 }
 .page .business .business-info form button {
   width: 100%;
+  max-width: 420px;
   background: #06c484;
   color: rgb(246, 246, 246);
   height: 45px;
@@ -189,4 +188,50 @@
   background: #06c484;
   cursor: pointer;
   pointer-events: visible;
+}
+
+@media only screen and (min-device-width: 1140px) {
+  .page #businessQ {
+    position: absolute;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: #06c484;
+    color: rgb(246, 246, 246);
+    font-size: 15px;
+    padding: 10px 35px;
+    font-weight: 500;
+    z-index: 10000;
+    text-align: left;
+  }
+  .page #businessQ.sticky {
+    position: fixed;
+    top: 66px;
+    box-shadow: 0 0 4px rgba(5, 5, 5, 0.12);
+  }
+  .page .business {
+    position: relative;
+    padding-top: 155px;
+    padding-bottom: 19px;
+    margin-bottom: 19px;
+    padding-inline: 35px;
+  }
+  .page .business h1 {
+    font-size: 23px;
+    color: #183b56;
+    font-weight: 500;
+  }
+  .page .business p {
+    max-width: 700px;
+    color: #183b56;
+    font-size: 16px;
+    opacity: 0.87;
+  }
+  .page .business a {
+    display: block;
+    font-size: 16px;
+    opacity: 0.9;
+    padding: 4px 0;
+  }
 }/*# sourceMappingURL=business.css.map */

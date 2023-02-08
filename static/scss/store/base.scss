@@ -77,11 +77,15 @@ $txt: #183b56;
         padding-top: 18px;
         margin-top: -18px;
         border-radius: 4px;
+        cursor: pointer;
         &::before{
           padding: 7px;
           margin: -7px;
           background: rgba(155, 155, 155, 0.22);
           border-radius: 100%;
+        }
+        &:hover{
+          background: rgba(155, 155, 155, 0.35);
         }
       }
       input{
@@ -416,7 +420,7 @@ $txt: #183b56;
           min-width: 220px;
           max-width: 220px;
           height: min-content;
-          margin: 0 30px;
+          margin: 0 13px;
           position: relative;
           transition: .1s;
           cursor: pointer;
