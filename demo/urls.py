@@ -26,6 +26,7 @@ urlpatterns = [
     path('for-bedrifter/bli-partner/', be_partner, name='be_partner'),
     path('for-bedrifter/bli-partner/partner-sukess', partner_success, name='partner_success'),
     path('asklfholafio3o/iskf393SFJjSFF39rWFj/KSsdk992999SDSSDKSDkadk30W/', make_serv, name='make_serv'),
+    path('website-statistics/', statistics, name='statistics'),
 
     path('søke-resultater/', home_page_search, name='home_page_search'),
 
