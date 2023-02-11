@@ -10,8 +10,7 @@ def nav_category(request):
     return context
 
 def clicks(request):
-    num_visits = request.session.get('num_visits', 0)
-    request.session['num_visits'] = num_visits + 1   
+    num_visits = 0
 
     context = {
     'num_visits':num_visits,
