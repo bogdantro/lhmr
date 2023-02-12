@@ -23,8 +23,6 @@ from django.conf import settings
 from .forms import *
 
 
-
-
 def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug)  
     mapbox_access_token = settings.MAP_BOX_ACCESS_TOKEN 
@@ -48,7 +46,6 @@ def product_detail(request, slug):
     }
 
     return render(request, 'core/product.html', context)
-
 
 def category_detail(request, slug):
     category = get_object_or_404(Category, slug=slug)  

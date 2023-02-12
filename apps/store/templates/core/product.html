@@ -1,5 +1,6 @@
 {% extends 'core/base.html' %}
 {% load static %}
+{% load hitcount_tags %}
 
 
 
@@ -72,7 +73,7 @@
               <p><i class="fa-solid fa-star"></i>0</p><span>({{product.reviews.all.count}})</span>
               {% endif %}
                 </div>
-                <div class="name">{{product.name}}  {{num_visits}}</div>
+                <div class="name">{{product.name}}  {% get_hit_count for product %}</div>
                 <div class="business-name"><i class="fa-solid fa-circle-user"></i>{{product.business_name}}</div>
           </div>
 
