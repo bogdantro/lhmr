@@ -29,12 +29,17 @@
                     <input type="text" id="name" name="name" placeholder="Hansen's Bakeri">
                     <br>
                     <br>
+                    <label for="org_nr">Org nummer</label>
+                    <br>
+                    <input type="number" id="org_nr" name="org_nr" placeholder="000 000 000">
+                    <br>
+                    <br>
                     <label for="contact_person">Kontaktperson</label>
                     <br>
                     <input type="text" name="contact_person" id="contact_person" placeholder="Per Hansen">
                     <br>
                     <br>
-                    <label for="">Epost</label>
+                    <label for="">E-post</label>
                     <br>
                     <input type="email" name="email" id="email" placeholder="perhansen@hansen.no">
                     <br>
@@ -51,9 +56,10 @@ async function validateForm(){
     const name = document.getElementById('name');
     const contact_person = document.getElementById('contact_person');
     const email = document.getElementById('email');
+    const org_nr = document.getElementById('org_nr');
     const partnerSub = document.getElementById('partnerSub');
 
-    if(name.value && contact_person.value && email.value){
+    if(name.value && contact_person.value && email.value && org_nr.value){
         partnerSub.classList.remove('not-ready')
         partnerSub.classList.add('ready')
     }else{
