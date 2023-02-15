@@ -41,7 +41,7 @@ class Partners(models.Model):
     name = models.CharField(max_length=400, blank=True)
     contact_person = models.CharField(max_length=400, blank=True)
     email = models.EmailField(max_length=400, blank=True)
-    org_nr = models.CharField(max_length=500, blank=True)
+    org_nr = models.CharField(max_length=500, blank=True, null=True)
     is_pro = models.BooleanField(default=False)
 
     def __str__(self):
