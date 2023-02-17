@@ -53,9 +53,28 @@
                  </div>
             </div>
         </div>
+        <div class="recomendend">
+            <h1 style="padding-left: 18px; padding-top: 48px; margin-bottom: 6px;" class="section-heading">Vi tror du liker</h1>
+            <div class="services">
+                {% for product in arandom %}
+                <div class="service" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
+                    <img src="{{product.image1.url}}" alt="" class="service-image">
+                    <div class="reviews">
+                        {% if product.get_rating %}
+                        <p><i class="fa-solid fa-star"></i>{{product.get_rating|floatformat:0}}</p><span>({{product.reviews.all.count}})</span>
+                        {% else %}
+                        <p><i class="fa-solid fa-star"></i>0</p><span>(0)</span>
+                        {% endif %}
+                    </div>
+                    <div class="name">{{product.name}}</div>
+                    <div class="business-name">{{product.business_name}}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
         {% endif %}
         {% else %}
-        <div class="no-query" style="padding-top: 175px; padding-inline: 18px;">
+        <div class="no-query" style="padding-top: 155px; padding-inline: 18px;">
             <p class="search-q" id="searchQNo">Ser ut som du har glemt å skrive</p>
             <i class="fa-regular fa-face-sad-tear"></i>
             <h1>Du har glemt å skrive</h1>
@@ -67,6 +86,25 @@
                    <button type="submit">Søk etter tjeneste</button>
                </form>
              </div>
+        </div>
+        <div class="recomendend">
+            <h1 style="padding-left: 18px; padding-top: 35px; margin-top: 20px; margin-bottom: 6px;" class="section-heading">Vi tror du liker</h1>
+            <div class="services">
+                {% for product in arandom %}
+                <div class="service" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
+                    <img src="{{product.image1.url}}" alt="" class="service-image">
+                    <div class="reviews">
+                        {% if product.get_rating %}
+                        <p><i class="fa-solid fa-star"></i>{{product.get_rating|floatformat:0}}</p><span>({{product.reviews.all.count}})</span>
+                        {% else %}
+                        <p><i class="fa-solid fa-star"></i>0</p><span>(0)</span>
+                        {% endif %}
+                    </div>
+                    <div class="name">{{product.name}}</div>
+                    <div class="business-name">{{product.business_name}}</div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     {% endif %}
 </div>

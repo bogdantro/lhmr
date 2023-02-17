@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django.utils.text import slugify
 
 # Create your models here.
 
@@ -54,10 +55,14 @@ class Product(models.Model):
     contact_by_instagram = models.CharField(max_length=400, blank=True, null=True)
     contact_by_facebook = models.CharField(max_length=400, blank=True, null=True)
     contact_by_website = models.CharField(max_length=400, blank=True, null=True)
-
     
     def __str__(self):
         return self.name
+    
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        return super(Product, self).save(*args, **kwargs)
+
 
     def get_rating(self):
         if self.reviews.count() > 0:

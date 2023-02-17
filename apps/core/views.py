@@ -1,5 +1,5 @@
 import warnings
-
+import random
 from django.shortcuts import *
 from django.http import *
 from apps.store.models import *
@@ -113,6 +113,9 @@ def policy(request):
 def home_page_search(request):
     query = request.GET.get('q','')
     #The empty string handles an empty "request"
+    arandom = list(Product.objects.all())
+
+    arandom = random.sample(arandom, 3)
     if query:
             queryset = (Q(name__icontains=query) | Q(description__icontains=query) | Q(business_name__icontains=query))
             #I assume "text" is a field in your model
@@ -122,7 +125,7 @@ def home_page_search(request):
             results = Product.objects.filter(queryset).distinct()
     else:
        results = []
-    return render(request, 'core/search-results.html', {'results':results, 'query':query})
+    return render(request, 'core/search-results.html', {'results':results, 'query':query, 'arandom':arandom})
 
     #You can also set context = {'results':results, 'query':query} after 
     #the else: (same indentation as return statement), and 

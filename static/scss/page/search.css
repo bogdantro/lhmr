@@ -3,16 +3,79 @@
 }
 
 #mobileNav {
-  position: absolute;
   background: white;
 }
-#mobileNav::before {
-  display: none;
-}
-#mobileNav.sticky::before {
-  display: none;
-}
 
+.page .recomendend .services {
+  display: flex;
+  overflow-x: scroll;
+  padding-bottom: 20px;
+  margin-bottom: 17px;
+}
+.page .recomendend .service {
+  flex: 1 auto;
+  flex: 60%;
+  min-width: 190px;
+  max-width: 190px;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 10px;
+  margin: 0 10px;
+}
+.page .recomendend .service:first-child {
+  margin-left: 9px;
+}
+.page .recomendend .service .service-image {
+  width: 100%;
+  height: 105px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(90%);
+  border-radius: 4px;
+}
+.page .recomendend .service .reviews {
+  display: flex;
+  margin-block: 1px;
+  margin-top: 6px;
+}
+.page .recomendend .service .reviews p {
+  margin-bottom: 0;
+  color: #FFBC55;
+  font-size: 11px;
+  margin-top: 1px;
+}
+.page .recomendend .service .reviews p i {
+  transform: translateY(-0.9px);
+  margin-right: 3px;
+  font-size: 9px;
+}
+.page .recomendend .service .reviews span {
+  color: rgb(170, 170, 170);
+  font-size: 10px;
+  transform: translateX(4px) translateY(2px);
+}
+.page .recomendend .service .name {
+  font-size: 14px;
+  color: #183b56;
+  font-weight: 500;
+  margin-bottom: 1px;
+}
+.page .recomendend .service .business-name {
+  font-size: 11px;
+  color: #183b56;
+  opacity: 0.7;
+  font-weight: 500;
+}
+.page .recomendend .service:hover {
+  background: white;
+}
+.page .recomendend .service:hover .name {
+  text-decoration: underline;
+}
+.page .recomendend .service:hover .service-image {
+  transition: 0.2s;
+  filter: brightness(85%);
+}
 .page .search-search {
   position: absolute;
   top: 55px;
@@ -75,7 +138,7 @@
 }
 .page .no-query #searchQNo {
   position: absolute;
-  top: 70px;
+  top: 68px;
   left: 0;
   width: 100%;
   height: auto;
@@ -89,7 +152,7 @@
 }
 .page .no-query #searchQNo.sticky {
   position: fixed;
-  top: 0px;
+  top: 68px;
   box-shadow: 0 0 4px rgba(5, 5, 5, 0.12);
 }
 .page .no-query i {
