@@ -28,9 +28,9 @@ class Product(models.Model):
     description = models.TextField(blank=False)
     short_description = models.TextField(blank=True)
     price = models.FloatField(max_length=300, default=0, blank=True, null=True)
-    address = models.CharField(max_length=500)
-    cords1 = models.CharField(max_length=500)
-    cords2 = models.CharField(max_length=500)
+    address = models.CharField(max_length=500, blank=True)
+    cords1 = models.CharField(max_length=500, blank=True)
+    cords2 = models.CharField(max_length=500, blank=True)
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     is_home_page = models.BooleanField(default=False)
     # Openin hours
