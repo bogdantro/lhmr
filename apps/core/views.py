@@ -19,12 +19,14 @@ from django.conf import settings
 
 def hjemme(request,  backend='django.contrib.auth.backends.ModelBackend'):
     products = Product.objects.filter(is_home_page=True)
+    map_products = Product.objects.all()
     category = Category.objects.filter(is_home_page=True)
     mapbox_access_token = settings.MAP_BOX_ACCESS_TOKEN 
 
     context = {
     'products':products,
     'category':category,
+    'map_products':map_products,
     'mapbox_access_token':mapbox_access_token,
     }
     return render(request, 'core/home.html', context)
