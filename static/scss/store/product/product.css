@@ -548,6 +548,7 @@
   text-decoration: underline;
   cursor: pointer;
   color: #007bff;
+  margin-block: 4px;
 }
 
 @media only screen and (min-device-width: 1140px) {
