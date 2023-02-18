@@ -37,6 +37,9 @@
             <div class="name">{{product.name}}</div>
             <div class="business-name">{{product.business_name}}</div>
          </div>
+         {% empty %}
+         <h1 class="section-heading" style="padding-top: 15px; padding-left: 9px;">Ingen tjenester her enda</h1>
+         <p class="no-pr">Vi fant ingen tjenester i kategorien {{category.name}}</p>
         {% endfor %}
     </div>
 </div>

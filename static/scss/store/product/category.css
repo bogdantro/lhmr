@@ -90,6 +90,12 @@
   box-shadow: 0 0 4px rgba(5, 5, 5, 0.12);
 }
 
+.page .no-pr {
+  color: #183b56;
+  font-size: 15px;
+  opacity: 0.87;
+  padding-left: 9px;
+}
 .page .categories {
   padding-top: 195px;
   display: flex;

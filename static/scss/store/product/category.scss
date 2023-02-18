@@ -93,6 +93,12 @@ $txt: #183b56;
     }
   }
 .page{
+    .no-pr{
+        color: $txt;
+        font-size: 15px;
+        opacity: 0.87;
+        padding-left: 9px;
+    }
     .categories{
         padding-top: 195px;
         display: flex;
