@@ -23,10 +23,10 @@ $txt: #183b56;
   .service{
     flex: 1 auto;
     flex: 60%;
-    min-width: 190px;
-    max-width: 190px;
+    min-width: 205px;
+    max-width: 205px;
     height: min-content;
-    padding: 10px;            
+    padding: 12px 10px;            
     margin: 0 10px;
     &:first-child{
       margin-left: 9px;
@@ -60,13 +60,13 @@ $txt: #183b56;
         }
     }
     .name{
-        font-size: 14px;
+        font-size: 15px;
         color: $txt;
         font-weight: 500;
         margin-bottom: 1px;
     }
     .business-name{
-        font-size: 11px;
+        font-size: 12px;
         color: $txt;
         opacity: 0.7;
         font-weight: 500;
