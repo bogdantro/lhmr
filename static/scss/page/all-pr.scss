@@ -107,8 +107,10 @@ $txt: #183b56;
     .services{
         display: flex;
         flex-wrap: wrap;
-        padding-top: 220px;
+        padding-top: 210px;
         padding-inline: 6px;
+        padding-bottom: 8px;
+        margin-bottom: 10px;
       }
       .service{
         flex: 1 auto;

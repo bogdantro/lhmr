@@ -102,8 +102,10 @@
 .page .services {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 220px;
+  padding-top: 210px;
   padding-inline: 6px;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
 }
 .page .service {
   flex: 1 auto;
