@@ -129,7 +129,7 @@ map.addSource('places', {
    'type': 'Feature',
    'properties': {
       'description':
-      '<p>{{product.name}}<br><a href="{% url  "product_detail" product.slug  %}">Se tjeneste</a></p>',
+      '<p>{{product.name}} {{product.business_name}}<br><a href="{% url  "product_detail" product.slug  %}">Se tjeneste</a></p>',
    },
    'geometry': {
       'type': 'Point',
