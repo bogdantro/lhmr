@@ -15,9 +15,11 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
-    <title>Lillehammer Tjenester | Enkelt og grei løsning</title>
+    <title>{% block title %}Lillehammer Tjenester | Enkelt og grei løsning{% endblock title %}</title>
     <base href="/">
     <meta name="theme-color" content="#ffffff">
+    <meta name="description" property="og:description" content="Finn tjenester i Lillehammer/Fåberg/Øyer/Tretten/Vingrom, alt på et sted">
+    <meta name="keywords" content="Lillehammer, Fåberg, Øyer, Tretten, Vingrom, Tjenester i Lillehammer, Tjenester i Fåberg, Tjenester i Øyer, Tjenester i Tretten, Tjenester i Vingrom, Lillehammer Tjenester">
     <link rel="stylesheet" href="{% static '/scss/global/global.css' %}" type="text/css">
     <script rel="stylesheet" src="{% static '/js/home.js' %}" type="text/javascript"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
