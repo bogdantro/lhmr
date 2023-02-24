@@ -10,19 +10,11 @@ $txt: #183b56;
 #mobileNav{
     position: absolute;
     background: white;
-    &::before{
-        display: none;
-    }
-    &.sticky{
-        &::before{
-            display: none;
-        }
-    }
 }
 
 .product-search{
     position: absolute;
-    top: 55px;
+    top: 47px;
     width: 100%;
     padding-inline: 15px;
     padding-bottom: 15px;
@@ -81,7 +73,7 @@ $txt: #183b56;
 }
 .product-section{
     position: relative;
-    padding-top: 133px;
+    padding-top: 105px;
     .carousel-control-prev{
         opacity: 1;
         width: max-content;
@@ -136,7 +128,7 @@ $txt: #183b56;
         position: absolute;
         &.sticky{
             position: fixed;
-            top: 78px;
+            top: 83px;
             z-index: 10000;
         }
         a{

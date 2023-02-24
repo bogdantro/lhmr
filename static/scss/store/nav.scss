@@ -10,47 +10,21 @@ $txt: #183b56;
 #mobileNav{
     // NAVBAR CSS
     width: 100%;
-    height: 68px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 18px;
+    padding-bottom: 3px;
     position: fixed;
     top: 0;
     z-index: 10000000000000000000;
     transition: .0s;
     background: white;
-    // &::before{
-    //     content: '';
-    //     display: block;
-    //     position: absolute;
-    //     left: 0;
-    //     top: -60px;
-    //     background: white;
-    //     width: 100%;
-    //     height: 100%;
-    //     opacity: 0;
-    //     transition: .3s;
-    //     box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    // }
     // NAVBAR STICKY
     &.sticky{
         box-shadow: 0 0 5px rgba(15,15,15,0.2);
         transition: 0s;
-        .logo{
-            h1{
-                color: $txt;
-                span{
-                    border-color: $primBtn;
-                }
-            }
-          .logo1{
-            display: none;
-          }
-          .logo2{
-            display: block;
-          }
-        }
         .hamburger{
             span{
               background: #183b56;
@@ -60,34 +34,11 @@ $txt: #183b56;
     // NAVBAR MENU
     &.menu{
       background: #ffffff;
-      .logo{
-        h1{
-            color: $txt;
-            span{
-                border-color: $primBtn;
-            }
-        }
-        .logo1{
-            display: none;
-          }
-          .logo2{
-            display: block;
-          }
-    }
     .hamburger{
         span{
           background: #183b56;
         }
     }
-    }
-    // right img
-    .nav-hamburger-img{
-        position: absolute;
-        right: 0;
-        top: -20px;
-        opacity: 0.4;
-        z-index: 1000;
-        transition: .2s;
     }
     // LOGO CSS 
     .logo{
@@ -97,26 +48,14 @@ $txt: #183b56;
         width: auto;
         height: auto;
         z-index: 1000;
-        h1{
-            color: $txt;
-            font-size: 16px;
-            span{
-                font-size: 12px;
-                border-bottom: 1px solid $primBtn;
-                padding-bottom: 3px;
-            }
+        img{
+        width: 190px;
+        height: auto;
+        transition: .3s;
+        &:hover{
+            transform: scale(1.05);
         }
-    //   img{
-    //     width: 105px;
-    //     height: auto;
-    //     transition: .3s;
-    //     &:hover{
-    //         transform: scale(1.05);
-    //     }
-    //   }
-      .logo2{
-        display: none;
-      }
+        }
     }
     // // // MENU CSS
     // HAMBURGER CSS
@@ -137,7 +76,7 @@ $txt: #183b56;
             transition: .2s;
             margin: 6px auto;
             transform-origin: 25%; 
-            opacity: 0.83;
+            opacity: 0.75;
         }
         .upper-span{
         }
@@ -163,7 +102,7 @@ $txt: #183b56;
         background: white;
         height: 110vh;
         position: absolute;
-        top: 68px;
+        top: 60px;
         right: 0;
         width: 100%;
         opacity: 0;
@@ -175,7 +114,7 @@ $txt: #183b56;
         padding-bottom: 20px;
         z-index: 100000000000000000;
         &.active{
-            top: 68px;
+            top: 60px;
             right: 0;
             opacity: 1;
             pointer-events: visible;
@@ -183,12 +122,12 @@ $txt: #183b56;
         }
         .sidebar-search{
             position: absolute;
-            top: -13px;
+            top: -17px;
             left: 0;
             width: 100%;
             padding-inline: 15px;
-            padding-bottom: 15px;
-            padding-top: 15px;
+            padding-bottom: 17px;
+            padding-top: 19px;
             text-align: center;
             z-index: 10000;
             background: white;

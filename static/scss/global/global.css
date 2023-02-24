@@ -81,7 +81,7 @@ p.link:hover {
 #backToTop {
   position: fixed;
   right: 15px;
-  bottom: 20px;
+  bottom: 80px;
   z-index: 110;
   transition: 0.3s;
   opacity: 0;
@@ -103,7 +103,7 @@ p.link:hover {
 #backToTop.active {
   opacity: 1;
   pointer-events: visible;
-  bottom: 20px;
+  bottom: 80px;
 }
 #backToTop.menu-active {
   opacity: 0;

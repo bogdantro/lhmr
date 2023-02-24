@@ -6,16 +6,10 @@
   position: absolute;
   background: white;
 }
-#mobileNav::before {
-  display: none;
-}
-#mobileNav.sticky::before {
-  display: none;
-}
 
 .product-search {
   position: absolute;
-  top: 55px;
+  top: 47px;
   width: 100%;
   padding-inline: 15px;
   padding-bottom: 15px;
@@ -77,7 +71,7 @@
 
 .product-section {
   position: relative;
-  padding-top: 133px;
+  padding-top: 105px;
 }
 .product-section .carousel-control-prev {
   opacity: 1;
@@ -139,7 +133,7 @@
 }
 .product-section .quick-links.sticky {
   position: fixed;
-  top: 78px;
+  top: 83px;
   z-index: 10000;
 }
 .product-section .quick-links a {

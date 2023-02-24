@@ -21,7 +21,7 @@
    <div class="product-search" id="productSearch">
     <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
        {% csrf_token %}
-       <input name="q" type="text" placeholder="Søk blant tjenester"><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+       <input name="q" type="text" placeholder="Hva leter du etter?"><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
    </form>
  </div>
  <div class="page">

@@ -90,7 +90,7 @@ p{
 #backToTop{
   position: fixed;
   right: 15px;
-  bottom: 20px;
+  bottom: 80px;
   z-index: 110;
   transition: .3s;
   opacity: 0;
@@ -112,7 +112,7 @@ p{
   &.active{
     opacity: 1;
     pointer-events: visible;
-    bottom: 20px;
+    bottom: 80px;
   }
   &.menu-active{
     opacity: 0;

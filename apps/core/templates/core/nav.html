@@ -17,12 +17,9 @@
 
 
 <div id="mobileNav">
-    <!-- <img src="{% static 'images/other/nav-hamburger.png' %}" alt="" class="nav-hamburger-img">  -->
     <!-- LOGO -->
     <div class="logo" id="logo" onclick="window.location.href='/'">
-        <!-- <img class="logo1" src="{% static '/images/logo/logo-white.png' %}" alt="logo1">
-        <img class="logo2" src="{% static '/images/logo/logo-black.png' %}" alt="logo2"> -->
-        <h1>Lillehammer <span>Tjenester</span></h1>
+        <img class="logo1" src="{% static '/images/logo/logo-long.png' %}" alt="logo1">
     </div>
     <!-- HAMBURGER -->
     <div class="hamburger" id="hamburger" onclick="menu()">
@@ -36,7 +33,7 @@
         <div class="sidebar-search" id="sidebarSearch">
             <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
                 {% csrf_token %}
-                <input name="q" type="text" placeholder="Søk blant 500 tjenester"><i onclick="searchIconSubmit()" class="fa-solid fa-magnifying-glass"></i>
+                <input name="q" type="text" placeholder="Hva leter du etter?"><i onclick="searchIconSubmit()" class="fa-solid fa-magnifying-glass"></i>
             </form>
         </div>
         <div class="links">

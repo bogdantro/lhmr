@@ -6,21 +6,8 @@ $txt: #183b56;
 #mobileNav{
     &.sticky{
         box-shadow: none;
-    }
-    .logo{
-        h1{
-            color: $txt;
-            span{
-                border-color: $primBtn;
-            }
-        }
-        .logo1{
-        display: none;
-        }
-        .logo2{
-        display: block;
-        }
-    }
+        position: absolute;
+      }
     .hamburger{
         span{
             background: #183b56;

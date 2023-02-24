@@ -1,17 +1,6 @@
 #mobileNav.sticky {
   box-shadow: none;
-}
-#mobileNav .logo h1 {
-  color: #183b56;
-}
-#mobileNav .logo h1 span {
-  border-color: #06c484;
-}
-#mobileNav .logo .logo1 {
-  display: none;
-}
-#mobileNav .logo .logo2 {
-  display: block;
+  position: absolute;
 }
 #mobileNav .hamburger span {
   background: #183b56;

@@ -5,7 +5,7 @@ window.addEventListener("scroll", function(){
 
 window.addEventListener("scroll", function(){
     const quickLinks = document.getElementById('quickLinks');
-    quickLinks.classList.toggle("sticky", window.scrollY > 332)
+    quickLinks.classList.toggle("sticky", window.scrollY > 324)
   })
 
 
