@@ -5,6 +5,9 @@
 #mobileNav {
   background: white;
 }
+#mobileNav.sticky {
+  position: fixed;
+}
 
 .page .recomendend .services {
   display: flex;
@@ -152,7 +155,7 @@
 }
 .page .no-query #searchQNo.sticky {
   position: fixed;
-  top: 68px;
+  top: 60px;
   box-shadow: 0 0 4px rgba(5, 5, 5, 0.12);
 }
 .page .no-query i {
@@ -246,7 +249,7 @@
 }
 .page .search-results #searchQYes.sticky {
   position: fixed;
-  top: 81px;
+  top: 60px;
   box-shadow: 0 0 4px rgba(5, 5, 5, 0.12);
 }
 .page .search-results .no-results #searchQNo {
@@ -265,7 +268,7 @@
 }
 .page .search-results .no-results #searchQNo.sticky {
   position: fixed;
-  top: 0px;
+  top: 60px;
   box-shadow: 0 0 4px rgba(5, 5, 5, 0.12);
 }
 .page .search-results .no-results i {

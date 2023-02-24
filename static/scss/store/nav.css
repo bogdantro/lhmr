@@ -106,8 +106,8 @@
   left: 0;
   width: 100%;
   padding-inline: 15px;
-  padding-bottom: 17px;
-  padding-top: 19px;
+  padding-bottom: 15px;
+  padding-top: 29px;
   text-align: center;
   z-index: 10000;
   background: white;
@@ -121,7 +121,7 @@
 #mobileNav .sidebar .sidebar-search i {
   position: absolute;
   right: 39px;
-  top: 33px;
+  top: 47px;
   padding: 8px;
   margin: -8px;
   border-radius: 100%;

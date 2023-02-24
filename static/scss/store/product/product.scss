@@ -18,7 +18,7 @@ $txt: #183b56;
     width: 100%;
     padding-inline: 15px;
     padding-bottom: 15px;
-    padding-top: 15px;
+    padding-top: 25px;
     text-align: center;
     border-bottom: 1px solid rgba(40,40,40,0.1);
     z-index: 10000;
@@ -37,8 +37,8 @@ $txt: #183b56;
         border: none;
         background: transparent;
         position: absolute;
-        right: 42px;
-        top: 29px;
+        right: 39px;
+        top: 39px;
         padding: 3px 8px;
         margin: -3px -8px;
         border-radius: 100%;
@@ -73,7 +73,7 @@ $txt: #183b56;
 }
 .product-section{
     position: relative;
-    padding-top: 105px;
+    padding-top: 110px;
     .carousel-control-prev{
         opacity: 1;
         width: max-content;
