@@ -57,7 +57,15 @@ $txt: #183b56;
         }
         }
     }
-    // // // MENU CSS
+    // Search
+    #mobNavSearchIcon{
+        position: absolute;
+        right: 73px;
+        font-size: 22px;
+        color: $txt;
+        opacity: 0.87;
+        padding-top: 1px;
+    }
     // HAMBURGER CSS
     .hamburger{
         padding: 10px;

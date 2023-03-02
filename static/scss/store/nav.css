@@ -45,6 +45,14 @@
 #mobileNav .logo img:hover {
   transform: scale(1.05);
 }
+#mobileNav #mobNavSearchIcon {
+  position: absolute;
+  right: 73px;
+  font-size: 22px;
+  color: #183b56;
+  opacity: 0.87;
+  padding-top: 1px;
+}
 #mobileNav .hamburger {
   padding: 10px;
   margin: 0;
