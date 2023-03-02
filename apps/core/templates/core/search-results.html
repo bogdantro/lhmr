@@ -11,15 +11,8 @@
 <div class="page">
     {% if query %} 
     {% if results %}
-    <!-- Only on some pages -->
-   <div class="search-search" id="searchSearch">
-        <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
-        {% csrf_token %}
-        <input name="q" type="text" placeholder="Hva leter du etter?"><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-    </form>
-   </div>
-    <div class="search-results" style="padding-inline: 6px;">
-            <p class="search-q" id="searchQYes">Du søkte for <strong>{{query}}</strong><br>{% if results.all.count == 1 %}Og fant {{results.all.count}} tjeneste{% else %}Og fant {{results.all.count}} tjenester{% endif %}</p>
+    <div class="search-results">
+            <p class="search-q" id="searchQYes">Søket ditt ga {% if results.all.count == 1 %}{{results.all.count}} tjeneste{% else %}{{results.all.count}} tjenester{% endif %}</p>
             <div class="services">
                 {% for product in results %}
                 <div class="service" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
@@ -32,15 +25,16 @@
                         {% endif %}
                     </div>
                     <div class="name">{{product.name}}</div>
-                    <div class="business-name">{{product.business_name}}</div>
+                    <div class="address">{{product.address}}</div>
+                    <div class="business-name"></i>{{product.business_name}}</div>
+                    <div class="short-des"><i class="fa-solid fa-circle-info"></i>{{product.description|slice:":120"}}...</div>
                  </div>
                  {% endfor %}
             </div>
         </div>
         {% else %}
-        <div class="search-results" style="padding-top: 175px; padding-inline: 18px;">
+        <div class="search-results" style="padding-top: 95px; padding-inline: 18px;">
             <div class="no-results">
-                <p class="search-q" id="searchQNo">Du søkte for <strong>{{query}}</strong><br>{% if results.all.count == 1 %}Og fant {{results.all.count}} tjeneste{% else %}Og fant {{results.all.count}} tjenester{% endif %}</p>
                 <i class="fa-regular fa-face-sad-tear"></i>
                 <h1>Søket ditt ga 0 resultater</h1>
                 <p>Endre søket ditt, og prøv igjen</p>
@@ -54,7 +48,7 @@
             </div>
         </div>
         <div class="recomendend">
-            <h1 style="padding-left: 18px; padding-top: 48px; margin-bottom: 6px;" class="section-heading">Vi tror du liker</h1>
+            <h1 style="padding-left: 18px; padding-top: 35px; margin-top: 20px; margin-bottom: 6px;" class="section-heading">Vi tror du kommer til å like</h1>
             <div class="services">
                 {% for product in arandom %}
                 <div class="service" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
@@ -74,8 +68,7 @@
         </div>
         {% endif %}
         {% else %}
-        <div class="no-query" style="padding-top: 155px; padding-inline: 18px;">
-            <p class="search-q" id="searchQNo">Ser ut som du har glemt å skrive</p>
+        <div class="no-query">
             <i class="fa-regular fa-face-sad-tear"></i>
             <h1>Du har glemt å skrive</h1>
             <p>Endre søket ditt, og prøv igjen</p>

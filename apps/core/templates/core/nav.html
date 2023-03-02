@@ -44,7 +44,7 @@
             <a onclick="window.location.href='{% url  'category_detail' nav_category.slug  %}'">{{nav_category.name}}</a>
             {% endfor %}
             </div>
-            <a href="/alle-tjenester/">Alle tjenester</a>
+            <a href="/alle-tjenester/">Alle tjenestene</a>
             <a href="/blogg/">Blogg</a>
             <a class="nav_order_btn" href="/for-bedrifter/">For bedrifter</a>
         </div>
@@ -80,7 +80,7 @@
 
 <script type="text/javascript">
       function searchIconSubmit(){
-    document.getElementById("sidebarSearch").submit();
+    document.getElementById("searchForm").submit();
   }
 
 </script>

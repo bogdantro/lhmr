@@ -3,17 +3,17 @@ $white: rgb(246,246,246);
 $primBtn: #06c484;
 $txt: #183b56;
 
+
+#footer{
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
 #mobileNav{
+    background: white;
     &.sticky{
         box-shadow: none;
-        position: absolute;
-      }
-    .hamburger{
-        span{
-            background: #183b56;
-        }
     }
 }
+
 
 .page{
     min-height: 90vh !important;

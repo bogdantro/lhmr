@@ -17,17 +17,14 @@ function menu(){
   const sidebar = document.getElementById('sidebar');
   const navbar = document.getElementById('mobileNav');
   const hamburger = document.getElementById('hamburger');
-  const backToTop = document.getElementById('backToTop');
 
   if (window.getComputedStyle(sidebar,null).getPropertyValue("opacity") == '0'){
     navbar.classList.add('menu')  
     hamburger.classList.add('click')  
     sidebar.classList.add('active')
-    backToTop.classList.add('menu-active')
     document.body.style.overflow = "hidden";
     document.documentElement.style.overflow = "hidden";
   } else{
-    backToTop.classList.remove('menu-active')
     navbar.classList.remove('menu') 
     hamburger.classList.remove('click')  
     sidebar.classList.remove('active')

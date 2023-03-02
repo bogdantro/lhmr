@@ -63,7 +63,6 @@ class Product(models.Model):
         self.slug = slugify(self.name)
         return super(Product, self).save(*args, **kwargs)
 
-
     def get_rating(self):
         if self.reviews.count() > 0:
             total = sum(int(review['stars']) for review in self.reviews.values())   

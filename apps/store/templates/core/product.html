@@ -17,13 +17,6 @@
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js'></script>
 <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
 
-<!-- Only on some pages -->
-   <div class="product-search" id="productSearch">
-    <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
-       {% csrf_token %}
-       <input name="q" type="text" placeholder="Hva leter du etter?"><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-   </form>
- </div>
  <div class="page">
      <div class="product-section">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -242,23 +235,18 @@
               <h1>Kontakt</h1>
               {% if product.contact_by_website %}
               <a href="{{product.contact_by_website}}">{{product.contact_by_website}}</a>
-              <br>
               {% endif %}
               {% if product.contact_by_email %}
               <a href="mailto:{{product.contact_by_email}}">{{product.contact_by_email}}</a>
-              <br> 
               {% endif %}
               {% if product.contact_by_phone %}
               <a href="tel:{{product.contact_by_phone}}">+47 {{product.contact_by_phone|floatformat:0}}</a>
-              <br>
               {% endif %}
               {% if product.contact_by_facebook %}
               <a href="{{product.contact_by_facebook}}">Facebook</a>
-              <br>
               {% endif %}
               {% if product.contact_by_instagram %}
               <a href="{{product.contact_by_instagram}}">Instagram</a>
-              <br>
               {% endif %}
             </div>
           </div>

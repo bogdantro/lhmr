@@ -1,11 +1,7 @@
-window.addEventListener("scroll", function(){
-    const productSearch = document.getElementById('productSearch');
-    productSearch.classList.toggle("sticky", window.scrollY > 55)
-  })
 
 window.addEventListener("scroll", function(){
     const quickLinks = document.getElementById('quickLinks');
-    quickLinks.classList.toggle("sticky", window.scrollY > 324)
+    quickLinks.classList.toggle("sticky", window.scrollY > 280)
   })
 
 

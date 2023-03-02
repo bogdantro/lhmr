@@ -103,7 +103,7 @@ $txt: #183b56;
         height: 110vh;
         position: absolute;
         top: 60px;
-        right: 0;
+        right: -100%;
         width: 100%;
         opacity: 0;
         pointer-events: none;
@@ -114,11 +114,9 @@ $txt: #183b56;
         padding-bottom: 20px;
         z-index: 100000000000000000;
         &.active{
-            top: 60px;
             right: 0;
             opacity: 1;
             pointer-events: visible;
-            transition: .5s;
         }
         .sidebar-search{
             position: absolute;
@@ -165,7 +163,7 @@ $txt: #183b56;
             }
         }
         .links{
-            padding-top: 60px;
+            padding-top: 69px;
         }
         a{
             display: block;

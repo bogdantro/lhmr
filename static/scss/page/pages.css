@@ -1,9 +1,12 @@
+#footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#mobileNav {
+  background: white;
+}
 #mobileNav.sticky {
   box-shadow: none;
-  position: absolute;
-}
-#mobileNav .hamburger span {
-  background: #183b56;
 }
 
 .page {

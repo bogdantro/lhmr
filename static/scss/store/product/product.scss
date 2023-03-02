@@ -4,66 +4,6 @@ $primBtn: #06c484;
 $txt: #183b56;
 
 
-#footer{
-    border-top: 1px solid rgba(0,0,0,0.1);
-}
-#mobileNav{
-    position: absolute;
-    background: white;
-}
-
-.product-search{
-    position: absolute;
-    top: 47px;
-    width: 100%;
-    padding-inline: 15px;
-    padding-bottom: 15px;
-    padding-top: 25px;
-    text-align: center;
-    border-bottom: 1px solid rgba(40,40,40,0.1);
-    z-index: 10000;
-    background: white;
-    &.sticky{
-        position: fixed;
-        top: 0;
-        box-shadow: 0 0 4px rgba(5,5,5,0.12);
-    }
-    form{
-        border: 1px solid rgb(234,234,234);
-        border-radius: 4px;
-        display: flex;
-    }
-    button{
-        border: none;
-        background: transparent;
-        position: absolute;
-        right: 39px;
-        top: 39px;
-        padding: 3px 8px;
-        margin: -3px -8px;
-        border-radius: 100%;
-        background: rgba(155, 155, 155, 0.22);
-        i{
-            font-size: 15px;
-            color: #183b56a9;
-        }
-    }
-    input{
-      width: 85%;
-      height: 50px;
-      border: none;
-      outline: none;
-      padding: 7px;
-      background: white;
-      color: $txt;
-      border-radius: 4px;
-      font-size: 15px;
-      &::placeholder{
-        color: $txt;
-        opacity: 0.8;
-      }
-    }
-}
 
 .page{
     .mapouter{
@@ -73,7 +13,7 @@ $txt: #183b56;
 }
 .product-section{
     position: relative;
-    padding-top: 110px;
+    padding-top: 35px;
     .carousel-control-prev{
         opacity: 1;
         width: max-content;
@@ -128,7 +68,7 @@ $txt: #183b56;
         position: absolute;
         &.sticky{
             position: fixed;
-            top: 83px;
+            top: 60px;
             z-index: 10000;
         }
         a{
@@ -522,7 +462,12 @@ $txt: #183b56;
                 text-decoration: underline;
                 cursor: pointer;
                 color: #007bff;
-                margin-block: 4px;
+                width: 100%;
+                display: block;
+                margin-block: 6px;
+                &:first-child{
+                    margin-top: 0;
+                }
             }
         }
     }
