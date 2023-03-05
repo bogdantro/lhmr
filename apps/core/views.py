@@ -118,9 +118,9 @@ def home_page_search(request):
     #The empty string handles an empty "request"
     arandom = list(Product.objects.all())
 
-    arandom = random.sample(arandom, 12)
+    arandom = random.sample(arandom, 1)
     if query:
-            queryset = (Q(name__icontains=query) | Q(description__icontains=query) | Q(business_name__icontains=query))
+            queryset = (Q(name__icontains=query) | Q(description__icontains=query) | Q(business_name__icontains=query) | Q(seo__icontains=query) )
             #I assume "text" is a field in your model
             #i.e., text = model.TextField()
             #Use | if searching multiple fields, i.e., 
