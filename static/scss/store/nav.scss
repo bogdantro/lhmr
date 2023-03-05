@@ -25,20 +25,10 @@ $txt: #183b56;
     &.sticky{
         box-shadow: 0 0 5px rgba(15,15,15,0.2);
         transition: 0s;
-        .hamburger{
-            span{
-              background: #183b56;
-            }
-        }
     }
     // NAVBAR MENU
     &.menu{
       background: #ffffff;
-    .hamburger{
-        span{
-          background: #183b56;
-        }
-    }
     }
     // LOGO CSS 
     .logo{
@@ -61,10 +51,68 @@ $txt: #183b56;
     #mobNavSearchIcon{
         position: absolute;
         right: 73px;
-        font-size: 22px;
+        width: 22px;
+        height: auto;
         color: $txt;
-        opacity: 0.87;
+        opacity: 0.77;
         padding-top: 1px;
+    }
+    .mobnavbar-search{
+        position: absolute;
+        top: 44px;
+        left: 0;
+        width: 100%;
+        padding-inline: 15px;
+        padding-bottom: 15px;
+        padding-top: 29px;
+        text-align: center;
+        z-index: 10000;
+        background: white;
+        opacity: 0;
+        pointer-events: none;
+        &.active{
+            opacity: 1;
+            pointer-events: visible;
+        }
+        .overlay{
+            position: absolute;
+            top: calc(60px + 35px);
+            left: 0;
+            width: 100%;
+            height: 140vh;
+            background: rgba(20, 20, 20, 0.40);
+        }
+        form{
+            border: 1px solid rgb(234,234,234);
+            border-radius: 4px;
+            display: flex;
+        }
+            i{
+                position: absolute;
+                right: 39px;
+                top: 47px;
+                padding: 8px;
+                margin: -8px;
+                border-radius: 100%;
+                background: rgba(155, 155, 155, 0.22);
+                font-size: 15px;
+                color: #183b56a9;
+            }
+        input{
+          width: 85%;
+          height: 50px;
+          border: none;
+          outline: none;
+          padding: 7px;
+          background: white;
+          color: $txt;
+          border-radius: 4px;
+          font-size: 15px;
+          &::placeholder{
+            color: $txt;
+            opacity: 0.8;
+          }
+        }
     }
     // HAMBURGER CSS
     .hamburger{
@@ -78,7 +126,7 @@ $txt: #183b56;
         span{
             height: 2px;
             width: 26px;
-            background: $txt;
+            background: $black;
             border-radius: 3px;
             display: block;
             transition: .2s;
@@ -126,52 +174,8 @@ $txt: #183b56;
             opacity: 1;
             pointer-events: visible;
         }
-        .sidebar-search{
-            position: absolute;
-            top: -17px;
-            left: 0;
-            width: 100%;
-            padding-inline: 15px;
-            padding-bottom: 15px;
-            padding-top: 29px;
-            text-align: center;
-            z-index: 10000;
-            background: white;
-            border-bottom: 1px solid rgba(40,40,40,0.1);
-            form{
-                border: 1px solid rgb(234,234,234);
-                border-radius: 4px;
-                display: flex;
-            }
-                i{
-                    position: absolute;
-                    right: 39px;
-                    top: 47px;
-                    padding: 8px;
-                    margin: -8px;
-                    border-radius: 100%;
-                    background: rgba(155, 155, 155, 0.22);
-                    font-size: 15px;
-                    color: #183b56a9;
-                }
-            input{
-              width: 85%;
-              height: 50px;
-              border: none;
-              outline: none;
-              padding: 7px;
-              background: white;
-              color: $txt;
-              border-radius: 4px;
-              font-size: 15px;
-              &::placeholder{
-                color: $txt;
-                opacity: 0.8;
-              }
-            }
-        }
         .links{
-            padding-top: 69px;
+            padding-top: 0;
         }
         a{
             display: block;
@@ -182,17 +186,8 @@ $txt: #183b56;
             width: 100%;
             background: rgba(190,190,190,0.02);
             border-bottom: 1px solid rgba(30,30,30,0.18);
-            &.mailto{
-                margin: 0;
-                padding: 0;
-                text-decoration: none;
-                font-size: 15px;
-                color: $white;
-                cursor: pointer;
-                text-decoration: underline;
-                &:hover{
-                    opacity: 1;
-                }
+            &:first-child{
+                border-top: 1px solid rgba(30,30,30,0.18);
             }
             &#categoryDropdownMobileLink{
                 i{
@@ -217,7 +212,6 @@ $txt: #183b56;
         .category-dropdown-mob{
             position: relative;
             padding-inline: 0;
-            padding-bottom: 40px;
             display: none;
             transition: .3s;
             overflow-y: scroll !important;

@@ -22,8 +22,13 @@
         <img class="logo1" src="{% static '/images/logo/logo-long.png' %}" alt="logo1">
     </div>
     <!-- Search -->
-    <i id="mobNavSearchIcon" class="fa-solid fa-magnifying-glass"></i>
-    <div class="search">
+    <img onclick="search()" id="mobNavSearchIcon"  src="{% static 'images/other/search-icon.png' %}" alt="">
+    <div class="mobnavbar-search" id="mobSidebarSearch">
+        <div class="overlay"></div>
+        <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
+            {% csrf_token %}
+            <input name="q" type="text" placeholder="Hva leter du etter?"><i onclick="searchIconSubmit()" class="fa-solid fa-magnifying-glass"></i>
+        </form>
     </div>
     <!-- HAMBURGER -->
     <div class="hamburger" id="hamburger" onclick="menu()">
@@ -33,24 +38,17 @@
     </div>
     <!-- SIDEBAR -->
     <div class="sidebar" id="sidebar">
-        <!-- Only on some pages -->
-        <div class="sidebar-search" id="sidebarSearch">
-            <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
-                {% csrf_token %}
-                <input name="q" type="text" placeholder="Hva leter du etter?"><i onclick="searchIconSubmit()" class="fa-solid fa-magnifying-glass"></i>
-            </form>
-        </div>
         <div class="links">
-            <a href="/om-oss/">Om oss</a>
+            <a class="nav_order_btn" href="/for-bedrifter/">For bedrifter</a>
+            <a href="/alle-tjenester/">Alle tjenestene</a>
             <a onclick="categoriesDrop()" id="categoryDropdownMobileLink">Kategorier<i id="categoryDropdownMobileIcon" class="fa-solid fa-caret-down"></i></a>
             <div class="category-dropdown-mob" id="categoryDropdownMobile">
             {% for nav_category in nav_category %}
             <a onclick="window.location.href='{% url  'category_detail' nav_category.slug  %}'">{{nav_category.name}}</a>
             {% endfor %}
             </div>
-            <a href="/alle-tjenester/">Alle tjenestene</a>
-            <a href="/blogg/">Blogg</a>
-            <a class="nav_order_btn" href="/for-bedrifter/">For bedrifter</a>
+            <a href="/om-oss/">Om oss</a>
+            <!-- <a href="/blogg/">Blogg</a> -->
         </div>
     </div>
 </div>

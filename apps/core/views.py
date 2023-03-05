@@ -75,6 +75,7 @@ def allProducts(request):
     context = {
         'products': products,
         'category': category,
+        'count': Product.objects.count(),
     }
     return render(request, 'pages/all-pr/all-pr.html', context)
 

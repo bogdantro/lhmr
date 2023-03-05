@@ -13,17 +13,9 @@
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js'></script>
 <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
 
-
-<!-- Only on some pages -->
-<div class="category-search" id="categorySearch">
-    <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
-       {% csrf_token %}
-       <input name="q" type="text" placeholder="Søk blant 500 tjenester"><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-   </form>
- </div>
  <p class="category-q" id="categoryQ">Kategorien <strong>{{category.name}}</strong></p>
 <div class="page">
-    <div class="categories" style="padding-inline: 6px;">
+    <div class="categories">
         {% for product in product %}
         <div class="service" onclick="window.location.href='{% url  'product_detail' product.slug  %}'">
             <img src="{{product.image1.url}}" alt="" class="service-image">
@@ -35,7 +27,9 @@
                 {% endif %}
             </div>
             <div class="name">{{product.name}}</div>
-            <div class="business-name">{{product.business_name}}</div>
+            <div class="address">{{product.address}}</div>
+            <div class="business-name"></i>{{product.business_name}}</div>
+            <div class="short-des"><i class="fa-solid fa-circle-info"></i>{{product.description|slice:":120"}}...</div>
          </div>
          {% empty %}
          <h1 class="section-heading" style="padding-top: 15px; padding-left: 9px;">Ingen tjenester her enda</h1>

@@ -10,6 +10,23 @@
   })
 
 
+function search(){
+  const search = document.getElementById('mobSidebarSearch');
+  const hamburger = document.getElementById('hamburger');
+
+  if (window.getComputedStyle(search,null).getPropertyValue("opacity") == '0'){
+    search.classList.add('active');
+    hamburger.style.pointerEvents = 'none';
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+  }else{
+    search.classList.remove('active');
+    hamburger.style.pointerEvents = 'visible';
+    document.body.style.overflow = "scroll";
+    document.documentElement.style.overflow = "scroll";
+  }
+}  
+
 
 /////////// MOBILE JAVASCRIPT
 // MENU
@@ -17,17 +34,20 @@ function menu(){
   const sidebar = document.getElementById('sidebar');
   const navbar = document.getElementById('mobileNav');
   const hamburger = document.getElementById('hamburger');
+  const search = document.getElementById('mobNavSearchIcon');
 
   if (window.getComputedStyle(sidebar,null).getPropertyValue("opacity") == '0'){
     navbar.classList.add('menu')  
     hamburger.classList.add('click')  
     sidebar.classList.add('active')
+    search.style.pointerEvents = 'none';
     document.body.style.overflow = "hidden";
     document.documentElement.style.overflow = "hidden";
   } else{
     navbar.classList.remove('menu') 
     hamburger.classList.remove('click')  
     sidebar.classList.remove('active')
+    search.style.pointerEvents = 'visible';
     document.body.style.overflow = "scroll";
     document.documentElement.style.overflow = "scroll";
   }  
