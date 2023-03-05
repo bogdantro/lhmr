@@ -85,8 +85,12 @@
             
             <div class="text location" id="location">
               <h1>Plassering</h1>
+              {% if product.address %}
               <p>{{product.address}}</p>
               <div id='map'></div>
+              {% else %}
+              <p>Bedriften har ingen adresse</p>
+              {% endif %}
             </div>
 
             <hr style="margin-block: 38px;">
