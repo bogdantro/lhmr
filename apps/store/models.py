@@ -28,8 +28,6 @@ class Product(models.Model):
     slug = models.SlugField(max_length=150)
     description = models.TextField(blank=False)
     short_description = models.TextField(blank=True)
-    # Seo
-    seo = models.TextField(blank=True, default="Tjeneste")
     price = models.FloatField(max_length=300, default=0, blank=True, null=True)
     address = models.CharField(max_length=500, blank=True)
     cords1 = models.CharField(max_length=500, blank=True)
