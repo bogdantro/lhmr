@@ -29,6 +29,8 @@ class Product(models.Model):
     description = models.TextField(blank=False)
     short_description = models.TextField(blank=True)
     price = models.FloatField(max_length=300, default=0, blank=True, null=True)
+    # Seo
+    seo = models.TextField(blank=True)
     address = models.CharField(max_length=500, blank=True)
     cords1 = models.CharField(max_length=500, blank=True)
     cords2 = models.CharField(max_length=500, blank=True)
