@@ -17,6 +17,7 @@ function search(){
   if (window.getComputedStyle(search,null).getPropertyValue("opacity") == '0'){
     search.classList.add('active');
     hamburger.style.pointerEvents = 'none';
+    document.getElementById("mobNavSearchInput").focus();
     document.body.style.overflow = "hidden";
     document.documentElement.style.overflow = "hidden";
   }else{

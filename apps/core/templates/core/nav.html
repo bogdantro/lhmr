@@ -25,9 +25,9 @@
     <img onclick="search()" id="mobNavSearchIcon"  src="{% static 'images/other/search-icon.png' %}" alt="">
     <div class="mobnavbar-search" id="mobSidebarSearch">
         <div class="overlay"></div>
-        <form id="searchForm" action="{% url 'home_page_search' %}" method="GET">
+        <form id="mobNavSearchForm" action="{% url 'home_page_search' %}" method="GET">
             {% csrf_token %}
-            <input name="q" type="text" placeholder="Hva leter du etter?"><i onclick="searchIconSubmit()" class="fa-solid fa-magnifying-glass"></i>
+            <input name="q" type="text" id="mobNavSearchInput" placeholder="Hva leter du etter?"><i onclick="searchIconSubmit()" class="fa-solid fa-magnifying-glass"></i>
         </form>
     </div>
     <!-- HAMBURGER -->
