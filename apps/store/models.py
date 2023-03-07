@@ -27,7 +27,6 @@ class Product(models.Model):
     business_name = models.CharField(max_length=300)
     slug = models.SlugField(max_length=150)
     description = models.TextField(blank=False)
-    short_description = models.TextField(blank=True)
     seo = models.TextField(blank=True)
     price = models.FloatField(max_length=300, default=0, blank=True, null=True)
     address = models.CharField(max_length=500, blank=True)
