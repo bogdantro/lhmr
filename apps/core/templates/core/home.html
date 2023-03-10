@@ -125,7 +125,7 @@ map.addSource('places', {
       'type': 'FeatureCollection',
       'features': [
          '{% for product in map_products %}',
-         '{% if map_products.address %}' ,
+         '{% if product.address %}' ,
    {
    'type': 'Feature',
    'properties': {
