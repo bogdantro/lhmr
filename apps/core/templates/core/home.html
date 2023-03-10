@@ -124,8 +124,8 @@ map.addSource('places', {
    'data': {
       'type': 'FeatureCollection',
       'features': [
-      '{% if map_products.address %}' ,
-      '{% for product in map_products %}',
+         '{% for product in map_products %}',
+         '{% if map_products.address %}' ,
    {
    'type': 'Feature',
    'properties': {
@@ -137,8 +137,8 @@ map.addSource('places', {
       'coordinates': ['{{product.cords1}}', '{{product.cords2}}']
    },
    },
-   '{% endfor %}',
    '{% endif %}',
+   '{% endfor %}',
    ]
    }
    });
