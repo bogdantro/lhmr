@@ -3,6 +3,15 @@
 
 
 {% block content %}
+<!-- Seo -->
+<meta name="description" content="Hjemmesiden til Lillehammer Tjenester - Finn den tjensten du leter etter enkelt og greit">
+<meta name="author" content="Lillehamemr Tjenester">
+<meta name="keywords" content="Lillehammer, Fåberg, Øyer, Tretten, Vingrom, Tjenester i Lillehammer, Tjenester i Fåberg, Tjenester i Øyer, Tjenester i Tretten, Tjenester i Vingrom, Lillehammer Tjenester">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ request.get_full_path }}">
+<meta property="og:description" content="Hjemmesiden til Lillehammer Tjenester - Finn den tjensten du leter etter enkelt og greit">
+
+<!-- Links and scripts -->
 <link rel="stylesheet" href="{% static '/scss/store/base.css' %}" type="text/css">
 <script rel="stylesheet" src="{% static '/js/home.js' %}" type="text/javascript"></script>
 <script rel="stylesheet" src="{% static '/js/scroll.js' %}" type="text/javascript"></script>
