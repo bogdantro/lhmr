@@ -203,7 +203,7 @@
   overflow-y: scroll !important;
   height: 100%;
   background: rgba(190, 190, 190, 0.09);
-  padding-bottom: 30px;
+  padding-bottom: 110px;
 }
 #mobileNav .sidebar .category-dropdown-mob a {
   border-bottom: 1px solid rgba(40, 40, 40, 0.1);
