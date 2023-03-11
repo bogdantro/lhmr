@@ -69,16 +69,18 @@ def make_serv(request):
     return render(request, 'pages/business/make-serv.html')
 
 def allProducts(request):
+    count = Product.objects.count()
+
     category = Category.objects.all()
 
     products = list(Product.objects.all())
 
-    products = random.sample(products, 40)
+    products = random.sample(products, count)
 
     context = {
         'products': products,
         'category': category,
-        'count': Product.objects.count(),
+        'count': count,
     }
     return render(request, 'pages/all-pr/all-pr.html', context)
 
