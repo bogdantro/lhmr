@@ -4,7 +4,11 @@
 
 {% block content %}
 <title>{% block title %}Alle tjenestene{% endblock title %}</title>
-
+<meta name="keywords" content="Alle tjenestene, Lillehammer, Fåberg, Øyer, Tretten, Vingrom, Tjenester i Lillehammer, Tjenester i Fåberg, Tjenester i Øyer, Tjenester i Tretten, Tjenester i Vingrom, Lillehammer Tjenester">
+<meta name="title" property="og:title" content="Alle tjenestene">
+<meta property="og:title" content="Alle tjenestene">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ request.get_full_path }}">
 
 <link rel="stylesheet" href="{% static '/scss/page/all-pr.css' %}" type="text/css">
 <link rel="stylesheet" href="{% static '/scss/page/pages.css' %}" type="text/css">

@@ -3,8 +3,14 @@
 
 
 {% block content %}
+<!-- Seo -->
 <title>{% block title %} Om Lillehammer Tjenester {% endblock title %}</title>
-
+<meta name="author" content="Lillehamemer Tjenester">
+<meta name="keywords" content="Om Lillehammer Tjenester, Om oss, Om, Lillehammer, Fåberg, Øyer, Tretten, Vingrom, Tjenester i Lillehammer, Tjenester i Fåberg, Tjenester i Øyer, Tjenester i Tretten, Tjenester i Vingrom, Lillehammer Tjenester">
+<meta name="title" property="og:title" content="Om Lillehammer Tjenester">
+<meta property="og:title" content="Om Lillehammer Tjenester">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ request.get_full_path }}">
 
 <link rel="stylesheet" href="{% static '/scss/page/about.css' %}" type="text/css">
 <link rel="stylesheet" href="{% static '/scss/page/pages.css' %}" type="text/css">
