@@ -69,8 +69,11 @@ def make_serv(request):
     return render(request, 'pages/business/make-serv.html')
 
 def allProducts(request):
-    products = Product.objects.all()
     category = Category.objects.all()
+
+    products = list(Product.objects.all())
+
+    products = random.sample(products, 40)
 
     context = {
         'products': products,

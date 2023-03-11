@@ -7,7 +7,7 @@ from .models import *
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['name', 'business_name', 'slug', 'category', 'address', 'is_home_page',]
-    search_fields = ('name', 'business_name', 'slug', 'category', 'is_home_page', 'description')
+    search_fields = ('name', 'business_name', 'slug', 'is_home_page', 'description')
     list_filter = ('is_home_page',)
     list_editable = ('is_home_page', 'business_name', 'slug', 'address', 'category',)
     prepopulated_fields = {"slug": ("name","business_name",)}
