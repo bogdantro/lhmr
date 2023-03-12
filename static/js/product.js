@@ -15,8 +15,6 @@ function info(){
   const reviewsQucikLink =  document.getElementById('reviewsQucikLink');
   const contactQucikLink =  document.getElementById('contactQucikLink');
 
-  window.scrollTo({ top: 150, behavior: 'instant'});
-
   infoQucikLink.classList.add('active')
   reviewsQucikLink.classList.remove('active')
   contactQucikLink.classList.remove('active')
@@ -37,7 +35,6 @@ function reviews(){
   const reviewsQucikLink =  document.getElementById('reviewsQucikLink');
   const contactQucikLink =  document.getElementById('contactQucikLink');
 
-  window.scrollTo({ top: 150, behavior: 'instant'});
 
   infoQucikLink.classList.remove('active')
   contactQucikLink.classList.remove('active')
@@ -63,7 +60,6 @@ function contact(){
   const reviewsQucikLink =  document.getElementById('reviewsQucikLink');
   const contactQucikLink =  document.getElementById('contactQucikLink');
 
-  window.scrollTo({ top: 150, behavior: 'instant'});
 
   infoQucikLink.classList.remove('active')
   reviewsQucikLink.classList.remove('active')
