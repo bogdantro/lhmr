@@ -6,16 +6,17 @@
 
 {% block content %}
 <!-- SEO -->
+{% block head %}
 <meta name="description" content="{{product.description}} - {{product.category}} - Lillehammer">
 <meta name="author" content="{{product.business_name}}">
 <meta name="keywords" content="{{product.seo}}, Lillehammer Tjenester, Lillehamemr, Tjenester">
 <meta name="title" property="og:title" content="{{product.name}} | {{product.business_name}}">
 <meta property="og:title" content="{{product.name}}">
-<title>{% block title %}{{product.name}} | {{product.business_name}} - Lillehammer Tjenester{% endblock %}</title>
 <title>{{product.name}} | {{product.business_name}} - Lillehammer Tjenester</title>
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ request.get_full_path }}">
 <meta property="og:description" content="{{product.description}} - {{product.category}} - Lillehammer">
+{% endblock %}
 
 <!-- Links and scripts -->
 <link rel="stylesheet" href="{% static '/scss/page/pages.css' %}" type="text/css">

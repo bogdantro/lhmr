@@ -5,7 +5,7 @@
 
 .product-section {
   position: relative;
-  padding-top: 10px;
+  padding-top: 55px;
 }
 .product-section .carousel-control-prev {
   opacity: 1;
@@ -128,13 +128,13 @@
 .product-section .text .business-name {
   font-size: 13px;
   color: #183b56;
-  opacity: 0.7;
+  opacity: 0.8;
   font-weight: 500;
   width: -moz-max-content;
   width: max-content;
   padding: 5px;
   margin: -2px;
-  transform: translateY(4px);
+  transform: translateY(8px);
   background: rgba(110, 110, 110, 0.1);
   border-radius: 4px;
 }

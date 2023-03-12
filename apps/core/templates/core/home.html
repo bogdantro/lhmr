@@ -4,13 +4,16 @@
 
 {% block content %}
 <!-- Seo -->
-<title>{% block title %} Lillehammer Tjenester - Enkelt og grei løsning {% endblock title %}</title>
+<meta charset="UTF-8">
+{% block head %}
+<title>Lillehammer Tjenester - Enkelt og grei løsning</title>
 <meta name="description" content="Hjemmesiden til Lillehammer Tjenester - Finn den tjensten du leter etter enkelt og greit">
-<meta name="author" content="Lillehamemr Tjenester">
+<meta name="author" content="Lillehammer Tjenester">
 <meta name="keywords" content="Lillehammer, Fåberg, Øyer, Tretten, Vingrom, Tjenester i Lillehammer, Tjenester i Fåberg, Tjenester i Øyer, Tjenester i Tretten, Tjenester i Vingrom, Lillehammer Tjenester">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ request.get_full_path }}">
 <meta property="og:description" content="Hjemmesiden til Lillehammer Tjenester - Finn den tjensten du leter etter enkelt og greit">
+{% endblock %}
 
 <!-- Links and scripts -->
 <link rel="stylesheet" href="{% static '/scss/store/base.css' %}" type="text/css">
