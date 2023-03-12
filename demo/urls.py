@@ -11,9 +11,18 @@ from django.contrib.auth import views
 from apps.userprofile.views import *
 from apps.newsletter.api import api_add_subscriber
 from django.views.generic.base import RedirectView
+from apps.core.sitemaps import *
+from django.contrib.sitemaps.views import sitemap
+
+sitemaps = {
+    'static': StaticViewsSitemap,
+    'product': ProductSitemap,
+}
 
 urlpatterns = [
     path('lillehammertjenester/admin/login/', admin.site.urls),
+
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
 
     # Pages
     path('', hjemme, name="hjemme"),

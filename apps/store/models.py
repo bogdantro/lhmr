@@ -62,6 +62,9 @@ class Product(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
         return super(Product, self).save(*args, **kwargs)
+    
+    def get_absolute_url(self):
+        return f'/{self.slug}/'
 
     def get_rating(self):
         if self.reviews.count() > 0:
