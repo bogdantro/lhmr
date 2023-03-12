@@ -74,9 +74,9 @@ function categoriesDrop(){
 
 
 function categoriesDropDes(){
-  const a =  document.getElementById('categoryDropdownMobileDes');
-  const b =  document.getElementById('categoryDropdownMobileIconDes');
-  const c =  document.getElementById('categoryDropdownMobileLinkDes');
+  const a =  document.getElementById('categoryDropdownDes');
+  const b =  document.getElementById('categoryDropdownIconDes');
+  const c =  document.getElementById('categoryDropdownLinkDes');
   
   if (window.getComputedStyle(a,null).getPropertyValue("display") == 'none'){
     a.classList.add('active')

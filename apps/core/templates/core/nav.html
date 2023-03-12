@@ -53,23 +53,28 @@
     <div id="desNavContent">
         <!-- LOGO -->
         <div class="logo" id="logo" onclick="window.location.href='/'">
-            <!-- <img class="logo1" src="{% static '/images/logo/logo-white.png' %}" alt="logo1">
-        <img class="logo2" src="{% static '/images/logo/logo-black.png' %}" alt="logo2"> -->
-        <h1>Lillehammer <span>Tjenester</span></h1>
-    </div>
+            <img class="logo1" src="{% static '/images/logo/logo-long.png' %}" alt="logo1">
+        </div>
+        <!-- Search -->
+        <div class="desnavbar-search" id="desSearch">
+            <form id="desNavSearchForm" action="{% url 'home_page_search' %}" method="GET">
+                {% csrf_token %}
+                <input name="q" type="text" id="desNavSearchInput" placeholder="&#xF002; &nbsp; Hva leter du etter?" style="font-family:Arial, FontAwesome"> <button type="sumbit">Søk</button>
+            </form>
+        </div>
     <!-- MENU -->
     <div class="menu">
         <a id="desNavAboutLink" href="/om-oss/">Om oss</a>
-        <a onclick="categoriesDropDes()" id="categoryDropdownMobileLinkDes">Kategorier<i id="categoryDropdownMobileIconDes" class="fa-solid fa-caret-down"></i></a>
-        <div class="category-dropdown-mob" id="categoryDropdownMobileDes">
-            <div id="categoryDropdownMobileWidthDes">
+        <a onclick="categoriesDropDes()" id="categoryDropdownLinkDes">Kategorier<i id="categoryDropdownMobileIconDes" class="fa-solid fa-caret-down"></i></a>
+        <div class="category-dropdown-mob" id="categoryDropdownDes">
+            <div id="categoryDropdownWidthDes">
                 {% for nav_category in nav_category %}
                 <a  onclick="window.location.href='{% url  'category_detail' nav_category.slug  %}'">{{nav_category.name}}</a>
                 {% endfor %}
             </div>
         </div>
         <a id="desNavAllprLink" href="/alle-tjenester/">Alle tjenester</a>
-        <a id="desNavBlogLink" href="/blogg/">Blogg</a>
+        <!-- <a id="desNavBlogLink" href="/blogg/">Blogg</a> -->
         <a id="desNavBusinessLink" class="nav_order_btn" href="/for-bedrifter/">For bedrifter</a>
     </div>    
 </div>

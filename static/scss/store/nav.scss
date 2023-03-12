@@ -251,8 +251,7 @@ $txt: #183b56;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        left: 50%;
-        transform: translateX(-50%);
+        max-width: 1280px;
         &.sticky{
             position: fixed;
             top: 0;
@@ -264,10 +263,8 @@ $txt: #183b56;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            left: 50%;
-            transform: translateX(-50%);
-            max-width: 1350px;
             width: 100%;
+            max-width: 1280px;
         }
         // LOGO
         .logo{
@@ -278,24 +275,60 @@ $txt: #183b56;
             height: auto;
             z-index: 1000;
             transition: .2s;
-            h1{
-                color: $txt;
-                font-size: 17px;
-                transition: .2s;
-                span{
-                    font-size: 13px;
-                    border-bottom: 1px solid $primBtn;
-                    padding-bottom: 3px;
+            opacity: 0.9;
+            img{
+                width: 177px;
+                height: auto;
+                transition: .3s;
+                &:hover{
+                    transform: scale(1.05);
+                }
+                }
+        }
+        // Search
+        .desnavbar-search{
+            width: auto;
+            text-align: center;
+            position: absolute;
+            left: 280px;
+            button{
+                background: $primBtn;
+                color: $white;
+                font-size: 15px;
+                height: 40px;
+                width: auto;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 1px 18px;
+                border-radius: 3px;
+                display: none;
+                &:hover{
+                    filter: brightness(90%);
                 }
             }
-            &:hover{
-                h1{
-                    span{
-                        border-color: $txt;
-                    }
-                }
+            input{
+              width: 390px;
+              height: 40px;
+              border: none;
+              outline: none;
+              padding: 1px 7px;
+              background: #F4F5F8;
+              color: $txt;
+              border-radius: 3px;
+              font-size: 15px;
+              border: 1px solid #F4F5F8;
+              &::placeholder{
+                color: $txt;
+                opacity: 0.8;
+              }
+              &:focus{
+                background: white;
+                border: 1px solid $primBtn;
+              }
             }
         }
+        // Menu
         .menu{
             padding-inline: 10px;
             width: max-content;
@@ -313,8 +346,9 @@ $txt: #183b56;
                 padding-bottom: 5px;
                 padding-top: 7px;
                 transition: .2s;
-                opacity: 0.9;
+                opacity: 0.95;
                 cursor: pointer;
+                transition: .2s;
                 &:hover{
                     text-decoration: underline;
                 }
@@ -323,10 +357,18 @@ $txt: #183b56;
                 }
                 &:last-child{
                     margin-right: 0;
-                    padding-right: 0;
+                }
+                &.nav_order_btn{
+                    background: #F4F5F8;
+                    padding: 8px 10px;
+                    border-radius: 4px;
+                    text-decoration: none;
+                    &:hover{
+                        background: rgb(239,239,239);
+                    }
                 }
             }
-            #categoryDropdownMobileLinkDes{
+            #categoryDropdownLinkDes{
                 i{
                     padding-left: 8px;
                 }
@@ -337,7 +379,7 @@ $txt: #183b56;
                     color: $primBtn;
                 }
             }
-            #categoryDropdownMobileDes{
+            #categoryDropdownDes{
                 position: absolute;
                 top: 59px;
                 left: 0;

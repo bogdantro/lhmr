@@ -233,8 +233,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    left: 50%;
-    transform: translateX(-50%);
+    max-width: 1280px;
   }
   #desNav.sticky {
     position: fixed;
@@ -247,10 +246,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 1350px;
     width: 100%;
+    max-width: 1280px;
   }
   #desNav .logo {
     transition: 0.8s;
@@ -260,19 +257,61 @@
     height: auto;
     z-index: 1000;
     transition: 0.2s;
+    opacity: 0.9;
   }
-  #desNav .logo h1 {
+  #desNav .logo img {
+    width: 177px;
+    height: auto;
+    transition: 0.3s;
+  }
+  #desNav .logo img:hover {
+    transform: scale(1.05);
+  }
+  #desNav .desnavbar-search {
+    width: auto;
+    text-align: center;
+    position: absolute;
+    left: 280px;
+  }
+  #desNav .desnavbar-search button {
+    background: #06c484;
+    color: rgb(246, 246, 246);
+    font-size: 15px;
+    height: 40px;
+    width: auto;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1px 18px;
+    border-radius: 3px;
+    display: none;
+  }
+  #desNav .desnavbar-search button:hover {
+    filter: brightness(90%);
+  }
+  #desNav .desnavbar-search input {
+    width: 390px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 1px 7px;
+    background: #F4F5F8;
     color: #183b56;
-    font-size: 17px;
-    transition: 0.2s;
+    border-radius: 3px;
+    font-size: 15px;
+    border: 1px solid #F4F5F8;
   }
-  #desNav .logo h1 span {
-    font-size: 13px;
-    border-bottom: 1px solid #06c484;
-    padding-bottom: 3px;
+  #desNav .desnavbar-search input::-moz-placeholder {
+    color: #183b56;
+    opacity: 0.8;
   }
-  #desNav .logo:hover h1 span {
-    border-color: #183b56;
+  #desNav .desnavbar-search input::placeholder {
+    color: #183b56;
+    opacity: 0.8;
+  }
+  #desNav .desnavbar-search input:focus {
+    background: white;
+    border: 1px solid #06c484;
   }
   #desNav .menu {
     padding-inline: 10px;
@@ -293,8 +332,9 @@
     padding-bottom: 5px;
     padding-top: 7px;
     transition: 0.2s;
-    opacity: 0.9;
+    opacity: 0.95;
     cursor: pointer;
+    transition: 0.2s;
   }
   #desNav .menu a:hover {
     text-decoration: underline;
@@ -304,18 +344,26 @@
   }
   #desNav .menu a:last-child {
     margin-right: 0;
-    padding-right: 0;
   }
-  #desNav .menu #categoryDropdownMobileLinkDes i {
-    padding-left: 8px;
-  }
-  #desNav .menu #categoryDropdownMobileLinkDes:hover {
+  #desNav .menu a.nav_order_btn {
+    background: #F4F5F8;
+    padding: 8px 10px;
+    border-radius: 4px;
     text-decoration: none;
   }
-  #desNav .menu #categoryDropdownMobileLinkDes.active {
+  #desNav .menu a.nav_order_btn:hover {
+    background: rgb(239, 239, 239);
+  }
+  #desNav .menu #categoryDropdownLinkDes i {
+    padding-left: 8px;
+  }
+  #desNav .menu #categoryDropdownLinkDes:hover {
+    text-decoration: none;
+  }
+  #desNav .menu #categoryDropdownLinkDes.active {
     color: #06c484;
   }
-  #desNav .menu #categoryDropdownMobileDes {
+  #desNav .menu #categoryDropdownDes {
     position: absolute;
     top: 59px;
     left: 0;
@@ -329,13 +377,13 @@
     border-top: 1px solid rgb(246, 246, 246);
     padding-top: 15px;
   }
-  #desNav .menu #categoryDropdownMobileDes #categoryDropdownMobileWidthDes {
+  #desNav .menu #categoryDropdownDes #categoryDropdownMobileWidthDes {
     position: relative;
     width: 100%;
     min-height: 250px;
     max-height: 350px;
   }
-  #desNav .menu #categoryDropdownMobileDes #categoryDropdownMobileWidthDes a {
+  #desNav .menu #categoryDropdownDes #categoryDropdownMobileWidthDes a {
     min-width: -moz-max-content;
     min-width: max-content;
     cursor: pointer;
@@ -343,11 +391,11 @@
     opacity: 0.95;
     min-height: 100px !important;
   }
-  #desNav .menu #categoryDropdownMobileDes #categoryDropdownMobileWidthDes a:hover {
+  #desNav .menu #categoryDropdownDes #categoryDropdownMobileWidthDes a:hover {
     opacity: 1;
     text-decoration: underline;
   }
-  #desNav .menu #categoryDropdownMobileDes.active {
+  #desNav .menu #categoryDropdownDes.active {
     display: flex;
   }
 }/*# sourceMappingURL=nav.css.map */
