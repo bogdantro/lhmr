@@ -47,9 +47,8 @@ def be_partner(request):
         name = request.POST.get('name', )
         contact_person = request.POST.get('contact_person', '')
         email = request.POST.get('email', '')
-        org_nr = request.POST.get('org_nr', '')
 
-        partner = Partners.objects.create(name=name, contact_person=contact_person, email=email, org_nr=org_nr)
+        partner = Partners.objects.create(name=name, contact_person=contact_person, email=email)
         return redirect('partner_success')
     return render(request, 'pages/business/be-partner.html')
 
